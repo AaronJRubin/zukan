@@ -1,9 +1,15 @@
+header, section, footer, aside, nav, main, article, figure
+{ 
+display: block; 
+}
+
 * {
 background-color: black;
 color: #FFFFFF;
 font-family: Century Gothic, sans-serif;
 font-size: 1.05em;
 }
+
 a {
 color:#FFFFFF;
 text-decoration: none}
@@ -18,16 +24,14 @@ a:hover {color:#FF00FF;}
 a:active {color:#0000FF;} 
  */
 
-.fish-tile, .labeled-image {
+.fish-tile, figure {
 display: inline-flex;
 flex-direction: column;
 max-width: 31%;
 border: 0.5vw solid;
-/*border: 2px solid; */
 border-radius: 6px;
 float: left;
 margin: 0.5vw;
-/*margin: 3px; */
 }
 
 h1 {
@@ -45,7 +49,7 @@ transform: scale(1.25, 1.125);
   text-align: center;
 }
 
-.labeled-image * {
+figure * {
   display: block;
   text-align: center;
 }
@@ -61,13 +65,9 @@ transform: scale(1.25, 1.125);
     height: 80px; */
 }
 
-.labeled-image img {
+figure img {
   max-width: 100%;
-  /*max-width: 30vw;
-  min-width: 200px; */
 }
-
-
 
 .navigation-link {
   background-color: #4479BA; 
