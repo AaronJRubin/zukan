@@ -21,6 +21,7 @@ a:active {color:#0000FF;}
 .fish-tile, .labeled-image {
 display: inline-flex;
 flex-direction: column;
+max-width: 31%;
 border: 0.5vw solid;
 /*border: 2px solid; */
 border-radius: 6px;
@@ -51,7 +52,8 @@ transform: scale(1.25, 1.125);
 
 .fish-tile img {
     vertical-align: top;
-    max-width: 30vw;
+    max-width: 100%;
+    /*max-width: 30vw; */
     /*max-width: 31vw;
     min-width: 45px; */
     /*
@@ -60,8 +62,9 @@ transform: scale(1.25, 1.125);
 }
 
 .labeled-image img {
-  max-width: 30vw;
-  min-width: 200px;
+  max-width: 100%;
+  /*max-width: 30vw;
+  min-width: 200px; */
 }
 
 
