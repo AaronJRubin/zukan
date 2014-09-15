@@ -83,11 +83,23 @@ figure img {
   background-color: orange;
 }
 
-article , .navigation-link {
-  width: 50%;
+article, .navigation-link {
+  max-width: 700px;
   margin: auto;
 }
 
+@media (min-width : 900px) {
+  .fish-tile {
+    max-width: 17.9%;
+  }
+}
+
+@media (max-width: 500px) {
+  .fish-tile, figure {
+   max-width: 28%;
+   border: 2vw solid;
+}
+/*
 @media (max-width : 900px) {
   article, .navigation-link {
     width: 75%;
@@ -98,7 +110,7 @@ article , .navigation-link {
   article, .navigation-link {
     width: 100%;
   }
-}
+} */
 
 @media print {
   * {
