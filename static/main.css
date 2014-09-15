@@ -98,6 +98,25 @@ article , .navigation-link {
     width: 100%;
   }
 }
+
+@media print {
+  * {
+    background-color: white;
+    color: black;
+  }
+
+  article {
+    width: 100%;
+  }
+
+  .navigation-link {
+    display: none;
+  }
+
+  figure {
+    padding: 2%;
+  }
+}
 /*
 
 button {
@@ -116,9 +135,6 @@ button {
     text-decoration: none;
   }*/
 
-footer {
-  /*text-align: center; */
-}
 
 /*body {
    display: flex;
