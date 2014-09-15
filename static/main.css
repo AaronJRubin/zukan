@@ -25,8 +25,9 @@ a:active {color:#0000FF;}
  */
 
 .fish-tile, figure {
-display: inline-flex;
-flex-direction: column;
+display: inline; 
+/*display: inline-flex; */
+/*flex-direction: column; */
 max-width: 31%;
 border: 0.5vw solid;
 border-radius: 6px;
