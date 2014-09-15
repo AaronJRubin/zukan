@@ -93,12 +93,12 @@ article, .navigation-link {
     max-width: 17.9%;
   }
 }
-
+/*
 @media (max-width: 500px) {
   .fish-tile, figure {
    max-width: 28%;
    border: 2vw solid;
-}
+} */
 /*
 @media (max-width : 900px) {
   article, .navigation-link {
