@@ -50,6 +50,7 @@ h1 {
 
 .fish-tile:hover {
 border-color: orange;
+-webkit-transform: scale(1.25, 1.125);
 transform: scale(1.25, 1.125);
 }
 
