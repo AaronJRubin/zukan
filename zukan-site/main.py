@@ -29,12 +29,10 @@ def render_str(template, **params):
 
 class FishTile:
 
-    def __init__(self, label = "さけ", link = "sakana/sake", image = "static/sake.jpg"):
+    def __init__(self, label = "さけ", romaji = "sake"):
         self.label = label.decode('utf-8');
-        self.link = link.decode('utf-8');
-        if not image.startswith("static/"):
-            image = "static/" + image
-        self.image = image 
+        self.link = "sakana/" + romaji 
+        self.image = "static/" + romaji + ".jpg"
 
     def render(self):
         return render_str("fish-tile.html", fish = self)
