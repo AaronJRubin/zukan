@@ -19,7 +19,7 @@ import os
 import webapp2
 import jinja2
 import re
-#import romkan
+from romaji import kana
 
 template_dir = os.path.join(os.path.dirname(__file__), 'templates')
 jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir))
@@ -40,7 +40,16 @@ class FishTile:
     def render(self):
         return render_str("fish-tile.html", fish = self)
 
-fish_tiles = [ FishTile(romaji = "abehaze", label = "アベハゼ"),
+class Fish:
+
+    def __init__(self, latin = "piscis maximus", genus = u"魚科", romaji = "ayu", kana = u"アユ", location = u"高津川"):
+        self.romaji = romaji
+        self.kana = kana
+        self.latin = latin
+        self.genus = genus
+        self.location = location
+
+fish_tiles = [FishTile(romaji = "abehaze", label = "アベハゼ"),
 FishTile(romaji = "aburabote", label = "アブラボテ"),
 FishTile(romaji = "akaza", label = "アカザ"),
 FishTile(romaji = "amago", label = "アマゴ"),
@@ -114,7 +123,7 @@ class MainHandler(Handler):
 class FishPageHandler(Handler):
     def get(self, FISH_RE):
         print("Calling FishPageHandler")
-        self.render("sakana" + FISH_RE + ".html")
+        self.render("sakana" + FISH_RE + ".html", fish = Fish()) # later on look up the actual fish
 
 FISH_RE = r'(/(?:[a-zA-Z0-9_-]+/?)*)'
 app = webapp2.WSGIApplication([

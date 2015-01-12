@@ -1,5 +1,16 @@
 {% extends "base.html" %}
 
+{% block header %}
+<figure>
+	<img src="/static/low-res/ichiran/{{fish.romaji}}.jpg"></img>
+	<figcaption>{{fish.kana}}</figcaption>
+</figure>
+<div>
+<p>ラテン名：{{fish.latin}}</p>
+<p>科： {{fish.genus}}</p>
+<p>生息地：{{fish.location}}</p>
+</div>
+{% endblock %}
 
 {% block footer %}
 <a href="/"><div class="navigation-link">一覧へ戻る</div></a>
