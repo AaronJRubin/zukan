@@ -32,7 +32,10 @@ box-sizing: border-box;
 /*display: inline;  */
 /*display: inline-flex; */
 /*flex-direction: column; */
-max-width: 31.5%;
+/*max-width: 31.5%;*/
+height: 150px;
+/*height: 20%;*/
+/*max-height: 20%;*/
 border-width: 2px;
 /*border-width: 0.5vw; */
 border-radius: 6px; 
@@ -66,7 +69,9 @@ figure * {
 
 .fish-tile img {
     vertical-align: top;
+    /*max-height: 10%;*/
     max-width: 100%;
+    max-height: 70%;
     /*max-width: 30vw; */
     /*max-width: 31vw;
     min-width: 45px; */
@@ -96,13 +101,14 @@ article, .navigation-link {
   max-width: 700px;
   margin: auto;
 }
-
+/*
 @media (min-width : 900px) {
   .fish-tile {
-    max-width: 18.9%;
-   /* max-width: 17.9%; */
+    /*max-width: 18.9%;*/
+    /*max-height: 20%;*/
+   /* max-width: 17.9%; 
   }
-}
+}*/
 /*
 @media (max-width: 500px) {
   .fish-tile, figure {
