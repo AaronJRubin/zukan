@@ -19,6 +19,7 @@ import os
 import webapp2
 import jinja2
 import re
+#import romkan
 
 template_dir = os.path.join(os.path.dirname(__file__), 'templates')
 jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir))
@@ -29,15 +30,71 @@ def render_str(template, **params):
 
 class FishTile:
 
-    def __init__(self, label = "さけ", romaji = "sake"):
+    def __init__(self, romaji = "ayu", label = "アユ"):
+        #if label == None:
+        #    label = romkan.to_katakana(romaji)
         self.label = label.decode('utf-8');
-        self.link = "sakana/" + romaji 
-        self.image = "static/low-res/" + romaji + ".jpg"
+        self.link = "sakana/" + romaji
+        self.image = "static/low-res/ichiran/" + romaji + ".jpg"
 
     def render(self):
         return render_str("fish-tile.html", fish = self)
 
-fish_tiles = [FishTile() for _ in range(80)]
+fish_tiles = [ FishTile(romaji = "abehaze", label = "アベハゼ"),
+FishTile(romaji = "aburabote", label = "アブラボテ"),
+FishTile(romaji = "akaza", label = "アカザ"),
+FishTile(romaji = "amago", label = "アマゴ"),
+FishTile(romaji = "ayu", label = "アユ"),
+FishTile(romaji = "ayukake", label = "アユカケ"),
+FishTile(romaji = "bora", label = "ボラ"),
+FishTile(romaji = "dojou", label = "ドジョウ"),
+FishTile(romaji = "donnko", label = "ドンコ"),
+FishTile(romaji = "gigi", label = "ギギ"),
+FishTile(romaji = "gogi", label = "ゴギ"),
+FishTile(romaji = "gokurakuhaze", label = "ゴクラクハゼ"),
+FishTile(romaji = "himehaze", label = "ヒメハゼ"),
+FishTile(romaji = "hinahaze", label = "ヒナハゼ"),
+FishTile(romaji = "hirasuzuki", label = "ヒラスズキ"),
+FishTile(romaji = "huna", label = "フナ"),
+FishTile(romaji = "ishidojyou", label = "イシドjヨウ"),
+FishTile(romaji = "ishidonko", label = "イシドンコ"),
+FishTile(romaji = "itomoroko", label = "イトモロコ"),
+FishTile(romaji = "kajika", label = "カジカ"),
+FishTile(romaji = "kamatuka", label = "カマツカ"),
+FishTile(romaji = "kawaanago", label = "カワアナゴ"),
+FishTile(romaji = "kawamutu", label = "カワムツ"),
+FishTile(romaji = "kawayoshinobori", label = "カワヨシノボリ"),
+FishTile(romaji = "koi", label = "コイ"),
+FishTile(romaji = "kurodai", label = "クロダイ"),
+FishTile(romaji = "magoti", label = "マゴチ"),
+FishTile(romaji = "mahaze", label = "マハゼ"),
+FishTile(romaji = "medaka", label = "メダカ"),
+FishTile(romaji = "mimizuhaze", label = "ミミズハゼ"),
+FishTile(romaji = "mugituku", label = "ムギツク"),
+FishTile(romaji = "namazu", label = "ナマズ"),
+FishTile(romaji = "numatitibu", label = "ヌマチチブ"),
+FishTile(romaji = "oikawa", label = "オイカワ"),
+FishTile(romaji = "ooyosinobori", label = "オオヨシノボリ"),
+FishTile(romaji = "oyanirami", label = "オヤニラミ"),
+FishTile(romaji = "ribbinngo", label = "リッビンゴ"),
+FishTile(romaji = "sakuramasu", label = "サクラマス"),
+FishTile(romaji = "shimadojyou", label = "シマドjヨウ"),
+FishTile(romaji = "shimaisaki", label = "シマイサキ"),
+FishTile(romaji = "shirogisu", label = "シロギス"),
+FishTile(romaji = "shirouo", label = "シロウオ"),
+FishTile(romaji = "sumiukigori", label = "スミウキゴリ"),
+FishTile(romaji = "sunayatume", label = "スナヤツメ"),
+FishTile(romaji = "suzuki", label = "スズキ"),
+FishTile(romaji = "tairikubaratanago", label = "タイリクバラタナゴ"),
+FishTile(romaji = "titibu", label = "チチブ"),
+FishTile(romaji = "touyoshinobori", label = "トウヨシノボリ"),
+FishTile(romaji = "ugui", label = "ウグイ"),
+FishTile(romaji = "ukigori", label = "ウキゴリ"),
+FishTile(romaji = "unagi", label = "ウナギ"),
+FishTile(romaji = "urohaze", label = "ウロハゼ"),
+FishTile(romaji = "yamame", label = "ヤマメ")]
+
+#fish_tiles = [FishTile() for _ in range(80)]
 
 class Handler(webapp2.RequestHandler):
     def write(self, *a, **kw):
