@@ -32,7 +32,7 @@ class FishTile:
     def __init__(self, label = "さけ", romaji = "sake"):
         self.label = label.decode('utf-8');
         self.link = "sakana/" + romaji 
-        self.image = "static/" + romaji + ".jpg"
+        self.image = "static/low-res/" + romaji + ".jpg"
 
     def render(self):
         return render_str("fish-tile.html", fish = self)
