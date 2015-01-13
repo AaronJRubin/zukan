@@ -10,6 +10,17 @@ font-family: Century Gothic, sans-serif;
 font-size: 1.05em;
 }
 
+h1 {
+  text-align: center;
+  font-size: 3em;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 a {
 color:#FFFFFF;
 text-decoration: none}
@@ -26,11 +37,11 @@ border-width: 2px;
 border-radius: 6px; 
 border-style: solid;
 border-color: white;
-float: left;
 margin: 0.5vw;
 }
 
 figure {
+  float: left;
   max-width: 38%;
   max-height: 100%;
 }
@@ -39,23 +50,13 @@ figure {
   height: 150px;
 }
 
-h1 {
-  text-align: center;
-  font-size: 3em;
-}
-
 .fish-tile:hover {
 border-color: orange;
 -webkit-transform: scale(1.25, 1.125);
 transform: scale(1.25, 1.125);
 }
 
-.fish-tile * {
-  display: block;
-  text-align: center;
-}
-
-figure * {
+.fish-tile *, figure * {
   display: block;
   text-align: center;
 }
@@ -102,7 +103,6 @@ header {
   max-height: 200px;
   margin: auto; 
 }
-
 
 header div {
  display: inline-block;
