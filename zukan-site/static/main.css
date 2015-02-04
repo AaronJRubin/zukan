@@ -20,13 +20,18 @@ table, th, td {
 }
 
 
-main, header {
+main, header, .gallery {
   display: -webkit-flex;
   -webkit-flex-wrap: wrap;
   -webkit-justify-content: space-around;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+.gallery {
+ padding: 5px 5px 5px 5px;
+
 }
 
 a {
