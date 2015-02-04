@@ -15,6 +15,11 @@ h1 {
   font-size: 3em;
 }
 
+table, th, td {
+    border: 1px solid white;
+}
+
+
 main, header {
   display: -webkit-flex;
   -webkit-flex-wrap: wrap;

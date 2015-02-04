@@ -31,7 +31,7 @@ class Handler(webapp2.RequestHandler):
 
 class MainHandler(Handler):
     def get(self):
-        self.render("sakana-ichiran.html", fish = fish.fish_dict.values());
+        self.render("sakana-ichiran.html", fish = fish.fish_list);
 
 class FishPageHandler(Handler):
     def get(self, FISH_RE):

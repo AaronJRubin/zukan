@@ -8,7 +8,28 @@
 <div>
 <p>ラテン名：{{fish.latin}}</p>
 <p>科： {{fish.genus}}</p>
-<p>生息地：{{fish.location}}</p>
+<table>
+<th>
+<td>上流</td>
+<td>中流</td>
+<td>下流</td>
+<td>河口</td>
+</th>
+<tr>
+<td>高津川</td>
+<td>{{"&#x25EF" if fish.takatsu_zyou()}}</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>益田川</td>
+<td>{{"&#x25EF" if fish.masuda_zyou()}}</td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</table>
 </div>
 {% endblock %}
 

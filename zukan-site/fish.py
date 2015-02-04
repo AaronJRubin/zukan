@@ -8,20 +8,20 @@ class Location:
     ZYOU, CHUU, GE, KAKOU = range(4)
 
     def __init__(self):
-        self._dict = {"Takatsugawa" : {}, "Masuda" : {}}
-        self._dict["Takatsugawa"] = set()
+        self._dict = {"Takatsu" : {}, "Masuda" : {}}
+        self._dict["Takatsu"] = set()
         self._dict["Masuda"] = set()
 
-    def set_takatsugawa(self, *locations):
+    def set_takatsu(self, *locations):
         for location in locations:
-            self._dict["Takatsugawa"].add(location)
+            self._dict["Takatsu"].add(location)
 
     def set_masuda(self, *locations):
         for location in locations:
-            self._dict["Takatsugawa"].add(location)
+            self._dict["Masuda"].add(location)
 
-    def get_takatsugawa(self):
-        return frozenset(self._dict["Takatugawa"])
+    def get_takatsu(self):
+        return frozenset(self._dict["Takatsu"])
 
     def get_masuda(self):
         return frozenset(self._dict["Masuda"])
@@ -43,8 +43,14 @@ class Fish:
     def render_tile(self):
         return jinja_utils.render_str("fish-tile.html", fish = self)
 
+    def takatsu_zyou(self):
+        return Location.ZYOU in self.location.get_takatsu()
+
+    def masuda_zyou(self):
+        return Location.ZYOU in self.location.get_masuda()
+
 akaza_loc = Location()
-akaza_loc.set_takatsugawa(Location.ZYOU)
+akaza_loc.set_takatsu(Location.ZYOU)
 akaza_loc.set_masuda(Location.ZYOU)
 akaza = Fish(romaji = "akaza", kana = "アカザ", location = akaza_loc)
 
@@ -108,3 +114,6 @@ for a_fish in fish_list:
     fish_dict[a_fish.romaji] = a_fish
 
 fish_dict["akaza"] = akaza
+
+fish_list = fish_dict.values()
+fish_list.sort(key = lambda fish: fish.romaji)
