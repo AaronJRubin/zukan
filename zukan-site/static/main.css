@@ -17,16 +17,63 @@ h1 {
 
 table, th, td {
     border: 1px solid white;
+    /*padding: 5px;*/
+}
+
+div#rarity {
+ text-align: center;
+ border: 1px solid white;
+ height: 128px;
+ /*padding-right: 10px;
+ padding-left: 10px;*/
+}
+
+div#rarity div {
+ border-top: 1px solid white;
+ color: yellow;
+}
+
+header img {
+ /*max-height: 300px;*/
+ max-width: 95%;
+ max-height: 80%;
+ margin: 0 auto;
+ /*margin: auto;*/
+ /*margin: 10px;*/
+ border: 2px solid white;
+ vertical-align: middle;
+}
+
+.header-section {
+ width: 48%;
+ text-align: center;
+ vertical-align: middle;
+}
+
+header table {
+ text-align: center;
+ margin: 0 auto;
+ /*margin: 10px;*/
 }
 
 
-main, header, .gallery {
+main, .gallery {
   display: -webkit-flex;
   -webkit-flex-wrap: wrap;
   -webkit-justify-content: space-around;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+
+header {
+  display: -webkit-flex;
+  -webkit-flex-wrap: wrap;
+  /*-webkit-justify-content: space-around;*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .gallery {
@@ -86,10 +133,11 @@ figure img {
 
 .navigation-link {
   background-color: #4479BA; 
-  height: 20vh;
-  line-height: 20vh;
+  height: 10vh;
+  line-height: 10vh;
   font-size: 5vw;
   text-align: center;
+  border-radius: 10px;
 }
 
 .navigation-link:hover {

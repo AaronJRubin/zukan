@@ -1,13 +1,19 @@
 {% extends "base.html" %}
 
 {% block header %}
-<figure>
-	<img src="/static/low-res/ichiran/{{fish.romaji}}.jpg"></img>
-	<figcaption>{{fish.kana}}</figcaption>
-</figure>
-<div>
-<p>ラテン名：{{fish.latin}}</p>
-<p>科： {{fish.genus}}</p>
+
+<div class = "header-section">
+<img src="/static/low-res/ichiran/{{fish.romaji}}.jpg"></img>
+</div>
+
+<div class = "header-section">
+<p>和名：{{fish.kana}}</p>
+<p>学名：{{fish.latin}}</p>
+<p>科名：{{fish.family}}</p>
+<p>属名：{{fish.genus}}</p>
+</div>
+
+<div class = "header-section">
 <table>
 <th>
 <td>上流</td>
@@ -31,6 +37,16 @@
 </tr>
 </table>
 </div>
+
+<div id = "rarity" class = "header-section">
+<h3>
+レア度
+</h3>
+<div>
+{{fish.rarity_stars()}}
+</div>
+</div>
+
 {% endblock %}
 
 {% block footer %}

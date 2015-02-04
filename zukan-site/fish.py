@@ -28,15 +28,18 @@ class Location:
 
 class Fish:
 
-    def __init__(self, latin = "piscis maximus", genus = u"魚科", romaji = "ayu", kana = u"アユ", location = Location()):
+    def __init__(self, latin = "piscis maximus", family = u"魚科", genus = u"魚族", romaji = "ayu", kana = u"アユ", location = Location(),
+        rarity = 3):
         self.romaji = romaji
         try:
             self.kana = kana.decode('utf-8')
         except Exception:
             self.kana = kana
         self.latin = latin
+        self.family = family
         self.genus = genus
         self.location = location
+        self.rarity = rarity
         self.link = "sakana/" + romaji
         self.image = "static/low-res/ichiran/" + romaji + ".jpg"
 
@@ -48,6 +51,9 @@ class Fish:
 
     def masuda_zyou(self):
         return Location.ZYOU in self.location.get_masuda()
+
+    def rarity_stars(self):
+        return ("&#x2605" * self.rarity) + ("&#x2606" * (5 - self.rarity))
 
 akaza_loc = Location()
 akaza_loc.set_takatsu(Location.ZYOU)
