@@ -39,6 +39,29 @@ class FishTile:
     def render(self):
         return render_str("fish-tile.html", fish = self)
 
+class Location:
+
+    ZYOU, CHUU, GE, KAKOU = range(4)
+
+    def __init__(self):
+        self._dict = {"Takatsugawa" : {}, "Masuda" : {}}
+        self._dict["Takatsugawa"] = set()
+        self._dict["Masuda"] = set()
+
+    def set_takatsugawa(locations):
+        for location in locations:
+            self._dict["Takatsugawa"].add(location)
+
+    def set_masuda(locations):
+        for location in locations:
+            self._dict["Takatsugawa"].add(location)
+
+    def get_takatsugawa():
+        return frozenset(self._dict["Takatugawa"])
+
+    def get_masuda():
+        return frozenset(self._dict["Masuda"])
+
 class Fish:
 
     def __init__(self, latin = "piscis maximus", genus = u"魚科", romaji = "ayu", kana = u"アユ", location = u"高津川"):
