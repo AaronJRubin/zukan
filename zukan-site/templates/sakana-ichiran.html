@@ -4,8 +4,8 @@
 {% endblock %}
 
 {% block content %}
-{% for fish_tile in fish_tiles %}
-{{fish_tile.render()}}
+{% for fish in fish %}
+{{fish.render_tile()}}
 {% endfor %}
 <!--
 <a href="http://www.google.com">
