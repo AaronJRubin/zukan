@@ -17,15 +17,11 @@ h1 {
 
 table, th, td {
     border: 1px solid white;
-    /*padding: 5px;*/
 }
 
 div#rarity {
- text-align: center;
  border: 1px solid white;
- height: 128px;
- /*padding-right: 10px;
- padding-left: 10px;*/
+ height: 128px; /* To equal fish habitat table */
 }
 
 div#rarity div {
@@ -34,51 +30,42 @@ div#rarity div {
 }
 
 header img {
- /*max-height: 300px;*/
  max-width: 95%;
  max-height: 80%;
  margin: 0 auto;
- /*margin: auto;*/
- /*margin: 10px;*/
  border: 2px solid white;
- vertical-align: middle;
 }
 
 .header-section {
  width: 48%;
  text-align: center;
- vertical-align: middle;
 }
 
 header table {
  text-align: center;
  margin: 0 auto;
- /*margin: 10px;*/
+ width: 100%;
 }
 
-
-main, .gallery {
+main, .gallery, header {
   display: -webkit-flex;
   -webkit-flex-wrap: wrap;
   -webkit-justify-content: space-around;
   display: flex;
   flex-wrap: wrap;
+}
+
+main, .gallery {
   justify-content: space-around;
 }
 
 header {
-  display: -webkit-flex;
-  -webkit-flex-wrap: wrap;
-  /*-webkit-justify-content: space-around;*/
-  display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
 .gallery {
  padding: 5px 5px 5px 5px;
-
 }
 
 a {
@@ -102,8 +89,8 @@ margin: 0.5vw;
 
 figure {
   float: left;
-  max-width: 38%;
-  max-height: 100%;
+  max-width: 48%;
+  /*max-height: 100%;*/
 }
 
 .fish-tile {
@@ -176,8 +163,8 @@ header p {
   .navigation-link {
     display: none;
   }
-
+/*
   figure {
     padding: 2%;
-  }
+  }*/
 }
