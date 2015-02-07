@@ -48,10 +48,10 @@ header table {
 }
 
 main, .gallery, header {
-  display: -webkit-flex;
-  -webkit-flex-wrap: wrap;
   display: flex;
+  display: -webkit-flex;
   flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;*/
 }
 
 main, .gallery {
