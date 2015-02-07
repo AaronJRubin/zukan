@@ -60,8 +60,8 @@ main, .gallery {
 }
 
 header {
-  justify-content: center;
-  align-items: center;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
 }
 
 .gallery {
@@ -142,6 +142,15 @@ header {
 
 header p {
 font-size: 1.2em;
+}
+
+@media(max-width: 635px) {
+ div#location {
+  width: 98%;
+  margin-bottom: 5px;
+ }
+ div#rarity{
+  width: 98%;
 }
 
 @media(max-width: 490px) {
