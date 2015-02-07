@@ -153,6 +153,12 @@ font-size: 1.2em;
   width: 98%;
 }
 
+@media(max-width: 320px) {
+  div#location {
+   font-size: 0.95em;
+  }
+}
+
 @media(max-width: 490px) {
 header p {
   font-size: 0.95em;
