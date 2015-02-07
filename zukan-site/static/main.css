@@ -50,18 +50,24 @@ header table {
 main, .gallery, header {
   display: -webkit-flex;
   -webkit-flex-wrap: wrap;
-  -webkit-justify-content: space-around;
   display: flex;
   flex-wrap: wrap;
 }
 
 main, .gallery {
+  -webkit-justify-content: space-around;
   justify-content: space-around;
 }
 
 header {
   -webkit-justify-content: center;
   -webkit-align-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+div#location {
+  margin-right: 5px;
 }
 
 .gallery {
@@ -148,6 +154,7 @@ font-size: 1.2em;
  div#location {
   width: 98%;
   margin-bottom: 5px;
+  margin-right: 0px;
  }
  div#rarity{
   width: 98%;
