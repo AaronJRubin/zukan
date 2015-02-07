@@ -48,20 +48,27 @@ header table {
 }
 
 main, .gallery, header {
-  display: -webkit-flex;
-  -webkit-flex-wrap: wrap;
-  -webkit-justify-content: space-around;
   display: flex;
+  display: -webkit-flex;
   flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
 }
 
 main, .gallery {
+  -webkit-justify-content: space-around;
   justify-content: space-around;
 }
 
 header {
-  -webkit-justify-content: center;
-  -webkit-align-items: center;
+  webkit-align-items: center;
+  webkit-justify-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+div#location {
+  margin-right: 5px;
+
 }
 
 .gallery {
