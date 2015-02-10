@@ -35,7 +35,7 @@ def string_to_location(string):
 
 def parse_fish(fish_string):
     lines = fish_string.split('\n')
-    fish = Fish()
+    fish = Fish(romaji = "")
     for line in lines:
         split_line = line.strip().split(": ")
         if len(split_line) != 2:
@@ -44,15 +44,31 @@ def parse_fish(fish_string):
         if field == "name":
             fish.romaji = data
             fish.kana = romkan.to_kana(data)
-        if field == "rarity":
+        elif field == "rarity":
             fish.rarity = int(data)
-        if field == "takatsu":
+        elif field == "takatsu":
             fish.location.set_takatsu(map(string_to_location, data.split(", ")))
+        elif field =="masuda":
+            fish.location.set_masuda(map(string_to_location, data.split(', ')))
+        else:
+            raise Exception("Unrecognized field in line " + line)
+    if fish.romaji == "":
+        raise Exception("Fish generated from string " + fish_string + " lacks a name field.")
     return fish
 
 defaults = generate_defaults()
+unseen_fish = set(defaults.keys())
+parsed_fish = map(parse_fish, fish_data())
+for fish in parsed_fish:
+    unseen_fish.remove(fish.romaji)
+    defaults[fish.romaji] = fish
 
-print defaults
-print map(parse_fish, fish_data())
+if len(unseen_fish) > 0:
+    print "The following fish did not have date specified in fish_data.txt:"
+    as_list = list(unseen_fish)
+    as_list.sort()
+    for fish in as_list:
+        print fish
 
-
+final_fish_list = defaults.values()
+final_fish_list.sort(key = lambda fish: fish.romaji)
