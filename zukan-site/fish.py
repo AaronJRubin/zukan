@@ -28,7 +28,7 @@ class Location:
 
 class Fish:
 
-    def __init__(self, latin = "piscis maximus", family = u"魚科", genus = u"魚族", romaji = "ayu", kana = u"アユ", location = Location(),
+    def __init__(self, latin = "piscis maximus", family = u"魚科", genus = u"魚族", romaji = "ayu", kana = u"アユ",
         rarity = 3):
         self.romaji = romaji
         try:
@@ -38,7 +38,7 @@ class Fish:
         self.latin = latin
         self.family = family
         self.genus = genus
-        self.location = location
+        self.location = Location()
         self.rarity = rarity
         #self.link = "sakana/" + romaji
         #self.image = "static/low-res/ichiran/" + romaji + ".jpg"
