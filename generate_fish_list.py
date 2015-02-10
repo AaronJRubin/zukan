@@ -74,4 +74,4 @@ if len(unseen_fish) > 0:
 final_fish_list = defaults.values()
 final_fish_list.sort(key = lambda fish: fish.romaji)
 
-pickle.dump(final_fish_list, open("dumped.pkl", "wb", pickle.HIGHEST_PROTOCOL))
+pickle.dump(final_fish_list, open("zukan-site/fish_list.pkl", "wb", pickle.HIGHEST_PROTOCOL))
