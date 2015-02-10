@@ -21,6 +21,13 @@ import jinja2
 import re
 import fish
 import jinja_utils
+import cPickle as pickle
+
+fish_list = pickle.load(open("fish_list.pkl", "rb", pickle.HIGHEST_PROTOCOL))
+
+fish_dict = {}
+for fish in fish_list:
+    fish_dict[fish.romaji] = fish
 
 class Handler(webapp2.RequestHandler):
     def write(self, *a, **kw):
@@ -31,12 +38,12 @@ class Handler(webapp2.RequestHandler):
 
 class MainHandler(Handler):
     def get(self):
-        self.render("sakana-ichiran.html", fish = fish.fish_list);
+        self.render("sakana-ichiran.html", fish = fish_list);
 
 class FishPageHandler(Handler):
     def get(self, FISH_RE):
         print("Calling FishPageHandler")
-        self.render("sakana" + FISH_RE + ".html", fish = fish.fish_dict[FISH_RE[1:]])
+        self.render("sakana" + FISH_RE + ".html", fish = fish_dict[FISH_RE[1:]])
 
 FISH_RE = r'(/(?:[a-zA-Z0-9_-]+/?)*)'
 app = webapp2.WSGIApplication([

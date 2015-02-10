@@ -40,8 +40,14 @@ class Fish:
         self.genus = genus
         self.location = location
         self.rarity = rarity
-        self.link = "sakana/" + romaji
-        self.image = "static/low-res/ichiran/" + romaji + ".jpg"
+        #self.link = "sakana/" + romaji
+        #self.image = "static/low-res/ichiran/" + romaji + ".jpg"
+
+    def get_link(self):
+        return "sakana/" + self.romaji
+
+    def get_image(self):
+        return "static/low-res/ichiran/" + self.romaji + ".jpg"
 
     def render_tile(self):
         return jinja_utils.render_str("fish-tile.html", fish = self)
@@ -54,7 +60,7 @@ class Fish:
 
     def rarity_stars(self):
         return ("&#x2605" * self.rarity) + ("&#x2606" * (5 - self.rarity))
-
+"""
 akaza_loc = Location()
 akaza_loc.set_takatsu([Location.ZYOU])
 akaza_loc.set_masuda([Location.ZYOU])
@@ -123,3 +129,4 @@ fish_dict["akaza"] = akaza
 
 fish_list = fish_dict.values()
 fish_list.sort(key = lambda fish: fish.romaji)
+"""
