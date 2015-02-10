@@ -3,6 +3,7 @@
 import romkan
 import os
 import sys
+import cPickle as pickle
 sys.path.insert(0, './zukan-site')
 from fish import Fish, Location
 
@@ -72,3 +73,5 @@ if len(unseen_fish) > 0:
 
 final_fish_list = defaults.values()
 final_fish_list.sort(key = lambda fish: fish.romaji)
+
+pickle.dump(final_fish_list, open("dumped.pkl", "wb", pickle.HIGHEST_PROTOCOL))
