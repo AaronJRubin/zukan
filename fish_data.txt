@@ -1,0 +1,13 @@
+name: abehaze
+takatsu: zyou, chuu, ge
+masuda: ge, kakou
+rarity: 4
+
+name: aburabote
+takatsu: zyou
+rarity: 3
+
+name: akaza
+takatsu: zyou
+masuda: zyou
+rarity: 2
