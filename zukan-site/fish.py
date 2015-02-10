@@ -12,11 +12,11 @@ class Location:
         self._dict["Takatsu"] = set()
         self._dict["Masuda"] = set()
 
-    def set_takatsu(self, *locations):
+    def set_takatsu(self, locations):
         for location in locations:
             self._dict["Takatsu"].add(location)
 
-    def set_masuda(self, *locations):
+    def set_masuda(self, locations):
         for location in locations:
             self._dict["Masuda"].add(location)
 
@@ -56,8 +56,8 @@ class Fish:
         return ("&#x2605" * self.rarity) + ("&#x2606" * (5 - self.rarity))
 
 akaza_loc = Location()
-akaza_loc.set_takatsu(Location.ZYOU)
-akaza_loc.set_masuda(Location.ZYOU)
+akaza_loc.set_takatsu([Location.ZYOU])
+akaza_loc.set_masuda([Location.ZYOU])
 akaza = Fish(romaji = "akaza", kana = "アカザ", location = akaza_loc)
 
 fish_list = [Fish(romaji = "abehaze", kana = "アベハゼ"),
