@@ -38,7 +38,7 @@ def parse_fish(fish_string):
     lines = fish_string.split('\n')
     fish = Fish(romaji = "")
     for line in lines:
-        split_line = line.strip().split(": ")
+        split_line = line.strip().lower().split(": ")
         if len(split_line) != 2:
             raise Exception("Fish with malformed field specification in line " + line)
         field, data = split_line
@@ -47,6 +47,10 @@ def parse_fish(fish_string):
             fish.kana = romkan.to_kana(data)
         elif field == "rarity":
             fish.rarity = int(data)
+        elif field == "genus" or field == "zoku":
+            fish.genus = data
+        elif field == "family" or field == "ka":
+            fish.family = data
         elif field == "takatsu":
             fish.location.set_takatsu(map(string_to_location, data.split(", ")))
         elif field =="masuda":
