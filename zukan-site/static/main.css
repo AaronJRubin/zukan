@@ -10,6 +10,11 @@ font-family: Century Gothic, sans-serif;
 font-size: 1.05em;
 }
 
+body.fish-page {
+  background-image: url('low-res/takatsugawa-square.jpg');
+  background-size: 50% 100%;
+}
+
 div.fish-page {
   background-color: #111144;
   max-width: 700px;
@@ -59,7 +64,7 @@ main, .gallery, header {
   display: flex;
   display: -webkit-flex;
   flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;*/
+  -webkit-flex-wrap: wrap;
 }
 
 main, .gallery {
@@ -72,6 +77,11 @@ header {
   -webkit-align-items: center;
   justify-content: center;
   align-items: center;
+}
+
+header.ichiran-header {
+  background-image: url("low-res/takatsugawa.jpg");
+  background-size: 50%;
 }
 
 div#location {
@@ -146,16 +156,18 @@ figure img {
   background-color: orange;
 }
 
-article, .navigation-link, header {
-
-}
-
 header {
   text-align: center;
 }
 
 header p {
 font-size: 1.2em;
+}
+
+@media(max-width: 700px) {
+  body.fish-page {
+    background-image: none;
+ }
 }
 
 @media(max-width: 635px) {
@@ -166,7 +178,12 @@ font-size: 1.2em;
  }
  div#rarity{
   width: 98%;
+ }
+ header.ichiran-header {
+  background-size: 100%;
+ }
 }
+
 
 @media(max-width: 320px) {
   div#location {
@@ -177,6 +194,13 @@ font-size: 1.2em;
 @media(max-width: 490px) {
 header p {
   font-size: 0.95em;
+}
+header h1 {
+  font-size: 2.5em;
+}
+div.fish-page {
+  padding-right: 0px;
+  padding-left: 0px;
 }
 }
 

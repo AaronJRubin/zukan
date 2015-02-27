@@ -1,4 +1,7 @@
 {% extends "base.html" %}
+
+{% set header_class = "ichiran-header" %}
+
 {% block header %}
 <h1>高津川流域魚図鑑</h1>
 {% endblock %}
@@ -7,11 +10,5 @@
 {% for fish in fish %}
 {{fish.render_tile()}}
 {% endfor %}
-<!--
-<a href="http://www.google.com">
-<div class="fish-tile">
-	<img src="static/salmon.jpg"></img>
-	<span>Salmon</span>
-</div>
-</a>-->
+
 {% endblock %}
