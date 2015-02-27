@@ -23,11 +23,11 @@ def fish_data():
 
 def string_to_location(string):
     string = string.strip().lower()
-    if string == "zyou":
+    if string == "zyou" or string == "jou":
       return Location.ZYOU
-    if string == "chuu":
+    if string == "tyuu" or string == "chuu":
       return Location.CHUU
-    if string == "ge":
+    if string == "ge" or string == "ka":
       return Location.GE 
     if string == "kakou":
       return Location.KAKOU
