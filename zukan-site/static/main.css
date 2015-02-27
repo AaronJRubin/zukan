@@ -3,11 +3,19 @@ header, section, footer, aside, nav, main, article, figure
 display: block; 
 }
 
-* {
-background-color: black;
-color: #FFFFFF;
+body {
+background-color: #111133;
+color: #e8e8e8;
 font-family: Century Gothic, sans-serif;
 font-size: 1.05em;
+}
+
+div.fish-page {
+  background-color: #111144;
+  max-width: 700px;
+  margin: auto;
+  padding-right: 20px;
+  padding-left: 20px;
 }
 
 h1 {
@@ -21,7 +29,7 @@ table, th, td {
 
 div#rarity {
  border: 1px solid white;
- height: 128px; /* To equal fish habitat table */
+ height: 95px; /* To equal fish habitat table */
 }
 
 div#rarity div {
@@ -139,8 +147,7 @@ figure img {
 }
 
 article, .navigation-link, header {
-  max-width: 700px;
-  margin: auto;
+
 }
 
 header {
