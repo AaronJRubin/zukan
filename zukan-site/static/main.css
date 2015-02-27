@@ -1,13 +1,13 @@
 header, section, footer, aside, nav, main, article, figure
 { 
-display: block; 
+  display: block; 
 }
 
 body {
-background-color: #111133;
-color: #e8e8e8;
-font-family: Century Gothic, sans-serif;
-font-size: 1.05em;
+  background-color: #111133;
+  color: #e8e8e8;
+  font-family: Century Gothic, sans-serif;
+  font-size: 1.05em;
 }
 
 body.fish-page {
@@ -29,7 +29,7 @@ h1 {
 }
 
 table, th, td {
-    border: 1px solid white;
+  border: 1px solid white;
 }
 
 div#rarity {
@@ -93,22 +93,22 @@ div#location {
 }
 
 a {
-color:#FFFFFF;
-text-decoration: none}
+  color:#FFFFFF;
+  text-decoration: none}
 }     
 a:visited {color:#FFFFFF;} 
 a:hover {color:#FFFFFF;} 
 a:active {color:#FFFFFF;} 
 
 .fish-tile, figure {
--webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
--moz-box-sizing: border-box;    /* Firefox, other Gecko */
-box-sizing: border-box; 
-border-width: 2px;
-border-radius: 6px; 
-border-style: solid;
-border-color: white;
-margin: 0.5vw;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box; 
+  border-width: 2px;
+  border-radius: 6px; 
+  border-style: solid;
+  border-color: white;
+  margin: 0.5vw;
 }
 
 figure {
@@ -122,9 +122,9 @@ figure {
 }
 
 .fish-tile:hover {
-border-color: orange;
--webkit-transform: scale(1.25, 1.125);
-transform: scale(1.25, 1.125);
+  border-color: orange;
+  -webkit-transform: scale(1.25, 1.125);
+  transform: scale(1.25, 1.125);
 }
 
 .fish-tile *, figure * {
@@ -133,9 +133,9 @@ transform: scale(1.25, 1.125);
 }
 
 .fish-tile img {
-    max-width: 100%;
-    min-width: 100%;
-    max-height: 75%;
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 75%;
 }
 
 figure img {
@@ -161,13 +161,13 @@ header {
 }
 
 header p {
-font-size: 1.2em;
+  font-size: 1.2em;
 }
 
 @media(max-width: 700px) {
   body.fish-page {
     background-image: none;
- }
+  }
 }
 
 @media(max-width: 635px) {
@@ -175,32 +175,34 @@ font-size: 1.2em;
   width: 98%;
   margin-bottom: 5px;
   margin-right: 0px;
- }
- div#rarity{
+}
+div#rarity{
   width: 98%;
- }
- header.ichiran-header {
+}
+header.ichiran-header {
   background-size: 100%;
- }
+}
 }
 
+@media(max-width: 490px) {
+  header p {
+    font-size: 0.95em;
+  }
+  header h1 {
+    font-size: 2.5em;
+  }
+  div.fish-page {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
 
 @media(max-width: 320px) {
   div#location {
    font-size: 0.95em;
-  }
-}
-
-@media(max-width: 490px) {
-header p {
-  font-size: 0.95em;
-}
-header h1 {
-  font-size: 2.5em;
-}
-div.fish-page {
-  padding-right: 0px;
-  padding-left: 0px;
+ }
+ header h1 {
+  font-size: 2em;
 }
 }
 
@@ -220,5 +222,5 @@ div.fish-page {
 /*
   figure {
     padding: 2%;
-  }*/
-}
+    }*/
+  }
