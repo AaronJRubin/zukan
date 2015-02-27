@@ -28,7 +28,7 @@ class Location:
 
 class Fish:
 
-    def __init__(self, latin = "piscis maximus", family = u"魚科", genus = u"魚族", romaji = "ayu", kana = u"アユ",
+    def __init__(self, latin = "piscis maximus", family = u"魚科", genus = u"魚属", romaji = "ayu", kana = u"アユ",
         rarity = 3):
         self.romaji = romaji
         try:
