@@ -38,12 +38,12 @@ class Handler(webapp2.RequestHandler):
 
 class MainHandler(Handler):
     def get(self):
-        self.render("sakana-ichiran.html", fish = fish_list);
+        self.render("base/sakana-ichiran.html", fish = fish_list);
 
 class FishPageHandler(Handler):
     def get(self, FISH_RE):
         print("Calling FishPageHandler")
-        self.render("sakana" + FISH_RE + ".html", fish = fish_dict[FISH_RE[1:]])
+        self.render("base/sakana" + FISH_RE + ".html", fish = fish_dict[FISH_RE[1:]])
 
 FISH_RE = r'(/(?:[a-zA-Z0-9_-]+/?)*)'
 app = webapp2.WSGIApplication([
