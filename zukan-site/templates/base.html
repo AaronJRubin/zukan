@@ -5,10 +5,13 @@
 <link type="text/css" rel="stylesheet" href = "/static/main.css"/>
 <title>高津川の図鑑</title>
 </head>
-<body>
+<body class="{{frame_class}}">
 <!--<header>魚の図鑑です</header> -->
 <!--<div class="body"> -->
-	<header>
+
+<div class="{{body_class}}">
+
+	<header class="{{header_class}}">
 	{% block header %}
 	{% endblock %}
 	</header>
@@ -22,6 +25,8 @@
 		{% block footer %}
 		{% endblock %}
 	</footer>
+
+</div>
 	<!--<nav class="nav">
 		<a href="www.google.com">Google</a>
 	</nav> 

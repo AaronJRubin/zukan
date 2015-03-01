@@ -1,13 +1,29 @@
 header, section, footer, aside, nav, main, article, figure
 { 
-display: block; 
+  display: block; 
 }
 
-* {
-background-color: black;
-color: #FFFFFF;
-font-family: Century Gothic, sans-serif;
-font-size: 1.05em;
+body {
+  background-color: #111133;
+  color: #e8e8e8;
+  font-family: Century Gothic, sans-serif;
+  font-size: 1.05em;
+}
+
+body.fish-page {
+  background-image: url('low-res/takatsugawa-square.jpg');
+  background-size: 50% 100%;
+}
+
+div.fish-page {
+  background-color: #111144;
+  max-width: 700px;
+  margin: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 10px;
 }
 
 h1 {
@@ -16,94 +32,103 @@ h1 {
 }
 
 table, th, td {
-    border: 1px solid white;
-    /*padding: 5px;*/
+  border: 1px solid white;
 }
 
 div#rarity {
- text-align: center;
  border: 1px solid white;
- height: 128px;
- /*padding-right: 10px;
- padding-left: 10px;*/
+ min-height: 95px; /* To equal fish habitat table */
 }
 
-div#rarity div {
+div#rarity div#rarity-stars {
  border-top: 1px solid white;
  color: yellow;
+ padding-top: 12px;
+}
+
+div #rarity h3 {
+  margin-bottom: 0.15em;
+  margin-top: 0.15em;
 }
 
 header img {
- /*max-height: 300px;*/
  max-width: 95%;
  max-height: 80%;
  margin: 0 auto;
- /*margin: auto;*/
- /*margin: 10px;*/
  border: 2px solid white;
- vertical-align: middle;
 }
 
 .header-section {
  width: 48%;
  text-align: center;
- vertical-align: middle;
 }
 
 header table {
  text-align: center;
  margin: 0 auto;
- /*margin: 10px;*/
+ width: 100%;
 }
 
+main, .gallery, header {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+}
 
 main, .gallery {
-  display: -webkit-flex;
-  -webkit-flex-wrap: wrap;
   -webkit-justify-content: space-around;
-  display: flex;
-  flex-wrap: wrap;
   justify-content: space-around;
 }
 
 header {
-  display: -webkit-flex;
-  -webkit-flex-wrap: wrap;
-  /*-webkit-justify-content: space-around;*/
-  display: flex;
-  flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
   justify-content: center;
   align-items: center;
 }
 
+header.ichiran-header {
+  background-image: url("low-res/takatsugawa.jpg");
+  background-size: 50%;
+  border-radius: 10px;
+}
+
+div#location {
+  margin-right: 5px;
+}
+
+article {
+  font-size: 1.4em;
+}
+
 .gallery {
  padding: 5px 5px 5px 5px;
-
 }
 
 a {
-color:#FFFFFF;
-text-decoration: none}
+  color:#FFFFFF;
+  text-decoration: none}
 }     
 a:visited {color:#FFFFFF;} 
 a:hover {color:#FFFFFF;} 
 a:active {color:#FFFFFF;} 
 
 .fish-tile, figure {
--webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
--moz-box-sizing: border-box;    /* Firefox, other Gecko */
-box-sizing: border-box; 
-border-width: 2px;
-border-radius: 6px; 
-border-style: solid;
-border-color: white;
-margin: 0.5vw;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box; 
+  border-width: 2px;
+  border-radius: 6px; 
+  border-style: solid;
+  border-color: white;
+  margin: 0.5vw;
 }
 
 figure {
   float: left;
-  max-width: 38%;
-  max-height: 100%;
+  max-width: 48%;
+  /*max-height: 100%;*/
 }
 
 .fish-tile {
@@ -111,9 +136,9 @@ figure {
 }
 
 .fish-tile:hover {
-border-color: orange;
--webkit-transform: scale(1.25, 1.125);
-transform: scale(1.25, 1.125);
+  border-color: orange;
+  -webkit-transform: scale(1.25, 1.125);
+  transform: scale(1.25, 1.125);
 }
 
 .fish-tile *, figure * {
@@ -122,8 +147,9 @@ transform: scale(1.25, 1.125);
 }
 
 .fish-tile img {
-    max-width: 100%;
-    max-height: 75%;
+  max-width: 100%;
+  min-width: 100%;
+  max-height: 75%;
 }
 
 figure img {
@@ -144,22 +170,57 @@ figure img {
   background-color: orange;
 }
 
-article, .navigation-link, header {
-  max-width: 700px;
-  margin: auto;
-}
-
 header {
   text-align: center;
 }
 
 header p {
-font-size: 1.2em;
+  font-size: 1.2em;
+}
+
+@media(max-width: 700px) {
+  body.fish-page {
+    background-image: none;
+  }
+}
+
+@media(max-width: 635px) {
+ div#location {
+  width: 98%;
+  margin-bottom: 5px;
+  margin-right: 0px;
+}
+div#rarity{
+  width: 98%;
+  min-height: 0px; /* no reason to equal location table any more */
+}
+div#rarity div#rarity-stars {
+ padding-top: 0px;
+}
+header.ichiran-header {
+  background-size: 100%;
+}
 }
 
 @media(max-width: 490px) {
-header p {
-  font-size: 0.95em;
+  header p {
+    font-size: 0.95em;
+  }
+  header h1 {
+    font-size: 2.5em;
+  }
+  div.fish-page {
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+}
+
+@media(max-width: 320px) {
+  div#location {
+   font-size: 0.95em;
+ }
+ header h1 {
+  font-size: 2em;
 }
 }
 
@@ -176,8 +237,8 @@ header p {
   .navigation-link {
     display: none;
   }
-
+/*
   figure {
     padding: 2%;
+    }*/
   }
-}
