@@ -2,7 +2,7 @@ name: abehaze
 takatsu: zyou, chuu, ge
 masuda: ge, kakou
 rarity: 4
-zoku: アベハゼ族
+zoku: アベハゼ属
 ka: アベハゼ科
 
 name: aburabote

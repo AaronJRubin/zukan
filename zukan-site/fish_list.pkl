@@ -50,7 +50,7 @@ Vabehaze
 p24
 sS'genus'
 p25
-V\u30a2\u30d9\u30cf\u30bc\u65cf
+V\u30a2\u30d9\u30cf\u30bc\u5c5e
 p26
 sba(ifish
 Fish
