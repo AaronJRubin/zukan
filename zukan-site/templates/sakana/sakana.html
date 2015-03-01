@@ -3,8 +3,8 @@
 {% set body_class = "fish-page" %}
 {% set frame_class = "fish-page" %}
 
-{% block header %}
-
+{% block content %}
+<header>
 <div class = "header-section">
 <img src="/static/low-res/ichiran/{{fish.romaji}}.jpg"></img>
 </div>
@@ -50,9 +50,13 @@
 </div>
 </div>
 
+</header>
+
+{% block article %}
+
 {% endblock %}
 
-{% block footer %}
+<footer>
 <a href="/"><div class="navigation-link">一覧へ戻る</div></a>
-<!--<a href="/"><button type="button">一覧へ戻る</button></a>-->
+</footer>
 {% endblock %}
