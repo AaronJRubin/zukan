@@ -38,6 +38,10 @@ def parse_fish(fish_string):
     lines = fish_string.split('\n')
     fish = Fish(romaji = "")
     for line in lines:
+        try:
+            line = line.decode('utf-8')
+        except Exception:
+            pass
         split_line = line.strip().lower().split(": ")
         if len(split_line) != 2:
             raise Exception("Fish with malformed field specification in line " + line)
