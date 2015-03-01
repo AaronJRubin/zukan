@@ -49,6 +49,8 @@ def parse_fish(fish_string):
         if field == "name":
             fish.romaji = data
             fish.kana = romkan.to_kana(data)
+        elif field == "latin" or field == "gakumei":
+            fish.latin = data
         elif field == "rarity":
             fish.rarity = int(data)
         elif field == "genus" or field == "zoku":

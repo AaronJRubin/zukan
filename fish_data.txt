@@ -4,6 +4,7 @@ masuda: ge, kakou
 rarity: 4
 zoku: アベハゼ属
 ka: アベハゼ科
+latin: piscis abeazus
 
 name: aburabote
 takatsu: zyou
