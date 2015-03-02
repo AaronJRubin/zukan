@@ -85,3 +85,24 @@ final_fish_list = defaults.values()
 final_fish_list.sort(key = lambda fish: fish.romaji)
 
 pickle.dump(final_fish_list, open("zukan-site/fish_list.pkl", "wb", pickle.HIGHEST_PROTOCOL))
+
+def write_dart(fish_list):
+    f = file("static_site/fish_list.dart", "w");
+    f.write("part of fish;\n\n")
+    f.write("List<Fish> fish_list = [")
+    for fish in fish_list:
+        fishString = u"""new Fish("%s", "%s", "%s", "%s", "%s",
+            %d, %s, %s, %s, %s, %s, %s, %s, %s)""" % (fish.latin, fish.family,
+            fish.genus, fish.romaji, fish.kana, fish.rarity, fish.takatsu_zyou(),
+            fish.takatsu_chuu(), fish.takatsu_ge(), fish.takatsu_kakou(), fish.masuda_zyou(),
+            fish.masuda_chuu(), fish.masuda_ge(), fish.masuda_kakou())
+        fishString = fishString.replace('True', 'true')
+        fishString = fishString.replace('False', 'false')
+        f.write(fishString.encode('utf8'))
+        f.write(",\n")
+    f.write("];\n\n")
+    f.write("""Map<String, Fish> fish_map = new Map.fromIterable(fish_list,
+    key: (fish) => fish.romaji);""")
+    f.close()
+
+write_dart(final_fish_list)
