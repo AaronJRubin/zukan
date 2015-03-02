@@ -10,6 +10,26 @@ body {
   font-size: 1.05em;
 }
 
+main, .gallery, header {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+}
+
+main, .gallery {
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+header {
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
 body.fish-page {
   background-image: url('low-res/takatsugawa-square.jpg');
   background-size: 50% 100%;
@@ -51,51 +71,36 @@ div #rarity h3 {
   margin-top: 0.15em;
 }
 
-header img {
+header.fish-header > div {
+ width: 48%;
+ text-align: center;
+}
+
+header.fish-header img {
  max-width: 95%;
  max-height: 80%;
  margin: 0 auto;
  border: 2px solid white;
 }
 
-.header-section {
- width: 48%;
- text-align: center;
+div#location {
+  margin-right: 5px;
 }
 
-header table {
+header.fish-header table {
  text-align: center;
  margin: 0 auto;
  width: 100%;
 }
 
-main, .gallery, header {
-  display: flex;
-  display: -webkit-flex;
-  flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-}
-
-main, .gallery {
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
-}
-
-header {
-  -webkit-justify-content: center;
-  -webkit-align-items: center;
-  justify-content: center;
-  align-items: center;
+header.fish-header p {
+  font-size: 1.2em;
 }
 
 header.ichiran-header {
   background-image: url("low-res/takatsugawa.jpg");
   background-size: 50%;
   border-radius: 10px;
-}
-
-div#location {
-  margin-right: 5px;
 }
 
 article {
@@ -128,7 +133,6 @@ a:active {color:#FFFFFF;}
 figure {
   float: left;
   max-width: 48%;
-  /*max-height: 100%;*/
 }
 
 .fish-tile {
@@ -170,14 +174,6 @@ figure img {
   background-color: orange;
 }
 
-header {
-  text-align: center;
-}
-
-header p {
-  font-size: 1.2em;
-}
-
 @media(max-width: 700px) {
   body.fish-page {
     background-image: none;
@@ -185,25 +181,28 @@ header p {
 }
 
 @media(max-width: 635px) {
- div#location {
-  width: 98%;
-  margin-bottom: 5px;
-  margin-right: 0px;
-}
-div#rarity{
-  width: 98%;
-  min-height: 0px; /* no reason to equal location table any more */
-}
-div#rarity div#rarity-stars {
- padding-top: 0px;
-}
-header.ichiran-header {
-  background-size: 100%;
-}
+  div#location {
+    width: 98%;
+    margin-bottom: 5px;
+    margin-right: 0px;
+  }
+  div#rarity{
+    width: 98%;
+    min-height: 0px; /* no reason to equal location table any more */
+  }
+  div#rarity div#rarity-stars {
+    padding-top: 0px;
+  }
+  header.ichiran-header {
+    background-size: 100%;
+  }
+  figure {
+    max-width: 100%;
+  }
 }
 
 @media(max-width: 490px) {
-  header p {
+  header.fish-header p {
     font-size: 0.95em;
   }
   header h1 {
@@ -217,11 +216,11 @@ header.ichiran-header {
 
 @media(max-width: 320px) {
   div#location {
-   font-size: 0.95em;
- }
- header h1 {
-  font-size: 2em;
-}
+    font-size: 0.95em;
+  }
+  header h1 {
+    font-size: 2em;
+  }
 }
 
 @media print {
@@ -237,8 +236,4 @@ header.ichiran-header {
   .navigation-link {
     display: none;
   }
-/*
-  figure {
-    padding: 2%;
-    }*/
-  }
+}

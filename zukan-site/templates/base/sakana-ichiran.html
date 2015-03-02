@@ -3,13 +3,13 @@
 {% block content %}
 
 <header class="ichiran-header">
-<h1>高津川流域魚図鑑</h1>
+	<h1>高津川流域魚図鑑</h1>
 </header>
 
 <main>
-{% for fish in fish %}
-{{fish.render_tile()}}
-{% endfor %}
+	{% for fish in fish %}
+	{{fish.render_tile()}}
+	{% endfor %}
 </main>
 
 {% endblock %}
