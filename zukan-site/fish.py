@@ -47,7 +47,7 @@ class Fish:
         return "sakana/" + self.romaji
 
     def get_image(self):
-        return "static/low-res/ichiran/" + self.romaji + ".jpg"
+        return "/low-res/ichiran/" + self.romaji + ".jpg"
 
     def render_tile(self):
         return jinja_utils.render_str("fish-tile.html", fish = self)
