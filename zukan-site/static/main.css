@@ -32,7 +32,8 @@ header {
 
 body.fish-page {
   background-image: url('low-res/takatsugawa-square.jpg');
-  background-size: 50% 100%;
+  background-size: 100% 100%;
+  transition: background-image 3s ease-in-out;
 }
 
 div.fish-page {

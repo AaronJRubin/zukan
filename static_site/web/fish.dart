@@ -1,6 +1,6 @@
 library fish;
 
-part '../fish_list.dart';
+part 'fish_list.dart';
 
 abstract class RiverHabitat {
 
@@ -14,16 +14,16 @@ abstract class RiverHabitat {
   List<String> backgroundImages() {
     List<String> res = [];
       if (up) {
-        res.add(_constructURL("up"));
+        res.add(_constructURL("zyou"));
       }
       if (central) {
-          res.add(_constructURL("central"));
+          res.add(_constructURL("chuu"));
        }
       if (down) {
-        res.add(_constructURL("down"));
+        res.add(_constructURL("ge"));
       }
       if (mouth) {
-        res.add(_constructURL("mouth"));
+        res.add(_constructURL("kakou"));
       }
       return res;
   }
@@ -39,7 +39,7 @@ class Takatsu extends RiverHabitat {
   }
 
   String _constructURL(String area) {
-    return "takatsu-" + area + ".jpg";
+    return "/seisokuchi/takatsu-" + area + ".jpg";
   }
 
 }
@@ -54,7 +54,7 @@ class Masuda extends RiverHabitat {
   }
 
   String _constructURL(String area) {
-    return "masuda-" + area + ".jpg";
+    return "/seisokuchi/masuda-" + area + ".jpg";
   }
 
 }
@@ -72,6 +72,12 @@ class Fish {
 
   Fish(this.scientific, this.family, this.genus, this.romaji, this.kana, this.rarity,
       bool takatsu_up, bool takatsu_central, bool takatsu_down, bool takatsu_mouth,
-      bool masuda_up, bool masuda_central, bool masuda_down, bool masuda_mouth);
+      bool masuda_up, bool masuda_central, bool masuda_down, bool masuda_mouth) {
+    this.takatsu = new Takatsu(takatsu_up, takatsu_central, takatsu_down, takatsu_mouth);
+    this.masuda = new Masuda(masuda_up, masuda_central, masuda_down, masuda_mouth);
+  }
 
+  List<String> backgroundImages() {
+    return takatsu.backgroundImages()..addAll(masuda.backgroundImages());
+  }
 }
