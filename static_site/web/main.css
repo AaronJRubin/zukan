@@ -86,10 +86,7 @@ div.fish-page {
   max-width: 700px;
   margin: auto;
   margin-top: 10px;
-  padding-right: 20px;
-  padding-left: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 20px;
   border-radius: 10px;
 }
 
@@ -108,18 +105,18 @@ td {
   padding: 0.3em;
 }
 
-div#rarity {
+#rarity {
  border: 1px solid white;
  min-height: 95px; /* To equal fish habitat table */
 }
 
-div#rarity div#rarity-stars {
+#rarity-stars {
  border-top: 1px solid white;
  color: yellow;
  padding-top: 12px;
 }
 
-div #rarity h3 {
+#rarity h3 {
   margin-bottom: 0.15em;
   margin-top: 0.15em;
   font-size: 1.5em;
@@ -168,7 +165,7 @@ article {
 
 a {
   color:#FFFFFF;
-  text-decoration: none}
+  text-decoration: none;
 }     
 a:visited {color:#FFFFFF;} 
 a:hover {color:#FFFFFF;} 
@@ -199,7 +196,7 @@ figure {
   transform: scale(1.125, 1.125);
 }
 
-.fish-tile *, figure * {
+.fish-tile span, figure figcaption {
   display: block;
   text-align: center;
 }
@@ -253,16 +250,16 @@ figure figcaption {
   div#location {
     width: 98%;
     margin-bottom: 5px;
-    margin-right: 0px;
+    margin-right: 0;
   }
-  div#rarity{
+  #rarity{
     width: 98%;
-    min-height: 0px; /* no reason to equal location table any more */
+    min-height: 0; /* no reason to equal location table any more */
   }
-  div#rarity div#rarity-stars {
-    padding-top: 0px;
+  #rarity-stars {
+    padding-top: 0;
   }
-  div#rarity h3 {
+  #rarity h3 {
     font-size: 1em;
   }
   header.ichiran-header {
