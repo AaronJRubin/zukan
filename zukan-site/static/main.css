@@ -162,8 +162,11 @@ figure img {
 }
 
 .navigation-link {
-  background-color: #4479BA; 
-  height: 10vh;
+  display: block;
+  min-width: 100%;
+  background-color: #4479BA;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
   line-height: 10vh;
   font-size: 5vw;
   text-align: center;
