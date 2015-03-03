@@ -1,4 +1,4 @@
-import 'fish.dart';
+import 'web/fish.dart';
 
 void main() {
   for (Fish fish in fish_list) {
