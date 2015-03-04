@@ -80,8 +80,6 @@ new Fish("rhinogobius sp.ld", "ハゼ科ハゼ亜科", "ヨシノボリ属", "oo
             4, true, true, false, false, false, false, false, false),
 new Fish("siniperca(bryttosus)kawamebari", "スズキ科", "ケツギョ属", "oyanirami", "オヤニラミ",
             4, true, true, false, false, false, false, false, false),
-new Fish("piscis maximus", "魚科", "魚属", "ribbingo", "リッビンゴ",
-            3, false, false, false, false, false, false, false, false),
 new Fish("salmo(oncorhynchus)masou masou", "サケ科サケ亜科", "サケ属", "sakuramasu", "サクラマス",
             5, false, false, true, false, false, false, false, false),
 new Fish("cobitis biwae", "ドジョウ科", "シマドジョウ属", "shimadojou", "シマドジョウ",
