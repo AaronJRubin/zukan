@@ -1,16 +1,423 @@
 name: abehaze
 takatsu: zyou, chuu, ge
-masuda: ge, kakou
+masuda: chuu, ge
 rarity: 4
 zoku: アベハゼ属
-ka: アベハゼ科
-latin: piscis abeazus
+ka: ハゼ科ハゼ亜科
+latin: Mugilogobius abei
 
 name: aburabote
 takatsu: zyou
+masuda:zyou
 rarity: 3
+zoku:アブラボテ属
+ka:コイ科タナゴ亜科
+latin:Tanakia limbata
 
 name: akaza
 takatsu: zyou
 masuda: zyou
-rarity: 2
+rarity: 4
+zoku:アカザ属
+ka:ギギ科
+latin:Liobogrus reini
+
+name:amago
+takatsu:zyou
+masuda:zyou
+rarity:2
+zoku:サケ属
+ka:サケ科
+latin:Salmo(Oncorhynchus)masou macrostimus
+
+name:ayu
+takatsu:chuu,ge,ka
+masuda:chuu,ge,ka
+rarity:2
+zoku:アユ属
+ka:キュウリウオ科
+latin:Plecoglossus altivelis altivelis
+
+name:ayukake
+takatsu:chuu,ge,ka
+masuda:chuu,ge,ka
+rarity:3
+zoku:カジカ属
+ka:カジカ科
+latin:Cottus kazika
+
+name:bora
+takatsu:chuu,ge,ka
+masuda:chuu,ge,ka
+rarity:1
+zoku:ボラ属
+ka:ボラ科
+latin:Mugil cephalus cephalus
+
+name:dozyou
+takatsu:chuu,ge
+masuda:chuu,ge
+rarity:2
+zoku:ドジョウ属
+ka:ドジョウ科
+latin:Misgurnus anguillicaudatus
+
+name:donko
+takatsu:chuu,ge
+masuda:chuu,ge
+rarity:1
+zoku:ドンコ属
+ka:ハゼ科カワアナゴ亜科
+latin:Odontobutis obscura obscura
+
+name:gigi
+takatsu:zyou,chuu
+masuda:zyou,chuu
+rarity:2
+zoku:ギギ属
+ka:ギギ科
+latin:2
+
+name:gogi
+takatsu:zyou
+masuda:
+rarity:4
+zoku:イワナ属
+ka:サケ科サケ亜科
+latin:Salvelinus leucomaenis f.imbrius
+
+name:gokurakuhaze
+takatsu:chuu,ge,ka
+masuda:chuu,ge,ka
+rarity:2
+zoku:ヨシノボリ属
+ka:ハゼ科ハゼ亜科
+latin:Rhinogobius giurinus
+
+name:himehaze
+takatsu:ka
+masuda:ka
+rarity:2
+zoku:ヒメハゼ属
+ka:ハゼ科ハゼ亜科
+latin:Favonigobius gymnauchen
+
+name:hinahaze
+takatsu:ge,ka
+masuda:ge,ka
+rarity:3
+zoku:ヒナハゼ属
+ka:ハゼ科ハゼ亜科
+latin:Redigobius bikolanus
+
+name:ginbuna
+takatsu:chuu,ge
+masuda:chuu,ge
+rarity:1
+zoku:フナ属
+ka:コイ科コイ亜科
+latin:Carassius gibelio langsdorfi
+
+name:isidozyou
+takatsu:zyou
+masuda:zyou
+rarity:5
+zoku:シマドジョウ属
+ka:ドジョウ科
+latin:Cobitis takatsuensis
+
+name:ishidonko
+takatsu:zyou
+masuda:
+rarity:5
+zoku:ドンコ属
+ka:ハゼ科カワアナゴ亜科
+latin:Odontobutis hikimiusu
+
+name:itomoroko
+takatsu:chuu
+masuda:chuu
+rarity:3
+zoku:スズモロコ属
+ka:コイ科カマツカ亜科
+latin:Squalidus gracilis gracilis
+
+name:kajika
+takatsu:chuu
+masuda:chuu
+rarity:5
+zoku:カジカ属
+ka:カジカ科
+latin:Cottus pollux
+
+name:kamatuka
+takatsu:zyou,chuu
+masuda:zyou,chuu
+rarity:2
+zoku:カマツカ属
+ka:コイ科カマツカ亜科
+latin:Pseudogobio
+
+name:koi
+takatu:chuu,ge
+masuda:chuu,ge
+rarity:2
+zoku:コイ属
+ka:コイ科コイ亜科
+latin:Cyprinus carpio
+
+name:kurodai
+takatsu:ka
+masuda:ka
+rarity:2
+zoku:クロダイ属
+ka:タイ科
+latin:Acanthopagrus schlegeli
+
+name:kawaanago
+takatsu:ka
+masuda:ka
+rarity:5
+zoku:カワアナゴ属
+ka:ハゼ科カワアナゴ亜科
+latin:Eleotris oxycephala
+
+name:kawamutu
+takatsu:zyou,chuu,ge
+masuda:zyou,chuu,ge
+rarity:1
+zoku:オイカワ属
+ka:コイ科ハエジャコ亜科
+latin:Zacco temmincki
+
+name:kawayoshinobori
+takatsu:zyou,chuu
+masuda:zyou,chuu
+rarity:2
+zoku:ヨシノボリ族
+ka:ハゼ科ハゼ亜科
+latin:Rhinogobius flumineus
+
+name:koti
+takatsu:ka
+masuda:ka
+rarity:2
+zoku:コチ属
+ka:コチ科
+latin:Platycephalus indicus
+
+name:mahaze
+takatsu:ge,ka
+masuda:chuu,ge,ka
+rarity:2
+zoku:マハゼ属
+ka:ハゼ科ハゼ亜科
+latin:Acanthogobius flavimanus
+
+name:medaka
+takatsu:chuu,ge,ka
+masuda:chuu,ge,ka
+rarity:3
+zoku:メダカ属
+ka:メダカ科
+latin:Oryzias latipes
+
+name:mimizuhaze
+takatsu:ka
+masuda:
+rarity:4
+zoku:ミミズハゼ属
+ka:ハゼ科ハゼ亜科
+latin:Luciogobius guttatus
+
+name:mugituku
+takatsu:chuu
+masuda:
+rarity:3
+zoku:ムギツク属
+ka:コイ科ヒガイ亜科
+latin:Pungtungia herzi
+
+name:namazu
+takatsu:chuu,ge
+masuda:chuu,ge
+rarity:3
+zoku:ナマズ属
+ka:ナマズ科
+latin:Silurus asotus
+
+name:numatitibu
+takatsu:chuu,ge
+masuda:chuu,ge
+rarity:3
+zoku:チチブ属
+ka:ハゼ科ハゼ亜科
+latin:Tridentiger kuroiwae brevispinis
+
+name:oikawa
+takatsu:chuu
+masuda:chuu
+rarity:3
+zoku:オイカワ族
+ka:コイ科ハエジャコ亜科
+latin:Zacco platypus
+
+name:ooyoshinobori
+takatsu:zyou,chuu
+masuda:
+rarity:4
+zoku:ヨシノボリ属
+ka:ハゼ科ハゼ亜科
+latin:Rhinogobius sp.LD
+
+name:oyanirami
+takatsu:zyou
+masuda:
+rarity:4
+zoku:ケツギョ属
+ka:スズキ科
+latin:Siniperca(Bryttosus)kawamebari
+
+name:biringo
+takatsu:ge,ka
+masuda:ge,ka
+rarity:4
+zoku:ウキゴリ属
+ka:ハゼ科ハゼ亜科
+latin:Chaenogobius castaneus
+
+name:sakuramasu
+takatsu:chuu,ge,ka
+masuda:
+rarity:5
+zoku:サケ属
+ka:サケ科サケ亜科
+latin:Salmo(Oncorhynchus)masou masou
+
+name:shimadozyou
+takatsu:zyou,chuu
+masuda:zyou,chuu
+rarity:3
+zoku:シマドジョウ属
+ka:ドジョウ科
+latin:Cobitis biwae
+
+name:shimaisaki
+takatsu:ge,ka
+masuda:ge,ka
+rarity:3
+zoku:コトヒキ属
+ka:シマイサキ科
+latin:Terapon(Rhyncopelates)oxyrhynchus
+
+name:shirouo
+takatsu:
+masuda:ka
+rarity:5
+zoku:シロウオ属
+ka:ハゼ科ハゼ亜科
+latin:Leucopsarion petersi
+
+name:sumiukigori
+takatsu:chuu,ge
+masuda:chuu,ge,ka
+rarity:3
+zoku:ウキゴリ属
+ka:ハゼ科ハゼ亜科
+latin:Chaenogobius sp.2
+
+name:sunayatume
+takatsu:zyou
+masuda:
+rarity:5
+zoku:ウナギヤツメ属
+ka:ウナギヤツメ科
+latin:Lampetra(Lethenteron)reissneri
+
+name:suzuki
+takatsu:ge,ka
+masuda:chuu,ge,ka
+rarity:2
+zoku:スズキ属
+ka:スズキ科
+latin:Lateolabrax japonicus
+
+name:tairikubaratanago
+takatsu:ge
+masuda:
+rarity:4
+zoku:バラタナゴ属
+ka:コイ科タナゴ亜科
+latin:Rhodeus ocellatus ocellatus
+
+name:titibu
+takatsu:ge
+masuda:ge,ka
+rarity:2
+zoku:チチブ属
+ka:ハゼ科ハゼ亜科
+latin:Tridentiner obscurus
+
+name:touyosinobori
+takatsu:ge
+masuda:
+rarity:4
+zoku:ヨシノボリ属
+ka:ハゼ科ハゼ亜科
+latin:Rhinogobius sp.OR
+
+name:ugui
+takatsu:zyou,chuu,ge,ka
+masuda:zyou,tyuu,ge,ka
+rarity:1
+zoku:ウグイ属
+ka:コイ科ウグイ亜科
+latin:Leuciscus
+
+name:ukigori
+takatsu:ge,ka
+masuda:ge,ka
+rarity:3
+zoku:ウキゴリ属
+ka:ハゼ科ハゼ亜科
+latin:Chaenogobius urotaenia
+
+name:unagi
+takatsu:zyou,chuu,ge,ka
+masuda:zyou,chuu,ge,ka
+rarity:3
+zoku:ウナギ属
+ka:ウナギ科
+latin:Anguilla japonica
+
+name:urohaze
+takatsu:ge,ka
+masuda:ge,ka
+rarity:3
+zoku:ウロハゼ属
+ka:ハゼ科ハゼ亜科
+latin:Glossogobius olivaceus
+
+name:yamame
+takatsu:zyou
+masuda:zyou
+rarity:3
+zoku:サケ属
+ka:サケ科サケ亜科
+latin:Salmi(Oncorhynchus)masou masou
+
+name:utusemikajika
+takatsu:chuu,ge,ka
+masuda:chuu,ge,ka
+rarity:3
+zoku:カジカ属
+ka:カジカ科
+latin:Cottus reinii
+
+name:kusahugu
+takatsu:ka
+masuda:
+rarity:3
+zoku:トラフグ属
+ka:フグ科
+latin:Takifugu miphobles

@@ -33,6 +33,10 @@ def string_to_location(string):
       return Location.KAKOU
     raise Exception("Invalid location: " + string)
 
+def clean_romaji(romaji):
+    romaji = romaji.replace("zy", "j")
+    romaji = romaji.replace("si", "shi")
+    return romaji
 
 def parse_fish(fish_string):
     lines = fish_string.split('\n')
@@ -42,12 +46,14 @@ def parse_fish(fish_string):
             line = line.decode('utf-8')
         except Exception:
             pass
-        split_line = line.strip().lower().split(": ")
+        split_line = line.strip().lower().split(":")
         if len(split_line) != 2:
             raise Exception("Fish with malformed field specification in line " + line)
         field, data = split_line
+        field = field.strip()
+        data = data.strip()
         if field == "name":
-            fish.romaji = data
+            fish.romaji = clean_romaji(data)
             fish.kana = romkan.to_kana(data)
         elif field == "latin" or field == "gakumei":
             fish.latin = data
@@ -57,10 +63,10 @@ def parse_fish(fish_string):
             fish.genus = data
         elif field == "family" or field == "ka":
             fish.family = data
-        elif field == "takatsu":
-            fish.location.set_takatsu(map(string_to_location, data.split(", ")))
+        elif field == "takatsu" or field == "takatu":
+            fish.location.set_takatsu(map(string_to_location, filter(lambda string: len(string.strip()) > 0, data.split(","))))
         elif field =="masuda":
-            fish.location.set_masuda(map(string_to_location, data.split(', ')))
+            fish.location.set_masuda(map(string_to_location, filter(lambda string: len(string.strip()) > 0, data.split(","))))
         else:
             raise Exception("Unrecognized field in line " + line)
     if fish.romaji == "":
@@ -71,11 +77,14 @@ defaults = generate_defaults()
 unseen_fish = set(defaults.keys())
 parsed_fish = map(parse_fish, fish_data())
 for fish in parsed_fish:
-    unseen_fish.remove(fish.romaji)
+    if fish.romaji in unseen_fish:
+        unseen_fish.remove(fish.romaji)
+    else:
+        print("The following fish lacks an image, or has data specified twice: " + fish.romaji)
     defaults[fish.romaji] = fish
 
 if len(unseen_fish) > 0:
-    print "The following fish did not have date specified in fish_data.txt:"
+    print "The following fish did not have data specified in fish_data.txt:"
     as_list = list(unseen_fish)
     as_list.sort()
     for fish in as_list:
