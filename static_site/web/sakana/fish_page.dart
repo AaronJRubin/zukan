@@ -7,6 +7,7 @@ List<String> images = getBackgroundImages();
 int currentImage = 0;
 
 main() {
+  print(images.toString());
   if (window.screen.width > 700) {
     window.onResize.listen((e) {
       if (window.innerWidth < 700) {
@@ -30,7 +31,9 @@ main() {
 
 List<String> getBackgroundImages() {
   String fish_name = document.baseUri.split("/").last.replaceFirst(".html", "");
+  print("Name: " + fish_name);
   Fish fish = fish_map[fish_name];
+  print("Kana: " + fish.kana);
   return fish.backgroundImages();
 }
 

@@ -96,7 +96,7 @@ final_fish_list.sort(key = lambda fish: fish.romaji)
 pickle.dump(final_fish_list, open("zukan-site/fish_list.pkl", "wb", pickle.HIGHEST_PROTOCOL))
 
 def write_dart(fish_list):
-    f = file("static_site/fish_list.dart", "w");
+    f = file("static_site/web/fish_list.dart", "w");
     f.write("part of fish;\n\n")
     f.write("List<Fish> fish_list = [")
     for fish in fish_list:
