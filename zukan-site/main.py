@@ -42,8 +42,10 @@ class MainHandler(Handler):
 
 class FishPageHandler(Handler):
     def get(self, FISH_RE):
-        print("Calling FishPageHandler")
-        self.render("base/sakana" + FISH_RE + ".html", fish = fish_dict[FISH_RE[1:]])
+        try:
+            self.render("base/sakana" + FISH_RE + ".html", fish = fish_dict[FISH_RE[1:]])
+        except Exception:
+            self.render("base/sakana/generic.html", fish = fish_dict[FISH_RE[1:]])
 
 FISH_RE = r'(/(?:[a-zA-Z0-9_-]+/?)*)'
 app = webapp2.WSGIApplication([
