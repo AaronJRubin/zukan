@@ -59,10 +59,10 @@ class Fish:
         return Location.ZYOU in self.location.get_masuda()
 
     def takatsu_chuu(self):
-        return Location.ZYOU in self.location.get_takatsu()
+        return Location.CHUU in self.location.get_takatsu()
 
     def masuda_chuu(self):
-        return Location.ZYOU in self.location.get_masuda()
+        return Location.CHUU in self.location.get_masuda()
 
     def takatsu_ge(self):
         return Location.GE in self.location.get_takatsu()
@@ -75,6 +75,25 @@ class Fish:
 
     def masuda_kakou(self):
         return Location.KAKOU in self.location.get_masuda()
+
+    def starting_location(self):
+        if self.takatsu_zyou():
+            return "takatsu-zyou"
+        if self.takatsu_chuu():
+            return "takatsu_chuu"
+        if self.takatsu_ge():
+            return "takatsu_ge"
+        if self.takatsu_kakou():
+            return "takatsu_kakou"
+        if self.masuda_zyou():
+            return "masuda_zyou"
+        if self.masuda_chuu():
+            return "masuda_chuu"
+        if self.masuda_ge():
+            return "masuda_ge"
+        if self.masuda_kakou():
+            return "masuda_kakou"
+        return ""
 
     def rarity_stars(self):
         return ("&#x2605" * self.rarity) + ("&#x2606" * (5 - self.rarity))

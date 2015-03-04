@@ -76,9 +76,40 @@ header {
 }
 
 body.fish-page {
-  background-image: url('low-res/takatsugawa-square.jpg');
   background-size: 100% 100%;
   transition: background-image 3s ease-in-out;
+}
+
+body.takatsu-zyou {
+   background-image: url('seisokuchi/takatsu-zyou.jpg');
+}
+
+body.takatsu-chuu {
+   background-image: url('seisokuchi/takatsu-chuu.jpg');
+}
+
+body.takatsu-ge {
+   background-image: url('seisokuchi/takatsu-ge.jpg');
+}
+
+body.takatsu-kakou {
+   background-image: url('seisokuchi/takatsu-kakou.jpg');
+}
+
+body.masuda-zyou {
+   background-image: url('seisokuchi/masuda-zyou.jpg');
+}
+
+body.masuda-chuu {
+   background-image: url('seisokuchi/masuda-chuu.jpg');
+}
+
+body.masuda-ge {
+   background-image: url('seisokuchi/masuda-ge.jpg');
+}
+
+body.masuda-kakou {
+   background-image: url('seisokuchi/masuda-kakou.jpg');
 }
 
 div.fish-page {
