@@ -80,19 +80,19 @@ class Fish:
         if self.takatsu_zyou():
             return "takatsu-zyou"
         if self.takatsu_chuu():
-            return "takatsu_chuu"
+            return "takatsu-chuu"
         if self.takatsu_ge():
-            return "takatsu_ge"
+            return "takatsu-ge"
         if self.takatsu_kakou():
-            return "takatsu_kakou"
+            return "takatsu-kakou"
         if self.masuda_zyou():
-            return "masuda_zyou"
+            return "masuda-zyou"
         if self.masuda_chuu():
-            return "masuda_chuu"
+            return "masuda-chuu"
         if self.masuda_ge():
-            return "masuda_ge"
+            return "masuda-ge"
         if self.masuda_kakou():
-            return "masuda_kakou"
+            return "masuda-kakou"
         return ""
 
     def rarity_stars(self):

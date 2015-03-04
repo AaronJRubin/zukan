@@ -60,5 +60,5 @@ for fish in fish_list:
 	template = os.path.join("base/sakana", fish.romaji + ".html")
 	template_path = os.path.join("zukan-site/templates", template)
 	if os.path.exists(template_path):
-		page = render_str(template, fish = fish)
+		page = render_str(template, fish = fish, background_class = fish.starting_location())
 		write(os.path.join(dest, "sakana", fish.romaji + ".html"), page.encode('utf8'))
