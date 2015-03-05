@@ -1,7 +1,10 @@
 .DS_Store
 *.pyc
 
+# Don't include files generated from templates
+zukan_workspace/web/sakana/*.html
+zukan_workspace/web/index.html
+
 # Don't include files generated from pub build
 site/static/*
 
-# Don't include files generated from templates
