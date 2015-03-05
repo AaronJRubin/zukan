@@ -1,5 +1,5 @@
 cd site
 
-appcfg.py --no_cookies --oauth2 update .
+appcfg.py --no_cookies update .
 
 cd ..
