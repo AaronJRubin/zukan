@@ -8,7 +8,7 @@ int currentImageClass = 0;
 
 main() {
   if (window.screen.width > 700 && imageClasses.length > 1) {
-    Timer timer = new Timer.periodic(new Duration(seconds: 15), (t) {
+    Timer timer = new Timer.periodic(new Duration(seconds: 10), (t) {
       body.classes.remove(imageClasses[currentImageClass]);
       currentImageClass = (currentImageClass + 1) % imageClasses.length;
       body.classes.add(imageClasses[currentImageClass]);
