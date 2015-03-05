@@ -17,6 +17,10 @@ class RiverHabitat {
     this.mouth = mouth;
   }
 
+  List<String> backgroundImages() {
+    return backgroundImageClasses().map((imageClass) => "/seisokuchi/" + imageClass + ".jpg").toList();
+  }
+
   List<String> backgroundImageClasses() {
     List<String> res = [];
     if (up) {
@@ -53,6 +57,10 @@ class Fish {
 
   List<String> backgroundImageClasses() {
     return takatsu.backgroundImageClasses()..addAll(masuda.backgroundImageClasses());
+  }
+
+  List<String> backgroundImages() {
+    return takatsu.backgroundImages()..addAll(masuda.backgroundImages());
   }
 
 }
