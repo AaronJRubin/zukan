@@ -116,7 +116,8 @@ div.fish-page {
   background-color: #111144;
   max-width: 700px;
   margin: auto;
-  margin-top: 10px;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
   padding: 10px 20px;
   border-radius: 10px;
 }
@@ -188,6 +189,7 @@ header.ichiran-header {
 
 article {
   font-size: 1.4em;
+  min-height: 38.1vh;
 }
 
 .gallery {
@@ -254,7 +256,7 @@ figure figcaption {
 
 .navigation-link {
   display: block;
-  min-width: 100%;
+  min-width: 98%;
   background-color: #4479BA;
   padding-top: 1vh;
   padding-bottom: 1vh;
