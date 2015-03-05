@@ -1,2 +1,7 @@
 .DS_Store
 *.pyc
+
+# Don't include files generated from pub build
+site/static/*
+
+# Don't include files generated from templates
