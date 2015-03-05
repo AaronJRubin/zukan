@@ -4,11 +4,10 @@ import 'dart:async';
 
 BodyElement body = document.querySelector("body");
 List<String> images = getBackgroundImages();
-int currentImage = 0;
+int currentImage = 1;
 
 main() {
-  print(images.toString());
-  if (window.screen.width > 700) {
+  if (window.screen.width > 700 && images.length > 1) {
     window.onResize.listen((e) {
       if (window.innerWidth < 700) {
         body.style.backgroundImage = "none";
@@ -16,7 +15,7 @@ main() {
         body.style.backgroundImage = "url(" + images[currentImage] + ")";
       }
     });
-    Timer timer = new Timer.periodic(new Duration(seconds: 5), (t) {
+    Timer timer = new Timer.periodic(new Duration(seconds: 15), (t) {
       if (window.innerWidth >= 700) {
       body.style.backgroundImage = "url(" + images[currentImage] + ")";
       }

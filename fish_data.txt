@@ -421,3 +421,51 @@ rarity:3
 zoku:トラフグ属
 ka:フグ科
 latin:Takifugu miphobles
+
+name:hirasuzuki
+takatu:ka
+masuda:
+rarity:3
+zoku:スズキ属
+ka:スズキ科
+latin:Lateolabrax latusb Katayama
+
+name:shirogisu
+takatu:ka
+masuda:ka
+rarity:3
+zoku:キス属
+ka:キス科
+latin:Sillago japonica Temminck et Schlegel
+
+name:hirame
+takatu:ka
+masuda:
+rarity:3
+zoku:ヒラメ属
+ka:ヒラメ科
+latin:Paralichthys olivaceus(Temmink et Schlegel)
+
+name:hedai
+takatu:ka
+masuda:
+rarity:3
+zoku:ヘダイ族
+ka:タイ科
+latin:Sparus sarba(Forsskal)
+
+name:syousaihugu
+takatu:ka
+masuda:
+rarity:3
+zoku:トラフグ属
+ka:フグ科
+latin:Takifugu snyderi(Abe)
+
+name:kurousinosita
+takatu:ka
+masuda:
+rarity:3
+zoku:タイワンシタビラメ属
+ka:ウシノシタ科
+latin:Paraplagusia japonica(Temmink et Schlegel)
