@@ -9,8 +9,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
   margin: 0;
@@ -21,7 +21,7 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
 }
@@ -197,17 +197,17 @@ article {
 a {
   color:#FFFFFF;
   text-decoration: none;
-}     
-a:visited {color:#FFFFFF;} 
-a:hover {color:#FFFFFF;} 
-a:active {color:#FFFFFF;} 
+}
+a:visited {color:#FFFFFF;}
+a:hover {color:#FFFFFF;}
+a:active {color:#FFFFFF;}
 
 .fish-tile, figure {
   -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
   -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box; 
+  box-sizing: border-box;
   border-width: 2px;
-  border-radius: 6px; 
+  border-radius: 6px;
   border-style: solid;
   border-color: white;
   margin: 0.5vw;
@@ -307,10 +307,6 @@ figure figcaption {
   }
   header h1 {
     font-size: 2.5em;
-  }
-  div.fish-page {
-    padding-right: 0px;
-    padding-left: 0px;
   }
 }
 
