@@ -35,3 +35,7 @@ for fish in fish_list:
 	if os.path.exists(template_path):
 		page = render_str(template, fish = fish, background_class = fish.starting_location())
 		write(os.path.join(dest, "sakana", fish.romaji + ".html"), page.encode('utf8'))
+	else:
+		page = render_str("base/sakana/generic.html", fish = fish, background_class = fish.starting_location())
+		write(os.path.join(dest, "sakana", fish.romaji + ".html"), page.encode('utf8'))
+
