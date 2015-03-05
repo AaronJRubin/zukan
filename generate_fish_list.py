@@ -4,12 +4,11 @@ import romkan
 import os
 import sys
 import cPickle as pickle
-sys.path.insert(0, './zukan-site')
 from fish import Fish, Location
 
 def generate_defaults():
     res = {}
-    for subdir, dirs, files in os.walk("zukan-site/static/low-res/ichiran/"):
+    for subdir, dirs, files in os.walk("zukan_workspace/web/low-res/ichiran/"):
         for file in files:
             if file.endswith(".jpg"):
                 romaji = file.replace(".jpg", "")
@@ -93,10 +92,10 @@ if len(unseen_fish) > 0:
 final_fish_list = defaults.values()
 final_fish_list.sort(key = lambda fish: fish.romaji)
 
-pickle.dump(final_fish_list, open("zukan-site/fish_list.pkl", "wb", pickle.HIGHEST_PROTOCOL))
+pickle.dump(final_fish_list, open("fish_list.pkl", "wb", pickle.HIGHEST_PROTOCOL))
 
 def write_dart(fish_list):
-    f = file("static_site/web/fish_list.dart", "w");
+    f = file("zukan_workspace/web/fish_list.dart", "w");
     f.write("part of fish;\n\n")
     f.write("List<Fish> fish_list = [")
     for fish in fish_list:

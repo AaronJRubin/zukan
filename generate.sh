@@ -1,0 +1,2 @@
+python generate_fish_list.py
+python generate_pages.py
