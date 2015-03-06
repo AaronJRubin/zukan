@@ -319,6 +319,7 @@ figure figcaption {
 
 #dropdown-caret.selected {
   transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
 }
 
 ol {
