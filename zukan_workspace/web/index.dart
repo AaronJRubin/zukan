@@ -4,18 +4,23 @@ import 'fish.dart';
 List<CheckboxInputElement> includeCheckboxes;
 List<CheckboxInputElement> excludeCheckboxes;
 List<DivElement> fishTiles;
-SpanElement dropdownCaret;
-DivElement searchArea;
+
 
 void main() {
   includeCheckboxes = document.querySelectorAll("#include .search-checkbox");
   excludeCheckboxes = document.querySelectorAll("#exclude .search-checkbox");
   fishTiles = document.querySelectorAll(".fish-tile");
-  dropdownCaret = document.querySelector("#dropdown-caret");
-  searchArea = document.querySelector(".search-area");
+  SpanElement dropdownCaret = document.querySelector("#dropdown-caret");
+  DivElement searchArea = document.querySelector("#search-area");
+  SpanElement dropdownLabel = document.querySelector("#dropdown-label");
   dropdownCaret.onClick.listen((e) {
     searchArea.classes.toggle("collapsed");
-    dropdownCaret.classes.toggle("selected");
+    dropdownCaret.classes.toggle("collapsed");
+    if (searchArea.classes.contains("collapsed")) {
+      dropdownLabel.text = "検索エリアを表示";
+    } else {
+      dropdownLabel.text = "検索エリアを隠す";
+    }
   });
   for (CheckboxInputElement checkbox in new List.from(includeCheckboxes)..addAll(excludeCheckboxes)) {
     checkbox.onChange.listen((e) => refresh());

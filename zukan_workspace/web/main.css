@@ -317,7 +317,7 @@ figure figcaption {
     user-select: none;
 }
 
-#dropdown-caret.selected {
+#dropdown-caret.collapsed {
   transform: rotate(90deg);
   -webkit-transform: rotate(90deg);
 }
@@ -370,7 +370,7 @@ input[type="checkbox"] {
   border-radius: 5px;
 }
 
-.search-area {
+#search-area {
   overflow: hidden;
   /*transition: max-height 0.2s ease-in;
   -moz-transition: max-height 0.2s ease-in;
@@ -379,7 +379,7 @@ input[type="checkbox"] {
   max-height: 100vh;*/
 }
 
-.search-area.collapsed {
+#search-area.collapsed {
   display: none;
   /*max-height: 0;*/
   /*transition: max-height 1s ease-in;
