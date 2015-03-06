@@ -4,17 +4,33 @@ part 'fish_list.dart';
 
 class RiverHabitat {
 
-  bool up;
-  bool central;
-  bool down;
-  bool mouth;
+  bool zyou;
+  bool chuu;
+  bool ge;
+  bool kakou;
   String name;
 
-  RiverHabitat(this.up, this.central, this.down, this.mouth, this.name) {
-    this.up = up;
-    this.central = central;
-    this.down = down;
-    this.mouth = mouth;
+  RiverHabitat(this.zyou, this.chuu, this.ge, this.kakou, this.name) {
+    this.zyou = zyou;
+    this.chuu = chuu;
+    this.ge = ge;
+    this.kakou = kakou;
+  }
+
+  bool contains(String habitat) {
+    switch (habitat) {
+      case "zyou":
+        return zyou;
+      case "chuu":
+        return chuu;
+      case "ge":
+        return ge;
+      case "kakou":
+        return kakou;
+      default:
+        print("Error: a non-existing habitat was searched for, with string " + habitat);
+        return false;
+    }
   }
 
   List<String> backgroundImages() {
@@ -23,16 +39,16 @@ class RiverHabitat {
 
   List<String> backgroundImageClasses() {
     List<String> res = [];
-    if (up) {
+    if (zyou) {
       res.add(name + "-zyou");
     }
-    if (central) {
+    if (chuu) {
       res.add(name + "-chuu");
     }
-    if (down) {
+    if (ge) {
       res.add(name + "-ge");
     }
-    if (mouth) {
+    if (kakou) {
       res.add(name + "-kakou");
     }
     return res;

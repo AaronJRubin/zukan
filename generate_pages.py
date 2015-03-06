@@ -1,4 +1,5 @@
-import shutil
+# -*- coding: utf-8 -*-
+
 import os
 import jinja2
 import cPickle as pickle
@@ -26,7 +27,13 @@ def write(path, string):
 
 # Build templates and write them to destination
 
-ichiran = render_str("base/sakana-ichiran.html", fish = fish_list)
+latin_ryuuiki = ["zyou", "chuu", "ge", "kakou"]
+latin_seisokuchi = ["takatsu-" + iki for iki in latin_ryuuiki] + ["masuda-" + iki for iki in latin_ryuuiki]
+kanji_ryuuiki = [u"上流", u"中流", u"下流", u"河口"]
+kanji_seisokuchi = [u"高津川" + iki for iki in kanji_ryuuiki] + [u"益田川" + iki for iki in kanji_ryuuiki]
+seisokuchi = zip(latin_seisokuchi, kanji_seisokuchi)
+# map(lambda string: string.decode('utf8'),
+ichiran = render_str("base/sakana-ichiran.html", fish = fish_list, seisokuchi = seisokuchi)
 write(os.path.join(dest, "index.html"), ichiran.encode('utf8'))
 
 for fish in fish_list:

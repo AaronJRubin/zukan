@@ -2,9 +2,40 @@
 
 {% block content %}
 
+<script async type="application/dart" src="index.dart"></script>
+<script async src="packages/browser/dart.js"></script>
+
 <header class="ichiran-header">
 	<h1>高津川流域魚図鑑</h1>
 </header>
+
+<div class="search-area">
+
+	<div class="search-section">
+		<span class="search-header">以下の生息地に住んでいる魚しか含まない</span>
+		<div class="search-buttons" id="include">
+			<ol>
+			{% for a_seisokuchi in seisokuchi %}
+			<li><button class="search-button unselected" id="{{a_seisokuchi[0]}}-include">{{a_seisokuchi[1]}}</button></li>
+		
+			{% endfor %}
+			</ol>
+		</div>
+	</div>
+
+	<div class="search-section">
+		<span class="search-header">
+		以下の生息地に住んでいる魚を除く</span>
+		<div class="search-buttons" id="exclude">
+			<ol>
+			{% for a_seisokuchi in seisokuchi %}
+			<li><button class="search-button unselected" id="{{a_seisokuchi[0]}}-exclude">{{a_seisokuchi[1]}}</button></li>
+			{% endfor %}
+		</ol>
+		</div>
+	</div>
+
+</div>
 
 <main>
 	{% for fish in fish %}

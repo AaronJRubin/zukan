@@ -224,9 +224,9 @@ figure {
 }
 
 .fish-tile:hover {
-  border-color: orange;
-  -webkit-transform: scale(1.125, 1.125);
-  transform: scale(1.125, 1.125);
+  border-color: #880088;
+  -webkit-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
 }
 
 .fish-tile span, figure figcaption {
@@ -267,8 +267,66 @@ figure figcaption {
 }
 
 .navigation-link:hover {
-  background-color: orange;
+  background-color: #880088;
 }
+
+/* Search area */
+
+button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  line-height: normal;
+}
+
+ol {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+li {
+  display: inline-block;
+  width: 24.6%;
+  padding-bottom: 0.25em;
+  padding-top: 0.25em;
+}
+
+.search-header {
+  font-size: 1.2em;
+  background-color: #880088;
+  display: block;
+  padding-bottom: 0.25em;
+  margin-bottom: 0.125em;
+  padding-top: 0.25em;
+  border-radius: 5px;
+}
+
+.search-button {
+  width: 100%;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.search-button.unselected {
+  background-color: gray;
+}
+
+.search-button.selected {
+  background-color: #4479BA;
+}
+
+.search-button.unselected:hover {
+  background-color: #880088;
+}
+
+
+/* End Search Area */
 
 @media(max-width: 700px) {
   body.fish-page {
