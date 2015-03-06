@@ -272,14 +272,14 @@ figure figcaption {
 
 /* Search area */
 
-button {
+/*button {
   margin: 0;
   padding: 0;
   border: none;
   font: inherit;
   color: inherit;
   line-height: normal;
-}
+}*/
 
 ol {
   display: flex;
@@ -289,42 +289,45 @@ ol {
   justify-content: space-between;
 }
 
+.individual-river-section {
+  margin-bottom: 1em;
+}
+
 li {
   display: inline-block;
   width: 24.6%;
   padding-bottom: 0.25em;
   padding-top: 0.25em;
+  font-size: 2em;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1.2em;
+  background-color: #4479BA;
+}
+
+@media (max-width: 600px) {
+  li {
+  width: 49%;
+  margin-bottom: 0.2em;
+  }
+}
+
+input[type="checkbox"] {
+  float: right;
+  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  margin-right: 10px;
+  margin-top: 3px;
 }
 
 .search-header {
   font-size: 1.2em;
   background-color: #880088;
-  display: block;
   padding-bottom: 0.25em;
-  margin-bottom: 0.125em;
   padding-top: 0.25em;
+  margin-bottom: 0.125em;
   border-radius: 5px;
 }
-
-.search-button {
-  width: 100%;
-  border-radius: 5px;
-  text-align: center;
-  font-size: 1.2em;
-}
-
-.search-button.unselected {
-  background-color: gray;
-}
-
-.search-button.selected {
-  background-color: #4479BA;
-}
-
-.search-button.unselected:hover {
-  background-color: #880088;
-}
-
 
 /* End Search Area */
 

@@ -11,30 +11,43 @@
 
 <div class="search-area">
 
-	<div class="search-section">
-		<span class="search-header">以下の生息地に住んでいる魚しか含まない</span>
-		<div class="search-buttons" id="include">
-			<ol>
-			{% for a_seisokuchi in seisokuchi %}
-			<li><button class="search-button unselected" id="{{a_seisokuchi[0]}}-include">{{a_seisokuchi[1]}}</button></li>
-		
-			{% endfor %}
-			</ol>
-		</div>
-	</div>
-
-	<div class="search-section">
-		<span class="search-header">
-		以下の生息地に住んでいる魚を除く</span>
-		<div class="search-buttons" id="exclude">
-			<ol>
-			{% for a_seisokuchi in seisokuchi %}
-			<li><button class="search-button unselected" id="{{a_seisokuchi[0]}}-exclude">{{a_seisokuchi[1]}}</button></li>
+	<div class="search-section" id="include">
+		<div class="search-header">以下の生息地に住んでいる魚しか含まない</div>
+		<div class="individual-river-section">
+		<ol>
+			{% for a_ryuuiki in ryuuiki %}
+			<li><label>高津川{{a_ryuuiki[1]}}<input type="checkbox" class="search-checkbox" id="takatsu-{{a_ryuuiki[0]}}-include"></label></li>
 			{% endfor %}
 		</ol>
-		</div>
 	</div>
+	<div class="individual-river-section">
+	<ol>
+		{% for a_ryuuiki in ryuuiki %}
+		<li><label>益田川{{a_ryuuiki[1]}}<input type="checkbox" class="search-checkbox" id="masuda-{{a_ryuuiki[0]}}-include"></label></li>
+		{% endfor %}
+	</ol>
+</div>
+</div>
 
+<div class="search-section" id="exclude">
+	<div class="search-header">
+		以下の生息地に住んでいる魚を除く</div>
+		<div class="individual-river-section">
+		<ol>
+			{% for a_ryuuiki in ryuuiki %}
+			<li><label>高津川{{a_ryuuiki[1]}}<input type="checkbox" class="search-checkbox" id="takatsu-{{a_ryuuiki[0]}}-include"></label></li>
+			{% endfor %}
+		</ol>
+	</div>
+	<div class="individual-river-section">
+	<ol>
+		{% for a_ryuuiki in ryuuiki %}
+		<li><label>益田川{{a_ryuuiki[1]}}<input type="checkbox" class="search-checkbox" id="masuda-{{a_ryuuiki[0]}}-include"></label></li>
+		{% endfor %}
+	</ol>
+</div>
+
+</div>
 </div>
 
 <main>

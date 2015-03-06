@@ -1,25 +1,25 @@
 import 'dart:html';
 import 'fish.dart';
 
-List<ButtonElement> includeButtons;
-List<ButtonElement> excludeButtons;
+List<CheckboxInputElement> includeCheckboxes;
+List<CheckboxInputElement> excludeCheckboxes;
 List<DivElement> fishTiles;
 
-void main() {
-  includeButtons = document.querySelectorAll("#include .search-button");
-  excludeButtons = document.querySelectorAll("#exclude .search-button");
-  fishTiles = document.querySelectorAll(".fish-tile");
-  for (ButtonElement button in new List.from(includeButtons)..addAll(excludeButtons)) {
-    button.onClick.listen((e) {
-      if (button.classes.contains("selected")) {
+/*checkbox.onClick.listen((e) {
+      if (ch.classes.contains("selected")) {
         button.classes.remove("selected");
         button.classes.add("unselected");
       } else if (button.classes.contains("unselected")) {
         button.classes.remove("unselected");
         button.classes.add("selected");
-      }
-      refresh();
-    });
+      }*/
+
+void main() {
+  includeCheckboxes = document.querySelectorAll("#include .search-checkbox");
+  excludeCheckboxes = document.querySelectorAll("#exclude .search-checkbox");
+  fishTiles = document.querySelectorAll(".fish-tile");
+  for (CheckboxInputElement checkbox in new List.from(includeCheckboxes)..addAll(excludeCheckboxes)) {
+    checkbox.onChange.listen((e) => refresh());
   }
 }
 
@@ -41,22 +41,22 @@ class Filter {
 
 Filter buildFilter() {
   Filter filter = new Filter();
-  for (ButtonElement button in includeButtons) {
-    if (button.classes.contains("selected")) {
-      String area = button.id.split("-")[1];
-      if (button.id.startsWith("takatsu")) {
+  for (CheckboxInputElement checkbox in includeCheckboxes) {
+    if (checkbox.checked) {
+      String area = checkbox.id.split("-")[1];
+      if (checkbox.id.startsWith("takatsu")) {
         filter.add((fish) => fish.takatsu.contains(area));
-      } else if (button.id.startsWith("masuda")) {
+      } else if (checkbox.id.startsWith("masuda")) {
         filter.add((fish) => fish.masuda.contains(area));
       }
     }
   }
-  for (ButtonElement button in excludeButtons) {
-    if (button.classes.contains("selected")) {
-      String area = button.id.split("-")[1];
-      if (button.id.startsWith("takatsu")) {
+  for (CheckboxInputElement checkbox in excludeCheckboxes) {
+    if (checkbox.checked) {
+      String area = checkbox.id.split("-")[1];
+      if (checkbox.id.startsWith("takatsu")) {
         filter.add((fish) => !fish.takatsu.contains(area));
-      } else if (button.id.startsWith("masuda")) {
+      } else if (checkbox.id.startsWith("masuda")) {
         filter.add((fish) => !fish.masuda.contains(area));
       }
     }
