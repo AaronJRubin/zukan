@@ -1,0 +1,9 @@
+{% macro river_section(river, ryuuiki, action) %}
+<div class="individual-river-section">
+	<ol>
+		{% for a_ryuuiki in ryuuiki %}
+		<li><label>高津川{{a_ryuuiki[1]}}<input type="checkbox" class="search-checkbox" id="{{river}}-{{a_ryuuiki[0]}}-{{action}}"></label></li>
+		{% endfor %}
+	</ol>
+</div>
+{% endmacro %}
