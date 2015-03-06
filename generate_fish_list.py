@@ -26,9 +26,9 @@ def string_to_location(string):
       return Location.ZYOU
     if string == "tyuu" or string == "chuu":
       return Location.CHUU
-    if string == "ge" or string == "ka":
+    if string == "ge":
       return Location.GE 
-    if string == "kakou":
+    if string == "kakou" or string == "ka":
       return Location.KAKOU
     raise Exception("Invalid location: " + string)
 
