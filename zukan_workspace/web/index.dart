@@ -21,6 +21,7 @@ void main() {
   for (CheckboxInputElement checkbox in new List.from(includeCheckboxes)..addAll(excludeCheckboxes)) {
     checkbox.onChange.listen((e) => refresh());
   }
+  refresh(); // maybe things were clicked before script was loaded
 }
 
 typedef bool FilterFunction(Fish fish);
