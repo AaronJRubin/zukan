@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
+{% set body_class = "ichiran-body" %}
 {% block content %}
 
 <script async type="application/dart" src="index.dart"></script>
@@ -9,6 +10,7 @@
 	<h1>高津川流域魚図鑑</h1>
 </header>
 
+<div class="search-dropdown">検索エリアを表示<span id="dropdown-caret">&#x25BC</span></div>
 <div class="search-area">
 
 	<div class="search-section" id="include">

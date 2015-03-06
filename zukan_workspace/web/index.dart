@@ -4,11 +4,19 @@ import 'fish.dart';
 List<CheckboxInputElement> includeCheckboxes;
 List<CheckboxInputElement> excludeCheckboxes;
 List<DivElement> fishTiles;
+SpanElement dropdownCaret;
+DivElement searchArea;
 
 void main() {
   includeCheckboxes = document.querySelectorAll("#include .search-checkbox");
   excludeCheckboxes = document.querySelectorAll("#exclude .search-checkbox");
   fishTiles = document.querySelectorAll(".fish-tile");
+  dropdownCaret = document.querySelector("#dropdown-caret");
+  searchArea = document.querySelector(".search-area");
+  dropdownCaret.onClick.listen((e) {
+    searchArea.classes.toggle("collapsed");
+    dropdownCaret.classes.toggle("selected");
+  });
   for (CheckboxInputElement checkbox in new List.from(includeCheckboxes)..addAll(excludeCheckboxes)) {
     checkbox.onChange.listen((e) => refresh());
   }
