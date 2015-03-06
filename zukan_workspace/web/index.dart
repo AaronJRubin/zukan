@@ -5,15 +5,6 @@ List<CheckboxInputElement> includeCheckboxes;
 List<CheckboxInputElement> excludeCheckboxes;
 List<DivElement> fishTiles;
 
-/*checkbox.onClick.listen((e) {
-      if (ch.classes.contains("selected")) {
-        button.classes.remove("selected");
-        button.classes.add("unselected");
-      } else if (button.classes.contains("unselected")) {
-        button.classes.remove("unselected");
-        button.classes.add("selected");
-      }*/
-
 void main() {
   includeCheckboxes = document.querySelectorAll("#include .search-checkbox");
   excludeCheckboxes = document.querySelectorAll("#exclude .search-checkbox");
