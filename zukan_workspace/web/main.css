@@ -295,6 +295,12 @@ figure figcaption {
   border-radius: 5px;
 }
 
+@media(max-width: 385px) {
+  .search-dropdown {
+  font-size: 1.5em;
+  }
+}
+
 #dropdown-caret {
   display: inline-block;
   transform: none;
