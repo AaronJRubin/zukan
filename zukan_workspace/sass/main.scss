@@ -1,198 +1,169 @@
-/* Reset CSS */
+  @import "compass/reset";
+  @import "compass/css3/flexbox";
+  @import "compass/css3/transform";
+  @import "compass/css3/user-interface";
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol, ul {
-  list-style: none;
-}
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
+  $primary: #111133;
+  $secondary: #4479BA;
+  $highlighted: #880088;
 
-/* End reset CSS */
+  /* Begin body styles */
 
-$primary: #111133;
-$secondary: #4479BA;
-$highlighted: #880088;
+  body {
+    background-color: $primary;
+    color: #e8e8e8;
+    font-family: Century Gothic, sans-serif;
+    font-size: 1.05em;
+  }
 
-body {
-  background-color: $primary;
-  color: #e8e8e8;
-  font-family: Century Gothic, sans-serif;
-  font-size: 1.05em;
-}
+  body.ichiran-body {
+    margin-left: 2vw;
+    margin-right: 2vw;
+  }
 
-body.ichiran-body {
-  margin-left: 2vw;
-  margin-right: 2vw;
-}
+  body.fish-page {
+    background-size: 100% 100%;
+    transition: background-image 3s ease-in-out;
+  }
 
-p {
-  margin-bottom: 1em;
-  line-height: 1.2em;
-}
+  $seisokuchi: "takatsu-zyou", "takatsu-chuu", "takatsu-ge", "takatsu-kakou", 
+  "masuda-zyou", "masuda-chuu", "masuda-ge", "masuda-kakou";
 
-main, .gallery, header {
-  display: flex;
-  display: -webkit-flex;
-  flex-wrap: wrap;
-  -webkit-flex-wrap: wrap;
-}
+  @each $a_seisokuchi in $seisokuchi {
+    body.#{$a_seisokuchi} {
+      background-image: url('/seisokuchi/#{$a_seisokuchi}.jpg');
+    }
+  }
 
-main, .gallery {
-  -webkit-justify-content: space-around;
-  justify-content: space-around;
-}
+  /* End body styles */
 
-header {
-  -webkit-justify-content: center;
-  -webkit-align-items: center;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 1em;
-}
+  /* Begin container-like-thing styles */
 
-body.fish-page {
-  background-size: 100% 100%;
-  transition: background-image 3s ease-in-out;
-}
+  main, .gallery, header {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+  }
 
-$seisokuchi: "takatsu-zyou", "takatsu-chuu", "takatsu-ge", "takatsu-kakou", 
-"masuda-zyou", "masuda-chuu", "masuda-ge", "masuda-kakou";
+  main, .gallery {
+    @include justify-content(space-around);
+  }
 
-@each $a_seisokuchi in $seisokuchi {
-  body.#{$a_seisokuchi} {
-    background-image: url('/seisokuchi/#{$a_seisokuchi}.jpg');
+  header {
+    @include justify-content(center);
+    @include align-items(center);
+    text-align: center;
+    margin-bottom: 1em;
+  }
+
+  div.fish-page {
+    background-color: $primary;
+    max-width: 700px;
+    margin: auto;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    padding: 10px 20px;
+    border-radius: 10px;
+  }
+
+  article {
+    font-size: 1.4em;
+    min-height: 38.1vh;
+  }
+
+  .gallery {
+    padding: 5px 5px 5px 5px;
+  }
+
+  /* End container-like-thing styles */
+
+  /* Begin general HTML element styles */
+
+  h1 {
+    text-align: center;
+    font-size: 3em;
+    padding-top: 1.4em;
+    padding-bottom: 1.4em;
+  }
+
+  p {
+    margin-bottom: 1em;
+    line-height: 1.2em;
+  }
+
+  table, th, td {
+    border: 1px solid white;
+    text-align: center;
+  }
+
+  td {
+    padding: 0.3em;
+  }
+
+  a {
+    color:#FFFFFF;
+    text-decoration: none;
+  }
+  a:visited {color:#FFFFFF;}
+  a:hover {color:#FFFFFF;}
+  a:active {color:#FFFFFF;}
+
+  /* End general HTML element styles */
+
+  /* Begin header and header-specific styles */
+
+  header.ichiran-header {
+    background-image: url("/low-res/takatsugawa.jpg");
+    background-size: 50%;
+    border-radius: 10px;
+  }
+
+  header.fish-header {
+    > div {
+      width: 48%;
+      text-align: center;
+      margin-bottom: 1em;
+    }
+    img {
+      max-width: 95%;
+      max-height: 80%;
+      margin: 0 auto;
+      border: 2px solid white;
+    }
+    table {
+      text-align: center;
+      margin: 0 auto;
+      width: 100%;
+    }
+    p {
+      font-size: 1.2em;
+    }
+  }
+
+  div#location {
+    margin-right: 5px;
+  }
+
+  #rarity {
+   border: 1px solid white;
+   min-height: 83px; /* To equal fish habitat table */
+   h3 {
+    margin-bottom: 0.15em;
+    margin-top: 0.15em;
+    font-size: 1.5em;
   }
 }
 
-div.fish-page {
-  background-color: $primary;
-  max-width: 700px;
-  margin: auto;
-  margin-top: 2vh;
-  margin-bottom: 2vh;
-  padding: 10px 20px;
-  border-radius: 10px;
-}
-
-h1 {
-  text-align: center;
-  font-size: 3em;
-  padding-top: 1.4em;
-  padding-bottom: 1.4em;
-}
-
-table, th, td {
-  border: 1px solid white;
-}
-
-td {
-  padding: 0.3em;
-}
-
-#rarity {
- border: 1px solid white;
- min-height: 95px; /* To equal fish habitat table */
- h3 {
-  margin-bottom: 0.15em;
-  margin-top: 0.15em;
-  font-size: 1.5em;
-}
-}
-
 #rarity-stars {
- border-top: 1px solid white;
- color: yellow;
- padding-top: 12px;
+  border-top: 1px solid white;
+  color: yellow;
+  padding-top: 12px;
 }
 
-header.fish-header > div {
- width: 48%;
- text-align: center;
- margin-bottom: 1em;
-}
+/* End header and header-specific styles styles */
 
-header.fish-header img {
- max-width: 95%;
- max-height: 80%;
- margin: 0 auto;
- border: 2px solid white;
-}
-
-div#location {
-  margin-right: 5px;
-}
-
-header.fish-header table {
- text-align: center;
- margin: 0 auto;
- width: 100%;
-}
-
-header.fish-header p {
-  font-size: 1.2em;
-}
-
-header.ichiran-header {
-  background-image: url("/low-res/takatsugawa.jpg");
-  background-size: 50%;
-  border-radius: 10px;
-}
-
-article {
-  font-size: 1.4em;
-  min-height: 38.1vh;
-}
-
-.gallery {
- padding: 5px 5px 5px 5px;
-}
-
-a {
-  color:#FFFFFF;
-  text-decoration: none;
-}
-a:visited {color:#FFFFFF;}
-a:hover {color:#FFFFFF;}
-a:active {color:#FFFFFF;}
+/* Begin image-box styles */
 
 .fish-tile, figure {
-  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
-  box-sizing: border-box;
   border-width: 2px;
   border-radius: 6px;
   border-style: solid;
@@ -210,8 +181,7 @@ figure {
 
 .fish-tile:hover {
   border-color: $highlighted;
-  -webkit-transform: scale(1.1, 1.1);
-  transform: scale(1.1, 1.1);
+  @include transform(scale(1.1, 1.1));
 }
 
 .fish-tile span, figure figcaption {
@@ -241,6 +211,8 @@ figure {
   }
 }
 
+/* End image-box styles */
+
 .navigation-link {
   display: block;
   min-width: 98%;
@@ -251,68 +223,61 @@ figure {
   font-size: 5vw;
   text-align: center;
   border-radius: 10px;
+  @media print {
+    display: none;
+  }
 }
 
 .navigation-link:hover {
   background-color: $highlighted;
 }
 
-/* Search area */
+/* Begin search area styles */
 
-/*button {
-  margin: 0;
-  padding: 0;
-  border: none;
-  font: inherit;
-  color: inherit;
-  line-height: normal;
-  }*/
-
-  .search-dropdown {
-    margin-bottom: 0.1em;
-    font-size: 2em;
-    background-color:#880088;
-    padding-top: 0.2em;
-    padding-bottom: 0.2em;
-    border-radius: 5px;
-    @media(max-width: 385px) {
-      font-size: 1.5em;
-    }
+.search-dropdown {
+  margin-bottom: 0.1em;
+  font-size: 2em;
+  background-color:#880088;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  border-radius: 5px;
+  @media(max-width: 385px) {
+    font-size: 1.5em;
   }
+}
 
-  #dropdown-caret {
-    display: inline-block;
-    transform: none;
-    border-radius: 50%;
-    padding: 0.4em;
-    margin-left: 1em;
-    background-color: #4479BA;
-    cursor: default;
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
+#dropdown-caret {
+  display: inline-block;
+  transform: none;
+  border-radius: 50%;
+  padding: 0.4em;
+  margin-left: 1em;
+  background-color: #4479BA;
+  cursor: default;
+  -webkit-touch-callout: none;
+  @include user-select(none);
+}
 
-  #dropdown-caret.collapsed {
-    transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-  }
+#dropdown-caret.collapsed {
+  @include transform(rotate(90deg));
+}
 
+.search-header {
+  font-size: 1.2em;
+  background-color: #880088;
+  padding-bottom: 0.25em;
+  padding-top: 0.25em;
+  margin-bottom: 0.125em;
+  border-radius: 5px;
+}
+
+#search-area {
+  overflow: hidden;
   ol {
-    display: flex;
-    display: -webkit-flex;
-    flex-wrap: wrap;
-    -webkit-flex-wrap: wrap;
-    justify-content: space-between;
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
   }
-
-  .individual-river-section {
-    margin-bottom: 1em;
-  }
-
   li {
     display: inline-block;
     width: 24.6%;
@@ -328,43 +293,23 @@ figure {
       margin-bottom: 0.2em;
     }
   }
-
   input[type="checkbox"] {
     float: right;
-    transform: scale(1.5);
-    -webkit-transform: scale(1.5);
+    @include transform(scale(1.5));
     margin-right: 10px;
     margin-top: 3px;
   }
-
-  .search-header {
-    font-size: 1.2em;
-    background-color: #880088;
-    padding-bottom: 0.25em;
-    padding-top: 0.25em;
-    margin-bottom: 0.125em;
-    border-radius: 5px;
+  .individual-river-section {
+    margin-bottom: 1em;
   }
 
-  #search-area {
-    overflow: hidden;
-  /*transition: max-height 0.2s ease-in;
-  -moz-transition: max-height 0.2s ease-in;
-  -webkit-transition: max-height 0.2s ease-in;
-  -o-transition: max-height 0.2s ease-in;
-  max-height: 100vh;*/
 }
 
 #search-area.collapsed {
   display: none;
-  /*max-height: 0;*/
-  /*transition: max-height 1s ease-in;
-  -moz-transition: max-height 1s ease-in;
-  -webkit-transition: max-height 1s ease-in;
-  -o-transition: max-height 1s ease-in;*/
 }
 
-/* End Search Area */
+/* End Search Area Styles */
 
 @media(max-width: 700px) {
   body.fish-page {
@@ -425,9 +370,5 @@ figure {
 
   article {
     width: 100%;
-  }
-
-  .navigation-link {
-    display: none;
   }
 }
