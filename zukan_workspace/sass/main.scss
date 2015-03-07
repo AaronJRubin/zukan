@@ -1,0 +1,433 @@
+/* Reset CSS */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* End reset CSS */
+
+$primary: #111133;
+$secondary: #4479BA;
+$highlighted: #880088;
+
+body {
+  background-color: $primary;
+  color: #e8e8e8;
+  font-family: Century Gothic, sans-serif;
+  font-size: 1.05em;
+}
+
+body.ichiran-body {
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+
+p {
+  margin-bottom: 1em;
+  line-height: 1.2em;
+}
+
+main, .gallery, header {
+  display: flex;
+  display: -webkit-flex;
+  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+}
+
+main, .gallery {
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+header {
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+body.fish-page {
+  background-size: 100% 100%;
+  transition: background-image 3s ease-in-out;
+}
+
+$seisokuchi: "takatsu-zyou", "takatsu-chuu", "takatsu-ge", "takatsu-kakou", 
+"masuda-zyou", "masuda-chuu", "masuda-ge", "masuda-kakou";
+
+@each $a_seisokuchi in $seisokuchi {
+  body.#{$a_seisokuchi} {
+    background-image: url('/seisokuchi/#{$a_seisokuchi}.jpg');
+  }
+}
+
+div.fish-page {
+  background-color: $primary;
+  max-width: 700px;
+  margin: auto;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+  padding-top: 1.4em;
+  padding-bottom: 1.4em;
+}
+
+table, th, td {
+  border: 1px solid white;
+}
+
+td {
+  padding: 0.3em;
+}
+
+#rarity {
+ border: 1px solid white;
+ min-height: 95px; /* To equal fish habitat table */
+ h3 {
+  margin-bottom: 0.15em;
+  margin-top: 0.15em;
+  font-size: 1.5em;
+}
+}
+
+#rarity-stars {
+ border-top: 1px solid white;
+ color: yellow;
+ padding-top: 12px;
+}
+
+header.fish-header > div {
+ width: 48%;
+ text-align: center;
+ margin-bottom: 1em;
+}
+
+header.fish-header img {
+ max-width: 95%;
+ max-height: 80%;
+ margin: 0 auto;
+ border: 2px solid white;
+}
+
+div#location {
+  margin-right: 5px;
+}
+
+header.fish-header table {
+ text-align: center;
+ margin: 0 auto;
+ width: 100%;
+}
+
+header.fish-header p {
+  font-size: 1.2em;
+}
+
+header.ichiran-header {
+  background-image: url("/low-res/takatsugawa.jpg");
+  background-size: 50%;
+  border-radius: 10px;
+}
+
+article {
+  font-size: 1.4em;
+  min-height: 38.1vh;
+}
+
+.gallery {
+ padding: 5px 5px 5px 5px;
+}
+
+a {
+  color:#FFFFFF;
+  text-decoration: none;
+}
+a:visited {color:#FFFFFF;}
+a:hover {color:#FFFFFF;}
+a:active {color:#FFFFFF;}
+
+.fish-tile, figure {
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
+  border-width: 2px;
+  border-radius: 6px;
+  border-style: solid;
+  border-color: white;
+  margin: 0.5vw;
+}
+
+figure {
+  max-width: 48%;
+}
+
+.fish-tile {
+  height: 150px;
+}
+
+.fish-tile:hover {
+  border-color: $highlighted;
+  -webkit-transform: scale(1.1, 1.1);
+  transform: scale(1.1, 1.1);
+}
+
+.fish-tile span, figure figcaption {
+  display: block;
+  text-align: center;
+}
+
+.fish-tile {
+  img {
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 75%;
+  }
+  span {
+    margin-top: 0.4em;
+  }
+}
+
+figure {
+  img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  figcaption {
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+  }
+}
+
+.navigation-link {
+  display: block;
+  min-width: 98%;
+  background-color: $secondary;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  line-height: 10vh;
+  font-size: 5vw;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.navigation-link:hover {
+  background-color: $highlighted;
+}
+
+/* Search area */
+
+/*button {
+  margin: 0;
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  line-height: normal;
+  }*/
+
+  .search-dropdown {
+    margin-bottom: 0.1em;
+    font-size: 2em;
+    background-color:#880088;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    border-radius: 5px;
+    @media(max-width: 385px) {
+      font-size: 1.5em;
+    }
+  }
+
+  #dropdown-caret {
+    display: inline-block;
+    transform: none;
+    border-radius: 50%;
+    padding: 0.4em;
+    margin-left: 1em;
+    background-color: #4479BA;
+    cursor: default;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  #dropdown-caret.collapsed {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+  }
+
+  ol {
+    display: flex;
+    display: -webkit-flex;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .individual-river-section {
+    margin-bottom: 1em;
+  }
+
+  li {
+    display: inline-block;
+    width: 24.6%;
+    padding-bottom: 0.25em;
+    padding-top: 0.25em;
+    font-size: 2em;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.2em;
+    background-color: #4479BA;
+    @media (max-width: 600px) {
+      width: 49%;
+      margin-bottom: 0.2em;
+    }
+  }
+
+  input[type="checkbox"] {
+    float: right;
+    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    margin-right: 10px;
+    margin-top: 3px;
+  }
+
+  .search-header {
+    font-size: 1.2em;
+    background-color: #880088;
+    padding-bottom: 0.25em;
+    padding-top: 0.25em;
+    margin-bottom: 0.125em;
+    border-radius: 5px;
+  }
+
+  #search-area {
+    overflow: hidden;
+  /*transition: max-height 0.2s ease-in;
+  -moz-transition: max-height 0.2s ease-in;
+  -webkit-transition: max-height 0.2s ease-in;
+  -o-transition: max-height 0.2s ease-in;
+  max-height: 100vh;*/
+}
+
+#search-area.collapsed {
+  display: none;
+  /*max-height: 0;*/
+  /*transition: max-height 1s ease-in;
+  -moz-transition: max-height 1s ease-in;
+  -webkit-transition: max-height 1s ease-in;
+  -o-transition: max-height 1s ease-in;*/
+}
+
+/* End Search Area */
+
+@media(max-width: 700px) {
+  body.fish-page {
+    background-image: none;
+  }
+  div.fish-page {
+    margin-top: 0;
+  }
+}
+
+@media(max-width: 635px) {
+  div#location {
+    width: 98%;
+    margin-bottom: 5px;
+    margin-right: 0;
+  }
+  #rarity{
+    width: 98%;
+    min-height: 0; /* no reason to equal location table any more */
+  }
+  #rarity-stars {
+    padding-top: 0;
+  }
+  #rarity h3 {
+    font-size: 1em;
+  }
+  header.ichiran-header {
+    background-size: 100%;
+  }
+  figure {
+    max-width: 100%;
+  }
+}
+
+@media(max-width: 490px) {
+  header.fish-header p {
+    font-size: 0.95em;
+  }
+  header h1 {
+    font-size: 2.5em;
+  }
+}
+
+@media(max-width: 320px) {
+  div#location {
+    font-size: 0.95em;
+  }
+  header h1 {
+    font-size: 2em;
+  }
+}
+
+@media print {
+  * {
+    background-color: white;
+    color: black;
+  }
+
+  article {
+    width: 100%;
+  }
+
+  .navigation-link {
+    display: none;
+  }
+}
