@@ -78,12 +78,13 @@
       @include align-items(center);
       @include flex-direction(row);
       border-top-style: solid;
-      border-top-width: 5px;
+      border-top-width: 0.3em;
       border-top-color: white;
       padding-bottom: 1em;
       padding-top: 1em;
-      img {
+      > img {
         display: inline-block;
+        min-width: 40%;
         max-width: 40%;
         margin-right: 1em;
       }
@@ -120,19 +121,25 @@
       @include justify-content(flex-end);
     }
     a {
+      display: inline-block;
       font-size: 1.5em;
+      padding: 1vw 2vw;
       @media (max-width: 420px) {
-        font-size: 1.25em;
+        font-size: 1em;
       }
     }
     li {
       @include box-sizing(border-box);
       display: inline-block;
-      padding: 1vw 2vw;
       float: left;
       border-left-style: solid;
       border-left-width: 0.5vw;
       border-left-color: black;
+      &:first-child {
+      	@media (max-width: 420px) {
+        border-left-width: 0;	
+      }
+      }
       @media (max-width: 420px) {
         width: 33.3%;
         text-align: center;
@@ -302,7 +309,7 @@ figure {
 .search-dropdown {
   margin-bottom: 0.1em;
   font-size: 2em;
-  background-color:#880088;
+  background-color: $highlighted;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
   border-radius: 5px;
@@ -317,7 +324,7 @@ figure {
   border-radius: 50%;
   padding: 0.4em;
   margin-left: 1em;
-  background-color: #4479BA;
+  background-color: $secondary;
   cursor: default;
   -webkit-touch-callout: none;
   @include user-select(none);
@@ -329,15 +336,16 @@ figure {
 
 .search-header {
   font-size: 1.2em;
-  background-color: #880088;
+  background-color: $highlighted;
   padding-bottom: 0.25em;
   padding-top: 0.25em;
-  margin-bottom: 0.125em;
   border-radius: $rounded-border;
 }
 
 #search-area {
-  overflow: hidden;
+  /*overflow: hidden;*/
+  @include display-flex(flex);
+  @include flex-direction(column);
   ol {
     @include display-flex(flex);
     @include flex-wrap(wrap);
@@ -345,14 +353,16 @@ figure {
   }
   li {
     display: inline-block;
-    width: 24.6%;
+    width: 24.8%;
     padding-bottom: 0.25em;
     padding-top: 0.25em;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
     font-size: 2em;
     border-radius: $rounded-border;
     text-align: center;
     font-size: 1.2em;
-    background-color: #4479BA;
+    background-color: $secondary;
     @media (max-width: 600px) {
       width: 49%;
       margin-bottom: 0.2em;
@@ -363,9 +373,6 @@ figure {
     @include transform(scale(1.5));
     margin-right: 10px;
     margin-top: 3px;
-  }
-  .individual-river-section {
-    margin-bottom: 1em;
   }
 
 }
