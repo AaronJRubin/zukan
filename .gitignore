@@ -10,6 +10,11 @@ zukan_workspace/web/contact.html
 # Don't include CSS generated from SASS
 zukan_workspace/web/stylesheets
 
+# Don't include files generated from generate_fish_list.py
+
+zukan_workspace/fish_list.pkl
+zukan_workspace/web/fish_list.dart
+
 # Don't include files generated from pub build
 site/static/*
 
