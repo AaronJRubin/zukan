@@ -2,10 +2,12 @@
   @import "compass/css3/flexbox";
   @import "compass/css3/transform";
   @import "compass/css3/user-interface";
+  @import "compass/css3/box-sizing";
 
   $primary: #111133;
   $secondary: #4479BA;
   $highlighted: #880088;
+  $rounded-border: 7px;
 
   /* Begin body styles */
 
@@ -17,8 +19,8 @@
   }
 
   body.ichiran-body {
-    margin-left: 2vw;
-    margin-right: 2vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
   }
 
   body.fish-page {
@@ -31,7 +33,7 @@
 
   @each $a_seisokuchi in $seisokuchi {
     body.#{$a_seisokuchi} {
-      background-image: url('/seisokuchi/#{$a_seisokuchi}.jpg');
+      background-image: url('/images/seisokuchi/#{$a_seisokuchi}.jpg');
     }
   }
 
@@ -39,7 +41,7 @@
 
   /* Begin container-like-thing styles */
 
-  main, .gallery, header {
+  main, .gallery, header.fish-header {
     @include display-flex(flex);
     @include flex-wrap(wrap);
   }
@@ -48,7 +50,7 @@
     @include justify-content(space-around);
   }
 
-  header {
+  header.fish-header {
     @include justify-content(center);
     @include align-items(center);
     text-align: center;
@@ -62,13 +64,38 @@
     margin-top: 2vh;
     margin-bottom: 2vh;
     padding: 10px 20px;
-    border-radius: 10px;
+    border-radius: $rounded-border;
   }
 
   article {
     font-size: 1.4em;
     min-height: 38.1vh;
+    > div {
+      @include display-flex(flex);
+      @include justify-content(top);
+      @include align-content(top);
+      // necessary to prevent default stretching behavior for images
+      @include align-items(center);
+      @include flex-direction(row);
+      border-top-style: solid;
+      border-top-width: 5px;
+      border-top-color: white;
+      padding-bottom: 1em;
+      padding-top: 1em;
+      img {
+        display: inline-block;
+        max-width: 40%;
+        margin-right: 1em;
+      }
+      div {
+        /*@include display-flex(inline-flex);
+        @include justify-content(top);
+        @include align-content(top);
+        @include flex-direction(column);*/
+        /*margin-bottom: 1em;  */
+      }
   }
+}
 
   .gallery {
     padding: 5px 5px 5px 5px;
@@ -76,7 +103,45 @@
 
   /* End container-like-thing styles */
 
-  /* Begin general HTML element styles */
+  /* Begin header-nav styles */
+
+  header.navbar {
+    background-color: $secondary;
+    border-radius: $rounded-border;
+    margin-bottom: 0;
+    nav {
+      width: 100%;
+    }
+    ol {
+      width: 100%;
+      display: inline-block;
+      @include display-flex(flex);
+      @include flex-direction(row);
+      @include justify-content(flex-end);
+    }
+    a {
+      font-size: 1.5em;
+      @media (max-width: 420px) {
+        font-size: 1.25em;
+      }
+    }
+    li {
+      @include box-sizing(border-box);
+      display: inline-block;
+      padding: 1vw 2vw;
+      float: left;
+      border-left-style: solid;
+      border-left-width: 0.5vw;
+      border-left-color: black;
+      @media (max-width: 420px) {
+        width: 33.3%;
+        text-align: center;
+      }
+      &:hover {
+        background-color: $highlighted;
+      }
+    }
+  }
 
   h1 {
     text-align: center;
@@ -112,9 +177,9 @@
   /* Begin header and header-specific styles */
 
   header.ichiran-header {
-    background-image: url("/low-res/takatsugawa.jpg");
+    background-image: url("/images/takatsugawa.jpg");
     background-size: 50%;
-    border-radius: 10px;
+    border-radius: $rounded-border;
   }
 
   header.fish-header {
@@ -165,7 +230,7 @@
 
 .fish-tile, figure {
   border-width: 2px;
-  border-radius: 6px;
+  border-radius: $rounded-border;
   border-style: solid;
   border-color: white;
   margin: 0.5vw;
@@ -222,7 +287,7 @@ figure {
   line-height: 10vh;
   font-size: 5vw;
   text-align: center;
-  border-radius: 10px;
+  border-radius: $rounded-border;
   @media print {
     display: none;
   }
@@ -268,7 +333,7 @@ figure {
   padding-bottom: 0.25em;
   padding-top: 0.25em;
   margin-bottom: 0.125em;
-  border-radius: 5px;
+  border-radius: $rounded-border;
 }
 
 #search-area {
@@ -284,7 +349,7 @@ figure {
     padding-bottom: 0.25em;
     padding-top: 0.25em;
     font-size: 2em;
-    border-radius: 5px;
+    border-radius: $rounded-border;
     text-align: center;
     font-size: 1.2em;
     background-color: #4479BA;

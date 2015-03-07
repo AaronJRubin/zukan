@@ -9,7 +9,7 @@
 <div class="fish-page">
 	<header class="fish-header">
 		<div>
-			<img src="/low-res/ichiran/{{fish.romaji}}.jpg"></img>
+			<img src="{{fish.get_image()}}"></img>
 		</div>
 
 		<div>
@@ -56,12 +56,14 @@
 	</header>
 
 	<article>
+
 		{% block article %}
 
 		{% endblock %}
+
 	</article>
 	<footer>
-	<a href="/" class="navigation-link">一覧へ戻る</a>
+	<a href="/ichiran.html" class="navigation-link">一覧へ戻る</a>
 	</footer>
 </div>
 {% endblock %}

@@ -35,7 +35,11 @@ seisokuchi = zip(latin_seisokuchi, kanji_seisokuchi)
 ryuuiki = zip(latin_ryuuiki, kanji_ryuuiki)
 # map(lambda string: string.decode('utf8'),
 ichiran = render_str("base/sakana-ichiran.html", fish = fish_list, seisokuchi = seisokuchi, ryuuiki = ryuuiki)
-write(os.path.join(dest, "index.html"), ichiran.encode('utf8'))
+write(os.path.join(dest, "ichiran.html"), ichiran.encode('utf8'))
+index = render_str("base/index.html");
+write(os.path.join(dest, "index.html"), index.encode('utf8'))
+index = render_str("base/contact.html");
+write(os.path.join(dest, "contact.html"), index.encode('utf8'))
 
 for fish in fish_list:
 	template = os.path.join("base/sakana", fish.romaji + ".html")

@@ -34,7 +34,7 @@ class RiverHabitat {
   }
 
   List<String> backgroundImages() {
-    return backgroundImageClasses().map((imageClass) => "/seisokuchi/" + imageClass + ".jpg").toList();
+    return backgroundImageClasses().map((imageClass) => "/images/seisokuchi/" + imageClass + ".jpg").toList();
   }
 
   List<String> backgroundImageClasses() {
