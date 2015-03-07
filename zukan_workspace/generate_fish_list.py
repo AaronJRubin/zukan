@@ -8,7 +8,7 @@ from fish import Fish, Location
 
 def generate_defaults():
     res = {}
-    for subdir, dirs, files in os.walk("zukan_workspace/web/low-res/ichiran/"):
+    for subdir, dirs, files in os.walk("web/images/ichiran/"):
         for file in files:
             if file.endswith(".jpg"):
                 romaji = file.replace(".jpg", "")
@@ -95,7 +95,7 @@ final_fish_list.sort(key = lambda fish: fish.romaji)
 pickle.dump(final_fish_list, open("fish_list.pkl", "wb", pickle.HIGHEST_PROTOCOL))
 
 def write_dart(fish_list):
-    f = file("zukan_workspace/web/fish_list.dart", "w");
+    f = file("web/fish_list.dart", "w");
     f.write("part of fish;\n\n")
     f.write("List<Fish> fish_list = [")
     for fish in fish_list:

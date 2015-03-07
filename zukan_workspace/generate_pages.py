@@ -5,7 +5,7 @@ import jinja2
 import cPickle as pickle
 import sys
 
-dest = "zukan_workspace/web"
+dest = "web"
 
 # Set up templating infrastructure
 
