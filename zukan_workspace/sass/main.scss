@@ -348,13 +348,23 @@ figure {
 }
 
 #search-area {
-  /*overflow: hidden;*/
   @include display-flex(flex);
   @include flex-direction(column);
+  .individual-river-section {
+  	@media (max-width: 600px) {
+    	width: 49%;
+    	display: inline-block;
+    }
+  }
   ol {
     @include display-flex(flex);
     @include flex-wrap(wrap);
     @include justify-content(space-between);
+    @include flex-direction(row);
+    @media (max-width: 600px) {
+    	@include flex-direction(column);
+    	width: 100%;
+    }
   }
   li {
     display: inline-block;
@@ -372,7 +382,7 @@ figure {
     	background-color: $highlighted;
     }
     @media (max-width: 600px) {
-      width: 49%;
+      width: 100%;
       margin-bottom: 0.2em;
     }
   }
