@@ -27,14 +27,7 @@ def write(path, string):
 
 # Build templates and write them to destination
 
-latin_ryuuiki = ["zyou", "chuu", "ge", "kakou"]
-latin_seisokuchi = ["takatsu-" + iki for iki in latin_ryuuiki] + ["masuda-" + iki for iki in latin_ryuuiki]
-kanji_ryuuiki = [u"上流", u"中流", u"下流", u"河口"]
-kanji_seisokuchi = [u"高津川" + iki for iki in kanji_ryuuiki] + [u"益田川" + iki for iki in kanji_ryuuiki]
-seisokuchi = zip(latin_seisokuchi, kanji_seisokuchi)
-ryuuiki = zip(latin_ryuuiki, kanji_ryuuiki)
-# map(lambda string: string.decode('utf8'),
-ichiran = render_str("base/sakana-ichiran.html", fish = fish_list, seisokuchi = seisokuchi, ryuuiki = ryuuiki)
+ichiran = render_str("base/sakana-ichiran.html", fish = fish_list)
 write(os.path.join(dest, "ichiran.html"), ichiran.encode('utf8'))
 index = render_str("base/index.html");
 write(os.path.join(dest, "index.html"), index.encode('utf8'))
