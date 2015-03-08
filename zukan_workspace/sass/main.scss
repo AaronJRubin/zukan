@@ -4,15 +4,16 @@
   @import "compass/css3/user-interface";
   @import "compass/css3/box-sizing";
 
-  $primary: #111133;
-  $secondary: #4479BA;
+  $primary-background: #111133;
+  $secondary-background: #111199;
+  $interactable: #4479BA;
   $highlighted: #880088;
   $rounded-border: 7px;
 
   /* Begin body styles */
 
   body {
-    background-color: $primary;
+    background-color: $primary-background;
     color: #e8e8e8;
     font-family: Century Gothic, sans-serif;
     font-size: 1.05em;
@@ -58,7 +59,7 @@
   }
 
   div.fish-page {
-    background-color: $primary;
+    background-color: $primary-background;
     max-width: 700px;
     margin: auto;
     margin-top: 2vh;
@@ -107,7 +108,7 @@
   /* Begin header-nav styles */
 
   header.navbar {
-    background-color: $secondary;
+    background-color: $secondary-background;
     border-radius: $rounded-border;
     margin-bottom: 0;
     nav {
@@ -130,6 +131,7 @@
     }
     li {
       @include box-sizing(border-box);
+      background-color: $interactable;
       display: inline-block;
       float: left;
       border-left-style: solid;
@@ -288,7 +290,7 @@ figure {
 .navigation-link {
   display: block;
   min-width: 98%;
-  background-color: $secondary;
+  background-color: $interactable;
   padding-top: 1vh;
   padding-bottom: 1vh;
   line-height: 10vh;
@@ -309,7 +311,7 @@ figure {
 .search-dropdown {
   margin-bottom: 0.1em;
   font-size: 2em;
-  background-color: $highlighted;
+  background-color: $secondary-background;
   padding-top: 0.2em;
   padding-bottom: 0.2em;
   border-radius: 5px;
@@ -324,7 +326,10 @@ figure {
   border-radius: 50%;
   padding: 0.4em;
   margin-left: 1em;
-  background-color: $secondary;
+  background-color: $interactable;
+  &:hover {
+  	background-color: $highlighted;
+  }
   cursor: default;
   -webkit-touch-callout: none;
   @include user-select(none);
@@ -336,7 +341,7 @@ figure {
 
 .search-header {
   font-size: 1.2em;
-  background-color: $highlighted;
+  background-color: $secondary-background;
   padding-bottom: 0.25em;
   padding-top: 0.25em;
   border-radius: $rounded-border;
@@ -362,7 +367,10 @@ figure {
     border-radius: $rounded-border;
     text-align: center;
     font-size: 1.2em;
-    background-color: $secondary;
+    background-color: $interactable;
+    &:hover {
+    	background-color: $highlighted;
+    }
     @media (max-width: 600px) {
       width: 49%;
       margin-bottom: 0.2em;
