@@ -189,6 +189,9 @@
     background-image: url("/images/takatsugawa.jpg");
     background-size: 50%;
     border-radius: $rounded-border;
+    @media (max-width: 930px) {
+    background-size: 100%;
+  }
   }
 
   header.fish-header {
@@ -425,9 +428,6 @@ figure {
   }
   #rarity h3 {
     font-size: 1em;
-  }
-  header.ichiran-header {
-    background-size: 100%;
   }
   figure {
     max-width: 100%;
