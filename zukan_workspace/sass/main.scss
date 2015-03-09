@@ -200,55 +200,44 @@ header.ichiran-header {
 
 header.fish-header {
 	@include display-flex(flex);
-  	@include flex-wrap(wrap);
-  	@include justify-content(center);
-  	@include align-items(center);
-  	@include flex-direction(column);
-  	text-align: center;
-  	.fish-header-top, .fish-header-bottom {
-  		@include display-flex(flex);
-  		@include flex-direction(row);
-  		@include justify-content(center);
-  		margin-bottom: 1em;
-  		width: 100%;
-  		> img, > div {
-  			@include flex(1);
-  			margin: 0 0.25em;
-  		}
-  	}
-  	.fish-header-top {
-  		@include align-items(center);
-  		> img, > div {
-  		  	@include box-sizing(border-box);
-  			width: 50%;
-  		}
-  	}
-  	.fish-header-bottom {
-  		@media #{$fish-header-bottom-split} {
-  			@include flex-direction(column);
-  		}
-  	}
-	table {
-		text-align: center;
-		width: 100%;
-		@media #{$fish-header-bottom-split} {
-  			margin-bottom: 1em;
-  		}
-	}
+	@include flex-wrap(wrap);
+	@include justify-content(center);
+	@include flex-direction(row);
+	text-align: center;
+	margin-bottom: 1em;
 	p {
 		font-size: 1.2em;
 	}
-}
-
-#rarity {
-	border: 1px solid $text-color;
-	@media print {
-		border-color: $print-text-color;
+	> div, img, table {
+		@include box-sizing(border-box);
+		margin: 0 1%;
+		width: 48%;	
 	}
-	p {
-		margin-top: 0.15em;
-		margin-bottom: 0;
-	}	
+	img {
+		@include align-self(center);
+	}
+	table {
+		text-align: center;
+		@media #{$fish-header-bottom-split} {
+			margin-left: 0;
+			margin-right: 0;
+			margin-bottom: 1em;
+			width: 100%;	
+		}
+	}
+	#rarity {
+		border: 1px solid $text-color;
+		@media print {
+			border-color: $print-text-color;
+		}
+		p {
+			margin-bottom: 0;
+		}
+		@media #{$fish-header-bottom-split} {
+			width: 100%;
+			margin: 0;
+		}
+	}
 }
 
 #rarity-stars {

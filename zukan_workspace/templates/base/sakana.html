@@ -8,7 +8,7 @@
 
 <div class="fish-page">
 	<header class="fish-header">
-	<div class="fish-header-top">
+
 		<img src="{{fish.get_image()}}"></img>
 
 		<div>
@@ -17,10 +17,8 @@
 			<p>科名：{{fish.family}}</p>
 			<p>属名：{{fish.genus}}</p>
 		</div>
-		</div>
-	<div class="fish-header-bottom">
-		<div id = "location">
-			<table>
+
+			<table id = "location">
 				<th>
 					<td>上流</td>
 					<td>中流</td>
@@ -42,7 +40,7 @@
 					<td>{{"&#x25EF" if fish.masuda_kakou()}}</td>
 				</tr>
 			</table>
-		</div>
+			
 		<div id = "rarity">
 			<p>
 				レア度
@@ -51,7 +49,6 @@
 				{{fish.rarity_stars()}}
 			</div>
 		</div>
-	</div>
 
 	</header>
 
