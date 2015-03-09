@@ -8,34 +8,39 @@
   $secondary-background: #111199;
   $interactable: #4479BA;
   $highlighted: #880088;
+  $text-color: #e8e8e8;
+  $print-text-color: black;
   $rounded-border: 7px;
 
   /* Begin body styles */
 
   body {
-    background-color: $primary-background;
-    color: #e8e8e8;
-    font-family: Century Gothic, sans-serif;
-    font-size: 1.05em;
+  	background-color: $primary-background;
+  	color: $text-color;
+  	font-family: Century Gothic, sans-serif;
+  	font-size: 1.05em;
+  	@media print {
+  		font-size: 0.5em;
+  	}
   }
 
   body.ichiran-body {
-    margin-left: 1vw;
-    margin-right: 1vw;
+  	margin-left: 1vw;
+  	margin-right: 1vw;
   }
 
   body.fish-page {
-    background-size: 100% 100%;
-    transition: background-image 3s ease-in-out;
+  	background-size: 100% 100%;
+  	transition: background-image 3s ease-in-out;
   }
 
   $seisokuchi: "takatsu-zyou", "takatsu-chuu", "takatsu-ge", "takatsu-kakou", 
   "masuda-zyou", "masuda-chuu", "masuda-ge", "masuda-kakou";
 
   @each $a_seisokuchi in $seisokuchi {
-    body.#{$a_seisokuchi} {
-      background-image: url('/images/seisokuchi/#{$a_seisokuchi}.jpg');
-    }
+  	body.#{$a_seisokuchi} {
+  		background-image: url('/images/seisokuchi/#{$a_seisokuchi}.jpg');
+  	}
   }
 
   /* End body styles */
@@ -43,197 +48,207 @@
   /* Begin container-like-thing styles */
 
   main, .gallery, header.fish-header {
-    @include display-flex(flex);
-    @include flex-wrap(wrap);
+  	@include display-flex(flex);
+  	@include flex-wrap(wrap);
   }
 
   main, .gallery {
-    @include justify-content(space-around);
+  	@include justify-content(space-around);
   }
 
   header.fish-header {
-    @include justify-content(center);
-    @include align-items(center);
-    text-align: center;
-    margin-bottom: 1em;
+  	@include justify-content(center);
+  	@include align-items(center);
+  	text-align: center;
+  	margin-bottom: 1em;
   }
 
   div.fish-page {
-    background-color: $primary-background;
-    max-width: 700px;
-    margin: auto;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-    padding: 10px 20px;
-    border-radius: $rounded-border;
+  	background-color: $primary-background;
+  	max-width: 700px;
+  	margin: auto;
+  	margin-top: 2vh;
+  	margin-bottom: 2vh;
+  	padding: 10px 20px;
+  	border-radius: $rounded-border;
+  	@media print {
+  		max-width: 100%;
+  		padding: 0;
+  		margin: 0;
+  	}
   }
 
   article {
-    font-size: 1.4em;
-    min-height: 38.1vh;
-    > div {
-      @include display-flex(flex);
-      @include justify-content(top);
-      @include align-content(top);
+  	font-size: 1.4em;
+  	min-height: 38.1vh;
+  	> div {
+  		@include display-flex(flex);
+  		@include justify-content(top);
+  		@include align-content(top);
       // necessary to prevent default stretching behavior for images
       @include align-items(center);
       @include flex-direction(row);
       border-top-style: solid;
       border-top-width: 0.3em;
-      border-top-color: white;
+      border-top-color: $text-color;
+      @media print {
+      	border-top-color: $print-text-color;
+      }
       padding-bottom: 1em;
       padding-top: 1em;
       > img {
-        display: inline-block;
-        min-width: 40%;
-        max-width: 40%;
-        margin-right: 1em;
-      }
-      div {
-        /*@include display-flex(inline-flex);
-        @include justify-content(top);
-        @include align-content(top);
-        @include flex-direction(column);*/
-        /*margin-bottom: 1em;  */
+      	display: inline-block;
+      	min-width: 40%;
+      	max-width: 40%;
+      	margin-right: 1em;
       }
   }
 }
 
-  .gallery {
-    padding: 5px 5px 5px 5px;
-  }
+.gallery {
+	padding: 5px 5px 5px 5px;
+}
 
-  /* End container-like-thing styles */
+/* End container-like-thing styles */
 
-  /* Begin header-nav styles */
+/* Begin header-nav styles */
 
-  header.navbar {
-    background-color: $secondary-background;
-    border-radius: $rounded-border;
-    margin-bottom: 0;
-    nav {
-      width: 100%;
-    }
-    ol {
-      width: 100%;
-      display: inline-block;
-      @include display-flex(flex);
-      @include flex-direction(row);
-      @include justify-content(flex-end);
-    }
-    a {
-      display: inline-block;
-      font-size: 1.5em;
-      padding: 1vw 2vw;
-      @media (max-width: 420px) {
-        font-size: 1em;
-      }
-    }
-    li {
-      @include box-sizing(border-box);
-      background-color: $interactable;
-      display: inline-block;
-      float: left;
-      border-left-style: solid;
-      border-left-width: 0.5vw;
-      border-left-color: black;
-      &:first-child {
-      	@media (max-width: 420px) {
-        border-left-width: 0;	
-      }
-      }
-      @media (max-width: 420px) {
-        width: 33.3%;
-        text-align: center;
-      }
-      &:hover {
-        background-color: $highlighted;
-      }
-    }
-  }
+header.navbar {
+	background-color: $secondary-background;
+	border-radius: $rounded-border;
+	margin-bottom: 0;
+	nav {
+		width: 100%;
+	}
+	ol {
+		width: 100%;
+		display: inline-block;
+		@include display-flex(flex);
+		@include flex-direction(row);
+		@include justify-content(flex-end);
+	}
+	a {
+		display: inline-block;
+		font-size: 1.5em;
+		padding: 1vw 2vw;
+	}
+	li {
+		@include box-sizing(border-box);
+		background-color: $interactable;
+		display: inline-block;
+		float: left;
+		border-left-style: solid;
+		border-left-width: 0.5vw;
+		border-left-color: black;
+		&:hover {
+			background-color: $highlighted;
+		}
+	}
+	@media (max-width: 420px) {
+		li {
+			width: 33.3%;
+			text-align: center;
+			&:first-child {
+				border-left-width: 0;	
+			}
+			a {
+				font-size: 1em;
+			}
+		}
+	}
+	@media print {
+		display: none;
+	}
+}
 
-  h1 {
-    text-align: center;
-    font-size: 3em;
-    padding-top: 1.4em;
-    padding-bottom: 1.4em;
-  }
+h1 {
+	text-align: center;
+	font-size: 3em;
+	padding-top: 1.4em;
+	padding-bottom: 1.4em;
+}
 
-  p {
-    margin-bottom: 1em;
-    line-height: 1.2em;
-  }
+p {
+	margin-bottom: 1em;
+	line-height: 1.2em;
+}
 
-  table, th, td {
-    border: 1px solid white;
-    text-align: center;
-  }
+table, th, td {
+	border: 1px solid $text-color;
+	@media print {
+		border-color: $print-text-color;
+	}
+	text-align: center;
+}
 
-  td {
-    padding: 0.3em;
-  }
+td {
+	padding: 0.3em;
+}
 
-  a {
-    color:#FFFFFF;
-    text-decoration: none;
-  }
-  a:visited {color:#FFFFFF;}
-  a:hover {color:#FFFFFF;}
-  a:active {color:#FFFFFF;}
+a {
+	color:#FFFFFF;
+	text-decoration: none;
+}
+a:visited {color:#FFFFFF;}
+a:hover {color:#FFFFFF;}
+a:active {color:#FFFFFF;}
 
-  /* End general HTML element styles */
+/* End general HTML element styles */
 
-  /* Begin header and header-specific styles */
+/* Begin header and header-specific styles */
 
-  header.ichiran-header {
-    background-image: url("/images/takatsugawa.jpg");
-    background-size: 50%;
-    border-radius: $rounded-border;
-    @media (max-width: 930px) {
-    background-size: 100%;
-  }
-  }
+header.ichiran-header {
+	background-image: url("/images/takatsugawa.jpg");
+	background-size: 50%;
+	border-radius: $rounded-border;
+	@media (max-width: 930px) {
+		background-size: 100%;
+	}
+}
 
-  header.fish-header {
-    > div {
-      width: 48%;
-      text-align: center;
-      margin-bottom: 1em;
-    }
-    img {
-      max-width: 95%;
-      max-height: 80%;
-      margin: 0 auto;
-      border: 2px solid white;
-    }
-    table {
-      text-align: center;
-      margin: 0 auto;
-      width: 100%;
-    }
-    p {
-      font-size: 1.2em;
-    }
-  }
+header.fish-header {
+	> div {
+		width: 48%;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	img {
+		max-width: 95%;
+		max-height: 80%;
+		margin: 0 auto;
+		border: 2px solid white;
+		@media print {
+			border: none;
+		}
+	}
+	table {
+		text-align: center;
+		margin: 0 auto;
+		width: 100%;
+	}
+	p {
+		font-size: 1.2em;
+	}
+}
 
-  div#location {
-    margin-right: 5px;
-  }
+div#location {
+	margin-right: 5px;
+}
 
-  #rarity {
-   border: 1px solid white;
-   min-height: 83px; /* To equal fish habitat table */
-   h3 {
-    margin-bottom: 0.15em;
-    margin-top: 0.15em;
-    font-size: 1.5em;
-  }
+#rarity {
+	border: 1px solid white;
+	min-height: 83px; /* To equal fish habitat table */
+	h3 {
+		margin-bottom: 0.15em;
+		margin-top: 0.15em;
+		font-size: 1.5em;
+	}
 }
 
 #rarity-stars {
-  border-top: 1px solid white;
-  color: yellow;
-  padding-top: 12px;
+	border-top: 1px solid white;
+	color: yellow;
+	padding-top: 12px;
 }
 
 /* End header and header-specific styles styles */
@@ -241,224 +256,219 @@
 /* Begin image-box styles */
 
 .fish-tile, figure {
-  border-width: 2px;
-  border-radius: $rounded-border;
-  border-style: solid;
-  border-color: white;
-  margin: 0.5vw;
+	border-width: 2px;
+	border-radius: $rounded-border;
+	border-style: solid;
+	border-color: white;
+	margin: 0.5vw;
 }
 
 figure {
-  max-width: 48%;
+	max-width: 48%;
 }
 
 .fish-tile {
-  height: 150px;
+	height: 150px;
 }
 
 .fish-tile:hover {
-  border-color: $highlighted;
-  @include transform(scale(1.1, 1.1));
+	border-color: $highlighted;
+	@include transform(scale(1.1, 1.1));
 }
 
 .fish-tile span, figure figcaption {
-  display: block;
-  text-align: center;
+	display: block;
+	text-align: center;
 }
 
 .fish-tile {
-  img {
-    max-width: 100%;
-    min-width: 100%;
-    max-height: 75%;
-  }
-  span {
-    margin-top: 0.4em;
-  }
+	img {
+		max-width: 100%;
+		min-width: 100%;
+		max-height: 75%;
+	}
+	span {
+		margin-top: 0.4em;
+	}
 }
 
 figure {
-  img {
-    max-width: 100%;
-    max-height: 100%;
-  }
-  figcaption {
-    margin-top: 0.2em;
-    margin-bottom: 0.2em;
-  }
+	img {
+		max-width: 100%;
+		max-height: 100%;
+	}
+	figcaption {
+		margin-top: 0.2em;
+		margin-bottom: 0.2em;
+	}
 }
 
 /* End image-box styles */
 
 .navigation-link {
-  display: block;
-  min-width: 98%;
-  background-color: $interactable;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-  line-height: 10vh;
-  font-size: 5vw;
-  text-align: center;
-  border-radius: $rounded-border;
-  @media print {
-    display: none;
-  }
+	display: block;
+	min-width: 98%;
+	background-color: $interactable;
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+	line-height: 10vh;
+	font-size: 5vw;
+	text-align: center;
+	border-radius: $rounded-border;
+	@media print {
+		display: none;
+	}
 }
 
 .navigation-link:hover {
-  background-color: $highlighted;
+	background-color: $highlighted;
 }
 
 /* Begin search area styles */
 
 .search-dropdown {
-  margin-bottom: 0.1em;
-  font-size: 2em;
-  background-color: $secondary-background;
-  padding-top: 0.2em;
-  padding-bottom: 0.2em;
-  border-radius: 5px;
-  @media(max-width: 385px) {
-    font-size: 1.5em;
-  }
+	margin-bottom: 0.1em;
+	font-size: 2em;
+	background-color: $secondary-background;
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+	border-radius: 5px;
+	@media(max-width: 385px) {
+		font-size: 1.5em;
+	}
 }
 
 #dropdown-caret {
-  display: inline-block;
-  transform: none;
-  border-radius: 50%;
-  padding: 0.4em;
-  margin-left: 1em;
-  background-color: $interactable;
-  &:hover {
-  	background-color: $highlighted;
-  }
-  cursor: default;
-  -webkit-touch-callout: none;
-  @include user-select(none);
+	display: inline-block;
+	transform: none;
+	border-radius: 50%;
+	padding: 0.4em;
+	margin-left: 1em;
+	background-color: $interactable;
+	&:hover {
+		background-color: $highlighted;
+	}
+	cursor: default;
+	-webkit-touch-callout: none;
+	@include user-select(none);
 }
 
 #dropdown-caret.collapsed {
-  @include transform(rotate(90deg));
+	@include transform(rotate(90deg));
 }
 
 .search-header {
-  font-size: 1.2em;
-  background-color: $secondary-background;
-  padding-bottom: 0.25em;
-  padding-top: 0.25em;
-  border-radius: $rounded-border;
+	font-size: 1.2em;
+	background-color: $secondary-background;
+	padding-bottom: 0.25em;
+	padding-top: 0.25em;
+	border-radius: $rounded-border;
 }
 
 #search-area {
-  @include display-flex(flex);
-  @include flex-direction(column);
-  .individual-river-section {
-  	@media (max-width: 600px) {
-    	width: 49%;
-    	display: inline-block;
-    }
-  }
-  ol {
-    @include display-flex(flex);
-    @include flex-wrap(wrap);
-    @include justify-content(space-between);
-    @include flex-direction(row);
-    @media (max-width: 600px) {
-    	@include flex-direction(column);
-    	width: 100%;
-    }
-  }
-  li {
-    display: inline-block;
-    width: 24.8%;
-    padding-bottom: 0.25em;
-    padding-top: 0.25em;
-    margin-top: 0.25em;
-    margin-bottom: 0.25em;
-    font-size: 2em;
-    border-radius: $rounded-border;
-    text-align: center;
-    font-size: 1.2em;
-    background-color: $interactable;
-    &:hover {
-    	background-color: $highlighted;
-    }
-    @media (max-width: 600px) {
-      width: 100%;
-      margin-bottom: 0.2em;
-    }
-  }
-  input[type="checkbox"] {
-    float: right;
-    @include transform(scale(1.5));
-    margin-right: 10px;
-    margin-top: 3px;
-  }
-
+	@include display-flex(flex);
+	@include flex-direction(column);
+	ol {
+		@include display-flex(flex);
+		@include flex-wrap(wrap);
+		@include justify-content(space-between);
+		@include flex-direction(row);	
+	}
+	li {
+		display: inline-block;
+		width: 24.8%;
+		padding-bottom: 0.25em;
+		padding-top: 0.25em;
+		margin-top: 0.25em;
+		margin-bottom: 0.25em;
+		font-size: 2em;
+		border-radius: $rounded-border;
+		text-align: center;
+		font-size: 1.2em;
+		background-color: $interactable;
+		&:hover {
+			background-color: $highlighted;
+		}
+	}
+	input[type="checkbox"] {
+		float: right;
+		@include transform(scale(1.5));
+		margin-right: 10px;
+		margin-top: 3px;
+	}
+	@media (max-width: 600px) {
+		.individual-river-section {
+			width: 49%;
+			display: inline-block;
+		}
+		ol {
+			@include flex-direction(column);
+			width: 100%;
+		}
+		li {
+			width: 100%;
+			margin-bottom: 0.2em;
+		}
+	}
 }
 
 #search-area.collapsed {
-  display: none;
+	display: none;
 }
 
 /* End Search Area Styles */
 
 @media(max-width: 700px) {
-  body.fish-page {
-    background-image: none;
-  }
-  div.fish-page {
-    margin-top: 0;
-  }
+	body.fish-page {
+		background-image: none;
+	}
+	div.fish-page {
+		margin-top: 0;
+	}
 }
 
 @media(max-width: 635px) {
-  div#location {
-    width: 98%;
-    margin-bottom: 5px;
-    margin-right: 0;
-  }
-  #rarity{
-    width: 98%;
-    min-height: 0; /* no reason to equal location table any more */
-  }
-  #rarity-stars {
-    padding-top: 0;
-  }
-  #rarity h3 {
-    font-size: 1em;
-  }
-  figure {
-    max-width: 100%;
-  }
+	div#location {
+		width: 98%;
+		margin-bottom: 5px;
+		margin-right: 0;
+	}
+	#rarity{
+		width: 98%;
+		min-height: 0; /* no reason to equal location table any more */
+	}
+	#rarity-stars {
+		padding-top: 0;
+	}
+	#rarity h3 {
+		font-size: 1em;
+	}
+	figure {
+		max-width: 100%;
+	}
 }
 
 @media(max-width: 490px) {
-  header.fish-header p {
-    font-size: 0.95em;
-  }
-  header h1 {
-    font-size: 2.5em;
-  }
+	header.fish-header p {
+		font-size: 0.95em;
+	}
+	header h1 {
+		font-size: 2.5em;
+	}
 }
 
 @media(max-width: 320px) {
-  div#location {
-    font-size: 0.95em;
-  }
-  header h1 {
-    font-size: 2em;
-  }
+	div#location {
+		font-size: 0.95em;
+	}
+	header h1 {
+		font-size: 2em;
+	}
 }
 
 @media print {
-  * {
-    background-color: white;
-    color: black;
-  }
-
-  article {
-    width: 100%;
-  }
+	* {
+		background-color: white;
+		color: black;
+	}
 }
