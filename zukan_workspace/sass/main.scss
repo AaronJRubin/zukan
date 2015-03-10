@@ -1,6 +1,7 @@
   @import "compass/reset";
   @import "compass/css3/flexbox";
   @import "compass/css3/transform";
+  @import "compass/css3/transition";
   @import "compass/css3/user-interface";
   @import "compass/css3/box-sizing";
 
@@ -12,7 +13,8 @@
   $print-text-color: black;
   $rounded-border: 7px;
   $no-background: "(max-width: 700px)";
-  $fish-header-bottom-split: "(max-width: 635px)";
+  $fish-header-bottom-split: "(max-width: 725px)";
+  $small-font-size: 0.8em;
 
   /* Begin body styles */
 
@@ -20,7 +22,7 @@
   	background-color: $primary-background;
   	color: $text-color;
   	font-family: Century Gothic, sans-serif;
-  	font-size: 1.05em;
+  	font-size: 24px;
   	@media print {
   		font-size: 6pt;
   		color: $print-text-color;
@@ -74,8 +76,7 @@
   }
 
   article {
-  	font-size: 1.4em;
-  	min-height: 38.1vh;
+  	min-height: 25vh;
   	> div {
   		@include display-flex(flex);
   		@include justify-content(top);
@@ -124,7 +125,6 @@ header.navbar {
 	}
 	a {
 		display: inline-block;
-		font-size: 1.4em;
 		padding: 1vw 2vw;
 	}
 	li {
@@ -147,7 +147,7 @@ header.navbar {
 				border-left-width: 0;	
 			}
 			a {
-				font-size: 1em;
+				font-size: $small-font-size;
 			}
 		}
 	}
@@ -158,13 +158,12 @@ header.navbar {
 
 h1 {
 	text-align: center;
-	font-size: 3em;
-	padding-top: 1.4em;
-	padding-bottom: 1.4em;
+	font-size: 2em;
+	padding: 1em 0;
 }
 
 p {
-	margin-bottom: 1em;
+	margin-bottom: 0.5em;
 	line-height: 1.2em;
 }
 
@@ -174,10 +173,6 @@ table, th, td {
 		border-color: $print-text-color;
 	}
 	text-align: center;
-}
-
-td {
-	padding: 0.3em;
 }
 
 a, a:visited {
@@ -204,7 +199,6 @@ header.fish-header {
 	@include justify-content(center);
 	@include flex-direction(row);
 	text-align: center;
-	font-size: 1.2em;
 	> div, img, table {
 		@include box-sizing(border-box);
 		margin: 0 1% 1em 1%;
@@ -216,31 +210,26 @@ header.fish-header {
 	}
 	.classification {
 		@include align-self(center);
+		font-size: $small-font-size;
 	}
-	table {
-		text-align: center;
+	table, .rarity {
 		@media #{$fish-header-bottom-split} {
 			margin-left: 0;
 			margin-right: 0;
 			width: 100%;	
 		}
 	}
-	.rarity {
+	td, .rarity-header {
+		padding: 0.25em;
+	}
+	.rarity-header {
 		@media #{$fish-header-bottom-split} {
-			width: 100%;
-			margin-left: 0;
-			margin-right: 0;
+			padding: 0;
 		}
-		.rarity-header {
-			padding: 0.3em;
-			@media #{$fish-header-bottom-split} {
-				padding: 0;
-			}
-		}
-		.rarity-stars {
-			@media #{$fish-header-bottom-split} {
-				padding-top: 0;
-			}
+	}
+	.rarity-stars {
+		@media #{$fish-header-bottom-split} {
+			padding-top: 0;
 		}
 	}
 }
@@ -298,7 +287,7 @@ figure {
 		max-height: 75%;
 	}
 	span {
-		margin-top: 0.4em;
+		margin-top: 0.1em;
 	}
 }
 
@@ -336,16 +325,15 @@ figure {
 
 /* Begin search area styles */
 
-.search-dropdown {
+.search-dropdown, .search-header {
 	margin-bottom: 0.1em;
-	font-size: 2em;
 	background-color: $secondary-background;
-	padding-top: 0.2em;
-	padding-bottom: 0.2em;
-	border-radius: 5px;
-	@media(max-width: 385px) {
-		font-size: 1.5em;
-	}
+	padding: 0.2em 0.5em;
+	border-radius: $rounded-border;
+}
+
+.search-header {
+	margin-bottom: 0.25em;
 }
 
 #dropdown-caret {
@@ -361,21 +349,16 @@ figure {
 	cursor: default;
 	-webkit-touch-callout: none;
 	@include user-select(none);
+	/*@include transition-property(transform);
+	@include transition-duration(0.5s);*/
 }
 
 #dropdown-caret.collapsed {
 	@include transform(rotate(90deg));
 }
 
-.search-header {
-	font-size: 1.2em;
-	background-color: $secondary-background;
-	padding-bottom: 0.25em;
-	padding-top: 0.25em;
-	border-radius: $rounded-border;
-}
-
 #search-area {
+	font-size: $small-font-size;
 	@include display-flex(flex);
 	@include flex-direction(column);
 	ol {
@@ -388,10 +371,9 @@ figure {
 		display: inline-block;
 		width: 24.8%;
 		padding: 0.25em 0;
-		margin: 0.25em 0;
+		margin-bottom: 0.25em;
 		border-radius: $rounded-border;
 		text-align: center;
-		font-size: 1.2em;
 		background-color: $interactable;
 		&:hover {
 			background-color: $highlighted;
@@ -432,23 +414,5 @@ figure {
 	div.fish-page {
 		margin-top: 0;
 		border-radius: 0;
-	}
-}
-
-@media(max-width: 490px) {
-	header.fish-header p {
-		font-size: 0.95em;
-	}
-	header h1 {
-		font-size: 2.5em;
-	}
-}
-
-@media(max-width: 320px) {
-	div#location {
-		font-size: 0.95em;
-	}
-	header h1 {
-		font-size: 2em;
 	}
 }
