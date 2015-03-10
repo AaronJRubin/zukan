@@ -27,10 +27,10 @@ def write(path, string):
 
 # Build templates and write them to destination
 
-ichiran = render_str("base/sakana-ichiran.html", fish = fish_list)
+ichiran = render_str("base/ichiran.html", fish = fish_list)
 write(os.path.join(dest, "ichiran.html"), ichiran.encode('utf8'))
-index = render_str("base/index.html");
-write(os.path.join(dest, "index.html"), index.encode('utf8'))
+index = render_str("base/home.html");
+write(os.path.join(dest, "home.html"), index.encode('utf8'))
 index = render_str("base/contact.html");
 write(os.path.join(dest, "contact.html"), index.encode('utf8'))
 

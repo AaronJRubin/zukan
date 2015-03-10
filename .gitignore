@@ -3,7 +3,7 @@
 
 # Don't include HTML files generated from templates
 zukan_workspace/web/sakana/*.html
-zukan_workspace/web/index.html
+zukan_workspace/web/home.html
 zukan_workspace/web/ichiran.html
 zukan_workspace/web/contact.html
 
