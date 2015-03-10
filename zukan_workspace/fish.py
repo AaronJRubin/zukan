@@ -48,7 +48,7 @@ class Fish:
         return "sakana/" + self.romaji + ".html"
 
     def image(self, suffix):
-        return os.path.join("/images/", self.romaji, self.romaji + "-" + suffix + ".jpg")
+        return os.path.join("/images/sakana", self.romaji, self.romaji + "-" + suffix + ".jpg")
 
     def render_tile(self):
         return jinja_utils.render_str("fish-tile.html", fish = self)

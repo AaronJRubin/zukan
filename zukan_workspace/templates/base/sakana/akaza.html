@@ -1,20 +1,17 @@
 {% extends "base/sakana.html" %}
 
 {% block article %}
-<p>
-アカザの特徴として体が赤くヌルヌルしており、背びれと胸びれにはトゲがある。
-刺されるととても痛いことから、高津川流域では”てっきり”と言われる。
-</p>
-<p>
-ひげは８本で尻びれが丸い形をしているのも特徴。
-</p>
 
-<div class="gallery">
+{% from 'fish-page-macros.html' import article_section %}
 
-	<figure>
-		<img src="/images/yoko-sugata/akaza-yoko.jpg"></img>
-		<figcaption>横姿</figcaption>
-	</figure>
+{% call article_section(fish.image('mae')) %}
+<p>前から見るとヒゲが８本あるのが特徴。</p>
+{% endcall %}
 
-</div>
+{% call article_section(fish.image('naname')) %}
+<p>おびれは丸っこい</p>
+<p>また、背びれにトゲがあり、刺されるととても痛い</p>
+{% endcall %}
+
+
 {% endblock %}

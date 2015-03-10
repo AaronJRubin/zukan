@@ -4,17 +4,17 @@
 
 {% from 'fish-page-macros.html' import article_section %}
 
-{% call article_section("/images/ichiran/akaza.jpg") %}
+{% call article_section(fish.image('ichiran')) %}
 <p>アカザは素敵な魚ですよ。</p>
 <p>かわいいしね。</p>
 {% endcall %}
 
-{% call article_section("/images/ichiran/bora.jpg") %}
+{% call article_section(fish.image('ichiran')) %}
 <p>ボラも素敵な魚ですよ。</p>
 <p>可愛いくはないけど面白い。</p>
 {% endcall %}
 
-{% call article_section("/images/ichiran/amago.jpg") %}
+{% call article_section(fish.image('ichiran')) %}
 <p>だけど、僕の一番好きな魚はアマゴだ。</p>
 {% endcall %}
 
