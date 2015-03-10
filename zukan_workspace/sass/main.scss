@@ -125,7 +125,7 @@ header.navbar {
 	}
 	a {
 		display: inline-block;
-		padding: 1vw 2vw;
+		padding: 0.3em 2vw;
 	}
 	li {
 		@include box-sizing(border-box);
@@ -133,7 +133,7 @@ header.navbar {
 		display: inline-block;
 		float: left;
 		border-left-style: solid;
-		border-left-width: 0.5vw;
+		border-left-width: 0.3vw;
 		border-left-color: black;
 		&:hover {
 			background-color: $highlighted;
@@ -210,6 +210,9 @@ header.fish-header {
 	img {
 		@include align-self(center);
 		border: 1px solid $text-color;
+		@media print {
+			border-color: $print-text-color;
+		}
 	}
 	.classification {
 		@include align-self(center);
@@ -338,16 +341,12 @@ figure {
 	margin-bottom: 0.1em;
 }
 
-.search-header {
-	margin-bottom: 0.25em;
-}
-
 #dropdown-caret {
 	display: inline-block;
-	transform: none;
 	border-radius: 50%;
-	padding: 0.4em;
+	padding: 0.5em 0.4em 0.3em 0.4em;
 	margin-left: 1em;
+	font-size: $small-font-size;
 	background-color: $interactable;
 	&:hover {
 		background-color: $highlighted;
@@ -375,13 +374,15 @@ figure {
 		display: inline-block;
 		width: 24.8%;
 		padding: 0.25em 0;
-		margin-bottom: 0.2em;
 		border-radius: $rounded-border;
 		text-align: center;
 		background-color: $interactable;
 		&:hover {
 			background-color: $highlighted;
 		}
+	}
+	.search-header, li {
+		margin-bottom: 0.2em;
 	}
 	input[type="checkbox"] {
 		float: right;
