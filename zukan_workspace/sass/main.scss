@@ -159,6 +159,9 @@ header.navbar {
 h1 {
 	text-align: center;
 	font-size: 2em;
+	@media (max-width: 400px) {
+		font-size: 1.5em;
+	}
 	padding: 1em 0;
 }
 
@@ -326,10 +329,13 @@ figure {
 /* Begin search area styles */
 
 .search-dropdown, .search-header {
-	margin-bottom: 0.1em;
 	background-color: $secondary-background;
 	padding: 0.2em 0.5em;
 	border-radius: $rounded-border;
+}
+
+.search-dropdown {
+	margin-bottom: 0.1em;
 }
 
 .search-header {
@@ -349,8 +355,6 @@ figure {
 	cursor: default;
 	-webkit-touch-callout: none;
 	@include user-select(none);
-	/*@include transition-property(transform);
-	@include transition-duration(0.5s);*/
 }
 
 #dropdown-caret.collapsed {
@@ -371,7 +375,7 @@ figure {
 		display: inline-block;
 		width: 24.8%;
 		padding: 0.25em 0;
-		margin-bottom: 0.25em;
+		margin-bottom: 0.2em;
 		border-radius: $rounded-border;
 		text-align: center;
 		background-color: $interactable;
@@ -396,7 +400,6 @@ figure {
 		}
 		li {
 			width: 100%;
-			margin-bottom: 0.2em;
 		}
 	}
 }
