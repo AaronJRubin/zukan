@@ -204,16 +204,17 @@ header.fish-header {
 	@include justify-content(center);
 	@include flex-direction(row);
 	text-align: center;
-	margin-bottom: 1em;
-	p {
-		font-size: 1.2em;
-	}
+	font-size: 1.2em;
 	> div, img, table {
 		@include box-sizing(border-box);
-		margin: 0 1%;
+		margin: 0 1% 1em 1%;
 		width: 48%;	
 	}
 	img {
+		@include align-self(center);
+		border: 1px solid $text-color;
+	}
+	.classification {
 		@include align-self(center);
 	}
 	table {
@@ -221,35 +222,43 @@ header.fish-header {
 		@media #{$fish-header-bottom-split} {
 			margin-left: 0;
 			margin-right: 0;
-			margin-bottom: 1em;
 			width: 100%;	
 		}
 	}
-	#rarity {
-		border: 1px solid $text-color;
-		@media print {
-			border-color: $print-text-color;
-		}
-		p {
-			margin-bottom: 0;
-		}
+	.rarity {
 		@media #{$fish-header-bottom-split} {
 			width: 100%;
-			margin: 0;
+			margin-left: 0;
+			margin-right: 0;
+		}
+		.rarity-header {
+			padding: 0.3em;
+			@media #{$fish-header-bottom-split} {
+				padding: 0;
+			}
+		}
+		.rarity-stars {
+			@media #{$fish-header-bottom-split} {
+				padding-top: 0;
+			}
 		}
 	}
 }
 
-#rarity-stars {
+.rarity {
+	border: 1px solid $text-color;
+	@media print {
+		border-color: $print-text-color;
+	}
+}
+
+.rarity-stars {
 	border-top: 1px solid $text-color;
 	@media print {
 		border-color: $print-text-color;
 	}
 	color: yellow;
 	padding-top: 1em;
-	@media #{$fish-header-bottom-split} {
-		padding-top: 0;
-	}
 }
 
 /* End header and header-specific styles styles */

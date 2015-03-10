@@ -12,7 +12,7 @@
 
 		<img src="{{fish.get_image()}}"></img>
 
-		<div>
+		<div class="classification">
 			<p>和名：{{fish.kana}}</p>
 			<p>学名：{{fish.latin}}</p>
 			<p>科名：{{fish.family}}</p>
@@ -42,11 +42,9 @@
 				</tr>
 			</table>
 			
-		<div id = "rarity">
-			<p>
-				レア度
-			</p>
-			<div id = "rarity-stars">
+		<div class="rarity">
+			<div class="rarity-header">レア度</div>
+			<div class="rarity-stars">
 				{{fish.rarity_stars()}}
 			</div>
 		</div>
