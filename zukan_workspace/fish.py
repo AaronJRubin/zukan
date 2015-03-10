@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import jinja_utils
+import os
 
 class Location:
 
@@ -46,8 +47,8 @@ class Fish:
     def get_link(self):
         return "sakana/" + self.romaji + ".html"
 
-    def get_image(self):
-        return "/images/ichiran/" + self.romaji + ".jpg"
+    def image(self, suffix):
+        return os.path.join("/images/", self.romaji, self.romaji + "-" + suffix + ".jpg")
 
     def render_tile(self):
         return jinja_utils.render_str("fish-tile.html", fish = self)
