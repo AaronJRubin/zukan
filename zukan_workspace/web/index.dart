@@ -71,7 +71,7 @@ Filter buildFilter() {
 
 void refresh() {
   Filter filter = buildFilter();
-  for (DivElement tile in fishTiles) {
+  for (HtmlElement tile in fishTiles) {
     Fish fish = fish_map[tile.attributes["data-fishname"]];
     if (!filter.filter(fish)) {
       tile.hidden = true;
