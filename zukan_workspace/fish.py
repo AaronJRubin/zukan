@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import jinja_utils
 import os
 
 class Location:
@@ -41,17 +40,12 @@ class Fish:
         self.genus = genus
         self.location = Location()
         self.rarity = rarity
-        #self.link = "sakana/" + romaji
-        #self.image = "static/low-res/ichiran/" + romaji + ".jpg"
 
     def get_link(self):
         return "sakana/" + self.romaji + ".html"
 
     def image(self, suffix):
         return os.path.join("/images/sakana", self.romaji, self.romaji + "-" + suffix + ".jpg")
-
-    def render_tile(self):
-        return jinja_utils.render_str("fish-tile.html", fish = self)
 
     def takatsu_zyou(self):
         return Location.ZYOU in self.location.get_takatsu()

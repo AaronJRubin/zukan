@@ -14,28 +14,27 @@
 
 <div class="search-dropdown"><span id="dropdown-label">検索エリアを表示</span><span id="dropdown-caret" class="collapsed">&#x25BC</span></div>
 
-{% import 'search-macros.html' as search_macros %}
+{% import 'ichiran-macros.html' as macros %}
 
 <div id="search-area" class="collapsed">
 
 	<div class="search-section" id="include">
 		<div class="search-header">以下の生息地に住んでいる魚しか含まない</div>
-		{{ search_macros.river_section("takatsu", "高津", "include") }}
-		{{ search_macros.river_section("masuda", "益田", "include") }}
+		{{ macros.river_section("takatsu", "高津", "include") }}
+		{{ macros.river_section("masuda", "益田", "include") }}
 	</div>
 
 	<div class="search-section" id="exclude">
 		<div class="search-header">以下の生息地に住んでいる魚を除く</div>
-		{{ search_macros.river_section("takatsu", "高津", "exclude") }}
-		{{ search_macros.river_section("masuda", "益田", "exclude") }}	
+		{{ macros.river_section("takatsu", "高津", "exclude") }}
+		{{ macros.river_section("masuda", "益田", "exclude") }}	
 	</div>
-</div>
 </div>
 
 <ol class="fish-tiles">
 	{% for fish in fish %}
 	<li data-fishname="{{fish.romaji}}">
-	{{fish.render_tile()}}
+	{{ macros.fish_tile(fish) }}
 	</li>
 	{% endfor %}
 </ol>
