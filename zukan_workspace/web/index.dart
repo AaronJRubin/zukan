@@ -3,13 +3,12 @@ import 'fish.dart';
 
 List<CheckboxInputElement> includeCheckboxes;
 List<CheckboxInputElement> excludeCheckboxes;
-List<DivElement> fishTiles;
-
+List<LIElement> fishTiles;
 
 void main() {
   includeCheckboxes = document.querySelectorAll("#include .search-checkbox");
   excludeCheckboxes = document.querySelectorAll("#exclude .search-checkbox");
-  fishTiles = document.querySelectorAll(".fish-tile");
+  fishTiles = document.querySelectorAll("ol.fish-tiles li");
   SpanElement dropdownCaret = document.querySelector("#dropdown-caret");
   DivElement searchArea = document.querySelector("#search-area");
   SpanElement dropdownLabel = document.querySelector("#dropdown-label");
@@ -71,12 +70,12 @@ Filter buildFilter() {
 
 void refresh() {
   Filter filter = buildFilter();
-  for (HtmlElement tile in fishTiles) {
+  for (LIElement tile in fishTiles) {
     Fish fish = fish_map[tile.attributes["data-fishname"]];
     if (!filter.filter(fish)) {
-      tile.hidden = true;
+      tile.classes.add('hidden');
     } else {
-      tile.hidden = false;
+      tile.classes.remove('hidden');
     }
   }
 }

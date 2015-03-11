@@ -32,10 +32,12 @@
 </div>
 </div>
 
-<main>
+<ol class="fish-tiles">
 	{% for fish in fish %}
+	<li data-fishname="{{fish.romaji}}">
 	{{fish.render_tile()}}
+	</li>
 	{% endfor %}
-</main>
+</ol>
 
 {% endblock %}
