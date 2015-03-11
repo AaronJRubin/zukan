@@ -1,137 +1,139 @@
-  @import "compass/reset";
-  @import "compass/css3/flexbox";
-  @import "compass/css3/transform";
-  @import "compass/css3/transition";
-  @import "compass/css3/user-interface";
-  @import "compass/css3/box-sizing";
+@import 'compass/reset';
+@import 'compass/css3/flexbox';
+@import 'compass/css3/transform';
+@import 'compass/css3/transition';
+@import 'compass/css3/user-interface';
+@import 'compass/css3/box-sizing';
 
-  $primary-background: #111133;
-  $secondary-background: #111199;
-  $interactable: #4479BA;
-  $highlighted: #880088;
-  $text-color: #e8e8e8;
-  $print-text-color: black;
-  $rounded-border: 7px;
-  $no-background: "(max-width: 700px)";
-  $fish-header-bottom-split: "(max-width: 725px)";
-  $small-font-size: 0.8em;
+$primary-background: #113;
+$secondary-background: #119;
+$interactable: #4479ba;
+$highlighted: #808;
+$print-background: #fff;
+$text-color: #e8e8e8;
+$print-text-color: #000;
+$image-border-color: #fff;
+$rounded-border: 7px;
+$no-background: '(max-width: 700px)';
+$fish-header-bottom-split: '(max-width: 725px)';
+$small-font-size: .8em;
 
-  /* Begin general HTML element styles */
+/* Begin general HTML element styles */
 
-  body {
-  	background-color: $primary-background;
-  	color: $text-color;
-  	font-family: Century Gothic, sans-serif;
-  	font-size: 24px;
-  	@media print {
-  		font-size: 6pt;
-  		color: $print-text-color;
-  		background-color: white;
-  	}
+body {
+  background-color: $primary-background;
+  color: $text-color;
+  font-size: 24px;
+  font-family: Century Gothic, sans-serif;
+  @media print {
+    font-size: 6pt;
+    color: $print-text-color;
+    background-color: $print-background;
   }
+}
 
-  h1 {
-  	text-align: center;
-  	font-size: 2em;
-  	@media (max-width: 400px) {
-  		font-size: 1.5em;
-  	}
-  	padding: 1em 0;
+h1 {
+  font-size: 2em;
+  padding: 1em 0;
+  text-align: center;
+  @media (max-width: 400px) {
+    font-size: 1.5em;
   }
+}
 
-  p {
-  	margin-bottom: 0.5em;
-  	line-height: 1.2em;
+p {
+  line-height: 1.2em;
+  margin-bottom: .5em;
+}
+
+table, 
+th, 
+td {
+  border: 1px solid $text-color;
+  @media print {
+    border-color: $print-text-color;
   }
+  text-align: center;
+}
 
-  table, th, td {
-  	border: 1px solid $text-color;
-  	@media print {
-  		border-color: $print-text-color;
-  	}
-  	text-align: center;
+a, 
+a:visited {
+  color: $text-color;
+  text-decoration: none;
+}
+
+/* End general HTML element styles */
+
+/* Begin fish page background styles */
+
+.fish-page {
+  background-size: 100% 100%;
+  transition: background-image 3s ease-in-out;
+}
+
+$seisokuchi: 'takatsu-zyou', 'takatsu-chuu', 'takatsu-ge', 'takatsu-kakou', 
+'masuda-zyou', 'masuda-chuu', 'masuda-ge', 'masuda-kakou';
+
+@each $a-seisokuchi in $seisokuchi {
+  body.#{$a_seisokuchi} {
+    background-image: url(/images/seisokuchi/#{$a_seisokuchi}.jpg);
   }
+}
 
-  a, a:visited {
-  	color: $text-color;
-  	text-decoration: none;
+/* End fish page background styles */
+
+/* Begin major container styles */
+
+ol.fish-tiles {
+  @include display-flex(flex);
+  @include justify-content(space-around);
+  @include flex-wrap(wrap);
+  li {
+    display: inline-block;
+    &.hidden {
+      display: none;
+    }
   }
+}
 
-  /* End general HTML element styles */
-
-  /* Begin fish page background styles */
-
-  body.fish-page {
-  	background-size: 100% 100%;
-  	transition: background-image 3s ease-in-out;
+div.fish-page {
+  background-color: $primary-background;
+  border-radius: $rounded-border;
+  margin: 2vh auto;
+  max-width: 700px;
+  padding: 2vh 2vw;
+  @media print {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
   }
-
-  $seisokuchi: "takatsu-zyou", "takatsu-chuu", "takatsu-ge", "takatsu-kakou", 
-  "masuda-zyou", "masuda-chuu", "masuda-ge", "masuda-kakou";
-
-  @each $a_seisokuchi in $seisokuchi {
-  	body.#{$a_seisokuchi} {
-  		background-image: url('/images/seisokuchi/#{$a_seisokuchi}.jpg');
-  	}
+  @media #{$no-background} {
+    margin-bottom: 0;
   }
+}
 
-  /* End fish page background styles */
-
-  /* Begin major container styles */
-
-  ol.fish-tiles {
-  	@include display-flex(flex);
-  	@include justify-content(space-around);
-  	@include flex-wrap(wrap);
-  	li {
-  		display: inline-block;
-  	}
-  	li.hidden {
-  		display: none;
-  	}
-  }
-
-  div.fish-page {
-  	background-color: $primary-background;
-  	max-width: 700px;
-  	margin: auto;
-  	margin-top: 2vh;
-  	margin-bottom: 2vh;
-  	padding: 2vh 2vw;
-  	border-radius: $rounded-border;
-  	@media print {
-  		max-width: 100%;
-  		padding: 0;
-  		margin: 0;
-  	}
-  	@media #{$no-background} {
-  		margin-bottom: 0;
-  	}
-  }
-
-  article {
-  	min-height: 25vh;
-  	> div {
-  	  @include display-flex(flex);
-  	  @include justify-content(top);
-  	  @include align-content(top);
-      // necessary to prevent default stretching behavior for images
-      @include align-items(center);
-      @include flex-direction(row);
-      border-top-style: solid;
-      border-top-width: 0.3em;
-      border-top-color: $text-color;
-      @media print {
-      	border-top-color: $print-text-color;
-      }
-      padding-bottom: 1em;
-      padding-top: 1em;
-      > img {
-      	display: inline-block;
-      	min-width: 40%;
-      	max-width: 40%;
-      	margin-right: 1em;
-      }
+article {
+  min-height: 25vh;
+  > div {
+    @include display-flex(flex);
+    @include justify-content(top);
+    @include align-content(top);
+    @include align-items(center); /* necessary to prevent images from stretching */
+    @include flex-direction(row);
+    border-top-style: solid;
+    border-top-width: .3em;
+    border-top-color: $text-color;
+    @media print {
+      border-top-color: $print-text-color;
+    }
+    padding-bottom: 1em;
+    padding-top: 1em;
+    > img {
+      display: inline-block;
+      min-width: 40%;
+      max-width: 40%;
+      margin-right: 1em;
+    }
   }
 }
 
@@ -140,119 +142,119 @@
 /* Begin header styles */
 
 header.navbar {
-	background-color: $secondary-background;
-	border-radius: $rounded-border;
-	margin-bottom: 0;
-	nav {
-		width: 100%;
-	}
-	ol {
-		width: 100%;
-		display: inline-block;
-		@include display-flex(flex);
-		@include flex-direction(row);
-		@include justify-content(flex-end);
-	}
-	a {
-		display: inline-block;
-		padding: 0.3em 2vw;
-	}
-	li {
-		@include box-sizing(border-box);
-		background-color: $interactable;
-		display: inline-block;
-		float: left;
-		border-left-style: solid;
-		border-left-width: 0.3vw;
-		border-left-color: black;
-		&:hover {
-			background-color: $highlighted;
-		}
-	}
-	@media (max-width: 420px) {
-		li {
-			width: 33.3%;
-			text-align: center;
-			&:first-child {
-				border-left-width: 0;	
-			}
-			a {
-				font-size: $small-font-size;
-			}
-		}
-	}
-	@media print {
-		display: none;
-	}
+  background-color: $secondary-background;
+  border-radius: $rounded-border;
+  margin-bottom: 0;
+  nav {
+    width: 100%;
+  }
+  ol {
+    width: 100%;
+    display: inline-block;
+    @include display-flex(flex);
+    @include flex-direction(row);
+    @include justify-content(flex-end);
+  }
+  a {
+    display: inline-block;
+    padding: .3em 2vw;
+  }
+  li {
+    @include box-sizing(border-box);
+    background-color: $interactable;
+    display: inline-block;
+    float: left;
+    border-left-style: solid;
+    border-left-width: .3vw;
+    border-left-color: black;
+    &:hover {
+      background-color: $highlighted;
+    }
+  }
+  @media (max-width: 420px) {
+    li {
+      width: 33.3%;
+      text-align: center;
+      &:first-child {
+        border-left-width: 0;   
+      }
+      a {
+        font-size: $small-font-size;
+      }
+    }
+  }
+  @media print {
+    display: none;
+  }
 }
 
 header.ichiran-header {
-	background-image: url("/images/takatsugawa.jpg");
-	background-size: 50%;
-	border-radius: $rounded-border;
-	@media (max-width: 930px) {
-		background-size: 100%;
-	}
+  background-image: url(/images/takatsugawa.jpg);
+  background-size: 50%;
+  border-radius: $rounded-border;
+  @media (max-width: 930px) {
+    background-size: 100%;
+  }
 }
 
 header.fish-header {
-	@include display-flex(flex);
-	@include flex-wrap(wrap);
-	@include justify-content(center);
-	@include flex-direction(row);
-	text-align: center;
-	> div, img, table {
-		@include box-sizing(border-box);
-		margin: 0 1% 1em 1%;
-		width: 48%;	
-	}
-	img {
-		@include align-self(center);
-		border: 1px solid $text-color;
-		@media print {
-			border-color: $print-text-color;
-		}
-	}
-	.classification {
-		@include align-self(center);
-		font-size: $small-font-size;
-	}
-	table, .rarity {
-		@media #{$fish-header-bottom-split} {
-			margin-left: 0;
-			margin-right: 0;
-			width: 100%;	
-		}
-	}
-	td, .rarity-header {
-		padding: 0.25em;
-	}
-	.rarity-header {
-		@media #{$fish-header-bottom-split} {
-			padding: 0;
-		}
-	}
-	.rarity-stars {
-		@media #{$fish-header-bottom-split} {
-			padding-top: 0;
-		}
-	}
+  @include display-flex(flex);
+  @include flex-wrap(wrap);
+  @include justify-content(center);
+  @include flex-direction(row);
+  text-align: center;
+  > div, img, table {
+    @include box-sizing(border-box);
+    margin: 0 1% 1em 1%;
+    width: 48%; 
+  }
+  img {
+    @include align-self(center);
+    border: 1px solid $text-color;
+    @media print {
+      border-color: $print-text-color;
+    }
+  }
+  .classification {
+    @include align-self(center);
+    font-size: $small-font-size;
+  }
+  table, .rarity {
+    @media #{$fish-header-bottom-split} {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;    
+    }
+  }
+  td, .rarity-header {
+    padding: .25em;
+  }
+  .rarity-header {
+    @media #{$fish-header-bottom-split} {
+      padding: 0;
+    }
+  }
+  .rarity-stars {
+    @media #{$fish-header-bottom-split} {
+      padding-top: 0;
+    }
+  }
 }
 
 .rarity {
-	border: 1px solid $text-color;
-	@media print {
-		border-color: $print-text-color;
-	}
+  border: 1px solid $text-color;
+  @media print {
+    border-color: $print-text-color;
+  }
 }
 
 .rarity-stars {
-	border-top: 1px solid $text-color;
-	@media print {
-		border-color: $print-text-color;
-	}
-	color: yellow;
-	padding-top: 1em;
+  border-top: 1px solid $text-color;
+  @media print {
+    border-color: $print-text-color;
+  }
+  color: yellow;
+  padding-top: 1em;
 }
 
 /* End header styles */
@@ -260,162 +262,173 @@ header.fish-header {
 /* Begin search area styles */
 
 .search-dropdown, .search-header {
-	background-color: $secondary-background;
-	padding: 0.2em 0.5em;
-	border-radius: $rounded-border;
+  background-color: $secondary-background;
+  padding: .2em .5em;
+  border-radius: $rounded-border;
 }
 
 .search-dropdown {
-	margin-bottom: 0.1em;
+  margin-bottom: .1em;
 }
 
 #dropdown-caret {
-	display: inline-block;
-	border-radius: 50%;
-	padding: 0.5em 0.4em 0.3em 0.4em;
-	margin-left: 1em;
-	font-size: $small-font-size;
-	background-color: $interactable;
-	&:hover {
-		background-color: $highlighted;
-	}
-	cursor: default;
-	-webkit-touch-callout: none;
-	@include user-select(none);
+  display: inline-block;
+  border-radius: 50%;
+  padding: .5em .4em .3em .4em;
+  margin-left: 1em;
+  font-size: $small-font-size;
+  background-color: $interactable;
+  &:hover {
+    background-color: $highlighted;
+  }
+  cursor: default;
+  -webkit-touch-callout: none;
+  @include user-select(none);
 }
 
 #dropdown-caret.collapsed {
-	@include transform(rotate(90deg));
+  @include transform(rotate(90deg));
 }
 
 #search-area {
-	font-size: $small-font-size;
-	@include display-flex(flex);
-	@include flex-direction(column);
-	ol {
-		@include display-flex(flex);
-		@include flex-wrap(wrap);
-		@include justify-content(space-between);
-		@include flex-direction(row);	
-	}
-	li {
-		display: inline-block;
-		width: 24.8%;
-		padding: 0.25em 0;
-		border-radius: $rounded-border;
-		text-align: center;
-		background-color: $interactable;
-		&:hover {
-			background-color: $highlighted;
-		}
-	}
-	.search-header, li {
-		margin-bottom: 0.2em;
-	}
-	input[type="checkbox"] {
-		float: right;
-		@include transform(scale(1.5));
-		margin-right: 10px;
-		margin-top: 3px;
-	}
-	@media (max-width: 600px) {
-		.individual-river-section {
-			width: 49%;
-			display: inline-block;
-		}
-		ol {
-			@include flex-direction(column);
-			width: 100%;
-		}
-		li {
-			width: 100%;
-		}
-	}
-}
+  font-size: $small-font-size;
+  @include display-flex(flex);
+  @include flex-direction(column);
 
-#search-area.collapsed {
-	display: none;
+  ol {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
+    @include flex-direction(row);   
+  }
+
+  li {
+    background-color: $interactable;
+    border-radius: $rounded-border;
+    display: inline-block;
+    padding: .25em 0;
+    text-align: center;
+    width: 24.8%;
+    
+    &:hover {
+      background-color: $highlighted;
+    }
+  }
+
+  .search-header, 
+  li {
+    margin-bottom: .2em;
+  }
+
+  input[type='checkbox'] {
+    @include transform(scale(1.5));
+    float: right;
+    margin-right: 10px;
+    margin-top: 3px;
+  }
+
+  &.collapsed {
+    display: none;
+  }
+
+  @media (max-width: 600px) {
+    .individual-river-section {
+      display: inline-block;
+      width: 49%;
+    }
+
+    ol {
+      @include flex-direction(column);
+      width: 100%;
+    }
+
+    li {
+      width: 100%;
+    }
+  }
 }
 
 /* End search ara styles */
 
 /* Begin image-box styles */
 
-.fish-tile, figure {
-	display: inline-block;
-	border-width: 2px;
-	border-radius: $rounded-border;
-	border-style: solid;
-	border-color: white;
-	margin: 0.5vw;
+.fish-tile, 
+figure {
+  border-color: $image-border-color;
+  border-radius: $rounded-border;
+  border-style: solid;
+  border-width: 2px;
+  display: inline-block;
+  margin: .5vw;
 }
 
 figure {
-	max-width: 48%;
+  max-width: 48%;
+
+  img {
+    max-height: 100%;
+    max-width: 100%;
+  }
+  
+  figcaption {
+    margin: .2em 0;
+  }
 }
 
 .fish-tile {
-	height: 150px;
+  height: 150px;
+
+  img {
+    max-height: 75%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+  
+  span {
+    margin-top: .1em;
+  }
+
+  &:hover {
+    @include transform(scale(1.1, 1.1));
+    border-color: $highlighted;
+  }
 }
 
-.fish-tile:hover {
-	border-color: $highlighted;
-	@include transform(scale(1.1, 1.1));
-}
-
-.fish-tile span, figure figcaption {
-	display: block;
-	text-align: center;
-}
-
-.fish-tile {
-	img {
-		max-width: 100%;
-		min-width: 100%;
-		max-height: 75%;
-	}
-	span {
-		margin-top: 0.1em;
-	}
-}
-
-figure {
-	img {
-		max-width: 100%;
-		max-height: 100%;
-	}
-	figcaption {
-		margin-top: 0.2em;
-		margin-bottom: 0.2em;
-	}
+.fish-tile span,
+figure figcaption {
+  display: block;
+  text-align: center;
 }
 
 /* End image-box styles */
 
 .navigation-link {
-	display: block;
-	min-width: 98%;
-	background-color: $interactable;
-	&:hover {
-		background-color: $highlighted;
-	}
-	padding-top: 1vh;
-	padding-bottom: 1vh;
-	line-height: 10vh;
-	font-size: 5vw;
-	text-align: center;
-	border-radius: $rounded-border;
-	@media print {
-		display: none;
-	}	
+  background-color: $interactable;
+  border-radius: $rounded-border;
+  display: block;
+  font-size: 5vw;
+  line-height: 10vh;
+  min-width: 98%;
+  padding-bottom: 1vh;
+  padding-top: 1vh;
+  text-align: center;
+  
+  &:hover {
+    background-color: $highlighted;
+  }
+
+  @media print {
+    display: none;
+  }
 }
 
 @media #{$no-background} {
-	body.fish-page {
-		background-image: none;
-	}
-	div.fish-page {
-		margin-top: 0;
-		border-radius: 0;
-	}
+  body.fish-page {
+    background-image: none;
+  }
+
+  div.fish-page {
+    border-radius: 0;
+    margin-top: 0;
+  }
 }
