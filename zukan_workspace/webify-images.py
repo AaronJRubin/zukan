@@ -2,9 +2,9 @@ from sh import cd, mogrify, cp
 import os
 from collections import defaultdict
 
-cp('-rf', 'master-images/', 'zukan_workspace/web/images/')
+cp('-rf', 'master-images/', 'web/images/')
 
-cd('zukan_workspace/web/images/sakana')
+cd('web/images/sakana')
 
 print("Resizing/compressing fish images...")
 
