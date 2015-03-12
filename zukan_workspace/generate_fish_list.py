@@ -8,12 +8,10 @@ from fish import Fish, Location
 
 def generate_defaults():
     res = {}
-    for subdir, dirs, files in os.walk("web/images/ichiran/"):
-        for file in files:
-            if file.endswith(".jpg"):
-                romaji = file.replace(".jpg", "")
-                kana = romkan.to_kana(romaji)#.decode("utf-8")
-                res[romaji] = Fish(romaji = romaji, kana = kana)
+    fish_image_folders = next(os.walk('web/images/sakana'))[1]
+    for fish_image_folder in fish_image_folders:
+        kana = romkan.to_kana(fish_image_folder)#.decode("utf-8")
+        res[fish_image_folder] = Fish(romaji = fish_image_folder, kana = kana)
     return res
 
 def fish_data():
