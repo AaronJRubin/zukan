@@ -9,7 +9,11 @@ dest = "web"
 
 # Set up templating infrastructure
 
-fish_list = pickle.load(open("fish_list.pkl", "rb", pickle.HIGHEST_PROTOCOL))
+try:
+	fish_list = pickle.load(open("fish_list.pkl", "rb", pickle.HIGHEST_PROTOCOL))
+except IOError:
+	print("To run this script, you need to generate the file fish_list.pkl by running generate_fish_list.py")
+	exit()
 
 template_dir = os.path.join(os.path.dirname(__file__), "templates")
 jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir))
