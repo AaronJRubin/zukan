@@ -22,9 +22,12 @@ convert_seisokuchi = lambda do |seisokuchi, converted_seisokuch|
 	"convert #{seisokuchi} -resize 960x -quality #{seisokuchi_quality_settings[seisokuchi.pathmap('%f')]} #{compressed_seisokuchi}"
 end
 
+desc "Compress images of fish in master-images and move to workspace"
 compress_images_task(:compress_fish_images, "zukan_workspace/master-images/sakana/**/*.jpg", "zukan_workspace/web/images/%-2d/%f", convert_fish)
+desc "Compress images of seisokuchi in master-images and move to workspace"
 compress_images_task(:compress_seisokuchi_images, "zukan_workspace/master-images/seisokuchi/*.jpg", "zukan_workspace/web/images/seisokuchi/%f", convert_seisokuchi)
 
+desc "Parse data in fish_data.txt, generating serialized Python and Dart data structures"
 task :generate_fish_list do
 	Dir.chdir 'zukan_workspace'
 	dependencies = ['fish_data.txt', 'generate_fish_list.py']
@@ -34,13 +37,18 @@ task :generate_fish_list do
 	Dir.chdir '..'
 end
 
+desc "Generate html documents using the jinja2 templates engine"
 task :generate_pages => :generate_fish_list do
 	Dir.chdir 'zukan_workspace'
+	dependencies = Rake::FileList.new('templates/**/*')
+	unless uptodate?('web/ichiran.html', dependencies)
 	sh 'python generate_pages.py'
+	end
 	Dir.chdir '..'
 end
 
-task :generate_sass do
+desc "Compile Sass to CSS, using Compass"
+task :compile_sass do
 	Dir.chdir 'zukan_workspace'
 	unless (uptodate?('web/stylesheets/main.css', ['sass/main.scss']))
 		sh 'compass compile'
@@ -48,17 +56,25 @@ task :generate_sass do
 	Dir.chdir '..'
 end
 
-task :build_workspace => [:compress_fish_images, :compress_seisokuchi_images, :generate_pages, :generate_sass]
+desc "Compile everything necessary to use the site with pub serve, part of the Dart SDK, from zukan_workspace"
+task :build_workspace => [:compress_fish_images, :compress_seisokuchi_images, :generate_pages, :compile_sass]
 
+desc "Compile dart code and produce ready-to-deploy site"
 task :compile => :build_workspace do
 	Dir.chdir 'zukan_workspace'
-	sh 'pub build'
-	Dir.chdir '..'
-	sh 'rm -r site/static/'
-	sh 'cp -r zukan_workspace/build/web site/static/'
-	sh 'python generate_appcache.py'
+	dependencies = Rake::FileList.new('web/**/*')
+	unless (uptodate?('build/web/ichiran.html', dependencies))
+		sh 'pub build'
+		Dir.chdir '..'
+		sh 'rm -r site/static/'
+		sh 'cp -r zukan_workspace/build/web site/static/'
+		sh 'python generate_appcache.py'
+	else
+		Dir.chdir '..'
+	end
 end
 
+desc "Deploy site to Google App Engine"
 task :deploy => :compile do
 	Dir.chdir 'site'
 	sh 'appcfg.py --no_cookies update .'
