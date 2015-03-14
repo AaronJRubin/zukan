@@ -8,9 +8,9 @@ from fish import Fish, Location
 
 def generate_defaults():
     res = {}
-    fish_image_folders = next(os.walk('web/images/sakana'))[1]
+    fish_image_folders = next(os.walk('master-images/sakana'))[1]
     for fish_image_folder in fish_image_folders:
-        kana = romkan.to_kana(fish_image_folder)#.decode("utf-8")
+        kana = romkan.to_kana(fish_image_folder)
         res[fish_image_folder] = Fish(romaji = fish_image_folder, kana = kana)
     return res
 
