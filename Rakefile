@@ -78,5 +78,5 @@ desc "Deploy site to Google App Engine"
 task :deploy => :compile do
 	Dir.chdir 'site'
 	sh 'appcfg.py --no_cookies update .'
-	Dir.chidr '..'
+	Dir.chdir '..'
 end
