@@ -1,8 +1,12 @@
 {% macro article_section(img_src) -%}
+{% if img_src %}
 <div>
 	<img src={{img_src}} />
 	<div>
 		{{caller()}}
 	</div>
 </div>
+{% else %}
+<div>{{caller()}}</div>
+{% endif %}
 {% endmacro %}
