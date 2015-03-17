@@ -1,12 +1,22 @@
 {% extends "base/sakana.html" %}
 
 {% block article %}
-<p>
-	アベハゼは成魚で5cmほどになる。体の後半に２本の黒い縦縞があるのが特徴。また第一背びれに先に２本が糸のように伸びている。
-	頭の丸い小型のハゼである。
-</p>
 
-<p>
-	河口域から下流にかけて生息し、泥底を好む。
-</p>
+{% from 'fish-page-macros.html' import article_section %}
+
+{% call article_section(fish.image('yoko')) %}
+<p>体の後半に２本の黒い縦しまがある。</p>
+<p></p>
+{% endcall %}
+
+{% call article_section(fish.image('sebire')) %}
+<p>第一背びれの先２本が糸のように伸びている。</p>
+{% endcall %}
+{% call article_section(fish.image('atama')) %}
+<p>頭が丸いのも特徴。</p>
+<p>アベハゼは泥底を好み、環境の悪化に強いという面を持っている。</p>
+{% endcall %}
+
+
+
 {% endblock %}
