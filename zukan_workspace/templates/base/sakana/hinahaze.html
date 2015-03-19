@@ -1,0 +1,21 @@
+{% extends "base/sakana.html" %}
+
+{% block article %}
+
+{% from 'fish-page-macros.html' import article_section %}
+
+{% call article_section(fish.image('yoko')) %}
+<p>河口にいる非常に小さなハゼで、体型がずんぐりしている。</p>
+<p>ハゼの仲間共通の特徴である、胸びれが吸盤になっている。</p>
+{% endcall %}
+
+{% call article_section(fish.image('sokumenn')) %}
+<p>体に４〜５個の黒い斑点があり、全体的に黒っぽく見える。</p>
+<p></p>
+{% endcall %}
+
+{% call article_section("") %}
+<p>オスの前の背びれの先が糸のように伸びる。</p>
+{% endcall %}
+
+{% endblock %}

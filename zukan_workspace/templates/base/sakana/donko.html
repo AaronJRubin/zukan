@@ -1,0 +1,17 @@
+{% extends "base/sakana.html" %}
+
+{% block article %}
+
+{% from 'fish-page-macros.html' import article_section %}
+
+{% call article_section(fish.image('obi')) %}
+<p>色は暗い茶色で黒い帯が３本ある。</p>
+<p></p>
+{% endcall %}
+
+{% call article_section(fish.image('yoko')) %}
+<p>体はずんぐりして上から押しつぶされたように平べったい。</p>
+<p>口は大きく、昼間は石の下などに隠れ、夜になると外に出て小魚などを食べる。</p>
+{% endcall %}
+
+{% endblock %}

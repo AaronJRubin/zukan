@@ -11,6 +11,12 @@ for subdir, dirs, files in os.walk("site/static/"):
 		if a_file.endswith(".jpg"):
 			f.write(os.path.join(subdir, a_file) + "\n")
 
+
+f.write("stylesheets/main.css\n")
+f.write("packages/browser/dart.js")
+f.write("ichiran.dart.js")
+f.write("sakana/fish_page.dart.js")
+
 f.write("\nNETWORK:\n*")
 
 f.close()

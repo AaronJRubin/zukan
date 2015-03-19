@@ -120,11 +120,11 @@ article {
     @include align-content(top);
     @include align-items(center); /* necessary to prevent images from stretching */
     @include flex-direction(row);
-    border-top-style: solid;
-    border-top-width: .3em;
-    border-top-color: $text-color;
+    border-bottom-style: solid;
+    border-bottom-width: .3em;
+    border-bottom-color: $text-color;
     @media print {
-      border-top-color: $print-text-color;
+      border-bottom-color: $print-text-color;
     }
     padding-bottom: 1em;
     padding-top: 1em;
@@ -203,6 +203,9 @@ header.fish-header {
   @include justify-content(center);
   @include flex-direction(row);
   text-align: center;
+  border-bottom-style: solid;
+  border-bottom-color: $text-color;
+  border-bottom-width: .3em;
   > div, img, table {
     @include box-sizing(border-box);
     margin: 0 1% 1em 1%;
@@ -412,6 +415,7 @@ figure figcaption {
   padding-bottom: 1vh;
   padding-top: 1vh;
   text-align: center;
+  margin-top: .3em;
   
   &:hover {
     background-color: $highlighted;
