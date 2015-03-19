@@ -115,11 +115,6 @@ div.fish-page {
 article {
   min-height: 25vh;
   > div {
-    @include display-flex(flex);
-    @include justify-content(top);
-    @include align-content(top);
-    @include align-items(center); /* necessary to prevent images from stretching */
-    @include flex-direction(row);
     border-bottom-style: solid;
     border-bottom-width: .3em;
     border-bottom-color: $text-color;
@@ -128,6 +123,13 @@ article {
     }
     padding-bottom: 1em;
     padding-top: 1em;
+  }
+  > div.captioned-section {
+    @include display-flex(flex);
+    @include justify-content(top);
+    @include align-content(top);
+    @include align-items(center); /* necessary to prevent images from stretching */
+    @include flex-direction(row);
     > img {
       display: inline-block;
       min-width: 40%;

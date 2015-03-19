@@ -1,0 +1,19 @@
+{% extends "base/sakana.html" %}
+
+{% block article %}
+
+{% from 'fish-page-macros.html' import article_section %}
+
+{% call article_section("") %}
+<p>ドンコと比べて頭や口が小さく、体は細長いゴリ型。ウロコが無くヌルッとした感じがある。</p>
+<p>ウツセミカジカが産卵の際、海に下るのに対して一生川で生活する。</p>
+{% endcall %}
+
+{% call article_section(fish.image('me')) %}
+<p>ウツセミカジカとそっくりだが、目の下の黒い縞模様がなく体の縞模様も薄い。</p>
+
+{% endcall %}
+
+
+
+{% endblock %}

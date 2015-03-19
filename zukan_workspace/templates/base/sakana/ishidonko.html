@@ -1,0 +1,24 @@
+{% extends "base/sakana.html" %}
+
+{% block article %}
+
+{% from 'fish-page-macros.html' import article_section %}
+
+{% call article_section("")%}
+<p>急流に住んでおりドンコよりさらに体が平べったい。</p>
+<p>匹見川で2000年に発見された新種のドンコで学名にヒキミの名がついている。</p>
+
+{% endcall %}
+
+{% call article_section(fish.image('hara')) %}
+<p>ハゼの仲間ですが腹に吸盤型の腹ビレは無い。</p>
+
+{% endcall %}
+
+{% call article_section(fish.image('obi')) %}
+<p>黄色の体色に３本の黒い帯のような模様がある。</p>
+
+{% endcall %}
+
+
+{% endblock %}

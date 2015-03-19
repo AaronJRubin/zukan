@@ -1,0 +1,18 @@
+{% extends "base/sakana.html" %}
+
+{% block article %}
+
+{% from 'fish-page-macros.html' import article_section %}
+
+{% call article_section("") %}
+<p>体は細長くドジョウ型で、尾ひれの付け根が細くならず寸胴型。</p>
+<p>1970年に高津川で発見された新種のドジョウ。学名にタカツの名がつく。</p>
+<p>キレイな川の上流の石の下に住んでいる。</p>
+{% endcall %}
+
+{% call article_section(fish.image('yoko')) %}
+<p>薄黄色の体に黒い島縞模様がある。</p>
+
+{% endcall %}
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base/sakana.html" %}
+
+{% block article %}
+
+{% from 'fish-page-macros.html' import article_section %}
+
+{% call article_section("") %}
+<p>体は長細くナマズ型、表面はヌルヌルしている。</p>
+<p>オタマジャクシのような大きさの稚魚の時は短い口ひげは４本で計６本あるが大きくなると４本になる。</p>
+{% endcall %}
+
+{% call article_section(fish.image('kao')) %}
+<p>頭は上から押しつぶしたように平ら。</p>
+<p>長い口ひげ２本と短い口ひげ２本がある。</p>
+{% endcall %}
+
+
+{% endblock %}
