@@ -7,7 +7,7 @@ def compress_images_task(name, source, pathmap, convert_function)
 	images.each do |image|
 		compressed_image = image.pathmap(pathmap)
 		file compressed_image => image do
-			sh "mkdir -p #{compressed_image.pathmap('%d')}"
+			mkdir_p compressed_image.pathmap('%d')
 			sh convert_function.call(image, compressed_image)
 		end
 	end
@@ -59,7 +59,7 @@ task :generate_pages => :generate_fish_list do
 	Dir.chdir 'zukan_workspace'
 	dependencies = Rake::FileList.new('templates/**/*')
 	unless uptodate?('web/ichiran.html', dependencies)
-	sh 'python generate_pages.py'
+		`python generate_pages.py`
 	end
 	Dir.chdir '..'
 end
@@ -68,7 +68,7 @@ desc "Compile Sass to CSS, using Compass"
 task :compile_sass do
 	Dir.chdir 'zukan_workspace'
 	unless (uptodate?('web/stylesheets/main.css', ['sass/main.scss']))
-		sh 'compass compile'
+		`compass compile`
 	end
 	Dir.chdir '..'
 end
@@ -81,11 +81,11 @@ task :compile => :build_workspace do
 	Dir.chdir 'zukan_workspace'
 	dependencies = Rake::FileList.new('web/**/*')
 	unless (uptodate?('build/web/ichiran.html', dependencies))
-		sh 'pub build'
+		`pub build`
 		Dir.chdir '..'
-		sh 'rm -r site/static/'
-		sh 'cp -r zukan_workspace/build/web site/static/'
-		sh 'python generate_appcache.py'
+		rm_r 'site/static/'
+		cp_r 'zukan_workspace/build/web site/static/'
+		`python generate_appcache.py`
 	else
 		Dir.chdir '..'
 	end
@@ -94,6 +94,6 @@ end
 desc "Deploy site to Google App Engine"
 task :deploy => :compile do
 	Dir.chdir 'site'
-	sh 'appcfg.py --no_cookies update .'
+	`appcfg.py --no_cookies update .`
 	Dir.chdir '..'
 end
