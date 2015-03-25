@@ -13,9 +13,9 @@ for subdir, dirs, files in os.walk("site/static/"):
 
 
 f.write("stylesheets/main.css\n")
-f.write("packages/browser/dart.js")
-f.write("ichiran.dart.js")
-f.write("sakana/fish_page.dart.js")
+f.write("packages/browser/dart.js\n")
+f.write("ichiran.dart.js\n")
+f.write("sakana/fish_page.dart.js\n")
 
 f.write("\nNETWORK:\n*")
 

@@ -1,0 +1,5 @@
+Non-ichiran-image: width 280px
+
+header-image: width 335px
+
+ichiran-image: height 112px
