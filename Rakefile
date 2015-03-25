@@ -1,3 +1,5 @@
+require 'dimensions'
+
 def compress_images_task(name, source, pathmap, convert_function)
 	images = Rake::FileList.new(source)
 	compressed_images = images.pathmap(pathmap)
@@ -11,8 +13,23 @@ def compress_images_task(name, source, pathmap, convert_function)
 	end
 end
 
-convert_fish = lambda do |fish, compressed_fish| 
-	"convert #{fish} -resize x300 -quality 50 #{compressed_fish}"
+NON_ICHIRAN_DIMENSIONS = "280x"
+ICHIRAN_HEIGHT = 112
+HEADER_WIDTH = 335
+
+convert_fish = lambda do |fish, compressed_fish|
+ 	if fish.include? "ichiran"	
+		dimensions = Dimensions.dimensions(fish)
+		width = dimensions[0]	
+		height = dimensions[1]	
+		aspect_ratio = height.fdiv(width)	
+		header_display_height = HEADER_WIDTH * aspect_ratio	
+		needed_height = [ICHIRAN_HEIGHT, header_display_height].max	
+		resize = "x#{needed_height}"
+	else
+		resize = NON_ICHIRAN_DIMENSIONS
+	end
+	"convert #{fish} -resize #{resize} -quality 50 #{compressed_fish}"
 end
 
 seisokuchi_quality_settings = Hash.new('57')
