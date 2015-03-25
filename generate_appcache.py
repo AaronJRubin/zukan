@@ -8,7 +8,7 @@ f.write("# " + str(datetime.now()) + "\n")
 for subdir, dirs, files in os.walk("site/static/"):
 	subdir = subdir.replace("site/static/", "")
 	for a_file in files:
-		if a_file.endswith(".jpg"):
+		if a_file.endswith(".jpg") or a_file.endswith(".html"):
 			f.write(os.path.join(subdir, a_file) + "\n")
 
 
