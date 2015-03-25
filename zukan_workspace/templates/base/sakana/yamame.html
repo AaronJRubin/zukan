@@ -1,0 +1,22 @@
+{% extends "base/sakana.html" %}
+
+{% block article %}
+
+{% from 'fish-page-macros.html' import article_section %}
+
+{% call article_section("") %}
+<p>そっくりなアマゴとは体に赤い斑紋があるかないかで見分けるが交雑によりどちらともつかないものがいる。</p>
+<p>赤い点が無い→ヤマメ、赤い点がある→アマゴ</p>
+<p>上流の冷たい水のキレイなところにしか住めない。</p>
+{% endcall %}
+
+{% call article_section(fish.image('hara')) %}
+<p>体側にパーマークと呼ばれる小判型の黒い模様が7〜10個ある。</p>
+
+{% endcall %}
+
+{% call article_section(fish.image('aburabire')) %}
+<p>尾びれの前にアブラビレと呼ばれるサケの仲間に共通の小さなヒレがある。</p>
+{% endcall %}
+
+{% endblock %}

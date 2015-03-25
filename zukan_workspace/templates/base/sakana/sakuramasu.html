@@ -1,0 +1,19 @@
+{% extends "base/sakana.html" %}
+
+{% block article %}
+
+{% from 'fish-page-macros.html' import article_section %}
+
+{% call article_section("") %}
+<p>サクラマスは、春に海から上がってきて秋に川で卵を産む。</p>
+<p>ヤマメが海に下ってマスになる。海で２年くらい生活して卵を産みに、自分が生まれた川に戻ってくる。</p>
+<p>上がってきたばかりの時は輝くような銀色、秋になると体に赤や青の雲のような模様ができる。</p>
+{% endcall %}
+
+{% call article_section(fish.image('aburabire')) %}
+<p>サケの仲間共通の尾ビレの前に小さなアブラビレがある。</p>
+
+{% endcall %}
+
+
+{% endblock %}
