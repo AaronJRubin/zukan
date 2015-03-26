@@ -84,7 +84,7 @@ task :compile => :build_workspace do
 		`pub build`
 		Dir.chdir '..'
 		rm_r 'site/static/'
-		cp_r 'zukan_workspace/build/web site/static/'
+		cp_r 'zukan_workspace/build/web' 'site/static/'
 		`python generate_appcache.py`
 	else
 		Dir.chdir '..'
