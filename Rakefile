@@ -35,7 +35,7 @@ end
 seisokuchi_quality_settings = Hash.new('57')
 seisokuchi_quality_settings['takatsu-chuu.jpg'] = '75'
 
-convert_seisokuchi = lambda do |seisokuchi, converted_seisokuch| 
+convert_seisokuchi = lambda do |seisokuchi, compressed_seisokuchi| 
 	"convert #{seisokuchi} -resize 960x -quality #{seisokuchi_quality_settings[seisokuchi.pathmap('%f')]} #{compressed_seisokuchi}"
 end
 
@@ -43,6 +43,8 @@ desc "Compress images of fish in master-images and move to workspace"
 compress_images_task(:compress_fish_images, "zukan_workspace/master-images/sakana/**/*.jpg", "zukan_workspace/web/images/%-2d/%f", convert_fish)
 desc "Compress images of seisokuchi in master-images and move to workspace"
 compress_images_task(:compress_seisokuchi_images, "zukan_workspace/master-images/seisokuchi/*.jpg", "zukan_workspace/web/images/seisokuchi/%f", convert_seisokuchi)
+desc "Compress general images and move to workspace"
+compress_images_task(:compress_general_images, "zukan_workspace/master-images/*.jpg", "zukan_workspace/web/images/%f", convert_seisokuchi)
 
 desc "Parse data in fish_data.txt, generating serialized Python and Dart data structures"
 task :generate_fish_list do
@@ -74,7 +76,7 @@ task :compile_sass do
 end
 
 desc "Compile everything necessary to use the site with pub serve, part of the Dart SDK, from zukan_workspace"
-task :build_workspace => [:compress_fish_images, :compress_seisokuchi_images, :generate_pages, :compile_sass]
+task :build_workspace => [:compress_fish_images, :compress_seisokuchi_images, :compress_general_images, :generate_pages, :compile_sass]
 
 desc "Compile dart code and produce ready-to-deploy site"
 task :compile => :build_workspace do

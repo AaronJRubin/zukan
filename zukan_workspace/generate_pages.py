@@ -33,10 +33,12 @@ def write(path, string):
 
 ichiran = render_str("base/ichiran.html", fish = fish_list)
 write(os.path.join(dest, "ichiran.html"), ichiran.encode('utf8'))
-index = render_str("base/home.html");
-write(os.path.join(dest, "home.html"), index.encode('utf8'))
-index = render_str("base/contact.html");
-write(os.path.join(dest, "contact.html"), index.encode('utf8'))
+home = render_str("base/home.html");
+write(os.path.join(dest, "home.html"), home.encode('utf8'))
+contact = render_str("base/contact.html")
+write(os.path.join(dest, "contact.html"), contact.encode('utf8'))
+kaisetsu = render_str("base/kaisetsu.html")
+write(os.path.join(dest, "kaisetsu.html"), kaisetsu.encode('utf8'))
 
 for fish in fish_list:
 	template = os.path.join("base/sakana", fish.romaji + ".html")
