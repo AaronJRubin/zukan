@@ -82,13 +82,11 @@ task :compile => :build_workspace do
 	dependencies = Rake::FileList.new('web/**/*')
 	unless (uptodate?('build/web/ichiran.html', dependencies))
 		`pub build`
-		Dir.chdir '..'
-		rm_r 'site/static/'
-		cp_r 'zukan_workspace/build/web' 'site/static/'
-		`python generate_appcache.py`
-	else
-		Dir.chdir '..'
 	end
+	Dir.chdir '..'
+	rm_r 'site/static/', :force => true
+	cp_r 'zukan_workspace/build/web', 'site/static/'
+	`python generate_appcache.py`
 end
 
 desc "Deploy site to Google App Engine"
