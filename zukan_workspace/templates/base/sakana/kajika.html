@@ -5,7 +5,7 @@
 {% from 'fish-page-macros.html' import article_section %}
 
 {% call article_section("") %}
-<p>ドンコと比べて頭や口が小さく、体は細長いゴリ型。ウロコが無くヌルッとした感じがある。</p>
+<p>ドンコと比べて頭や口が小さく、体は細長いゴリ型。</p>
 <p>ウツセミカジカが産卵の際、海に下るのに対して一生川で生活する。</p>
 {% endcall %}
 
@@ -14,6 +14,9 @@
 
 {% endcall %}
 
+{% call article_section(fish.image('karada')) %}
+<p>ウロコが無くヌルッとした感じがある。</p>
 
+{% endcall %}
 
 {% endblock %}
