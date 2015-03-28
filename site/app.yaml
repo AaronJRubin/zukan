@@ -47,6 +47,8 @@ handlers:
   mime_type: text/cache-manifest
   upload: static/(.*\.appcache)
   expiration: "10m"
+  http_headers:
+    cache-control: public, max-age=600, must-revalidate
 
 - url: .*
   script: main.app
