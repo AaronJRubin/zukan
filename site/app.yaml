@@ -4,6 +4,10 @@ runtime: python27
 api_version: 1
 threadsafe: yes
 
+# Set "Cache-Control" and "Expires" HTTP headers to only cache for two minutes.
+# We do this because we frequently push new changes and rely on AppCache for caching,
+# and having old versions of files in the browser cache when an AppCache update arrives
+# can result on those old versions becoming "frozen" in AppCache.
 default_expiration: "2m"
 
 handlers:
@@ -47,8 +51,6 @@ handlers:
   mime_type: text/cache-manifest
   upload: static/(.*\.appcache)
   expiration: "10m"
-  http_headers:
-    cache-control: public, max-age=600, must-revalidate
 
 - url: .*
   script: main.app
