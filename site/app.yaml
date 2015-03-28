@@ -4,6 +4,8 @@ runtime: python27
 api_version: 1
 threadsafe: yes
 
+default_expiration: "1s"
+
 handlers:
 - url: /
   static_files: static/home.html
@@ -45,6 +47,7 @@ handlers:
   static_files: static/\1
   mime_type: text/cache-manifest
   upload: static/(.*\.appcache)
+  expiration: "10m"
 
 - url: .*
   script: main.app
