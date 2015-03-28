@@ -43,14 +43,21 @@ appcache.addEventListener("progress", function(event) {
 	downloaded.innerHTML = cacheProperties.filesDownloaded;
 		});
 
-cacheFinished = function(event) {
-	notifications.innerHTML = "キャッシュされました！オフラインでもアクセス出来るようになりました。このページをリフレッシュしたり違うページに移動したりしてください。";
+updated = function(event) {
+	notifications.innerHTML = "キャッシュされました！変わったサイトを見るためにこのページをリフレッシュしてください。";
 	notifications.classList.toggle("finished");
 	notifications.classList.toggle("in-progress");
 }
 
-appcache.addEventListener("updateready", cacheFinished);
-appcache.addEventListener("cached", cacheFinished);
+cached = function(event) {
+	notifications.innerHTML = "キャッシュされました！オフラインでもアクセス出来るようになりました。";
+	notifications.classList.toggle("finished");
+	notifications.classList.toggle("in-progress");
+
+}
+
+appcache.addEventListener("updateready", updated);
+appcache.addEventListener("cached", cached);
 </script>
 </body> 
 </html>
