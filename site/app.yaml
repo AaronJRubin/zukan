@@ -4,7 +4,7 @@ runtime: python27
 api_version: 1
 threadsafe: yes
 
-default_expiration: "1s"
+default_expiration: "2m"
 
 handlers:
 - url: /
@@ -22,7 +22,6 @@ handlers:
   mime_type: text/html
   static_files: static/\1
   upload: static/(.*\.html)
-  expiration: "1h"
 
 - url: /(.*\.css)
   mime_type: text/css
