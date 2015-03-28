@@ -61,7 +61,7 @@ task :generate_pages => :generate_fish_list do
 	Dir.chdir 'zukan_workspace'
 	dependencies = Rake::FileList.new('templates/**/*')
 	unless uptodate?('web/ichiran.html', dependencies)
-		`python generate_pages.py`
+		sh 'python generate_pages.py'
 	end
 	Dir.chdir '..'
 end
@@ -70,7 +70,7 @@ desc "Compile Sass to CSS, using Compass"
 task :compile_sass do
 	Dir.chdir 'zukan_workspace'
 	unless (uptodate?('web/stylesheets/main.css', ['sass/main.scss']))
-		`compass compile`
+		sh 'compass compile'
 	end
 	Dir.chdir '..'
 end
@@ -83,17 +83,17 @@ task :compile => :build_workspace do
 	Dir.chdir 'zukan_workspace'
 	dependencies = Rake::FileList.new('web/**/*')
 	unless (uptodate?('build/web/ichiran.html', dependencies))
-		`pub build`
+		sh 'pub build'
 	end
 	Dir.chdir '..'
 	rm_r 'site/static/', :force => true
 	cp_r 'zukan_workspace/build/web', 'site/static/'
-	`python generate_appcache.py`
+	sh 'python generate_appcache.py'
 end
 
 desc "Deploy site to Google App Engine"
 task :deploy => :compile do
 	Dir.chdir 'site'
-	`appcfg.py --no_cookies update .`
+	sh 'appcfg.py --no_cookies update .'
 	Dir.chdir '..'
 end
