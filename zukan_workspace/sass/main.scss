@@ -89,6 +89,21 @@ p {
 	}
 }
 
+#appcache-notifications {
+	display: none;
+}
+
+#appcache-notifications.displayed {
+	display: block;
+	padding: 0.5em 0;
+	&.in-progress {
+		background-color: blue;
+	}
+	&.finished {
+		background-color: green;
+	}
+}
+
 table, 
 th, 
 td {

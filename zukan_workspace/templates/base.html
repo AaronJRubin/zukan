@@ -17,9 +17,40 @@
 	</ol>
 	</nav>
 </header>
+<div id="appcache-notifications"></div>
 
 	{% block content %}
 	{% endblock %}
 
+<script type="text/javascript">
+
+var notifications = document.querySelector("#appcache-notifications");
+var appcache = window.applicationCache;
+var downloaded = "";
+var cacheProperties = {
+	filesDownloaded: 0,
+	totalFiles: 241
+};
+appcache.addEventListener("downloading", function(event) {
+		notifications.innerHTML = 'キャッシュ更新中！<span id="downloaded">0</span>/241ダウンロード済み';
+		notifications.classList.toggle("displayed");
+		notifications.classList.toggle("in-progress");
+		downloaded = document.querySelector("#downloaded");
+		});
+
+appcache.addEventListener("progress", function(event) {
+	cacheProperties.filesDownloaded += 1;
+	downloaded.innerHTML = cacheProperties.filesDownloaded;
+		});
+
+cacheFinished = function(event) {
+	notifications.innerHTML = "キャッシュされました！オフラインでも見れます。";
+	notifications.classList.toggle("finished");
+	notifications.classList.toggle("in-progress");
+}
+
+appcache.addEventListener("updateready", cacheFinished);
+appcache.addEventListener("cached", cacheFinished);
+</script>
 </body> 
 </html>
