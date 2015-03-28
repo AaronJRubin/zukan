@@ -32,7 +32,7 @@ var cacheProperties = {
 	totalFiles: 241
 };
 appcache.addEventListener("downloading", function(event) {
-		notifications.innerHTML = 'キャッシュ更新中！<span id="downloaded">0</span>/241ダウンロード済み';
+		notifications.innerHTML = 'キャッシュ更新中！しばらくこのページに残ってください。<span id="downloaded">0</span>/241ダウンロード済み。';
 		notifications.classList.toggle("displayed");
 		notifications.classList.toggle("in-progress");
 		downloaded = document.querySelector("#downloaded");
@@ -44,7 +44,7 @@ appcache.addEventListener("progress", function(event) {
 		});
 
 cacheFinished = function(event) {
-	notifications.innerHTML = "キャッシュされました！オフラインでも見れます。";
+	notifications.innerHTML = "キャッシュされました！オフラインでもアクセス出来るようになりました。このページをリフレッシュしたり違うページに移動したりしてください。";
 	notifications.classList.toggle("finished");
 	notifications.classList.toggle("in-progress");
 }
