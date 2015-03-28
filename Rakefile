@@ -90,6 +90,7 @@ task :compile => :build_workspace do
 		sh 'python generate_appcache.py'
 	else
 		Dir.chdir '..'
+	end
 end
 
 desc "Deploy site to Google App Engine"
