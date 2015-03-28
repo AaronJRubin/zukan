@@ -68,6 +68,9 @@ h2 {
 	@media (max-width: 500px) {
 		font-size: 0.8em;
 	}
+	@media (max-width: 400px) {
+		font-size: 0.65em;
+	}
 	li {
 		margin: 0.3em 0;
 	}
@@ -231,7 +234,7 @@ header.navbar {
       background-color: $highlighted;
     }
   }
-  @media (max-width: 420px) {
+  @media (max-width: 460px) {
     li {
       width: 33.3%;
       text-align: center;
