@@ -47,6 +47,7 @@ for fish in fish_list:
 		page = render_str(template, fish = fish, background_class = fish.starting_location())
 		write(os.path.join(dest, "sakana", fish.romaji + ".html"), page.encode('utf8'))
 	else:
+                print("No article found for " + fish.romaji)
 		page = render_str("base/sakana/generic.html", fish = fish, background_class = fish.starting_location())
 		write(os.path.join(dest, "sakana", fish.romaji + ".html"), page.encode('utf8'))
 
