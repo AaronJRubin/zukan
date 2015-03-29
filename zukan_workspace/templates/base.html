@@ -9,55 +9,46 @@
 
 <header class="navbar">
 	<nav>
-	<ol>
-	<li><a href="/home.html">ホーム</a></li>
-	<li><a href="/ichiran.html">一覧</a></li>
-	<li><a href="/contact.html">お問い合わせ</a></li>
-	<li><a href="/kaisetsu.html">用語の解説</a></li>
-	</ol>
+		<ol>
+			<li><a href="/home.html">ホーム</a></li>
+			<li><a href="/ichiran.html">一覧</a></li>
+			<li><a href="/contact.html">お問い合わせ</a></li>
+			<li><a href="/kaisetsu.html">用語の解説</a></li>
+		</ol>
 	</nav>
 </header>
 <div id="appcache-notifications"></div>
 
-	{% block content %}
-	{% endblock %}
+{% block content %}
+{% endblock %}
 
 <script type="text/javascript">
-
-var notifications = document.querySelector("#appcache-notifications");
 var appcache = window.applicationCache;
-var downloaded = "";
-var cacheProperties = {
-	filesDownloaded: 0,
-	totalFiles: 241
-};
+
 appcache.addEventListener("downloading", function(event) {
+		var notifications = document.querySelector("#appcache-notifications");	
 		notifications.innerHTML = 'キャッシュ更新中！しばらくこのページに残ってください。<span id="downloaded">0</span>/241ダウンロード済み。';
 		notifications.classList.toggle("displayed");
 		notifications.classList.toggle("in-progress");
-		downloaded = document.querySelector("#downloaded");
-		});
-
-appcache.addEventListener("progress", function(event) {
-	cacheProperties.filesDownloaded += 1;
-	downloaded.innerHTML = cacheProperties.filesDownloaded;
-		});
-
-updated = function(event) {
-	notifications.innerHTML = "キャッシュされました！変わったサイトを見るためにこのページをリフレッシュしてください。";
-	notifications.classList.toggle("finished");
-	notifications.classList.toggle("in-progress");
-}
-
-cached = function(event) {
-	notifications.innerHTML = "キャッシュされました！オフラインでもアクセス出来るようになりました。";
-	notifications.classList.toggle("finished");
-	notifications.classList.toggle("in-progress");
-
-}
-
-appcache.addEventListener("updateready", updated);
-appcache.addEventListener("cached", cached);
+		var filesDownloaded = 0;
+		var downloaded = document.querySelector("#downloaded");
+		appcache.addEventListener("progress", function(event) {
+			filesDownloaded += 1;
+			downloaded.innerHTML = filesDownloaded;
+			});
+		updated = function(event) {
+		notifications.innerHTML = "キャッシュされました！変わったサイトを見るためにこのページをリフレッシュしてください。";
+		notifications.classList.toggle("finished");
+		notifications.classList.toggle("in-progress");
+		}
+		cached = function(event) {
+		notifications.innerHTML = "キャッシュされました！オフラインでもアクセス出来るようになりました。";
+		notifications.classList.toggle("finished");
+		notifications.classList.toggle("in-progress");
+		}
+		appcache.addEventListener("updateready", updated);
+		appcache.addEventListener("cached", cached);
+});
 </script>
 </body> 
 </html>
