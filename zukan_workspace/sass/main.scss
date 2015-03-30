@@ -252,12 +252,9 @@ header.navbar {
 }
 
 header.ichiran-header {
-  background-image: url(/images/takatsugawa.jpg);
-  background-size: 50%;
+  background-image: url(/images/takatsugawa-header-background.jpg);
+  background-size: 100%;
   border-radius: $rounded-border;
-  @media (max-width: 930px) {
-    background-size: 100%;
-  }
 }
 
 header.fish-header {

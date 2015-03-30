@@ -36,7 +36,7 @@ seisokuchi_quality_settings = Hash.new('57')
 seisokuchi_quality_settings['takatsu-chuu.jpg'] = '75'
 
 convert_seisokuchi = lambda do |seisokuchi, compressed_seisokuchi| 
-	"convert #{seisokuchi} -resize 960x -quality #{seisokuchi_quality_settings[seisokuchi.pathmap('%f')]} #{compressed_seisokuchi}"
+	"convert #{seisokuchi} -resize 1400x\\> -quality #{seisokuchi_quality_settings[seisokuchi.pathmap('%f')]} #{compressed_seisokuchi}"
 end
 
 desc "Compress images of fish in master-images and move to workspace"
