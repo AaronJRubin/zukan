@@ -83,7 +83,7 @@ task :compile_sass do
 end
 
 desc "Compile everything necessary to use the site with pub serve, part of the Dart SDK, from zukan_workspace"
-task :build_workspace => [:compress_fish_images, :compress_seisokuchi_images, :compress_general_images, :generate_pages, :compile_sass]
+task :build_workspace => [:compress_images, :generate_pages, :compile_sass]
 
 desc "Compile dart code and produce ready-to-deploy site"
 task :compile => :build_workspace do
