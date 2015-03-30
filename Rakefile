@@ -32,19 +32,26 @@ convert_fish = lambda do |fish, compressed_fish|
 	"convert #{fish} -resize #{resize} -quality 50 #{compressed_fish}"
 end
 
-seisokuchi_quality_settings = Hash.new('57')
-seisokuchi_quality_settings['takatsu-chuu.jpg'] = '75'
-
-convert_seisokuchi = lambda do |seisokuchi, compressed_seisokuchi| 
-	"convert #{seisokuchi} -resize 1400x\\> -quality #{seisokuchi_quality_settings[seisokuchi.pathmap('%f')]} #{compressed_seisokuchi}"
-end
-
 desc "Compress images of fish in master-images and move to workspace"
 compress_images_task(:compress_fish_images, "zukan_workspace/master-images/sakana/**/*.jpg", "zukan_workspace/web/images/%-2d/%f", convert_fish)
+
+quality_override = Hash.new('57')
+quality_override['takatsu-chuu.jpg'] = '75'
+
+size_override = Hash.new("1400x\\>")
+size_override['takatsugawa-home.jpg'] = '960x'
+
+convert_general = lambda do |image, compressed_image| 
+	"convert #{image} -resize #{size_override[image.pathmap('%f')]} -quality #{quality_override[image.pathmap('%f')]} #{compressed_image}"
+end
+
 desc "Compress images of seisokuchi in master-images and move to workspace"
-compress_images_task(:compress_seisokuchi_images, "zukan_workspace/master-images/seisokuchi/*.jpg", "zukan_workspace/web/images/seisokuchi/%f", convert_seisokuchi)
-desc "Compress general images and move to workspace"
-compress_images_task(:compress_general_images, "zukan_workspace/master-images/*.jpg", "zukan_workspace/web/images/%f", convert_seisokuchi)
+compress_images_task(:compress_seisokuchi_images, "zukan_workspace/master-images/seisokuchi/*.jpg", "zukan_workspace/web/images/seisokuchi/%f", convert_general)
+desc "Compress miscellaneous images and move to workspace"
+compress_images_task(:compress_miscellaneous_images, "zukan_workspace/master-images/*.jpg", "zukan_workspace/web/images/%f", convert_general)
+
+desc "Compress all images and move to workspace"
+task :compress_images => [:compress_fish_images, :compress_seisokuchi_images, :compress_miscellaneous_images]
 
 desc "Parse data in fish_data.txt, generating serialized Python and Dart data structures"
 task :generate_fish_list do
