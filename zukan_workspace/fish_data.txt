@@ -461,11 +461,3 @@ rarity:3
 zoku:トラフグ属
 ka:フグ科
 latin:Takifugu snyderi(Abe)
-
-name:kurousinosita
-takatu:ka
-masuda:
-rarity:3
-zoku:タイワンシタビラメ属
-ka:ウシノシタ科
-latin:Paraplagusia japonica(Temmink et Schlegel)

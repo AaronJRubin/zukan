@@ -45,7 +45,8 @@ def parse_fish(fish_string):
             pass
         split_line = line.strip().lower().split(":")
         if len(split_line) != 2:
-            raise Exception("Fish with malformed field specification in line " + line)
+            continue
+            #raise Exception("Fish, " + str(lines) + " with malformed field specification in line " + line)
         field, data = split_line
         field = field.strip()
         data = data.strip()
