@@ -61,7 +61,32 @@ h2 {
 	padding: 0.5em 0;
 }
 
+.binary-list {
+  margin: auto;
+  text-align: left;
+  @media (max-width: 500px) {
+    font-size: 0.8em;
+  }
+  @media (max-width: 400px) {
+    font-size: 0.6em;
+  }
+  li {
+    margin: 0.3em 0;
+  }
+  div {
+    vertical-align: top;
+    display: inline-block;
+    &:first-child {
+      width: 20%;
+      text-align: right;
+  }
+}
+}
+
 .home ul {
+  @extend .binary-list;
+  max-width: 500px;
+  /*
 	max-width: 500px;
 	margin: auto;
 	text-align: left;
@@ -81,7 +106,16 @@ h2 {
 			width: 20%;
 			text-align: right;
 	}
+}*/
 }
+
+.contact-page {
+  text-align: center;
+}
+
+.contact-page ul {
+  @extend .binary-list;
+  max-width: 600px;
 }
 
 p {
