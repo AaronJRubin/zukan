@@ -376,11 +376,16 @@ ol.fish-tiles {
   }
 }
 
+/* End ichiran styles */
+
 /* Begin fish page styles */
 
-.fish-page {
+body.fish-page {
   background-size: 100% 100%;
   transition: background-image 3s ease-in-out;
+  @media #{$no-background} {
+    background-image: none;
+  }
 }
 
 $seisokuchi: 'takatsu-zyou', 'takatsu-chuu', 'takatsu-ge', 'takatsu-kakou', 
@@ -392,7 +397,7 @@ $seisokuchi: 'takatsu-zyou', 'takatsu-chuu', 'takatsu-ge', 'takatsu-kakou',
   }
 }
 
-div.fish-page {
+main.fish-page {
   background-color: $primary-background;
   border-radius: $rounded-border;
   margin: 2vh auto;
@@ -404,7 +409,9 @@ div.fish-page {
     margin: 0;
   }
   @media #{$no-background} {
+    margin-top: 0;
     margin-bottom: 0;
+    border-radius: 0;
   }
 }
 
@@ -498,13 +505,4 @@ article {
   }
 }
 
-@media #{$no-background} {
-  body.fish-page {
-    background-image: none;
-  }
-
-  div.fish-page {
-    border-radius: 0;
-    margin-top: 0;
-  }
-}
+/* End fish page styles */
