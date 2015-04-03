@@ -1,7 +1,7 @@
 {% macro article_section(img_src) -%}
 {% if img_src %}
 <div class="captioned-section">
-	<img src="{{img_src}}" />
+	<img src="{{img_src}}" alt="">
 	<div>
 		{{caller()}}
 	</div>

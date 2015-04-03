@@ -78,7 +78,7 @@ task :compress_images => [:compress_fish_images, :compress_seisokuchi_images, :c
 desc "Parse data in fish_data.txt, generating serialized Python and Dart data structures"
 task :generate_fish_list do
 	Dir.chdir 'zukan_workspace'
-	dependencies = ['fish_data.txt', 'generate_fish_list.py']
+	dependencies = ['fish.py', 'fish_data.txt', 'generate_fish_list.py']
 	unless (uptodate?('fish_list.pkl', dependencies) and uptodate?('web/fish_list.dart', dependencies))
 		sh 'python generate_fish_list.py'
 	end
@@ -88,7 +88,7 @@ end
 desc "Generate html documents using the jinja2 templates engine"
 task :generate_pages => :generate_fish_list do
 	Dir.chdir 'zukan_workspace'
-	dependencies = Rake::FileList.new('templates/**/*')
+	dependencies = Rake::FileList.new('templates/**/*').include('fish.py')
 	unless uptodate?('web/ichiran.html', dependencies)
 		sh 'python generate_pages.py'
 	end

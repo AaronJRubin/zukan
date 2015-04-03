@@ -91,4 +91,4 @@ class Fish:
         return ""
 
     def rarity_stars(self):
-        return ("&#x2605" * self.rarity) + ("&#x2606" * (5 - self.rarity))
+        return ("&#x2605;" * self.rarity) + ("&#x2606;" * (5 - self.rarity))
