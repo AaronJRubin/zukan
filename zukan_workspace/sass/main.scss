@@ -23,12 +23,12 @@ $small-font-size: .8em;
 body {
   background-color: $primary-background;
   color: $text-color;
-  font-size: 1.5em;
   font-family: Century Gothic, sans-serif;
+  font-size: 1.5em;
   @media print {
-    font-size: 0.5em;
-    color: $print-text-color;
     background-color: $print-background;
+    color: $print-text-color;
+    font-size: .5em;
   }
 }
 
@@ -43,29 +43,34 @@ h1 {
 
 h2 {
   font-size: 1.5em;
-  padding: 0.5em 0;
+  padding: .5em 0;
 }
 
 p {
   line-height: 1.2em;
   margin-bottom: .5em;
+  
   &:last-child {
     margin-bottom: 0;
   }
+
 }
 
 table, 
 th, 
 td {
   border: 1px solid $text-color;
+  
   @media print {
     border-color: $print-text-color;
   }
+
   text-align: center;
 }
 
-td, th {
-  padding: 0.25em;
+td,
+th {
+  padding: .25em;
 }
 
 a, 
@@ -78,26 +83,31 @@ a:visited {
 
 /* Begin utility class styles */
 
-.binary-list {
+%binary-list {
   margin: auto;
   text-align: left;
+
   @media (max-width: 500px) {
-    font-size: 0.8em;
+    font-size: .8em;
   }
+
   @media (max-width: 400px) {
-    font-size: 0.6em;
+    font-size: .6em;
   }
+
   li {
-    margin: 0.3em 0;
+    margin: .3em 0;
   }
+
   div {
-    vertical-align: top;
     display: inline-block;
+    vertical-align: top;
+    
     &:first-child {
-      width: 20%;
       text-align: right;
+      width: 20%;
+    }
   }
-}
 }
 
 .fish-tile, 
@@ -117,7 +127,7 @@ figure {
     max-height: 100%;
     max-width: 100%;
   }
-  
+
   figcaption {
     margin: .2em 0;
   }
@@ -131,7 +141,7 @@ figure {
     max-width: 100%;
     min-width: 100%;
   }
-  
+
   span {
     margin-top: .1em;
   }
@@ -154,12 +164,12 @@ figure figcaption {
   display: block;
   font-size: 5vw;
   line-height: 10vh;
+  margin-top: .3em;
   min-width: 98%;
   padding-bottom: 1vh;
   padding-top: 1vh;
   text-align: center;
-  margin-top: .3em;
-  
+
   &:hover {
     background-color: $highlighted;
   }
@@ -173,48 +183,57 @@ figure figcaption {
 
 /* Begin styles for elements included on every page (i.e., in base.html) */
 
-header.navbar {
+.navbar {
   background-color: $secondary-background;
   border-radius: $rounded-border;
   margin-bottom: 0;
+  
   nav {
     width: 100%;
   }
+
   ol {
-    width: 100%;
-    display: inline-block;
-    @include display-flex(flex);
+    @include display-flex(inline-flex);
     @include flex-direction(row);
     @include justify-content(flex-end);
+    width: 100%;
   }
+
   a {
     display: inline-block;
     padding: .3em 2vw;
   }
+
   li {
     @include box-sizing(border-box);
     background-color: $interactable;
-    display: inline-block;
-    float: left;
+    border-left-color: #000;
     border-left-style: solid;
     border-left-width: .3vw;
-    border-left-color: black;
+    display: inline-block;
+    float: left;
+
     &:hover {
       background-color: $highlighted;
     }
+
   }
+
   @media (max-width: 465px) {
     li {
-      width: 33.3%;
       text-align: center;
+      width: 33.3%;
+
       &:first-child {
         border-left-width: 0;   
       }
+
       a {
         font-size: $small-font-size;
       }
     }
   }
+
   @media print {
     display: none;
   }
@@ -222,44 +241,50 @@ header.navbar {
 
 #appcache-notifications {
   display: none;
+
   &.displayed {
+    background-color: #00f;
     display: block;
-    padding: 0.5em 0;
-    background-color: blue;
+    padding: .5em 0;
+
     &.finished {
-    background-color: green;
-  }
+      background-color: #0f0;
+    }
   }
 }
 
 /* Begin simple page styles (home, contact, reference documents) */
 
 .home {
-	text-align: center;
-	max-width: 960px;
-	margin: auto;
-	padding: 0 1%;
-	img {
-		margin-bottom: 0.5em;
-		border: 1px solid white;
-		max-width: 100%;
-	}
-	p {
-	text-align: left;
-	}
+  margin: auto;
+  max-width: 960px;
+  padding: 0 1%;
+  text-align: center;
+  
+  img {
+    border: 1px solid #fff;
+    margin-bottom: .5em;
+    max-width: 100%;
+  }
+
+  p {
+    text-align: left;
+  }
+
   ul {
-  @extend .binary-list;
-  max-width: 500px;
-}
+    @extend %binary-list;
+    max-width: 500px;
+  }
 }
 
-.sankou-page, .contact-page {
+.sankou-page, 
+.contact-page {
   text-align: center;
 }
 
 .contact-page ul {
-    @extend .binary-list;
-    max-width: 600px;
+  @extend %binary-list;
+  max-width: 600px;
 }
 
 .sankou-page table {
@@ -271,28 +296,31 @@ header.navbar {
 
 /* Begin ichiran styles */
 
-header.ichiran-header {
-  background-image: url(/images/takatsugawa-header-background.jpg);
+.ichiran-header {
+  background-image: url('/images/takatsugawa-header-background.jpg');
   background-size: 100%;
   border-radius: $rounded-border;
 }
 
-ol.fish-tiles {
+.fish-tiles {
   @include display-flex(flex);
   @include justify-content(space-around);
   @include flex-wrap(wrap);
+
   li {
     display: inline-block;
+
     &.hidden {
       display: none;
     }
   }
 }
 
-.search-dropdown, .search-header {
+.search-dropdown, 
+.search-header {
   background-color: $secondary-background;
-  padding: .2em .5em;
   border-radius: $rounded-border;
+  padding: .2em .5em;
 }
 
 .search-dropdown {
@@ -300,28 +328,29 @@ ol.fish-tiles {
 }
 
 #dropdown-caret {
-  display: inline-block;
-  border-radius: 50%;
-  padding: .5em .4em .3em .4em;
-  margin-left: 1em;
-  font-size: $small-font-size;
+  @include user-select(none); 
   background-color: $interactable;
+  border-radius: 50%;
+  cursor: default;
+  display: inline-block;
+  font-size: $small-font-size;
+  margin-left: 1em;
+  padding: .5em .4em .3em;
+  -webkit-touch-callout: none;
+
   &:hover {
     background-color: $highlighted;
   }
-  cursor: default;
-  -webkit-touch-callout: none;
-  @include user-select(none);
-}
 
-#dropdown-caret.collapsed {
-  @include transform(rotate(90deg));
+  &.collapsed {
+    @include transform(rotate(90deg));
+  }
 }
 
 #search-area {
-  font-size: $small-font-size;
   @include display-flex(flex);
   @include flex-direction(column);
+  font-size: $small-font-size;
 
   ol {
     @include display-flex(flex);
@@ -337,7 +366,7 @@ ol.fish-tiles {
     padding: .25em 0;
     text-align: center;
     width: 24.8%;
-    
+
     &:hover {
       background-color: $highlighted;
     }
@@ -348,7 +377,7 @@ ol.fish-tiles {
     margin-bottom: .2em;
   }
 
-  input[type='checkbox'] {
+  [type='checkbox'] {
     @include transform(scale(1.5));
     float: right;
     margin-right: 10px;
@@ -392,8 +421,8 @@ $seisokuchi: 'takatsu-zyou', 'takatsu-chuu', 'takatsu-ge', 'takatsu-kakou',
 'masuda-zyou', 'masuda-chuu', 'masuda-ge', 'masuda-kakou';
 
 @each $a-seisokuchi in $seisokuchi {
-  body.#{$a_seisokuchi} {
-    background-image: url(/images/seisokuchi/#{$a_seisokuchi}.jpg);
+  body.#{$a-seisokuchi} {
+    background-image: url(/images/seisokuchi/#{$a-seisokuchi}.jpg);
   }
 }
 
@@ -404,57 +433,69 @@ main.fish-page {
   max-width: 700px;
   padding: 2vh 2vw;
   @media print {
+    margin: 0;
     max-width: 100%;
     padding: 0;
-    margin: 0;
   }
   @media #{$no-background} {
-    margin-top: 0;
-    margin-bottom: 0;
     border-radius: 0;
+    margin-bottom: 0;
+    margin-top: 0;
   }
 }
 
-header.fish-header {
+.fish-header {
   @include display-flex(flex);
   @include flex-wrap(wrap);
   @include justify-content(center);
   @include flex-direction(row);
-  text-align: center;
-  border-bottom-style: solid;
   border-bottom-color: $text-color;
+  border-bottom-style: solid;
   border-bottom-width: .3em;
-  > div, img, table {
+  text-align: center;
+
+  > div, 
+  img, 
+  table {
     @include box-sizing(border-box);
-    margin: 0 1% 1em 1%;
+    margin: 0 1% 1em;
     width: 48%; 
   }
+
   img {
     @include align-self(center);
     border: 1px solid $text-color;
+
     @media print {
       border-color: $print-text-color;
     }
   }
+
   .classification {
     @include align-self(center);
     font-size: $small-font-size;
   }
-  table, .rarity {
+
+  table, 
+  .rarity {
     @media #{$fish-header-bottom-split} {
       margin-left: 0;
       margin-right: 0;
       width: 100%;    
     }
   }
-  td, .rarity-header {
+
+  td, 
+  .rarity-header {
     padding: .25em;
   }
+
   .rarity-header {
     @media #{$fish-header-bottom-split} {
       padding: 0;
     }
   }
+
   .rarity-stars {
     @media #{$fish-header-bottom-split} {
       padding-top: 0;
@@ -474,33 +515,37 @@ header.fish-header {
   @media print {
     border-color: $print-text-color;
   }
-  color: yellow;
+  color: #ff0;
   padding-top: 1em;
 }
 
 article {
   min-height: 25vh;
+
   > div {
+    border-bottom-color: $text-color;
     border-bottom-style: solid;
     border-bottom-width: .3em;
-    border-bottom-color: $text-color;
+    padding-bottom: 1em;
+    padding-top: 1em;
+
     @media print {
       border-bottom-color: $print-text-color;
     }
-    padding-bottom: 1em;
-    padding-top: 1em;
-  }
-  > div.captioned-section {
-    @include display-flex(flex);
-    @include justify-content(top);
-    @include align-content(top);
-    @include align-items(center); /* necessary to prevent images from stretching */
-    @include flex-direction(row);
-    > img {
-      display: inline-block;
-      min-width: 40%;
-      max-width: 40%;
-      margin-right: 1em;
+
+    &.captioned-section {
+      @include display-flex(flex);
+      @include justify-content(top);
+      @include align-content(top);
+      @include align-items(center); /* necessary to prevent images from stretching */
+      @include flex-direction(row);
+
+      > img {
+        display: inline-block;
+        margin-right: 1em;
+        max-width: 40%;
+        min-width: 40%;
+      }
     }
   }
 }
