@@ -23,28 +23,13 @@ $small-font-size: .8em;
 body {
   background-color: $primary-background;
   color: $text-color;
-  font-size: 24px;
+  font-size: 1.5em;
   font-family: Century Gothic, sans-serif;
   @media print {
-    font-size: 6pt;
+    font-size: 0.5em;
     color: $print-text-color;
     background-color: $print-background;
   }
-}
-
-.home {
-	text-align: center;
-	max-width: 960px;
-	margin: auto;
-	padding: 0 1%;
-	img {
-		margin-bottom: 0.5em;
-		border: 1px solid white;
-		max-width: 100%;
-	}
-	p {
-	text-align: left;
-	}
 }
 
 h1 {
@@ -57,9 +42,41 @@ h1 {
 }
 
 h2 {
-	font-size: 1.5em;
-	padding: 0.5em 0;
+  font-size: 1.5em;
+  padding: 0.5em 0;
 }
+
+p {
+  line-height: 1.2em;
+  margin-bottom: .5em;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+table, 
+th, 
+td {
+  border: 1px solid $text-color;
+  @media print {
+    border-color: $print-text-color;
+  }
+  text-align: center;
+}
+
+td, th {
+  padding: 0.25em;
+}
+
+a, 
+a:visited {
+  color: $text-color;
+  text-decoration: none;
+}
+
+/* End general HTML element styles */
+
+/* Begin utility class styles */
 
 .binary-list {
   margin: auto;
@@ -83,160 +100,78 @@ h2 {
 }
 }
 
-.home ul {
-  @extend .binary-list;
-  max-width: 500px;
-  /*
-	max-width: 500px;
-	margin: auto;
-	text-align: left;
-	@media (max-width: 500px) {
-		font-size: 0.8em;
-	}
-	@media (max-width: 400px) {
-		font-size: 0.6em;
-	}
-	li {
-		margin: 0.3em 0;
-	}
-	div {
-		vertical-align: top;
-		display: inline-block;
-		&:first-child {
-			width: 20%;
-			text-align: right;
-	}
-}*/
-}
-
-.contact-page {
-  text-align: center;
-}
-
-.contact-page ul {
-  @extend .binary-list;
-  max-width: 600px;
-}
-
-p {
-  line-height: 1.2em;
-  margin-bottom: .5em;
-	&:last-child {
-		margin-bottom: 0;
-	}
-}
-
-#appcache-notifications {
-	display: none;
-}
-
-#appcache-notifications.displayed {
-	display: block;
-	padding: 0.5em 0;
-	&.in-progress {
-		background-color: blue;
-	}
-	&.finished {
-		background-color: green;
-	}
-}
-
-table, 
-th, 
-td {
-  border: 1px solid $text-color;
-  @media print {
-    border-color: $print-text-color;
-  }
-  text-align: center;
-}
-
-a, 
-a:visited {
-  color: $text-color;
-  text-decoration: none;
-}
-
-/* End general HTML element styles */
-
-/* Begin fish page background styles */
-
-.fish-page {
-  background-size: 100% 100%;
-  transition: background-image 3s ease-in-out;
-}
-
-$seisokuchi: 'takatsu-zyou', 'takatsu-chuu', 'takatsu-ge', 'takatsu-kakou', 
-'masuda-zyou', 'masuda-chuu', 'masuda-ge', 'masuda-kakou';
-
-@each $a-seisokuchi in $seisokuchi {
-  body.#{$a_seisokuchi} {
-    background-image: url(/images/seisokuchi/#{$a_seisokuchi}.jpg);
-  }
-}
-
-/* End fish page background styles */
-
-/* Begin major container styles */
-
-ol.fish-tiles {
-  @include display-flex(flex);
-  @include justify-content(space-around);
-  @include flex-wrap(wrap);
-  li {
-    display: inline-block;
-    &.hidden {
-      display: none;
-    }
-  }
-}
-
-div.fish-page {
-  background-color: $primary-background;
+.fish-tile, 
+figure {
+  border-color: $image-border-color;
   border-radius: $rounded-border;
-  margin: 2vh auto;
-  max-width: 700px;
-  padding: 2vh 2vw;
-  @media print {
+  border-style: solid;
+  border-width: 2px;
+  display: inline-block;
+  margin: .5vw;
+}
+
+figure {
+  max-width: 48%;
+
+  img {
+    max-height: 100%;
     max-width: 100%;
-    padding: 0;
-    margin: 0;
   }
-  @media #{$no-background} {
-    margin-bottom: 0;
-  }
-}
-
-article {
-  min-height: 25vh;
-  > div {
-    border-bottom-style: solid;
-    border-bottom-width: .3em;
-    border-bottom-color: $text-color;
-    @media print {
-      border-bottom-color: $print-text-color;
-    }
-    padding-bottom: 1em;
-    padding-top: 1em;
-  }
-  > div.captioned-section {
-    @include display-flex(flex);
-    @include justify-content(top);
-    @include align-content(top);
-    @include align-items(center); /* necessary to prevent images from stretching */
-    @include flex-direction(row);
-    > img {
-      display: inline-block;
-      min-width: 40%;
-      max-width: 40%;
-      margin-right: 1em;
-    }
+  
+  figcaption {
+    margin: .2em 0;
   }
 }
 
-/* End container-like-thing styles */
+.fish-tile {
+  height: 150px;
 
-/* Begin header styles */
+  img {
+    max-height: 75%;
+    max-width: 100%;
+    min-width: 100%;
+  }
+  
+  span {
+    margin-top: .1em;
+  }
+
+  &:hover {
+    @include transform(scale(1.1, 1.1));
+    border-color: $highlighted;
+  }
+}
+
+.fish-tile span,
+figure figcaption {
+  display: block;
+  text-align: center;
+}
+
+.navigation-link {
+  background-color: $interactable;
+  border-radius: $rounded-border;
+  display: block;
+  font-size: 5vw;
+  line-height: 10vh;
+  min-width: 98%;
+  padding-bottom: 1vh;
+  padding-top: 1vh;
+  text-align: center;
+  margin-top: .3em;
+  
+  &:hover {
+    background-color: $highlighted;
+  }
+
+  @media print {
+    display: none;
+  }
+}
+
+/* End utility class styles */
+
+/* Begin styles for elements included on every page (i.e., in base.html) */
 
 header.navbar {
   background-color: $secondary-background;
@@ -285,78 +220,74 @@ header.navbar {
   }
 }
 
+#appcache-notifications {
+  display: none;
+  &.displayed {
+    display: block;
+    padding: 0.5em 0;
+    background-color: blue;
+    &.finished {
+    background-color: green;
+  }
+  }
+}
+
+/* Begin simple page styles (home, contact, reference documents) */
+
+.home {
+	text-align: center;
+	max-width: 960px;
+	margin: auto;
+	padding: 0 1%;
+	img {
+		margin-bottom: 0.5em;
+		border: 1px solid white;
+		max-width: 100%;
+	}
+	p {
+	text-align: left;
+	}
+  ul {
+  @extend .binary-list;
+  max-width: 500px;
+}
+}
+
+.sankou-page, .contact-page {
+  text-align: center;
+}
+
+.contact-page ul {
+    @extend .binary-list;
+    max-width: 600px;
+}
+
+.sankou-page table {
+  margin: auto;
+  margin-bottom: 1em;
+}
+
+/* End simple page styles */
+
+/* Begin ichiran styles */
+
 header.ichiran-header {
   background-image: url(/images/takatsugawa-header-background.jpg);
   background-size: 100%;
   border-radius: $rounded-border;
 }
 
-header.fish-header {
+ol.fish-tiles {
   @include display-flex(flex);
+  @include justify-content(space-around);
   @include flex-wrap(wrap);
-  @include justify-content(center);
-  @include flex-direction(row);
-  text-align: center;
-  border-bottom-style: solid;
-  border-bottom-color: $text-color;
-  border-bottom-width: .3em;
-  > div, img, table {
-    @include box-sizing(border-box);
-    margin: 0 1% 1em 1%;
-    width: 48%; 
-  }
-  img {
-    @include align-self(center);
-    border: 1px solid $text-color;
-    @media print {
-      border-color: $print-text-color;
-    }
-  }
-  .classification {
-    @include align-self(center);
-    font-size: $small-font-size;
-  }
-  table, .rarity {
-    @media #{$fish-header-bottom-split} {
-      margin-left: 0;
-      margin-right: 0;
-      width: 100%;    
-    }
-  }
-  td, .rarity-header {
-    padding: .25em;
-  }
-  .rarity-header {
-    @media #{$fish-header-bottom-split} {
-      padding: 0;
-    }
-  }
-  .rarity-stars {
-    @media #{$fish-header-bottom-split} {
-      padding-top: 0;
+  li {
+    display: inline-block;
+    &.hidden {
+      display: none;
     }
   }
 }
-
-.rarity {
-  border: 1px solid $text-color;
-  @media print {
-    border-color: $print-text-color;
-  }
-}
-
-.rarity-stars {
-  border-top: 1px solid $text-color;
-  @media print {
-    border-color: $print-text-color;
-  }
-  color: yellow;
-  padding-top: 1em;
-}
-
-/* End header styles */
-
-/* Begin search area styles */
 
 .search-dropdown, .search-header {
   background-color: $secondary-background;
@@ -445,78 +376,125 @@ header.fish-header {
   }
 }
 
-/* End search ara styles */
+/* Begin fish page styles */
 
-/* Begin image-box styles */
+.fish-page {
+  background-size: 100% 100%;
+  transition: background-image 3s ease-in-out;
+}
 
-.fish-tile, 
-figure {
-  border-color: $image-border-color;
+$seisokuchi: 'takatsu-zyou', 'takatsu-chuu', 'takatsu-ge', 'takatsu-kakou', 
+'masuda-zyou', 'masuda-chuu', 'masuda-ge', 'masuda-kakou';
+
+@each $a-seisokuchi in $seisokuchi {
+  body.#{$a_seisokuchi} {
+    background-image: url(/images/seisokuchi/#{$a_seisokuchi}.jpg);
+  }
+}
+
+div.fish-page {
+  background-color: $primary-background;
   border-radius: $rounded-border;
-  border-style: solid;
-  border-width: 2px;
-  display: inline-block;
-  margin: .5vw;
-}
-
-figure {
-  max-width: 48%;
-
-  img {
-    max-height: 100%;
-    max-width: 100%;
-  }
-  
-  figcaption {
-    margin: .2em 0;
-  }
-}
-
-.fish-tile {
-  height: 150px;
-
-  img {
-    max-height: 75%;
-    max-width: 100%;
-    min-width: 100%;
-  }
-  
-  span {
-    margin-top: .1em;
-  }
-
-  &:hover {
-    @include transform(scale(1.1, 1.1));
-    border-color: $highlighted;
-  }
-}
-
-.fish-tile span,
-figure figcaption {
-  display: block;
-  text-align: center;
-}
-
-/* End image-box styles */
-
-.navigation-link {
-  background-color: $interactable;
-  border-radius: $rounded-border;
-  display: block;
-  font-size: 5vw;
-  line-height: 10vh;
-  min-width: 98%;
-  padding-bottom: 1vh;
-  padding-top: 1vh;
-  text-align: center;
-  margin-top: .3em;
-  
-  &:hover {
-    background-color: $highlighted;
-  }
-
+  margin: 2vh auto;
+  max-width: 700px;
+  padding: 2vh 2vw;
   @media print {
-    display: none;
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+  @media #{$no-background} {
+    margin-bottom: 0;
+  }
+}
+
+header.fish-header {
+  @include display-flex(flex);
+  @include flex-wrap(wrap);
+  @include justify-content(center);
+  @include flex-direction(row);
+  text-align: center;
+  border-bottom-style: solid;
+  border-bottom-color: $text-color;
+  border-bottom-width: .3em;
+  > div, img, table {
+    @include box-sizing(border-box);
+    margin: 0 1% 1em 1%;
+    width: 48%; 
+  }
+  img {
+    @include align-self(center);
+    border: 1px solid $text-color;
+    @media print {
+      border-color: $print-text-color;
+    }
+  }
+  .classification {
+    @include align-self(center);
+    font-size: $small-font-size;
+  }
+  table, .rarity {
+    @media #{$fish-header-bottom-split} {
+      margin-left: 0;
+      margin-right: 0;
+      width: 100%;    
+    }
+  }
+  td, .rarity-header {
+    padding: .25em;
+  }
+  .rarity-header {
+    @media #{$fish-header-bottom-split} {
+      padding: 0;
+    }
+  }
+  .rarity-stars {
+    @media #{$fish-header-bottom-split} {
+      padding-top: 0;
+    }
+  }
+}
+
+.rarity {
+  border: 1px solid $text-color;
+  @media print {
+    border-color: $print-text-color;
+  }
+}
+
+.rarity-stars {
+  border-top: 1px solid $text-color;
+  @media print {
+    border-color: $print-text-color;
+  }
+  color: yellow;
+  padding-top: 1em;
+}
+
+article {
+  min-height: 25vh;
+  > div {
+    border-bottom-style: solid;
+    border-bottom-width: .3em;
+    border-bottom-color: $text-color;
+    @media print {
+      border-bottom-color: $print-text-color;
+    }
+    padding-bottom: 1em;
+    padding-top: 1em;
+  }
+  > div.captioned-section {
+    @include display-flex(flex);
+    @include justify-content(top);
+    @include align-content(top);
+    @include align-items(center); /* necessary to prevent images from stretching */
+    @include flex-direction(row);
+    > img {
+      display: inline-block;
+      min-width: 40%;
+      max-width: 40%;
+      margin-right: 1em;
+    }
   }
 }
 
