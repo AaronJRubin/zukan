@@ -1,4 +1,5 @@
 require 'dimensions'
+require 'cssminify'
 
 def compress_images_task(name, source, pathmap, convert_function)
 	images = Rake::FileList.new(source)
@@ -100,8 +101,14 @@ task :compile => :build_workspace do
 	end
 end
 
+desc "Minify CSS"
+task :minify_css => :compile do
+	path = 'site/static/stylesheets/main.css'
+	File.write(path, CSSminify.compress(File.read(path)))
+end
+
 desc "Deploy site to Google App Engine"
-task :deploy => :compile do
+task :deploy => [:compile, :minify_css] do
 	Dir.chdir 'site'
 	sh 'appcfg.py --no_cookies update .'
 	Dir.chdir '..'
