@@ -29,7 +29,6 @@ appcache.addEventListener("downloading", function(event) {
 		var notifications = document.querySelector("#appcache-notifications");	
 		notifications.innerHTML = 'キャッシュ更新中！しばらくこのページに残ってください。<span id="downloaded">0</span>/241ダウンロード済み。';
 		notifications.classList.toggle("displayed");
-		notifications.classList.toggle("in-progress");
 		var filesDownloaded = 0;
 		var downloaded = document.querySelector("#downloaded");
 		appcache.addEventListener("progress", function(event) {
@@ -39,12 +38,10 @@ appcache.addEventListener("downloading", function(event) {
 		updated = function(event) {
 		notifications.innerHTML = "キャッシュされました！変わったサイトを見るためにこのページをリフレッシュしてください。";
 		notifications.classList.toggle("finished");
-		notifications.classList.toggle("in-progress");
 		}
 		cached = function(event) {
 		notifications.innerHTML = "キャッシュされました！オフラインでもアクセス出来るようになりました。";
 		notifications.classList.toggle("finished");
-		notifications.classList.toggle("in-progress");
 		}
 		appcache.addEventListener("updateready", updated);
 		appcache.addEventListener("cached", cached);
