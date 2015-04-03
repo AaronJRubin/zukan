@@ -1,5 +1,6 @@
 require 'dimensions'
 require 'cssminify'
+require 'htmlcompressor'
 
 # This function generates a task for compressing all of the images in a directory,
 # given a name for the task, the source directory, a pathmap for going from an image
@@ -105,6 +106,11 @@ task :compile => :build_workspace do
 		sh 'python generate_appcache.py'
 		css_path = 'site/static/stylesheets/main.css'
 		File.write(css_path, CSSminify.compress(File.read(css_path)))
+		compressor = HtmlCompressor::Compressor.new
+		htmlFiles = Rake::FileList.new('site/static/**/*.html')
+		htmlFiles.each do |file|
+			File.write(file, compressor.compress(File.read(file)))
+		end
 	else
 		Dir.chdir '..'
 	end
