@@ -16,7 +16,7 @@ f.write("stylesheets/main.css\n")
 f.write("packages/browser/dart.js\n")
 f.write("ichiran.dart.js\n")
 f.write("sakana/fish_page.dart.js\n")
-
+f.write("appcache-notify.js\n")
 f.write("\nNETWORK:\n*")
 
 f.close()
