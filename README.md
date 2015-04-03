@@ -10,7 +10,7 @@ You will need the following tools installed and on your PATH.
 * [Sass](http://sass-lang.com/) with [Compass](http://compass-style.org/)
 * [The Dart SDK](https://www.dartlang.org/tools/sdk/). You will most likely need to manually add dark-sdk/bin/ (contained within the Dart installation directory) to your PATH.
 * [ImageMagick](http://www.imagemagick.org/)
-* [Python 2.7](https://www.python.org/download/releases/2.7/), with the [jinja2](http://jinja.pocoo.org/docs/dev/) and [sh](https://pypi.python.org/pypi/sh) libraries installed.
+* [Python 2.7](https://www.python.org/download/releases/2.7/), with the [jinja2](http://jinja.pocoo.org/docs/dev/) library installed.
 * [Rake](http://rake.rubyforge.org/)
 
 # How to Work on this Project
