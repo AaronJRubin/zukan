@@ -4,6 +4,10 @@
 
 {% from 'fish-page-macros.html' import article_section %}
 
+{% call article_section("") %}
+<p>成魚サイズ：12cm</p>
+{% endcall %}
+
 {% call article_section(fish.image('kuti')) %}
 <p>ドジョウは細長い体つきで、ヌルヌルしている。</p>
 <p>口ひげは10本ある。</p>
@@ -11,7 +15,6 @@
 
 {% call article_section(fish.image('obire')) %}
 <p>尾びれの付け根に黒い斑紋がある。</p>
-
 {% endcall %}
 
 {% call article_section("") %}

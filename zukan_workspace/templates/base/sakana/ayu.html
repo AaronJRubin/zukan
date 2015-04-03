@@ -4,6 +4,11 @@
 
 {% from 'fish-page-macros.html' import article_section %}
 
+{% call article_section(fish.image("")) %}
+<p>成魚サイズ：約5cm</p>
+<p>地方名：アイ</p>
+{% endcall %}
+
 {% call article_section(fish.image('aburabire')) %}
 <p>尾ひれの前にアブラビレと呼ばれるサケの仲間共通の小さなヒレがある。</p>
 <p>アユは成魚になると川の石に着いているコケを食べる。そのため、唇が厚くスイカのような匂いがする。</p>
