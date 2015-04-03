@@ -2,6 +2,19 @@ require 'dimensions'
 require 'cssminify'
 require 'htmlcompressor'
 
+def smart_compile_dart(source_dir, build_dir_pathmap)
+	dart_files = Rake::FileList.new(source_dir.pathmap("%p/**/*.dart"))
+	representative_file = dart_files.first.pathmap(build_dir_pathmap)
+	if not uptodate?(representative_file, dart_files) # a dart file has been modified
+		sh 'pub build'
+	else
+		non_dart_files = Rake::FileList.new(source_dir).exclude("*.dart")
+		non_dart_files.each do |file|
+			cp file, file.pathmap(build_dir_pathmap)
+		end
+	end
+end
+
 # This function generates a task for compressing all of the images in a directory,
 # given a name for the task, the source directory, a pathmap for going from an image
 # file in the source directory to the corresponding image file in the destination directory,
