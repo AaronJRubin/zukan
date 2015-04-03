@@ -34,3 +34,4 @@ DEPENDENCIES
   dimensions
   htmlcompressor
   rake
+  sass
