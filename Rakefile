@@ -1,6 +1,13 @@
 require 'dimensions'
 require 'cssminify'
 
+# This function generates a task for compressing all of the images in a directory,
+# given a name for the task, the source directory, a pathmap for going from an image
+# file in the source directory to the corresponding image file in the destination directory,
+# and a lambda that, when given two strings, one for the path to the original image
+# and one for the path to the compressed image, generates the shell command - a string - needed
+# to produce the compressed image from the original image. That shell command will probably
+# use the 'convert' utility in ImageMagick.
 def compress_images_task(name, source, pathmap, convert_function)
 	images = Rake::FileList.new(source)
 	compressed_images = images.pathmap(pathmap)
