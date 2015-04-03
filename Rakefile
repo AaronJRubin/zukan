@@ -93,7 +93,7 @@ end
 desc "Compile everything necessary to use the site with pub serve, part of the Dart SDK, from zukan_workspace"
 task :build_workspace => [:compress_images, :generate_pages, :compile_sass]
 
-desc "Compile dart code and produce ready-to-deploy site"
+desc "Compile dart code and produce ready-to-deploy site with appcache and minified css"
 task :compile => :build_workspace do
 	Dir.chdir 'zukan_workspace'
 	dependencies = Rake::FileList.new('web/**/*')
@@ -103,19 +103,15 @@ task :compile => :build_workspace do
 		rm_r 'site/static/', :force => true
 		cp_r 'zukan_workspace/build/web', 'site/static/'
 		sh 'python generate_appcache.py'
+		css_path = 'site/static/stylesheets/main.css'
+		File.write(css_path, CSSminify.compress(File.read(css_path)))
 	else
 		Dir.chdir '..'
 	end
 end
 
-desc "Minify CSS"
-task :minify_css => :compile do
-	path = 'site/static/stylesheets/main.css'
-	File.write(path, CSSminify.compress(File.read(path)))
-end
-
 desc "Deploy site to Google App Engine"
-task :deploy => [:compile, :minify_css] do
+task :deploy => :compile do
 	Dir.chdir 'site'
 	sh 'appcfg.py --no_cookies update .'
 	Dir.chdir '..'
