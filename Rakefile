@@ -4,11 +4,13 @@ require 'htmlcompressor'
 
 def smart_compile_dart(source_dir, build_dir_pathmap)
 	dart_files = Rake::FileList.new(source_dir.pathmap("%p/**/*.dart"))
-	representative_file = dart_files.first.pathmap(build_dir_pathmap)
-	if not uptodate?(representative_file, dart_files) # a dart file has been modified
+	puts "All dart files are #{dart_files}"
+	representative_file = Rake::FileList.new(source_dir.pathmap(build_dir_pathmap).pathmap("%p/**/*.dart.js")).first
+	unless uptodate?(representative_file, dart_files) # a dart file has been modified
+		puts "A dart file, #{representative_file} has been modified!"
 		sh 'pub build'
 	else
-		non_dart_files = Rake::FileList.new(source_dir).exclude("*.dart")
+		non_dart_files = Rake::FileList.new(source_dir.pathmap("%p/**/*")).exclude("*.dart").exclude { |path| File.directory?(path) }
 		non_dart_files.each do |file|
 			cp file, file.pathmap(build_dir_pathmap)
 		end
@@ -112,7 +114,8 @@ task :compile => :build_workspace do
 	Dir.chdir 'zukan_workspace'
 	dependencies = Rake::FileList.new('web/**/*')
 	unless (uptodate?('build/web/ichiran.html', dependencies))
-		sh 'pub build'
+		smart_compile_dart("web", "build/%p")
+		#sh 'pub build'
 		Dir.chdir '..'
 		rm_r 'site/static/', :force => true
 		cp_r 'zukan_workspace/build/web', 'site/static/'
