@@ -1,5 +1,5 @@
 name: abehaze
-takatsu: zyou, chuu, ge
+takatsu: chuu, ge
 masuda: chuu, ge
 rarity: 4
 zoku: アベハゼ属
@@ -7,8 +7,8 @@ ka: ハゼ科ハゼ亜科
 latin: Mugilogobius abei
 
 name: aburabote
-takatsu: zyou
-masuda:zyou
+takatsu: chuu
+masuda: chuu
 rarity: 3
 zoku:アブラボテ属
 ka:コイ科タナゴ亜科
@@ -28,7 +28,7 @@ masuda:zyou
 rarity:2
 zoku:サケ属
 ka:サケ科
-latin:Salmo(Oncorhynchus)masou macrostimus
+latin:Salmo (Oncorhynchus) masou macrostimus
 
 name:ayu
 takatsu:chuu,ge,ka
@@ -276,7 +276,7 @@ masuda:
 rarity:4
 zoku:ケツギョ属
 ka:スズキ科
-latin:Siniperca(Bryttosus)kawamebari
+latin:Siniperca (Bryttosus) kawamebari
 
 name:biringo
 takatsu:ge,ka
@@ -292,7 +292,7 @@ masuda:
 rarity:5
 zoku:サケ属
 ka:サケ科サケ亜科
-latin:Salmo(Oncorhynchus)masou masou
+latin:Salmo (Oncorhynchus) masou masou
 
 name:shimadozyou
 takatsu:zyou,chuu
@@ -308,7 +308,7 @@ masuda:ge,ka
 rarity:3
 zoku:コトヒキ属
 ka:シマイサキ科
-latin:Terapon(Rhyncopelates)oxyrhynchus
+latin:Terapon (Rhyncopelates) oxyrhynchus
 
 name:shirouo
 takatsu:
@@ -332,7 +332,7 @@ masuda:
 rarity:5
 zoku:ウナギヤツメ属
 ka:ウナギヤツメ科
-latin:Lampetra(Lethenteron)reissneri
+latin:Lampetra (Lethenteron) reissneri
 
 name:suzuki
 takatsu:ge,ka
@@ -351,7 +351,7 @@ ka:コイ科タナゴ亜科
 latin:Rhodeus ocellatus ocellatus
 
 name:titibu
-takatsu:ge
+takatsu:ge,ka
 masuda:ge,ka
 rarity:2
 zoku:チチブ属
@@ -404,7 +404,7 @@ masuda:zyou
 rarity:3
 zoku:サケ属
 ka:サケ科サケ亜科
-latin:Salmi(Oncorhynchus)masou masou
+latin:Salmi (Oncorhynchus) masou masou
 
 name:utusemikajika
 takatsu:chuu,ge,ka
@@ -431,12 +431,12 @@ ka:スズキ科
 latin:Lateolabrax latusb Katayama
 
 name:shirogisu
-takatu:ka
-masuda:ka
+takatu: ge, ka
+masuda: ge, ka
 rarity:3
 zoku:キス属
 ka:キス科
-latin:Sillago japonica Temminck et Schlegel
+latin:Sillago japonica (Temminck et Schlegel)
 
 name:hirame
 takatu:ka
@@ -444,7 +444,7 @@ masuda:
 rarity:3
 zoku:ヒラメ属
 ka:ヒラメ科
-latin:Paralichthys olivaceus(Temmink et Schlegel)
+latin:Paralichthys olivaceus (Temmink et Schlegel)
 
 name:hedai
 takatu:ka
@@ -452,7 +452,7 @@ masuda:
 rarity:3
 zoku:ヘダイ族
 ka:タイ科
-latin:Sparus sarba(Forsskal)
+latin:Sparus sarba (Forsskal)
 
 name:syousaihugu
 takatu:ka
@@ -460,4 +460,4 @@ masuda:
 rarity:3
 zoku:トラフグ属
 ka:フグ科
-latin:Takifugu snyderi(Abe)
+latin:Takifugu snyderi (Abe)
