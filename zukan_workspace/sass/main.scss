@@ -286,7 +286,7 @@ figure figcaption {
 
   ul {
     @extend %binary-list;
-    max-width: 600px;
+    max-width: 390px;
 
     @media (max-width: 400px) {
       font-size: .7em;
