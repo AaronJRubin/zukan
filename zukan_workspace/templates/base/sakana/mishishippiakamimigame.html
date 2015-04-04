@@ -1,0 +1,22 @@
+{% extends "base/sakana.html" %}
+
+{% block article %}
+
+{% from 'fish-page-macros.html' import article_section %}
+
+{% call article_section(fish.image("")) %}
+<p>成魚サイズ：約25cm</p>
+{% endcall %}
+
+{% call article_section(fish.image("")) %}
+<p>元々はペット用に輸入されたアメリカ原産のミドリガメ。</p>
+{% endcall %}
+
+{% call article_section(fish.image('kao')) %}
+<p>小さい時は緑色に黄色い縞模様で鮮やかだが、大きくなるにつれて地味な色になる。</p>
+<p>目のうしろに赤い斑紋があることから赤耳亀と呼ばれる。</p>
+{% endcall %}
+
+
+
+{% endblock %}

@@ -10,7 +10,7 @@ def smart_compile_dart(source_dir, build_dir_pathmap)
 	else
 		non_dart_files = Rake::FileList.new(source_dir.pathmap("%p/**/*")).exclude("*.dart").exclude { |path| File.directory?(path) }
 		non_dart_files.each do |file|
-			cp file, file.pathmap(build_dir_pathmap)
+			cp_r file, file.pathmap(build_dir_pathmap)
 		end
 	end
 end
