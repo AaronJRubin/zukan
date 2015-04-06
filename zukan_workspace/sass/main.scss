@@ -178,6 +178,58 @@ figure figcaption {
 
 .navbar {
   background-color: $secondary-background;
+  margin-bottom: 0;
+
+  nav {
+    text-align: right;
+
+    ul {
+      @include display-flex(inline-flex);
+      @include flex-direction(row);
+      @include flex-wrap(wrap);
+      width: 100%;
+
+      li {
+        display: inline-block;
+        @include flex(1);
+
+        a { 
+          background-color: $interactable;
+          &:hover {
+            background-color: $highlighted;
+          }
+          text-align: center;
+          border-left: 1px solid black;
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          padding: .5em 0;
+        }
+
+        @media (max-width: 750px) {
+
+          border-bottom: 1px solid black;
+
+          &:nth-child(1), &:nth-child(2) {
+            @include flex-basis(50%);
+            /*width: 50%;*/
+          }
+
+          &:nth-child(3), &:nth-child(4), &:nth-child(5) {
+            @include flex-basis(33%);
+            width: 33%;
+          }
+        }
+      }
+    }
+  }
+
+  @media print {
+    display: none;
+  }
+}
+/*.navbar {
+  background-color: $secondary-background;
   border-radius: $rounded-border;
   margin-bottom: 0;
 
@@ -230,7 +282,7 @@ figure figcaption {
   @media print {
     display: none;
   }
-}
+}*/
 
 #appcache-notifications {
   display: none;
