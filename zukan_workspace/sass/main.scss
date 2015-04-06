@@ -213,12 +213,8 @@ figure figcaption {
 
           @media (max-width: 450px) {
             font-size: 0.7em;
-            /* The below border-bottom should not be necessary, but is,
-            because the border-bottom added to li when max-width goes to 750px
-            seems to go away after this media query. We probably have too much
-            nesting here and should refactor our SASS. */
-            border-bottom: 1px solid black;
-          }
+            border-bottom: 1px solid black; /* The li bottom border gets "swallowed up" when font size decreases. Not sure why */`
+           }
         }
 
         @media (max-width: 750px) {
