@@ -192,6 +192,7 @@ figure figcaption {
       li {
         display: inline-block;
         border-left: 1px solid black;
+        border-bottom: 1px solid black;
         @include box-sizing(border-box);
         @include flex(1);
 
@@ -221,8 +222,6 @@ figure figcaption {
         }
 
         @media (max-width: 750px) {
-
-          border-bottom: 1px solid black;
 
           &:nth-child(1), &:nth-child(2) {
             @include flex-basis(50%); 
