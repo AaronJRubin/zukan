@@ -193,6 +193,12 @@ figure figcaption {
         display: inline-block;
         @include flex(1);
 
+        &:nth-child(1) {
+          a {
+            border-left: none;
+          }
+        }
+
         a { 
           background-color: $interactable;
           &:hover {
@@ -204,6 +210,15 @@ figure figcaption {
           width: 100%;
           height: 100%;
           padding: .5em 0;
+
+          @media (max-width: 450px) {
+            font-size: 0.7em;
+            /* The below border-bottom should not be necessary, but is,
+            because the border-bottom added to li when max-width goes to 750px
+            seems to go away after this media query. We probably have too much
+            nesting here and should refactor our SASS. */
+            border-bottom: 1px solid black;
+          }
         }
 
         @media (max-width: 750px) {
