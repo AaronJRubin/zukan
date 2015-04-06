@@ -414,14 +414,6 @@ zoku:カジカ属
 ka:カジカ科
 latin:Cottus reinii
 
-name:kusahugu
-takatsu:ka
-masuda:
-rarity:3
-zoku:トラフグ属
-ka:フグ科
-latin:Takifugu miphobles
-
 name:hirasuzuki
 takatu:ka
 masuda:
@@ -445,19 +437,3 @@ rarity:3
 zoku:ヒラメ属
 ka:ヒラメ科
 latin:Paralichthys olivaceus (Temmink et Schlegel)
-
-name:hedai
-takatu:ka
-masuda:
-rarity:3
-zoku:ヘダイ族
-ka:タイ科
-latin:Sparus sarba (Forsskal)
-
-name:syousaihugu
-takatu:ka
-masuda:
-rarity:3
-zoku:トラフグ属
-ka:フグ科
-latin:Takifugu snyderi (Abe)
