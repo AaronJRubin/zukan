@@ -41,7 +41,7 @@ def render_static_page(name):
 render_static_page("home")
 render_static_page("contact")
 render_static_page("sankoubunken")
-
+render_static_page("mamechishiki")
 """
 home = render_str("base/home.html");
 write(os.path.join(dest, "home.html"), home.encode('utf8'))
