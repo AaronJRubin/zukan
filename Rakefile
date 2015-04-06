@@ -2,7 +2,11 @@ require 'dimensions'
 require 'cssminify'
 require 'htmlcompressor'
 
-def smart_compile_dart(source_dir, build_dir_pathmap)
+workspace = 'zukan_workspace'
+
+def smart_compile_dart
+	source_dir = "web"
+	build_dir_pathmap = "build/%p"
 	dart_files = Rake::FileList.new(source_dir.pathmap("%p/**/*.dart"))
 	representative_file = Rake::FileList.new(source_dir.pathmap(build_dir_pathmap).pathmap("%p/**/*.dart.js")).first
 	if representative_file.nil? or not uptodate?(representative_file, dart_files) # a dart file has been modified
@@ -55,7 +59,7 @@ convert_fish = lambda do |fish, compressed_fish|
 end
 
 desc "Compress images of fish in master-images and move to workspace"
-compress_images_task(:compress_fish_images, "zukan_workspace/master-images/sakana/**/*.jpg", "zukan_workspace/web/images/%-2d/%f", convert_fish)
+compress_images_task(:compress_fish_images, "#{workspace}/master-images/sakana/**/*.jpg", "#{workspace}/web/images/%-2d/%f", convert_fish)
 
 quality_override = Hash.new('57')
 quality_override['takatsu-chuu.jpg'] = '75'
@@ -68,16 +72,16 @@ convert_general = lambda do |image, compressed_image|
 end
 
 desc "Compress images of seisokuchi in master-images and move to workspace"
-compress_images_task(:compress_seisokuchi_images, "zukan_workspace/master-images/seisokuchi/*.jpg", "zukan_workspace/web/images/seisokuchi/%f", convert_general)
+compress_images_task(:compress_seisokuchi_images, "#{workspace}/master-images/seisokuchi/*.jpg", "#{workspace}/web/images/seisokuchi/%f", convert_general)
 desc "Compress miscellaneous images and move to workspace"
-compress_images_task(:compress_miscellaneous_images, "zukan_workspace/master-images/*.jpg", "zukan_workspace/web/images/%f", convert_general)
+compress_images_task(:compress_miscellaneous_images, "#{workspace}/master-images/*.jpg", "#{workspace}/web/images/%f", convert_general)
 
 desc "Compress all images and move to workspace"
 task :compress_images => [:compress_fish_images, :compress_seisokuchi_images, :compress_miscellaneous_images]
 
 desc "Parse data in fish_data.txt, generating serialized Python and Dart data structures"
 task :generate_fish_list do
-	Dir.chdir 'zukan_workspace'
+	Dir.chdir workspace
 	dependencies = ['fish.py', 'fish_data.txt', 'generate_fish_list.py']
 	unless (uptodate?('fish_list.pkl', dependencies) and uptodate?('web/fish_list.dart', dependencies))
 		sh 'python generate_fish_list.py'
@@ -87,7 +91,7 @@ end
 
 desc "Generate html documents using the jinja2 templates engine"
 task :generate_pages => :generate_fish_list do
-	Dir.chdir 'zukan_workspace'
+	Dir.chdir workspace
 	dependencies = Rake::FileList.new('templates/**/*').include('fish.py')
 	unless uptodate?('web/ichiran.html', dependencies)
 		sh 'python generate_pages.py'
@@ -97,7 +101,7 @@ end
 
 desc "Compile Sass to CSS, using Compass"
 task :compile_sass do
-	Dir.chdir 'zukan_workspace'
+	Dir.chdir workspace
 	unless (uptodate?('web/stylesheets/main.css', ['sass/main.scss']))
 		sh 'compass compile'
 	end
@@ -109,14 +113,13 @@ task :build_workspace => [:compress_images, :generate_pages, :compile_sass]
 
 desc "Compile dart code and produce ready-to-deploy site with appcache and minified css"
 task :compile => :build_workspace do
-	Dir.chdir 'zukan_workspace'
+	Dir.chdir workspace
 	dependencies = Rake::FileList.new('web/**/*')
 	unless (uptodate?('build/web/ichiran.html', dependencies))
-		smart_compile_dart("web", "build/%p")
-		#sh 'pub build'
+		smart_compile_dart	
 		Dir.chdir '..'
 		rm_r 'site/static/', :force => true
-		cp_r 'zukan_workspace/build/web', 'site/static/'
+		cp_r "#{workspace}/build/web", 'site/static/'
 		sh 'python generate_appcache.py'
 		css_path = 'site/static/stylesheets/main.css'
 		File.write(css_path, CSSminify.compress(File.read(css_path)))
@@ -135,4 +138,14 @@ task :deploy => :compile do
 	Dir.chdir 'site'
 	sh 'appcfg.py --no_cookies update .'
 	Dir.chdir '..'
+end
+
+desc "Delete all generated files for a clean build"
+task :clean do
+	generated_textfiles = Rake::FileList.new.include("#{workspace}/web/**/*.html").include("#{workspace}/web/**/*.css").include("#{workspace}/web/fish_list.dart")
+	rm_f generated_textfiles
+	rm_f "#{workspace}/fish_list.pkl"
+	rm_rf "#{workspace}/web/images/"
+	rm_rf "#{workspace}/build/"
+	rm_rf "static/static/"
 end
