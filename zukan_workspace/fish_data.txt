@@ -437,3 +437,11 @@ rarity:3
 zoku:ヒラメ属
 ka:ヒラメ科
 latin:Paralichthys olivaceus (Temmink et Schlegel)
+
+name:shimayoshinobori
+takatu:chuu
+masuda:chuu
+rarity:3
+zoku:スズキ属
+ka:ハゼ科
+latin:Rhinogobius sp.CB
