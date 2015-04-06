@@ -92,7 +92,7 @@ end
 desc "Generate html documents using the jinja2 templates engine"
 task :generate_pages => :generate_fish_list do
 	Dir.chdir workspace
-	dependencies = Rake::FileList.new('templates/**/*').include('fish.py')
+	dependencies = Rake::FileList.new('templates/**/*').include('fish.py').include('fish_data.txt').include('generate_fish_list.py')
 	unless uptodate?('web/ichiran.html', dependencies)
 		sh 'python generate_pages.py'
 	end
