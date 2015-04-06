@@ -1,0 +1,17 @@
+{% extends "base/sakana.html" %}
+
+{% block article %}
+
+{% from 'fish-page-macros.html' import article_section %}
+
+{% call article_section("") %}
+<p>成魚サイズ：約3cm</p>
+{% endcall %}
+
+{% call article_section("") %}
+<p>川で一番普通に見られる巻貝。色は黒く長細い。</p>
+<p>ホタルの幼虫のエサになることで有名。</p>
+<p>殻の先は大きくなるにつれて削られて白くなる。</p>
+{% endcall %}
+
+{% endblock %}
