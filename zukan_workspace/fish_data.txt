@@ -150,7 +150,7 @@ zoku:カジカ属
 ka:カジカ科
 latin:Cottus pollux
 
-name:kamatuka
+name:kamatsuka
 takatsu:zyou,chuu
 masuda:zyou,chuu
 rarity:2
@@ -159,7 +159,7 @@ ka:コイ科カマツカ亜科
 latin:Pseudogobio
 
 name:koi
-takatu:chuu,ge
+takatsu:chuu,ge
 masuda:chuu,ge
 rarity:2
 zoku:コイ属
@@ -182,7 +182,7 @@ zoku:カワアナゴ属
 ka:ハゼ科カワアナゴ亜科
 latin:Eleotris oxycephala
 
-name:kawamutu
+name:kawamutsu
 takatsu:zyou,chuu,ge
 masuda:zyou,chuu,ge
 rarity:1
@@ -230,7 +230,7 @@ zoku:ミミズハゼ属
 ka:ハゼ科ハゼ亜科
 latin:Luciogobius guttatus
 
-name:mugituku
+name:mugitsuku
 takatsu:chuu
 masuda:
 rarity:3
@@ -326,7 +326,7 @@ zoku:ウキゴリ属
 ka:ハゼ科ハゼ亜科
 latin:Chaenogobius sp.2
 
-name:sunayatume
+name:sunayatsume
 takatsu:zyou
 masuda:
 rarity:5
@@ -406,7 +406,7 @@ zoku:サケ属
 ka:サケ科サケ亜科
 latin:Salmi (Oncorhynchus) masou masou
 
-name:utusemikajika
+name:utsusemikajika
 takatsu:chuu,ge,ka
 masuda:chuu,ge,ka
 rarity:3
@@ -415,7 +415,7 @@ ka:カジカ科
 latin:Cottus reinii
 
 name:hirasuzuki
-takatu:ka
+takatsu:ka
 masuda:
 rarity:3
 zoku:スズキ属
@@ -423,7 +423,7 @@ ka:スズキ科
 latin:Lateolabrax latusb Katayama
 
 name:shirogisu
-takatu: ge, ka
+takatsu: ge, ka
 masuda: ge, ka
 rarity:3
 zoku:キス属
@@ -431,7 +431,7 @@ ka:キス科
 latin:Sillago japonica (Temminck et Schlegel)
 
 name:hirame
-takatu:ka
+takatsu:ka
 masuda:
 rarity:3
 zoku:ヒラメ属
@@ -439,7 +439,7 @@ ka:ヒラメ科
 latin:Paralichthys olivaceus (Temmink et Schlegel)
 
 name:shimayoshinobori
-takatu:chuu
+takatsu:chuu
 masuda:chuu
 rarity:3
 zoku:スズキ属
@@ -447,7 +447,7 @@ ka:ハゼ科
 latin:Rhinogobius sp.CB
 
 name:nihonnishigame
-takatu:jou,chuu,ge
+takatsu:jou,chuu,ge
 masuda:jou,chuu,ge
 rarity:4
 zoku:
@@ -455,7 +455,7 @@ ka:イシガメ科
 latin:Mauremys japanica
 
 name:kusagame
-takatu:chuu,ge
+takatsu:chuu,ge
 masuda:chuu,ge
 rarity:4
 zoku:
@@ -463,7 +463,7 @@ ka:イシガメ科
 latin:Chinemys reevesii
 
 name:nihonsuppon
-takatu:chuu,ge
+takatsu:chuu,ge
 masuda:chuu,ge
 rarity:4
 zoku:
@@ -471,7 +471,7 @@ ka:スッポン科
 latin:Pelodiscus sinensis
 
 name:mishishippiakamimigame
-takatu:ge
+takatsu:ge
 masuda:ge
 rarity:2
 zoku:
@@ -479,7 +479,7 @@ ka:ヌマガメ科
 latin:Trachemys scripta elegans
 
 name:takahaya
-takatu:jou
+takatsu:jou
 masuda:jou
 rarity:2
 zoku:コイ属
@@ -487,15 +487,15 @@ ka:コイ科
 latin:Phoxinus oxycephalus jouyi
 
 name:kajikagaeru
-takatu:jou
+takatsu:jou
 masuda:jou
 rarity:4
 zoku:
 ka:
 latin:Buergeria buergeri
 
-name:tutigaeru
-takatu:chuu,ge
+name:tsutigaeru
+takatsu:chuu,ge
 masuda:chuu,ge
 rarity:1
 zoku:
@@ -503,7 +503,7 @@ ka:
 latin:Rana rugosa
 
 name:numagaeru
-takatu:jou,chuu
+takatsu:jou,chuu
 masuda:jou,chuu
 rarity:2
 zoku:
@@ -511,7 +511,7 @@ ka:
 latin:Fejervarya limnocharis
 
 name:akaharaimori
-takatu:jou,chuu
+takatsu:jou,chuu
 masuda:jou,chuu
 rarity:2
 zoku:
@@ -519,7 +519,7 @@ ka:
 latin:Cynops pyrrhogaster
 
 name:sawagani
-takatu:jou
+takatsu:jou
 masuda:jou
 rarity:3
 zoku:
@@ -527,7 +527,7 @@ ka:サワガニ科
 latin:Geothelphusa dehaani
 
 name:kehusaisogani
-takatu:ka
+takatsu:ka
 masuda:
 rarity:3
 zoku:
@@ -535,7 +535,7 @@ ka:モクズカニ科
 latin:Hemigrapsus intermedium
 
 name:kurobenkeigani
-takatu:ge,ka
+takatsu:ge,ka
 masuda:ge,ka
 rarity:2
 zoku:
@@ -543,7 +543,7 @@ ka:ベンケイガニ科
 latin:Chiromantes dehaani
 
 name:tenagaebi
-takatu:chuu,ge,ka
+takatsu:chuu,ge,ka
 masuda:chuu,ge,ka
 rarity:2
 zoku:
@@ -551,7 +551,7 @@ ka:テナガエビ科
 latin:Macrobrachium nipponense
 
 name:kawanina
-takatu:jou,chuu,ge
+takatsu:jou,chuu,ge
 masuda:jou,chuu,ge
 rarity:1
 zoku:
@@ -559,15 +559,15 @@ ka:カワニナ科
 latin:Semisulcospira libertina
 
 name:ishimakigai
-takatu:ge,ka
+takatsu:ge,ka
 masuda:ge,ka
 rarity:1
 zoku:
 ka:アマオブネガイ科
 latin:Clithon retropicta
 
-name:matukasagai
-takatu:chuu
+name:matsukasagai
+takatsu:chuu
 masuda:
 rarity:5
 zoku:
@@ -575,7 +575,7 @@ ka:イシガイ科
 latin:Pronodularia jananensis
 
 name:sayori
-takatu:ka
+takatsu:ka
 masuda:ka
 rarity:3
 zoku:サヨリ属
