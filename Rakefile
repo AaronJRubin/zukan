@@ -108,6 +108,8 @@ task :generate_fish_list do
 	Dir.chdir workspace
 	dependencies = ['fish.py', 'fish_data.txt', 'generate_fish_list.py']
 	unless (uptodate?('fish_list.pkl', dependencies) and uptodate?('web/fish_list.dart', dependencies))
+		unlock 'fish_list.pkl'
+		unlock 'web/fish_list.dart'
 		sh 'python generate_fish_list.py'
 	end
 	lock 'fish_list.pkl'
