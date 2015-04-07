@@ -57,6 +57,7 @@ def compress_images_task(name, source, pathmap, convert_function)
 		compressed_image = image.pathmap(pathmap)
 		file compressed_image => image do
 			mkdir_p compressed_image.pathmap('%d')
+			unlock compressed_image
 			sh convert_function.call(image, compressed_image)
 			lock compressed_image
 		end
