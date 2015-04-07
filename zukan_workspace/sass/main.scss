@@ -176,25 +176,20 @@ figure figcaption {
 
 /* Begin styles for elements included on every page (i.e., in base.html) */
 
-.navbar {
-  background-color: $secondary-background;
-  margin-bottom: 0;
+.navbar { 
 
-  nav {
-    text-align: right;
+  nav { 
 
     ul {
-      @include display-flex(inline-flex);
-      @include flex-direction(row);
-      @include flex-wrap(wrap);
       width: 100%;
 
       li {
+        @include box-sizing(border-box);
         display: inline-block;
         border-left: 1px solid black;
         border-bottom: 1px solid black;
-        @include box-sizing(border-box);
-        @include flex(1);
+        
+        width: 20%;
 
         &:nth-child(1) {
             border-left: none;
@@ -212,19 +207,18 @@ figure figcaption {
           padding: .5em 0;
 
           @media (max-width: 450px) {
-            font-size: 0.7em;
-            border-bottom: 1px solid black; /* The li bottom border gets "swallowed up" when font size decreases. Not sure why */
+            font-size: 0.7em; 
            }
         }
 
         @media (max-width: 750px) {
 
           &:nth-child(1), &:nth-child(2) {
-            @include flex-basis(50%); 
+            width: 50%;
           }
 
           &:nth-child(3), &:nth-child(4), &:nth-child(5) {
-            @include flex-basis(33%);
+            width: 33.3%;
           }
 
           &:nth-child(3) {
@@ -239,61 +233,6 @@ figure figcaption {
     display: none;
   }
 }
-/*.navbar {
-  background-color: $secondary-background;
-  border-radius: $rounded-border;
-  margin-bottom: 0;
-
-  nav {
-    width: 100%;
-  }
-
-  ol {
-    @include display-flex(inline-flex);
-    @include flex-direction(row);
-    @include justify-content(flex-end);
-    width: 100%;
-  }
-
-  a {
-    display: inline-block;
-    padding: .3em 2vw;
-  }
-
-  li {
-    @include box-sizing(border-box);
-    background-color: $interactable;
-    border-left-color: #000;
-    border-left-style: solid;
-    border-left-width: .3vw;
-    display: inline-block;
-    float: left;
-
-    &:hover {
-      background-color: $highlighted;
-    }
-
-  }
-
-  @media (max-width: 550px) {
-    li {
-      text-align: center;
-      width: 33.3%;
-
-      &:first-child {
-        border-left-width: 0;   
-      }
-
-      a {
-        font-size: $small-font-size;
-      }
-    }
-  }
-
-  @media print {
-    display: none;
-  }
-}*/
 
 #appcache-notifications {
   display: none;
