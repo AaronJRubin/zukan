@@ -5,7 +5,7 @@ build the site from uncompressed images, templates, SCSS, and Dart code in the [
 
 #Dependencies for Compilation
 
-You will need the following tools installed and on your PATH.
+You will need the following tools installed and on your PATH. They can all be easily installed with HomeBrew on a Mac (google around for the details), except for the Python jinja2 library should should be installed via pip or easy_install.
 
 * [Ruby](https://www.ruby-lang.org/en/documentation/installation/), preferably with [Bundler](http://bundler.io/) installed via `gem install bundler` to manage dependencies.
 * [The Dart SDK](https://www.dartlang.org/tools/sdk/). You will most likely need to manually add dark-sdk/bin/ (contained within the Dart installation directory) to your PATH.
@@ -14,6 +14,8 @@ You will need the following tools installed and on your PATH.
 
 # How to Work on this Project
 
-As you work on this project, you will be spending most of your time in the [zukan_workspace](zukan_workspace) directory. As you modify the data in [fish_data.txt](zukan_workspace/fish_data.txt) (information encoding the habitats, rarities, and classification information of various fish), and as you modify the [templates](zukan_workspace/templates) to write new articles and change the layout of fish articles, run `bundle exec rake build_workspace` to see those changes reflected in the HTML documents in the workspace. The [zukan_workspace](zukan_workspace) directory can be opened as a project within Dart Editor, and you will probably want to do that as you modify the scripts, such as [fish_page.dart](zukan_workspace/web/sakana/fish_page.dart) and [ichiran.dart](zukan_workspace/web/ichiran.dart), that add dynamicism to the pages. Compile the code with `bundle exec rake compile` to get a static website that can be run in every browser and on any platform, stored in site/static.
+As you work on this project, you will be spending most of your time in the [zukan_workspace](zukan_workspace) directory. As you modify the data in [fish_data.txt](zukan_workspace/fish_data.txt) (information encoding the habitats, rarities, and classification information of various fish), and as you modify the [templates](zukan_workspace/templates) to write new articles and change the layout of fish articles, run `bundle exec rake build_workspace` to see those changes reflected in the HTML documents in the workspace. The [zukan_workspace](zukan_workspace) directory can be opened as a project within Dart Editor, and you will probably want to do that as you modify the scripts, such as [fish_page.dart](zukan_workspace/web/sakana/fish_page.dart) and [ichiran.dart](zukan_workspace/web/ichiran.dart), that add dynamicism to the pages. Compile the code with `bundle exec rake compile` to get a static website that can be run in every browser and on any platform, stored in site/static. Note that generated files (i.e., files that you should not be editing) are appropriately marked as read-only to make it clear where you should be working.
+
+Image files are stored in [zukan_workspace/master-images](zukan_workspace/master-images) and automatically compressed by Rake and moved into [zukan_workspace/web/images](zukan_workspace/web/images) when you run `bundle exec rake build_workspace`.
 
 
