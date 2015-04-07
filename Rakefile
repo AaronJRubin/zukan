@@ -18,7 +18,7 @@ def smart_compile_dart
 	if representative_file.nil? or not uptodate?(representative_file, dart_files) # a dart file has been modified
 		unlock Rake::FileList.new('build/**/*')
 		sh 'pub build'
-		lock Rake::FileList.new('build/**/*')
+		lock Rake::FileList.new('build/**/*').exclude { |path| File.directory?(path) }
 	else
 		non_dart_files = Rake::FileList.new("web/**/*").exclude("web/**/*.dart").exclude { |path| File.directory?(path) }
 		puts non_dart_files
