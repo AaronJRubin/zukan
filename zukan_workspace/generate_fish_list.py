@@ -9,7 +9,7 @@ from fish import Fish, Location
 
 def generate_defaults():
     res = {}
-    fish_image_folders = next(os.walk('master-images/sakana'))[1]
+    fish_image_folders = next(os.walk('master-images/ikimono'))[1]
     for fish_image_folder in fish_image_folders:
         kana = romkan.to_kana(fish_image_folder)
         res[fish_image_folder] = Fish(romaji = fish_image_folder, kana = kana)

@@ -83,7 +83,7 @@ convert_fish = lambda do |fish, compressed_fish|
 end
 
 desc "Compress images of fish in master-images and move to workspace"
-compress_images_task(:compress_fish_images, "#{workspace}/master-images/sakana/**/*.jpg", "#{workspace}/web/images/%-2d/%f", convert_fish)
+compress_images_task(:compress_fish_images, "#{workspace}/master-images/ikimono/**/*.jpg", "#{workspace}/web/images/%-2d/%f", convert_fish)
 
 quality_override = Hash.new('57')
 quality_override['takatsu-chuu.jpg'] = '75'

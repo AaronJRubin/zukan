@@ -33,8 +33,14 @@ def write(path, string):
 
 # Build templates and write them to destination
 
+def maybe_mkdir(path):
+    if not os.path.exists(path):
+        os.mkdir(path)
+
+maybe_mkdir(os.path.join(dest, "ikimono"))
+
 ichiran = render_str("base/ichiran.html", fish = fish_list)
-write(os.path.join(dest, "ichiran.html"), ichiran.encode('utf8'))
+write(os.path.join(dest, "ikimono/ichiran.html"), ichiran.encode('utf8'))
 
 def render_static_page(name):
 	page = render_str("base/" + name + ".html")
@@ -44,22 +50,16 @@ render_static_page("home")
 render_static_page("contact")
 render_static_page("sankoubunken")
 
-def maybe_mkdir(path):
-    if not os.path.exists(path):
-        os.mkdir(path)
-
-maybe_mkdir(os.path.join(dest, "sakana"))
-
 for fish in fish_list:
 	template = os.path.join("base/sakana", fish.romaji + ".html")
 	template_path = os.path.join("templates", template)
 	if os.path.exists(template_path):
 		page = render_str(template, fish = fish, background_class = fish.starting_location())
-		write(os.path.join(dest, "sakana", fish.romaji + ".html"), page.encode('utf8'))
+		write(os.path.join(dest, "ikimono", fish.romaji + ".html"), page.encode('utf8'))
 	else:
                 print("No article found for " + fish.romaji)
 		page = render_str("base/sakana/generic.html", fish = fish, background_class = fish.starting_location())
-		write(os.path.join(dest, "sakana", fish.romaji + ".html"), page.encode('utf8'))
+		write(os.path.join(dest, "ikimono", fish.romaji + ".html"), page.encode('utf8'))
 
 mamechishiki_pages = [path.replace("templates/", "")  for path in glob.glob("templates/base/mamechishiki/*.html")]
 

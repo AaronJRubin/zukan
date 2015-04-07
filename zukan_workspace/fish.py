@@ -42,10 +42,10 @@ class Fish:
         self.rarity = rarity
 
     def get_link(self):
-        return "sakana/" + self.romaji + ".html"
+        return "/ikimono/" + self.romaji + ".html"
 
     def image(self, suffix):
-        return os.path.join("/images/sakana", self.romaji, self.romaji + "-" + suffix + ".jpg")
+        return os.path.join("/images/ikimono", self.romaji, self.romaji + "-" + suffix + ".jpg")
 
     def takatsu_zyou(self):
         return Location.ZYOU in self.location.get_takatsu()
