@@ -4,12 +4,21 @@ require 'htmlcompressor'
 
 workspace = 'zukan_workspace'
 
+def maybe_chmod(mode, files)
+	if files.class == String
+		files = [files]
+	end
+	files.select { |file| File.file? file } . each do |file|
+		chmod mode, file, verbose: false
+	end
+end
+
 def lock(files)
-	chmod "a=rx", files, verbose: false
+	maybe_chmod "a=rx", files
 end
 
 def unlock(files)
-	chmod "a=rwx", files, verbose: false
+	maybe_chmod "a=rwx", files
 end
 
 def smart_compile_dart
@@ -25,9 +34,7 @@ def smart_compile_dart
 		non_dart_files.each do |file|
 			new_path = file.pathmap("build/%p")
 			mkdir_p new_path.pathmap("%d")
-			if File.file? new_path
-				unlock new_path
-			end
+			unlock new_path
 			cp file, new_path
 			lock new_path
 		end
@@ -124,9 +131,7 @@ task :compile_sass do
 	Dir.chdir workspace
 	css_file = 'web/stylesheets/main.css'
 	unless (uptodate?(css_file, ['sass/main.scss']))
-		if File.file? css_file
-			unlock css_file
-		end
+		unlock css_file
 		sh 'compass compile'
 	end
 	lock css_file
