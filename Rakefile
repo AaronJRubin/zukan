@@ -8,12 +8,17 @@ def lock(files)
 	chmod "a=rx", files
 end
 
+def unlock(files)
+	chmod "a=rwx", files
+end
+
 def smart_compile_dart
 	source_dir = "web"
 	build_dir_pathmap = "build/%p"
 	dart_files = Rake::FileList.new(source_dir.pathmap("%p/**/*.dart"))
 	representative_file = Rake::FileList.new(source_dir.pathmap(build_dir_pathmap).pathmap("%p/**/*.dart.js")).first
 	if representative_file.nil? or not uptodate?(representative_file, dart_files) # a dart file has been modified
+		unlock Rake::FileList.new('build/**/*')
 		sh 'pub build'
 		lock Rake::FileList.new('build/**/*')
 	else
@@ -21,7 +26,7 @@ def smart_compile_dart
 		non_dart_files.each do |file|
 			new_path = file.pathmap(build_dir_pathmap)
 			mkdir_p new_path.pathmap("%d")
-			cp_r file, new_path
+			cp file, new_path
 		end
 	end
 end
@@ -135,12 +140,15 @@ task :compile => :build_workspace do
 		sh 'python generate_appcache.py'
 		lock 'site/static/takatsugawa-zukan.appcache'
 		css_path = 'site/static/stylesheets/main.css'
+		unlock css_path
 		File.write(css_path, CSSminify.compress(File.read(css_path)))
 		lock css_path
 		compressor = HtmlCompressor::Compressor.new
 		htmlFiles = Rake::FileList.new('site/static/**/*.html')
 		htmlFiles.each do |file|
+			unlock file
 			File.write(file, compressor.compress(File.read(file)))
+			lock file
 		end
 	else
 		Dir.chdir '..'
