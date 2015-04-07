@@ -124,7 +124,9 @@ task :compile_sass do
 	Dir.chdir workspace
 	css_file = 'web/stylesheets/main.css'
 	unless (uptodate?(css_file, ['sass/main.scss']))
-		unlock css_file
+		if File.file? css_file
+			unlock css_file
+		end
 		sh 'compass compile'
 	end
 	lock css_file
