@@ -8,7 +8,7 @@ def maybe_chmod(mode, files)
 	if files.class == String
 		files = [files]
 	end
-	files.select { |file| File.file? file } . each do |file|
+	files.select { |file| File.exist? file } . each do |file|
 		chmod mode, file, verbose: false
 	end
 end
@@ -22,14 +22,15 @@ def unlock(files)
 end
 
 def smart_compile_dart
-	dart_files = Rake::FileList.new("web/**/*.dart")
+	dart_glob = "web/**/*.dart"
+	dart_files = Rake::FileList.new(dart_glob)
 	representative_file = Rake::FileList.new("build/web/**/*.dart.js").first
 	if representative_file.nil? or not uptodate?(representative_file, dart_files) # a dart file has been modified
 		unlock Rake::FileList.new('build/**/*')
 		sh 'pub build'
 		lock Rake::FileList.new('build/**/*').exclude { |path| File.directory?(path) }
 	else
-		non_dart_files = Rake::FileList.new("web/**/*").exclude("web/**/*.dart").exclude { |path| File.directory?(path) }
+		non_dart_files = Rake::FileList.new("web/**/*").exclude(dart_glob).exclude { |path| File.directory?(path) }
 		puts non_dart_files
 		non_dart_files.each do |file|
 			new_path = file.pathmap("build/%p")
