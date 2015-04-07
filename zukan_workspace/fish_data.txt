@@ -573,3 +573,11 @@ rarity:5
 zoku:
 ka:イシガイ科
 latin:Pronodularia jananensis
+
+name:sayori
+takatu:ka
+masuda:ka
+rarity:3
+zoku:サヨリ属
+ka:サヨリ科
+latin:Hyporhamplus sajori
