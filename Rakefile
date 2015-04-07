@@ -13,20 +13,23 @@ def unlock(files)
 end
 
 def smart_compile_dart
-	source_dir = "web"
-	build_dir_pathmap = "build/%p"
-	dart_files = Rake::FileList.new(source_dir.pathmap("%p/**/*.dart"))
-	representative_file = Rake::FileList.new(source_dir.pathmap(build_dir_pathmap).pathmap("%p/**/*.dart.js")).first
+	dart_files = Rake::FileList.new("web/**/*.dart")
+	representative_file = Rake::FileList.new("build/web/**/*.dart.js").first
 	if representative_file.nil? or not uptodate?(representative_file, dart_files) # a dart file has been modified
 		unlock Rake::FileList.new('build/**/*')
 		sh 'pub build'
 		lock Rake::FileList.new('build/**/*')
 	else
-		non_dart_files = Rake::FileList.new(source_dir.pathmap("%p/**/*")).exclude("*.dart").exclude { |path| File.directory?(path) }
+		non_dart_files = Rake::FileList.new("web/**/*").exclude("web/**/*.dart").exclude { |path| File.directory?(path) }
+		puts non_dart_files
 		non_dart_files.each do |file|
-			new_path = file.pathmap(build_dir_pathmap)
+			new_path = file.pathmap("build/%p")
 			mkdir_p new_path.pathmap("%d")
+			if File.file? new_path
+				unlock new_path
+			end
 			cp file, new_path
+			lock new_path
 		end
 	end
 end
@@ -109,6 +112,7 @@ task :generate_pages => :generate_fish_list do
 	Dir.chdir workspace
 	dependencies = Rake::FileList.new('templates/**/*').include('fish.py').include('fish_data.txt').include('generate_fish_list.py')
 	unless uptodate?('web/ichiran.html', dependencies)
+		unlock Rake::FileList.new('web/**/*.html')
 		sh 'python generate_pages.py'
 	end
 	lock Rake::FileList.new('web/**/*.html')
@@ -118,10 +122,12 @@ end
 desc "Compile Sass to CSS, using Compass"
 task :compile_sass do
 	Dir.chdir workspace
-	unless (uptodate?('web/stylesheets/main.css', ['sass/main.scss']))
+	css_file = 'web/stylesheets/main.css'
+	unless (uptodate?(css_file, ['sass/main.scss']))
+		unlock css_file
 		sh 'compass compile'
 	end
-	lock 'web/stylesheets/main.css'
+	lock css_file
 	Dir.chdir '..'
 end
 
