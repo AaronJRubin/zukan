@@ -2,7 +2,7 @@ var appcache = window.applicationCache;
 
 appcache.addEventListener("downloading", function(event) {
 		var notifications = document.querySelector("#appcache-notifications");	
-		notifications.innerHTML = 'キャッシュ更新中！しばらくこのページに残ってください。<span id="downloaded">0</span>/<span id="total">244</span>ダウンロード済み。';
+		notifications.innerHTML = 'キャッシュ更新中！しばらくこのページに残ってください。<span id="downloaded">0</span>/<span id="total">308</span>ダウンロード済み。';
 		notifications.classList.toggle("displayed");
 		var currentTotal = 244;
 		var downloaded = document.querySelector("#downloaded");
