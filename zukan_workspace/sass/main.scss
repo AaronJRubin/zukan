@@ -179,51 +179,48 @@ figure figcaption {
 
 /* Begin styles for elements included on every page (i.e., in base.html) */
 
-nav { 
+nav ul {
+  width: 100%;
 
-  ul {
-    width: 100%;
+  li {
+    @include box-sizing(border-box);
+    display: inline-block;
+    border-left: 1px solid #000;
+    border-bottom: 1px solid #000;
 
-    li {
-      @include box-sizing(border-box);
+    width: 20%;
+
+    &:nth-child(1) {
+      border-left: none;
+    }
+
+    a { 
+      background-color: $interactable;
+      &:hover {
+        background-color: $highlighted;
+      }
+      text-align: center; 
       display: inline-block;
-      border-left: 1px solid #000;
-      border-bottom: 1px solid #000;
+      width: 100%;
+      padding: .5em 0;
 
-      width: 20%;
+      @media (max-width: 450px) {
+        font-size: 0.7em; 
+      }
+    }
 
-      &:nth-child(1) {
+    @media (max-width: 1150px) {
+
+      &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+        width: 33.3%;
+      }
+
+      &:nth-child(4), &:nth-child(5) {
+        width: 50%;
+      }
+
+      &:nth-child(4) {
         border-left: none;
-      }
-
-      a { 
-        background-color: $interactable;
-        &:hover {
-          background-color: $highlighted;
-        }
-        text-align: center; 
-        display: inline-block;
-        width: 100%;
-        padding: .5em 0;
-
-        @media (max-width: 450px) {
-          font-size: 0.7em; 
-        }
-      }
-
-      @media (max-width: 750px) {
-
-        &:nth-child(1), &:nth-child(2) {
-          width: 50%;
-        }
-
-        &:nth-child(3), &:nth-child(4), &:nth-child(5) {
-          width: 33.3%;
-        }
-
-        &:nth-child(3) {
-          border-left: none;
-        }
       }
     }
   }
@@ -277,7 +274,7 @@ nav {
   .signature p, {
     text-indent: 0;
     text-align: right;
-    
+
     @media (max-width: 450px) {
       font-size: 0.7em;
     }
