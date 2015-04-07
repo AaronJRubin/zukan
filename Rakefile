@@ -4,6 +4,10 @@ require 'htmlcompressor'
 
 workspace = 'zukan_workspace'
 
+def lock(files)
+	chmod "a=rx", files
+end
+
 def smart_compile_dart
 	source_dir = "web"
 	build_dir_pathmap = "build/%p"
@@ -11,6 +15,7 @@ def smart_compile_dart
 	representative_file = Rake::FileList.new(source_dir.pathmap(build_dir_pathmap).pathmap("%p/**/*.dart.js")).first
 	if representative_file.nil? or not uptodate?(representative_file, dart_files) # a dart file has been modified
 		sh 'pub build'
+		lock Rake::FileList.new('build/**/*')
 	else
 		non_dart_files = Rake::FileList.new(source_dir.pathmap("%p/**/*")).exclude("*.dart").exclude { |path| File.directory?(path) }
 		non_dart_files.each do |file|
@@ -35,6 +40,7 @@ def compress_images_task(name, source, pathmap, convert_function)
 		file compressed_image => image do
 			mkdir_p compressed_image.pathmap('%d')
 			sh convert_function.call(image, compressed_image)
+			lock compressed_image
 		end
 	end
 end
@@ -86,6 +92,8 @@ task :generate_fish_list do
 	unless (uptodate?('fish_list.pkl', dependencies) and uptodate?('web/fish_list.dart', dependencies))
 		sh 'python generate_fish_list.py'
 	end
+	lock 'fish_list.pkl'
+	lock 'web/fish_list.dart'
 	Dir.chdir '..'
 end
 
@@ -96,6 +104,7 @@ task :generate_pages => :generate_fish_list do
 	unless uptodate?('web/ichiran.html', dependencies)
 		sh 'python generate_pages.py'
 	end
+	lock Rake::FileList.new('web/**/*.html')
 	Dir.chdir '..'
 end
 
@@ -105,6 +114,7 @@ task :compile_sass do
 	unless (uptodate?('web/stylesheets/main.css', ['sass/main.scss']))
 		sh 'compass compile'
 	end
+	lock 'web/stylesheets/main.css'
 	Dir.chdir '..'
 end
 
@@ -121,8 +131,10 @@ task :compile => :build_workspace do
 		rm_r 'site/static/', :force => true
 		cp_r "#{workspace}/build/web", 'site/static/'
 		sh 'python generate_appcache.py'
+		lock 'site/static/takatsugawa-zukan.appcache'
 		css_path = 'site/static/stylesheets/main.css'
 		File.write(css_path, CSSminify.compress(File.read(css_path)))
+		lock css_path
 		compressor = HtmlCompressor::Compressor.new
 		htmlFiles = Rake::FileList.new('site/static/**/*.html')
 		htmlFiles.each do |file|
