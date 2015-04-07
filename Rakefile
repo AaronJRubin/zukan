@@ -5,11 +5,11 @@ require 'htmlcompressor'
 workspace = 'zukan_workspace'
 
 def lock(files)
-	chmod "a=rx", files
+	chmod "a=rx", files, verbose: false
 end
 
 def unlock(files)
-	chmod "a=rwx", files
+	chmod "a=rwx", files, verbose: false
 end
 
 def smart_compile_dart
