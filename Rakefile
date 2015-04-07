@@ -134,10 +134,8 @@ task :compile_sass do
 	Dir.chdir workspace
 	css_file = 'web/stylesheets/main.css'
 	unless (uptodate?(css_file, ['sass/main.scss']))
-		unlock css_file
 		sh 'compass compile'
-	end
-	lock css_file
+	end	
 	Dir.chdir '..'
 end
 
@@ -178,12 +176,16 @@ task :deploy => :compile do
 	Dir.chdir '..'
 end
 
-desc "Delete all generated files for a clean build"
-task :clean do
+desc "Delete all generated files, except for compressed image files"
+task :clean_nonimage do
 	generated_textfiles = Rake::FileList.new.include("#{workspace}/web/**/*.html").include("#{workspace}/web/**/*.css").include("#{workspace}/web/fish_list.dart")
 	rm_f generated_textfiles
 	rm_f "#{workspace}/fish_list.pkl"
-	rm_rf "#{workspace}/web/images/"
 	rm_rf "#{workspace}/build/"
-	rm_rf "static/static/"
+	rm_rf "site/static/"
+end
+
+desc "Delete all generated files for a clean build"
+task :clean => :clean_nonimage do
+	rm_rf "#{workspace}/web/images/"
 end
