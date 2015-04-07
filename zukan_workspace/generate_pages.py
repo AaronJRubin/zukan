@@ -5,6 +5,7 @@ import os
 import jinja2
 import cPickle as pickle
 import sys
+import glob
 
 dest = "web"
 
@@ -42,15 +43,13 @@ def render_static_page(name):
 render_static_page("home")
 render_static_page("contact")
 render_static_page("sankoubunken")
-render_static_page("mamechishiki")
-"""
-home = render_str("base/home.html");
-write(os.path.join(dest, "home.html"), home.encode('utf8'))
-contact = render_str("base/contact.html")
-write(os.path.join(dest, "contact.html"), contact.encode('utf8'))
-kaisetsu = render_str("base/kaisetsu.html")
-write(os.path.join(dest, "kaisetsu.html"), kaisetsu.encode('utf8'))
-"""
+
+def maybe_mkdir(path):
+    if not os.path.exists(path):
+        os.mkdir(path)
+
+maybe_mkdir(os.path.join(dest, "sakana"))
+
 for fish in fish_list:
 	template = os.path.join("base/sakana", fish.romaji + ".html")
 	template_path = os.path.join("templates", template)
@@ -62,3 +61,10 @@ for fish in fish_list:
 		page = render_str("base/sakana/generic.html", fish = fish, background_class = fish.starting_location())
 		write(os.path.join(dest, "sakana", fish.romaji + ".html"), page.encode('utf8'))
 
+mamechishiki_pages = [path.replace("templates/", "")  for path in glob.glob("templates/base/mamechishiki/*.html")]
+
+maybe_mkdir(os.path.join(dest, "mamechishiki"))
+
+for mamechishiki_page in mamechishiki_pages:
+    page = render_str(mamechishiki_page)
+    write(os.path.join(dest, "mamechishiki", os.path.basename(mamechishiki_page)), page.encode('utf8'))
