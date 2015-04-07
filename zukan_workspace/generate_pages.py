@@ -47,7 +47,7 @@ def render_static_page(name):
 	write(os.path.join(dest, name + ".html"), page.encode('utf8'))
 
 render_static_page("home")
-render_static_page("contact")
+render_static_page("about")
 render_static_page("sankoubunken")
 
 for fish in fish_list:
