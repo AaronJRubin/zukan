@@ -1,3 +1,5 @@
+# This script is called by the Rakefile as part of the compile task; do not execute it directly, but feel free to edit it.
+
 from datetime import datetime
 import os
 

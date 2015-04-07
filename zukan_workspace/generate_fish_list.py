@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+# This script is called appropriately by the Rakefile; do not execute it directly, but feel free to edit it.
 
 import romkan
 import os

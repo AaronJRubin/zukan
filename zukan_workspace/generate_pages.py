@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+# This script is called appropriately by the Rakefile; do not execute it directly, but feel free to edit it.
 
 import os
 import jinja2
