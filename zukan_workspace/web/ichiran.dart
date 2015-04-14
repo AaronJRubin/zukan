@@ -1,9 +1,9 @@
 import 'dart:html';
 import 'fish.dart';
 
-List<CheckboxInputElement> includeCheckboxes;
-List<CheckboxInputElement> excludeCheckboxes;
-List<LIElement> fishTiles;
+ElementList<CheckboxInputElement> includeCheckboxes;
+ElementList<CheckboxInputElement> excludeCheckboxes;
+ElementList<LIElement> fishTiles;
 
 void main() {
   includeCheckboxes = document.querySelectorAll("#include .search-checkbox");
