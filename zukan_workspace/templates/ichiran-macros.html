@@ -11,6 +11,6 @@
 {% macro fish_tile(fish) %}
 <a href="{{fish.get_link()}}" class="fish-tile">
 	<img src="{{fish.image('ichiran')}}" alt="">
-	<span>{{fish.kana}}</span>
+	<div>{{fish.kana}}</div>
 </a>
 {% endmacro %}

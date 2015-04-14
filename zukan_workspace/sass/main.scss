@@ -138,20 +138,15 @@ figure {
     min-width: 100%;
   }
 
-  span {
+  div {
     margin-top: .1em;
+    text-align: center;
   }
 
   &:hover {
     @include transform(scale(1.1, 1.1));
     border-color: $highlighted;
   }
-}
-
-.fish-tile span,
-figure figcaption {
-  display: block;
-  text-align: center;
 }
 
 .jumbo-link {
