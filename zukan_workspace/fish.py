@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import os
+from PIL import Image
 
 class Location:
 
@@ -92,3 +93,9 @@ class Fish:
 
     def rarity_stars(self):
         return ("&#x2605;" * self.rarity) + ("&#x2606;" * (5 - self.rarity))
+
+    def is_long(self):
+        ichiran_img = os.path.join("web", self.image('ichiran')[1:]) # remove root slash  
+        width, height = Image.open(ichiran_img).size
+        return height * 2 < width
+
