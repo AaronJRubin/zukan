@@ -481,6 +481,20 @@ main.fish-page {
     width: 48%; 
   }
 
+  @media (max-width: 415px) {
+    img.long {
+      width: 100%;
+    }
+    
+    img.long + .classification {
+      width: 100%;
+    }
+    
+    table {
+      font-size: 0.9em;
+    }
+  }
+
   img {
     @include align-self(center);
     border: 1px solid $text-color;
@@ -488,6 +502,7 @@ main.fish-page {
     @media print {
       border-color: $print-text-color;
     }
+
   }
 
   .classification {

@@ -77,6 +77,10 @@ convert_fish = lambda do |fish, compressed_fish|
 		height = dimensions[1]	
 		aspect_ratio = height.fdiv(width)	
 		header_display_height = HEADER_WIDTH * aspect_ratio	
+		is_long = height * 2 < width # this determines whether the fish will be at 100% width on screens with size 415 px or less
+		if is_long
+			header_display_height = 390 * aspect_ratio
+		end
 		needed_height = [ICHIRAN_HEIGHT, header_display_height].max	
 		resize = "x#{needed_height}"
 	else
