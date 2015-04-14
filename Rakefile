@@ -2,6 +2,8 @@ require 'dimensions'
 require 'cssminify'
 require 'htmlcompressor'
 
+task :default => :compile
+
 workspace = 'zukan_workspace'
 
 def maybe_chmod(mode, files)
