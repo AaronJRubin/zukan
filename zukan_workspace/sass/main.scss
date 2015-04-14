@@ -130,16 +130,15 @@ figure {
 }
 
 .fish-tile {
-  height: 150px;
 
   img {
-    max-height: 75%;
+    max-height: 112px;
     max-width: 100%;
     min-width: 100%;
   }
 
   div {
-    margin-top: .1em;
+    margin: .1em 0 .2em;
     text-align: center;
   }
 
