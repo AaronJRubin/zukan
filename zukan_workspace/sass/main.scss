@@ -106,30 +106,15 @@ a:visited {
   }
 }
 
-.fish-tile, 
-figure {
+.fish-tile {
+
   border-color: $image-border-color;
   border-radius: $rounded-border;
   border-style: solid;
   border-width: 2px;
   display: inline-block;
   margin: .5vw;
-}
 
-figure {
-  max-width: 48%;
-
-  img {
-    max-height: 100%;
-    max-width: 100%;
-  }
-
-  figcaption {
-    margin: .2em 0;
-  }
-}
-
-.fish-tile {
 
   img {
     max-height: 112px;
