@@ -76,7 +76,7 @@ masuda:zyou,chuu
 rarity:2
 zoku:ギギ属
 ka:ギギ科
-latin:2
+latin:Pseudobagrus nudiceps
 
 name:gogi
 takatsu:zyou
@@ -156,7 +156,7 @@ masuda:zyou,chuu
 rarity:2
 zoku:カマツカ属
 ka:コイ科カマツカ亜科
-latin:Pseudogobio
+latin:Pseudogobio esocinus esocinus
 
 name:koi
 takatsu:chuu,ge
@@ -359,7 +359,7 @@ ka:ハゼ科ハゼ亜科
 latin:Tridentiner obscurus
 
 name:touyosinobori
-takatsu:ge
+takatsu:chuu
 masuda:
 rarity:4
 zoku:ヨシノボリ属
@@ -442,7 +442,7 @@ name:shimayoshinobori
 takatsu:chuu
 masuda:chuu
 rarity:3
-zoku:スズキ属
+zoku:ヨシノボリ属
 ka:ハゼ科
 latin:Rhinogobius sp.CB
 
@@ -450,7 +450,7 @@ name:nihonnishigame
 takatsu:jou,chuu,ge
 masuda:jou,chuu,ge
 rarity:4
-zoku:
+zoku:イシガメ属
 ka:イシガメ科
 latin:Mauremys japanica
 
@@ -458,7 +458,7 @@ name:kusagame
 takatsu:chuu,ge
 masuda:chuu,ge
 rarity:4
-zoku:
+zoku:イシガメ属
 ka:イシガメ科
 latin:Chinemys reevesii
 
@@ -466,7 +466,7 @@ name:nihonsuppon
 takatsu:chuu,ge
 masuda:chuu,ge
 rarity:4
-zoku:
+zoku:キョクトウスッポン属
 ka:スッポン科
 latin:Pelodiscus sinensis
 
@@ -474,7 +474,7 @@ name:mishishippiakamimigame
 takatsu:ge
 masuda:ge
 rarity:2
-zoku:
+zoku:アカミミガメ属
 ka:ヌマガメ科
 latin:Trachemys scripta elegans
 
@@ -490,39 +490,39 @@ name:kajikagaeru
 takatsu:jou
 masuda:jou
 rarity:4
-zoku:
-ka:
+zoku:カジカガエル属
+ka:アオガエル科
 latin:Buergeria buergeri
 
 name:tsutigaeru
 takatsu:chuu,ge
 masuda:chuu,ge
 rarity:1
-zoku:
-ka:
+zoku:アカガエル属
+ka:アカガエル科
 latin:Rana rugosa
 
 name:numagaeru
 takatsu:jou,chuu
 masuda:jou,chuu
 rarity:2
-zoku:
-ka:
+zoku:ヌマガエル属
+ka:ヌマガエル科
 latin:Fejervarya limnocharis
 
 name:akaharaimori
 takatsu:jou,chuu
 masuda:jou,chuu
 rarity:2
-zoku:
-ka:
+zoku:トウヨウイモリ属
+ka:イモリ科
 latin:Cynops pyrrhogaster
 
 name:sawagani
 takatsu:jou
 masuda:jou
 rarity:3
-zoku:
+zoku:サワガニ属
 ka:サワガニ科
 latin:Geothelphusa dehaani
 
@@ -530,7 +530,7 @@ name:kehusaisogani
 takatsu:ka
 masuda:
 rarity:3
-zoku:
+zoku:イソガニ属
 ka:モクズカニ科
 latin:Hemigrapsus intermedium
 
@@ -538,7 +538,7 @@ name:kurobenkeigani
 takatsu:ge,ka
 masuda:ge,ka
 rarity:2
-zoku:
+zoku:アカテガニ属
 ka:ベンケイガニ科
 latin:Chiromantes dehaani
 
