@@ -1,0 +1,20 @@
+{% extends "base/sakana.html" %}
+
+{% block article %}
+
+{% from 'fish-page-macros.html' import article_section %}
+
+{% call article_section("") %}
+<p>成体サイズ：約5cm</p>
+{% endcall %}
+
+{% call article_section(fish.image('mae')) %}
+<p>殻の形はまるっこく、色は褐色。</p>
+<p>殻の表面に細かな穴の横すじがある。</p>
+<p>田んぼや水路に住んでいる普通のタニシ。>/p?
+{% endcall %}
+
+
+
+
+{% endblock %}

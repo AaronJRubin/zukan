@@ -1,0 +1,21 @@
+{% extends "base/sakana.html" %}
+
+{% block article %}
+
+{% from 'fish-page-macros.html' import article_section %}
+{% call article_section("") %}
+<p>成魚サイズ：約3cm</p>
+<p>地方名：ガンツー</p>
+{% endcall %}
+
+{% call article_section(fish.image('te')) %}
+<p>ハサミが赤い。</p>
+
+{% endcall %}
+
+{% call article_section(fish.image('kao')) %}
+<p>ベンケイガニとよく似ているが甲の表面はデコボコではない。</p>
+<p>そっくりなベンケイガニとは甲羅のふちに切れ込みがあるかないかで見分ける。</p>
+{% endcall %}
+
+{% endblock %}

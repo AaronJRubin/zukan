@@ -330,8 +330,8 @@ name:sunayatsume
 takatsu:zyou
 masuda:
 rarity:5
-zoku:ウナギヤツメ属
-ka:ウナギヤツメ科
+zoku:ヤツメウナギ属
+ka:ヤツメウナギ科
 latin:Lampetra (Lethenteron) reissneri
 
 name:suzuki
@@ -581,3 +581,51 @@ rarity:3
 zoku:サヨリ属
 ka:サヨリ科
 latin:Hyporhamplus sajori
+
+name:tonosamagaeru
+takatsu:jou,chuu,ge
+masuda:jou,chuu,ge
+rarity:2
+zoku:トノサマカエル属
+ka:アカガエル科
+latin:Rana nigromaculata
+
+name:amerikazarigani
+takatsu:chuu,ge
+masuda:chuu,ge
+rarity:3
+zoku:アメリカザリガニ属
+ka:アメリカザリガニ科
+latin:Procambarus clarkii
+
+name:marutanishi
+takatsu:chuu,ge
+masuda:chuu,ge
+rarity:2
+zoku:タニシ属
+ka:タニシ科
+latin:Cipangopaludina japonica
+
+name:monoaragai
+takatsu:chuu,ge
+masuda:chuu,ge
+rarity:3
+zoku:モノアラガイ属
+ka:モノアラガイ科
+latin:Physa acuta
+
+name:akategani
+takatsu:ge,ka
+masuda:ge,ka
+rarity:2
+zoku:
+ka:ベンケイガニ科
+latin:Chiromantes haematochir
+
+name:benkeigani
+takatsu:ge,ka
+masuda:ge,ka
+rarity:3
+zoku:
+ka:ベンケイガニ科
+latin:Sesarmops intermedium
