@@ -6,6 +6,7 @@ import jinja2
 import cPickle as pickle
 import sys
 import glob
+import re
 
 dest = "web"
 
@@ -19,6 +20,18 @@ except IOError:
 
 template_dir = os.path.join(os.path.dirname(__file__), "templates")
 jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir))
+
+# a Jinja2 filter that gets the name of the current file, without .html
+def filename(self):
+    quoted = re.findall('\'([^\']*)\'', str(self))
+    if quoted:
+        path = quoted[0]
+        basename = path.split("/")[-1]
+        return basename.replace(".html", "")
+    else:
+        return None
+
+jinja_env.filters['filename'] = filename
 
 def render_str(template, **params):
     t = jinja_env.get_template(template)
