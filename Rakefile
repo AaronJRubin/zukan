@@ -102,13 +102,21 @@ convert_general = lambda do |image, compressed_image|
 	"convert #{image} -resize #{size_override[image.pathmap('%f')]} -quality #{quality_override[image.pathmap('%f')]} #{compressed_image}"
 end
 
+convert_mamechishiki = lambda do |image, compressed_image|
+  "convert #{image} -resize 320x -quality 50 #{compressed_image}"
+end
+
 desc "Compress images of seisokuchi in master-images and move to workspace"
 compress_images_task(:compress_seisokuchi_images, "#{workspace}/master-images/seisokuchi/*.jpg", "#{workspace}/web/images/seisokuchi/%f", convert_general)
+
+desc "Compress images for mamechishiki articles and move to workspace"
+compress_images_task(:compress_mamechishiki_images, "#{workspace}/master-images/mamechishiki/**/*.jpg", "#{workspace}/web/images/mamechishiki/%-1d/%f", convert_mamechishiki)
+
 desc "Compress miscellaneous images and move to workspace"
 compress_images_task(:compress_miscellaneous_images, "#{workspace}/master-images/*.jpg", "#{workspace}/web/images/%f", convert_general)
 
 desc "Compress all images and move to workspace"
-task :compress_images => [:compress_fish_images, :compress_seisokuchi_images, :compress_miscellaneous_images]
+task :compress_images => [:compress_fish_images, :compress_seisokuchi_images, :compress_mamechishiki_images, :compress_miscellaneous_images]
 
 desc "Parse data in fish_data.txt, generating serialized Python and Dart data structures"
 task :generate_fish_list do
