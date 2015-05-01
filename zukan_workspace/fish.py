@@ -91,6 +91,26 @@ class Fish:
             return "masuda-kakou"
         return ""
 
+    def locations(self):
+        res = [] 
+        if self.takatsu_zyou():
+            res += ["takatsu-zyou"]
+        if self.takatsu_chuu():
+            res += ["takatsu-chuu"]
+        if self.takatsu_ge():
+            res += ["takatsu-ge"]
+        if self.takatsu_kakou():
+            res += ["takatsu-kakou"]
+        if self.masuda_zyou():
+            res += ["masuda-zyou"]
+        if self.masuda_chuu():
+            res += ["masuda-chuu"]
+        if self.masuda_ge():
+            res += ["masuda-ge"]
+        if self.masuda_kakou():
+            res += ["masuda-kakou"]
+        return res
+
     def rarity_stars(self):
         return ("&#x2605;" * self.rarity) + ("&#x2606;" * (5 - self.rarity))
 
