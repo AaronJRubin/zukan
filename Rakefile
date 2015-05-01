@@ -102,8 +102,11 @@ convert_general = lambda do |image, compressed_image|
 	"convert #{image} -resize #{size_override[image.pathmap('%f')]} -quality #{quality_override[image.pathmap('%f')]} #{compressed_image}"
 end
 
+mamechishiki_size_override = Hash.new("459x")
+mamechishiki_size_override["ochi-ayu.jpg"] = '459x278!'
+
 convert_mamechishiki = lambda do |image, compressed_image|
-  "convert #{image} -resize 320x -quality 50 #{compressed_image}"
+  "convert #{image} -resize #{mamechishiki_size_override[image.pathmap('%f')]} -quality 50 #{compressed_image}"
 end
 
 desc "Compress images of seisokuchi in master-images and move to workspace"
