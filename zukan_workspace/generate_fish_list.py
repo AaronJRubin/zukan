@@ -90,7 +90,7 @@ if len(unseen_fish) > 0:
         print fish
 
 final_fish_list = defaults.values()
-final_fish_list.sort(key = lambda fish: fish.romaji)
+final_fish_list.sort(key = lambda fish: fish.kana)
 
 pickle.dump(final_fish_list, open("fish_list.pkl", "wb", pickle.HIGHEST_PROTOCOL))
 
