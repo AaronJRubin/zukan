@@ -1,0 +1,7 @@
+{% macro image_bar(title) %}
+<div class="image-bar">
+{% for image in varargs %}
+<img src="/images/mamechishiki/{{title}}/{{image}}.jpg">
+{% endfor %}
+</div>
+{% endmacro %}

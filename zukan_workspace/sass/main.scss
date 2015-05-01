@@ -284,6 +284,16 @@ nav ul {
   }
 }
 
+.image-bar {
+  margin: 1em 0;
+
+  img {
+    border: 1px solid white;
+    width: 48%;
+    @include box-sizing(border-box);
+  }
+}
+
 .sankou-page, 
 .about-page {
   text-align: center;
