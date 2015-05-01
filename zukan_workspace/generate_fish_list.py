@@ -44,7 +44,7 @@ def parse_fish(fish_string):
             line = line.decode('utf-8')
         except Exception:
             pass
-        split_line = line.strip().lower().split(":")
+        split_line = line.strip().split(":")
         if len(split_line) != 2:
             continue
             #raise Exception("Fish, " + str(lines) + " with malformed field specification in line " + line)
