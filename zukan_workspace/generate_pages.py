@@ -22,7 +22,7 @@ template_dir = os.path.join(os.path.dirname(__file__), "templates")
 jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir))
 
 # a Jinja2 filter that gets the name of the current file, without .html
-def filename(self):
+def title(self):
     quoted = re.findall('\'([^\']*)\'', str(self))
     if quoted:
         path = quoted[0]
@@ -31,7 +31,7 @@ def filename(self):
     else:
         return None
 
-jinja_env.filters['filename'] = filename
+jinja_env.filters['title'] = title
 
 def render_str(template, **params):
     t = jinja_env.get_template(template)
