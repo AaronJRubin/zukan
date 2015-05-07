@@ -5,6 +5,8 @@ require 'htmlcompressor'
 task :default => :compile
 
 workspace = 'zukan_workspace'
+master_images = "#{workspace}/master-images"
+images = "#{workspace}/web/images"
 
 def maybe_chmod(mode, files)
 	if files.class == String
@@ -90,7 +92,7 @@ convert_fish = lambda do |fish, compressed_fish|
 end
 
 desc "Compress images of fish in master-images and move to workspace"
-compress_images_task(:compress_fish_images, "#{workspace}/master-images/ikimono/**/*.jpg", "#{workspace}/web/images/%-2d/%f", convert_fish)
+compress_images_task(:compress_fish_images, "#{master_images}/ikimono/**/*.jpg", "#{images}/%-2d/%f", convert_fish)
 
 quality_override = Hash.new('57')
 quality_override['takatsu-chuu.jpg'] = '75'
@@ -110,13 +112,13 @@ convert_mamechishiki = lambda do |image, compressed_image|
 end
 
 desc "Compress images of seisokuchi in master-images and move to workspace"
-compress_images_task(:compress_seisokuchi_images, "#{workspace}/master-images/seisokuchi/*.jpg", "#{workspace}/web/images/seisokuchi/%f", convert_general)
+compress_images_task(:compress_seisokuchi_images, "#{master_images}/seisokuchi/*.jpg", "#{images}/seisokuchi/%f", convert_general)
 
 desc "Compress images for mamechishiki articles and move to workspace"
-compress_images_task(:compress_mamechishiki_images, "#{workspace}/master-images/mamechishiki/**/*.jpg", "#{workspace}/web/images/mamechishiki/%-1d/%f", convert_mamechishiki)
+compress_images_task(:compress_mamechishiki_images, "#{master_images}/mamechishiki/**/*.jpg", "#{images}/mamechishiki/%-1d/%f", convert_mamechishiki)
 
 desc "Compress miscellaneous images and move to workspace"
-compress_images_task(:compress_miscellaneous_images, "#{workspace}/master-images/*.jpg", "#{workspace}/web/images/%f", convert_general)
+compress_images_task(:compress_miscellaneous_images, "#{master_images}/*.jpg", "#{images}/%f", convert_general)
 
 desc "Compress all images and move to workspace"
 task :compress_images => [:compress_fish_images, :compress_seisokuchi_images, :compress_mamechishiki_images, :compress_miscellaneous_images]
@@ -205,5 +207,5 @@ end
 
 desc "Delete all generated files for a clean build"
 task :clean => :clean_nonimage do
-	rm_rf "#{workspace}/web/images/"
+	rm_rf images
 end
