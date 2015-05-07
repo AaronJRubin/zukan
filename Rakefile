@@ -7,6 +7,7 @@ task :default => :compile
 workspace = 'zukan_workspace'
 master_images = "#{workspace}/master-images"
 images = "#{workspace}/web/images"
+static_site = "site/static"
 
 def maybe_chmod(mode, files)
 	if files.class == String
@@ -169,16 +170,16 @@ task :compile => :build_workspace do
 	unless (uptodate?('build/web/ichiran.html', dependencies))
 		smart_compile_dart	
 		Dir.chdir '..'
-		rm_r 'site/static/', :force => true
-		cp_r "#{workspace}/build/web", 'site/static/'
+		rm_r static_site, :force => true
+		cp_r "#{workspace}/build/web", static_site
 		sh 'python generate_appcache.py'
-		lock 'site/static/takatsugawa-zukan.appcache'
-		css_path = 'site/static/stylesheets/main.css'
+		lock "#{static_site}/takatsugawa-zukan.appcache"
+		css_path = "#{static_site}/stylesheets/main.css"
 		unlock css_path
 		File.write(css_path, CSSminify.compress(File.read(css_path)))
 		lock css_path
 		compressor = HtmlCompressor::Compressor.new
-		htmlFiles = Rake::FileList.new('site/static/**/*.html')
+		htmlFiles = Rake::FileList.new("#{static_site}/**/*.html")
 		htmlFiles.each do |file|
 			unlock file
 			File.write(file, compressor.compress(File.read(file)))
@@ -202,7 +203,7 @@ task :clean_nonimage do
 	rm_f generated_textfiles
 	rm_f "#{workspace}/fish_list.pkl"
 	rm_rf "#{workspace}/build/"
-	rm_rf "site/static/"
+	rm_rf static_site
 end
 
 desc "Delete all generated files for a clean build"
