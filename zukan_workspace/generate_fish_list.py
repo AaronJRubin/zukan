@@ -17,7 +17,7 @@ def generate_defaults():
 
 def fish_data():
     f = open("fish_data.txt", "r")
-    return f.read().split("\n\n")
+    return f.read().strip().split("\n\n")
 
 def string_to_location(string):
     string = string.strip().lower()
