@@ -150,6 +150,15 @@ task :generate_pages => :generate_fish_list do
 	Dir.chdir '..'
 end
 
+desc "Generate dart file that contains text of all articles for client-side searching"
+file "#{workspace}/web/article_list.dart" => Rake::FileList.new("#{workspace}/templates/base/sakana/*.html") do |task|
+  unlock task.name
+  Dir.chdir workspace
+  sh 'ruby index_articles.rb'
+  Dir.chdir '..'
+  lock task.name
+end
+
 desc "Compile Sass to CSS, using Compass"
 task :compile_sass do
 	Dir.chdir workspace
@@ -161,7 +170,7 @@ task :compile_sass do
 end
 
 desc "Compile everything necessary to use the site with pub serve, part of the Dart SDK, from zukan_workspace"
-task :build_workspace => [:compress_images, :generate_pages, :compile_sass]
+task :build_workspace => [:compress_images, :generate_pages, :compile_sass, "#{workspace}/web/article_list.dart"]
 
 desc "Compile dart code and produce ready-to-deploy site with appcache and minified css"
 task :compile => :build_workspace do
