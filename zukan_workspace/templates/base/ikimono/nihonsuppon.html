@@ -2,7 +2,7 @@
 
 {% block article %}
 
-{% from 'fish-page-macros.html' import article_section %}
+{% from 'animal-page-macros.html' import article_section %}
 
 {% call article_section("") %}
 <p>成体サイズ：約30cm</p>
@@ -12,7 +12,7 @@
 <p>食べると非常に美味しい。</p>
 {% endcall %}
 
-{% call article_section(fish.image('ue')) %}
+{% call article_section(animal.image('ue')) %}
 <p>甲は柔らかい皮膚に覆われており、普通のカメより足の水かきが発達している。</p>
 <p>首は細長く鼻先がとがっている。</p>
 {% endcall %}

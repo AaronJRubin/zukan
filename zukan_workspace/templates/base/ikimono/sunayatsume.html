@@ -2,7 +2,7 @@
 
 {% block article %}
 
-{% from 'fish-page-macros.html' import article_section %}
+{% from 'animal-page-macros.html' import article_section %}
 
 {% call article_section("") %}
 <p>成魚サイズ：約20cm</p>
@@ -16,11 +16,11 @@
 <p>川の上流の泥や砂に潜っており、この仲間では唯一、一生を川で過ごす。また、目が無い幼生の状態で一生の大部分を過ごす。</p>
 {% endcall %}
 
-{% call article_section(fish.image('era')) %}
+{% call article_section(animal.image('era')) %}
 <p>エラ穴が７個あり本当の目を合わせて八つ目ウナギという。</p>
 {% endcall %}
 
-{% call article_section(fish.image('kuti')) %}
+{% call article_section(animal.image('kuti')) %}
 <p>普通の魚と違い下あごがなく口が丸い吸盤状になっている。</p>
 {% endcall %}
 

@@ -2,21 +2,21 @@
 
 {% block article %}
 
-{% from 'fish-page-macros.html' import article_section %}
+{% from 'animal-page-macros.html' import article_section %}
 
 {% call article_section("") %}
 <p>成魚サイズ：約5cm</p>
 <p>地方名：ハゼ</p>
 {% endcall %}
 
-{% call article_section(fish.image('yoko')) %}
+{% call article_section(animal.image('yoko')) %}
 <p>体の後半に２本の黒い縦しまがある。</p>
 {% endcall %}
 
-{% call article_section(fish.image('sebire')) %}
+{% call article_section(animal.image('sebire')) %}
 <p>第一背ビレの先２本が糸のように伸びている。</p>
 {% endcall %}
-{% call article_section(fish.image('atama')) %}
+{% call article_section(animal.image('atama')) %}
 <p>頭が丸いのも特徴。</p>
 <p>アベハゼは泥底を好み、環境の悪化に強いという面を持っている。</p>
 {% endcall %}

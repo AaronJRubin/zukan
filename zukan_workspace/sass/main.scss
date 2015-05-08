@@ -15,7 +15,7 @@ $print-text-color: #000;
 $image-border-color: #fff;
 $rounded-border: 7px;
 $no-background: '(max-width: 700px)';
-$fish-header-bottom-split: '(max-width: 725px)';
+$animal-header-bottom-split: '(max-width: 725px)';
 $small-font-size: .8em;
 
 /* Begin general HTML element styles */
@@ -106,7 +106,7 @@ a:visited {
   }
 }
 
-.fish-tile {
+.animal-tile {
 
   border-color: $image-border-color;
   border-radius: $rounded-border;
@@ -336,7 +336,7 @@ nav ul {
   border-radius: $rounded-border;
 }
 
-.fish-tiles {
+.animal-tiles {
   @include display-flex(flex);
   @include justify-content(space-around);
   @include flex-wrap(wrap);
@@ -446,9 +446,9 @@ nav ul {
 
 /* End ichiran styles */
 
-/* Begin fish page styles */
+/* Begin animal page styles */
 
-body.fish-page {
+body.animal-page {
   background-size: 100% 100%;
   transition: background-image 3s ease-in-out;
   @media #{$no-background} {
@@ -465,7 +465,7 @@ $seisokuchi: 'takatsu-zyou', 'takatsu-chuu', 'takatsu-ge', 'takatsu-kakou',
   }
 }
 
-main.fish-page {
+main.animal-page {
   background-color: $primary-background;
   border-radius: $rounded-border;
   margin: 2vh auto;
@@ -483,7 +483,7 @@ main.fish-page {
   }
 }
 
-.fish-header {
+.animal-header {
   @include display-flex(flex);
   @include flex-wrap(wrap);
   @include justify-content(center);
@@ -532,7 +532,7 @@ main.fish-page {
 
   table, 
   .rarity {
-    @media #{$fish-header-bottom-split} {
+    @media #{$animal-header-bottom-split} {
       margin-left: 0;
       margin-right: 0;
       width: 100%;    
@@ -545,13 +545,13 @@ main.fish-page {
   }
 
   .rarity-header {
-    @media #{$fish-header-bottom-split} {
+    @media #{$animal-header-bottom-split} {
       padding: 0;
     }
   }
 
   .rarity-stars {
-    @media #{$fish-header-bottom-split} {
+    @media #{$animal-header-bottom-split} {
       padding-top: 0;
     }
   }
@@ -604,4 +604,4 @@ article {
   }
 }
 
-/* End fish page styles */
+/* End animal page styles */

@@ -2,7 +2,7 @@
 
 {% block article %}
 
-{% from 'fish-page-macros.html' import article_section %}
+{% from 'animal-page-macros.html' import article_section %}
 
 {% call article_section("") %}
 <p>成体サイズ：約25cm</p>
@@ -12,7 +12,7 @@
 <p>元々はペット用に輸入されたアメリカ原産のミドリガメ。</p>
 {% endcall %}
 
-{% call article_section(fish.image('kao')) %}
+{% call article_section(animal.image('kao')) %}
 <p>小さい時は緑色に黄色い縞模様で鮮やかだが、大きくなるにつれて地味な色になる。</p>
 <p>目のうしろに赤い斑紋があることから赤耳亀と呼ばれる。</p>
 {% endcall %}

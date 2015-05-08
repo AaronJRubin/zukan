@@ -2,7 +2,7 @@
 
 {% block article %}
 
-{% from 'fish-page-macros.html' import article_section %}
+{% from 'animal-page-macros.html' import article_section %}
 
 {% call article_section("") %}
 <p>成魚サイズ：約6cm</p>
@@ -11,13 +11,13 @@
 
 {% endcall %}
 
-{% call article_section(fish.image('hige')) %}
+{% call article_section(animal.image('hige')) %}
 <p>体は平べったくヌルっとした感じ。</p>
 <p>口元には長いヒゲが二本ある。</p>
 <p>産卵期には体が黒っぽくなる</p>
 {% endcall %}
 
-{% call article_section(fish.image('hana')) %}
+{% call article_section(animal.image('hana')) %}
 <p>オスの鼻先に白い追星がある。</p>
 <p>高津川の限られた小川に住んでおり、島根県では江の川と高津川だけでしか生息が確認できていない。</p>
 <p>川に住んでいる二枚貝の体内に産卵する性質があるので二枚貝が住んでいる川でないと生息できない。</p>

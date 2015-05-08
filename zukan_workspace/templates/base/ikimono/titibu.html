@@ -2,24 +2,24 @@
 
 {% block article %}
 
-{% from 'fish-page-macros.html' import article_section %}
+{% from 'animal-page-macros.html' import article_section %}
 
 {% call article_section("") %}
 <p>成魚サイズ：約8cm</p>
 <p>地方名：ヘソゴリ、ウシゴリ</p>
 {% endcall %}
 
-{% call article_section(fish.image('harabire')) %}
+{% call article_section(animal.image('harabire')) %}
 <p>ハゼの仲間共通の腹ビレが吸盤になっている。</p>
 <p>黒っぽい体に白い斑紋、やや上流に住むヌマチチブより斑紋が小さい。</p>
 {% endcall %}
 
-{% call article_section(fish.image('ude')) %}
+{% call article_section(animal.image('ude')) %}
 <p>胸ビレの付け根に黄色い縞模様があり、ヌマチチブのオレンジ色と見分けることができる。</p>
 
 {% endcall %}
 
-{% call article_section(fish.image('sebire')) %}
+{% call article_section(animal.image('sebire')) %}
 <p>オスの前の背ビレの先が糸のように伸びる。</p>
 {% endcall %}
 

@@ -1,17 +1,17 @@
 import 'dart:html';
-import 'fish.dart';
+import 'animal.dart';
 import 'article.dart';
 
 ElementList<CheckboxInputElement> includeCheckboxes;
 ElementList<CheckboxInputElement> excludeCheckboxes;
 TextInputElement articleSearch;
-ElementList<LIElement> fishTiles;
+ElementList<LIElement> animalTiles;
 
 void main() {
   includeCheckboxes = document.querySelectorAll("#include .search-checkbox");
   excludeCheckboxes = document.querySelectorAll("#exclude .search-checkbox");
   articleSearch = document.querySelector("#article-search");
-  fishTiles = document.querySelectorAll("ol.fish-tiles li");
+  animalTiles = document.querySelectorAll("ol.animal-tiles li");
   SpanElement dropdownCaret = document.querySelector("#dropdown-caret");
   DivElement searchArea = document.querySelector("#search-area");
   SpanElement dropdownLabel = document.querySelector("#dropdown-label");
@@ -32,15 +32,15 @@ void main() {
   refresh(); // maybe things were clicked before script was loaded
 }
 
-typedef bool FilterFunction(Fish fish);
+typedef bool FilterFunction(Animal animal);
 
 class Filter {
 
   List<FilterFunction> filterFunctions = [];
 
   Filter();
-  bool filter(Fish fish) {
-    return filterFunctions.map((function) => function(fish)).fold(true, (bool1, bool2) => bool1 && bool2);
+  bool filter(Animal animal) {
+    return filterFunctions.map((function) => function(animal)).fold(true, (bool1, bool2) => bool1 && bool2);
   }
 
   void add(FilterFunction func) {
@@ -52,15 +52,15 @@ Filter buildFilter() {
   Filter filter = new Filter();
   String searchText = articleSearch.value.trim();
   if (searchText.length > 0) {
-    filter.add((fish) => article_map[fish.romaji].text.contains(searchText));
+    filter.add((animal) => article_map[animal.romaji].text.contains(searchText));
   }
   for (CheckboxInputElement checkbox in includeCheckboxes) {
     if (checkbox.checked) {
       String area = checkbox.id.split("-")[1];
       if (checkbox.id.startsWith("takatsu")) {
-        filter.add((fish) => fish.takatsu.contains(area));
+        filter.add((animal) => animal.takatsu.contains(area));
       } else if (checkbox.id.startsWith("masuda")) {
-        filter.add((fish) => fish.masuda.contains(area));
+        filter.add((animal) => animal.masuda.contains(area));
       }
     }
   }
@@ -68,9 +68,9 @@ Filter buildFilter() {
     if (checkbox.checked) {
       String area = checkbox.id.split("-")[1];
       if (checkbox.id.startsWith("takatsu")) {
-        filter.add((fish) => !fish.takatsu.contains(area));
+        filter.add((animal) => !animal.takatsu.contains(area));
       } else if (checkbox.id.startsWith("masuda")) {
-        filter.add((fish) => !fish.masuda.contains(area));
+        filter.add((animal) => !animal.masuda.contains(area));
       }
     }
   }
@@ -79,9 +79,9 @@ Filter buildFilter() {
 
 void refresh() {
   Filter filter = buildFilter();
-  for (LIElement tile in fishTiles) {
-    Fish fish = fish_map[tile.attributes["data-fishname"]];
-    if (!filter.filter(fish)) {
+  for (LIElement tile in animalTiles) {
+    Animal animal = animal_map[tile.attributes["data-animal-name"]];
+    if (!filter.filter(animal)) {
       tile.classes.add('hidden');
     } else {
       tile.classes.remove('hidden');

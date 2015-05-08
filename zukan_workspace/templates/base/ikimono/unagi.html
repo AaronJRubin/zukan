@@ -2,7 +2,7 @@
 
 {% block article %}
 
-{% from 'fish-page-macros.html' import article_section %}
+{% from 'animal-page-macros.html' import article_section %}
 
 {% call article_section("") %}
 <p>成魚サイズ：約80cm</p>
@@ -14,12 +14,12 @@
 <p>遠く南の深海で生まれ稚魚が海流にのって日本にやってくる。</p>
 {% endcall %}
 
-{% call article_section(fish.image('kuti')) %}
+{% call article_section(animal.image('kuti')) %}
 <p>受け口の顔をしている。</p>
 
 {% endcall %}
 
-{% call article_section(fish.image('yougyo')) %}
+{% call article_section(animal.image('yougyo')) %}
 <p>春先に体が透明なシラスウナギが川を上る。</p>
 {% endcall %}
 

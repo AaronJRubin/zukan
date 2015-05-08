@@ -12,7 +12,7 @@ end
 
 Article = Struct.new(:name, :text)
 
-templates = Rake::FileList.new("templates/base/sakana/*.html")
+templates = Rake::FileList.new("templates/base/ikimono/*.html")
 
 articles = templates.map { |template|
   name = template.pathmap("%n")
@@ -33,7 +33,3 @@ article_map_initializer = "Map<String, Article> article_map = new Map.fromIterab
 dart_file_contents = "part of article;\n\n#{article_list_initializer}\n\n#{article_map_initializer}"
 
 File.write("web/article_list.dart", dart_file_contents)
-
-
-
-

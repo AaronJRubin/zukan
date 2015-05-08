@@ -35,10 +35,10 @@
 	</div>
 </div>
 
-<ol class="fish-tiles">
-	{% for fish in fish %}
-	<li data-fishname="{{fish.romaji}}">
-	{{ macros.fish_tile(fish) }}
+<ol class="animal-tiles">
+	{% for animal in animals %}
+	<li data-animal-name="{{animal.romaji}}">
+	{{ macros.animal_tile(animal) }}
 	</li>
 	{% endfor %}
 </ol>

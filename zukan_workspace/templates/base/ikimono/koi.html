@@ -2,7 +2,7 @@
 
 {% block article %}
 
-{% from 'fish-page-macros.html' import article_section %}
+{% from 'animal-page-macros.html' import article_section %}
 
 {% call article_section("") %}
 <p>成魚サイズ：約80cm</p>
@@ -13,12 +13,12 @@
 
 {% endcall %}
 
-{% call article_section(fish.image('kuti')) %}
+{% call article_section(animal.image('kuti')) %}
 <p>口は下向きになっており、ヒゲが４本ある。</p>
 
 {% endcall %}
 
-{% call article_section(fish.image('yoko')) %}
+{% call article_section(animal.image('yoko')) %}
 <p>野生のコイは池で飼われてるコイよりやや平べったい。</p>
 
 {% endcall %}

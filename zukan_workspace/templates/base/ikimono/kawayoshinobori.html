@@ -2,7 +2,7 @@
 
 {% block article %}
 
-{% from 'fish-page-macros.html' import article_section %}
+{% from 'animal-page-macros.html' import article_section %}
 {% call article_section("") %}
 <p>成魚サイズ：約6cm</p>
 <p>地方名：ゴリ、ヘソゴリ、セゴリ</p>
@@ -13,12 +13,12 @@
 <p>ヨシノボリの仲間は見分けが非常に難しい。</p>
 {% endcall %}
 
-{% call article_section(fish.image('hara')) %}
+{% call article_section(animal.image('hara')) %}
 <p>ハゼの仲間共通の腹ビレが吸盤になっている。</p>
 
 {% endcall %}
 
-{% call article_section(fish.image('sebire')) %}
+{% call article_section(animal.image('sebire')) %}
 <p>オスの背ビレは長く伸びる。</p>
 {% endcall %}
 

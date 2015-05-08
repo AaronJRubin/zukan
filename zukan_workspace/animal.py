@@ -27,7 +27,7 @@ class Location:
     def get_masuda(self):
         return frozenset(self._dict["Masuda"])
 
-class Fish:
+class Animal:
 
     def __init__(self, latin = "piscis maximus", family = u"魚科", genus = u"魚属", romaji = "ayu", kana = u"アユ",
         rarity = 3):

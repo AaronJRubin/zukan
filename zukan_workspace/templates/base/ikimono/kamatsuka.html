@@ -2,7 +2,7 @@
 
 {% block article %}
 
-{% from 'fish-page-macros.html' import article_section %}
+{% from 'animal-page-macros.html' import article_section %}
 
 {% call article_section("") %}
 <p>成魚サイズ：約20cm</p>
@@ -14,12 +14,12 @@
 
 {% endcall %}
 
-{% call article_section(fish.image('kuti')) %}
+{% call article_section(animal.image('kuti')) %}
 <p>鼻先が突き出し、口が下向きにある。</p>
 
 {% endcall %}
 
-{% call article_section(fish.image('mae')) %}
+{% call article_section(animal.image('mae')) %}
 <p>口ヒゲが下向きに２本ある。</p>
 
 {% endcall %}

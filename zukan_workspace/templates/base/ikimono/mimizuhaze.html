@@ -2,7 +2,7 @@
 
 {% block article %}
 
-{% from 'fish-page-macros.html' import article_section %}
+{% from 'animal-page-macros.html' import article_section %}
 
 {% call article_section("") %}
 <p>成魚サイズ：約10cm</p>
@@ -13,7 +13,7 @@
 <p>河口の石の下に住んでいる。</p>
 {% endcall %}
 
-{% call article_section(fish.image('atama')) %}
+{% call article_section(animal.image('atama')) %}
 <p>ハゼの仲間共通の腹ビレが吸盤になっている。</p>
 <p>頭は上から押しつぶしたように平ら。</p>
 {% endcall %}

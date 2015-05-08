@@ -2,7 +2,7 @@
 
 {% block article %}
 
-{% from 'fish-page-macros.html' import article_section %}
+{% from 'animal-page-macros.html' import article_section %}
 
 {% call article_section("") %}
 <p>成魚サイズ：約15cm</p>
@@ -14,17 +14,17 @@
 
 {% endcall %}
 
-{% call article_section(fish.image('ohire')) %}
+{% call article_section(animal.image('ohire')) %}
 <p>尻ビレは長く大きい。</p>
 <p></p>
 {% endcall %}
 
-{% call article_section(fish.image('yoko')) %}
+{% call article_section(animal.image('yoko')) %}
 <p>普段は銀色の体だが、産卵期のオスは青やオレンジの不規則な縞模様ができ派手な色になる。</p>
 {% endcall %}
 
 
-{% call article_section(fish.image('kao')) %}
+{% call article_section(animal.image('kao')) %}
 <p>産卵期のオスの顔に白くゴツゴツした追星ができる。</p>
 {% endcall %}
 

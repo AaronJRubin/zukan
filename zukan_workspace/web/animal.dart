@@ -1,6 +1,6 @@
-library fish;
+library animal;
 
-part 'fish_list.dart';
+part 'animal_list.dart';
 
 class RiverHabitat {
 
@@ -55,7 +55,7 @@ class RiverHabitat {
   }
 }
 
-class Fish {
+class Animal {
 
   String scientific;
   String family;
@@ -66,7 +66,7 @@ class Fish {
   RiverHabitat takatsu;
   RiverHabitat masuda;
 
-  Fish(this.scientific, this.family, this.genus, this.romaji, this.kana, this.rarity, bool takatsu_up, bool takatsu_central, bool takatsu_down, bool takatsu_mouth, bool masuda_up, bool masuda_central, bool masuda_down, bool masuda_mouth) {
+  Animal(this.scientific, this.family, this.genus, this.romaji, this.kana, this.rarity, bool takatsu_up, bool takatsu_central, bool takatsu_down, bool takatsu_mouth, bool masuda_up, bool masuda_central, bool masuda_down, bool masuda_mouth) {
     this.takatsu = new RiverHabitat(takatsu_up, takatsu_central, takatsu_down, takatsu_mouth, "takatsu");
     this.masuda = new RiverHabitat(masuda_up, masuda_central, masuda_down, masuda_mouth, "masuda");
   }

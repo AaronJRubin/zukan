@@ -2,7 +2,7 @@
 
 {% block article %}
 
-{% from 'fish-page-macros.html' import article_section %}
+{% from 'animal-page-macros.html' import article_section %}
 
 {% call article_section("") %}
 <p>成体サイズ：約4cm</p>
@@ -12,12 +12,12 @@
 <p>色は暗灰色から灰褐色。</p>
 {% endcall %}
 
-{% call article_section(fish.image('hara')) %}
+{% call article_section(animal.image('hara')) %}
 <p>腹は灰色で、よく似ているヌマガエルとは腹の色で見分ける。</p>
 <p></p>
 {% endcall %}
 
-{% call article_section(fish.image('ue')) %}
+{% call article_section(animal.image('ue')) %}
 <p>背中にいぼ状の膨らみが多数ある。</p>
 {% endcall %}
 

@@ -2,7 +2,7 @@
 
 {% block article %}
 
-{% from 'fish-page-macros.html' import article_section %}
+{% from 'animal-page-macros.html' import article_section %}
 
 {% call article_section("") %}
 <p>成魚サイズ：25cm</p>
@@ -14,12 +14,12 @@
 <p>本来は海の魚だが下流域くらいまで入ってくる。</p>
 {% endcall %}
 
-{% call article_section(fish.image('kuti')) %}
+{% call article_section(animal.image('kuti')) %}
 <p>鼻先が尖り、口は下向き。</p>
 
 {% endcall %}
 
-{% call article_section(fish.image('yoko')) %}
+{% call article_section(animal.image('yoko')) %}
 <p>体色は透明感のある白。</p>
 {% endcall %}
 

@@ -8,9 +8,9 @@
 </div>
 {% endmacro %}
 
-{% macro fish_tile(fish) %}
-<a href="{{fish.get_link()}}" class="fish-tile">
-	<img src="{{fish.image('ichiran')}}" alt="">
-	<div>{{fish.kana}}</div>
+{% macro animal_tile(animal) %}
+<a href="{{animal.get_link()}}" class="animal-tile">
+	<img src="{{animal.image('ichiran')}}" alt="">
+	<div>{{animal.kana}}</div>
 </a>
 {% endmacro %}

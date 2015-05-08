@@ -13,9 +13,9 @@ dest = "web"
 # Set up templating infrastructure
 
 try:
-	fish_list = pickle.load(open("fish_list.pkl", "rb", pickle.HIGHEST_PROTOCOL))
+	animal_list = pickle.load(open("animal_list.pkl", "rb", pickle.HIGHEST_PROTOCOL))
 except IOError:
-	print("To run this script, you need to first generate the file fish_list.pkl by running generate_fish_list.py")
+	print("To run this script, you need to first generate the file animal_list.pkl by running generate_animal_list.py")
 	exit()
 
 template_dir = os.path.join(os.path.dirname(__file__), "templates")
@@ -52,7 +52,7 @@ def maybe_mkdir(path):
 
 maybe_mkdir(os.path.join(dest, "ikimono"))
 
-ichiran = render_str("base/ichiran.html", fish = fish_list)
+ichiran = render_str("base/ichiran.html", animals = animal_list)
 write(os.path.join(dest, "ikimono/ichiran.html"), ichiran.encode('utf8'))
 
 def render_static_page(name):
@@ -63,16 +63,16 @@ render_static_page("home")
 render_static_page("about")
 render_static_page("sankoubunken")
 
-for fish in fish_list:
-	template = os.path.join("base/ikimono", fish.romaji + ".html")
+for animal in animal_list:
+	template = os.path.join("base/ikimono", animal.romaji + ".html")
 	template_path = os.path.join("templates", template)
 	if os.path.exists(template_path):
-		page = render_str(template, fish = fish, background_class = fish.starting_location())
-		write(os.path.join(dest, "ikimono", fish.romaji + ".html"), page.encode('utf8'))
+		page = render_str(template, animal = animal, background_class = animal.starting_location())
+		write(os.path.join(dest, "ikimono", animal.romaji + ".html"), page.encode('utf8'))
 	else:
-                print("No article found for " + fish.romaji)
-		page = render_str("base/ikimono/generic.html", fish = fish, background_class = fish.starting_location())
-		write(os.path.join(dest, "ikimono", fish.romaji + ".html"), page.encode('utf8'))
+                print("No article found for " + animal.romaji)
+		page = render_str("base/ikimono/generic.html", animal = animal, background_class = animal.starting_location())
+		write(os.path.join(dest, "ikimono", animal.romaji + ".html"), page.encode('utf8'))
 
 mamechishiki_pages = [path.replace("templates/", "")  for path in glob.glob("templates/base/mamechishiki/*.html")]
 

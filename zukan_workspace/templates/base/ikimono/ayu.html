@@ -2,18 +2,18 @@
 
 {% block article %} 
 
-{% from 'fish-page-macros.html' import article_section %} {% call article_section("") %}
+{% from 'animal-page-macros.html' import article_section %} {% call article_section("") %}
 <p>成魚サイズ：約25cm</p>
 <p>地方名：アイ</p>
 {% endcall %} 
 
-{% call article_section(fish.image('aburabire')) %}
+{% call article_section(animal.image('aburabire')) %}
 <p>尾ひれの前にアブラビレと呼ばれるサケの仲間共通の小さなヒレがある。</p>
 <p>アユは成魚になると川の石に着いているコケを食べる。そのため、唇が厚くスイカのような匂いがする。</p>
 
 {% endcall %} 
 
-{% call article_section(fish.image('munabire')) %}
+{% call article_section(animal.image('munabire')) %}
 <p>胸ビレの上の方に黄色いだえん型の斑紋がある。</p>
 <p>アユは秋に川の下流で生まれ、海に下り、海で生活して春に川を上る。</p>
 

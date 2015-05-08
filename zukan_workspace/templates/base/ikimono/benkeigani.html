@@ -2,7 +2,7 @@
 
 {% block article %}
 
-{% from 'fish-page-macros.html' import article_section %}
+{% from 'animal-page-macros.html' import article_section %}
 {% call article_section("") %}
 <p>成魚サイズ：約3.5cm</p>
 <p>地方名：ガンツー</p>
@@ -10,12 +10,12 @@
 {% endcall %}
 
 
-{% call article_section(fish.image('kao')) %}
+{% call article_section(animal.image('kao')) %}
 <p>ハサミや甲羅が赤い。</p>
 <p>足に毛が生えている。</p>
 {% endcall %}
 
-{% call article_section(fish.image('senaka')) %}
+{% call article_section(animal.image('senaka')) %}
 <p>甲羅はデコボコしている。</p>
 <p>そっくりなアカテガニとは甲羅のふちに切れ込みがあるかないかで見分ける。</p>
 <p>（アカテガニ→切れ込みがない、ベンケイガニ→切れ込みがある）</p>

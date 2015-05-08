@@ -2,18 +2,18 @@
 
 {% block article %}
 
-{% from 'fish-page-macros.html' import article_section %}
+{% from 'animal-page-macros.html' import article_section %}
 
 {% call article_section("") %}
 <p>成魚サイズ：20cm</p>
 <p>地方名：ゴリ、ゴンパツ、ドンコツ、ボンゴツ</p>
 {% endcall %}
 
-{% call article_section(fish.image('obi')) %}
+{% call article_section(animal.image('obi')) %}
 <p>色は暗い茶色で黒い帯が３本ある。</p>
 {% endcall %}
 
-{% call article_section(fish.image('yoko')) %}
+{% call article_section(animal.image('yoko')) %}
 <p>体はずんぐりして上から押しつぶされたように平べったい。</p>
 <p>口は大きく、昼間は石の下などに隠れ、夜になると外に出て小魚などを食べる。</p>
 {% endcall %}

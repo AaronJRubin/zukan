@@ -2,7 +2,7 @@
 
 {% block article %}
 
-{% from 'fish-page-macros.html' import article_section %}
+{% from 'animal-page-macros.html' import article_section %}
 
 
 {% call article_section("") %}
@@ -16,16 +16,16 @@
 <p>匹見川で2000年に発見された新種のドンコで学名にヒキミの名がついている。</p>
 {% endcall %}
 
-{% call article_section(fish.image('hara')) %}
+{% call article_section(animal.image('hara')) %}
 <p>ハゼの仲間だが腹ビレが吸盤になっていない。</p>
 {% endcall %}
 
-{% call article_section(fish.image('obi')) %}
+{% call article_section(animal.image('obi')) %}
 <p>黄色の体色に３本の黒い帯のような模様がある。</p>
 
 {% endcall %}
 
-{% call article_section(fish.image('kuti')) %}
+{% call article_section(animal.image('kuti')) %}
 <p>鋭い歯が内側に向いて並んでいる。</p>
 
 {% endcall %}

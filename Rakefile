@@ -73,14 +73,14 @@ NON_ICHIRAN_DIMENSIONS = "280x"
 ICHIRAN_HEIGHT = 112
 HEADER_WIDTH = 335
 
-convert_fish = lambda do |fish, compressed_fish|
- 	if fish.include? "ichiran"	
-		dimensions = Dimensions.dimensions(fish)
+convert_animal = lambda do |animal, compressed_animal|
+ 	if animal.include? "ichiran"	
+		dimensions = Dimensions.dimensions(animal)
 		width = dimensions[0]	
 		height = dimensions[1]	
 		aspect_ratio = height.fdiv(width)	
 		header_display_height = HEADER_WIDTH * aspect_ratio	
-		is_long = height * 2 < width # this determines whether the fish will be at 100% width on screens with size 415 px or less
+		is_long = height * 2 < width # this determines whether the animal will be at 100% width on screens with size 415 px or less
 		if is_long
 			header_display_height = 390 * aspect_ratio
 		end
@@ -89,11 +89,11 @@ convert_fish = lambda do |fish, compressed_fish|
 	else
 		resize = NON_ICHIRAN_DIMENSIONS
 	end
-	"convert #{fish} -resize #{resize} -quality 50 #{compressed_fish}"
+	"convert #{animal} -resize #{resize} -quality 50 #{compressed_animal}"
 end
 
-desc "Compress images of fish in master-images and move to workspace"
-compress_images_task(:compress_fish_images, "#{master_images}/ikimono/**/*.jpg", "#{images}/%-2d/%f", convert_fish)
+desc "Compress images of animals in master-images and move to workspace"
+compress_images_task(:compress_animal_images, "#{master_images}/ikimono/**/*.jpg", "#{images}/%-2d/%f", convert_animal)
 
 quality_override = Hash.new('57')
 quality_override['takatsu-chuu.jpg'] = '75'
@@ -122,26 +122,26 @@ desc "Compress miscellaneous images and move to workspace"
 compress_images_task(:compress_miscellaneous_images, "#{master_images}/*.jpg", "#{images}/%f", convert_general)
 
 desc "Compress all images and move to workspace"
-task :compress_images => [:compress_fish_images, :compress_seisokuchi_images, :compress_mamechishiki_images, :compress_miscellaneous_images]
+task :compress_images => [:compress_animal_images, :compress_seisokuchi_images, :compress_mamechishiki_images, :compress_miscellaneous_images]
 
-desc "Parse data in fish_data.txt, generating serialized Python and Dart data structures"
-task :generate_fish_list do
+desc "Parse data in animal_data.txt, generating serialized Python and Dart data structures"
+task :generate_animal_list do
 	Dir.chdir workspace
-	dependencies = ['fish.py', 'fish_data.txt', 'generate_fish_list.py']
-	unless (uptodate?('fish_list.pkl', dependencies) and uptodate?('web/fish_list.dart', dependencies))
-		unlock 'fish_list.pkl'
-		unlock 'web/fish_list.dart'
-		sh 'python generate_fish_list.py'
+	dependencies = ['animal.py', 'animal_data.txt', 'generate_animal_list.py']
+	unless (uptodate?('animal_list.pkl', dependencies) and uptodate?('web/animal_list.dart', dependencies))
+		unlock 'animal_list.pkl'
+		unlock 'web/animal_list.dart'
+		sh 'python generate_animal_list.py'
 	end
-	lock 'fish_list.pkl'
-	lock 'web/fish_list.dart'
+	lock 'animal_list.pkl'
+	lock 'web/animal_list.dart'
 	Dir.chdir '..'
 end
 
 desc "Generate html documents using the jinja2 templates engine"
-task :generate_pages => :generate_fish_list do
+task :generate_pages => :generate_animal_list do
 	Dir.chdir workspace
-	dependencies = Rake::FileList.new('templates/**/*').include('fish.py').include('fish_data.txt').include('generate_fish_list.py')
+	dependencies = Rake::FileList.new('templates/**/*').include('animal.py').include('animal_data.txt').include('generate_animal_list.py')
 	unless uptodate?('web/ichiran.html', dependencies)
 		unlock Rake::FileList.new('web/**/*.html')
 		sh 'python generate_pages.py'
@@ -208,9 +208,9 @@ end
 
 desc "Delete all generated files, except for compressed image files"
 task :clean_nonimage do
-	generated_textfiles = Rake::FileList.new.include("#{workspace}/web/**/*.html").include("#{workspace}/web/**/*.css").include("#{workspace}/web/fish_list.dart")
+	generated_textfiles = Rake::FileList.new.include("#{workspace}/web/**/*.html").include("#{workspace}/web/**/*.css").include("#{workspace}/web/animal_list.dart")
 	rm_f generated_textfiles
-	rm_f "#{workspace}/fish_list.pkl"
+	rm_f "#{workspace}/animal_list.pkl"
 	rm_rf "#{workspace}/build/"
 	rm_rf static_site
 end

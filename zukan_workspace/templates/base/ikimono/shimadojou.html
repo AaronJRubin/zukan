@@ -2,7 +2,7 @@
 
 {% block article %}
 
-{% from 'fish-page-macros.html' import article_section %}
+{% from 'animal-page-macros.html' import article_section %}
 
 {% call article_section("") %}
 <p>成魚サイズ：約12cm</p>
@@ -13,11 +13,11 @@
 <p>体は細長くドジョウ型。普段は砂の中に潜って顔だけを出している。</p>
 {% endcall %}
 
-{% call article_section(fish.image('yoko')) %}
+{% call article_section(animal.image('yoko')) %}
 <p>体に黒い縦縞模様や斑点がある。</p>
 {% endcall %}
 
-{% call article_section(fish.image('kuti')) %}
+{% call article_section(animal.image('kuti')) %}
 <p>６本の口ひげがある。（ドジョウは10本）</p>
 {% endcall %}
 

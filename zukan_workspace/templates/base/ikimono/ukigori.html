@@ -2,7 +2,7 @@
 
 {% block article %}
 
-{% from 'fish-page-macros.html' import article_section %}
+{% from 'animal-page-macros.html' import article_section %}
 
 {% call article_section("") %}
 <p>成魚サイズ：約10cm</p>
@@ -13,7 +13,7 @@
 <p>普通のハゼの仲間と異なり中層に浮いていることが多いのでウキゴリという。</p>
 {% endcall %}
 
-{% call article_section(fish.image('sebire')) %}
+{% call article_section(animal.image('sebire')) %}
 <p>ウキゴリの背ビレには黒い斑紋があり、スミウキゴリと見分けることができる。</p>
 
 {% endcall %}
