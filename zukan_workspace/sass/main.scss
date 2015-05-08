@@ -411,6 +411,11 @@ nav ul {
     margin-bottom: .2em;
   }
 
+  [type='text'] {
+    border-radius: $rounded-border;
+    font-size: inherit;
+  }
+
   [type='checkbox'] {
     @include transform(scale(1.5));
     float: right;
