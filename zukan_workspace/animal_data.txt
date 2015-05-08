@@ -526,7 +526,7 @@ zoku:サワガニ属
 ka:サワガニ科
 latin:Geothelphusa dehaani
 
-name:kehusaisogani
+name:kefusaisogani
 takatsu:ka
 masuda:
 rarity:3
