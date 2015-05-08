@@ -198,7 +198,7 @@ zoku:ヨシノボリ族
 ka:ハゼ科ハゼ亜科
 latin:Rhinogobius flumineus
 
-name:koti
+name:kochi
 takatsu:ka
 masuda:ka
 rarity:2
@@ -246,7 +246,7 @@ zoku:ナマズ属
 ka:ナマズ科
 latin:Silurus asotus
 
-name:numatitibu
+name:numachichibu
 takatsu:chuu,ge
 masuda:chuu,ge
 rarity:3
@@ -350,7 +350,7 @@ zoku:バラタナゴ属
 ka:コイ科タナゴ亜科
 latin:Rhodeus ocellatus ocellatus
 
-name:titibu
+name:chichibu
 takatsu:ge,ka
 masuda:ge,ka
 rarity:2
@@ -494,7 +494,7 @@ zoku:カジカガエル属
 ka:アオガエル科
 latin:Buergeria buergeri
 
-name:tsutigaeru
+name:tsuchigaeru
 takatsu:chuu,ge
 masuda:chuu,ge
 rarity:1
