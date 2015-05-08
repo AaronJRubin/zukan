@@ -69,7 +69,7 @@ def compress_images_task(name, source, pathmap, convert_function)
 	end
 end
 
-NON_ICHIRAN_DIMENSIONS = "280x"
+NON_ICHIRAN_DIMENSIONS = "278x"
 ICHIRAN_HEIGHT = 112
 HEADER_WIDTH = 335
 

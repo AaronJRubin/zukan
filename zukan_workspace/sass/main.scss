@@ -82,6 +82,10 @@ a:visited {
   text-decoration: none;
 }
 
+img {
+  @include box-sizing(border-box);
+  border: 1px solid $text-color;
+}
 /* End general HTML element styles */
 
 /* Begin utility class styles */
@@ -245,8 +249,7 @@ nav ul {
 
   @extend %text-page;
 
-  img {
-    border: 1px solid #fff;
+  img { 
     margin-bottom: .5em;
     max-width: 100%;
   }
@@ -287,10 +290,8 @@ nav ul {
 .image-bar {
   margin: 1em 0;
 
-  img {
-    border: 1px solid white;
-    width: 48%;
-    @include box-sizing(border-box);
+  img { 
+    width: 48%; 
   }
 }
 
@@ -516,8 +517,7 @@ main.animal-page {
   }
 
   img {
-    @include align-self(center);
-    border: 1px solid $text-color;
+    @include align-self(center); 
 
     @media print {
       border-color: $print-text-color;
