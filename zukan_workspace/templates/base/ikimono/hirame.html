@@ -1,0 +1,23 @@
+{% extends "base/ikimono.html" %}
+
+{% block article %}
+
+{% from 'fish-page-macros.html' import article_section %}
+
+{% call article_section("") %}
+<p>成魚サイズ：約80cm</p>
+<p>地方名：カラヘェ</p>
+{% endcall %}
+
+{% call article_section("") %}
+<p>体は平べったいカレイ型。本来海の魚だが、河口に入ってくる。</p>
+{% endcall %}
+
+{% call article_section(fish.image('kao')) %}
+<p>口が大きく、鋭い歯が生えている。</p>
+<p>ヒラメとカレイを見分けるには、体を上に向けたとき、目より口が左にあるのがヒラメ、右にあるのがカレイ。</p>
+
+{% endcall %}
+
+
+{% endblock %}

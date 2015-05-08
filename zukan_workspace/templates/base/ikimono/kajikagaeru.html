@@ -1,0 +1,24 @@
+{% extends "base/ikimono.html" %}
+
+{% block article %}
+
+{% from 'fish-page-macros.html' import article_section %}
+
+{% call article_section("") %}
+<p>成体サイズ：約5cm</p>
+<p>地方名：カジカ</p>
+<p>島根県レッドデータブック：準絶滅危惧(NT)
+{% endcall %}
+
+{% call article_section("") %}
+<p>体型はスマート。背中には膨らみが無くザラザラしている。</p>
+<p>鳴き声が美しく、渓流に住んでいる。</p>
+{% endcall %}
+
+{% call article_section(fish.image('ashi')) %}
+<p>色は茶褐色から灰色。</p>
+<p>手足の吸盤が発達している。</p>
+{% endcall %}
+
+
+{% endblock %}

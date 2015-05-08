@@ -1,0 +1,22 @@
+{% extends "base/ikimono.html" %}
+
+{% block article %}
+
+{% from 'fish-page-macros.html' import article_section %}
+
+{% call article_section("") %}
+<p>成魚サイズ：約60cm</p>
+{% endcall %}
+
+{% call article_section("") %}
+<p>本来は海の魚だが、河口域に入ってくる。</p>
+<p>体型は細長く、上から押しつぶしたような平べったい。</p>
+{% endcall %}
+
+{% call article_section(fish.image('atama')) %}
+<p>頭は平べったい三角形。</p>
+<p>大きな口で小魚を食べる。</p>
+{% endcall %}
+
+
+{% endblock %}

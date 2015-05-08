@@ -1,0 +1,26 @@
+{% extends "base/ikimono.html" %}
+
+{% block article %}
+
+{% from 'fish-page-macros.html' import article_section %}
+
+{% call article_section("") %}
+<p>成魚サイズ：約20cm</p>
+<p>地方名：ハイゴ、地バエ、アカマツバエ</p>
+{% endcall %}
+
+{% call article_section("") %}
+<p>体は平べったく細長い。高津川、益田川でもっとも広く普通に見られる。</p>
+
+{% endcall %}
+
+{% call article_section(fish.image('hara')) %}
+<p>ヒレの色は黄色く、体の中央に１本の太い紺色の線がある。</p>
+
+{% endcall %}
+
+{% call article_section(fish.image('kao')) %}
+<p>産卵期のオスは赤っぽくなり、顔にゴツゴツした追星があらわれる。</p>
+{% endcall %}
+
+{% endblock %}

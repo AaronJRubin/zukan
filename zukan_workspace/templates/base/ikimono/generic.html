@@ -1,0 +1,19 @@
+{% extends "base/ikimono.html" %}
+
+{% block article %}
+
+{% from 'fish-page-macros.html' import article_section %}
+
+{% call article_section(fish.image('ichiran')) %}
+<p>説明文</p>
+{% endcall %}
+
+{% call article_section(fish.image('ichiran')) %}
+<p>説明文</p>
+{% endcall %}
+
+{% call article_section(fish.image('ichiran')) %}
+<p>説明文</p>
+{% endcall %}
+
+{% endblock %}

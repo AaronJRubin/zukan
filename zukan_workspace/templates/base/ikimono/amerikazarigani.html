@@ -1,0 +1,23 @@
+{% extends "base/ikimono.html" %}
+
+{% block article %}
+
+{% from 'fish-page-macros.html' import article_section %}
+
+{% call article_section("") %}
+<p>成体サイズ：約10cm</p>
+<p>(ハサミを除いた)</p>
+{% endcall %}
+
+{% call article_section(fish.image('yoko')) %}
+<p>ハサミが大きい、特にオスは赤く大きい。</p>
+<p>アメリカから移入されたエビ。</p>
+{% endcall %}
+
+{% call article_section(fish.image('kodomo')) %}
+<p>子供を腹に抱いて育てる。</p>
+{% endcall %}
+
+
+
+{% endblock %}

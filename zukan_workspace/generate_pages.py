@@ -64,14 +64,14 @@ render_static_page("about")
 render_static_page("sankoubunken")
 
 for fish in fish_list:
-	template = os.path.join("base/sakana", fish.romaji + ".html")
+	template = os.path.join("base/ikimono", fish.romaji + ".html")
 	template_path = os.path.join("templates", template)
 	if os.path.exists(template_path):
 		page = render_str(template, fish = fish, background_class = fish.starting_location())
 		write(os.path.join(dest, "ikimono", fish.romaji + ".html"), page.encode('utf8'))
 	else:
                 print("No article found for " + fish.romaji)
-		page = render_str("base/sakana/generic.html", fish = fish, background_class = fish.starting_location())
+		page = render_str("base/ikimono/generic.html", fish = fish, background_class = fish.starting_location())
 		write(os.path.join(dest, "ikimono", fish.romaji + ".html"), page.encode('utf8'))
 
 mamechishiki_pages = [path.replace("templates/", "")  for path in glob.glob("templates/base/mamechishiki/*.html")]

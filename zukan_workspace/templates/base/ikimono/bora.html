@@ -1,0 +1,21 @@
+{% extends "base/ikimono.html" %}
+
+{% block article %}
+
+{% from 'fish-page-macros.html' import article_section %}
+
+{% call article_section("") %}
+<p>成魚サイズ：約60cm</p>
+{% endcall %}
+
+{% call article_section(fish.image('uroko')) %}
+<p>ボラは紡錘上の体つきでウロコが大きい。成魚になると水面上をよく飛び跳ねる。</p>
+{% endcall %}
+
+{% call article_section(fish.image('chigyo')) %}
+<p>稚魚は銀色に光る。</p>
+<p>普通は河口付近に生息しているが稚魚の時はかなり上流まで上ることがある。</p>
+<p>冬のボラは美味しいが、水温が高い時期は独特の臭みがあって嫌われる。</p>
+{% endcall %}
+
+{% endblock %}
