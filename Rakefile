@@ -99,7 +99,7 @@ quality_override = Hash.new('57')
 quality_override['takatsu-chuu.jpg'] = '75'
 
 size_override = Hash.new("1400x\\>")
-size_override['takatsugawa-home.jpg'] = '960x'
+size_override['takatsugawa-home.jpg'] = '958x'
 
 convert_general = lambda do |image, compressed_image| 
 	"convert #{image} -resize #{size_override[image.pathmap('%f')]} -quality #{quality_override[image.pathmap('%f')]} #{compressed_image}"
