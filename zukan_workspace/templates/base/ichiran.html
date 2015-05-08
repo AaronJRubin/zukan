@@ -18,16 +18,21 @@
 
 <div id="search-area" class="collapsed">
 
+  <div class="search-section">
+    <div class="search-header">記事が以下のテキストを含めている生き物しか含まない</div>
+    <input type="text" id="article-search">
+  </div>
+
 	<div class="search-section" id="include">
-		<div class="search-header">以下の生息地に住んでいる魚しか含まない</div>
+		<div class="search-header">以下の生息地に住んでいる生き物しか含まない</div>
 		{{ macros.river_section("takatsu", "高津", "include") }}
 		{{ macros.river_section("masuda", "益田", "include") }}
 	</div>
 
 	<div class="search-section" id="exclude">
-		<div class="search-header">以下の生息地に住んでいる魚を除く</div>
+		<div class="search-header">以下の生息地に住んでいる生き物を除く</div>
 		{{ macros.river_section("takatsu", "高津", "exclude") }}
-		{{ macros.river_section("masuda", "益田", "exclude") }}	
+		{{ macros.river_section("masuda", "益田", "exclude") }}
 	</div>
 </div>
 

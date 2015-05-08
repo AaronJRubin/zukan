@@ -1,13 +1,16 @@
 import 'dart:html';
 import 'fish.dart';
+import 'article.dart';
 
 ElementList<CheckboxInputElement> includeCheckboxes;
 ElementList<CheckboxInputElement> excludeCheckboxes;
+TextInputElement articleSearch;
 ElementList<LIElement> fishTiles;
 
 void main() {
   includeCheckboxes = document.querySelectorAll("#include .search-checkbox");
   excludeCheckboxes = document.querySelectorAll("#exclude .search-checkbox");
+  articleSearch = document.querySelector("#article-search");
   fishTiles = document.querySelectorAll("ol.fish-tiles li");
   SpanElement dropdownCaret = document.querySelector("#dropdown-caret");
   DivElement searchArea = document.querySelector("#search-area");
@@ -24,6 +27,7 @@ void main() {
   for (CheckboxInputElement checkbox in new List.from(includeCheckboxes)..addAll(excludeCheckboxes)) {
     checkbox.onChange.listen((e) => refresh());
   }
+  articleSearch.onChange.listen((e) => refresh());
   refresh(); // maybe things were clicked before script was loaded
 }
 
@@ -45,6 +49,10 @@ class Filter {
 
 Filter buildFilter() {
   Filter filter = new Filter();
+  String searchText = articleSearch.value.trim();
+  if (searchText.length > 0) {
+    filter.add((fish) => article_map[fish.romaji].text.contains(searchText));
+  }
   for (CheckboxInputElement checkbox in includeCheckboxes) {
     if (checkbox.checked) {
       String area = checkbox.id.split("-")[1];
