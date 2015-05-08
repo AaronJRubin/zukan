@@ -28,6 +28,7 @@ void main() {
     checkbox.onChange.listen((e) => refresh());
   }
   articleSearch.onChange.listen((e) => refresh());
+  articleSearch.onKeyUp.listen((e) => refresh());
   refresh(); // maybe things were clicked before script was loaded
 }
 
