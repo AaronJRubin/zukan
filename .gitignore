@@ -7,10 +7,10 @@ zukan_workspace/web/**/*.html
 # Don't include CSS generated from SASS
 zukan_workspace/web/stylesheets
 
-# Don't include files generated from generate_fish_list.py
+# Don't include files generated from generate_animal_list.py
 
-zukan_workspace/fish_list.pkl
-zukan_workspace/web/fish_list.dart
+zukan_workspace/animal_list.pkl
+zukan_workspace/web/animal_list.dart
 
 # Don't include other generated dart files
 zukan_workspace/web/article_list.dart
