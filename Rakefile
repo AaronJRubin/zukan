@@ -151,7 +151,7 @@ task :generate_pages => :generate_animal_list do
 end
 
 desc "Generate dart file that contains text of all articles for client-side searching"
-file "#{workspace}/web/article_list.dart" => Rake::FileList.new("#{workspace}/templates/base/sakana/*.html") do |task|
+file "#{workspace}/web/article_list.dart" => :generate_pages do |task|
   unlock task.name
   Dir.chdir workspace
   sh 'ruby index_articles.rb'

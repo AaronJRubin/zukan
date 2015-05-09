@@ -6,17 +6,20 @@ class String
   end
 end
 
-def process_article(article)
-  article.remove_enclosed("{", "}").remove_enclosed("<",">").gsub(/\s/, "")
+def strip_html(html)
+  html.gsub(/<.*?>/, "").gsub(/\s/, "")
 end
 
 Article = Struct.new(:name, :text)
 
-templates = Rake::FileList.new("templates/base/ikimono/*.html")
+full_articles = Rake::FileList.new("web/ikimono/*.html")
 
-articles = templates.map { |template|
-  name = template.pathmap("%n")
-  text = process_article File.read(template)
+articles = full_articles.map { |full_article|
+  name = full_article.pathmap("%n")
+  content = File.read full_article
+  classification = strip_html /<div class="classification">.*?<\/div>/m.match(content).to_s
+  body = strip_html /<article>.*?<\/article>/m.match(content).to_s
+  text = "#{classification}。#{body}"
   Article.new(name, text)
 }
 
