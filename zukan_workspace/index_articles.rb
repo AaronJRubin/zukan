@@ -1,11 +1,5 @@
 require 'rake'
 
-class String
-  def remove_enclosed(left, right)
-    self.gsub(/#{left}.*?#{right}/, "")
-  end
-end
-
 def strip_html(html)
   html.gsub(/<.*?>/, "").gsub(/\s/, "")
 end
