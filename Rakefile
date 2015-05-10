@@ -72,6 +72,7 @@ end
 NON_ICHIRAN_DIMENSIONS = "278x"
 ICHIRAN_HEIGHT = 112
 HEADER_WIDTH = 335
+LONG_HEADER_IMAGE_MAX_WIDTH = 388
 
 convert_animal = lambda do |animal, compressed_animal|
  	if animal.include? "ichiran"	
@@ -82,7 +83,7 @@ convert_animal = lambda do |animal, compressed_animal|
 		header_display_height = HEADER_WIDTH * aspect_ratio	
 		is_long = height * 2 < width # this determines whether the animal will be at 100% width on screens with size 415 px or less
 		if is_long
-			header_display_height = 390 * aspect_ratio
+			header_display_height = LONG_HEADER_IMAGE_MAX_WIDTH * aspect_ratio
 		end
 		needed_height = [ICHIRAN_HEIGHT, header_display_height].max	
 		resize = "x#{needed_height}"
