@@ -126,6 +126,12 @@ img {
     min-width: 100%;
   }
 
+  @media (max-width: 390px) {
+    img.long {
+      max-height: 100%;
+    }
+  }
+
   div {
     margin: .1em 0 .2em;
     text-align: center;
