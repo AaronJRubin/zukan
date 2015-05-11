@@ -198,6 +198,12 @@ task :compile => :build_workspace do
 			File.write(file, compressor.compress(File.read(file)))
 			lock file
 		end
+    jsFiles = Rake::FileList.new("#{static_site}/**/*.js")
+    jsFiles.each do |file|
+      unlock file
+      sh "uglifyjs #{file} -c -m -o #{file}" 
+      lock file
+    end
 	else
 		Dir.chdir '..'
 	end
