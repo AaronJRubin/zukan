@@ -264,12 +264,8 @@ nav ul {
     text-indent: 0;
     text-align: right;
 
-    @media (max-width: 459px) {
-      font-size: 0.8em;
-    }
-
-    @media (max-width: 370px) {
-      font-size: 0.65em;
+    @media (max-width: 459px) { 
+      font-size: 5vw;
     }
   } 
 }
