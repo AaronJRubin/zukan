@@ -2,4 +2,3 @@ name: zukan_workspace
 version: 0.0.1
 dependencies:
   browser: any
-  browser_detect: any
