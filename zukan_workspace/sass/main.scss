@@ -393,9 +393,10 @@ nav ul {
   @include display-flex(flex);
   @include flex-direction(column);
   @include single-transition(max-height, 0.6s);
+  @include translateZ(0);
   font-size: $small-font-size;
   overflow: hidden;
-  max-height: 1000px; // arbitrarily large number, necessary for height transition
+  max-height: 300px; // necessary for height transition
 
   ol {
     @include display-flex(flex);
@@ -428,7 +429,7 @@ nav ul {
   }
 
   [type='checkbox'] {
-    @include transform(scale(1.5));
+    @include transform(scale(1.5), translatez(0)); 
     float: right;
     margin-right: 10px;
     margin-top: 3px;
