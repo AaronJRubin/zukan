@@ -153,11 +153,14 @@ end
 
 desc "Generate dart file that contains text of all articles for client-side searching"
 file "#{workspace}/web/article_list.dart" => :generate_pages do |task|
-  unlock task.name
-  Dir.chdir workspace
-  sh 'ruby index_articles.rb'
-  Dir.chdir '..'
-  lock task.name
+  dependencies = Rake::FileList.new("#{workspace}/web/ikimono/*.html")
+  unless uptodate?(task.name, dependencies)
+    unlock task.name
+    Dir.chdir workspace
+    sh 'ruby index_articles.rb'
+    Dir.chdir '..'
+    lock task.name
+  end
 end
 
 desc "Compile Sass to CSS, using Compass"
