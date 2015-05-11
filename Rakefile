@@ -143,7 +143,7 @@ desc "Generate html documents using the jinja2 templates engine"
 task :generate_pages => :generate_animal_list do
 	Dir.chdir workspace
 	dependencies = Rake::FileList.new('templates/**/*').include('animal.py').include('animal_data.txt').include('generate_animal_list.py')
-	unless uptodate?('web/ichiran.html', dependencies)
+	unless uptodate?('web/ikimono/ichiran.html', dependencies)
 		unlock Rake::FileList.new('web/**/*.html')
 		sh 'python generate_pages.py'
 	end
