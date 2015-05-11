@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% set body_class = "animal-page" %}
+{% set background_class = animal.starting_location() %}
 {% set title = animal.kana %}
 
 {% block content %}

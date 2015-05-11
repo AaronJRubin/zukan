@@ -13,10 +13,10 @@ dest = "web"
 # Set up templating infrastructure
 
 try:
-	animal_list = pickle.load(open("animal_list.pkl", "rb", pickle.HIGHEST_PROTOCOL))
+    animal_list = pickle.load(open("animal_list.pkl", "rb", pickle.HIGHEST_PROTOCOL))
 except IOError:
-	print("To run this script, you need to first generate the file animal_list.pkl by running generate_animal_list.py")
-	exit()
+    print("To run this script, you need to first generate the file animal_list.pkl by running generate_animal_list.py")
+    exit()
 
 template_dir = os.path.join(os.path.dirname(__file__), "templates")
 jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir))
@@ -38,9 +38,9 @@ def render_str(template, **params):
     return t.render(params)
 
 def write(path, string):
-	f = file(path, "w")
-	f.write(string)
-	f.close()
+    f = file(path, "w")
+    f.write(string)
+    f.close()
 
 # End set up templating infrastructure
 
@@ -56,23 +56,23 @@ ichiran = render_str("base/ichiran.html", animals = animal_list)
 write(os.path.join(dest, "ikimono/ichiran.html"), ichiran.encode('utf8'))
 
 def render_static_page(name):
-	page = render_str("base/" + name + ".html")
-	write(os.path.join(dest, name + ".html"), page.encode('utf8'))
+    page = render_str("base/" + name + ".html")
+    write(os.path.join(dest, name + ".html"), page.encode('utf8'))
 
 render_static_page("home")
 render_static_page("about")
 render_static_page("sankoubunken")
 
 for animal in animal_list:
-	template = os.path.join("base/ikimono", animal.romaji + ".html")
-	template_path = os.path.join("templates", template)
-	if os.path.exists(template_path):
-		page = render_str(template, animal = animal, background_class = animal.starting_location())
-		write(os.path.join(dest, "ikimono", animal.romaji + ".html"), page.encode('utf8'))
-	else:
+    template = os.path.join("base/ikimono", animal.romaji + ".html")
+    template_path = os.path.join("templates", template)
+    if os.path.exists(template_path):
+        page = render_str(template, animal = animal)
+        write(os.path.join(dest, "ikimono", animal.romaji + ".html"), page.encode('utf8'))
+    else:
         print("No article found for " + animal.romaji)
-		page = render_str("base/ikimono/generic.html", animal = animal, background_class = animal.starting_location())
-		write(os.path.join(dest, "ikimono", animal.romaji + ".html"), page.encode('utf8'))
+        page = render_str("base/ikimono/generic.html", animal = animal)
+        write(os.path.join(dest, "ikimono", animal.romaji + ".html"), page.encode('utf8'))
 
 mamechishiki_pages = [path.replace("templates/", "")  for path in glob.glob("templates/base/mamechishiki/*.html")]
 
