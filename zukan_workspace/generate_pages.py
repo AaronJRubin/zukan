@@ -70,7 +70,7 @@ for animal in animal_list:
 		page = render_str(template, animal = animal, background_class = animal.starting_location())
 		write(os.path.join(dest, "ikimono", animal.romaji + ".html"), page.encode('utf8'))
 	else:
-                print("No article found for " + animal.romaji)
+        print("No article found for " + animal.romaji)
 		page = render_str("base/ikimono/generic.html", animal = animal, background_class = animal.starting_location())
 		write(os.path.join(dest, "ikimono", animal.romaji + ".html"), page.encode('utf8'))
 
