@@ -392,7 +392,7 @@ nav ul {
   @include translateZ(0);
   font-size: $small-font-size;
   overflow: hidden;
-  max-height: 300px; // necessary for height transition
+  max-height: 525px; // necessary for height transition
 
   ol {
     @include display-flex(flex);
