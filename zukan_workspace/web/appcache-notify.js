@@ -7,11 +7,13 @@ appcache.addEventListener("downloading", function () {
     var progress = document.querySelector("#progress");
     var downloaded, total;
     appcache.addEventListener("progress", function (event) {
-        if (event.total !== 'undefined') {
-            if (downloaded === 'undefined') {
+        if (event.total !== undefined) {
+            if (downloaded === undefined) {
                 progress.innerHTML = '<span id="downloaded">0</span>/<span id="total">349</span>ダウンロード済み。';
                 downloaded = document.querySelector("#downloaded");
                 total = document.querySelector("#total");
+                console.log(downloaded);
+                console.log(total);
             }
             downloaded.innerHTML = event.loaded;
             total.innerHTML = event.total;
