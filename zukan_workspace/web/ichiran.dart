@@ -8,8 +8,8 @@ TextInputElement articleSearch;
 ElementList<LIElement> animalTiles;
 
 void main() {
-  includeCheckboxes = document.querySelectorAll("#include .search-checkbox");
-  excludeCheckboxes = document.querySelectorAll("#exclude .search-checkbox");
+  includeCheckboxes = document.querySelectorAll(".search-checkbox.include");
+  excludeCheckboxes = document.querySelectorAll(".search-checkbox.exclude");
   articleSearch = document.querySelector("#article-search");
   animalTiles = document.querySelectorAll("ol.animal-tiles li");
   SpanElement dropdownCaret = document.querySelector("#dropdown-caret");

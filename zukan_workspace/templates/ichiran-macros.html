@@ -1,4 +1,4 @@
-{% macro river_section(river, river_kanji, action) %}
+<!--{% macro river_section(river, river_kanji, action) %}
 <div class="individual-river-section">
 	<ol>
 		{% for ryuuiki in [("zyou", "上流"), ("chuu", "中流"), ("ge", "下流"), ("kakou", "河口")] %}
@@ -6,7 +6,22 @@
 		{% endfor %}
 	</ol>
 </div>
+{% endmacro %}-->
+
+{% macro river_section(river, river_kanji) %}
+<div class="individual-river-section">
+	<ol>
+		{% for ryuuiki in [("zyou", "上流"), ("chuu", "中流"), ("ge", "下流"), ("kakou", "河口")] %}
+    <li><div class="label">{{river_kanji}}{{ryuuiki[1]}}</div><div class="boxes">
+    <input type="checkbox" class="search-checkbox include" id="{{river}}-{{ryuuiki[0]}}-include" name="{{river}}-{{ryuuiki[0]}}-include"><label for="{{river}}-{{ryuuiki[0]}}-include" class="include">要</label>
+    <input type="checkbox" class="search-checkbox exclude" id="{{river}}-{{ryuuiki[0]}}-exclude" name="{{river}}-{{ryuuiki[0]}}-exclude"><label for="{{river}}-{{ryuuiki[0]}}-exclude" class="exclude">除</label>
+    </div>
+    </li>
+		{% endfor %}
+	</ol>
+</div>
 {% endmacro %}
+
 
 {% macro animal_tile(animal) %}
 <a href="{{animal.get_link()}}" class="animal-tile">

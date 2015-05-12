@@ -402,16 +402,13 @@ nav ul {
   }
 
   li {
+    @include box-sizing(border-box);
     background-color: $interactable;
     border-radius: $rounded-border;
     display: inline-block;
     padding: .25em 0;
     text-align: center;
     width: 24.8%;
-
-    &:hover {
-      background-color: $highlighted;
-    }
   }
 
   .search-header, 
@@ -424,11 +421,57 @@ nav ul {
     font-size: inherit;
   }
 
+  div {
+    @include box-sizing(border-box);
+  }
+
+  div.label {
+    display: inline-block;
+    text-align: left;
+    width: 58%;
+    margin-left: 2%;
+  }
+
+  .boxes {
+    display: inline-block;
+    width: 38%;
+    text-align: right;
+    margin-right: 2%;
+  }
+
   [type='checkbox'] {
-    @include transform(scale(1.5), translatez(0)); 
-    float: right;
-    margin-right: 10px;
-    margin-top: 3px;
+    //@include transform(scale(1.5), translatez(0));
+    display: none;
+    //float: right;
+    //margin-right: 10px;
+    //margin-top: 3px;
+  }
+  
+  label {
+    display: inline-block;
+    padding: 0.2em;
+    border-radius: $rounded-border;
+    @include single-transition(background-color, 0.5s);
+
+    &.exclude {
+      background-color: #800;
+    }
+
+    &.include {
+      background-color: #080;
+    }
+
+  }
+
+  [type=checkbox]:checked + label {
+    
+    &.exclude {
+      background-color: #f00;
+    }
+
+    &.include {
+      background-color: #0f0;
+    }
   }
 
   &.collapsed {
@@ -436,7 +479,7 @@ nav ul {
     //display: none;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 628px) {
     .individual-river-section {
       display: inline-block;
       width: 49%;
