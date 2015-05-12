@@ -18,6 +18,7 @@ $no-background: '(max-width: 700px)';
 $animal-header-bottom-split: '(max-width: 725px)';
 $search-area-breakpoint: '(max-width: 628px)';
 $search-area-transition-time: .6s;
+$background-color-transition-time: .5s;
 $small-font-size: .8em;
 
 /* Begin general HTML element styles */
@@ -112,6 +113,16 @@ img {
   }
 }
 
+%clickable {
+  background-color: $interactable;
+
+  @include single-transition(background-color, $background-color-transition-time);
+
+  &:hover {
+    background-color: $highlighted;
+  }
+}
+
 .animal-tile {
 
   border-color: $image-border-color;
@@ -139,14 +150,16 @@ img {
     text-align: center;
   }
 
+  @include single-transition(transform, 0.5s);
+
   &:hover {
     @include transform(scale(1.1, 1.1));
     border-color: $highlighted;
   }
 }
 
-.jumbo-link {
-  background-color: $interactable;
+.jumbo-link { 
+  @extend %clickable;
   border-radius: $rounded-border;
   display: block;
   font-size: 5vw;
@@ -156,10 +169,6 @@ img {
   padding-bottom: 1vh;
   padding-top: 1vh;
   text-align: center;
-
-  &:hover {
-    background-color: $highlighted;
-  }
 
   @media print {
     display: none;
@@ -186,10 +195,7 @@ nav ul {
     }
 
     a { 
-      background-color: $interactable;
-      &:hover {
-        background-color: $highlighted;
-      }
+      @extend %clickable;
       text-align: center; 
       display: inline-block;
       width: 100%;
@@ -368,7 +374,8 @@ nav ul {
 
 #dropdown-caret {
   @include user-select(none); 
-  @include single-transition(transform, $search-area-transition-time);
+  @include transition-property(transform, background-color);
+  @include transition-duration($search-area-transition-time, $background-color-transition-time);
   background-color: $interactable;
   border-radius: 50%;
   cursor: default;
@@ -452,11 +459,19 @@ nav ul {
     @include single-transition(background-color, 0.5s);
 
     &.exclude {
-      background-color: #844;
+      background-color: #644;
+
+      &:hover {
+        background-color: #b44;
+      }
     }
 
     &.include {
-      background-color: #484;
+      background-color: #464;
+
+      &:hover {
+        background-color: #4b4;
+      }
     }
 
   }
