@@ -24,23 +24,43 @@ void main() {
       dropdownLabel.text = "検索エリアを隠す";
     }
   });
-  for (CheckboxInputElement checkbox in new List.from(includeCheckboxes)..addAll(excludeCheckboxes)) {
-    checkbox.onChange.listen((e) => refresh());
+  for (int i = 0; i < includeCheckboxes.length; i++) {
+    CheckboxInputElement includeCheckbox = includeCheckboxes[i];
+    CheckboxInputElement excludeCheckbox = excludeCheckboxes[i];
+    includeCheckbox.onChange.listen((e) {
+      toggleCheckboxChanged(includeCheckbox, excludeCheckbox);
+    });
+    excludeCheckbox.onChange.listen((e) {
+      toggleCheckboxChanged(excludeCheckbox, includeCheckbox);
+    });
   }
   articleSearch.onChange.listen((e) => refresh());
   articleSearch.onKeyUp.listen((e) => refresh());
   refresh(); // maybe things were clicked before script was loaded
 }
 
+void toggleCheckboxChanged(CheckboxInputElement self, CheckboxInputElement partner) {
+  bool terminalChange = true;
+  if (self.checked) {
+    if (partner.checked) {
+      partner.checked = false;
+      terminalChange = false;
+    }
+  }
+  if (terminalChange) {
+    refresh();
+  }
+}
+
 typedef bool FilterFunction(Animal animal);
 
 class Filter {
-
   List<FilterFunction> filterFunctions = [];
 
   Filter();
   bool filter(Animal animal) {
-    return filterFunctions.map((function) => function(animal)).fold(true, (bool1, bool2) => bool1 && bool2);
+    return filterFunctions.map((function) => function(animal)).fold(
+        true, (bool1, bool2) => bool1 && bool2);
   }
 
   void add(FilterFunction func) {
@@ -52,7 +72,8 @@ Filter buildFilter() {
   Filter filter = new Filter();
   String searchText = articleSearch.value.trim();
   if (searchText.length > 0) {
-    filter.add((animal) => article_map[animal.romaji].text.contains(searchText));
+    filter
+        .add((animal) => article_map[animal.romaji].text.contains(searchText));
   }
   for (CheckboxInputElement checkbox in includeCheckboxes) {
     if (checkbox.checked) {
