@@ -40,16 +40,12 @@ void main() {
 }
 
 void toggleCheckboxChanged(CheckboxInputElement self, CheckboxInputElement partner) {
-  bool terminalChange = true;
   if (self.checked) {
     if (partner.checked) {
       partner.checked = false;
-      terminalChange = false;
     }
   }
-  if (terminalChange) {
-    refresh();
-  }
+  refresh();
 }
 
 typedef bool FilterFunction(Animal animal);
