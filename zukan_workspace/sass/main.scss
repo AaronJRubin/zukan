@@ -16,6 +16,7 @@ $image-border-color: #fff;
 $rounded-border: 7px;
 $no-background: '(max-width: 700px)';
 $animal-header-bottom-split: '(max-width: 725px)';
+$search-area-breakpoint: '(max-width: 628px)';
 $small-font-size: .8em;
 
 /* Begin general HTML element styles */
@@ -392,7 +393,11 @@ nav ul {
   @include translateZ(0);
   font-size: $small-font-size;
   overflow: hidden;
-  max-height: 525px; // necessary for height transition
+  max-height: 200px; // necessary for height transition
+  
+  @media #{$search-area-breakpoint} {
+    max-height: 300px;
+  }
 
   ol {
     @include display-flex(flex);
@@ -454,11 +459,11 @@ nav ul {
     @include single-transition(background-color, 0.5s);
 
     &.exclude {
-      background-color: #800;
+      background-color: #844;
     }
 
     &.include {
-      background-color: #080;
+      background-color: #484;
     }
 
   }
@@ -479,7 +484,7 @@ nav ul {
     //display: none;
   }
 
-  @media (max-width: 628px) {
+  @media #{$search-area-breakpoint} {
     .individual-river-section {
       display: inline-block;
       width: 49%;
