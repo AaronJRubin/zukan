@@ -12,7 +12,7 @@
 <div class="individual-river-section">
 	<ol>
 		{% for ryuuiki in [("zyou", "上流"), ("chuu", "中流"), ("ge", "下流"), ("kakou", "河口")] %}
-    <li><div class="label">{{river_kanji}}{{ryuuiki[1]}}</div><div class="boxes">
+    <li><div class="ryuuiki">{{river_kanji}}{{ryuuiki[1]}}</div><div class="boxes">
     <input type="checkbox" class="search-checkbox include" id="{{river}}-{{ryuuiki[0]}}-include" name="{{river}}-{{ryuuiki[0]}}-include"><label for="{{river}}-{{ryuuiki[0]}}-include" class="include">要</label>
     <input type="checkbox" class="search-checkbox exclude" id="{{river}}-{{ryuuiki[0]}}-exclude" name="{{river}}-{{ryuuiki[0]}}-exclude"><label for="{{river}}-{{ryuuiki[0]}}-exclude" class="exclude">除</label>
     </div>

@@ -17,6 +17,7 @@ $rounded-border: 7px;
 $no-background: '(max-width: 700px)';
 $animal-header-bottom-split: '(max-width: 725px)';
 $search-area-breakpoint: '(max-width: 628px)';
+$search-area-transition-time: .6s;
 $small-font-size: .8em;
 
 /* Begin general HTML element styles */
@@ -358,7 +359,7 @@ nav ul {
 .search-header {
   background-color: $secondary-background;
   border-radius: $rounded-border;
-  padding: .2em .5em;
+  padding: .2em 0.6%;
 }
 
 .search-dropdown {
@@ -367,7 +368,7 @@ nav ul {
 
 #dropdown-caret {
   @include user-select(none); 
-  @include single-transition(transform, 0.6s);
+  @include single-transition(transform, $search-area-transition-time);
   background-color: $interactable;
   border-radius: 50%;
   cursor: default;
@@ -389,12 +390,12 @@ nav ul {
 #search-area {
   @include display-flex(flex);
   @include flex-direction(column);
-  @include single-transition(max-height, 0.6s);
-  @include translateZ(0);
+  @include single-transition(max-height, $search-area-transition-time);
+  @include translateZ(0); 
   font-size: $small-font-size;
-  overflow: hidden;
   max-height: 200px; // necessary for height transition
-  
+  overflow: hidden;
+
   @media #{$search-area-breakpoint} {
     max-height: 300px;
   }
@@ -406,8 +407,7 @@ nav ul {
     @include flex-direction(row);   
   }
 
-  li {
-    @include box-sizing(border-box);
+  li { 
     background-color: $interactable;
     border-radius: $rounded-border;
     display: inline-block;
@@ -424,13 +424,10 @@ nav ul {
   [type='text'] {
     border-radius: $rounded-border;
     font-size: inherit;
+    margin-left: 2%;
   }
 
-  div {
-    @include box-sizing(border-box);
-  }
-
-  div.label {
+  .ryuuiki {
     display: inline-block;
     text-align: left;
     width: 58%;
@@ -444,12 +441,8 @@ nav ul {
     margin-right: 2%;
   }
 
-  [type='checkbox'] {
-    //@include transform(scale(1.5), translatez(0));
+  [type='checkbox'] { 
     display: none;
-    //float: right;
-    //margin-right: 10px;
-    //margin-top: 3px;
   }
   
   label {
@@ -480,8 +473,7 @@ nav ul {
   }
 
   &.collapsed {
-    max-height: 0;
-    //display: none;
+    max-height: 0; 
   }
 
   @media #{$search-area-breakpoint} {
