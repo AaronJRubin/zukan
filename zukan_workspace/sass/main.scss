@@ -39,17 +39,11 @@ h1 {
   font-size: 2em;
   padding: .5em 0;
   text-align: center;
-  @media (max-width: 400px) {
-    font-size: 1.5em;
-  }
 }
 
 h2 {
   font-size: 1.5em;
   margin: .5em 0;
-  @media (max-width: 400px) {
-    font-size: 1.3em; 
-  }
 }
 
 p {
@@ -268,6 +262,16 @@ nav ul {
     max-width: 100%;
   }
 
+  h1 {
+    @media (max-width: 900px) {
+      font-size: 5.5vw;
+    }
+
+    @media (max-width: 600px) {
+      font-size: 7.5vw;
+    }
+  }
+
   .signature p, {
     text-indent: 0;
     text-align: right;
@@ -284,6 +288,10 @@ nav ul {
   h2 {
     margin-top: 0;
     margin-bottom: .25em;
+
+    @media (max-width: 625px) {
+      font-size: 1.3em;
+    }
   }
 
   a { 
@@ -317,6 +325,16 @@ nav ul {
   .acknowledgements p {
     text-align: justify;
     text-indent: 0;
+  }
+
+  h1 {
+    @media (max-width: 620px) {
+      font-size: 7vw;
+    }
+
+    @media (max-width: 450px) {
+      font-size: 12vw;
+    }
   }
 
   ul {
