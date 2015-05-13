@@ -54,7 +54,7 @@ h2 {
   }
 }
 
-p {
+%p {
   line-height: 1.2em;
   margin-bottom: .5em;
 
@@ -62,6 +62,10 @@ p {
     margin-bottom: 0;
   }
 
+}
+
+p {
+  @extend %p;
 }
 
 table, 
@@ -581,7 +585,8 @@ main.animal-page {
 
   > div, 
   img, 
-  table {
+  table,
+  ul {
     @include box-sizing(border-box);
     margin: 0 1% 1em;
     width: 48%; 
@@ -612,7 +617,17 @@ main.animal-page {
 
   .classification {
     @include align-self(center);
+    
+  }
+
+  li {
+    @extend %p;
     font-size: $small-font-size;
+    @media (max-width: 480px) {
+      font-size: 0.7em;
+      line-height: 1.1em;
+      margin-bottom: 0.3em;
+    }
   }
 
   table, 

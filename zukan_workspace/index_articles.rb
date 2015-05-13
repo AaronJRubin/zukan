@@ -11,7 +11,7 @@ full_articles = Rake::FileList.new("web/ikimono/*.html")
 articles = full_articles.map { |full_article|
   name = full_article.pathmap("%n")
   content = File.read full_article
-  classification = strip_html /<div class="classification">.*?<\/div>/m.match(content).to_s
+  classification = strip_html /<ul class="classification">.*?<\/ul>/m.match(content).to_s
   body = strip_html /<article>.*?<\/article>/m.match(content).to_s
   text = "#{classification}。#{body}"
   Article.new(name, text)

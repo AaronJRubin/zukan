@@ -13,12 +13,12 @@
 
 	<img {% if animal.is_long() %} class="long" {% endif %} src="{{animal.image('ichiran')}}" alt="">
 
-		<div class="classification">
-			<p>和名：{{animal.kana}}</p>
-			<p>学名：{{animal.latin}}</p>
-			<p>科名：{{animal.family}}</p>
-			<p>属名：{{animal.genus}}</p>
-		</div>
+		<ul class="classification">
+			<li>和名：{{animal.kana}}</li>
+			<li>学名：{{animal.latin}}</li>
+			<li>科名：{{animal.family}}</li>
+			<li>属名：{{animal.genus}}</li>
+		</ul>
 
 			<table id = "location">
 				<tr>
