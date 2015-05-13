@@ -508,11 +508,11 @@ nav ul {
   [type=checkbox]:checked + label {
     
     &.exclude {
-      background-color: #f00;
+      background-color: #dd2424;
     }
 
     &.include {
-      background-color: #0f0;
+      background-color: #24dd24;
     }
   }
 
