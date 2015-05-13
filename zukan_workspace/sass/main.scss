@@ -12,7 +12,6 @@ $highlighted: #808;
 $print-background: #fff;
 $text-color: #e8e8e8;
 $print-text-color: #000;
-$image-border-color: #fff;
 $rounded-border: 7px;
 $no-background: '(max-width: 700px)';
 $animal-header-bottom-split: '(max-width: 725px)';
@@ -94,6 +93,10 @@ a:visited {
 img {
   @include box-sizing(border-box);
   border: 1px solid $text-color;
+
+  @media print {
+    border-color: $print-text-color;
+  }
 }
 /* End general HTML element styles */
 
@@ -131,7 +134,7 @@ img {
 
 .animal-tile {
 
-  border-color: $image-border-color;
+  border-color: $text-color;
   border-radius: $rounded-border;
   border-style: solid;
   border-width: 2px;
@@ -606,18 +609,9 @@ main.animal-page {
     }
   }
 
-  img {
-    @include align-self(center); 
-
-    @media print {
-      border-color: $print-text-color;
-    }
-
-  }
-
+  img,
   .classification {
-    @include align-self(center);
-    
+    @include align-self(center); 
   }
 
   li {
