@@ -39,11 +39,19 @@ h1 {
   font-size: 2em;
   padding: .5em 0;
   text-align: center;
+
+  @media (max-width: 600px) {
+    font-size: 1.6em;
+  }
 }
 
 h2 {
   font-size: 1.5em;
   margin: .5em 0;
+
+  @media (max-width: 600px) {
+    font-size: 1.3em;
+  }
 }
 
 p {
@@ -288,10 +296,6 @@ nav ul {
   h2 {
     margin-top: 0;
     margin-bottom: .25em;
-
-    @media (max-width: 625px) {
-      font-size: 1.3em;
-    }
   }
 
   a { 
