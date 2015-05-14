@@ -19,9 +19,9 @@ $no-background: "(max-width: 700px)";
 // you to, in those cases, remove certain effects (specifically hover effects) 
 // that don't work or that work suboptimally on touch devices.
 $not-touch: "(min-width: 1025px)";
-$search-area-transition-time: 0.6s;
-$background-color-transition-time: 0.5s;
-$small-font-size: 0.8em;
+$search-area-transition-time: .6s;
+$background-color-transition-time: .5s;
+$small-font-size: .8em;
 
 /* Begin general HTML element styles */
 
@@ -146,7 +146,7 @@ footer {
     margin: .1em 0 .2em;
     text-align: center;
   }
-  @include single-transition(transform, 0.5s);
+  @include single-transition(transform, .5s);
   @media #{$not-touch} {
     &:hover {
       @include transform(scale(1.1, 1.1));
@@ -190,7 +190,7 @@ nav ul {
       width: 100%;
       padding: .5em 0;
       @media (max-width: 450px) {
-        font-size: 0.7em;
+        font-size: .7em;
         border-bottom: 1px solid #000;
       }
     }
@@ -344,7 +344,7 @@ nav ul {
 .search-header {
   background-color: $secondary-background;
   @extend %rounded-border;
-  padding: .2em 0.6%;
+  padding: .2em .6%;
 }
 
 .search-dropdown-control {
@@ -424,9 +424,9 @@ nav ul {
   }
   label {
     display: inline-block;
-    padding: 0.2em;
+    padding: .2em;
     @extend %rounded-border;
-    @include single-transition(background-color, 0.5s);
+    @include single-transition(background-color, .5s);
     &.exclude {
       background-color: #644;
       @media #{$not-touch} {
@@ -534,7 +534,7 @@ main.animal-page {
       width: 100%;
     }
     table {
-      font-size: 0.9em;
+      font-size: .9em;
     }
   }
   img,
@@ -545,9 +545,9 @@ main.animal-page {
     @extend %p;
     font-size: $small-font-size;
     @media (max-width: 480px) {
-      font-size: 0.7em;
+      font-size: .7em;
       line-height: 1.1em;
-      margin-bottom: 0.3em;
+      margin-bottom: .3em;
     }
   }
   table,
