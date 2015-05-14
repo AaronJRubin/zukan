@@ -12,10 +12,7 @@ $highlighted: #808;
 $print-background: #fff;
 $text-color: #e8e8e8;
 $print-text-color: #000;
-$rounded-border: 7px;
 $no-background: '(max-width: 700px)';
-$animal-header-bottom-split: '(max-width: 725px)';
-$search-area-breakpoint: '(max-width: 628px)';
 $search-area-transition-time: .6s;
 $background-color-transition-time: .5s;
 $small-font-size: .8em;
@@ -122,6 +119,10 @@ img {
   }
 }
 
+%rounded-border {
+  border-radius: 7px;
+}
+
 %clickable {
   background-color: $interactable;
 
@@ -135,7 +136,7 @@ img {
 .animal-tile {
 
   border-color: $text-color;
-  border-radius: $rounded-border;
+  @extend %rounded-border;
   border-style: solid;
   border-width: 2px;
   display: inline-block;
@@ -169,7 +170,7 @@ img {
 
 .jumbo-link { 
   @extend %clickable;
-  border-radius: $rounded-border;
+  @extend %rounded-border; 
   display: block;
   font-size: 5vw;
   line-height: 10vh;
@@ -373,7 +374,7 @@ nav ul {
 .ichiran-header {
   background-image: url('/images/takatsugawa-header-background.jpg');
   background-size: 100%;
-  border-radius: $rounded-border;
+  @extend %rounded-border; 
 }
 
 .animal-tiles {
@@ -393,7 +394,7 @@ nav ul {
 .search-dropdown-control, 
 .search-header {
   background-color: $secondary-background;
-  border-radius: $rounded-border;
+  @extend %rounded-border; 
   padding: .2em 0.6%;
 }
 
@@ -424,6 +425,7 @@ nav ul {
 }
 
 #search-area {
+  $search-area-breakpoint: '(max-width: 628px)';
   @include display-flex(flex);
   @include flex-direction(column);
   @include single-transition(max-height, $search-area-transition-time);
@@ -445,7 +447,7 @@ nav ul {
 
   li { 
     background-color: $interactable;
-    border-radius: $rounded-border;
+    @extend %rounded-border; 
     display: inline-block;
     padding: .25em 0;
     text-align: center;
@@ -458,7 +460,7 @@ nav ul {
   }
 
   [type='text'] {
-    border-radius: $rounded-border;
+    @extend %rounded-border; 
     font-size: inherit;
     margin-left: 2%;
   }
@@ -484,7 +486,7 @@ nav ul {
   label {
     display: inline-block;
     padding: 0.2em;
-    border-radius: $rounded-border;
+    @extend %rounded-border; 
     @include single-transition(background-color, 0.5s);
 
     &.exclude {
@@ -560,7 +562,7 @@ $seisokuchi: 'takatsu-zyou', 'takatsu-chuu', 'takatsu-ge', 'takatsu-kakou',
 
 main.animal-page {
   background-color: $primary-background;
-  border-radius: $rounded-border;
+  @extend %rounded-border; 
   margin: 2vh auto;
   max-width: 700px;
   padding: 2vh 2vw;
@@ -577,6 +579,7 @@ main.animal-page {
 }
 
 .animal-header {
+  $animal-header-bottom-split: '(max-width: 725px)';
   @include display-flex(flex);
   @include flex-wrap(wrap);
   @include justify-content(center);
