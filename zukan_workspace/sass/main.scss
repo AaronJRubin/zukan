@@ -160,8 +160,7 @@ footer {
   @extend %rounded-border;
   display: block;
   font-size: 5vw; 
-  margin: .3em 0;
-  min-width: 98%;
+  margin: .3em 0; 
   padding: 1vh 0;
   text-align: center;
   @media print {
