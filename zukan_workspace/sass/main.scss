@@ -1,9 +1,9 @@
-@import 'compass/reset';
-@import 'compass/css3/flexbox';
-@import 'compass/css3/transform';
-@import 'compass/css3/transition';
-@import 'compass/css3/user-interface';
-@import 'compass/css3/box-sizing';
+@import "compass/reset";
+@import "compass/css3/flexbox";
+@import "compass/css3/transform";
+@import "compass/css3/transition";
+@import "compass/css3/user-interface";
+@import "compass/css3/box-sizing";
 
 $primary-background: #113;
 $secondary-background: #119;
@@ -12,15 +12,16 @@ $highlighted: #808;
 $print-background: #fff;
 $text-color: #e8e8e8;
 $print-text-color: #000;
-$no-background: '(max-width: 700px)';
+$no-background: "(max-width: 700px)";
+
 // You cannot 100% tell whether a device is a touch screen just by screen size,
 // but you can get a decent heuristic that will handle most cases and allow
 // you to, in those cases, remove certain effects (specifically hover effects) 
 // that don't work or that work suboptimally on touch devices.
-$not-touch: '(min-width: 1025px)';
-$search-area-transition-time: .6s;
-$background-color-transition-time: .5s;
-$small-font-size: .8em;
+$not-touch: "(min-width: 1025px)";
+$search-area-transition-time: 0.6s;
+$background-color-transition-time: 0.5s;
+$small-font-size: 0.8em;
 
 /* Begin general HTML element styles */
 
@@ -40,7 +41,6 @@ h1 {
   font-size: 2em;
   padding: .5em 0;
   text-align: center;
-
   @media (max-width: 600px) {
     font-size: 1.6em;
   }
@@ -49,7 +49,6 @@ h1 {
 h2 {
   font-size: 1.5em;
   margin: .5em 0;
-
   @media (max-width: 600px) {
     font-size: 1.3em;
   }
@@ -58,26 +57,19 @@ h2 {
 %p {
   line-height: 1.2em;
   margin-bottom: .5em;
-
   &:last-child {
     margin-bottom: 0;
   }
-
 }
 
 p {
   @extend %p;
 }
 
-table, 
-th, 
+table,
+th,
 td {
-  border: 1px solid $text-color;
-
-  @media print {
-    border-color: $print-text-color;
-  }
-
+  border: 1px solid;
   text-align: center;
 }
 
@@ -86,7 +78,7 @@ th {
   padding: .25em;
 }
 
-a, 
+a,
 a:visited {
   color: $text-color;
   text-decoration: none;
@@ -94,12 +86,9 @@ a:visited {
 
 img {
   @include box-sizing(border-box);
-  border: 1px solid $text-color;
-
-  @media print {
-    border-color: $print-text-color;
-  }
+  border: 1px solid;
 }
+
 /* End general HTML element styles */
 
 /* Begin utility class styles */
@@ -107,16 +96,13 @@ img {
 %binary-list {
   margin: auto;
   text-align: left;
-
   li {
     margin: .3em 0;
   }
-
   div {
     display: inline-block;
     vertical-align: top;
     line-height: 1.2em;
-
     &:first-child {
       text-align: right;
       width: 20%;
@@ -130,43 +116,33 @@ img {
 
 %clickable {
   background-color: $interactable;
-
   @include single-transition(background-color, $background-color-transition-time);
-
   &:hover {
     background-color: $highlighted;
   }
 }
 
 .animal-tile {
-
-  border-color: $text-color;
   @extend %rounded-border;
   border-style: solid;
   border-width: 2px;
   display: inline-block;
   margin: .5vw;
-
-
   img {
     max-height: 112px;
     max-width: 100%;
     min-width: 100%;
   }
-
   @media (max-width: 390px) {
     img.long {
       max-height: 100%;
     }
   }
-
   div {
     margin: .1em 0 .2em;
     text-align: center;
   }
-
   @include single-transition(transform, 0.5s);
-
   @media #{$not-touch} {
     &:hover {
       @include transform(scale(1.1, 1.1));
@@ -175,9 +151,9 @@ img {
   }
 }
 
-.jumbo-link { 
+.jumbo-link {
   @extend %clickable;
-  @extend %rounded-border; 
+  @extend %rounded-border;
   display: block;
   font-size: 5vw;
   line-height: 10vh;
@@ -186,7 +162,6 @@ img {
   padding-bottom: 1vh;
   padding-top: 1vh;
   text-align: center;
-
   @media print {
     display: none;
   }
@@ -198,48 +173,38 @@ img {
 
 nav ul {
   width: 100%;
-
   li {
     @include box-sizing(border-box);
     display: inline-block;
     border-left: 1px solid #000;
     border-bottom: 1px solid #000;
-
     width: 20%;
-
     &:nth-child(1) {
       border-left: none;
     }
-
-    a { 
+    a {
       @extend %clickable;
-      text-align: center; 
+      text-align: center;
       display: inline-block;
       width: 100%;
       padding: .5em 0;
-
       @media (max-width: 450px) {
-        font-size: 0.7em; 
+        font-size: 0.7em;
         border-bottom: 1px solid #000;
       }
     }
-
     @media (max-width: 1150px) {
-
       &:nth-child(1), &:nth-child(2), &:nth-child(3) {
         width: 33.3%;
       }
-
       &:nth-child(4), &:nth-child(5) {
         width: 50%;
       }
-
       &:nth-child(4) {
         border-left: none;
       }
     }
   }
-
   @media print {
     display: none;
   }
@@ -247,12 +212,10 @@ nav ul {
 
 #appcache-notifications {
   display: none;
-
   &.displayed {
     background-color: #00f;
     display: block;
     padding: .5em 0;
-
     &.finished {
       background-color: #0b0;
     }
@@ -261,64 +224,51 @@ nav ul {
 
 /* Begin simple page styles (home, about, mamechishiki, reference documents) */
 
-%text-page { 
+%text-page {
   margin: 0 auto 1em;
   max-width: 960px;
   padding: 0 3%;
   text-align: center;
-
   p {
     text-align: justify;
     text-indent: 1.5em;
   }
-
 }
 
-
-
 .home {
-
   @extend %text-page;
-
-  img { 
+  img {
     margin-bottom: .5em;
     max-width: 100%;
   }
-
   h1 {
     @media (max-width: 900px) {
       font-size: 5.5vw;
     }
-
     @media (max-width: 600px) {
       font-size: 7.5vw;
     }
   }
-
-  .signature p, {
+  .signature p {
     text-indent: 0;
     text-align: right;
-
-    @media (max-width: 459px) { 
+    @media (max-width: 459px) {
       font-size: 5vw;
     }
-  } 
+  }
 }
 
 .mamechishiki {
   @extend %text-page;
-
   h2 {
     margin-top: 0;
     margin-bottom: .25em;
   }
-
-  a { 
+  a {
     &:hover {
       color: $highlighted;
     }
   }
-
   li {
     margin: 1em 0;
   }
@@ -326,45 +276,37 @@ nav ul {
 
 .image-bar {
   margin: 1em 0;
-
-  img { 
-    width: 48%; 
+  img {
+    width: 48%;
   }
 }
 
-.sankou-page, 
+.sankou-page,
 .about-page {
   text-align: center;
 }
 
 .about-page {
-
   @extend %text-page;
-
   .acknowledgements p {
     text-align: justify;
     text-indent: 0;
   }
-
   h1 {
     @media (max-width: 620px) {
       font-size: 7vw;
     }
-
     @media (max-width: 450px) {
       font-size: 12vw;
     }
   }
-
   ul {
     @extend %binary-list;
     max-width: 390px;
-
     @media (max-width: 400px) {
       font-size: 5.5vw;
     }
   }
-
   a:hover {
     color: $highlighted;
   }
@@ -374,34 +316,33 @@ nav ul {
   margin: auto;
   margin-bottom: 1em;
 }
+
 /* End simple page styles */
 
 /* Begin ichiran styles */
 
 .ichiran-header {
-  background-image: url('/images/takatsugawa-header-background.jpg');
+  background-image: url("/images/takatsugawa-header-background.jpg");
   background-size: 100%;
-  @extend %rounded-border; 
+  @extend %rounded-border;
 }
 
 .animal-tiles {
   @include display-flex(flex);
   @include justify-content(space-around);
   @include flex-wrap(wrap);
-
   li {
     display: inline-block;
-
     &.hidden {
       display: none;
     }
   }
 }
 
-.search-dropdown-control, 
+.search-dropdown-control,
 .search-header {
   background-color: $secondary-background;
-  @extend %rounded-border; 
+  @extend %rounded-border;
   padding: .2em 0.6%;
 }
 
@@ -410,7 +351,7 @@ nav ul {
 }
 
 #dropdown-caret {
-  @include user-select(none); 
+  @include user-select(none);
   @include transition-property(transform, background-color);
   @include transition-duration($search-area-transition-time, $background-color-transition-time);
   background-color: $interactable;
@@ -421,129 +362,107 @@ nav ul {
   margin-left: 1em;
   padding: .5em .4em .3em;
   -webkit-touch-callout: none;
-
   &:hover {
     background-color: $highlighted;
   }
-
   &.collapsed {
     @include transform(rotate(90deg));
   }
 }
 
 #search-area {
-  $search-area-breakpoint: '(max-width: 628px)';
+  $search-area-breakpoint: "(max-width: 628px)";
   @include display-flex(flex);
   @include flex-direction(column);
   @include single-transition(max-height, $search-area-transition-time);
-  @include translateZ(0); 
+  @include translateZ(0);
   font-size: $small-font-size;
-  max-height: 200px; // necessary for height transition
+  max-height: 200px;
+  // necessary for height transition
   overflow: hidden;
-
   @media #{$search-area-breakpoint} {
     max-height: 300px;
   }
-
   ol {
     @include display-flex(flex);
     @include flex-wrap(wrap);
     @include justify-content(space-between);
-    @include flex-direction(row);   
+    @include flex-direction(row);
   }
-
-  li { 
+  li {
     background-color: $interactable;
-    @extend %rounded-border; 
+    @extend %rounded-border;
     display: inline-block;
     padding: .25em 0;
     text-align: center;
     width: 24.8%;
   }
-
-  .search-header, 
+  .search-header,
   li {
     margin-bottom: .2em;
   }
-
   [type='text'] {
-    @extend %rounded-border; 
+    @extend %rounded-border;
     font-size: inherit;
     margin-left: 2%;
   }
-
   .ryuuiki {
     display: inline-block;
     text-align: left;
     width: 58%;
     margin-left: 2%;
   }
-
   .boxes {
     display: inline-block;
     width: 38%;
     text-align: right;
     margin-right: 2%;
   }
-
-  [type='checkbox'] { 
+  [type='checkbox'] {
     display: none;
   }
-  
-  label { 
+  label {
     display: inline-block;
     padding: 0.2em;
-    @extend %rounded-border; 
+    @extend %rounded-border;
     @include single-transition(background-color, 0.5s);
-
     &.exclude {
       background-color: #644;
-
       @media #{$not-touch} {
         &:hover {
           background-color: #b44;
         }
       }
     }
-
     &.include {
       background-color: #464;
-
       @media #{$not-touch} {
         &:hover {
           background-color: #4b4;
         }
       }
     }
-
   }
-
   [type=checkbox]:checked + label {
-    
     &.exclude {
       background-color: #dd2424;
     }
-
     &.include {
       background-color: #24dd24;
     }
   }
-
   &.collapsed {
-    max-height: 0; 
+    max-height: 0;
   }
-
   @media #{$search-area-breakpoint} {
     .individual-river-section {
       display: inline-block;
       width: 49%;
     }
-
     ol {
       @include flex-direction(column);
       width: 100%;
     }
-
     li {
       width: 100%;
     }
@@ -562,8 +481,7 @@ body.animal-page {
   }
 }
 
-$seisokuchi: 'takatsu-zyou', 'takatsu-chuu', 'takatsu-ge', 'takatsu-kakou', 
-'masuda-zyou', 'masuda-chuu', 'masuda-ge', 'masuda-kakou';
+$seisokuchi: "takatsu-zyou", "takatsu-chuu", "takatsu-ge", "takatsu-kakou", "masuda-zyou", "masuda-chuu", "masuda-ge", "masuda-kakou";
 
 @each $a-seisokuchi in $seisokuchi {
   body.#{$a-seisokuchi} {
@@ -573,7 +491,7 @@ $seisokuchi: 'takatsu-zyou', 'takatsu-chuu', 'takatsu-ge', 'takatsu-kakou',
 
 main.animal-page {
   background-color: $primary-background;
-  @extend %rounded-border; 
+  @extend %rounded-border;
   margin: 2vh auto;
   max-width: 700px;
   padding: 2vh 2vw;
@@ -590,7 +508,7 @@ main.animal-page {
 }
 
 .animal-header {
-  $animal-header-bottom-split: '(max-width: 725px)';
+  $animal-header-bottom-split: "(max-width: 725px)";
   @include display-flex(flex);
   @include flex-wrap(wrap);
   @include justify-content(center);
@@ -599,35 +517,29 @@ main.animal-page {
   border-bottom-style: solid;
   border-bottom-width: .3em;
   text-align: center;
-
-  > div, 
-  img, 
+  > div,
+  img,
   table,
   ul {
     @include box-sizing(border-box);
     margin: 0 1% 1em;
-    width: 48%; 
+    width: 48%;
   }
-
   @media (max-width: 415px) {
     img.long {
       width: 100%;
     }
-    
     img.long + .classification {
       width: 100%;
     }
-    
     table {
       font-size: 0.9em;
     }
   }
-
   img,
   .classification {
-    @include align-self(center); 
+    @include align-self(center);
   }
-
   li {
     @extend %p;
     font-size: $small-font-size;
@@ -637,27 +549,23 @@ main.animal-page {
       margin-bottom: 0.3em;
     }
   }
-
-  table, 
+  table,
   .rarity {
     @media #{$animal-header-bottom-split} {
       margin-left: 0;
       margin-right: 0;
-      width: 100%;    
+      width: 100%;
     }
   }
-
-  td, 
+  td,
   .rarity-header {
     padding: .25em;
   }
-
   .rarity-header {
     @media #{$animal-header-bottom-split} {
       padding: 0;
     }
   }
-
   .rarity-stars {
     @media #{$animal-header-bottom-split} {
       padding-top: 0;
@@ -666,42 +574,29 @@ main.animal-page {
 }
 
 .rarity {
-  border: 1px solid $text-color;
-  @media print {
-    border-color: $print-text-color;
-  }
+  border: 1px solid;
 }
 
 .rarity-stars {
   border-top: 1px solid $text-color;
-  @media print {
-    border-color: $print-text-color;
-  }
   color: #ff0;
   padding-top: 1em;
 }
 
 article {
   min-height: 25vh;
-
   > div {
-    border-bottom-color: $text-color;
     border-bottom-style: solid;
     border-bottom-width: .3em;
     padding-bottom: 1em;
     padding-top: 1em;
-
-    @media print {
-      border-bottom-color: $print-text-color;
-    }
-
     &.captioned-section {
       @include display-flex(flex);
       @include justify-content(top);
       @include align-content(top);
-      @include align-items(center); /* necessary to prevent images from stretching */
+      @include align-items(center);
+      /* necessary to prevent images from stretching */
       @include flex-direction(row);
-
       > img {
         display: inline-block;
         margin-right: 1em;
