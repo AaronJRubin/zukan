@@ -13,6 +13,11 @@ $print-background: #fff;
 $text-color: #e8e8e8;
 $print-text-color: #000;
 $no-background: '(max-width: 700px)';
+// You cannot 100% tell whether a device is a touch screen just by screen size,
+// but you can get a decent heuristic that will handle most cases and allow
+// you to, in those cases, remove certain effects (specifically hover effects) 
+// that don't work or that work suboptimally on touch devices.
+$not-touch: '(min-width: 1025px)';
 $search-area-transition-time: .6s;
 $background-color-transition-time: .5s;
 $small-font-size: .8em;
@@ -162,9 +167,11 @@ img {
 
   @include single-transition(transform, 0.5s);
 
-  &:hover {
-    @include transform(scale(1.1, 1.1));
-    border-color: $highlighted;
+  @media #{$not-touch} {
+    &:hover {
+      @include transform(scale(1.1, 1.1));
+      border-color: $highlighted;
+    }
   }
 }
 
@@ -483,7 +490,7 @@ nav ul {
     display: none;
   }
   
-  label {
+  label { 
     display: inline-block;
     padding: 0.2em;
     @extend %rounded-border; 
@@ -492,16 +499,20 @@ nav ul {
     &.exclude {
       background-color: #644;
 
-      &:hover {
-        background-color: #b44;
+      @media #{$not-touch} {
+        &:hover {
+          background-color: #b44;
+        }
       }
     }
 
     &.include {
       background-color: #464;
 
-      &:hover {
-        background-color: #4b4;
+      @media #{$not-touch} {
+        &:hover {
+          background-color: #4b4;
+        }
       }
     }
 
