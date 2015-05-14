@@ -89,6 +89,10 @@ img {
   border: 1px solid;
 }
 
+footer {
+  overflow: auto;
+}
+
 /* End general HTML element styles */
 
 /* Begin utility class styles */
@@ -155,12 +159,10 @@ img {
   @extend %clickable;
   @extend %rounded-border;
   display: block;
-  font-size: 5vw;
-  line-height: 10vh;
-  margin-top: .3em;
+  font-size: 5vw; 
+  margin: .3em 0;
   min-width: 98%;
-  padding-bottom: 1vh;
-  padding-top: 1vh;
+  padding: 1vh 0;
   text-align: center;
   @media print {
     display: none;
@@ -494,7 +496,7 @@ main.animal-page {
   @extend %rounded-border;
   margin: 2vh auto;
   max-width: 700px;
-  padding: 2vh 2vw;
+  padding: 2vh 2vw 0 2vw;
   @media print {
     margin: 0;
     max-width: 100%;
