@@ -20,18 +20,18 @@ $no-background: "(max-width: 700px)";
 // that don't work or that work suboptimally on touch devices.
 $not-touch: "(min-width: 1025px)";
 $search-area-transition-time: .6s;
-$background-color-transition-time: .5s;
+$background-transition-time: .5s;
 $small-font-size: .8em;
 
 /* Begin general HTML element styles */
 
 body {
-  background-color: $primary-background;
+  background: $primary-background;
   color: $text-color;
   font-family: Century Gothic, sans-serif;
   font-size: 1.5em;
   @media print {
-    background-color: $print-background;
+    background: $print-background;
     color: $print-text-color;
     font-size: .5em;
   }
@@ -119,10 +119,10 @@ footer {
 }
 
 %clickable {
-  background-color: $interactable;
-  @include single-transition(background-color, $background-color-transition-time);
+  background: $interactable;
+  @include single-transition(background, $background-transition-time);
   &:hover {
-    background-color: $highlighted;
+    background: $highlighted;
   }
 }
 
@@ -214,11 +214,11 @@ nav ul {
 #appcache-notifications {
   display: none;
   &.displayed {
-    background-color: #00f;
+    background: #00f;
     display: block;
     padding: .5em 0;
     &.finished {
-      background-color: #0b0;
+      background: #0b0;
     }
   }
 }
@@ -342,7 +342,7 @@ nav ul {
 
 .search-dropdown-control,
 .search-header {
-  background-color: $secondary-background;
+  background: $secondary-background;
   @extend %rounded-border;
   padding: .2em .6%;
 }
@@ -353,9 +353,9 @@ nav ul {
 
 #dropdown-caret {
   @include user-select(none);
-  @include transition-property(transform, background-color);
-  @include transition-duration($search-area-transition-time, $background-color-transition-time);
-  background-color: $interactable;
+  @include transition-property(transform, background);
+  @include transition-duration($search-area-transition-time, $background-transition-time);
+  background: $interactable;
   border-radius: 50%;
   cursor: default;
   display: inline-block;
@@ -364,7 +364,7 @@ nav ul {
   padding: .5em .4em .3em;
   -webkit-touch-callout: none;
   &:hover {
-    background-color: $highlighted;
+    background: $highlighted;
   }
   &.collapsed {
     @include transform(rotate(90deg));
@@ -391,7 +391,7 @@ nav ul {
     @include flex-direction(row);
   }
   li {
-    background-color: $interactable;
+    background: $interactable;
     @extend %rounded-border;
     display: inline-block;
     padding: .25em 0;
@@ -426,30 +426,30 @@ nav ul {
     display: inline-block;
     padding: .2em;
     @extend %rounded-border;
-    @include single-transition(background-color, .5s);
+    @include single-transition(background, .5s);
     &.exclude {
-      background-color: #644;
+      background: #644;
       @media #{$not-touch} {
         &:hover {
-          background-color: #b44;
+          background: #b44;
         }
       }
     }
     &.include {
-      background-color: #464;
+      background: #464;
       @media #{$not-touch} {
         &:hover {
-          background-color: #4b4;
+          background: #4b4;
         }
       }
     }
   }
   [type=checkbox]:checked + label {
     &.exclude {
-      background-color: #dd2424;
+      background: #dd2424;
     }
     &.include {
-      background-color: #24dd24;
+      background: #24dd24;
     }
   }
   &.collapsed {
@@ -491,7 +491,7 @@ $seisokuchi: "takatsu-zyou", "takatsu-chuu", "takatsu-ge", "takatsu-kakou", "mas
 }
 
 main.animal-page {
-  background-color: $primary-background;
+  background: $primary-background;
   @extend %rounded-border;
   margin: 2vh auto;
   max-width: 700px;
