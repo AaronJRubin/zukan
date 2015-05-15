@@ -7,7 +7,7 @@ task :default => :compile
 workspace = 'zukan_workspace'
 master_images = "#{workspace}/master-images"
 images = "#{workspace}/web/images"
-static_site = "site/static"
+STATIC_SITE = "site/static"
 
 def maybe_chmod(mode, files)
 	if files.class == String
@@ -176,6 +176,20 @@ end
 desc "Compile everything necessary to use the site with pub serve, part of the Dart SDK, from zukan_workspace"
 task :build_workspace => [:compress_images, :generate_pages, :compile_sass, "#{workspace}/web/article_list.dart"]
 
+def generate_appcache
+  appcache_path = "#{STATIC_SITE}/takatsugawa-zukan.appcache"
+  unlock appcache_path
+  File.open(appcache_path, "w") do |appcache| 
+    appcache.puts "CACHE MANIFEST"
+    appcache.puts "##{Time.now()}"
+    files = Rake::FileList.new("#{STATIC_SITE}/**/*.{jpg,html,css,js}").exclude("#{STATIC_SITE}/packages/browser/interop.js") 
+    files.each do |file|
+      appcache.puts file.gsub("#{STATIC_SITE}/", "")
+    end
+  end
+  lock appcache_path
+end
+
 desc "Compile dart code and produce ready-to-deploy site with appcache and minified css"
 task :compile => :build_workspace do
 	Dir.chdir workspace
@@ -183,22 +197,21 @@ task :compile => :build_workspace do
 	unless (uptodate?('build/web/ichiran.html', dependencies))
 		smart_compile_dart	
 		Dir.chdir '..'
-		rm_r static_site, :force => true
-		cp_r "#{workspace}/build/web", static_site
-		sh 'python generate_appcache.py'
-		lock "#{static_site}/takatsugawa-zukan.appcache"
-		css_path = "#{static_site}/stylesheets/main.css"
+		rm_r STATIC_SITE, :force => true 
+		cp_r "#{workspace}/build/web", STATIC_SITE
+    generate_appcache
+		css_path = "#{STATIC_SITE}/stylesheets/main.css"
 		unlock css_path
 		File.write(css_path, CSSminify.compress(File.read(css_path)))
 		lock css_path
 		compressor = HtmlCompressor::Compressor.new
-		htmlFiles = Rake::FileList.new("#{static_site}/**/*.html")
+		htmlFiles = Rake::FileList.new("#{STATIC_SITE}/**/*.html")
 		htmlFiles.each do |file|
 			unlock file
 			File.write(file, compressor.compress(File.read(file)))
 			lock file
 		end
-    jsFiles = Rake::FileList.new("#{static_site}/**/*.js")
+    jsFiles = Rake::FileList.new("#{STATIC_SITE}/**/*.js")
     jsFiles.each do |file|
       unlock file
       sh "uglifyjs #{file} -c -m -o #{file}" 
@@ -222,7 +235,7 @@ task :clean_nonimage do
 	rm_f generated_textfiles
 	rm_f "#{workspace}/animal_list.pkl"
 	rm_rf "#{workspace}/build/"
-	rm_rf static_site
+	rm_rf STATIC_SITE
 end
 
 desc "Delete all generated files for a clean build"
