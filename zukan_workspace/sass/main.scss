@@ -485,6 +485,7 @@ nav ul {
 
 body.animal-page {
   background-size: 100% 100%;
+  background-attachment: fixed;
   transition: background-image 3s ease-in-out;
   @media #{$no-background} {
     background-image: none;
