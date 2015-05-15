@@ -13,7 +13,7 @@ def maybe_chmod(mode, files)
 	if files.class == String
 		files = [files]
 	end
-	files.select { |file| File.file? file } . each do |file|
+	files.select { |file| File.exist? file } . each do |file|
 		chmod mode, file, verbose: false
 	end
 end
@@ -40,15 +40,15 @@ def smart_compile_dart(dir)
     if representative_file.nil? or not uptodate?(representative_file, dart_files) # a dart file has been modified
       unlock Rake::FileList.new('build/**/*')
       sh 'pub build'
-      lock Rake::FileList.new('build/**/*')
+      lock Rake::FileList.new('build/**/*').exclude { |path| File.directory?(path) }
     else
       non_dart_files = Rake::FileList.new("web/**/*").exclude(dart_glob).exclude { |path| File.directory?(path) }
       non_dart_files.each do |file|
         new_path = file.pathmap("build/%p")
         mkdir_p new_path.pathmap("%d")
-        unlock new_path
-        cp file, new_path
-        lock new_path
+        unlocked new_path do
+          cp file, new_path
+        end
       end
     end
   end
@@ -69,9 +69,9 @@ def compress_images_task(name, source, pathmap, convert_function)
     compressed_image = image.pathmap(pathmap)
     file compressed_image => image do
       mkdir_p compressed_image.pathmap('%d')
-      unlock compressed_image
-      sh convert_function.call(image, compressed_image)
-      lock compressed_image
+      unlocked compressed_image do
+        sh convert_function.call(image, compressed_image)
+      end
     end
   end
 end
@@ -137,11 +137,9 @@ task :generate_animal_list do
   Dir.chdir WORKSPACE do
     dependencies = ['animal.py', 'animal_data.txt', 'generate_animal_list.py']
     unless (uptodate?('animal_list.pkl', dependencies) and uptodate?('web/animal_list.dart', dependencies))
-      unlock 'animal_list.pkl'
-      unlock 'web/animal_list.dart'
-      sh 'python generate_animal_list.py'
-      lock 'animal_list.pkl'
-      lock 'web/animal_list.dart'
+      unlocked ['animal_list.pkl', 'web/animal_list.dart'] do
+        sh 'python generate_animal_list.py'
+      end
     end
   end
 end
@@ -153,8 +151,8 @@ task :generate_pages => :generate_animal_list do
     unless uptodate?('web/ikimono/ichiran.html', dependencies)
       unlock Rake::FileList.new('web/**/*.html')
       sh 'python generate_pages.py'
+      lock Rake::FileList.new('web/**/*.html')
     end
-    lock Rake::FileList.new('web/**/*.html')
   end
 end
 
@@ -162,11 +160,11 @@ desc "Generate dart file that contains text of all articles for client-side sear
 file "#{WORKSPACE}/web/article_list.dart" => :generate_pages do |task|
   dependencies = Rake::FileList.new("#{WORKSPACE}/web/ikimono/*.html")
   unless uptodate?(task.name, dependencies)
-    unlock task.name
-    Dir.chdir WORKSPACE do
-      sh 'ruby index_articles.rb'
+    unlocked task.name do
+      Dir.chdir WORKSPACE do
+        sh 'ruby index_articles.rb'
+      end
     end
-    lock task.name
   end
 end
 
@@ -185,16 +183,16 @@ task :build_workspace => [:compress_images, :generate_pages, :compile_sass, "#{W
 
 def generate_appcache
   appcache_path = "#{STATIC_SITE}/takatsugawa-zukan.appcache"
-  unlock appcache_path
-  File.open(appcache_path, "w") do |appcache| 
-    appcache.puts "CACHE MANIFEST"
-    appcache.puts "##{Time.now()}"
-    files = Rake::FileList.new("#{STATIC_SITE}/**/*.{jpg,html,css,js}").exclude("#{STATIC_SITE}/packages/browser/interop.js") 
-    files.each do |file|
-      appcache.puts file.gsub("#{STATIC_SITE}/", "")
+  unlocked appcache_path do
+    File.open(appcache_path, "w") do |appcache| 
+      appcache.puts "CACHE MANIFEST"
+      appcache.puts "##{Time.now()}"
+      files = Rake::FileList.new("#{STATIC_SITE}/**/*.{jpg,html,css,js}").exclude("#{STATIC_SITE}/packages/browser/interop.js") 
+      files.each do |file|
+        appcache.puts file.gsub("#{STATIC_SITE}/", "")
+      end
     end
   end
-  lock appcache_path
 end
 
 desc "Compile dart code and produce ready-to-deploy site with appcache and minified css"
@@ -206,15 +204,15 @@ task :compile => :build_workspace do
     cp_r "#{WORKSPACE}/build/web", STATIC_SITE
     generate_appcache
     css_path = "#{STATIC_SITE}/stylesheets/main.css"
-    unlock css_path
-    File.write(css_path, CSSminify.compress(File.read(css_path)))
-    lock css_path
+    unlocked css_path do
+      File.write(css_path, CSSminify.compress(File.read(css_path)))
+    end
     compressor = HtmlCompressor::Compressor.new
     htmlFiles = Rake::FileList.new("#{STATIC_SITE}/**/*.html")
     htmlFiles.each do |file|
-      unlock file
-      File.write(file, compressor.compress(File.read(file)))
-      lock file
+      unlocked file do
+        File.write(file, compressor.compress(File.read(file)))
+      end
     end
     jsFiles = Rake::FileList.new("#{STATIC_SITE}/**/*.js")
     jsFiles.each do |file|
