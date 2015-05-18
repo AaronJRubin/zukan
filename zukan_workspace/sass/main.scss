@@ -146,7 +146,8 @@ footer {
     margin: .1em 0 .2em;
     text-align: center;
   }
-  @include single-transition(transform, .5s);
+  @include transition-property(all);
+  @include transition-duration($background-transition-time);
   @media #{$not-touch} {
     &:hover {
       @include transform(scale(1.1, 1.1));
