@@ -19,7 +19,7 @@ $no-background: "(max-width: 700px)";
 // you to, in those cases, remove certain effects (specifically hover effects) 
 // that don't work or that work suboptimally on touch devices.
 $not-touch: "(min-width: 1025px)";
-$search-area-transition-time: .6s;
+$search-area-transition-time: .7s;
 $background-transition-time: .5s;
 $small-font-size: .8em;
 
@@ -384,12 +384,14 @@ nav ul {
   $search-area-breakpoint: "(max-width: 628px)";
   @include display-flex(flex);
   @include flex-direction(column);
-  @include single-transition(max-height, $search-area-transition-time);
+  @include transition-property(all);
+  @include transition-duration($search-area-transition-time); 
   @include translateZ(0);
   font-size: $small-font-size;
   max-height: 200px;
   // necessary for height transition
   overflow: hidden;
+  opacity: 1.0;
   @media #{$search-area-breakpoint} {
     max-height: 300px;
   }
@@ -462,6 +464,7 @@ nav ul {
     }
   }
   &.collapsed {
+    opacity: 0;
     max-height: 0;
   }
   @media #{$search-area-breakpoint} {
