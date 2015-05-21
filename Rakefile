@@ -67,7 +67,12 @@ def compress_images_task(name, source, pathmap, convert_function)
   task name.to_s => compressed_images
   images.each do |image|
     compressed_image = image.pathmap(pathmap)
-    file compressed_image => image do
+    dependencies = [image]
+    crop_settings = image.pathmap("%X.crp")
+    if File.exists? crop_settings
+      dependencies << crop_settings
+    end
+    file compressed_image => dependencies do
       mkdir_p compressed_image.pathmap('%d')
       unlocked compressed_image do
         sh convert_function.call(image, compressed_image)
@@ -81,14 +86,36 @@ ICHIRAN_HEIGHT = 112
 HEADER_WIDTH = 335
 LONG_HEADER_IMAGE_MAX_WIDTH = 388
 
+# Aspect ratio is height / width here
+def get_cropped_aspect_ratio(image)
+  uncropped_dimensions = Dimensions.dimensions(image)
+  uncropped_width = uncropped_dimensions[0].to_f
+  uncropped_height = uncropped_dimensions[1].to_f
+  crop_file = image.pathmap("%X.crp")
+  if not File.exists? crop_file
+   return uncropped_height / uncropped_width
+  else
+    crop_string = File.read(crop_file).strip
+    cropped_dimensions = /(\d+)x(\d+)/.match(crop_string)
+    cropped_width = cropped_dimensions[1].to_f
+    cropped_height = cropped_dimensions[2].to_f
+    return cropped_height / cropped_width
+  end
+end
+  
+
+
+
+
 convert_animal = lambda do |animal, compressed_animal|
   if animal.include? "ichiran"	
-    dimensions = Dimensions.dimensions(animal)
-    width = dimensions[0]	
-    height = dimensions[1]	
-    aspect_ratio = height.fdiv(width)	
+    #dimensions = Dimensions.dimensions(animal)
+    #width = dimensions[0]	
+    #height = dimensions[1]	
+    #aspect_ratio = height.fdiv(width)
+    aspect_ratio = get_cropped_aspect_ratio(animal)
     header_display_height = HEADER_WIDTH * aspect_ratio	
-    is_long = height * 2 < width # this determines whether the animal will be at 100% width on screens with size 415 px or less
+    is_long = aspect_ratio < 0.5 #this determines whether the animal will be at 100% width on screens with size 415 px or less
     if is_long
       header_display_height = LONG_HEADER_IMAGE_MAX_WIDTH * aspect_ratio
     end
@@ -97,7 +124,14 @@ convert_animal = lambda do |animal, compressed_animal|
   else
     resize = NON_ICHIRAN_DIMENSIONS
   end
-  "convert #{animal} -resize #{resize} -quality 50 #{compressed_animal}"
+  crop_file = animal.pathmap("%X.crp")
+  if File.exists? crop_file
+    crop_string = File.read(crop_file).strip
+    crop_command = "-crop #{crop_string}"
+  else
+    crop_command = ""
+  end
+  "convert #{animal} #{crop_command} -resize #{resize} -quality 50 #{compressed_animal}"
 end
 
 desc "Compress images of animals in master-images and move to workspace"
