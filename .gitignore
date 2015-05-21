@@ -21,5 +21,8 @@ zukan_workspace/web/images/
 # Don't include files generated from pub build
 site/static/*
 
+# Don't include temporary utility scripts
+_*.rb
+
 # Don't include caches
 zukan_workspace/.sass-cache/
