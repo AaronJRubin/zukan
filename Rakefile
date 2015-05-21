@@ -131,7 +131,7 @@ convert_animal = lambda do |animal, compressed_animal|
   else
     crop_command = ""
   end
-  "convert #{animal} #{crop_command} -resize #{resize} -quality 50 #{compressed_animal}"
+  "convert #{animal} #{crop_command} -resize #{resize} -quality 60 #{compressed_animal}"
 end
 
 desc "Compress images of animals in master-images and move to workspace"
