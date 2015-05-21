@@ -104,15 +104,19 @@ def get_cropped_aspect_ratio(image)
 end
   
 
-
-
+def convert(source, target, resize = "300x300", quality = "50")
+  crop_file = source.pathmap("%X.crp")
+  if File.exists? crop_file
+    crop_string = File.read(crop_file).strip
+    crop_command = "-crop #{crop_string}"
+  else
+    crop_command = ""
+  end
+  return "convert #{source} #{crop_command} -resize #{resize} -quality #{quality} #{target}"
+end
 
 convert_animal = lambda do |animal, compressed_animal|
   if animal.include? "ichiran"	
-    #dimensions = Dimensions.dimensions(animal)
-    #width = dimensions[0]	
-    #height = dimensions[1]	
-    #aspect_ratio = height.fdiv(width)
     aspect_ratio = get_cropped_aspect_ratio(animal)
     header_display_height = HEADER_WIDTH * aspect_ratio	
     is_long = aspect_ratio < 0.5 #this determines whether the animal will be at 100% width on screens with size 415 px or less
@@ -124,14 +128,7 @@ convert_animal = lambda do |animal, compressed_animal|
   else
     resize = NON_ICHIRAN_DIMENSIONS
   end
-  crop_file = animal.pathmap("%X.crp")
-  if File.exists? crop_file
-    crop_string = File.read(crop_file).strip
-    crop_command = "-crop #{crop_string}"
-  else
-    crop_command = ""
-  end
-  "convert #{animal} #{crop_command} -resize #{resize} -quality 60 #{compressed_animal}"
+  return convert(animal, compressed_animal, resize = resize, quality = "60")
 end
 
 desc "Compress images of animals in master-images and move to workspace"
@@ -144,14 +141,15 @@ size_override = Hash.new("1400x\\>")
 size_override['takatsugawa-home.jpg'] = '958x'
 
 convert_general = lambda do |image, compressed_image| 
-  "convert #{image} -resize #{size_override[image.pathmap('%f')]} -quality #{quality_override[image.pathmap('%f')]} #{compressed_image}"
+  name = image.pathmap('%f')
+  return convert(image, compressed_image, resize = size_override[name], quality = quality_override[name]) 
 end
 
 mamechishiki_size_override = Hash.new("459x")
 mamechishiki_size_override["ochi-ayu.jpg"] = '459x278!'
 
 convert_mamechishiki = lambda do |image, compressed_image|
-  "convert #{image} -resize #{mamechishiki_size_override[image.pathmap('%f')]} -quality 50 #{compressed_image}"
+  return convert(image, compressed_image, resize = mamechishiki_size_override[image.pathmap('%f')], quality = "50")
 end
 
 desc "Compress images of seisokuchi in master-images and move to workspace"
