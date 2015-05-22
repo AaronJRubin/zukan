@@ -119,3 +119,9 @@ class Animal:
         width, height = Image.open(ichiran_img).size
         return height * 1.99 <= width
 
+    def display_name(self):
+        if self.kana == u'ミシシッピアカミミガメ':
+            return u'アカミミガメ'
+        else:
+            return self.kana
+

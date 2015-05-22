@@ -16,6 +16,6 @@
 {% macro animal_tile(animal) %}
 <a href="{{animal.get_link()}}" class="animal-tile">
   <img {% if animal.is_long() %} class="long" {% endif %} src="{{animal.image('ichiran')}}" alt="">
-	<div>{{animal.kana}}</div>
+  <div>{{animal.display_name()}}</div>
 </a>
 {% endmacro %}
