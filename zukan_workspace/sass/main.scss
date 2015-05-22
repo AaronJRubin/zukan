@@ -140,7 +140,7 @@ footer {
   font-size: 1.3vw;
 
   @media (max-width: 900px) {
-    @include tile-img-height(14vw);
+    @include tile-img-height(14.4vw);
     font-size: 2.1vw;
   }
 
