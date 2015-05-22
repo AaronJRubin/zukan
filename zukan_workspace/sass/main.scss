@@ -137,15 +137,15 @@ footer {
 .animal-tile {
   @extend %rounded-border;
   @include tile-img-height(8.5vw);
-  font-size: 1.5vw;
+  font-size: 1.3vw;
 
-  @media (max-width: 800px) {
+  @media (max-width: 900px) {
     @include tile-img-height(14vw);
-    font-size: 2.5vw;
+    font-size: 2.1vw;
   }
 
   @media (max-width: 450px) {
-    font-size: 5.5vw;
+    font-size: 5vw;
     margin: .5vw 1vw;
     border-width: 1vw;
     img {
