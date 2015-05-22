@@ -19,3 +19,12 @@ if (screen.width > 700 && locations.length > 1 && isChrome) {
         body.classList.add(locations[currentLocation]);
     }, 10000);
 }
+var jumboLink = document.querySelector(".jumbo-link")
+jumboLink.onclick = function(e) {
+    if (/ikimono\/ichiran.html/.test(document.referrer)) {
+        history.back();
+        return false;
+    } else {
+        return true;
+    }
+}
