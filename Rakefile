@@ -213,6 +213,13 @@ end
 desc "Compile everything necessary to use the site with pub serve, part of the Dart SDK, from zukan_workspace"
 task :build_workspace => [:compress_images, :generate_pages, :compile_sass, "#{WORKSPACE}/web/article_list.dart"]
 
+desc "Run development pub server (Dart SDK required)"
+task :serve => :build_workspace do
+  Dir.chdir WORKSPACE do
+    sh 'pub serve'
+  end
+end
+
 def generate_appcache
   appcache_path = "#{STATIC_SITE}/takatsugawa-zukan.appcache"
   unlocked appcache_path do
