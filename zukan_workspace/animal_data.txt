@@ -562,7 +562,7 @@ name:ishimakigai
 takatsu:ge,ka
 masuda:ge,ka
 rarity:1
-zoku:
+zoku:イシマキガイ属
 ka:アマオブネガイ科
 latin:Clithon retropicta
 
@@ -570,7 +570,7 @@ name:matsukasagai
 takatsu:chuu
 masuda:
 rarity:5
-zoku:
+zoku:マツカサガイ属
 ka:イシガイ科
 latin:Pronodularia jananensis
 
