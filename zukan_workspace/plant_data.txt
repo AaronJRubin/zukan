@@ -1,0 +1,4 @@
+name: azami
+kisetsu: 2-6
+iro: murasaki
+takasa: 6-10cm
