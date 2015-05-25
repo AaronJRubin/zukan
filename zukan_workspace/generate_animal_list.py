@@ -16,7 +16,7 @@ def generate_defaults():
     return res
 
 def animal_data():
-    f = open("animal_data.txt", "r")
+    f = open("data/python_classes/animal_data.txt", "r")
     return f.read().strip().split("\n\n")
 
 def string_to_location(string):

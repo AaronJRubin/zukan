@@ -6,6 +6,7 @@ import jinja2
 import cPickle as pickle
 import sys
 from glob import glob
+import yaml
 
 template_dir = os.path.join(os.path.dirname(__file__), "templates")
 jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir))
@@ -16,9 +17,19 @@ except IOError:
     print("To run this script, you need to first generate the file animal_list.pkl by running generate_animal_list.py")
     exit()
 
+data_files = glob("data/general/*")
+
+def parse_yaml_file(path):
+    file = open(path, "r")
+    contents = file.read()
+    file.close()
+    return yaml.load(contents)
+
+data = reduce(lambda acc, next: acc.update(next), map(parse_yaml_file, data_files))
+
 animal_map = { animal.romaji : animal for animal in animal_list }
 
-data = { "animals" : animal_list, "animal_map" : animal_map }
+data.update({ "animals" : animal_list, "animal_map" : animal_map })
 
 def render_page(template_path):
     relative_path = template_path.replace("templates/", "")

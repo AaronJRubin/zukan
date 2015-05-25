@@ -1,16 +1,9 @@
 {% extends "base/mamechishiki.html" %}
 
-{% set title = "豆知識" %}
-
 {% block article %}
 <ul>
-<li><a href="new-species.html">新種の発見</a></li>
-<li><a href="glacier-gogi.html">氷河期の生き残り</a></li>
-<li><a href="legendary-kaio.html">伝説の怪魚</a></li>
-<li><a href="ayu-lifecycle.html">アユの一生</a></li>
-<li><a href="symbiotes.html">助け合い</a></li>
-<li><a href="ayu-hunter.html">アユカケのアユ漁</a></li>
-<li><a href="mutual-consumption.html">食べたり食べられたり</a></li>
-<li><a href="two-rivers.html">高津川と益田川</a></li>
+{% for mamechishiki_title in mamechishiki_titles %}
+<li><a href="{{mamechishiki_title}}.html">{{mamechishiki_translations[mamechishiki_title]}}</li>
+{% endfor %}
 </ul>
 {% endblock %}

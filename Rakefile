@@ -167,7 +167,7 @@ task :compress_images => [:compress_animal_images, :compress_seisokuchi_images, 
 desc "Parse data in animal_data.txt, generating serialized Python and Dart data structures"
 task :generate_animal_list do
   Dir.chdir WORKSPACE do
-    dependencies = ['animal.py', 'animal_data.txt', 'generate_animal_list.py']
+    dependencies = ['animal.py', 'data/python_classes/animal_data.txt', 'generate_animal_list.py']
     unless (uptodate?('animal_list.pkl', dependencies) and uptodate?('web/animal_list.dart', dependencies))
       unlocked ['animal_list.pkl', 'web/animal_list.dart'] do
         sh 'python generate_animal_list.py'
