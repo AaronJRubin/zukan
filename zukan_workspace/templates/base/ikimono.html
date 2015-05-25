@@ -5,7 +5,6 @@
 {% set background_class = animal.starting_location() %}
 {% set background_data = 'data-locations="' + " ".join(animal.locations()) + '"' %}
 {% set title = animal.kana %}
-{% set ryuuiki = ["zyou", "chuu", "ge", "kakou"] %}
 
 {% block content %}
 
@@ -33,13 +32,13 @@
 				</tr>
 				<tr>
 					<td>高津川</td>
-          {% for ryuuiki in ryuuiki %}
+          {% for ryuuiki in romaji_ryuuiki %}
           <td>{{"&#x25EF;" if animal.takatsu_inhabits(ryuuiki)}}</td>
           {% endfor %}
         </tr>
         <tr>
           <td>益田川</td>
-          {% for ryuuiki in ryuuiki %}
+          {% for ryuuiki in romaji_ryuuiki %}
           <td>{{"&#x25EF;" if animal.masuda_inhabits(ryuuiki)}}</td>
           {% endfor %}
         </tr>

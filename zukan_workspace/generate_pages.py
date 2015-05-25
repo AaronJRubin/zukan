@@ -17,6 +17,8 @@ except IOError:
     print("To run this script, you need to first generate the file animal_list.pkl by running generate_animal_list.py")
     exit()
 
+animal_map = { animal.romaji : animal for animal in animal_list }
+
 data_files = glob("data/general/*")
 
 def parse_yaml_file(path):
@@ -25,9 +27,11 @@ def parse_yaml_file(path):
     file.close()
     return yaml.load(contents)
 
-data = reduce(lambda acc, next: acc.update(next), map(parse_yaml_file, data_files))
+def destructively_merge_dicts(dict_a, dict_b):
+    dict_a.update(dict_b)
+    return dict_a
 
-animal_map = { animal.romaji : animal for animal in animal_list }
+data = reduce(destructively_merge_dicts, map(parse_yaml_file, data_files))
 
 data.update({ "animals" : animal_list, "animal_map" : animal_map })
 
