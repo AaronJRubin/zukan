@@ -13,8 +13,8 @@ class Animal:
             self.kana = kana.decode('utf-8')
         except Exception:
             self.kana = kana
-        self._masuda = masuda if masuda else []
-        self._takatsu = takatsu if takatsu else []
+        self.masuda = masuda if masuda else []
+        self.takatsu = takatsu if takatsu else []
         self.latin = latin
         self.family = family
         self.genus = genus
@@ -27,10 +27,10 @@ class Animal:
         return os.path.join("/images/ikimono", self.romaji, self.romaji + "-" + suffix + ".jpg")
 
     def takatsu_inhabits(self, ryuuiki):
-        return ryuuiki in self._takatsu
+        return ryuuiki in self.takatsu
 
     def masuda_inhabits(self, ryuuiki):
-        return ryuuiki in self._masuda
+        return ryuuiki in self.masuda
 
     def starting_location(self):
         locations = self.locations()
