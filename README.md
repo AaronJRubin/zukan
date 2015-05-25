@@ -10,7 +10,7 @@ You will need the following tools installed and on your PATH. They can all be ea
 * [Ruby](https://www.ruby-lang.org/en/documentation/installation/), preferably with [Bundler](http://bundler.io/) installed via `gem install bundler` to manage dependencies.
 * [The Dart SDK](https://www.dartlang.org/tools/sdk/). You will most likely need to manually add dark-sdk/bin/ (contained within the Dart installation directory) to your PATH.
 * [ImageMagick](http://www.imagemagick.org/).
-* [Python 2.7](https://www.python.org/download/releases/2.7/), with the [jinja2](http://jinja.pocoo.org/docs/dev/) and PIL libraries installed.
+* [Python 2.7](https://www.python.org/download/releases/2.7/), with pip installed to manage dependencies; run `pip install -r requirements.txt` in the root folder to get all of the libraries that you need.
 * [uglifyjs](https://github.com/mishoo/UglifyJS2).
 
 # How to Work on this Project
