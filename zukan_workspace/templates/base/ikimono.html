@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% set body_class = "animal-page" %}
+{% set animal = animal_map[page_name] %}
 {% set background_class = animal.starting_location() %}
 {% set background_data = 'data-locations="' + " ".join(animal.locations()) + '"' %}
 {% set title = animal.kana %}
