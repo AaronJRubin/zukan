@@ -5,7 +5,7 @@ import romkan
 import os
 import sys
 import cPickle as pickle
-from animal import Animal, Location
+from animal import Animal
 
 def generate_defaults():
     res = {}
@@ -22,13 +22,13 @@ def animal_data():
 def string_to_location(string):
     string = string.strip().lower()
     if string == "zyou" or string == "jou":
-      return Location.ZYOU
+      return "zyou"
     if string == "tyuu" or string == "chuu":
-      return Location.CHUU
+      return "chuu"
     if string == "ge":
-      return Location.GE 
+      return "ge"
     if string == "kakou" or string == "ka":
-      return Location.KAKOU
+      return "kakou"
     raise Exception("Invalid location: " + string)
 
 def clean_romaji(romaji):
@@ -63,9 +63,9 @@ def parse_animal(animal_string):
         elif field == "family" or field == "ka":
             animal.family = data
         elif field == "takatsu" or field == "takatu":
-            animal.location.set_takatsu(map(string_to_location, filter(lambda string: len(string.strip()) > 0, data.split(","))))
+            animal.takatsu = map(string_to_location, filter(lambda string: len(string.strip()) > 0, data.split(",")))
         elif field =="masuda":
-            animal.location.set_masuda(map(string_to_location, filter(lambda string: len(string.strip()) > 0, data.split(","))))
+            animal.masuda = map(string_to_location, filter(lambda string: len(string.strip()) > 0, data.split(",")))
         else:
             raise Exception("Unrecognized field in line " + line)
     if animal.romaji == "":
@@ -101,9 +101,9 @@ def write_dart(animal_list):
     for animal in animal_list:
         animalString = u"""new Animal("%s", "%s", "%s", "%s", "%s",
             %d, %s, %s, %s, %s, %s, %s, %s, %s)""" % (animal.latin, animal.family,
-            animal.genus, animal.romaji, animal.kana, animal.rarity, animal.takatsu_zyou(),
-            animal.takatsu_chuu(), animal.takatsu_ge(), animal.takatsu_kakou(), animal.masuda_zyou(),
-            animal.masuda_chuu(), animal.masuda_ge(), animal.masuda_kakou())
+            animal.genus, animal.romaji, animal.kana, animal.rarity, animal.takatsu_inhabits("zyou"),
+            animal.takatsu_inhabits("chuu"), animal.takatsu_inhabits("ge"), animal.takatsu_inhabits("kakou"), animal.masuda_inhabits("zyou"),
+            animal.masuda_inhabits("chuu"), animal.masuda_inhabits("ge"), animal.masuda_inhabits("kakou"))
         animalString = animalString.replace('True', 'true')
         animalString = animalString.replace('False', 'false')
         f.write(animalString.encode('utf8'))

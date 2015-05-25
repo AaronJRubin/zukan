@@ -4,8 +4,10 @@
 {% set background_class = animal.starting_location() %}
 {% set background_data = 'data-locations="' + " ".join(animal.locations()) + '"' %}
 {% set title = animal.kana %}
+{% set ryuuiki = ["zyou", "chuu", "ge", "kakou"] %}
 
 {% block content %}
+
 <script async src="animal_page.js"></script>
 
 <main class="animal-page">
@@ -30,38 +32,36 @@
 				</tr>
 				<tr>
 					<td>高津川</td>
-					<td>{{"&#x25EF;" if animal.takatsu_zyou()}}</td>
-					<td>{{"&#x25EF;" if animal.takatsu_chuu()}}</td>
-					<td>{{"&#x25EF;" if animal.takatsu_ge()}}</td>
-					<td>{{"&#x25EF;" if animal.takatsu_kakou()}}</td>
-				</tr>
-				<tr>
-					<td>益田川</td>
-					<td>{{"&#x25EF;" if animal.masuda_zyou()}}</td>
-					<td>{{"&#x25EF;" if animal.masuda_chuu()}}</td>
-					<td>{{"&#x25EF;" if animal.masuda_ge()}}</td>
-					<td>{{"&#x25EF;" if animal.masuda_kakou()}}</td>
-				</tr>
-			</table>
-			
-		<div class="rarity">
-			<div class="rarity-header">レア度</div>
-			<div class="rarity-stars">
-				{{animal.rarity_stars()}}
-			</div>
-		</div>
+          {% for ryuuiki in ryuuiki %}
+          <td>{{"&#x25EF;" if animal.takatsu_inhabits(ryuuiki)}}</td>
+          {% endfor %}
+        </tr>
+        <tr>
+          <td>益田川</td>
+          {% for ryuuiki in ryuuiki %}
+          <td>{{"&#x25EF;" if animal.masuda_inhabits(ryuuiki)}}</td>
+          {% endfor %}
+        </tr>
+      </table>
 
-	</header>
+      <div class="rarity">
+        <div class="rarity-header">レア度</div>
+        <div class="rarity-stars">
+          {{animal.rarity_stars()}}
+        </div>
+      </div>
 
-	<article>
+    </header>
 
-		{% block article %}
+    <article>
 
-		{% endblock %}
+      {% block article %}
 
-	</article>
-	<footer>
-	<a href="ichiran.html" class="jumbo-link">一覧へ戻る</a>
-	</footer>
-</main>
-{% endblock %}
+      {% endblock %}
+
+    </article>
+    <footer>
+      <a href="ichiran.html" class="jumbo-link">一覧へ戻る</a>
+    </footer>
+    </main>
+    {% endblock %}
