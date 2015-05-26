@@ -3,23 +3,14 @@
 
 import os
 import jinja2
-import cPickle as pickle
 import sys
 from glob import glob
 import yaml
+import romkan
+from animal import Animal
 
 template_dir = os.path.join(os.path.dirname(__file__), "templates")
 jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir))
-
-try:
-    animal_list = pickle.load(open("animal_list.pkl", "rb", pickle.HIGHEST_PROTOCOL))
-except IOError:
-    print("To run this script, you need to first generate the file animal_list.pkl by running generate_animal_list.py")
-    exit()
-
-animal_map = { animal.romaji : animal for animal in animal_list }
-
-data_files = glob("data/general/*")
 
 def parse_yaml_file(path):
     file = open(path, "r")
@@ -27,9 +18,17 @@ def parse_yaml_file(path):
     file.close()
     return yaml.load(contents)
 
+animal_data = parse_yaml_file("data/manually_processed/animal_data.yaml")
+
+animal_list = sorted([Animal(romaji = romaji, kana = romkan.to_kana(romaji), **fields) for romaji, fields in animal_data.iteritems()], key = lambda animal: animal.kana)
+
+animal_map = { animal.romaji : animal for animal in animal_list }
+
 def destructively_merge_dicts(dict_a, dict_b):
     dict_a.update(dict_b)
     return dict_a
+
+data_files = glob("data/automatically_processed/*")
 
 data = reduce(destructively_merge_dicts, map(parse_yaml_file, data_files))
 
@@ -52,3 +51,25 @@ page_template_paths = [path for path in glob("templates/pages/**/*") + glob("tem
 
 for page_template_path in page_template_paths:
     render_page(page_template_path)
+
+def write_dart(animal_list):
+    f = file("web/animal_list.dart", "w");
+    f.write("part of animal;\n\n")
+    f.write("List<Animal> animal_list = [")
+    for animal in animal_list:
+        animalString = u"""new Animal("%s", "%s", "%s", "%s", "%s",
+            %d, %s, %s, %s, %s, %s, %s, %s, %s)""" % (animal.latin, animal.ka,
+            animal.zoku, animal.romaji, animal.kana, animal.rarity, animal.takatsu_inhabits("zyou"),
+            animal.takatsu_inhabits("chuu"), animal.takatsu_inhabits("ge"), animal.takatsu_inhabits("kakou"), animal.masuda_inhabits("zyou"),
+            animal.masuda_inhabits("chuu"), animal.masuda_inhabits("ge"), animal.masuda_inhabits("kakou"))
+        animalString = animalString.replace('True', 'true')
+        animalString = animalString.replace('False', 'false')
+        f.write(animalString.encode('utf8'))
+        f.write(",\n")
+    f.write("];\n\n")
+    f.write("""Map<String, Animal> animal_map = new Map.fromIterable(animal_list,
+    key: (animal) => animal.romaji);""")
+    f.close()
+
+write_dart(animal_list)
+

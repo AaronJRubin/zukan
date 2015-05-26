@@ -6,7 +6,7 @@ from PIL import Image
 
 class Animal:
 
-    def __init__(self, latin = "piscis maximus", family = u"魚科", genus = u"魚属", romaji = "ayu", kana = u"アユ",
+    def __init__(self, latin = "piscis maximus", ka = u"魚科", zoku = u"魚属", romaji = "ayu", kana = u"アユ",
             rarity = 3, masuda = None, takatsu = None):
         self.romaji = romaji
         try:
@@ -16,8 +16,8 @@ class Animal:
         self.masuda = masuda if masuda else []
         self.takatsu = takatsu if takatsu else []
         self.latin = latin
-        self.family = family
-        self.genus = genus
+        self.ka = ka
+        self.zoku = zoku
         self.rarity = rarity
 
     def get_link(self):
