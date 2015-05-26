@@ -395,7 +395,7 @@ takatsu:ge,ka
 masuda:ge,ka
 rarity:3
 zoku:ウロハゼ属
-ka:ハゼ科ハゼ亜科
+ka:ハゼ科ハゼ亜科
 latin:Glossogobius olivaceus
 
 name:yamame
