@@ -1,10 +1,10 @@
 {% macro river_section(river, river_kanji) %}
 <div class="individual-river-section">
 	<ol>
-		{% for ryuuiki in [("zyou", "上流"), ("chuu", "中流"), ("ge", "下流"), ("kakou", "河口")] %}
-    <li><div class="ryuuiki">{{river_kanji}}{{ryuuiki[1]}}</div><div class="boxes">
-    <input type="checkbox" class="search-checkbox include" id="{{river}}-{{ryuuiki[0]}}-include" name="{{river}}-{{ryuuiki[0]}}-include"><label for="{{river}}-{{ryuuiki[0]}}-include" class="include">要</label>
-    <input type="checkbox" class="search-checkbox exclude" id="{{river}}-{{ryuuiki[0]}}-exclude" name="{{river}}-{{ryuuiki[0]}}-exclude"><label for="{{river}}-{{ryuuiki[0]}}-exclude" class="exclude">除</label>
+		{% for a_ryuuiki in ryuuiki %}
+    <li><div class="ryuuiki">{{river_kanji}}{{a_ryuuiki['kanji']}}</div><div class="boxes">
+    <input type="checkbox" class="search-checkbox include" id="{{river}}-{{a_ryuuiki['romaji']}}-include" name="{{river}}-{{a_ryuuiki['romaji']}}-include"><label for="{{river}}-{{a_ryuuiki['romaji']}}-include" class="include">要</label>
+    <input type="checkbox" class="search-checkbox exclude" id="{{river}}-{{a_ryuuiki['romaji']}}-exclude" name="{{river}}-{{a_ryuuiki['romaji']}}-exclude"><label for="{{river}}-{{a_ryuuiki['romaji']}}-exclude" class="exclude">除</label>
     </div>
     </li>
 		{% endfor %}

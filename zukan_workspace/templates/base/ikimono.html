@@ -32,14 +32,14 @@
 				</tr>
 				<tr>
 					<td>高津川</td>
-          {% for ryuuiki in romaji_ryuuiki %}
-          <td>{{"&#x25EF;" if animal.takatsu_inhabits(ryuuiki)}}</td>
+          {% for a_ryuuiki in ryuuiki %}
+          <td>{{"&#x25EF;" if animal.takatsu_inhabits(a_ryuuiki['romaji'])}}</td>
           {% endfor %}
         </tr>
         <tr>
           <td>益田川</td>
-          {% for ryuuiki in romaji_ryuuiki %}
-          <td>{{"&#x25EF;" if animal.masuda_inhabits(ryuuiki)}}</td>
+          {% for a_ryuuiki in ryuuiki %}
+          <td>{{"&#x25EF;" if animal.masuda_inhabits(a_ryuuiki['romaji'])}}</td>
           {% endfor %}
         </tr>
       </table>

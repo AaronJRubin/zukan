@@ -1,11 +1,9 @@
-romaji_ryuuiki:
-    - zyou
-    - chuu
-    - ge
-    - kakou
-
-kanji_ryuuiki:
-    - 上流
-    - 中流
-    - 下流
-    - 河口
+ryuuiki:
+    - romaji: zyou
+      kanji: 上流
+    - romaji: chuu
+      kanji: 中流
+    - romaji: ge
+      kanji: 下流
+    - romaji: kakou
+      kanji: 河口
