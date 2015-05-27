@@ -158,15 +158,13 @@ footer {
       min-width: 46vw;
       max-width: 96vw; 
     }
-  }
-  border-style: solid;
-  display: inline-block;
-  letter-spacing: -.1em;
-  @media (max-width: 390px) {
     img.long {
       max-height: 100%;
     }
   }
+  border-style: solid;
+  display: inline-block;
+  letter-spacing: -.1em;
   div {
     margin: .1em 0 .2em;
     text-align: center;
@@ -569,7 +567,7 @@ main.animal-page {
     margin: 0 1% 1em;
     width: 48%;
   }
-  @media (max-width: 415px) {
+  @media (max-width: 450px) {
     img.long {
       width: 100%;
     }
