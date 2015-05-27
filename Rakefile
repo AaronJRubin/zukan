@@ -4,10 +4,9 @@ require 'htmlcompressor'
 
 task :default => :compile
 
-WORKSPACE = 'zukan_workspace'
-MASTER_IMAGES = "#{WORKSPACE}/master-images"
-IMAGES = "#{WORKSPACE}/web/images"
-STATIC_SITE = "site/static"
+MASTER_IMAGES = "master-images"
+IMAGES = "web/images"
+STATIC_SITE = "appengine_build/static"
 
 def maybe_chmod(mode, files)
 	if files.class == String
@@ -165,14 +164,12 @@ desc "Compress all images and move to workspace"
 task :compress_images => [:compress_animal_images, :compress_seisokuchi_images, :compress_mamechishiki_images, :compress_miscellaneous_images]
 
 desc "Validate yaml data for which a schema is defined"
-task :validate_data do
-  Dir.chdir WORKSPACE do
-    data_files = Rake::FileList.new('data/**/*.yaml')
-    data_files.each do |data_file|
-      schema_file = data_file.pathmap("%X.schema")
-      if File.exists? schema_file
-        sh "kwalify -lf #{schema_file} #{data_file}"
-      end
+task :validate_data do 
+  data_files = Rake::FileList.new('data/**/*.yaml')
+  data_files.each do |data_file|
+    schema_file = data_file.pathmap("%X.schema")
+    if File.exists? schema_file
+      sh "kwalify -lf #{schema_file} #{data_file}"
     end
   end
 end
@@ -180,46 +177,38 @@ end
 
 desc "Generate html (and one Dart file) documents using the jinja2 templates engine"
 task :generate_pages => [:compress_images, :validate_data] do
-  Dir.chdir WORKSPACE do
-    dependencies = Rake::FileList.new('templates/**/*').include('web/images/ikimono/**/*').include('animal.py').include('data/**/*')
-    unless uptodate?('web/ikimono/ichiran.html', dependencies)
-      unlock Rake::FileList.new('web/**/*.html').include("web/ikimono/animal_list.dart")
-      sh 'python generate_pages.py'
-      lock Rake::FileList.new('web/**/*.html').include("web/ikimono/animal_list.dart")
-    end
+  dependencies = Rake::FileList.new('templates/**/*').include('web/images/ikimono/**/*').include('animal.py').include('data/**/*')
+  unless uptodate?('web/ikimono/ichiran.html', dependencies)
+    unlock Rake::FileList.new('web/**/*.html').include("web/ikimono/animal_list.dart")
+    sh 'python generate_pages.py'
+    lock Rake::FileList.new('web/**/*.html').include("web/ikimono/animal_list.dart")
   end
 end
 
 desc "Generate dart file that contains text of all articles for client-side searching"
-file "#{WORKSPACE}/web/article_list.dart" => :generate_pages do |task|
-  dependencies = Rake::FileList.new("#{WORKSPACE}/web/ikimono/*.html")
+file "web/article_list.dart" => :generate_pages do |task|
+  dependencies = Rake::FileList.new("web/ikimono/*.html")
   unless uptodate?(task.name, dependencies)
     unlocked task.name do
-      Dir.chdir WORKSPACE do
-        sh 'ruby index_articles.rb'
-      end
+      sh 'ruby index_articles.rb'
     end
   end
 end
 
 desc "Compile Sass to CSS, using Compass"
 task :compile_sass do
-  Dir.chdir WORKSPACE do
-    css_file = 'web/stylesheets/main.css'
-    unless (uptodate?(css_file, ['sass/main.scss']))
-      sh 'compass compile'
-    end	
-  end
+  css_file = 'web/stylesheets/main.css'
+  unless (uptodate?(css_file, ['sass/main.scss']))
+    sh 'compass compile'
+  end	
 end
 
-desc "Compile everything necessary to use the site with pub serve, part of the Dart SDK, from zukan_workspace"
-task :build_workspace => [:compress_images, :generate_pages, :compile_sass, "#{WORKSPACE}/web/article_list.dart"]
+desc "Compile everything necessary to use the site with pub serve, part of the Dart SDK (output in web)"
+task :build_web => [:compress_images, :generate_pages, :compile_sass, "web/article_list.dart"]
 
 desc "Run development pub server (Dart SDK required)"
-task :serve => :build_workspace do
-  Dir.chdir WORKSPACE do
-    sh 'pub serve'
-  end
+task :serve => :build_web do
+  sh 'pub serve'
 end
 
 def generate_appcache
@@ -237,12 +226,13 @@ def generate_appcache
 end
 
 desc "Compile dart code and produce ready-to-deploy site with appcache and minified css"
-task :compile => :build_workspace do
-  dependencies = Rake::FileList.new("#{WORKSPACE}/**/*")
-  unless (uptodate?("#{WORKSPACE}/build/web/ichiran.html", dependencies))
+task :compile => :build_web do
+  # Yes, the dependency for this task is everything.
+  dependencies = Rake::FileList.new("**/*").exclude(STATIC_SITE).exclude("#{STATIC_SITE}/**/*")
+  unless (uptodate?("#{STATIC_SITE}/home.html", dependencies))
     rm_r STATIC_SITE, :force => true 
-    smart_compile_dart(WORKSPACE)
-    cp_r "#{WORKSPACE}/build/web", STATIC_SITE
+    smart_compile_dart(".")
+    cp_r "build/web", STATIC_SITE
     generate_appcache
     css_path = "#{STATIC_SITE}/stylesheets/main.css"
     unlocked css_path do
@@ -266,17 +256,16 @@ end
 
 desc "Deploy site to Google App Engine"
 task :deploy => :compile do
-  Dir.chdir 'site' do
+  Dir.chdir STATIC_SITE do
     sh 'appcfg.py --no_cookies update .'
   end
 end
 
 desc "Delete all generated files, except for compressed image files"
 task :clean_nonimage do
-  generated_textfiles = Rake::FileList.new.include("#{WORKSPACE}/web/**/*.html").include("#{WORKSPACE}/web/**/*.css").include("#{WORKSPACE}/web/*_list.dart")
+  generated_textfiles = Rake::FileList.new.include("web/**/*.html").include("web/**/*.css").include("web/*_list.dart")
   rm_f generated_textfiles
-  rm_f "#{WORKSPACE}/animal_list.pkl"
-  rm_rf "#{WORKSPACE}/build/"
+  rm_rf "build"
   rm_rf STATIC_SITE
 end
 
