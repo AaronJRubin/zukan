@@ -1,18 +1,3 @@
-{% macro river_section(river, river_kanji) %}
-<div class="individual-river-section">
-	<ol>
-		{% for a_ryuuiki in ryuuiki %}
-    <li><div class="ryuuiki">{{river_kanji}}{{a_ryuuiki['kanji']}}</div><div class="boxes">
-    <input type="checkbox" class="search-checkbox include" id="{{river}}-{{a_ryuuiki['romaji']}}-include" name="{{river}}-{{a_ryuuiki['romaji']}}-include"><label for="{{river}}-{{a_ryuuiki['romaji']}}-include" class="include">要</label>
-    <input type="checkbox" class="search-checkbox exclude" id="{{river}}-{{a_ryuuiki['romaji']}}-exclude" name="{{river}}-{{a_ryuuiki['romaji']}}-exclude"><label for="{{river}}-{{a_ryuuiki['romaji']}}-exclude" class="exclude">除</label>
-    </div>
-    </li>
-		{% endfor %}
-	</ol>
-</div>
-{% endmacro %}
-
-
 {% macro animal_tile(animal) %}
 <a href="{{animal.get_link()}}" class="animal-tile">
   <img {% if animal.is_long() %} class="long" {% endif %} src="{{animal.image('ichiran')}}" alt="">
