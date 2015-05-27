@@ -29,4 +29,4 @@ article_map_initializer = "Map<String, Article> article_map = new Map.fromIterab
 
 dart_file_contents = "part of article;\n\n#{article_list_initializer}\n\n#{article_map_initializer}"
 
-File.write("web/article_list.dart", dart_file_contents)
+File.write("web/ikimono/animal_article_list.dart", dart_file_contents)
