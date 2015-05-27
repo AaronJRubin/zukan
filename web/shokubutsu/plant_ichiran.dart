@@ -1,17 +1,16 @@
 import 'dart:html';
 import 'plant.dart';
-import 'article.dart';
-import 'ichiran_utils.dart';
+import 'package:takatsugawa_zukan/ichiran_utils.dart';
 
-ElementList<CheckboxInputElement> includeCheckboxes;
-ElementList<CheckboxInputElement> excludeCheckboxes;
+//ElementList<CheckboxInputElement> includeCheckboxes;
+//ElementList<CheckboxInputElement> excludeCheckboxes;
 TextInputElement articleSearch;
 ElementList<LIElement> plantTiles;
 
 void main() {
   setUpSearchAreaToggle();
-  includeCheckboxes = document.querySelectorAll(".search-checkbox.include");
-  excludeCheckboxes = document.querySelectorAll(".search-checkbox.exclude");
+  //includeCheckboxes = document.querySelectorAll(".search-checkbox.include");
+  //excludeCheckboxes = document.querySelectorAll(".search-checkbox.exclude");
   articleSearch = document.querySelector("#article-search");
   plantTiles = document.querySelectorAll("ol.tiles li");
   /*for (int i = 0; i < includeCheckboxes.length; i++) {
