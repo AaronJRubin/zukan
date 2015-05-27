@@ -54,18 +54,17 @@ def smart_compile_dart(dir)
 end
 
 # This function generates a task for compressing all of the images in a directory,
-# given a name for the task, the source directory, a pathmap for going from an image
-# file in the source directory to the corresponding image file in the destination directory,
+# given a name for the task, the source directory,
 # and a lambda that, when given two strings, one for the path to the original image
 # and one for the path to the compressed image, generates the shell command - a string - needed
 # to produce the compressed image from the original image. That shell command will probably
 # use the 'convert' utility in ImageMagick.
-def compress_images_task(name, source, pathmap, convert_function)
+def compress_images_task(name, source, convert_function)
   images = Rake::FileList.new(source)
-  compressed_images = images.pathmap(pathmap)
+  compressed_images = images.map { |image| image.gsub(MASTER_IMAGES, IMAGES) }
   task name.to_s => compressed_images
   images.each do |image|
-    compressed_image = image.pathmap(pathmap)
+    compressed_image = image.gsub(MASTER_IMAGES, IMAGES)
     dependencies = [image]
     crop_settings = image.pathmap("%X.crp")
     if File.exists? crop_settings
@@ -131,7 +130,7 @@ convert_animal = lambda do |animal, compressed_animal|
 end
 
 desc "Compress images of animals in master-images and move to workspace"
-compress_images_task(:compress_animal_images, "#{MASTER_IMAGES}/ikimono/**/*.jpg", "#{IMAGES}/%-2d/%f", convert_animal)
+compress_images_task(:compress_animal_images, "#{MASTER_IMAGES}/ikimono/**/*.jpg", convert_animal)
 
 quality_override = Hash.new('57')
 quality_override['takatsu-chuu.jpg'] = '75'
@@ -152,13 +151,13 @@ convert_mamechishiki = lambda do |image, compressed_image|
 end
 
 desc "Compress images of seisokuchi in master-images and move to workspace"
-compress_images_task(:compress_seisokuchi_images, "#{MASTER_IMAGES}/seisokuchi/*.jpg", "#{IMAGES}/seisokuchi/%f", convert_general)
+compress_images_task(:compress_seisokuchi_images, "#{MASTER_IMAGES}/seisokuchi/*.jpg", convert_general)
 
 desc "Compress images for mamechishiki articles and move to workspace"
-compress_images_task(:compress_mamechishiki_images, "#{MASTER_IMAGES}/mamechishiki/**/*.jpg", "#{IMAGES}/mamechishiki/%-1d/%f", convert_mamechishiki)
+compress_images_task(:compress_mamechishiki_images, "#{MASTER_IMAGES}/mamechishiki/**/*.jpg", convert_mamechishiki)
 
 desc "Compress miscellaneous images and move to workspace"
-compress_images_task(:compress_miscellaneous_images, "#{MASTER_IMAGES}/*.jpg", "#{IMAGES}/%f", convert_general)
+compress_images_task(:compress_miscellaneous_images, "#{MASTER_IMAGES}/*.jpg", convert_general)
 
 desc "Compress all images and move to workspace"
 task :compress_images => [:compress_animal_images, :compress_seisokuchi_images, :compress_mamechishiki_images, :compress_miscellaneous_images]
