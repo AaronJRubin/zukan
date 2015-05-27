@@ -51,25 +51,3 @@ page_template_paths = [path for path in glob("templates/pages/**/*") + glob("tem
 
 for page_template_path in page_template_paths:
     render_page(page_template_path)
-
-def write_dart(animal_list):
-    f = file("web/animal_list.dart", "w");
-    f.write("part of animal;\n\n")
-    f.write("List<Animal> animal_list = [")
-    for animal in animal_list:
-        animalString = u"""new Animal("%s", "%s", "%s", "%s", "%s",
-            %d, %s, %s, %s, %s, %s, %s, %s, %s)""" % (animal.latin, animal.ka,
-            animal.zoku, animal.romaji, animal.kana, animal.rarity, animal.takatsu_inhabits("zyou"),
-            animal.takatsu_inhabits("chuu"), animal.takatsu_inhabits("ge"), animal.takatsu_inhabits("kakou"), animal.masuda_inhabits("zyou"),
-            animal.masuda_inhabits("chuu"), animal.masuda_inhabits("ge"), animal.masuda_inhabits("kakou"))
-        animalString = animalString.replace('True', 'true')
-        animalString = animalString.replace('False', 'false')
-        f.write(animalString.encode('utf8'))
-        f.write(",\n")
-    f.write("];\n\n")
-    f.write("""Map<String, Animal> animal_map = new Map.fromIterable(animal_list,
-    key: (animal) => animal.romaji);""")
-    f.close()
-
-write_dart(animal_list)
-
