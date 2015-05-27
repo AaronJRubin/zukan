@@ -262,7 +262,7 @@ end
 
 desc "Delete all generated files, except for compressed image files"
 task :clean_nonimage do
-  generated_textfiles = Rake::FileList.new.include("web/**/*.html").include("web/**/*.css").include("web/*_list.dart")
+  generated_textfiles = Rake::FileList.new.include("web/**/*.html").include("web/**/*.css").include("web/**/*_list.dart")
   rm_f generated_textfiles
   rm_rf "build"
   rm_rf STATIC_SITE
