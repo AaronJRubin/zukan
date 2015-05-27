@@ -11,7 +11,7 @@ void main() {
   includeCheckboxes = document.querySelectorAll(".search-checkbox.include");
   excludeCheckboxes = document.querySelectorAll(".search-checkbox.exclude");
   articleSearch = document.querySelector("#article-search");
-  animalTiles = document.querySelectorAll("ol.animal-tiles li");
+  animalTiles = document.querySelectorAll("ol.tiles li");
   SpanElement dropdownCaret = document.querySelector("#dropdown-caret");
   DivElement searchArea = document.querySelector("#search-area");
   SpanElement dropdownLabel = document.querySelector("#dropdown-label");
