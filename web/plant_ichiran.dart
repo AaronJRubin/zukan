@@ -41,10 +41,10 @@ void toggleCheckboxChanged(CheckboxInputElement self, CheckboxInputElement partn
 Filter<Plant> buildFilter() {
   Filter<Plant> filter = new Filter<Plant>();
   String searchText = articleSearch.value.trim();
-  if (searchText.length > 0) {
+  /*if (searchText.length > 0) {
     filter
         .add((plant) => article_map[plant.romaji].text.contains(searchText));
-  }
+  }*/
   /*
   for (CheckboxInputElement checkbox in includeCheckboxes) {
     if (checkbox.checked) {
