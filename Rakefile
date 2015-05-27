@@ -79,11 +79,6 @@ def compress_images_task(name, source, convert_function)
   end
 end
 
-NON_ICHIRAN_DIMENSIONS = "278x"
-ICHIRAN_HEIGHT = 133
-HEADER_WIDTH = 335
-LONG_HEADER_IMAGE_MAX_WIDTH = 388
-
 # Aspect ratio is height / width here
 def get_cropped_aspect_ratio(image)
   uncropped_dimensions = Dimensions.dimensions(image)
@@ -113,15 +108,29 @@ def convert(source, target, resize = "300x300", quality = "50")
   return "convert #{source} #{crop_command} -resize #{resize} -quality #{quality} #{target}"
 end
 
+
+NON_ICHIRAN_DIMENSIONS = "278x"
+# This is the highest an ichiran image gets, until short images and long images diverge
+ICHIRAN_IMAGE_HEIGHT = 133
+# Short images become very tall right at the breakpoint where they become half the screen
+# Because short images have an aspect ratio of 4x3 (where 4 is width and 3 is height),
+# we don't actually have to use this value to optimize image size, but it's good to have
+# it here so that we don't forget that.
+SHORT_IMAGE_ICHIRAN_MAX_HEIGHT = 144
+HEADER_IMAGE_WIDTH = 335
+# long images become very long right at the breakpoint where image and classification information go onto separate rows
+# and also at the breakpoint where they need to start filling up the entire width of the ichiran screen (both are 450px at the moment)
+LONG_IMAGE_HEADER_MAX_WIDTH = 433
+
 convert_animal = lambda do |animal, compressed_animal|
   if animal.include? "ichiran"	
-    aspect_ratio = get_cropped_aspect_ratio(animal)
-    header_display_height = HEADER_WIDTH * aspect_ratio	
-    is_long = aspect_ratio < 0.5 #this determines whether the animal will be at 100% width on screens with size 415 px or less
+    aspect_ratio = get_cropped_aspect_ratio(animal) # remember, height / width here!
+    header_display_height = HEADER_IMAGE_WIDTH * aspect_ratio	
+    is_long = aspect_ratio < 0.5 
     if is_long
-      header_display_height = LONG_HEADER_IMAGE_MAX_WIDTH * aspect_ratio
+      header_display_height = LONG_IMAGE_HEADER_MAX_WIDTH * aspect_ratio
     end
-    needed_height = [ICHIRAN_HEIGHT, header_display_height].max	
+    needed_height = [ICHIRAN_IMAGE_HEIGHT, header_display_height].max	
     resize = "x#{needed_height}"
   else
     resize = NON_ICHIRAN_DIMENSIONS
@@ -269,7 +278,7 @@ end
 
 desc "Delete all generated files, except for compressed image files"
 task :clean_nonimage do
-  generated_textfiles = Rake::FileList.new.include("web/**/*.html").include("web/**/*.css").include("web/*_list.dart")
+  generated_textfiles = Rake::FileList.new.include("web/**/*.html").include("web/**/*.css").include("web/**/*_list.dart")
   rm_f generated_textfiles
   rm_rf "build"
   rm_rf STATIC_SITE
