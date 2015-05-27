@@ -28,8 +28,7 @@
 		{% for river in kawa %}
 		<div class="individual-river-section">
 			<ol>
-			{% for a_ryuuiki in ryuuiki %}
-     
+			{% for a_ryuuiki in ryuuiki %}     
       <li>
         <div class="ryuuiki">{{river['kanji']}}{{a_ryuuiki['kanji']}}</div><div class="boxes">
           {% for mode, kanji in [("include", "必"), ("exclude", "除")] %}   
