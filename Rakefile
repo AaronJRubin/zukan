@@ -133,6 +133,13 @@ end
 desc "Compress images of animals in master-images and move to workspace"
 compress_images_task(:compress_animal_images, "#{MASTER_IMAGES}/ikimono/**/*.jpg", "#{IMAGES}/%-2d/%f", convert_animal)
 
+convert_plant = lambda do |plant, compressed_plant|
+  return convert(plant, compressed_plant, resize = "x#{ICHIRAN_HEIGHT}", quality = "60")
+end
+
+desc "Compress images of plants in master-images and move to workspace"
+compress_images_task(:compress_plant_images, "#{MASTER_IMAGES}/shokubutsu/**/*.jpg", "#{IMAGES}/%-2d/%f", convert_plant)
+
 quality_override = Hash.new('57')
 quality_override['takatsu-chuu.jpg'] = '75'
 
@@ -161,7 +168,7 @@ desc "Compress miscellaneous images and move to workspace"
 compress_images_task(:compress_miscellaneous_images, "#{MASTER_IMAGES}/*.jpg", "#{IMAGES}/%f", convert_general)
 
 desc "Compress all images and move to workspace"
-task :compress_images => [:compress_animal_images, :compress_seisokuchi_images, :compress_mamechishiki_images, :compress_miscellaneous_images]
+task :compress_images => [:compress_animal_images, :compress_plant_images, :compress_seisokuchi_images, :compress_mamechishiki_images, :compress_miscellaneous_images]
 
 desc "Validate yaml data for which a schema is defined"
 task :validate_data do 

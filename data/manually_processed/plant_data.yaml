@@ -1,4 +1,23 @@
 azami:
-    kisetsu: 2-6
-    iro: murasaki
-    takasa: 6-10cm
+    iro: [murasaki]
+    saitei: 6
+    saikou: 10
+    zoku: アザミ属
+    ka: アザミ科
+    latin: florus azamius;
+    rarity: 2
+gairaishu:
+    iro: [kiiro]
+    saitei: 4
+    saikou: 8
+    zoku: ガイライシュ属
+    ka: ガイライシュ科
+    latin: florus pestilentus
+    rarity: 1
+togetoge:
+    iro: [murasaki]
+    saitei: 12
+    saikou: 15
+    zoku: トゲトゲ属
+    ka: トゲトゲ科
+    rarity: 3

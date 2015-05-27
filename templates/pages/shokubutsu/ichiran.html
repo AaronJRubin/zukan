@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% set body_class = "ichiran-body" %}
+{% set title = "一覧" %}
+
+{% block content %}
+
+<script async type="application/dart" src="/ichiran.dart"></script>
+<script async src="/packages/browser/dart.js"></script>
+
+<header class="ichiran-header">
+	<h1>植物一覧</h1>
+</header>
+
+<div class="search-dropdown-control"><span id="dropdown-label">検索エリアを表示</span><span id="dropdown-caret" class="collapsed">&#x25BC;</span></div>
+
+<div id="search-area" class="collapsed">
+
+  <div class="search-section">
+    <div class="search-header">記事のテキストで検索<input type="text" id="article-search"></div>
+  </div>
+
+	<div class="search-section">
+		<div class="search-header">生息地で検索</div>
+  </div>
+</div>
+
+<ol class="tiles">
+	{% for plant in plants %}
+	<li data-plant-name="{{plant.romaji}}">
+		<a href="{{plant.get_link()}}" class="plant-tile">
+  			<img src="{{plant.image('ichiran')}}" alt="">
+  			<div>{{plant.display_name}}</div>
+		</a>
+	</li>
+	{% endfor %}
+</ol>
+
+{% endblock %}

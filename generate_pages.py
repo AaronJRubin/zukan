@@ -8,6 +8,7 @@ from glob import glob
 import yaml
 import romkan
 from animal import Animal
+from plant import Plant
 
 template_dirs = [os.path.join(os.path.dirname(__file__), "templates", directory) for directory in ["pages", "layouts", "macros"]]
 jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dirs))
@@ -24,6 +25,12 @@ animal_list = sorted([Animal(romaji = romaji, kana = romkan.to_kana(romaji), **f
 
 animal_map = { animal.romaji : animal for animal in animal_list }
 
+plant_data = parse_yaml_file("data/manually_processed/plant_data.yaml")
+
+plant_list = sorted([Plant(romaji = romaji, kana = romkan.to_kana(romaji), **fields) for romaji, fields in plant_data.iteritems()], key = lambda plant: plant.kana)
+
+plant_map = { plant.romaji : plant for plant in plant_list }
+
 def destructively_merge_dicts(dict_a, dict_b):
     dict_a.update(dict_b)
     return dict_a
@@ -32,7 +39,7 @@ data_files = glob("data/automatically_processed/*")
 
 data = reduce(destructively_merge_dicts, map(parse_yaml_file, data_files))
 
-data.update({ "animals" : animal_list, "animal_map" : animal_map })
+data.update({ "animals" : animal_list, "animal_map" : animal_map, "plants" : plant_list, "plant_map" : plant_map })
 
 def render_page(template_path):
     relative_path = template_path.replace("templates/pages/", "")
