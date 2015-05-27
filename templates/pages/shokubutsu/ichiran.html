@@ -28,7 +28,7 @@
 <ol class="tiles">
 	{% for plant in plants %}
 	<li data-plant-name="{{plant.romaji}}">
-		<a href="{{plant.get_link()}}" class="plant-tile">
+		<a href="{{plant.get_link()}}" class="tile">
   			<img src="{{plant.image('ichiran')}}" alt="">
   			<div>{{plant.display_name}}</div>
 		</a>
