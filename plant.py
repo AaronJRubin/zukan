@@ -17,6 +17,8 @@ class Plant:
         self.ka = ka if ka else ""
         self.zoku = zoku if zoku else ""
         self.rarity = rarity if rarity else 3
+        self.saitei = saitei if saitei else 6
+        self.saikou = saikou if saikou else 10
         self.display_name = display_name if display_name else self.kana
 
     def get_link(self):
