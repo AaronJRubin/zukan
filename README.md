@@ -1,22 +1,55 @@
-#Overview
+#Introduction
 
-This repository contains the source code for the site hosted at www.takatsugawa-zukan.appspot.com, a visual encyclopedia of the fish inhabitating the Takatsu and Masuda rivers that flow through Masuda City, Shimane Prefecture, Japan. Upon checkout of the repository, running `bundle install`, followed by `rake compile`, will 
-build the site from uncompressed images, templates, SCSS, and Dart code in the [zukan_workspace](zukan_workspace) directory, moving the output (in the form of compressed/resized images, HTML documents, CSS, and Javascript) to site/static. The contents of site/static will be a purely static website that can be hosted on any platform without any server-side dependencies, though the various files in [site](site) are those necessary for a deployment to Google App Engine.
+This repository contains the source code for the site hosted at www.takatsugawa-zukan.appspot.com, a visual encyclopedia of the fish inhabitating the Takatsu and Masuda rivers that flow through Masuda City, Shimane Prefecture, Japan.
 
-#Dependencies for Compilation
+#Dependencies
 
-You will need the following tools installed and on your PATH. They can all be easily installed with HomeBrew on a Mac (google around for the details), except for the Python libraries, which should be installed via pip or easy_install, and uglifyjs, which should be installed via npm (npm install uglifyjs -g).
+Python 2.7, Ruby 2.0+, Dart, Node, and ImageMagick, as well as various packages/libraries/gems for some of them, are necessary to build this site. It's a lot of dependencies, but they should all be straightforward to install on OS X and Linux. Here's the basic procedure for Mac (if any of the shell commands below don't work the first time, try putting `sudo` in front of them). Linux should be similar; just use apt-get instead of Homebrew.
 
-* [Ruby](https://www.ruby-lang.org/en/documentation/installation/), preferably with [Bundler](http://bundler.io/) installed via `gem install bundler` to manage dependencies.
-* [The Dart SDK](https://www.dartlang.org/tools/sdk/). You will most likely need to manually add dark-sdk/bin/ (contained within the Dart installation directory) to your PATH.
-* [ImageMagick](http://www.imagemagick.org/).
-* [Python 2.7](https://www.python.org/download/releases/2.7/), with pip installed to manage dependencies; run `pip install -r requirements.txt` in the root folder to get all of the libraries that you need.
-* [uglifyjs](https://github.com/mishoo/UglifyJS2).
+##Python
 
-# How to Work on this Project
+Get Python 2.7 installed however you want to, get pip installed with `easy_install pip` if you don't have it already, and run `pip install -r requirements.txt` in the root directory of this project.
 
-As you work on this project, you will be spending most of your time in the [zukan_workspace](zukan_workspace) directory. As you modify the data in [fish_data.txt](zukan_workspace/fish_data.txt) (information encoding the habitats, rarities, and classification information of various fish), and as you modify the [templates](zukan_workspace/templates) to write new articles and change the layout of fish articles, run `rake build_workspace` to see those changes reflected in the HTML documents in the workspace. The [zukan_workspace](zukan_workspace) directory can be opened as a project within Dart Editor, and you will probably want to do that as you modify the scripts, such as [fish_page.dart](zukan_workspace/web/sakana/fish_page.dart) and [ichiran.dart](zukan_workspace/web/ichiran.dart), that add dynamicism to the pages. Compile the code with `rake compile` to get a static website that can be run in every browser and on any platform, stored in site/static. Note that generated files (i.e., files that you should not be editing) are appropriately marked as read-only to make it clear where you should be working.
+##Ruby
 
-Image files are stored in [zukan_workspace/master-images](zukan_workspace/master-images) and automatically compressed by Rake and moved into [zukan_workspace/web/images](zukan_workspace/web/images) when you run `rake build_workspace`.
+Get Ruby 2.0 installed however you want to, get bundler installed with `gem install bundler`, and then run `bundle install` in the root directory of this project.
 
+##Dart
 
+The best way to get the Dart SDK installed and on your PATH is with Homebrew; google around for the details.
+
+##Node
+
+Get npm installed however you want to and run `npm install uglifyjs -g`.
+
+##ImageMagick
+
+Assuming that you have Homebrew installed, run `brew install imagemagick`.
+
+#Architecture
+
+This is a statically generated site, built using the Jinja2 template engine for Python, but using Ruby's Rake tool to manage the build process. If you've heard of Jekyll (the Ruby static site generator) or Hyde (the Python static site generator), that's basically the idea, though I don't use either of those technologies directly. Rake generates a lot of files when you build this site; so that you don't inadvertently edit a generated file, they are chmodded (chmoded?) to read-only upon generation.
+
+##Templates
+
+Templates are stored in templates/, with the files in templates/pages/ being "full" templates that go into the finished site (in a directory structure that mirrors that of templates/pages/), and the ones in templates/layouts/ and templates/macros/ being... well, layouts and macros.
+
+##Data
+
+The data (represented via YAML) that goes into the templates is stored in data/, and there are two types, automatically processed and manually proccessed, in appropriately named subdirectories. Automatically processed data should consist of yaml files that are, at the top-level, maps; the keys of these maps will be the variables that you will have access to in template files, and the values will be what those variables represent. Manually processed data is data that needs to be processed through Python code in some way and then manually passed to templates in generate_pages.py; this can be useful in cases where (for example) we want the templates to have the data in the form of Python objects, rather than maps.
+
+##Images
+
+Images are stored in master-images; you will notice that these images (with maybe one or two exceptions) are neither cropped, resized, nor compressed. These images are processed by the Rakefile in the mostly appropriately named compress_images task. Image cropping can be done by adding ".crp" files to the same folder as an image; for an image named abehaze.html, the files that specifies how that image should be cropped should be called abehaze.crp. The syntax of the crop specification is an ImageMagick geometry object (if this description is confusing, look around the contents of master-images/ikimono for an example). Resizing and quality compression is handled (at this point) manually in the Rakefile (by making calls to ImageMagick) on a directory-by-directory basis; using ".rsz" files or ".qual" files would be an interesting idea, however, and it is one that I am considering. One thing to bear in mind with images is that independently of ImageMagick compression, you should be using ImageOptim or some other image optimizer on any new images that you want to add to the site, before you even add them to the repository!
+
+##CSS
+
+I use SCSS and Compass. Run `compass watch` as you edit sass/main.scss to see any changes that you make compiled to CSS, and thereby reflected in the site, immediately.
+
+##Scripting
+
+I use Javascript for super simple scripts, and Dart for the search functionality on ikimono/ichiran.html. Some of the Dart code is generated programmatically; animal_list.dart is generated in generate_pages.py based on the data in data/, and article_list.dart is generated by index_articles.rb based on the contents of the animal articles (which were produced from templates)
+
+#Build Process
+
+To build the site for local testing, run `rake build_workspace`; to view the site in a local server, run `rake serve`; to produce something that will run on Google App Engine (and that is fully minified), run `rake compile`; to deploy to Google App Engine (assuming that you have the credentials), run `rake deploy`. You may occasionally need to run `rake clean` or `rake clean_nonimage` if you delete a template or image, but see it still showing up on the site. Unless you were messing with images, favor `rake clean_nonimage` because it's a lot faster (you don't have to recompress and re-resize images again on the next build). You are unlikely to want to run the other Rake tasks in isolation, but nothing will break if you do.
