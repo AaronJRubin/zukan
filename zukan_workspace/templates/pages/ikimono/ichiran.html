@@ -14,8 +14,6 @@
 
 <div class="search-dropdown-control"><span id="dropdown-label">検索エリアを表示</span><span id="dropdown-caret" class="collapsed">&#x25BC;</span></div>
 
-{% import 'ichiran-macros.html' as macros %}
-
 <div id="search-area" class="collapsed">
 
   <div class="search-section">
@@ -24,8 +22,23 @@
 
 	<div class="search-section">
 		<div class="search-header">生息地で検索</div>
-		{{ macros.river_section("takatsu", "高津") }}
-		{{ macros.river_section("masuda", "益田") }}
+
+		{% for river in kawa %}
+		<div class="individual-river-section">
+			<ol>
+			{% for a_ryuuiki in ryuuiki %}     
+      <li>
+        <div class="ryuuiki">{{river['kanji']}}{{a_ryuuiki['kanji']}}</div><div class="boxes">
+          {% for mode, kanji in [("include", "必"), ("exclude", "除")] %}   
+          <input type="checkbox" class="search-checkbox {{mode}}" id="{{river['romaji']}}-{{a_ryuuiki['romaji']}}-{{mode}}" name="{{river['romaji']}}-{{a_ryuuiki['romaji']}}-{{mode}}">
+          <label for="{{river['romaji']}}-{{a_ryuuiki['romaji']}}-{{mode}}" class="{{mode}}">{{kanji}}</label>
+		      {% endfor %}
+        </div>
+		  </li>
+			{% endfor %}
+			</ol>
+		</div>
+		{% endfor %}
 	</div>
 
 </div>
@@ -33,7 +46,10 @@
 <ol class="animal-tiles">
 	{% for animal in animals %}
 	<li data-animal-name="{{animal.romaji}}">
-	{{ macros.animal_tile(animal) }}
+		<a href="{{animal.get_link()}}" class="animal-tile">
+  			<img {% if animal.is_long() %} class="long" {% endif %} src="{{animal.image('ichiran')}}" alt="">
+  			<div>{{animal.display_name}}</div>
+		</a>
 	</li>
 	{% endfor %}
 </ol>

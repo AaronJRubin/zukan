@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% set title = mamechishiki_translations[page_name] if page_name in mamechishiki_translations else "豆知識" %}
+
 {% block content %}
 
 <main class="mamechishiki">

@@ -164,26 +164,28 @@ compress_images_task(:compress_miscellaneous_images, "#{MASTER_IMAGES}/*.jpg", "
 desc "Compress all images and move to workspace"
 task :compress_images => [:compress_animal_images, :compress_seisokuchi_images, :compress_mamechishiki_images, :compress_miscellaneous_images]
 
-desc "Parse data in animal_data.txt, generating serialized Python and Dart data structures"
-task :generate_animal_list do
+desc "Validate yaml data for which a schema is defined"
+task :validate_data do
   Dir.chdir WORKSPACE do
-    dependencies = ['animal.py', 'animal_data.txt', 'generate_animal_list.py']
-    unless (uptodate?('animal_list.pkl', dependencies) and uptodate?('web/animal_list.dart', dependencies))
-      unlocked ['animal_list.pkl', 'web/animal_list.dart'] do
-        sh 'python generate_animal_list.py'
+    data_files = Rake::FileList.new('data/**/*.yaml')
+    data_files.each do |data_file|
+      schema_file = data_file.pathmap("%X.schema")
+      if File.exists? schema_file
+        sh "kwalify -lf #{schema_file} #{data_file}"
       end
     end
   end
 end
 
-desc "Generate html documents using the jinja2 templates engine"
-task :generate_pages => :generate_animal_list do
+
+desc "Generate html (and one Dart file) documents using the jinja2 templates engine"
+task :generate_pages => [:compress_images, :validate_data] do
   Dir.chdir WORKSPACE do
-    dependencies = Rake::FileList.new('templates/**/*').include('web/images/ikimono/**/*').include('animal.py').include('animal_data.txt').include('generate_animal_list.py')
+    dependencies = Rake::FileList.new('templates/**/*').include('web/images/ikimono/**/*').include('animal.py').include('data/**/*')
     unless uptodate?('web/ikimono/ichiran.html', dependencies)
-      unlock Rake::FileList.new('web/**/*.html')
+      unlock Rake::FileList.new('web/**/*.html').include("web/ikimono/animal_list.dart")
       sh 'python generate_pages.py'
-      lock Rake::FileList.new('web/**/*.html')
+      lock Rake::FileList.new('web/**/*.html').include("web/ikimono/animal_list.dart")
     end
   end
 end

@@ -1,13 +1,11 @@
 {% extends "base/mamechishiki.html" %}
 
-{% set title = "食べたり食べられたり" %}
-
 {% block article %}
 <h2>ツガニと鮎：{{title}}不思議な関係</h2>
 
 {% import 'mamechishiki-macros.html' as macros %}
 
-{{ macros.image_bar(self | title, "ayu", "tsugani") }}
+{{ macros.image_bar(page_name, "ayu", "tsugani") }}
 
 <p>
 アユとツガニはどちらも高津川を代表する味覚です。魚とカニ、お互い何の関係もないように見えますが、実は深い関係があります。

@@ -3,81 +3,73 @@
 
 import os
 import jinja2
-import cPickle as pickle
 import sys
-import glob
-import re
+from glob import glob
+import yaml
+import romkan
+from animal import Animal
 
-dest = "web"
+template_dirs = [os.path.join(os.path.dirname(__file__), "templates", directory) for directory in ["pages", "layouts", "macros"]]
+jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dirs))
 
-# Set up templating infrastructure
+def parse_yaml_file(path):
+    file = open(path, "r")
+    contents = file.read()
+    file.close()
+    return yaml.load(contents)
 
-try:
-    animal_list = pickle.load(open("animal_list.pkl", "rb", pickle.HIGHEST_PROTOCOL))
-except IOError:
-    print("To run this script, you need to first generate the file animal_list.pkl by running generate_animal_list.py")
-    exit()
+animal_data = parse_yaml_file("data/manually_processed/animal_data.yaml")
 
-template_dir = os.path.join(os.path.dirname(__file__), "templates")
-jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir))
+animal_list = sorted([Animal(romaji = romaji, kana = romkan.to_kana(romaji), **fields) for romaji, fields in animal_data.iteritems()], key = lambda animal: animal.kana)
 
-# a Jinja2 filter that gets the name of the current file, without .html
-def title(self):
-    quoted = re.findall('\'([^\']*)\'', str(self))
-    if quoted:
-        path = quoted[0]
-        basename = path.split("/")[-1]
-        return basename.replace(".html", "")
-    else:
-        return None
+animal_map = { animal.romaji : animal for animal in animal_list }
 
-jinja_env.filters['title'] = title
+def destructively_merge_dicts(dict_a, dict_b):
+    dict_a.update(dict_b)
+    return dict_a
 
-def render_str(template, **params):
-    t = jinja_env.get_template(template)
-    return t.render(params)
+data_files = glob("data/automatically_processed/*")
 
-def write(path, string):
-    f = file(path, "w")
-    f.write(string)
+data = reduce(destructively_merge_dicts, map(parse_yaml_file, data_files))
+
+data.update({ "animals" : animal_list, "animal_map" : animal_map })
+
+def render_page(template_path):
+    relative_path = template_path.replace("templates/pages/", "")
+    template = jinja_env.get_template(relative_path)
+    page_name = os.path.splitext(os.path.basename(template_path))[0]
+    rendered = template.render(data, page_name = page_name).encode('utf8')
+    destination = template_path.replace("templates/pages/", "web/")
+    destination_dir = os.path.dirname(destination)
+    if not os.path.exists(destination_dir):
+        os.makedirs(destination_dir)
+    f = file(destination, "w")
+    f.write(rendered)
+    f.close()
+   
+page_template_paths = [path for path in glob("templates/pages/**/*") + glob("templates/pages/*") if not os.path.isdir(path)]
+
+for page_template_path in page_template_paths:
+    render_page(page_template_path)
+
+def write_dart(animal_list):
+    f = file("web/animal_list.dart", "w");
+    f.write("part of animal;\n\n")
+    f.write("List<Animal> animal_list = [")
+    for animal in animal_list:
+        animalString = u"""new Animal("%s", "%s", "%s", "%s", "%s",
+            %d, %s, %s, %s, %s, %s, %s, %s, %s)""" % (animal.latin, animal.ka,
+            animal.zoku, animal.romaji, animal.kana, animal.rarity, animal.takatsu_inhabits("zyou"),
+            animal.takatsu_inhabits("chuu"), animal.takatsu_inhabits("ge"), animal.takatsu_inhabits("kakou"), animal.masuda_inhabits("zyou"),
+            animal.masuda_inhabits("chuu"), animal.masuda_inhabits("ge"), animal.masuda_inhabits("kakou"))
+        animalString = animalString.replace('True', 'true')
+        animalString = animalString.replace('False', 'false')
+        f.write(animalString.encode('utf8'))
+        f.write(",\n")
+    f.write("];\n\n")
+    f.write("""Map<String, Animal> animal_map = new Map.fromIterable(animal_list,
+    key: (animal) => animal.romaji);""")
     f.close()
 
-# End set up templating infrastructure
+write_dart(animal_list)
 
-# Build templates and write them to destination
-
-def maybe_mkdir(path):
-    if not os.path.exists(path):
-        os.mkdir(path)
-
-maybe_mkdir(os.path.join(dest, "ikimono"))
-
-ichiran = render_str("base/ichiran.html", animals = animal_list)
-write(os.path.join(dest, "ikimono/ichiran.html"), ichiran.encode('utf8'))
-
-def render_static_page(name):
-    page = render_str("base/" + name + ".html")
-    write(os.path.join(dest, name + ".html"), page.encode('utf8'))
-
-render_static_page("home")
-render_static_page("about")
-render_static_page("sankoubunken")
-
-for animal in animal_list:
-    template = os.path.join("base/ikimono", animal.romaji + ".html")
-    template_path = os.path.join("templates", template)
-    if os.path.exists(template_path):
-        page = render_str(template, animal = animal)
-        write(os.path.join(dest, "ikimono", animal.romaji + ".html"), page.encode('utf8'))
-    else:
-        print("No article found for " + animal.romaji)
-        page = render_str("base/ikimono/generic.html", animal = animal)
-        write(os.path.join(dest, "ikimono", animal.romaji + ".html"), page.encode('utf8'))
-
-mamechishiki_pages = [path.replace("templates/", "")  for path in glob.glob("templates/base/mamechishiki/*.html")]
-
-maybe_mkdir(os.path.join(dest, "mamechishiki"))
-
-for mamechishiki_page in mamechishiki_pages:
-    page = render_str(mamechishiki_page)
-    write(os.path.join(dest, "mamechishiki", os.path.basename(mamechishiki_page)), page.encode('utf8'))

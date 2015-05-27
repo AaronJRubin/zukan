@@ -1,0 +1,554 @@
+abehaze:
+  ka: ハゼ科ハゼ亜科
+  latin: Mugilogobius abei
+  masuda: [chuu, ge]
+  rarity: 4
+  takatsu: [chuu, ge]
+  zoku: アベハゼ属
+aburabote:
+  ka: コイ科タナゴ亜科
+  latin: Tanakia limbata
+  masuda: [chuu]
+  rarity: 3
+  takatsu: [chuu]
+  zoku: アブラボテ属
+akaharaimori:
+  ka: イモリ科
+  latin: Cynops pyrrhogaster
+  masuda: [zyou, chuu]
+  rarity: 2
+  takatsu: [zyou, chuu]
+  zoku: トウヨウイモリ属
+akategani:
+  ka: ベンケイガニ科
+  latin: Chiromantes haematochir
+  masuda: [ge, kakou]
+  rarity: 2
+  takatsu: [ge, kakou]
+  zoku: 
+akaza:
+  ka: ギギ科
+  latin: Liobogrus reini
+  masuda: [zyou]
+  rarity: 4
+  takatsu: [zyou]
+  zoku: アカザ属
+amago:
+  ka: サケ科
+  latin: Salmo (Oncorhynchus) masou macrostimus
+  masuda: [zyou]
+  rarity: 2
+  takatsu: [zyou]
+  zoku: サケ属
+amerikazarigani:
+  ka: アメリカザリガニ科
+  latin: Procambarus clarkii
+  masuda: [chuu, ge]
+  rarity: 3
+  takatsu: [chuu, ge]
+  zoku: アメリカザリガニ属
+ayu:
+  ka: キュウリウオ科
+  latin: Plecoglossus altivelis altivelis
+  masuda: [chuu, ge, kakou]
+  rarity: 2
+  takatsu: [chuu, ge, kakou]
+  zoku: アユ属
+ayukake:
+  ka: カジカ科
+  latin: Cottus kazika
+  masuda: [chuu, ge, kakou]
+  rarity: 3
+  takatsu: [chuu, ge, kakou]
+  zoku: カジカ属
+benkeigani:
+  ka: ベンケイガニ科
+  latin: Sesarmops intermedium
+  masuda: [ge, kakou]
+  rarity: 3
+  takatsu: [ge, kakou]
+  zoku: 
+biringo:
+  ka: ハゼ科ハゼ亜科
+  latin: Chaenogobius castaneus
+  masuda: [ge, kakou]
+  rarity: 4
+  takatsu: [ge, kakou]
+  zoku: ウキゴリ属
+bora:
+  ka: ボラ科
+  latin: Mugil cephalus cephalus
+  masuda: [chuu, ge, kakou]
+  rarity: 1
+  takatsu: [chuu, ge, kakou]
+  zoku: ボラ属
+chichibu:
+  ka: ハゼ科ハゼ亜科
+  latin: Tridentiner obscurus
+  masuda: [ge, kakou]
+  rarity: 2
+  takatsu: [ge, kakou]
+  zoku: チチブ属
+dojou:
+  ka: ドジョウ科
+  latin: Misgurnus anguillicaudatus
+  masuda: [chuu, ge]
+  rarity: 2
+  takatsu: [chuu, ge]
+  zoku: ドジョウ属
+donko:
+  ka: ハゼ科カワアナゴ亜科
+  latin: Odontobutis obscura obscura
+  masuda: [chuu, ge]
+  rarity: 1
+  takatsu: [chuu, ge]
+  zoku: ドンコ属
+gigi:
+  ka: ギギ科
+  latin: Pseudobagrus nudiceps
+  masuda: [zyou, chuu]
+  rarity: 2
+  takatsu: [zyou, chuu]
+  zoku: ギギ属
+ginbuna:
+  ka: コイ科コイ亜科
+  latin: Carassius gibelio langsdorfi
+  masuda: [chuu, ge]
+  rarity: 1
+  takatsu: [chuu, ge]
+  zoku: フナ属
+gogi:
+  ka: サケ科サケ亜科
+  latin: Salvelinus leucomaenis f.imbrius
+  masuda: []
+  rarity: 4
+  takatsu: [zyou]
+  zoku: イワナ属
+gokurakuhaze:
+  ka: ハゼ科ハゼ亜科
+  latin: Rhinogobius giurinus
+  masuda: [chuu, ge, kakou]
+  rarity: 2
+  takatsu: [chuu, ge, kakou]
+  zoku: ヨシノボリ属
+himehaze:
+  ka: ハゼ科ハゼ亜科
+  latin: Favonigobius gymnauchen
+  masuda: [kakou]
+  rarity: 2
+  takatsu: [kakou]
+  zoku: ヒメハゼ属
+hinahaze:
+  ka: ハゼ科ハゼ亜科
+  latin: Redigobius bikolanus
+  masuda: [ge, kakou]
+  rarity: 3
+  takatsu: [ge, kakou]
+  zoku: ヒナハゼ属
+hirame:
+  ka: ヒラメ科
+  latin: Paralichthys olivaceus (Temmink et Schlegel)
+  masuda: []
+  rarity: 3
+  takatsu: [kakou]
+  zoku: ヒラメ属
+hirasuzuki:
+  ka: スズキ科
+  latin: Lateolabrax latusb Katayama
+  masuda: []
+  rarity: 3
+  takatsu: [kakou]
+  zoku: スズキ属
+ishidojou:
+  ka: ドジョウ科
+  latin: Cobitis takatsuensis
+  masuda: [zyou]
+  rarity: 5
+  takatsu: [zyou]
+  zoku: シマドジョウ属
+ishidonko:
+  ka: ハゼ科カワアナゴ亜科
+  latin: Odontobutis hikimiusu
+  masuda: []
+  rarity: 5
+  takatsu: [zyou]
+  zoku: ドンコ属
+ishimakigai:
+  ka: アマオブネガイ科
+  latin: Clithon retropicta
+  masuda: [ge, kakou]
+  rarity: 1
+  takatsu: [ge, kakou]
+  zoku: イシマキガイ属
+itomoroko:
+  ka: コイ科カマツカ亜科
+  latin: Squalidus gracilis gracilis
+  masuda: [chuu]
+  rarity: 3
+  takatsu: [chuu]
+  zoku: スズモロコ属
+kajika:
+  ka: カジカ科
+  latin: Cottus pollux
+  masuda: [chuu]
+  rarity: 5
+  takatsu: [chuu]
+  zoku: カジカ属
+kajikagaeru:
+  ka: アオガエル科
+  latin: Buergeria buergeri
+  masuda: [zyou]
+  rarity: 4
+  takatsu: [zyou]
+  zoku: カジカガエル属
+kamatsuka:
+  ka: コイ科カマツカ亜科
+  latin: Pseudogobio esocinus esocinus
+  masuda: [zyou, chuu]
+  rarity: 2
+  takatsu: [zyou, chuu]
+  zoku: カマツカ属
+kawaanago:
+  ka: ハゼ科カワアナゴ亜科
+  latin: Eleotris oxycephala
+  masuda: [kakou]
+  rarity: 5
+  takatsu: [kakou]
+  zoku: カワアナゴ属
+kawamutsu:
+  ka: コイ科ハエジャコ亜科
+  latin: Zacco temmincki
+  masuda: [zyou, chuu, ge]
+  rarity: 1
+  takatsu: [zyou, chuu, ge]
+  zoku: オイカワ属
+kawanina:
+  ka: カワニナ科
+  latin: Semisulcospira libertina
+  masuda: [zyou, chuu, ge]
+  rarity: 1
+  takatsu: [zyou, chuu, ge]
+  zoku: 
+kawayoshinobori:
+  ka: ハゼ科ハゼ亜科
+  latin: Rhinogobius flumineus
+  masuda: [zyou, chuu]
+  rarity: 2
+  takatsu: [zyou, chuu]
+  zoku: ヨシノボリ族
+kefusaisogani:
+  ka: モクズカニ科
+  latin: Hemigrapsus intermedium
+  masuda: []
+  rarity: 3
+  takatsu: [kakou]
+  zoku: イソガニ属
+kochi:
+  ka: コチ科
+  latin: Platycephalus indicus
+  masuda: [kakou]
+  rarity: 2
+  takatsu: [kakou]
+  zoku: コチ属
+koi:
+  ka: コイ科コイ亜科
+  latin: Cyprinus carpio
+  masuda: [chuu, ge]
+  rarity: 2
+  takatsu: [chuu, ge]
+  zoku: コイ属
+kurobenkeigani:
+  ka: ベンケイガニ科
+  latin: Chiromantes dehaani
+  masuda: [ge, kakou]
+  rarity: 2
+  takatsu: [ge, kakou]
+  zoku: アカテガニ属
+kurodai:
+  ka: タイ科
+  latin: Acanthopagrus schlegeli
+  masuda: [kakou]
+  rarity: 2
+  takatsu: [kakou]
+  zoku: クロダイ属
+kusagame:
+  ka: イシガメ科
+  latin: Chinemys reevesii
+  masuda: [chuu, ge]
+  rarity: 4
+  takatsu: [chuu, ge]
+  zoku: イシガメ属
+mahaze:
+  ka: ハゼ科ハゼ亜科
+  latin: Acanthogobius flavimanus
+  masuda: [chuu, ge, kakou]
+  rarity: 2
+  takatsu: [ge, kakou]
+  zoku: マハゼ属
+marutanishi:
+  ka: タニシ科
+  latin: Cipangopaludina japonica
+  masuda: [chuu, ge]
+  rarity: 2
+  takatsu: [chuu, ge]
+  zoku: タニシ属
+matsukasagai:
+  ka: イシガイ科
+  latin: Pronodularia jananensis
+  masuda: []
+  rarity: 5
+  takatsu: [chuu]
+  zoku: マツカサガイ属
+medaka:
+  ka: メダカ科
+  latin: Oryzias latipes
+  masuda: [chuu, ge, kakou]
+  rarity: 3
+  takatsu: [chuu, ge, kakou]
+  zoku: メダカ属
+mimizuhaze:
+  ka: ハゼ科ハゼ亜科
+  latin: Luciogobius guttatus
+  masuda: []
+  rarity: 4
+  takatsu: [kakou]
+  zoku: ミミズハゼ属
+mishishippiakamimigame:
+  ka: ヌマガメ科
+  latin: Trachemys scripta elegans
+  masuda: [ge]
+  rarity: 2
+  takatsu: [ge]
+  zoku: アカミミガメ属
+  display_name: アカミミガメ
+monoaragai:
+  ka: モノアラガイ科
+  latin: Physa acuta
+  masuda: [chuu, ge]
+  rarity: 3
+  takatsu: [chuu, ge]
+  zoku: モノアラガイ属
+mugitsuku:
+  ka: コイ科ヒガイ亜科
+  latin: Pungtungia herzi
+  masuda: []
+  rarity: 3
+  takatsu: [chuu]
+  zoku: ムギツク属
+namazu:
+  ka: ナマズ科
+  latin: Silurus asotus
+  masuda: [chuu, ge]
+  rarity: 3
+  takatsu: [chuu, ge]
+  zoku: ナマズ属
+nihonnishigame:
+  ka: イシガメ科
+  latin: Mauremys japanica
+  masuda: [zyou, chuu, ge]
+  rarity: 4
+  takatsu: [zyou, chuu, ge]
+  zoku: イシガメ属
+nihonsuppon:
+  ka: スッポン科
+  latin: Pelodiscus sinensis
+  masuda: [chuu, ge]
+  rarity: 4
+  takatsu: [chuu, ge]
+  zoku: キョクトウスッポン属
+numachichibu:
+  ka: ハゼ科ハゼ亜科
+  latin: Tridentiger kuroiwae brevispinis
+  masuda: [chuu, ge]
+  rarity: 3
+  takatsu: [chuu, ge]
+  zoku: チチブ属
+numagaeru:
+  ka: ヌマガエル科
+  latin: Fejervarya limnocharis
+  masuda: [zyou, chuu]
+  rarity: 2
+  takatsu: [zyou, chuu]
+  zoku: ヌマガエル属
+oikawa:
+  ka: コイ科ハエジャコ亜科
+  latin: Zacco platypus
+  masuda: [chuu]
+  rarity: 3
+  takatsu: [chuu]
+  zoku: オイカワ族
+ooyoshinobori:
+  ka: ハゼ科ハゼ亜科
+  latin: Rhinogobius sp.LD
+  masuda: []
+  rarity: 4
+  takatsu: [zyou, chuu]
+  zoku: ヨシノボリ属
+oyanirami:
+  ka: スズキ科
+  latin: Siniperca (Bryttosus) kawamebari
+  masuda: []
+  rarity: 4
+  takatsu: [zyou]
+  zoku: ケツギョ属
+sakuramasu:
+  ka: サケ科サケ亜科
+  latin: Salmo (Oncorhynchus) masou masou
+  masuda: []
+  rarity: 5
+  takatsu: [chuu, ge, kakou]
+  zoku: サケ属
+sawagani:
+  ka: サワガニ科
+  latin: Geothelphusa dehaani
+  masuda: [zyou]
+  rarity: 3
+  takatsu: [zyou]
+  zoku: サワガニ属
+sayori:
+  ka: サヨリ科
+  latin: Hyporhamplus sajori
+  masuda: [kakou]
+  rarity: 3
+  takatsu: [kakou]
+  zoku: サヨリ属
+shimadojou:
+  ka: ドジョウ科
+  latin: Cobitis biwae
+  masuda: [zyou, chuu]
+  rarity: 3
+  takatsu: [zyou, chuu]
+  zoku: シマドジョウ属
+shimaisaki:
+  ka: シマイサキ科
+  latin: Terapon (Rhyncopelates) oxyrhynchus
+  masuda: [ge, kakou]
+  rarity: 3
+  takatsu: [ge, kakou]
+  zoku: コトヒキ属
+shimayoshinobori:
+  ka: ハゼ科
+  latin: Rhinogobius sp.CB
+  masuda: [chuu]
+  rarity: 3
+  takatsu: [chuu]
+  zoku: ヨシノボリ属
+shirogisu:
+  ka: キス科
+  latin: Sillago japonica (Temminck et Schlegel)
+  masuda: [ge, kakou]
+  rarity: 3
+  takatsu: [ge, kakou]
+  zoku: キス属
+shirouo:
+  ka: ハゼ科ハゼ亜科
+  latin: Leucopsarion petersi
+  masuda: [kakou]
+  rarity: 5
+  takatsu: []
+  zoku: シロウオ属
+sumiukigori:
+  ka: ハゼ科ハゼ亜科
+  latin: Chaenogobius sp.2
+  masuda: [chuu, ge, kakou]
+  rarity: 3
+  takatsu: [chuu, ge]
+  zoku: ウキゴリ属
+sunayatsume:
+  ka: ヤツメウナギ科
+  latin: Lampetra (Lethenteron) reissneri
+  masuda: []
+  rarity: 5
+  takatsu: [zyou]
+  zoku: ヤツメウナギ属
+suzuki:
+  ka: スズキ科
+  latin: Lateolabrax japonicus
+  masuda: [chuu, ge, kakou]
+  rarity: 2
+  takatsu: [ge, kakou]
+  zoku: スズキ属
+tairikubaratanago:
+  ka: コイ科タナゴ亜科
+  latin: Rhodeus ocellatus ocellatus
+  masuda: []
+  rarity: 4
+  takatsu: [ge]
+  zoku: バラタナゴ属
+takahaya:
+  ka: コイ科
+  latin: Phoxinus oxycephalus jouyi
+  masuda: [zyou]
+  rarity: 2
+  takatsu: [zyou]
+  zoku: コイ属
+tenagaebi:
+  ka: テナガエビ科
+  latin: Macrobrachium nipponense
+  masuda: [chuu, ge, kakou]
+  rarity: 2
+  takatsu: [chuu, ge, kakou]
+  zoku: 
+tonosamagaeru:
+  ka: アカガエル科
+  latin: Rana nigromaculata
+  masuda: [zyou, chuu, ge]
+  rarity: 2
+  takatsu: [zyou, chuu, ge]
+  zoku: トノサマカエル属
+touyoshinobori:
+  ka: ハゼ科ハゼ亜科
+  latin: Rhinogobius sp.OR
+  masuda: []
+  rarity: 4
+  takatsu: [chuu]
+  zoku: ヨシノボリ属
+tsuchigaeru:
+  ka: アカガエル科
+  latin: Rana rugosa
+  masuda: [chuu, ge]
+  rarity: 1
+  takatsu: [chuu, ge]
+  zoku: アカガエル属
+ugui:
+  ka: コイ科ウグイ亜科
+  latin: Leuciscus
+  masuda: [zyou, chuu, ge, kakou]
+  rarity: 1
+  takatsu: [zyou, chuu, ge, kakou]
+  zoku: ウグイ属
+ukigori:
+  ka: ハゼ科ハゼ亜科
+  latin: Chaenogobius urotaenia
+  masuda: [ge, kakou]
+  rarity: 3
+  takatsu: [ge, kakou]
+  zoku: ウキゴリ属
+unagi:
+  ka: ウナギ科
+  latin: Anguilla japonica
+  masuda: [zyou, chuu, ge, kakou]
+  rarity: 3
+  takatsu: [zyou, chuu, ge, kakou]
+  zoku: ウナギ属
+urohaze:
+  ka: "ハゼ科ハゼ亜科"
+  latin: Glossogobius olivaceus
+  masuda: [ge, kakou]
+  rarity: 3
+  takatsu: [ge, kakou]
+  zoku: ウロハゼ属
+utsusemikajika:
+  ka: カジカ科
+  latin: Cottus reinii
+  masuda: [chuu, ge, kakou]
+  rarity: 3
+  takatsu: [chuu, ge, kakou]
+  zoku: カジカ属
+yamame:
+  ka: サケ科サケ亜科
+  latin: Salmi (Oncorhynchus) masou masou
+  masuda: [zyou]
+  rarity: 3
+  takatsu: [zyou]
+  zoku: サケ属

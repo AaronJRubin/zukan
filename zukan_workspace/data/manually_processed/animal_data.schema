@@ -1,0 +1,29 @@
+# Schema
+
+type: map
+mapping:
+    =:
+        type: map
+        mapping:
+            ka:
+                type: str
+                required: true
+            zoku:
+                type: str
+                required: true
+            rarity:
+                type: int
+                required: true
+            latin:
+                type: str
+                required: true
+            display_name:
+                type: str
+            masuda:
+                type: seq
+                sequence:
+                    - enum: &ryuuiki [zyou, chuu, ge, kakou]
+            takatsu:
+                type: seq
+                sequence:
+                    - enum: *ryuuiki

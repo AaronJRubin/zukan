@@ -4,43 +4,22 @@
 import os
 from PIL import Image
 
-class Location:
-
-    ZYOU, CHUU, GE, KAKOU = range(4)
-
-    def __init__(self):
-        self._dict = {"Takatsu" : {}, "Masuda" : {}}
-        self._dict["Takatsu"] = set()
-        self._dict["Masuda"] = set()
-
-    def set_takatsu(self, locations):
-        for location in locations:
-            self._dict["Takatsu"].add(location)
-
-    def set_masuda(self, locations):
-        for location in locations:
-            self._dict["Masuda"].add(location)
-
-    def get_takatsu(self):
-        return frozenset(self._dict["Takatsu"])
-
-    def get_masuda(self):
-        return frozenset(self._dict["Masuda"])
-
 class Animal:
 
-    def __init__(self, latin = "piscis maximus", family = u"魚科", genus = u"魚属", romaji = "ayu", kana = u"アユ",
-        rarity = 3):
+    def __init__(self, latin = "", ka = "", zoku = "", romaji = "", kana = "",
+            rarity = 3, display_name = "", masuda = None, takatsu = None):
         self.romaji = romaji
         try:
             self.kana = kana.decode('utf-8')
         except Exception:
             self.kana = kana
-        self.latin = latin
-        self.family = family
-        self.genus = genus
-        self.location = Location()
-        self.rarity = rarity
+        self.masuda = masuda if masuda else []
+        self.takatsu = takatsu if takatsu else []
+        self.latin = latin if latin else ""
+        self.ka = ka if ka else ""
+        self.zoku = zoku if zoku else ""
+        self.rarity = rarity if rarity else 3
+        self.display_name = display_name if display_name else self.kana
 
     def get_link(self):
         return "/ikimono/" + self.romaji + ".html"
@@ -48,68 +27,18 @@ class Animal:
     def image(self, suffix):
         return os.path.join("/images/ikimono", self.romaji, self.romaji + "-" + suffix + ".jpg")
 
-    def takatsu_zyou(self):
-        return Location.ZYOU in self.location.get_takatsu()
+    def takatsu_inhabits(self, ryuuiki):
+        return ryuuiki in self.takatsu
 
-    def masuda_zyou(self):
-        return Location.ZYOU in self.location.get_masuda()
-
-    def takatsu_chuu(self):
-        return Location.CHUU in self.location.get_takatsu()
-
-    def masuda_chuu(self):
-        return Location.CHUU in self.location.get_masuda()
-
-    def takatsu_ge(self):
-        return Location.GE in self.location.get_takatsu()
-
-    def masuda_ge(self):
-        return Location.GE in self.location.get_masuda()
-
-    def takatsu_kakou(self):
-        return Location.KAKOU in self.location.get_takatsu()
-
-    def masuda_kakou(self):
-        return Location.KAKOU in self.location.get_masuda()
+    def masuda_inhabits(self, ryuuiki):
+        return ryuuiki in self.masuda
 
     def starting_location(self):
-        if self.takatsu_zyou():
-            return "takatsu-zyou"
-        if self.takatsu_chuu():
-            return "takatsu-chuu"
-        if self.takatsu_ge():
-            return "takatsu-ge"
-        if self.takatsu_kakou():
-            return "takatsu-kakou"
-        if self.masuda_zyou():
-            return "masuda-zyou"
-        if self.masuda_chuu():
-            return "masuda-chuu"
-        if self.masuda_ge():
-            return "masuda-ge"
-        if self.masuda_kakou():
-            return "masuda-kakou"
-        return ""
+        locations = self.locations()
+        return locations[0] if locations else ""
 
     def locations(self):
-        res = [] 
-        if self.takatsu_zyou():
-            res += ["takatsu-zyou"]
-        if self.takatsu_chuu():
-            res += ["takatsu-chuu"]
-        if self.takatsu_ge():
-            res += ["takatsu-ge"]
-        if self.takatsu_kakou():
-            res += ["takatsu-kakou"]
-        if self.masuda_zyou():
-            res += ["masuda-zyou"]
-        if self.masuda_chuu():
-            res += ["masuda-chuu"]
-        if self.masuda_ge():
-            res += ["masuda-ge"]
-        if self.masuda_kakou():
-            res += ["masuda-kakou"]
-        return res
+        return ["takatsu-" + ryuuiki for ryuuiki in self.takatsu] + ["masuda-" + ryuuiki for ryuuiki in self.masuda]
 
     def rarity_stars(self):
         return ("&#x2605;" * self.rarity) + ("&#x2606;" * (5 - self.rarity))
@@ -118,10 +47,3 @@ class Animal:
         ichiran_img = os.path.join("web", self.image('ichiran')[1:]) # remove root slash  
         width, height = Image.open(ichiran_img).size
         return height * 1.99 <= width
-
-    def display_name(self):
-        if self.kana == u'ミシシッピアカミミガメ':
-            return u'アカミミガメ'
-        else:
-            return self.kana
-

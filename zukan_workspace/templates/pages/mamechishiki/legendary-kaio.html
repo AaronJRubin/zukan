@@ -1,14 +1,12 @@
 {% extends "base/mamechishiki.html" %}
 
-{% set title = "伝説の怪魚" %}
-
 {% block article %}
 
 <h2>{{title}}「カイオ」</h2>
 
 {% import 'mamechishiki-macros.html' as macros %}
 
-{{ macros.image_bar(self | title, "kaio", "yamemasu") }}
+{{ macros.image_bar(page_name, "kaio", "yamemasu") }}
 
 <p>
 高津川の上流、横道川(津和野町日原)に「カイオ」と呼ばれる正体不明の魚の伝説があります。

@@ -1,12 +1,11 @@
 {% extends "base/mamechishiki.html" %}
-{% set title = "アユカケの鮎漁" %}
 
 {% block article %}
 <h2>{{title}}</h2>
 
 {% import 'mamechishiki-macros.html' as macros %}
 
-{{ macros.image_bar(self | title, "ayukake-1", "ayukake-2") }}
+{{ macros.image_bar(page_name, "ayukake-1", "ayukake-2") }}
 
 <p>
 アユカケはカマキリともいいます。えらぶたにあるカマのような大きなトゲでアユをひっかけて食べると言い伝えられています。アユの刺し網漁をしていると、川の底でダイヤモンドのようにきらきらと光る物が見えるときがあります。

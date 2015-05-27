@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% set body_class = "animal-page" %}
+{% set animal = animal_map[page_name] %}
+{% set background_class = animal.starting_location() %}
+{% set background_data = 'data-locations="' + " ".join(animal.locations()) + '"' %}
+{% set title = animal.kana %}
+
+{% block content %}
+
+<script async src="animal_page.js"></script>
+
+<main class="animal-page">
+	<header class="animal-header">
+
+	<img {% if animal.is_long() %} class="long" {% endif %} src="{{animal.image('ichiran')}}" alt="">
+
+		<ul class="classification">
+			<li>和名：{{animal.kana}}</li>
+			<li>学名：{{animal.latin}}</li>
+			<li>科名：{{animal.ka}}</li>
+			<li>属名：{{animal.zoku}}</li>
+		</ul>
+
+			<table id = "location">
+				<tr>
+					<th></th>
+					<th>上流</th>
+					<th>中流</th>
+					<th>下流</th>
+					<th>河口</th>
+				</tr>
+				<tr>
+					<td>高津川</td>
+          {% for a_ryuuiki in ryuuiki %}
+          <td>{{"&#x25EF;" if animal.takatsu_inhabits(a_ryuuiki['romaji'])}}</td>
+          {% endfor %}
+        </tr>
+        <tr>
+          <td>益田川</td>
+          {% for a_ryuuiki in ryuuiki %}
+          <td>{{"&#x25EF;" if animal.masuda_inhabits(a_ryuuiki['romaji'])}}</td>
+          {% endfor %}
+        </tr>
+      </table>
+
+      <div class="rarity">
+        <div class="rarity-header">レア度</div>
+        <div class="rarity-stars">
+          {{animal.rarity_stars()}}
+        </div>
+      </div>
+
+    </header>
+
+    <article>
+
+      {% block article %}
+
+      {% endblock %}
+
+    </article>
+    <footer>
+      <a href="ichiran.html" class="jumbo-link">一覧へ戻る</a>
+    </footer>
+    </main>
+    {% endblock %}

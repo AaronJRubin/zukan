@@ -1,13 +1,11 @@
 {% extends "base/mamechishiki.html" %}
 
-{% set title = "助け合い" %}
-
 {% block article %}
 <h2>{{title}}：タナゴと二枚貝</h2>
 
 {% import 'mamechishiki-macros.html' as macros %}
 
-{{ macros.image_bar(self | title, "aburabote", "matsukasagai") }}
+{{ macros.image_bar(page_name, "aburabote", "matsukasagai") }}
 
 <p>
 高津川の中流から下流の限られた支流にアブラボテなどの珍しいタナゴの仲間が住んでいます。

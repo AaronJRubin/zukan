@@ -1,0 +1,19 @@
+mamechishiki_translations:
+    new-species: 新種の発見
+    glacier-gogi: 氷河期の生き残り
+    legendary-kaio: 伝説の怪魚
+    ayu-lifecycle: アユの一生
+    symbiotes: 助け合い
+    ayu-hunter: アユカケのアユ漁
+    mutual-consumption: 食べたり食べられたり
+    two-rivers: 高津川と益田川
+
+mamechishiki_titles:
+    - new-species
+    - glacier-gogi
+    - legendary-kaio
+    - ayu-lifecycle
+    - symbiotes
+    - ayu-hunter
+    - mutual-consumption
+    - two-rivers
