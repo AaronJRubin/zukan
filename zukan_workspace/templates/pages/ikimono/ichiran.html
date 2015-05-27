@@ -29,11 +29,15 @@
 		<div class="individual-river-section">
 			<ol>
 			{% for a_ryuuiki in ryuuiki %}
-      <li><div class="ryuuiki">{{river['kanji']}}{{a_ryuuiki['kanji']}}</div><div class="boxes">
-        <input type="checkbox" class="search-checkbox include" id="{{river['romaji']}}-{{a_ryuuiki['romaji']}}-include" name="{{river['romaji']}}-{{a_ryuuiki['romaji']}}-include"><label for="{{river['romaji']}}-{{a_ryuuiki['romaji']}}-include" class="include">要</label>
-		    <input type="checkbox" class="search-checkbox exclude" id="{{river['romaji']}}-{{a_ryuuiki['romaji']}}-exclude" name="{{river['romaji']}}-{{a_ryuuiki['romaji']}}-exclude"><label for="{{river['romaji']}}-{{a_ryuuiki['romaji']}}-exclude" class="exclude">除</label>
-		    </div>
-		    </li>
+     
+      <li>
+        <div class="ryuuiki">{{river['kanji']}}{{a_ryuuiki['kanji']}}</div><div class="boxes">
+          {% for mode, kanji in [("include", "必"), ("exclude", "除")] %}   
+          <input type="checkbox" class="search-checkbox {{mode}}" id="{{river['romaji']}}-{{a_ryuuiki['romaji']}}-{{mode}}" name="{{river['romaji']}}-{{a_ryuuiki['romaji']}}-{{mode}}">
+          <label for="{{river['romaji']}}-{{a_ryuuiki['romaji']}}-{{mode}}" class="{{mode}}">{{kanji}}</label>
+		      {% endfor %}
+        </div>
+		  </li>
 			{% endfor %}
 			</ol>
 		</div>
