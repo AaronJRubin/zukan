@@ -14,8 +14,6 @@
 
 <div class="search-dropdown-control"><span id="dropdown-label">検索エリアを表示</span><span id="dropdown-caret" class="collapsed">&#x25BC;</span></div>
 
-{% import 'ichiran-macros.html' as macros %}
-
 <div id="search-area" class="collapsed">
 
   <div class="search-section">
@@ -48,7 +46,10 @@
 <ol class="animal-tiles">
 	{% for animal in animals %}
 	<li data-animal-name="{{animal.romaji}}">
-	{{ macros.animal_tile(animal) }}
+		<a href="{{animal.get_link()}}" class="animal-tile">
+  			<img {% if animal.is_long() %} class="long" {% endif %} src="{{animal.	image('ichiran')}}" alt="">
+  			<div>{{animal.display_name()}}</div>
+		</a>
 	</li>
 	{% endfor %}
 </ol>
