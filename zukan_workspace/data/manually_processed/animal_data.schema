@@ -17,6 +17,8 @@ mapping:
             latin:
                 type: str
                 required: true
+            display_name:
+                type: str
             masuda:
                 type: seq
                 sequence:
