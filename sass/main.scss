@@ -585,7 +585,7 @@ main.animal-page {
   li {
     @extend %p;
     font-size: $small-font-size;
-    @media (max-width: 480px) {
+    @media #{$no-background} {
       font-size: .7em;
       line-height: 1.1em;
       margin-bottom: .3em;
