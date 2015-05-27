@@ -1,0 +1,23 @@
+# Schema
+
+type: map
+mapping:
+    =:
+        type: map
+        mapping:
+            ka:
+                type: str
+            zoku:
+                type: str
+            rarity:
+                type: int
+            latin:
+                type: str
+            masuda:
+                type: seq
+                sequence:
+                    - enum: &ryuuiki [zyou, chuu, ge, kakou]
+            takatsu:
+                type: seq
+                sequence:
+                    - enum: *ryuuiki

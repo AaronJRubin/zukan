@@ -164,8 +164,22 @@ compress_images_task(:compress_miscellaneous_images, "#{MASTER_IMAGES}/*.jpg", "
 desc "Compress all images and move to workspace"
 task :compress_images => [:compress_animal_images, :compress_seisokuchi_images, :compress_mamechishiki_images, :compress_miscellaneous_images]
 
+desc "Validate yaml data for which a schema is defined"
+task :validate_data do
+  Dir.chdir WORKSPACE do
+    data_files = Rake::FileList.new('data/**/*.yaml')
+    data_files.each do |data_file|
+      schema_file = data_file.pathmap("%X.schema")
+      if File.exists? schema_file
+        sh "kwalify -lf #{schema_file} #{data_file}"
+      end
+    end
+  end
+end
+
+
 desc "Generate html (and one Dart file) documents using the jinja2 templates engine"
-task :generate_pages => :compress_images do
+task :generate_pages => [:compress_images, :validate_data] do
   Dir.chdir WORKSPACE do
     dependencies = Rake::FileList.new('templates/**/*').include('web/images/ikimono/**/*').include('animal.py').include('data/**/*')
     unless uptodate?('web/ikimono/ichiran.html', dependencies)
