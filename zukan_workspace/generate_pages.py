@@ -9,8 +9,8 @@ import yaml
 import romkan
 from animal import Animal
 
-template_dir = os.path.join(os.path.dirname(__file__), "templates")
-jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dir))
+template_dirs = [os.path.join(os.path.dirname(__file__), "templates", directory) for directory in ["pages", "layouts", "macros"]]
+jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dirs))
 
 def parse_yaml_file(path):
     file = open(path, "r")
@@ -35,7 +35,7 @@ data = reduce(destructively_merge_dicts, map(parse_yaml_file, data_files))
 data.update({ "animals" : animal_list, "animal_map" : animal_map })
 
 def render_page(template_path):
-    relative_path = template_path.replace("templates/", "")
+    relative_path = template_path.replace("templates/pages/", "")
     template = jinja_env.get_template(relative_path)
     page_name = os.path.splitext(os.path.basename(template_path))[0]
     rendered = template.render(data, page_name = page_name).encode('utf8')
