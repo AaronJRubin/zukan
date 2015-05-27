@@ -29,18 +29,14 @@
           <th>{{a_ryuuiki['kanji']}}</th>
           {% endfor %}
 				</tr>
+        {% for river in kawa %}
 				<tr>
-					<td>高津川</td>
+          <td>{{river['kanji']}}川</td>
           {% for a_ryuuiki in ryuuiki %}
-          <td>{{"&#x25EF;" if animal.takatsu_inhabits(a_ryuuiki['romaji'])}}</td>
+          <td>{{"&#x25EF;" if animal.inhabits(river['romaji'], a_ryuuiki['romaji'])}}</td>
           {% endfor %}
         </tr>
-        <tr>
-          <td>益田川</td>
-          {% for a_ryuuiki in ryuuiki %}
-          <td>{{"&#x25EF;" if animal.masuda_inhabits(a_ryuuiki['romaji'])}}</td>
-          {% endfor %}
-        </tr>
+        {% endfor %}
       </table>
 
       <div class="rarity">
