@@ -43,10 +43,10 @@
 
 </div>
 
-<ol class="animal-tiles">
+<ol class="tiles">
 	{% for animal in animals %}
 	<li data-animal-name="{{animal.romaji}}">
-		<a href="{{animal.get_link()}}" class="animal-tile">
+		<a href="{{animal.get_link()}}" class="tile">
   			<img {% if animal.is_long() %} class="long" {% endif %} src="{{animal.image('ichiran')}}" alt="">
   			<div>{{animal.display_name}}</div>
 		</a>
