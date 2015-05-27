@@ -33,26 +33,6 @@ class RiverHabitat {
     }
   }
 
-  List<String> backgroundImages() {
-    return backgroundImageClasses().map((imageClass) => "/images/seisokuchi/" + imageClass + ".jpg").toList();
-  }
-
-  List<String> backgroundImageClasses() {
-    List<String> res = [];
-    if (zyou) {
-      res.add(name + "-zyou");
-    }
-    if (chuu) {
-      res.add(name + "-chuu");
-    }
-    if (ge) {
-      res.add(name + "-ge");
-    }
-    if (kakou) {
-      res.add(name + "-kakou");
-    }
-    return res;
-  }
 }
 
 class Animal {
@@ -69,14 +49,6 @@ class Animal {
   Animal(this.scientific, this.family, this.genus, this.romaji, this.kana, this.rarity, bool takatsu_up, bool takatsu_central, bool takatsu_down, bool takatsu_mouth, bool masuda_up, bool masuda_central, bool masuda_down, bool masuda_mouth) {
     this.takatsu = new RiverHabitat(takatsu_up, takatsu_central, takatsu_down, takatsu_mouth, "takatsu");
     this.masuda = new RiverHabitat(masuda_up, masuda_central, masuda_down, masuda_mouth, "masuda");
-  }
-
-  List<String> backgroundImageClasses() {
-    return takatsu.backgroundImageClasses()..addAll(masuda.backgroundImageClasses());
-  }
-
-  List<String> backgroundImages() {
-    return takatsu.backgroundImages()..addAll(masuda.backgroundImages());
   }
 
 }
