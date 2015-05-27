@@ -1,6 +1,7 @@
 import 'dart:html';
 import 'animal.dart';
 import 'article.dart';
+import 'ichiran_utils.dart';
 
 ElementList<CheckboxInputElement> includeCheckboxes;
 ElementList<CheckboxInputElement> excludeCheckboxes;
@@ -8,22 +9,11 @@ TextInputElement articleSearch;
 ElementList<LIElement> animalTiles;
 
 void main() {
+  setUpSearchAreaToggle();
   includeCheckboxes = document.querySelectorAll(".search-checkbox.include");
   excludeCheckboxes = document.querySelectorAll(".search-checkbox.exclude");
   articleSearch = document.querySelector("#article-search");
   animalTiles = document.querySelectorAll("ol.tiles li");
-  SpanElement dropdownCaret = document.querySelector("#dropdown-caret");
-  DivElement searchArea = document.querySelector("#search-area");
-  SpanElement dropdownLabel = document.querySelector("#dropdown-label");
-  dropdownCaret.onClick.listen((e) {
-    searchArea.classes.toggle("collapsed");
-    dropdownCaret.classes.toggle("collapsed");
-    if (searchArea.classes.contains("collapsed")) {
-      dropdownLabel.text = "検索エリアを表示";
-    } else {
-      dropdownLabel.text = "検索エリアを隠す";
-    }
-  });
   for (int i = 0; i < includeCheckboxes.length; i++) {
     CheckboxInputElement includeCheckbox = includeCheckboxes[i];
     CheckboxInputElement excludeCheckbox = excludeCheckboxes[i];
@@ -48,24 +38,8 @@ void toggleCheckboxChanged(CheckboxInputElement self, CheckboxInputElement partn
   refresh();
 }
 
-typedef bool FilterFunction(Animal animal);
-
-class Filter {
-  List<FilterFunction> filterFunctions = [];
-
-  Filter();
-  bool filter(Animal animal) {
-    return filterFunctions.map((function) => function(animal)).fold(
-        true, (bool1, bool2) => bool1 && bool2);
-  }
-
-  void add(FilterFunction func) {
-    filterFunctions.add(func);
-  }
-}
-
-Filter buildFilter() {
-  Filter filter = new Filter();
+Filter<Animal> buildFilter() {
+  Filter<Animal> filter = new Filter<Animal>();
   String searchText = articleSearch.value.trim();
   if (searchText.length > 0) {
     filter
