@@ -137,7 +137,7 @@ convert_plant = lambda do |plant, compressed_plant|
 end
 
 desc "Compress images of plants in master-images and move to workspace"
-compress_images_task(:compress_plant_images, "#{MASTER_IMAGES}/shokubutsu/**/*.jpg", "#{IMAGES}/%-2d/%f", convert_plant)
+compress_images_task(:compress_plant_images, "#{MASTER_IMAGES}/shokubutsu/**/*.jpg", convert_plant)
 
 quality_override = Hash.new('57')
 quality_override['takatsu-chuu.jpg'] = '75'
