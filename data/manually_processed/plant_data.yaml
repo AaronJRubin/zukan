@@ -4,7 +4,7 @@ azami:
     saikou: 10
     zoku: アザミ属
     ka: アザミ科
-    latin: florus azamius;
+    latin: florus azamius
     rarity: 2
 gairaishu:
     iro: [kiiro]
@@ -21,3 +21,4 @@ togetoge:
     zoku: トゲトゲ属
     ka: トゲトゲ科
     rarity: 3
+    latin: pointius pricklius
