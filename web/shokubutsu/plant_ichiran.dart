@@ -5,6 +5,7 @@ import 'package:takatsugawa_zukan/ichiran_utils.dart';
 //ElementList<CheckboxInputElement> includeCheckboxes;
 //ElementList<CheckboxInputElement> excludeCheckboxes;
 TextInputElement articleSearch;
+NumberInputElement heightSearch;
 ElementList<LIElement> plantTiles;
 
 void main() {
@@ -12,6 +13,7 @@ void main() {
   //includeCheckboxes = document.querySelectorAll(".search-checkbox.include");
   //excludeCheckboxes = document.querySelectorAll(".search-checkbox.exclude");
   articleSearch = document.querySelector("#article-search");
+  heightSearch = document.querySelector("#height-search");
   plantTiles = document.querySelectorAll("ol.tiles li");
   /*for (int i = 0; i < includeCheckboxes.length; i++) {
     CheckboxInputElement includeCheckbox = includeCheckboxes[i];
@@ -25,6 +27,8 @@ void main() {
   }*/
   articleSearch.onChange.listen((e) => refresh());
   articleSearch.onKeyUp.listen((e) => refresh());
+  heightSearch.onChange.listen((e) => refresh());
+  heightSearch.onKeyUp.listen((e) => refresh());
   refresh(); // maybe things were clicked before script was loaded
 }
 
@@ -44,6 +48,11 @@ Filter<Plant> buildFilter() {
     filter
         .add((plant) => article_map[plant.romaji].text.contains(searchText));
   }*/
+  String searchHeight = heightSearch.value.trim();
+  if (searchHeight.length > 0) {
+    int intVal = int.parse(searchHeight);
+    filter.add((plant) => plant.saikou > intVal && plant.saitei < intVal);
+  }
   /*
   for (CheckboxInputElement checkbox in includeCheckboxes) {
     if (checkbox.checked) {
