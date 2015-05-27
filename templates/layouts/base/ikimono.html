@@ -25,10 +25,9 @@
 			<table id = "location">
 				<tr>
 					<th></th>
-					<th>上流</th>
-					<th>中流</th>
-					<th>下流</th>
-					<th>河口</th>
+          {% for a_ryuuiki in ryuuiki %}
+          <th>{{a_ryuuiki['kanji']}}</th>
+          {% endfor %}
 				</tr>
 				<tr>
 					<td>高津川</td>
