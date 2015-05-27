@@ -27,6 +27,12 @@ class Animal:
     def image(self, suffix):
         return os.path.join("/images/ikimono", self.romaji, self.romaji + "-" + suffix + ".jpg")
 
+    def inhabits(self, river, ryuuiki):
+        if river == "takatsu":
+            return self.takatsu_inhabits(ryuuiki)
+        if river == "masuda":
+            return self.masuda_inhabits(ryuuiki)
+
     def takatsu_inhabits(self, ryuuiki):
         return ryuuiki in self.takatsu
 
