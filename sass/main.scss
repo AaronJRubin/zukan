@@ -134,7 +134,7 @@ footer {
     max-height: $height;
   }
 }
-.animal-tile {
+.tile {
   @extend %rounded-border;
   @include tile-img-height(8.5vw);
   font-size: 1.3vw;
@@ -358,7 +358,7 @@ nav ul {
   @extend %rounded-border;
 }
 
-.animal-tiles {
+.tiles {
   @include display-flex(flex);
   @include justify-content(center);
   @include flex-wrap(wrap);
