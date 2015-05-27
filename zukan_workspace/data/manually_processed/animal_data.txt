@@ -1,3 +1,5 @@
+# This file is obsoleted by animal_data.yaml; we keep it around just in case we somehow lost data in the transition
+
 name: abehaze
 takatsu: chuu, ge
 masuda: chuu, ge
