@@ -434,10 +434,14 @@ nav ul {
   li {
     margin-bottom: .2em;
   }
-  [type='text'] {
+  [type='text'],
+  [type='number'] {
     @extend %rounded-border;
     font-size: inherit;
     margin-left: 2%;
+  }
+  [type='number'] {
+    width: 3em;
   }
   .ryuuiki {
     display: inline-block;
