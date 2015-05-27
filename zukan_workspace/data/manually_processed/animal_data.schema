@@ -7,12 +7,16 @@ mapping:
         mapping:
             ka:
                 type: str
+                required: true
             zoku:
                 type: str
+                required: true
             rarity:
                 type: int
+                required: true
             latin:
                 type: str
+                required: true
             masuda:
                 type: seq
                 sequence:
