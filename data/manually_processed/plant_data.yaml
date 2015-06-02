@@ -6,9 +6,9 @@
   - 2
   - 3
   latin: Equisetum arvense L．
-  kana: スギナ
   bunpu:
   - 全
+  type: shida
 トクサ:
   seiikubasho:
   - 湿地・岸辺
@@ -16,9 +16,9 @@
   - 7
   - 8
   latin: E. hyenmale L．
-  kana: トクサ
   bunpu:
   - 高
+  type: shida
 イヌスギナ:
   seiikubasho:
   - 湿地・岸辺
@@ -32,17 +32,17 @@
   - 10
   - 11
   latin: E. palustre L.
-  kana: イヌスギナ
   bunpu: []
+  type: shida
 ヤシャゼンマイ:
   seiikubasho:
   - 湿地・岸辺
   kaki:
   - 4
   latin: O. lancea Thunb．
-  kana: ヤシャゼンマイ
   bunpu:
   - 匹
+  type: shida
 ヒメミズワラビ:
   seiikubasho:
   - 沈水
@@ -54,17 +54,17 @@
   - 10
   - 11
   latin: Ceratopteris thalictroides var. vulgaris
-  kana: ヒメミズワラビ
   bunpu:
   - 高
+  type: shida
 ヘイケヌワラビ:
   seiikubasho:
   - 湿地・岸辺
   kaki: []
   latin: 'A. eremicola Oka of Kurata, sp. nov. '
-  kana: ヘイケヌワラビ
   bunpu:
   - 椛
+  type: shida
 デンジソウ:
   seiikubasho:
   - 浮葉
@@ -78,31 +78,19 @@
   - 10
   - 11
   latin: Marsilea quadrifolia L.
-  kana: デンジソウ
   bunpu:
   - 益
   - 吉
+  type: shida
 オオアカウキクサ:
   seiikubasho:
   - 浮葉
-  kaki:
-  - 0
-  - 1
-  - 2
-  - 3
-  - 4
-  - 5
-  - 6
-  - 7
-  - 8
-  - 9
-  - 10
-  - 11
+  kaki: []
   latin: Azolla japonica Fr. et Sav.
-  kana: オオアカウキクサ
   bunpu:
   - 高
   - 益
+  type: shida
 ハンゲショウ:
   seiikubasho:
   - 湿地・岸辺
@@ -111,9 +99,9 @@
   - 7
   - 8
   latin: SauTiiTus chinensis (Lour.) Baill.
-  kana: ハンゲショウ
   bunpu:
   - 海
+  type: soushishokubutsu
 .ドクダミ:
   seiikubasho:
   - 湿地・岸辺
@@ -122,9 +110,9 @@
   - 6
   - 7
   latin: Houttuynia cordata Thunb
-  kana: .ドクダミ
   bunpu:
   - 全
+  type: soushishokubutsu
 アカメヤナギ(マルバヤナギ）:
   seiikubasho:
   - 湿地・岸辺
@@ -132,12 +120,12 @@
   - 4
   - 5
   latin: Salix chaenomeloides Kimura
-  kana: アカメヤナギ(マルバヤナギ）
   bunpu:
   - 高
   - 津
   - 匹
   - 吉
+  type: soushishokubutsu
 タチヤナギ:
   seiikubasho:
   - 湿地・岸辺
@@ -145,10 +133,10 @@
   - 4
   - 5
   latin: S. subfragilis Anders.
-  kana: タチヤナギ
   bunpu:
   - 吉
   - 高
+  type: soushishokubutsu
 オノエヤナギ:
   seiikubasho:
   - 湿地・岸辺
@@ -156,9 +144,9 @@
   - 3
   - 4
   latin: S. sachalinensis Fr. Schm.
-  kana: オノエヤナギ
   bunpu:
   - 吉
+  type: soushishokubutsu
 カワヤナギ:
   seiikubasho:
   - 湿地・岸辺
@@ -166,10 +154,10 @@
   - 2
   - 3
   latin: S. gilgiana Seemen
-  kana: カワヤナギ
   bunpu:
   - 高
   - 津
+  type: soushishokubutsu
 ネコヤナギ:
   seiikubasho:
   - 湿地・岸辺
@@ -177,12 +165,12 @@
   - 2
   - 3
   latin: S. graciiistyla Miq.
-  kana: ネコヤナギ
   bunpu:
   - 高
   - 益
   - 匹
   - 吉
+  type: soushishokubutsu
 サワグルミ:
   seiikubasho:
   - 湿地・岸辺
@@ -191,11 +179,11 @@
   - 5
   - 6
   latin: Pterocarya rhoifolia Sieb. et Zucc.
-  kana: サワグルミ
   bunpu:
   - 匹
   - 椛
   - 横
+  type: soushishokubutsu
 オニグルミ:
   seiikubasho:
   - 湿地・岸辺
@@ -203,9 +191,9 @@
   - 5
   - 6
   latin: Juglans ailanthifolia Carr.
-  kana: オニグルミ
   bunpu:
   - 津
+  type: soushishokubutsu
 ハシバミ:
   seiikubasho:
   - 湿地・岸辺
@@ -213,17 +201,17 @@
   - 3
   - 4
   latin: C. heterophylla Fischer. var. thunbergii Blume
-  kana: ハシバミ
   bunpu:
   - 匹
+  type: soushishokubutsu
 ハンノキ:
   seiikubasho:
   - 湿地・岸辺
   kaki: []
   latin: A. japonica (Thunb.) Steud.
-  kana: ハンノキ
   bunpu:
   - 津
+  type: soushishokubutsu
 ミズ:
   seiikubasho:
   - 湿地・岸辺
@@ -233,10 +221,10 @@
   - 9
   - 10
   latin: Pilea hamaoi Makino
-  kana: ミズ
   bunpu:
   - 匹
   - 津
+  type: soushishokubutsu
 アオミズ:
   seiikubasho:
   - 湿地・岸辺
@@ -246,9 +234,9 @@
   - 9
   - 10
   latin: P. mongolica Weddell
-  kana: アオミズ
   bunpu:
   - 津
+  type: soushishokubutsu
 ウワバミソウ:
   seiikubasho:
   - 湿地・岸辺
@@ -257,7 +245,6 @@
   - 5
   - 6
   latin: Elatostema umbellatum Blume var. majus Maxim.
-  kana: ウワバミソウ
   bunpu:
   - 高
   - 益
@@ -265,6 +252,7 @@
   - 椛
   - 吉
   - 匹
+  type: soushishokubutsu
 サンショウソウ:
   seiikubasho:
   - 湿地・岸辺
@@ -273,9 +261,9 @@
   - 5
   - 6
   latin: Pellionia minima Makino
-  kana: サンショウソウ
   bunpu:
   - 匹
+  type: soushishokubutsu
 イシミカワ:
   seiikubasho:
   - 湿地・岸辺
@@ -285,11 +273,11 @@
   - 9
   - 10
   latin: Persicaria perfoliatum Linn.
-  kana: イシミカワ
   bunpu:
   - 高
   - 益
   - 津
+  type: soushishokubutsu
 ミゾソバ:
   seiikubasho:
   - 湿地・岸辺
@@ -299,9 +287,9 @@
   - 9
   - 10
   latin: Persicaria thunbergii Sieb. et Zu.cc.
-  kana: ミゾソバ
   bunpu:
   - 全
+  type: soushishokubutsu
 アキノウナギツカミ:
   seiikubasho:
   - 湿地・岸辺
@@ -311,9 +299,9 @@
   - 9
   - 10
   latin: Persicaria sieboldi Meisn. var. sieboldi (Meisn.)
-  kana: アキノウナギツカミ
   bunpu:
   - 全
+  type: soushishokubutsu
 ヤノネグサ:
   seiikubasho:
   - 湿地・岸辺
@@ -321,9 +309,9 @@
   - 9
   - 10
   latin: Persicaria nipponense Makino
-  kana: ヤノネグサ
   bunpu:
   - 椛
+  type: soushishokubutsu
 ナガバノヤノネグサ:
   seiikubasho:
   - 湿地・岸辺
@@ -331,8 +319,8 @@
   - 9
   - 10
   latin: Persicaria breviochreata (Makino) Ohki
-  kana: ナガバノヤノネグサ
   bunpu: []
+  type: soushishokubutsu
 ヤナギタデ:
   seiikubasho:
   - 湿地・岸辺
@@ -342,11 +330,11 @@
   - 9
   - 10
   latin: Persicaria hydropiper  (L.) Delarbre
-  kana: ヤナギタデ
   bunpu:
   - 高
   - 益
   - 海
+  type: soushishokubutsu
 オカヒジキ:
   ganpen_type: 砂浜
   seiikubasho:
@@ -357,9 +345,9 @@
   - 9
   - 10
   latin: Salsola komarovii lliin
-  kana: オカヒジキ
   bunpu:
   - 海
+  type: soushishokubutsu
 ツルナ:
   ganpen_type: 砂浜
   seiikubasho:
@@ -373,9 +361,9 @@
   - 9
   - 10
   latin: Tetragonia tetragonoides (Pall.) O.Kuntze
-  kana: ツルナ
   bunpu:
   - 海
+  type: soushishokubutsu
 ハマツメクサ:
   seiikubasho:
   - 湿地・岸辺
@@ -386,9 +374,9 @@
   - 7
   - 8
   latin: S. taquetii Leveille
-  kana: ハマツメクサ
   bunpu:
   - 海
+  type: soushishokubutsu
 カワラナデシコ:
   seiikubasho:
   - 湿地・岸辺
@@ -398,9 +386,9 @@
   - 9
   - 10
   latin: Dianthus superbus L. var. longicalycinus(Maxim.)Williams
-  kana: カワラナデシコ
   bunpu:
   - 全
+  type: soushishokubutsu
 マンテマ:
   seiikubasho:
   - 湿地・岸辺
@@ -409,18 +397,18 @@
   - 5
   - 6
   latin: Silene gallica L. var. quinquevulnera (Linn.) Rohrb.
-  kana: マンテマ
   bunpu:
   - 海
+  type: soushishokubutsu
 ワチガイソウ:
   seiikubasho:
   - 湿地・岸辺
   kaki:
   - 4
   latin: Pseudostellaria heterantha
-  kana: ワチガイソウ
   bunpu:
   - 吉
+  type: soushishokubutsu
 ジュンサイ:
   seiikubasho:
   - 浮葉
@@ -429,9 +417,9 @@
   - 7
   - 8
   latin: Brasenia schreberi I. F. Gmel.
-  kana: ジュンサイ
   bunpu:
   - 高
+  type: soushishokubutsu
 コウホネ:
   seiikubasho:
   - 浮葉
@@ -442,9 +430,9 @@
   - 8
   - 9
   latin: Nuphar japonicum DC.
-  kana: コウホネ
   bunpu:
   - 吉
+  type: soushishokubutsu
 ヒツジグサ:
   seiikubasho:
   - 浮葉
@@ -456,9 +444,9 @@
   - 10
   - 11
   latin: Nymphaea tetragona Georgl
-  kana: ヒツジグサ
   bunpu:
   - 高
+  type: soushishokubutsu
 ハス:
   seiikubasho:
   - 抽水
@@ -466,10 +454,10 @@
   - 7
   - 8
   latin: Nelumbo nucifera Gaertn.
-  kana: ハス
   bunpu:
   - 高
   - 益
+  type: soushishokubutsu
 マツモ:
   seiikubasho:
   - 沈水
@@ -479,9 +467,9 @@
   - 7
   - 8
   latin: Ceratophyllum demersum Linn.
-  kana: マツモ
   bunpu:
   - 高
+  type: soushishokubutsu
 タガラシ:
   seiikubasho:
   - 抽水
@@ -490,9 +478,9 @@
   - 4
   - 5
   latin: Ranunculus sceleratus Linn.
-  kana: タガラシ
   bunpu:
   - 全
+  type: soushishokubutsu
 キツネノボタン:
   seiikubasho:
   - 抽水
@@ -502,9 +490,9 @@
   - 6
   - 7
   latin: R. ternatus Thunb.
-  kana: キツネノボタン
   bunpu:
   - 全
+  type: soushishokubutsu
 ケキツネノボタン:
   seiikubasho:
   - 抽水
@@ -514,10 +502,10 @@
   - 6
   - 7
   latin: R. cantoniensis DC.
-  kana: ケキツネノボタン
   bunpu:
   - 高
   - 益
+  type: soushishokubutsu
 ヒメバイカモ:
   seiikubasho:
   - 沈水
@@ -537,9 +525,9 @@
   - 11
   - 12
   latin: R. kazusensis (Makino)
-  kana: ヒメバイカモ
   bunpu:
   - 吉
+  type: soushishokubutsu
 ハマビワ:
   seiikubasho:
   - 湿地・岸辺
@@ -547,9 +535,9 @@
   - 10
   - 11
   latin: Litsea japonica (Thunb.) Juss.
-  kana: ハマビワ
   bunpu:
   - 海
+  type: soushishokubutsu
 ハマダイコン:
   ganpen_type: 砂浜
   seiikubasho:
@@ -559,9 +547,9 @@
   - 5
   - 6
   latin: Raphanus sativus Linn. var. raphanistroides(Makino) Makino
-  kana: ハマダイコン
   bunpu:
   - 海
+  type: soushishokubutsu
 タネツケバナ:
   seiikubasho:
   - 湿地・岸辺
@@ -570,9 +558,9 @@
   - 4
   - 5
   latin: '* Cardamine flexuosa With.'
-  kana: タネツケバナ
   bunpu:
   - 全
+  type: soushishokubutsu
 コンロンソウ:
   seiikubasho:
   - 湿地・岸辺
@@ -580,9 +568,9 @@
   - 5
   - 6
   latin: C. leucantha (Tausch) O.E. Schulz
-  kana: コンロンソウ
   bunpu:
   - 椛
+  type: soushishokubutsu
 ミズタネツケバナ:
   seiikubasho:
   - 湿地・岸辺
@@ -592,9 +580,9 @@
   - 7
   - 8
   latin: Caraamine flexuosa With. var. latifolia Makino
-  kana: ミズタネツケバナ
   bunpu:
   - 益
+  type: soushishokubutsu
 ワサビ:
   seiikubasho:
   - 抽水
@@ -603,9 +591,9 @@
   - 3
   - 4
   latin: '* Wasabia japonica (Miquel) Matsum.'
-  kana: ワサビ
   bunpu:
   - 匹
+  type: soushishokubutsu
 オランダガラシ:
   seiikubasho:
   - 抽水
@@ -615,9 +603,9 @@
   - 5
   - 6
   latin: '* Nasturtium officinale R. Br.'
-  kana: オランダガラシ
   bunpu:
   - 津
+  type: soushishokubutsu
 ハマハタザオ:
   ganpen_type: 砂浜
   seiikubasho:
@@ -627,9 +615,9 @@
   - 5
   - 6
   latin: Arabis stelleri DC. var. japonica (A. Gray) Fr. Schm.
-  kana: ハマハタザオ
   bunpu:
   - 海
+  type: soushishokubutsu
 ハタザオ:
   seiikubasho:
   - 湿地・岸辺
@@ -638,10 +626,10 @@
   - 5
   - 6
   latin: A. glabra (Linn.) Bernh.
-  kana: ハタザオ
   bunpu:
   - 匹
   - 津
+  type: soushishokubutsu
 モウセンゴケ:
   seiikubasho:
   - 湿地・岸辺
@@ -650,11 +638,11 @@
   - 7
   - 8
   latin: '* Drosera rotundifolia Linn.'
-  kana: モウセンゴケ
   bunpu:
   - 匹
   - 吉
   - 高
+  type: soushishokubutsu
 タイトゴメ:
   seiikubasho:
   - 湿地・岸辺
@@ -663,9 +651,9 @@
   - 6
   - 7
   latin: S. oryzifolium Makino
-  kana: タイトゴメ
   bunpu:
   - 海
+  type: soushishokubutsu
 ダイモンジソウ:
   seiikubasho:
   - 湿地・岸辺
@@ -675,10 +663,10 @@
   - 9
   - 10
   latin: Saxifraga fortunei Hook. fil. var. incisolobata (Engler et lrmsch.) Nakai
-  kana: ダイモンジソウ
   bunpu:
   - 匹
   - 椛
+  type: soushishokubutsu
 ホクリクネコノメソウ:
   seiikubasho:
   - 湿地・岸辺
@@ -686,10 +674,10 @@
   - 4
   - 5
   latin: Chrysospleniumfaunae Franch.
-  kana: ホクリクネコノメソウ
   bunpu:
   - 横
   - 津
+  type: soushishokubutsu
 コチャルメルソウ:
   seiikubasho:
   - 湿地・岸辺
@@ -697,10 +685,10 @@
   - 4
   - 5
   latin: Mitella pauciflora Rosend.
-  kana: コチャルメルソウ
   bunpu:
   - 匹
   - 津
+  type: soushishokubutsu
 チャルメルソウ:
   seiikubasho:
   - 湿地・岸辺
@@ -708,11 +696,11 @@
   - 4
   - 5
   latin: M. stylosa H. Boiss.
-  kana: チャルメルソウ
   bunpu:
   - 高
   - 匹
   - 津
+  type: soushishokubutsu
 シラヒゲソウ:
   seiikubasho:
   - 湿地・岸辺
@@ -720,9 +708,9 @@
   - 8
   - 9
   latin: Parnassia foliosa Hook. fil. et Thorns, var.nummularia (Maxim.) T. Ito
-  kana: シラヒゲソウ
   bunpu:
   - 匹
+  type: soushishokubutsu
 ウメバチソウ:
   seiikubasho:
   - 湿地・岸辺
@@ -731,10 +719,10 @@
   - 9
   - 10
   latin: P. palustns Linn.
-  kana: ウメバチソウ
   bunpu:
   - 匹
   - 津
+  type: soushishokubutsu
 トベラ:
   seiikubasho:
   - 湿地・岸辺
@@ -743,11 +731,11 @@
   - 5
   - 6
   latin: Pittosporum tobira (Thunb.) Ait.
-  kana: トベラ
   bunpu:
   - 高
   - 益
   - 海
+  type: soushishokubutsu
 カワラケツメイ:
   seiikubasho:
   - 湿地・岸辺
@@ -755,10 +743,10 @@
   - 8
   - 9
   latin: Cassia nomame (Sieb.) Honda
-  kana: カワラケツメイ
   bunpu:
   - 高
   - 津
+  type: soushishokubutsu
 ハマエンドウ:
   ganpen_type: 砂浜
   seiikubasho:
@@ -769,9 +757,9 @@
   - 6
   - 7
   latin: Lathyrus maritimus (Linn.) BIGL.
-  kana: ハマエンドウ
   bunpu:
   - 海
+  type: soushishokubutsu
 ミズハコベ:
   seiikubasho:
   - 沈水
@@ -791,9 +779,9 @@
   - 11
   - 12
   latin: Callitriche verna Linn.
-  kana: ミズハコベ
   bunpu:
   - 全
+  type: soushishokubutsu
 キツリフネ:
   seiikubasho:
   - 湿地・岸辺
@@ -802,9 +790,9 @@
   - 8
   - 9
   latin: Impatiens noli-tangere Linn.
-  kana: キツリフネ
   bunpu:
   - 匹
+  type: soushishokubutsu
 ツリフネソウ:
   seiikubasho:
   - 湿地・岸辺
@@ -814,13 +802,13 @@
   - 9
   - 10
   latin: I. textori Miq.
-  kana: ツリフネソウ
   bunpu:
   - 匹
   - 津
   - 横
   - 吉
   - 高
+  type: soushishokubutsu
 マタタビ:
   seiikubasho:
   - 湿地・岸辺
@@ -828,7 +816,6 @@
   - 6
   - 7
   latin: Actinidia polygama (Sieb. et Zucc.) Maxim.
-  kana: マタタビ
   bunpu:
   - 匹
   - 津
@@ -836,6 +823,7 @@
   - 椛
   - 吉
   - 高
+  type: soushishokubutsu
 サルナシ:
   seiikubasho:
   - 湿地・岸辺
@@ -843,11 +831,11 @@
   - 6
   - 7
   latin: Actinidia arguta (Sieb. et Zucc.) Planch.ex.Miq
-  kana: サルナシ
   bunpu:
   - 匹
   - 椛
   - 吉
+  type: soushishokubutsu
 ハマヒサカキ:
   seiikubasho:
   - 湿地・岸辺
@@ -855,9 +843,9 @@
   - 11
   - 12
   latin: E. emarginata (Thunb.) Makino
-  kana: ハマヒサカキ
   bunpu:
   - 海
+  type: soushishokubutsu
 ミズオトギリ:
   seiikubasho:
   - 抽水
@@ -866,9 +854,9 @@
   - 8
   - 9
   latin: Triadenum japonicum (Blume) Makino
-  kana: ミズオトギリ
   bunpu:
   - 津
+  type: soushishokubutsu
 アゼオトギリ:
   seiikubasho:
   - 湿地・岸辺
@@ -877,9 +865,9 @@
   - 9
   - 10
   latin: '* H.oliganthum Franch. et Savat.'
-  kana: アゼオトギリ
   bunpu:
   - 全
+  type: soushishokubutsu
 キガンピ:
   seiikubasho:
   - 湿地・岸辺
@@ -888,9 +876,9 @@
   - 8
   - 9
   latin: Wikstroemia trichotoma (Thunb.) Makino
-  kana: キガンピ
   bunpu:
   - 高
+  type: soushishokubutsu
 マルバアキグミ:
   seiikubasho:
   - 湿地・岸辺
@@ -898,9 +886,9 @@
   - 4
   - 5
   latin: E. umbellata Thunb. var. rotundifolia Makino
-  kana: マルバアキグミ
   bunpu:
   - 海
+  type: soushishokubutsu
 マルバグミ:
   seiikubasho:
   - 湿地・岸辺
@@ -909,9 +897,9 @@
   - 8
   - 9
   latin: E. macrophylla Thunb.
-  kana: マルバグミ
   bunpu:
   - 海
+  type: soushishokubutsu
 キカシグサ:
   seiikubasho:
   - 抽水
@@ -921,9 +909,9 @@
   - 9
   - 10
   latin: Rotala indica (Willd.) Koehne
-  kana: キカシグサ
   bunpu:
   - 全
+  type: soushishokubutsu
 ミソハギ:
   seiikubasho:
   - 湿地・岸辺
@@ -931,10 +919,10 @@
   - 7
   - 8
   latin: Lythrum anceps (Koehne) Makino
-  kana: ミソハギ
   bunpu:
   - 津
   - 椛
+  type: soushishokubutsu
 ヒシ:
   seiikubasho:
   - 浮葉
@@ -944,10 +932,10 @@
   - 8
   - 9
   latin: '* Trapa japonica Flerov'
-  kana: ヒシ
   bunpu:
   - 高
   - 益
+  type: soushishokubutsu
 タニタデ:
   seiikubasho:
   - 湿地・岸辺
@@ -956,11 +944,10 @@
   - 8
   - 9
   latin: C. erubescens Franch･ et Savat
-  kana: タニタデ
   bunpu:
   - 高
-  - ' '
   - 匹
+  type: soushishokubutsu
 アカバナ:
   seiikubasho:
   - 湿地・岸辺
@@ -969,13 +956,11 @@
   - 8
   - 9
   latin: Epilobium pyrricholophum Franch. et Savat. var.pyrricholophum(Fr. et Sav.)
-  kana: アカバナ
   bunpu:
   - 匹
-  - ' '
   - 津
-  - ' '
   - 椛
+  type: soushishokubutsu
 チョウジタデ:
   seiikubasho:
   - 湿地・岸辺
@@ -984,9 +969,9 @@
   - 9
   - 10
   latin: '* Jussiaea postrata (Roxb.) Leveille'
-  kana: チョウジタデ
   bunpu:
   - 全
+  type: soushishokubutsu
 ミズユキノシタ:
   seiikubasho:
   - 沈水
@@ -1000,10 +985,10 @@
   - 9
   - 10
   latin: Ludwigia ovalis Miq.
-  kana: ミズユキノシタ
   bunpu:
   - 益
   - 津
+  type: soushishokubutsu
 ホザキノフサモ:
   seiikubasho:
   - 沈水
@@ -1016,9 +1001,9 @@
   - 9
   - 10
   latin: Myriophyllnm spicatum Linti.
-  kana: ホザキノフサモ
   bunpu:
   - 高
+  type: soushishokubutsu
 オオフサモ:
   seiikubasho:
   - 沈水
@@ -1027,8 +1012,8 @@
   - 湿地・岸辺
   kaki: []
   latin: ' Myriophyllum aquaticum'
-  kana: オオフサモ
   bunpu: []
+  type: soushishokubutsu
 セリ:
   seiikubasho:
   - 抽水
@@ -1037,9 +1022,9 @@
   - 7
   - 8
   latin: '* Oenanthe iavanica (Blume) DC.'
-  kana: セリ
   bunpu:
   - 全
+  type: soushishokubutsu
 ハマゼリ:
   ganpen_type: 砂浜
   seiikubasho:
@@ -1049,9 +1034,9 @@
   - 9
   - 10
   latin: Cnidium iaponicum Miq.
-  kana: ハマゼリ
   bunpu:
   - 海
+  type: soushishokubutsu
 ハマボウフウ:
   ganpen_type: 砂浜
   seiikubasho:
@@ -1060,9 +1045,9 @@
   - 6
   - 7
   latin: '* Glehma littoralis Fr. Schm., ex Miq.'
-  kana: ハマボウフウ
   bunpu:
   - 海
+  type: soushishokubutsu
 ハマウド:
   ganpen_type: 砂浜
   seiikubasho:
@@ -1072,9 +1057,9 @@
   - 5
   - 6
   latin: A. japonica A. Gray
-  kana: ハマウド
   bunpu:
   - 海
+  type: soushishokubutsu
 ボタンボウフウ:
   ganpen_type: 砂浜
   seiikubasho:
@@ -1084,9 +1069,9 @@
   - 8
   - 9
   latin: Peucedanum japomcum Thunb.
-  kana: ボタンボウフウ
   bunpu:
   - 海
+  type: soushishokubutsu
 キシツツジ:
   seiikubasho:
   - 湿地・岸辺
@@ -1094,10 +1079,10 @@
   - 4
   - 5
   latin: R. ripense Makmo
-  kana: キシツツジ
   bunpu:
   - 匹
   - 吉
+  type: soushishokubutsu
 クサレダマ:
   seiikubasho:
   - 湿地・岸辺
@@ -1106,10 +1091,10 @@
   - 7
   - 8
   latin: Lysimachia vulgaris Linn. var. davurica(Ledeb.)R.Knuth
-  kana: クサレダマ
   bunpu:
   - 匹
   - 津
+  type: soushishokubutsu
 ヌマトラノオ:
   seiikubasho:
   - 湿地・岸辺
@@ -1117,10 +1102,10 @@
   - 7
   - 8
   latin: L.fortunei Maxim.
-  kana: ヌマトラノオ
   bunpu:
   - 匹
   - 津
+  type: soushishokubutsu
 ハマボッス:
   ganpen_type: 砂浜
   seiikubasho:
@@ -1129,9 +1114,9 @@
   - 5
   - 6
   latin: L. mauritiana Lamarck
-  kana: ハマボッス
   bunpu:
   - 海
+  type: soushishokubutsu
 サワフタギ:
   seiikubasho:
   - 湿地・岸辺
@@ -1139,12 +1124,12 @@
   - 5
   - 6
   latin: S. chinensis (Lour.) Druce forma pilosa (Nakai)Ohwi
-  kana: サワフタギ
   bunpu:
   - 匹
   - 横
   - 椛
   - 吉
+  type: soushishokubutsu
 エゴノキ:
   seiikubasho:
   - 湿地・岸辺
@@ -1152,9 +1137,9 @@
   - 5
   - 6
   latin: Styrax japonica Sieb. et Zucc.
-  kana: エゴノキ
   bunpu:
   - 全
+  type: soushishokubutsu
 アケボノソウ:
   seiikubasho:
   - 湿地・岸辺
@@ -1162,19 +1147,19 @@
   - 9
   - 10
   latin: S. bimaculata (Sieb. et Zucc.) Hook, et Thorns.
-  kana: アケボノソウ
   bunpu:
   - 匹
   - 津
+  type: soushishokubutsu
 チョウジソウ:
   seiikubasho:
   - 湿地・岸辺
   kaki:
   - 5
   latin: Amsonia elliptica (Thunb.) Roem. et Schult.
-  kana: チョウジソウ
   bunpu:
   - 津
+  type: soushishokubutsu
 ハマヒルガオ:
   ganpen_type: 砂浜
   seiikubasho:
@@ -1183,9 +1168,9 @@
   - 5
   - 6
   latin: '* Calystegia soldanella (Linn.) Roem. et Schult.'
-  kana: ハマヒルガオ
   bunpu:
   - 海
+  type: soushishokubutsu
 ハマネナシカズラ:
   ganpen_type: 砂浜
   seiikubasho:
@@ -1196,9 +1181,9 @@
   - 9
   - 10
   latin: C. chinensis Lam.
-  kana: ハマネナシカズラ
   bunpu:
   - 海
+  type: soushishokubutsu
 ミズタビラコ:
   seiikubasho:
   - 湿地・岸辺
@@ -1206,9 +1191,9 @@
   - 5
   - 6
   latin: T. brevipes (Maxim.) Maxim.
-  kana: ミズタビラコ
   bunpu:
   - 全
+  type: soushishokubutsu
 ハマゴウ:
   ganpen_type: 砂浜
   seiikubasho:
@@ -1218,9 +1203,9 @@
   - 8
   - 9
   latin: Vitex rotundifolia Linn. fil.
-  kana: ハマゴウ
   bunpu:
   - 海
+  type: soushishokubutsu
 ミゾホウズキ:
   seiikubasho:
   - 湿地・岸辺
@@ -1228,9 +1213,9 @@
   - 7
   - 8
   latin: Mimulus inflatus (Miq.) Nakai
-  kana: ミゾホウズキ
   bunpu:
   - 匹
+  type: soushishokubutsu
 キクモ:
   seiikubasho:
   - 抽水
@@ -1240,9 +1225,9 @@
   - 9
   - 10
   latin: Limnophila sessiliflora Blume
-  kana: キクモ
   bunpu:
   - 益
+  type: soushishokubutsu
 アゼトウガラシ:
   seiikubasho:
   - 湿地・岸辺
@@ -1251,9 +1236,9 @@
   - 9
   - 10
   latin: '* L. angustifolia (Benth.) Wettst.'
-  kana: アゼトウガラシ
   bunpu:
   - 全
+  type: soushishokubutsu
 アゼナ:
   seiikubasho:
   - 湿地・岸辺
@@ -1262,9 +1247,9 @@
   - 9
   - 10
   latin: '* L. pyxidaria Linn.'
-  kana: アゼナ
   bunpu:
   - 全
+  type: soushishokubutsu
 ムシクサ:
   seiikubasho:
   - 湿地・岸辺
@@ -1272,9 +1257,9 @@
   - 4
   - 5
   latin: Veronica peregrina Linn.
-  kana: ムシクサ
   bunpu:
   - 益
+  type: soushishokubutsu
 カワヂシャ:
   seiikubasho:
   - 抽水
@@ -1283,9 +1268,9 @@
   - 5
   - 6
   latin: V.anagallis-aquatica Linn.
-  kana: カワヂシャ
   bunpu:
   - 高
+  type: soushishokubutsu
 ハマウツボ:
   ganpen_type: 砂浜
   seiikubasho:
@@ -1295,9 +1280,9 @@
   - 6
   - 7
   latin: Orobanche coerulescens Stephan, ex Willd.
-  kana: ハマウツボ
   bunpu:
   - 海
+  type: soushishokubutsu
 イワタバコ:
   seiikubasho:
   - 湿地・岸辺
@@ -1307,12 +1292,12 @@
   - 8
   - 9
   latin: Conandron ramondioides Sieb. et Zucc.
-  kana: イワタバコ
   bunpu:
   - 匹
   - 横
   - 椛
   - 吉
+  type: soushishokubutsu
 ノタヌキモ:
   seiikubasho:
   - 沈水
@@ -1323,11 +1308,10 @@
   - 9
   - 10
   latin: Utricularia pilosa (Makino) Makino
-  kana: ノタヌキモ
   bunpu:
   - 高
-  - ' '
   - 益
+  type: soushishokubutsu
 タヌキモ:
   seiikubasho:
   - 沈水
@@ -1337,10 +1321,10 @@
   - 8
   - 9
   latin: U. japonica Makino
-  kana: タヌキモ
   bunpu:
   - 高
   - 益
+  type: soushishokubutsu
 ソナレムグラ:
   seiikubasho:
   - 湿地・岸辺
@@ -1348,9 +1332,9 @@
   - 8
   - 9
   latin: Hedyotis biflora (Linn.) Lam. var. parvifoliaHook. et Arn.
-  kana: ソナレムグラ
   bunpu:
   - 海
+  type: soushishokubutsu
 ミゾカクシ:
   seiikubasho:
   - 湿地・岸辺
@@ -1361,9 +1345,9 @@
   - 9
   - 10
   latin: '* Lobelia chinensis Lout.'
-  kana: ミゾカクシ
   bunpu:
   - 全
+  type: soushishokubutsu
 サワヒヨドリ:
   seiikubasho:
   - 湿地・岸辺
@@ -1372,11 +1356,11 @@
   - 9
   - 10
   latin: E. lindleyanum DC.
-  kana: サワヒヨドリ
   bunpu:
   - 匹
   - 津
   - 吉
+  type: soushishokubutsu
 ユウガギク:
   seiikubasho:
   - 湿地・岸辺
@@ -1385,9 +1369,9 @@
   - 9
   - 10
   latin: Kalimeris pinnatifida (Maxim.) Kitam.
-  kana: ユウガギク
   bunpu:
   - 全
+  type: soushishokubutsu
 ハマべノギク:
   seiikubasho:
   - 湿地・岸辺
@@ -1398,11 +1382,11 @@
   - 10
   - 11
   latin: Heteropappus arenarius Kitam.
-  kana: ハマべノギク
   bunpu:
   - 高
   - 益
   - 海
+  type: soushishokubutsu
 ダルマギク:
   seiikubasho:
   - 湿地・岸辺
@@ -1412,9 +1396,9 @@
   - 11
   - 12
   latin: ◎A. spathulifolius Maxim.
-  kana: ダルマギク
   bunpu:
   - 海
+  type: soushishokubutsu
 オタカラコウ:
   seiikubasho:
   - 湿地・岸辺
@@ -1424,9 +1408,9 @@
   - 9
   - 10
   latin: Ligularia fischeri (Ledeb.) Turcz.
-  kana: オタカラコウ
   bunpu:
   - 匹
+  type: soushishokubutsu
 サワギク:
   seiikubasho:
   - 湿地・岸辺
@@ -1436,10 +1420,10 @@
   - 7
   - 8
   latin: S. nikoensis Miq.
-  kana: サワギク
   bunpu:
   - 匹
   - 椛
+  type: soushishokubutsu
 サワオグルマ:
   seiikubasho:
   - 湿地・岸辺
@@ -1448,10 +1432,10 @@
   - 5
   - 6
   latin: S. pierotii Miq.
-  kana: サワオグルマ
   bunpu:
   - 匹
   - 津
+  type: soushishokubutsu
 カワラヨモギ:
   seiikubasho:
   - 湿地・岸辺
@@ -1459,10 +1443,10 @@
   - 9
   - 10
   latin: Artemisia capillaris Thunb.
-  kana: カワラヨモギ
   bunpu:
   - 高
   - 海
+  type: soushishokubutsu
 タカサブロウ:
   seiikubasho:
   - 湿地・岸辺
@@ -1470,9 +1454,9 @@
   - 8
   - 9
   latin: '* Eclipta prostrata (Linn.) Linn.'
-  kana: タカサブロウ
   bunpu:
   - 全
+  type: soushishokubutsu
 ネコノシタ（ハマグルマ）:
   ganpen_type: 砂浜
   seiikubasho:
@@ -1483,9 +1467,9 @@
   - 9
   - 10
   latin: Wedelia prostrata (Hook, et Arn.) Hemsl.
-  kana: ネコノシタ（ハマグルマ）
   bunpu:
   - 海
+  type: soushishokubutsu
 アゼトウナ:
   seiikubasho:
   - 湿地・岸辺
@@ -1496,17 +1480,17 @@
   - 11
   - 12
   latin: Crepidiastrum keiskeanum (Maxim.) Nakai
-  kana: アゼトウナ
   bunpu:
   - 海
+  type: soushishokubutsu
 ホソバワダン:
   seiikubasho:
   - 湿地・岸辺
   kaki: []
   latin: C.lanceolatum (Houtt.) Nakai
-  kana: ホソバワダン
   bunpu:
   - 海
+  type: soushishokubutsu
 ハマニガナ:
   ganpen_type: 砂浜
   seiikubasho:
@@ -1520,9 +1504,9 @@
   - 9
   - 10
   latin: Ixeris repens (Linn.) A. Gray
-  kana: ハマニガナ
   bunpu:
   - 海
+  type: soushishokubutsu
 ヒメガマ:
   seiikubasho:
   - 抽水
@@ -1532,9 +1516,9 @@
   - 7
   - 8
   latin: Typha angustata Bory et Chauberd.
-  kana: ヒメガマ
   bunpu:
   - 高
+  type: tanshishokubutsu
 ミクリ:
   seiikubasho:
   - 抽水
@@ -1544,9 +1528,9 @@
   - 8
   - 9
   latin: Sparganium stoloniferum Hamilt.
-  kana: ミクリ
   bunpu:
   - 高
+  type: tanshishokubutsu
 ヒルムシロ:
   seiikubasho:
   - 浮葉
@@ -1558,9 +1542,9 @@
   - 9
   - 10
   latin: Potamogeton distinctus A.Benn.
-  kana: ヒルムシロ
   bunpu:
   - 全
+  type: tanshishokubutsu
 オヒルムシロ:
   seiikubasho:
   - 沈水
@@ -1571,8 +1555,8 @@
   - 7
   - 8
   latin: P.n natansL.
-  kana: オヒルムシロ
   bunpu: []
+  type: tanshishokubutsu
 ミズヒキモ:
   seiikubasho:
   - 沈水
@@ -1583,10 +1567,10 @@
   - 8
   - 9
   latin: P. octandrus Poir. var. miduhikimo (Makino)Hara
-  kana: ミズヒキモ
   bunpu:
   - 高
   - 津
+  type: tanshishokubutsu
 ヤナギモ:
   seiikubasho:
   - 沈水
@@ -1597,9 +1581,9 @@
   - 8
   - 9
   latin: P. oxyphyllus Miq.
-  kana: ヤナギモ
   bunpu:
   - 全
+  type: tanshishokubutsu
 エビモ:
   seiikubasho:
   - 沈水
@@ -1611,9 +1595,9 @@
   - 9
   - 10
   latin: P. crispus L.
-  kana: エビモ
   bunpu:
   - 全
+  type: tanshishokubutsu
 イバラモ:
   seiikubasho:
   - 沈水
@@ -1622,9 +1606,9 @@
   - 8
   - 9
   latin: Najas marina Linn.
-  kana: イバラモ
   bunpu:
   - 全
+  type: tanshishokubutsu
 イトトリゲモ:
   seiikubasho:
   - 沈水
@@ -1634,8 +1618,8 @@
   - 8
   - 9
   latin: Najas gracillima (A. Br.) Magnus
-  kana: イトトリゲモ
   bunpu: []
+  type: tanshishokubutsu
 アマモ:
   seiikubasho:
   - 沈水
@@ -1644,9 +1628,9 @@
   - 6
   - 7
   latin: Zostera marina Linn.
-  kana: アマモ
   bunpu:
   - 海
+  type: tanshishokubutsu
 へラオモダカ:
   seiikubasho:
   - 抽水
@@ -1656,11 +1640,11 @@
   - 8
   - 9
   latin: Alisma canaliculatum A.Br. er Bouche
-  kana: へラオモダカ
   bunpu:
   - 匹
   - 津
   - 吉
+  type: tanshishokubutsu
 ウリカワ:
   seiikubasho:
   - 抽水
@@ -1670,9 +1654,9 @@
   - 8
   - 9
   latin: Sagittaria pygmaea Miq.
-  kana: ウリカワ
   bunpu:
   - 全
+  type: tanshishokubutsu
 オモダカ:
   seiikubasho:
   - 抽水
@@ -1682,11 +1666,11 @@
   - 9
   - 10
   latin: S. trifolia Linn.
-  kana: オモダカ
   bunpu:
   - 高
   - 益
   - 匹
+  type: tanshishokubutsu
 アギナシ:
   seiikubasho:
   - 抽水
@@ -1697,10 +1681,10 @@
   - 9
   - 10
   latin: S. aginashi Makino
-  kana: アギナシ
   bunpu:
   - 高
   - 益
+  type: tanshishokubutsu
 セキショウモ:
   seiikubasho:
   - 沈水
@@ -1709,10 +1693,10 @@
   - 9
   - 10
   latin: Vallisneria asiatica Miki
-  kana: セキショウモ
   bunpu:
   - 高
   - 益
+  type: tanshishokubutsu
 クロモ:
   seiikubasho:
   - 沈水
@@ -1721,11 +1705,10 @@
   - 9
   - 10
   latin: Hydrilla verticillata (Linn, fil.) Casp.
-  kana: クロモ
   bunpu:
   - 高
-  - ' '
   - 益
+  type: tanshishokubutsu
 ミズオオバコ:
   seiikubasho:
   - 沈水
@@ -1734,9 +1717,9 @@
   - 9
   - 10
   latin: Ottelia japonica Miq.
-  kana: ミズオオバコ
   bunpu:
   - 高
+  type: tanshishokubutsu
 トチカガミ:
   seiikubasho:
   - 浮葉
@@ -1745,10 +1728,10 @@
   - 9
   - 10
   latin: Hydrocharis asiatica Miq.
-  kana: トチカガミ
   bunpu:
   - 高
   - 益
+  type: tanshishokubutsu
 オオカナダモ:
   seiikubasho:
   - 沈水
@@ -1760,9 +1743,9 @@
   - 9
   - 10
   latin: Egeria densa Planch
-  kana: オオカナダモ
   bunpu:
   - 全
+  type: tanshishokubutsu
 マコモ:
   seiikubasho:
   - 抽水
@@ -1772,9 +1755,9 @@
   - 7
   - 8
   latin: Zizania latifolia Turcz.
-  kana: マコモ
   bunpu:
   - 高
+  type: tanshishokubutsu
 ツルヨシ:
   seiikubasho:
   - 抽水
@@ -1783,9 +1766,9 @@
   - 8
   - 9
   latin: Phragmites japonica Steud.
-  kana: ツルヨシ
   bunpu:
   - 全
+  type: tanshishokubutsu
 ヨシ:
   seiikubasho:
   - 抽水
@@ -1795,10 +1778,10 @@
   - 7
   - 8
   latin: P. communis Trin.
-  kana: ヨシ
   bunpu:
   - 高
   - 益
+  type: tanshishokubutsu
 セイコノヨシ:
   seiikubasho:
   - 抽水
@@ -1808,9 +1791,9 @@
   - 7
   - 8
   latin: P. karka (Retz.) Trin.
-  kana: セイコノヨシ
   bunpu:
   - 高
+  type: tanshishokubutsu
 .オニシバ:
   ganpen_type: 砂浜
   seiikubasho:
@@ -1820,9 +1803,9 @@
   - 7
   - 8
   latin: Z. macrostachya Franch. et Savat
-  kana: .オニシバ
   bunpu:
   - 海
+  type: tanshishokubutsu
 ハマエノコロ:
   ganpen_type: 砂浜
   seiikubasho:
@@ -1831,9 +1814,9 @@
   - 7
   - 8
   latin: S. viridis P. Beauv. var. pachystachys (Franch.et Savat.) Makino et Nemoto
-  kana: ハマエノコロ
   bunpu:
   - 海
+  type: tanshishokubutsu
 クロカワズスゲ:
   seiikubasho:
   - 湿地・岸辺
@@ -1841,9 +1824,9 @@
   - 4
   - 5
   latin: Carex arenicola Fr. Schm.
-  kana: クロカワズスゲ
   bunpu:
   - 高
+  type: tanshishokubutsu
 コウボウムギ:
   ganpen_type: 砂浜
   seiikubasho:
@@ -1854,9 +1837,9 @@
   - 6
   - 7
   latin: C. kobomugi Ohwi
-  kana: コウボウムギ
   bunpu:
   - 海
+  type: tanshishokubutsu
 ゴウソ:
   seiikubasho:
   - 湿地・岸辺
@@ -1864,9 +1847,9 @@
   - 5
   - 6
   latin: C. maximowiczii Miq.
-  kana: ゴウソ
   bunpu:
   - 全
+  type: tanshishokubutsu
 グレーンスゲ:
   seiikubasho:
   - 湿地・岸辺
@@ -1874,9 +1857,9 @@
   - 6
   - 7
   latin: C. jackiana Boott. subsp. parciflora Kukenth.var. parciflora
-  kana: グレーンスゲ
   bunpu:
   - 津
+  type: tanshishokubutsu
 ウマスゲ:
   seiikubasho:
   - 湿地・岸辺
@@ -1884,9 +1867,9 @@
   - 4
   - 5
   latin: C. idzuroei Franch. et Savat.
-  kana: ウマスゲ
   bunpu:
   - 津
+  type: tanshishokubutsu
 ジュズスゲ:
   seiikubasho:
   - 湿地・岸辺
@@ -1894,9 +1877,9 @@
   - 4
   - 5
   latin: C. ischnostachya Steudel
-  kana: ジュズスゲ
   bunpu:
   - 津
+  type: tanshishokubutsu
 カサスゲ:
   seiikubasho:
   - 抽水
@@ -1905,10 +1888,10 @@
   - 5
   - 6
   latin: C. dispalata Boott.
-  kana: カサスゲ
   bunpu:
   - 匹
   - 津
+  type: tanshishokubutsu
 コウボウシバ:
   ganpen_type: 砂浜
   seiikubasho:
@@ -1917,9 +1900,9 @@
   - 5
   - 6
   latin: C. pumila Thunberg
-  kana: コウボウシバ
   bunpu:
   - 海
+  type: tanshishokubutsu
 オニスゲ:
   seiikubasho:
   - 抽水
@@ -1929,9 +1912,9 @@
   - 6
   - 7
   latin: C. dickinsii Franch. et Savat.
-  kana: オニスゲ
   bunpu:
   - 津
+  type: tanshishokubutsu
 クログワイ:
   seiikubasho:
   - 抽水
@@ -1940,9 +1923,9 @@
   - 8
   - 9
   latin: Eleocharis kuroguwai Ohwi
-  kana: クログワイ
   bunpu:
   - 高
+  type: tanshishokubutsu
 ハリイ:
   seiikubasho:
   - 湿地・岸辺
@@ -1954,9 +1937,9 @@
   - 10
   - 11
   latin: E. pellucida Ｐresl
-  kana: ハリイ
   bunpu:
   - 津
+  type: tanshishokubutsu
 マツバイ:
   seiikubasho:
   - 抽水
@@ -1966,9 +1949,9 @@
   - 8
   - 9
   latin: E. acicularis (Linn.) Roem. et Schult. var.longiseta Svenson
-  kana: マツバイ
   bunpu:
   - 全
+  type: tanshishokubutsu
 ビロードテンツキ:
   ganpen_type: 砂浜
   seiikubasho:
@@ -1979,9 +1962,9 @@
   - 9
   - 10
   latin: Fimbristylis sericea (Poir.) R. Br.
-  kana: ビロードテンツキ
   bunpu:
   - 海
+  type: tanshishokubutsu
 ヒデリコ:
   seiikubasho:
   - 湿地・岸辺
@@ -1991,9 +1974,9 @@
   - 9
   - 10
   latin: F. miliacea (Linn.) Vahl
-  kana: ヒデリコ
   bunpu:
   - 全
+  type: tanshishokubutsu
 テンツキ:
   seiikubasho:
   - 湿地・岸辺
@@ -2001,9 +1984,9 @@
   - 6
   - 7
   latin: F. dichotoma (Linn.) Vahl
-  kana: テンツキ
   bunpu:
   - 全
+  type: tanshishokubutsu
 アゼテンツキ:
   seiikubasho:
   - 湿地・岸辺
@@ -2012,9 +1995,9 @@
   - 9
   - 10
   latin: F. squarrosa  Vahl
-  kana: アゼテンツキ
   bunpu:
   - 全
+  type: tanshishokubutsu
 ヒメテンツキ:
   seiikubasho:
   - 湿地・岸辺
@@ -2024,9 +2007,9 @@
   - 9
   - 10
   latin: F. autumnalis (Linn.) Roem. et Schultes
-  kana: ヒメテンツキ
   bunpu:
   - 全
+  type: tanshishokubutsu
 エゾアブラガヤ:
   seiikubasho:
   - 湿地・岸辺
@@ -2034,10 +2017,10 @@
   - 8
   - 9
   latin: Scirpus wichurai Bocklr. forma borealis Ohwi
-  kana: エゾアブラガヤ
   bunpu:
   - 匹
   - 椛
+  type: tanshishokubutsu
 コマツカサススキ:
   seiikubasho:
   - 抽水
@@ -2046,10 +2029,10 @@
   - 8
   - 9
   latin: S. fuirenoides Maxim.
-  kana: コマツカサススキ
   bunpu:
   - 匹
   - 椛
+  type: tanshishokubutsu
 ウキヤガラ:
   seiikubasho:
   - 抽水
@@ -2059,9 +2042,9 @@
   - 7
   - 8
   latin: S.yagara Ohwi
-  kana: ウキヤガラ
   bunpu:
   - 海
+  type: tanshishokubutsu
 ヒメホタルイ:
   seiikubasho:
   - 抽水
@@ -2070,9 +2053,9 @@
   - 8
   - 9
   latin: S. lineolatus Franch. et Savat
-  kana: ヒメホタルイ
   bunpu:
   - 津
+  type: tanshishokubutsu
 カンガレイ:
   seiikubasho:
   - 抽水
@@ -2082,10 +2065,10 @@
   - 9
   - 10
   latin: S. pre.nii Dietr.
-  kana: カンガレイ
   bunpu:
   - 椛
   - 海
+  type: tanshishokubutsu
 サンカクイ:
   seiikubasho:
   - 抽水
@@ -2095,11 +2078,11 @@
   - 9
   - 10
   latin: S. triqueter Linn.
-  kana: サンカクイ
   bunpu:
   - 高
   - 益
   - 津
+  type: tanshishokubutsu
 ヒンジガヤツリ:
   seiikubasho:
   - 抽水
@@ -2108,9 +2091,9 @@
   - 9
   - 10
   latin: Lipocarpha microcephala (R. Br.) Kunth
-  kana: ヒンジガヤツリ
   bunpu:
   - 全
+  type: tanshishokubutsu
 ミズガヤツリ:
   seiikubasho:
   - 抽水
@@ -2119,9 +2102,9 @@
   - 9
   - 10
   latin: Cyperus serotinus Rottb.
-  kana: ミズガヤツリ
   bunpu:
   - 高
+  type: tanshishokubutsu
 カワラスガナ:
   seiikubasho:
   - 抽水
@@ -2130,9 +2113,9 @@
   - 8
   - 9
   latin: L. sanguinolentus Vahl
-  kana: カワラスガナ
   bunpu:
   - 全
+  type: tanshishokubutsu
 オニガヤツリ:
   seiikubasho:
   - 抽水
@@ -2142,10 +2125,10 @@
   - 8
   - 9
   latin: C. pilosus Vahl
-  kana: オニガヤツリ
   bunpu:
   - 高
   - 益
+  type: tanshishokubutsu
 ウシクグ:
   seiikubasho:
   - 湿地・岸辺
@@ -2154,9 +2137,9 @@
   - 9
   - 10
   latin: C. orthostahyus Franch. et Savat.
-  kana: ウシクグ
   bunpu:
   - 全
+  type: tanshishokubutsu
 コゴメガヤツリ:
   seiikubasho:
   - 湿地・岸辺
@@ -2165,9 +2148,9 @@
   - 9
   - 10
   latin: C. iria Linn.
-  kana: コゴメガヤツリ
   bunpu:
   - 全
+  type: tanshishokubutsu
 カヤツリグサ:
   seiikubasho:
   - 抽水
@@ -2177,9 +2160,9 @@
   - 9
   - 10
   latin: C. microiria Steud.
-  kana: カヤツリグサ
   bunpu:
   - 全
+  type: tanshishokubutsu
 アオガヤツリ:
   seiikubasho:
   - 湿地・岸辺
@@ -2189,9 +2172,9 @@
   - 9
   - 10
   latin: C. nipponicus Franch. et Savat.
-  kana: アオガヤツリ
   bunpu:
   - 全
+  type: tanshishokubutsu
 ヒメクグ:
   seiikubasho:
   - 湿地・岸辺
@@ -2201,9 +2184,9 @@
   - 9
   - 10
   latin: Kyllinga brevifolia Rottb. var. leiolepis(Franch.et Savat･) Hara
-  kana: ヒメクグ
   bunpu:
   - 全
+  type: tanshishokubutsu
 セキショウ:
   seiikubasho:
   - 湿地・岸辺
@@ -2212,9 +2195,9 @@
   - 4
   - 5
   latin: Acorus gramineus Soland.
-  kana: セキショウ
   bunpu:
   - 高
+  type: tanshishokubutsu
 ウキクサ:
   seiikubasho:
   - 浮標
@@ -2222,9 +2205,9 @@
   - 7
   - 8
   latin: Spirodela polyrhiza (Linn.) Schleid.
-  kana: ウキクサ
   bunpu:
   - 全
+  type: tanshishokubutsu
 イヌノヒゲ:
   seiikubasho:
   - 湿地・岸辺
@@ -2232,9 +2215,9 @@
   - 8
   - 9
   latin: Eriocaulon miquelianum Koern.
-  kana: イヌノヒゲ
   bunpu:
   - 津
+  type: tanshishokubutsu
 イボクサ:
   seiikubasho:
   - 抽水
@@ -2244,9 +2227,9 @@
   - 9
   - 10
   latin: Aneilema japonicum (Thunb.) Kunth
-  kana: イボクサ
   bunpu:
   - 全
+  type: tanshishokubutsu
 ミズアオイ:
   seiikubasho:
   - 抽水
@@ -2256,9 +2239,9 @@
   - 9
   - 10
   latin: Monochoria korsakowii Regel et Maack
-  kana: ミズアオイ
   bunpu:
   - 全
+  type: tanshishokubutsu
 コナギ:
   seiikubasho:
   - 抽水
@@ -2268,9 +2251,9 @@
   - 10
   - 11
   latin: M. vaginalis (Burm. fil.) Presl
-  kana: コナギ
   bunpu:
   - 全
+  type: tanshishokubutsu
 クサイ:
   seiikubasho:
   - 湿地・岸辺
@@ -2278,9 +2261,9 @@
   - 6
   - 7
   latin: Juncus tenuis Willd.
-  kana: クサイ
   bunpu:
   - 全
+  type: tanshishokubutsu
 イ:
   seiikubasho:
   - 抽水
@@ -2289,10 +2272,10 @@
   - 6
   - 7
   latin: J. effusus Linn. var. decipiens Buchen.
-  kana: イ
   bunpu:
   - 高
   - 益
+  type: tanshishokubutsu
 コヒゲ:
   seiikubasho:
   - 抽水
@@ -2301,10 +2284,10 @@
   - 6
   - 7
   latin: J. effusus Linn. var. decipiens Buchen. formautilis Makino
-  kana: コヒゲ
   bunpu:
   - 高
   - 益
+  type: tanshishokubutsu
 タチコウガイゼキショウ:
   seiikubasho:
   - 抽水
@@ -2313,9 +2296,9 @@
   - 6
   - 7
   latin: J. krameri Franch. et Savat.
-  kana: タチコウガイゼキショウ
   bunpu:
   - 匹
+  type: tanshishokubutsu
 コウガイゼキショウ:
   seiikubasho:
   - 抽水
@@ -2324,9 +2307,9 @@
   - 6
   - 7
   latin: J. leschenaultii Gay
-  kana: コウガイゼキショウ
   bunpu:
   - 匹
+  type: tanshishokubutsu
 アオコウガイゼキショウ:
   seiikubasho:
   - 湿地・岸辺
@@ -2335,9 +2318,9 @@
   - 8
   - 9
   latin: J. papillosus Franch. et Savat.
-  kana: アオコウガイゼキショウ
   bunpu:
   - 津
+  type: tanshishokubutsu
 クサスギカズラ:
   seiikubasho:
   - 湿地・岸辺
@@ -2345,9 +2328,9 @@
   - 5
   - 6
   latin: Asparagus lucidus LJfidl.
-  kana: クサスギカズラ
   bunpu:
   - 海
+  type: tanshishokubutsu
 カキツバタ:
   seiikubasho:
   - 抽水
@@ -2356,18 +2339,18 @@
   - 5
   - 6
   latin: I. laevigata Fisch.
-  kana: カキツバタ
   bunpu:
   - 匹
+  type: tanshishokubutsu
 アヤメ:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
   kaki: []
   latin: I. sanguinea Hornem.
-  kana: アヤメ
   bunpu:
   - 匹
+  type: tanshishokubutsu
 ノハナショウブ:
   seiikubasho:
   - 湿地・岸辺
@@ -2375,9 +2358,9 @@
   - 6
   - 7
   latin: I. ensata Thunb. var. spontanea (Makino) Nakai
-  kana: ノハナショウブ
   bunpu:
   - 匹
+  type: tanshishokubutsu
 キショウブ:
   seiikubasho:
   - 抽水
@@ -2387,9 +2370,9 @@
   - 5
   - 6
   latin: I. pseudacorus
-  kana: キショウブ
   bunpu:
   - 全
+  type: tanshishokubutsu
 ミズチドリ:
   seiikubasho:
   - 湿地・岸辺
@@ -2397,6 +2380,6 @@
   - 6
   - 7
   latin: P. hologlottis Maxim.
-  kana: ミズチドリ
   bunpu:
   - 匹
+  type: tanshishokubutsu

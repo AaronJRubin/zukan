@@ -6,8 +6,8 @@ def parse_kaki(kaki_string)
   if kaki_string == nil
     return []
   end
-  kaki_string = kaki_string.gsub("通年", "1~12").gsub("春〜秋", "4~11").gsub("夏〜秋", "6~11").
-    gsub("晩秋～冬季紅葉", "").gsub("秋", "9~11").gsub("（稀）", "").gsub("~", "〜").strip  
+  kaki_string = kaki_string.gsub("通年", "1〜12").gsub("春〜秋", "4〜11").gsub("夏〜秋", "6〜11").
+    gsub("晩秋〜冬季紅葉", "").gsub("秋", "9〜11").gsub("（稀）", "").strip  
   if kaki_string.length == 0
     return []
   elsif kaki_string.length == 1
@@ -20,9 +20,10 @@ end
 
 def parse_plant_file(plant_file)
   data = CSV.read(plant_file)[2..-1] # first two lines are headings
+  type = plant_file.gsub(".csv", "")
   result = data.select { |row| not row[8].nil? } . map { |row|
     res = {}
-    row = row.map { |value| if value.nil? then value else value.strip.gsub("　", "") end }
+    row = row.map { |value| if value.nil? then value else value.strip.gsub("　", "").gsub("~", "〜") end }
     seiikubasho = []
     if row[1] != nil
       seiikubasho << "沈水"
@@ -55,7 +56,8 @@ def parse_plant_file(plant_file)
     # skip tokki for now
     res["latin"] = row[8]
     res["kana"] = row[9]
-    res["bunpu"] = if row[10].nil? then [] else row[10].gsub(/[()（）]/, "").chars.select { |char| char != "" } end
+    res["bunpu"] = if row[10].nil? then [] else row[10].gsub(/[()（） 　]/, "").chars.select { |char| char != "" } end
+    res["type"] = type
     res
   }  
   return result
@@ -67,11 +69,8 @@ result_map = {}
 
 result.each do |plant|
   result_map[plant["kana"]] = plant
+  plant.delete("kana")
 end
-
-#Hash.new(result.map { |plant| [plant["kana"], plant] })
-
-#puts result_ma
 
 output_file = File.open("plant_data.yaml", "w")
 
