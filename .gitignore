@@ -17,8 +17,7 @@ web/images/
 appengine_build/static/*
 
 # Don't include temporary utility scripts
-_*.rb
-_*.py
+_*
 
 # Don't include caches
 .sass-cache/
