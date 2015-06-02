@@ -1,24 +1,2402 @@
-azami:
-    iro: [murasaki]
-    saitei: 6
-    saikou: 10
-    zoku: アザミ属
-    ka: アザミ科
-    latin: florus azamius
-    rarity: 2
-gairaishu:
-    iro: [kiiro]
-    saitei: 4
-    saikou: 8
-    zoku: ガイライシュ属
-    ka: ガイライシュ科
-    latin: florus pestilentus
-    rarity: 1
-togetoge:
-    iro: [murasaki]
-    saitei: 12
-    saikou: 15
-    zoku: トゲトゲ属
-    ka: トゲトゲ科
-    rarity: 3
-    latin: pointius pricklius
+---
+スギナ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 2
+  - 3
+  latin: Equisetum arvense L．
+  kana: スギナ
+  bunpu:
+  - 全
+トクサ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  latin: E. hyenmale L．
+  kana: トクサ
+  bunpu:
+  - 高
+イヌスギナ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  latin: E. palustre L.
+  kana: イヌスギナ
+  bunpu: []
+ヤシャゼンマイ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 4
+  latin: O. lancea Thunb．
+  kana: ヤシャゼンマイ
+  bunpu:
+  - 匹
+ヒメミズワラビ:
+  seiikubasho:
+  - 沈水
+  - 浮葉
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 9
+  - 10
+  - 11
+  latin: Ceratopteris thalictroides var. vulgaris
+  kana: ヒメミズワラビ
+  bunpu:
+  - 高
+ヘイケヌワラビ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki: []
+  latin: 'A. eremicola Oka of Kurata, sp. nov. '
+  kana: ヘイケヌワラビ
+  bunpu:
+  - 椛
+デンジソウ:
+  seiikubasho:
+  - 浮葉
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  latin: Marsilea quadrifolia L.
+  kana: デンジソウ
+  bunpu:
+  - 益
+  - 吉
+オオアカウキクサ:
+  seiikubasho:
+  - 浮葉
+  kaki:
+  - 0
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  latin: Azolla japonica Fr. et Sav.
+  kana: オオアカウキクサ
+  bunpu:
+  - 高
+  - 益
+ハンゲショウ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 6
+  - 7
+  - 8
+  latin: SauTiiTus chinensis (Lour.) Baill.
+  kana: ハンゲショウ
+  bunpu:
+  - 海
+.ドクダミ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 5
+  - 6
+  - 7
+  latin: Houttuynia cordata Thunb
+  kana: .ドクダミ
+  bunpu:
+  - 全
+アカメヤナギ(マルバヤナギ）:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  latin: Salix chaenomeloides Kimura
+  kana: アカメヤナギ(マルバヤナギ）
+  bunpu:
+  - 高
+  - 津
+  - 匹
+  - 吉
+タチヤナギ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  latin: S. subfragilis Anders.
+  kana: タチヤナギ
+  bunpu:
+  - 吉
+  - 高
+オノエヤナギ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 3
+  - 4
+  latin: S. sachalinensis Fr. Schm.
+  kana: オノエヤナギ
+  bunpu:
+  - 吉
+カワヤナギ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 2
+  - 3
+  latin: S. gilgiana Seemen
+  kana: カワヤナギ
+  bunpu:
+  - 高
+  - 津
+ネコヤナギ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 2
+  - 3
+  latin: S. graciiistyla Miq.
+  kana: ネコヤナギ
+  bunpu:
+  - 高
+  - 益
+  - 匹
+  - 吉
+サワグルミ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  - 6
+  latin: Pterocarya rhoifolia Sieb. et Zucc.
+  kana: サワグルミ
+  bunpu:
+  - 匹
+  - 椛
+  - 横
+オニグルミ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 5
+  - 6
+  latin: Juglans ailanthifolia Carr.
+  kana: オニグルミ
+  bunpu:
+  - 津
+ハシバミ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 3
+  - 4
+  latin: C. heterophylla Fischer. var. thunbergii Blume
+  kana: ハシバミ
+  bunpu:
+  - 匹
+ハンノキ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki: []
+  latin: A. japonica (Thunb.) Steud.
+  kana: ハンノキ
+  bunpu:
+  - 津
+ミズ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: Pilea hamaoi Makino
+  kana: ミズ
+  bunpu:
+  - 匹
+  - 津
+アオミズ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: P. mongolica Weddell
+  kana: アオミズ
+  bunpu:
+  - 津
+ウワバミソウ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  - 6
+  latin: Elatostema umbellatum Blume var. majus Maxim.
+  kana: ウワバミソウ
+  bunpu:
+  - 高
+  - 益
+  - 横
+  - 椛
+  - 吉
+  - 匹
+サンショウソウ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  - 6
+  latin: Pellionia minima Makino
+  kana: サンショウソウ
+  bunpu:
+  - 匹
+イシミカワ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: Persicaria perfoliatum Linn.
+  kana: イシミカワ
+  bunpu:
+  - 高
+  - 益
+  - 津
+ミゾソバ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: Persicaria thunbergii Sieb. et Zu.cc.
+  kana: ミゾソバ
+  bunpu:
+  - 全
+アキノウナギツカミ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: Persicaria sieboldi Meisn. var. sieboldi (Meisn.)
+  kana: アキノウナギツカミ
+  bunpu:
+  - 全
+ヤノネグサ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 9
+  - 10
+  latin: Persicaria nipponense Makino
+  kana: ヤノネグサ
+  bunpu:
+  - 椛
+ナガバノヤノネグサ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 9
+  - 10
+  latin: Persicaria breviochreata (Makino) Ohki
+  kana: ナガバノヤノネグサ
+  bunpu: []
+ヤナギタデ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: Persicaria hydropiper  (L.) Delarbre
+  kana: ヤナギタデ
+  bunpu:
+  - 高
+  - 益
+  - 海
+オカヒジキ:
+  ganpen_type: 砂浜
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: Salsola komarovii lliin
+  kana: オカヒジキ
+  bunpu:
+  - 海
+ツルナ:
+  ganpen_type: 砂浜
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: Tetragonia tetragonoides (Pall.) O.Kuntze
+  kana: ツルナ
+  bunpu:
+  - 海
+ハマツメクサ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  latin: S. taquetii Leveille
+  kana: ハマツメクサ
+  bunpu:
+  - 海
+カワラナデシコ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: Dianthus superbus L. var. longicalycinus(Maxim.)Williams
+  kana: カワラナデシコ
+  bunpu:
+  - 全
+マンテマ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  - 6
+  latin: Silene gallica L. var. quinquevulnera (Linn.) Rohrb.
+  kana: マンテマ
+  bunpu:
+  - 海
+ワチガイソウ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 4
+  latin: Pseudostellaria heterantha
+  kana: ワチガイソウ
+  bunpu:
+  - 吉
+ジュンサイ:
+  seiikubasho:
+  - 浮葉
+  kaki:
+  - 6
+  - 7
+  - 8
+  latin: Brasenia schreberi I. F. Gmel.
+  kana: ジュンサイ
+  bunpu:
+  - 高
+コウホネ:
+  seiikubasho:
+  - 浮葉
+  - 抽水
+  kaki:
+  - 6
+  - 7
+  - 8
+  - 9
+  latin: Nuphar japonicum DC.
+  kana: コウホネ
+  bunpu:
+  - 吉
+ヒツジグサ:
+  seiikubasho:
+  - 浮葉
+  kaki:
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  latin: Nymphaea tetragona Georgl
+  kana: ヒツジグサ
+  bunpu:
+  - 高
+ハス:
+  seiikubasho:
+  - 抽水
+  kaki:
+  - 7
+  - 8
+  latin: Nelumbo nucifera Gaertn.
+  kana: ハス
+  bunpu:
+  - 高
+  - 益
+マツモ:
+  seiikubasho:
+  - 沈水
+  kaki:
+  - 5
+  - 6
+  - 7
+  - 8
+  latin: Ceratophyllum demersum Linn.
+  kana: マツモ
+  bunpu:
+  - 高
+タガラシ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  latin: Ranunculus sceleratus Linn.
+  kana: タガラシ
+  bunpu:
+  - 全
+キツネノボタン:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 5
+  - 6
+  - 7
+  latin: R. ternatus Thunb.
+  kana: キツネノボタン
+  bunpu:
+  - 全
+ケキツネノボタン:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 5
+  - 6
+  - 7
+  latin: R. cantoniensis DC.
+  kana: ケキツネノボタン
+  bunpu:
+  - 高
+  - 益
+ヒメバイカモ:
+  seiikubasho:
+  - 沈水
+  - 浮葉
+  - 抽水
+  kaki:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  latin: R. kazusensis (Makino)
+  kana: ヒメバイカモ
+  bunpu:
+  - 吉
+ハマビワ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 10
+  - 11
+  latin: Litsea japonica (Thunb.) Juss.
+  kana: ハマビワ
+  bunpu:
+  - 海
+ハマダイコン:
+  ganpen_type: 砂浜
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  - 6
+  latin: Raphanus sativus Linn. var. raphanistroides(Makino) Makino
+  kana: ハマダイコン
+  bunpu:
+  - 海
+タネツケバナ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 3
+  - 4
+  - 5
+  latin: '* Cardamine flexuosa With.'
+  kana: タネツケバナ
+  bunpu:
+  - 全
+コンロンソウ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 5
+  - 6
+  latin: C. leucantha (Tausch) O.E. Schulz
+  kana: コンロンソウ
+  bunpu:
+  - 椛
+ミズタネツケバナ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 5
+  - 6
+  - 7
+  - 8
+  latin: Caraamine flexuosa With. var. latifolia Makino
+  kana: ミズタネツケバナ
+  bunpu:
+  - 益
+ワサビ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 3
+  - 4
+  latin: '* Wasabia japonica (Miquel) Matsum.'
+  kana: ワサビ
+  bunpu:
+  - 匹
+オランダガラシ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  - 6
+  latin: '* Nasturtium officinale R. Br.'
+  kana: オランダガラシ
+  bunpu:
+  - 津
+ハマハタザオ:
+  ganpen_type: 砂浜
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  - 6
+  latin: Arabis stelleri DC. var. japonica (A. Gray) Fr. Schm.
+  kana: ハマハタザオ
+  bunpu:
+  - 海
+ハタザオ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  - 6
+  latin: A. glabra (Linn.) Bernh.
+  kana: ハタザオ
+  bunpu:
+  - 匹
+  - 津
+モウセンゴケ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 6
+  - 7
+  - 8
+  latin: '* Drosera rotundifolia Linn.'
+  kana: モウセンゴケ
+  bunpu:
+  - 匹
+  - 吉
+  - 高
+タイトゴメ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 5
+  - 6
+  - 7
+  latin: S. oryzifolium Makino
+  kana: タイトゴメ
+  bunpu:
+  - 海
+ダイモンジソウ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: Saxifraga fortunei Hook. fil. var. incisolobata (Engler et lrmsch.) Nakai
+  kana: ダイモンジソウ
+  bunpu:
+  - 匹
+  - 椛
+ホクリクネコノメソウ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  latin: Chrysospleniumfaunae Franch.
+  kana: ホクリクネコノメソウ
+  bunpu:
+  - 横
+  - 津
+コチャルメルソウ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  latin: Mitella pauciflora Rosend.
+  kana: コチャルメルソウ
+  bunpu:
+  - 匹
+  - 津
+チャルメルソウ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  latin: M. stylosa H. Boiss.
+  kana: チャルメルソウ
+  bunpu:
+  - 高
+  - 匹
+  - 津
+シラヒゲソウ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 8
+  - 9
+  latin: Parnassia foliosa Hook. fil. et Thorns, var.nummularia (Maxim.) T. Ito
+  kana: シラヒゲソウ
+  bunpu:
+  - 匹
+ウメバチソウ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 8
+  - 9
+  - 10
+  latin: P. palustns Linn.
+  kana: ウメバチソウ
+  bunpu:
+  - 匹
+  - 津
+トベラ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  - 6
+  latin: Pittosporum tobira (Thunb.) Ait.
+  kana: トベラ
+  bunpu:
+  - 高
+  - 益
+  - 海
+カワラケツメイ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 8
+  - 9
+  latin: Cassia nomame (Sieb.) Honda
+  kana: カワラケツメイ
+  bunpu:
+  - 高
+  - 津
+ハマエンドウ:
+  ganpen_type: 砂浜
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  - 6
+  - 7
+  latin: Lathyrus maritimus (Linn.) BIGL.
+  kana: ハマエンドウ
+  bunpu:
+  - 海
+ミズハコベ:
+  seiikubasho:
+  - 沈水
+  - 浮葉
+  - 湿地・岸辺
+  kaki:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  latin: Callitriche verna Linn.
+  kana: ミズハコベ
+  bunpu:
+  - 全
+キツリフネ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  latin: Impatiens noli-tangere Linn.
+  kana: キツリフネ
+  bunpu:
+  - 匹
+ツリフネソウ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: I. textori Miq.
+  kana: ツリフネソウ
+  bunpu:
+  - 匹
+  - 津
+  - 横
+  - 吉
+  - 高
+マタタビ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 6
+  - 7
+  latin: Actinidia polygama (Sieb. et Zucc.) Maxim.
+  kana: マタタビ
+  bunpu:
+  - 匹
+  - 津
+  - 横
+  - 椛
+  - 吉
+  - 高
+サルナシ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 6
+  - 7
+  latin: Actinidia arguta (Sieb. et Zucc.) Planch.ex.Miq
+  kana: サルナシ
+  bunpu:
+  - 匹
+  - 椛
+  - 吉
+ハマヒサカキ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 11
+  - 12
+  latin: E. emarginata (Thunb.) Makino
+  kana: ハマヒサカキ
+  bunpu:
+  - 海
+ミズオトギリ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 8
+  - 9
+  latin: Triadenum japonicum (Blume) Makino
+  kana: ミズオトギリ
+  bunpu:
+  - 津
+アゼオトギリ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 8
+  - 9
+  - 10
+  latin: '* H.oliganthum Franch. et Savat.'
+  kana: アゼオトギリ
+  bunpu:
+  - 全
+キガンピ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  latin: Wikstroemia trichotoma (Thunb.) Makino
+  kana: キガンピ
+  bunpu:
+  - 高
+マルバアキグミ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  latin: E. umbellata Thunb. var. rotundifolia Makino
+  kana: マルバアキグミ
+  bunpu:
+  - 海
+マルバグミ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  latin: E. macrophylla Thunb.
+  kana: マルバグミ
+  bunpu:
+  - 海
+キカシグサ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 8
+  - 9
+  - 10
+  latin: Rotala indica (Willd.) Koehne
+  kana: キカシグサ
+  bunpu:
+  - 全
+ミソハギ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  latin: Lythrum anceps (Koehne) Makino
+  kana: ミソハギ
+  bunpu:
+  - 津
+  - 椛
+ヒシ:
+  seiikubasho:
+  - 浮葉
+  kaki:
+  - 6
+  - 7
+  - 8
+  - 9
+  latin: '* Trapa japonica Flerov'
+  kana: ヒシ
+  bunpu:
+  - 高
+  - 益
+タニタデ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  latin: C. erubescens Franch･ et Savat
+  kana: タニタデ
+  bunpu:
+  - 高
+  - ' '
+  - 匹
+アカバナ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  latin: Epilobium pyrricholophum Franch. et Savat. var.pyrricholophum(Fr. et Sav.)
+  kana: アカバナ
+  bunpu:
+  - 匹
+  - ' '
+  - 津
+  - ' '
+  - 椛
+チョウジタデ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 8
+  - 9
+  - 10
+  latin: '* Jussiaea postrata (Roxb.) Leveille'
+  kana: チョウジタデ
+  bunpu:
+  - 全
+ミズユキノシタ:
+  seiikubasho:
+  - 沈水
+  - 浮葉
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: Ludwigia ovalis Miq.
+  kana: ミズユキノシタ
+  bunpu:
+  - 益
+  - 津
+ホザキノフサモ:
+  seiikubasho:
+  - 沈水
+  - 浮葉
+  kaki:
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: Myriophyllnm spicatum Linti.
+  kana: ホザキノフサモ
+  bunpu:
+  - 高
+オオフサモ:
+  seiikubasho:
+  - 沈水
+  - 浮葉
+  - 抽水
+  - 湿地・岸辺
+  kaki: []
+  latin: ' Myriophyllum aquaticum'
+  kana: オオフサモ
+  bunpu: []
+セリ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  latin: '* Oenanthe iavanica (Blume) DC.'
+  kana: セリ
+  bunpu:
+  - 全
+ハマゼリ:
+  ganpen_type: 砂浜
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 8
+  - 9
+  - 10
+  latin: Cnidium iaponicum Miq.
+  kana: ハマゼリ
+  bunpu:
+  - 海
+ハマボウフウ:
+  ganpen_type: 砂浜
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 6
+  - 7
+  latin: '* Glehma littoralis Fr. Schm., ex Miq.'
+  kana: ハマボウフウ
+  bunpu:
+  - 海
+ハマウド:
+  ganpen_type: 砂浜
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  - 6
+  latin: A. japonica A. Gray
+  kana: ハマウド
+  bunpu:
+  - 海
+ボタンボウフウ:
+  ganpen_type: 砂浜
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  latin: Peucedanum japomcum Thunb.
+  kana: ボタンボウフウ
+  bunpu:
+  - 海
+キシツツジ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  latin: R. ripense Makmo
+  kana: キシツツジ
+  bunpu:
+  - 匹
+  - 吉
+クサレダマ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 6
+  - 7
+  - 8
+  latin: Lysimachia vulgaris Linn. var. davurica(Ledeb.)R.Knuth
+  kana: クサレダマ
+  bunpu:
+  - 匹
+  - 津
+ヌマトラノオ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  latin: L.fortunei Maxim.
+  kana: ヌマトラノオ
+  bunpu:
+  - 匹
+  - 津
+ハマボッス:
+  ganpen_type: 砂浜
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 5
+  - 6
+  latin: L. mauritiana Lamarck
+  kana: ハマボッス
+  bunpu:
+  - 海
+サワフタギ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 5
+  - 6
+  latin: S. chinensis (Lour.) Druce forma pilosa (Nakai)Ohwi
+  kana: サワフタギ
+  bunpu:
+  - 匹
+  - 横
+  - 椛
+  - 吉
+エゴノキ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 5
+  - 6
+  latin: Styrax japonica Sieb. et Zucc.
+  kana: エゴノキ
+  bunpu:
+  - 全
+アケボノソウ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 9
+  - 10
+  latin: S. bimaculata (Sieb. et Zucc.) Hook, et Thorns.
+  kana: アケボノソウ
+  bunpu:
+  - 匹
+  - 津
+チョウジソウ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 5
+  latin: Amsonia elliptica (Thunb.) Roem. et Schult.
+  kana: チョウジソウ
+  bunpu:
+  - 津
+ハマヒルガオ:
+  ganpen_type: 砂浜
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 5
+  - 6
+  latin: '* Calystegia soldanella (Linn.) Roem. et Schult.'
+  kana: ハマヒルガオ
+  bunpu:
+  - 海
+ハマネナシカズラ:
+  ganpen_type: 砂浜
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: C. chinensis Lam.
+  kana: ハマネナシカズラ
+  bunpu:
+  - 海
+ミズタビラコ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 5
+  - 6
+  latin: T. brevipes (Maxim.) Maxim.
+  kana: ミズタビラコ
+  bunpu:
+  - 全
+ハマゴウ:
+  ganpen_type: 砂浜
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  latin: Vitex rotundifolia Linn. fil.
+  kana: ハマゴウ
+  bunpu:
+  - 海
+ミゾホウズキ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  latin: Mimulus inflatus (Miq.) Nakai
+  kana: ミゾホウズキ
+  bunpu:
+  - 匹
+キクモ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 8
+  - 9
+  - 10
+  latin: Limnophila sessiliflora Blume
+  kana: キクモ
+  bunpu:
+  - 益
+アゼトウガラシ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 8
+  - 9
+  - 10
+  latin: '* L. angustifolia (Benth.) Wettst.'
+  kana: アゼトウガラシ
+  bunpu:
+  - 全
+アゼナ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 8
+  - 9
+  - 10
+  latin: '* L. pyxidaria Linn.'
+  kana: アゼナ
+  bunpu:
+  - 全
+ムシクサ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  latin: Veronica peregrina Linn.
+  kana: ムシクサ
+  bunpu:
+  - 益
+カワヂシャ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 5
+  - 6
+  latin: V.anagallis-aquatica Linn.
+  kana: カワヂシャ
+  bunpu:
+  - 高
+ハマウツボ:
+  ganpen_type: 砂浜
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 5
+  - 6
+  - 7
+  latin: Orobanche coerulescens Stephan, ex Willd.
+  kana: ハマウツボ
+  bunpu:
+  - 海
+イワタバコ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 6
+  - 7
+  - 8
+  - 9
+  latin: Conandron ramondioides Sieb. et Zucc.
+  kana: イワタバコ
+  bunpu:
+  - 匹
+  - 横
+  - 椛
+  - 吉
+ノタヌキモ:
+  seiikubasho:
+  - 沈水
+  - 浮葉
+  kaki:
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: Utricularia pilosa (Makino) Makino
+  kana: ノタヌキモ
+  bunpu:
+  - 高
+  - ' '
+  - 益
+タヌキモ:
+  seiikubasho:
+  - 沈水
+  - 浮葉
+  kaki:
+  - 7
+  - 8
+  - 9
+  latin: U. japonica Makino
+  kana: タヌキモ
+  bunpu:
+  - 高
+  - 益
+ソナレムグラ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 8
+  - 9
+  latin: Hedyotis biflora (Linn.) Lam. var. parvifoliaHook. et Arn.
+  kana: ソナレムグラ
+  bunpu:
+  - 海
+ミゾカクシ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: '* Lobelia chinensis Lout.'
+  kana: ミゾカクシ
+  bunpu:
+  - 全
+サワヒヨドリ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 8
+  - 9
+  - 10
+  latin: E. lindleyanum DC.
+  kana: サワヒヨドリ
+  bunpu:
+  - 匹
+  - 津
+  - 吉
+ユウガギク:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 8
+  - 9
+  - 10
+  latin: Kalimeris pinnatifida (Maxim.) Kitam.
+  kana: ユウガギク
+  bunpu:
+  - 全
+ハマべノギク:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  latin: Heteropappus arenarius Kitam.
+  kana: ハマべノギク
+  bunpu:
+  - 高
+  - 益
+  - 海
+ダルマギク:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 9
+  - 10
+  - 11
+  - 12
+  latin: ◎A. spathulifolius Maxim.
+  kana: ダルマギク
+  bunpu:
+  - 海
+オタカラコウ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: Ligularia fischeri (Ledeb.) Turcz.
+  kana: オタカラコウ
+  bunpu:
+  - 匹
+サワギク:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 5
+  - 6
+  - 7
+  - 8
+  latin: S. nikoensis Miq.
+  kana: サワギク
+  bunpu:
+  - 匹
+  - 椛
+サワオグルマ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  - 6
+  latin: S. pierotii Miq.
+  kana: サワオグルマ
+  bunpu:
+  - 匹
+  - 津
+カワラヨモギ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 9
+  - 10
+  latin: Artemisia capillaris Thunb.
+  kana: カワラヨモギ
+  bunpu:
+  - 高
+  - 海
+タカサブロウ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 8
+  - 9
+  latin: '* Eclipta prostrata (Linn.) Linn.'
+  kana: タカサブロウ
+  bunpu:
+  - 全
+ネコノシタ（ハマグルマ）:
+  ganpen_type: 砂浜
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: Wedelia prostrata (Hook, et Arn.) Hemsl.
+  kana: ネコノシタ（ハマグルマ）
+  bunpu:
+  - 海
+アゼトウナ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  latin: Crepidiastrum keiskeanum (Maxim.) Nakai
+  kana: アゼトウナ
+  bunpu:
+  - 海
+ホソバワダン:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki: []
+  latin: C.lanceolatum (Houtt.) Nakai
+  kana: ホソバワダン
+  bunpu:
+  - 海
+ハマニガナ:
+  ganpen_type: 砂浜
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: Ixeris repens (Linn.) A. Gray
+  kana: ハマニガナ
+  bunpu:
+  - 海
+ヒメガマ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 6
+  - 7
+  - 8
+  latin: Typha angustata Bory et Chauberd.
+  kana: ヒメガマ
+  bunpu:
+  - 高
+ミクリ:
+  seiikubasho:
+  - 抽水
+  kaki:
+  - 6
+  - 7
+  - 8
+  - 9
+  latin: Sparganium stoloniferum Hamilt.
+  kana: ミクリ
+  bunpu:
+  - 高
+ヒルムシロ:
+  seiikubasho:
+  - 浮葉
+  kaki:
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: Potamogeton distinctus A.Benn.
+  kana: ヒルムシロ
+  bunpu:
+  - 全
+オヒルムシロ:
+  seiikubasho:
+  - 沈水
+  - 浮葉
+  kaki:
+  - 5
+  - 6
+  - 7
+  - 8
+  latin: P.n natansL.
+  kana: オヒルムシロ
+  bunpu: []
+ミズヒキモ:
+  seiikubasho:
+  - 沈水
+  - 浮葉
+  kaki:
+  - 6
+  - 7
+  - 8
+  - 9
+  latin: P. octandrus Poir. var. miduhikimo (Makino)Hara
+  kana: ミズヒキモ
+  bunpu:
+  - 高
+  - 津
+ヤナギモ:
+  seiikubasho:
+  - 沈水
+  kaki:
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  latin: P. oxyphyllus Miq.
+  kana: ヤナギモ
+  bunpu:
+  - 全
+エビモ:
+  seiikubasho:
+  - 沈水
+  kaki:
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: P. crispus L.
+  kana: エビモ
+  bunpu:
+  - 全
+イバラモ:
+  seiikubasho:
+  - 沈水
+  kaki:
+  - 7
+  - 8
+  - 9
+  latin: Najas marina Linn.
+  kana: イバラモ
+  bunpu:
+  - 全
+イトトリゲモ:
+  seiikubasho:
+  - 沈水
+  kaki:
+  - 6
+  - 7
+  - 8
+  - 9
+  latin: Najas gracillima (A. Br.) Magnus
+  kana: イトトリゲモ
+  bunpu: []
+アマモ:
+  seiikubasho:
+  - 沈水
+  kaki:
+  - 5
+  - 6
+  - 7
+  latin: Zostera marina Linn.
+  kana: アマモ
+  bunpu:
+  - 海
+へラオモダカ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  latin: Alisma canaliculatum A.Br. er Bouche
+  kana: へラオモダカ
+  bunpu:
+  - 匹
+  - 津
+  - 吉
+ウリカワ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  latin: Sagittaria pygmaea Miq.
+  kana: ウリカワ
+  bunpu:
+  - 全
+オモダカ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 8
+  - 9
+  - 10
+  latin: S. trifolia Linn.
+  kana: オモダカ
+  bunpu:
+  - 高
+  - 益
+  - 匹
+アギナシ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: S. aginashi Makino
+  kana: アギナシ
+  bunpu:
+  - 高
+  - 益
+セキショウモ:
+  seiikubasho:
+  - 沈水
+  kaki:
+  - 8
+  - 9
+  - 10
+  latin: Vallisneria asiatica Miki
+  kana: セキショウモ
+  bunpu:
+  - 高
+  - 益
+クロモ:
+  seiikubasho:
+  - 沈水
+  kaki:
+  - 8
+  - 9
+  - 10
+  latin: Hydrilla verticillata (Linn, fil.) Casp.
+  kana: クロモ
+  bunpu:
+  - 高
+  - ' '
+  - 益
+ミズオオバコ:
+  seiikubasho:
+  - 沈水
+  kaki:
+  - 8
+  - 9
+  - 10
+  latin: Ottelia japonica Miq.
+  kana: ミズオオバコ
+  bunpu:
+  - 高
+トチカガミ:
+  seiikubasho:
+  - 浮葉
+  kaki:
+  - 8
+  - 9
+  - 10
+  latin: Hydrocharis asiatica Miq.
+  kana: トチカガミ
+  bunpu:
+  - 高
+  - 益
+オオカナダモ:
+  seiikubasho:
+  - 沈水
+  kaki:
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: Egeria densa Planch
+  kana: オオカナダモ
+  bunpu:
+  - 全
+マコモ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 6
+  - 7
+  - 8
+  latin: Zizania latifolia Turcz.
+  kana: マコモ
+  bunpu:
+  - 高
+ツルヨシ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 8
+  - 9
+  latin: Phragmites japonica Steud.
+  kana: ツルヨシ
+  bunpu:
+  - 全
+ヨシ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 6
+  - 7
+  - 8
+  latin: P. communis Trin.
+  kana: ヨシ
+  bunpu:
+  - 高
+  - 益
+セイコノヨシ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 6
+  - 7
+  - 8
+  latin: P. karka (Retz.) Trin.
+  kana: セイコノヨシ
+  bunpu:
+  - 高
+.オニシバ:
+  ganpen_type: 砂浜
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 6
+  - 7
+  - 8
+  latin: Z. macrostachya Franch. et Savat
+  kana: .オニシバ
+  bunpu:
+  - 海
+ハマエノコロ:
+  ganpen_type: 砂浜
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  latin: S. viridis P. Beauv. var. pachystachys (Franch.et Savat.) Makino et Nemoto
+  kana: ハマエノコロ
+  bunpu:
+  - 海
+クロカワズスゲ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  latin: Carex arenicola Fr. Schm.
+  kana: クロカワズスゲ
+  bunpu:
+  - 高
+コウボウムギ:
+  ganpen_type: 砂浜
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  - 6
+  - 7
+  latin: C. kobomugi Ohwi
+  kana: コウボウムギ
+  bunpu:
+  - 海
+ゴウソ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 5
+  - 6
+  latin: C. maximowiczii Miq.
+  kana: ゴウソ
+  bunpu:
+  - 全
+グレーンスゲ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 6
+  - 7
+  latin: C. jackiana Boott. subsp. parciflora Kukenth.var. parciflora
+  kana: グレーンスゲ
+  bunpu:
+  - 津
+ウマスゲ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  latin: C. idzuroei Franch. et Savat.
+  kana: ウマスゲ
+  bunpu:
+  - 津
+ジュズスゲ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  latin: C. ischnostachya Steudel
+  kana: ジュズスゲ
+  bunpu:
+  - 津
+カサスゲ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 5
+  - 6
+  latin: C. dispalata Boott.
+  kana: カサスゲ
+  bunpu:
+  - 匹
+  - 津
+コウボウシバ:
+  ganpen_type: 砂浜
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 5
+  - 6
+  latin: C. pumila Thunberg
+  kana: コウボウシバ
+  bunpu:
+  - 海
+オニスゲ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 5
+  - 6
+  - 7
+  latin: C. dickinsii Franch. et Savat.
+  kana: オニスゲ
+  bunpu:
+  - 津
+クログワイ:
+  seiikubasho:
+  - 抽水
+  kaki:
+  - 7
+  - 8
+  - 9
+  latin: Eleocharis kuroguwai Ohwi
+  kana: クログワイ
+  bunpu:
+  - 高
+ハリイ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  latin: E. pellucida Ｐresl
+  kana: ハリイ
+  bunpu:
+  - 津
+マツバイ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  latin: E. acicularis (Linn.) Roem. et Schult. var.longiseta Svenson
+  kana: マツバイ
+  bunpu:
+  - 全
+ビロードテンツキ:
+  ganpen_type: 砂浜
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: Fimbristylis sericea (Poir.) R. Br.
+  kana: ビロードテンツキ
+  bunpu:
+  - 海
+ヒデリコ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: F. miliacea (Linn.) Vahl
+  kana: ヒデリコ
+  bunpu:
+  - 全
+テンツキ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 6
+  - 7
+  latin: F. dichotoma (Linn.) Vahl
+  kana: テンツキ
+  bunpu:
+  - 全
+アゼテンツキ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 8
+  - 9
+  - 10
+  latin: F. squarrosa  Vahl
+  kana: アゼテンツキ
+  bunpu:
+  - 全
+ヒメテンツキ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: F. autumnalis (Linn.) Roem. et Schultes
+  kana: ヒメテンツキ
+  bunpu:
+  - 全
+エゾアブラガヤ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 8
+  - 9
+  latin: Scirpus wichurai Bocklr. forma borealis Ohwi
+  kana: エゾアブラガヤ
+  bunpu:
+  - 匹
+  - 椛
+コマツカサススキ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 8
+  - 9
+  latin: S. fuirenoides Maxim.
+  kana: コマツカサススキ
+  bunpu:
+  - 匹
+  - 椛
+ウキヤガラ:
+  seiikubasho:
+  - 抽水
+  kaki:
+  - 5
+  - 6
+  - 7
+  - 8
+  latin: S.yagara Ohwi
+  kana: ウキヤガラ
+  bunpu:
+  - 海
+ヒメホタルイ:
+  seiikubasho:
+  - 抽水
+  kaki:
+  - 7
+  - 8
+  - 9
+  latin: S. lineolatus Franch. et Savat
+  kana: ヒメホタルイ
+  bunpu:
+  - 津
+カンガレイ:
+  seiikubasho:
+  - 抽水
+  kaki:
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: S. pre.nii Dietr.
+  kana: カンガレイ
+  bunpu:
+  - 椛
+  - 海
+サンカクイ:
+  seiikubasho:
+  - 抽水
+  kaki:
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: S. triqueter Linn.
+  kana: サンカクイ
+  bunpu:
+  - 高
+  - 益
+  - 津
+ヒンジガヤツリ:
+  seiikubasho:
+  - 抽水
+  kaki:
+  - 8
+  - 9
+  - 10
+  latin: Lipocarpha microcephala (R. Br.) Kunth
+  kana: ヒンジガヤツリ
+  bunpu:
+  - 全
+ミズガヤツリ:
+  seiikubasho:
+  - 抽水
+  kaki:
+  - 8
+  - 9
+  - 10
+  latin: Cyperus serotinus Rottb.
+  kana: ミズガヤツリ
+  bunpu:
+  - 高
+カワラスガナ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 8
+  - 9
+  latin: L. sanguinolentus Vahl
+  kana: カワラスガナ
+  bunpu:
+  - 全
+オニガヤツリ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  latin: C. pilosus Vahl
+  kana: オニガヤツリ
+  bunpu:
+  - 高
+  - 益
+ウシクグ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 8
+  - 9
+  - 10
+  latin: C. orthostahyus Franch. et Savat.
+  kana: ウシクグ
+  bunpu:
+  - 全
+コゴメガヤツリ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 8
+  - 9
+  - 10
+  latin: C. iria Linn.
+  kana: コゴメガヤツリ
+  bunpu:
+  - 全
+カヤツリグサ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 8
+  - 9
+  - 10
+  latin: C. microiria Steud.
+  kana: カヤツリグサ
+  bunpu:
+  - 全
+アオガヤツリ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: C. nipponicus Franch. et Savat.
+  kana: アオガヤツリ
+  bunpu:
+  - 全
+ヒメクグ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: Kyllinga brevifolia Rottb. var. leiolepis(Franch.et Savat･) Hara
+  kana: ヒメクグ
+  bunpu:
+  - 全
+セキショウ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 3
+  - 4
+  - 5
+  latin: Acorus gramineus Soland.
+  kana: セキショウ
+  bunpu:
+  - 高
+ウキクサ:
+  seiikubasho:
+  - 浮標
+  kaki:
+  - 7
+  - 8
+  latin: Spirodela polyrhiza (Linn.) Schleid.
+  kana: ウキクサ
+  bunpu:
+  - 全
+イヌノヒゲ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 8
+  - 9
+  latin: Eriocaulon miquelianum Koern.
+  kana: イヌノヒゲ
+  bunpu:
+  - 津
+イボクサ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 8
+  - 9
+  - 10
+  latin: Aneilema japonicum (Thunb.) Kunth
+  kana: イボクサ
+  bunpu:
+  - 全
+ミズアオイ:
+  seiikubasho:
+  - 抽水
+  kaki:
+  - 7
+  - 8
+  - 9
+  - 10
+  latin: Monochoria korsakowii Regel et Maack
+  kana: ミズアオイ
+  bunpu:
+  - 全
+コナギ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 9
+  - 10
+  - 11
+  latin: M. vaginalis (Burm. fil.) Presl
+  kana: コナギ
+  bunpu:
+  - 全
+クサイ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 6
+  - 7
+  latin: Juncus tenuis Willd.
+  kana: クサイ
+  bunpu:
+  - 全
+イ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 6
+  - 7
+  latin: J. effusus Linn. var. decipiens Buchen.
+  kana: イ
+  bunpu:
+  - 高
+  - 益
+コヒゲ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 6
+  - 7
+  latin: J. effusus Linn. var. decipiens Buchen. formautilis Makino
+  kana: コヒゲ
+  bunpu:
+  - 高
+  - 益
+タチコウガイゼキショウ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 6
+  - 7
+  latin: J. krameri Franch. et Savat.
+  kana: タチコウガイゼキショウ
+  bunpu:
+  - 匹
+コウガイゼキショウ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 6
+  - 7
+  latin: J. leschenaultii Gay
+  kana: コウガイゼキショウ
+  bunpu:
+  - 匹
+アオコウガイゼキショウ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 7
+  - 8
+  - 9
+  latin: J. papillosus Franch. et Savat.
+  kana: アオコウガイゼキショウ
+  bunpu:
+  - 津
+クサスギカズラ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 5
+  - 6
+  latin: Asparagus lucidus LJfidl.
+  kana: クサスギカズラ
+  bunpu:
+  - 海
+カキツバタ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 5
+  - 6
+  latin: I. laevigata Fisch.
+  kana: カキツバタ
+  bunpu:
+  - 匹
+アヤメ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki: []
+  latin: I. sanguinea Hornem.
+  kana: アヤメ
+  bunpu:
+  - 匹
+ノハナショウブ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 6
+  - 7
+  latin: I. ensata Thunb. var. spontanea (Makino) Nakai
+  kana: ノハナショウブ
+  bunpu:
+  - 匹
+キショウブ:
+  seiikubasho:
+  - 抽水
+  - 湿地・岸辺
+  kaki:
+  - 4
+  - 5
+  - 6
+  latin: I. pseudacorus
+  kana: キショウブ
+  bunpu:
+  - 全
+ミズチドリ:
+  seiikubasho:
+  - 湿地・岸辺
+  kaki:
+  - 6
+  - 7
+  latin: P. hologlottis Maxim.
+  kana: ミズチドリ
+  bunpu:
+  - 匹
