@@ -4,14 +4,17 @@
 import os
 import romkan
 
+def try_unicode(str):
+    try:
+        return str.decode('utf-8')
+    except Exception:
+        return str
+
 class Plant:
 
     def __init__(self, latin = "", romaji = "", kana = "",
             display_name = "", type = "", kaki = None, seiikubasho = None, bunpu = None, ganpen_type = None):
-        try:
-            kana = kana.decode('utf-8')
-        except Exception:
-            pass
+        kana = try_unicode(kana)
         if not romaji and kana:
             romaji = romkan.to_roma(kana)
         elif not kana and romaji:
@@ -32,3 +35,13 @@ class Plant:
 
     def image(self, suffix):
         return os.path.join("/images/shokubutsu", self.romaji, self.romaji + "-" + suffix + ".jpg")
+
+    @staticmethod
+    def dart_list(ls):
+        return "[" + ", ".join(['"' + str + '"' for str in ls]) + "]"
+
+    def dart_bunpu(self):
+        return Plant.dart_list(self.bunpu)
+
+    def dart_seiikubasho(self):
+        return Plant.dart_list(self.seiikubasho)
