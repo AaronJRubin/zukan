@@ -184,7 +184,7 @@ task :validate_data do
   data_files.each do |data_file|
     schema_file = data_file.pathmap("%X.schema")
     if File.exists? schema_file
-      sh "kwalify -lf #{schema_file} #{data_file}"
+      sh "kwalify -f #{schema_file} #{data_file}"
     end
   end
 end
