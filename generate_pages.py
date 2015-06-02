@@ -27,7 +27,7 @@ animal_map = { animal.romaji : animal for animal in animal_list }
 
 plant_data = parse_yaml_file("data/manually_processed/plant_data.yaml")
 
-plant_list = sorted([Plant(romaji = romaji, kana = romkan.to_kana(romaji), **fields) for romaji, fields in plant_data.iteritems()], key = lambda plant: plant.kana)
+plant_list = sorted([Plant(kana = kana, **fields) for kana, fields in plant_data.iteritems()], key = lambda plant: plant.kana)
 
 plant_map = { plant.romaji : plant for plant in plant_list }
 
