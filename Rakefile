@@ -142,7 +142,7 @@ desc "Compress images of animals in master-images and move to workspace"
 compress_images_task(:compress_animal_images, "#{MASTER_IMAGES}/ikimono/**/*.jpg", convert_animal)
 
 convert_plant = lambda do |plant, compressed_plant|
-  return convert(plant, compressed_plant, resize = "x#{ICHIRAN_IMAGE_HEIGHT}", quality = "60")
+  return convert(plant, compressed_plant, resize = "#{HEADER_IMAGE_WIDTH}x", quality = "60")
 end
 
 desc "Compress images of plants in master-images and move to workspace"
