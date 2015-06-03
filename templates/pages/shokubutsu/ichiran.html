@@ -17,11 +17,11 @@
 <div id="search-area" class="collapsed">
 
   <div class="search-section">
-    <div class="search-header">記事のテキストで検索<input type="text" id="article-search"></div>
+    <div class="search-header"><span class="search-description">記事のテキストで検索</span><input type="text" id="article-search"></div>
   </div>
 
   <div class="search-section" id="type-search">
-    <div class="search-header">種類で検索
+    <div class="search-header"><span class="search-description">種類で検索</span>
       {% for type in plant_types %}
       <input type = "radio" name = "type" value = {{type["romaji"]}} id = {{type["romaji"]}}>
       <label for = {{type["romaji"]}}>{{type["japanese"]}}</label>
@@ -31,11 +31,11 @@
     </div>
   </div>
   <div class="search-section">
-    <div class="search-header">咲く月で検索<input type="number" min="1" max="12" id="kaki-search"></div>
+    <div class="search-header"><span class="search-description">咲く月で検索</span><input type="number" min="1" max="12" id="kaki-search"></div>
   </div>
 
 	<div class="search-section" id="seiikubasho-search">
-		<div class="search-header">生育場所で検索
+    <div class="search-header"><span class="search-description">生育場所で検索</span>
       {% for basho in seiikubasho %}
       <input type = "checkbox" value = {{basho["japanese"]}} id = {{basho["romaji"]}}>
       <label for = {{basho["romaji"]}}>{{basho["japanese"]}}</label>

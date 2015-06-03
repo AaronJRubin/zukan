@@ -433,6 +433,13 @@ nav ul {
     text-align: center;
     width: 24.8%;
   }
+  .search-description {
+    display: inline-block;
+    margin-right: 2%;
+  }
+  label {
+    margin-right: 1%;
+  }
   .search-header,
   li {
     margin-bottom: .2em;
@@ -440,12 +447,12 @@ nav ul {
   .search-header {
     display: flex;
     align-items: center;
+    min-height: 28.5px;
   }
   [type='text'],
   [type='number'] {
     @extend %rounded-border;
-    font-size: inherit;
-    margin-left: 2%;
+    font-size: inherit; 
   }
   [type='number'] {
     width: 3em;
@@ -462,7 +469,7 @@ nav ul {
     text-align: right;
     margin-right: 2%;
   }
-  .seisokuchi-search {
+  #seisokuchi-search {
     [type='checkbox'] {
       display: none;
     }
