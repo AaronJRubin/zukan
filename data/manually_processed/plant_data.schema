@@ -29,7 +29,7 @@ mapping:
                     - enum: [全, 高, 匹, 椛, 益, 吉, 海, 津, 横]
                       unique: true
             type:
-                enum: [shida, tanshishokubutsu, soushishokubutsu]
+                enum: [shida, tanshiyou, soushiyou]
                 required: true
             display_name:
                 type: str

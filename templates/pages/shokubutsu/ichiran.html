@@ -19,6 +19,17 @@
   <div class="search-section">
     <div class="search-header">記事のテキストで検索<input type="text" id="article-search"></div>
   </div>
+
+  <div class="search-section" id="type-search">
+    <div class="search-header">種類で検索
+      {% for type in plant_types %}
+      <input type = "radio" name = "type" value = {{type["english"]}} id = {{type["english"]}}>
+      <label for = {{type["english"]}}>{{type["japanese"]}}</label>
+      {% endfor %}
+      <input type = "radio" name = "type" value = "all" id = all >
+      <label for = all>全</label>
+    </div>
+  </div>
   <div class="search-section">
     <div class="search-header">咲く月で検索<input type="number" min="1" max="12" id="kaki-search"></div>
   </div>

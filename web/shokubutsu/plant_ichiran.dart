@@ -7,6 +7,7 @@ import 'package:takatsugawa_zukan/ichiran_utils.dart';
 TextInputElement articleSearch;
 NumberInputElement kakiSearch;
 ElementList<LIElement> plantTiles;
+ElementList<RadioButtonInputElement> typeSearchBoxes;
 
 void main() {
   setUpSearchAreaToggle();
@@ -14,6 +15,7 @@ void main() {
   //excludeCheckboxes = document.querySelectorAll(".search-checkbox.exclude");
   articleSearch = document.querySelector("#article-search");
   kakiSearch = document.querySelector("#kaki-search");
+  typeSearchBoxes = document.querySelectorAll("#type-search input");
   plantTiles = document.querySelectorAll("ol.tiles li");
   /*for (int i = 0; i < includeCheckboxes.length; i++) {
     CheckboxInputElement includeCheckbox = includeCheckboxes[i];
@@ -25,14 +27,19 @@ void main() {
       toggleCheckboxChanged(excludeCheckbox, includeCheckbox);
     });
   }*/
-  articleSearch.onChange.listen((e) => refresh());
-  articleSearch.onKeyUp.listen((e) => refresh());
-  kakiSearch.onChange.listen((e) => refresh());
-  kakiSearch.onKeyUp.listen((e) => refresh());
+  textSearchListen(articleSearch);
+  textSearchListen(kakiSearch);
+  typeSearchBoxes.forEach((el) => el.onChange.listen((e) => refresh()));
   refresh(); // maybe things were clicked before script was loaded
 }
 
-void toggleCheckboxChanged(CheckboxInputElement self, CheckboxInputElement partner) {
+void textSearchListen(InputElement field) {
+  field.onChange.listen((e) => refresh());
+  field.onKeyUp.listen((e) => refresh());
+}
+
+void toggleCheckboxChanged(
+    CheckboxInputElement self, CheckboxInputElement partner) {
   if (self.checked) {
     if (partner.checked) {
       partner.checked = false;
@@ -52,6 +59,11 @@ Filter<Plant> buildFilter() {
   if (searchKaki.length > 0) {
     int intVal = int.parse(searchKaki);
     filter.add((plant) => plant.kaki.contains(intVal));
+  }
+  RadioButtonInputElement checkedTypeInput =
+      typeSearchBoxes.firstWhere((el) => el.checked, orElse: () => null);
+  if (checkedTypeInput != null && checkedTypeInput.value != 'all') {
+    filter.add((plant) => plant.type == checkedTypeInput.value);
   }
   /*
   for (CheckboxInputElement checkbox in includeCheckboxes) {
