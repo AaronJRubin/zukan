@@ -37,8 +37,8 @@
 	<div class="search-section" id="seiikubasho-search">
     <div class="search-header"><span class="search-description">生育場所で検索</span>
       {% for basho in seiikubasho %}
-      <input type = "checkbox" value = {{basho["japanese"]}} id = {{basho["romaji"]}}>
-      <label for = {{basho["romaji"]}}>{{basho["japanese"]}}</label>
+      <input type = "checkbox" value = {{basho}} id = {{basho}}>
+      <label for = {{basho}}>{{basho}}</label>
       {% endfor %}
     </div>
   </div>

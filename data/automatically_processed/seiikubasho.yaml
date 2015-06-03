@@ -1,11 +1,6 @@
 seiikubasho:
-    - romaji: chinsui
-      japanese: 沈水
-    - romaji: fuyou
-      japanese: 浮葉
-    - romaji: fuhyou
-      japanese: 浮標
-    - romaji: chuusui
-      japanese: 抽水
-    - romaji: shicchikishibe
-      japanese: 湿地・岸辺
+    - 沈水
+    - 浮葉
+    - 浮標
+    - 抽水
+    - 湿地・岸辺
