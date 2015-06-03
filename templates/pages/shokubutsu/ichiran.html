@@ -23,8 +23,8 @@
   <div class="search-section" id="type-search">
     <div class="search-header">種類で検索
       {% for type in plant_types %}
-      <input type = "radio" name = "type" value = {{type["english"]}} id = {{type["english"]}}>
-      <label for = {{type["english"]}}>{{type["japanese"]}}</label>
+      <input type = "radio" name = "type" value = {{type["romaji"]}} id = {{type["romaji"]}}>
+      <label for = {{type["romaji"]}}>{{type["japanese"]}}</label>
       {% endfor %}
       <input type = "radio" name = "type" value = "all" id = all >
       <label for = all>全</label>
@@ -34,8 +34,13 @@
     <div class="search-header">咲く月で検索<input type="number" min="1" max="12" id="kaki-search"></div>
   </div>
 
-	<div class="search-section">
-		<div class="search-header">生息地で検索</div>
+	<div class="search-section" id="seiikubasho-search">
+		<div class="search-header">生育場所で検索
+      {% for basho in seiikubasho %}
+      <input type = "checkbox" value = {{basho["japanese"]}} id = {{basho["romaji"]}}>
+      <label for = {{basho["romaji"]}}>{{basho["japanese"]}}</label>
+      {% endfor %}
+    </div>
   </div>
 </div>
 

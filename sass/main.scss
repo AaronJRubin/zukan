@@ -462,37 +462,39 @@ nav ul {
     text-align: right;
     margin-right: 2%;
   }
-  [type='checkbox'] {
-    display: none;
-  }
-  label {
-    display: inline-block;
-    padding: .2em;
-    @extend %rounded-border;
-    @include single-transition(background, .5s);
-    &.exclude {
-      background: #644;
-      @media #{$not-touch} {
-        &:hover {
-          background: #b44;
+  .seisokuchi-search {
+    [type='checkbox'] {
+      display: none;
+    }
+    label {
+      display: inline-block;
+      padding: .2em;
+      @extend %rounded-border;
+      @include single-transition(background, .5s);
+      &.exclude {
+        background: #644;
+        @media #{$not-touch} {
+          &:hover {
+            background: #b44;
+          }
+        }
+      }
+      &.include {
+        background: #464;
+        @media #{$not-touch} {
+          &:hover {
+            background: #4b4;
+          }
         }
       }
     }
-    &.include {
-      background: #464;
-      @media #{$not-touch} {
-        &:hover {
-          background: #4b4;
-        }
+    [type=checkbox]:checked + label {
+      &.exclude {
+        background: #ff2424;
       }
-    }
-  }
-  [type=checkbox]:checked + label {
-    &.exclude {
-      background: #ff2424;
-    }
-    &.include {
-      background: #24dd24;
+      &.include {
+        background: #24dd24;
+      }
     }
   }
   &.collapsed {

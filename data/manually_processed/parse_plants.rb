@@ -40,14 +40,14 @@ def parse_plant_file(plant_file)
     if row[5] != nil
       seiikubasho << "湿地・岸辺"
       if row[5].include?("砂浜")
-        ganpen_type = "砂浜"
+        kishibe_type = "砂浜"
       elsif row[5].include?("kaigan")
-        ganpen_type = "海岸"
+        kishibe_type = "海岸"
       elsif row[5].include?("kaiganiwaba")
-        ganpen_type = "海岸岩場"
+        kishibe_type = "海岸岩場"
       end
-      if not ganpen_type.nil?
-        res["ganpen_type"] = ganpen_type
+      if not kishibe_type.nil?
+        res["kishibe_type"] = kishibe_type
       end
     end
     res["seiikubasho"] = seiikubasho 

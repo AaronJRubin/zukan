@@ -1,7 +1,7 @@
 plant_types:
-    - english: tanshiyou
+    - romaji: tanshiyou
       japanese: 単子葉植物
-    - english: soushiyou
+    - romaji: soushiyou
       japanese: 双子葉植物
-    - english: shida
+    - romaji: shida
       japanese: シダ類

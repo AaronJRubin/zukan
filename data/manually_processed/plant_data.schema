@@ -10,7 +10,7 @@ mapping:
                 sequence:
                     - enum: [湿地・岸辺, 沈水, 浮葉, 浮標, 抽水]
                       unique: true
-            ganpen_type:
+            kishibe_type:
                 enum: [海岸, 海岸岩場, 砂浜]
             latin:
                 type: str

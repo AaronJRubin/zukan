@@ -13,7 +13,7 @@ def try_unicode(str):
 class Plant:
 
     def __init__(self, latin = "", romaji = "", kana = "",
-            display_name = "", type = "", kaki = None, seiikubasho = None, bunpu = None, ganpen_type = None):
+            display_name = "", type = "", kaki = None, seiikubasho = None, bunpu = None, kishibe_type = None):
         kana = try_unicode(kana)
         if not romaji and kana:
             romaji = romkan.to_roma(kana)
@@ -26,7 +26,7 @@ class Plant:
         self.display_name = display_name if display_name else self.kana
         self.kaki = kaki if kaki else []
         self.bunpu = bunpu if bunpu else []
-        self.ganpen_type = ganpen_type
+        self.kishibe_type = kishibe_type
         self.seiikubasho = seiikubasho if seiikubasho else []
         self.type = type if type else ""
 

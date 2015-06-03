@@ -8,6 +8,7 @@ TextInputElement articleSearch;
 NumberInputElement kakiSearch;
 ElementList<LIElement> plantTiles;
 ElementList<RadioButtonInputElement> typeSearchBoxes;
+ElementList<CheckboxInputElement> seiikuSearchBoxes;
 
 void main() {
   setUpSearchAreaToggle();
@@ -16,6 +17,7 @@ void main() {
   articleSearch = document.querySelector("#article-search");
   kakiSearch = document.querySelector("#kaki-search");
   typeSearchBoxes = document.querySelectorAll("#type-search input");
+  seiikuSearchBoxes = document.querySelectorAll("#seiikubasho-search input");
   plantTiles = document.querySelectorAll("ol.tiles li");
   /*for (int i = 0; i < includeCheckboxes.length; i++) {
     CheckboxInputElement includeCheckbox = includeCheckboxes[i];
@@ -29,8 +31,13 @@ void main() {
   }*/
   textSearchListen(articleSearch);
   textSearchListen(kakiSearch);
-  typeSearchBoxes.forEach((el) => el.onChange.listen((e) => refresh()));
+  typeSearchBoxes.forEach((el) => buttonSearchListen(el));
+  seiikuSearchBoxes.forEach((el) => buttonSearchListen(el));
   refresh(); // maybe things were clicked before script was loaded
+}
+
+void buttonSearchListen(InputElement box) {
+  box.onChange.listen((e) => refresh());
 }
 
 void textSearchListen(InputElement field) {
@@ -65,6 +72,9 @@ Filter<Plant> buildFilter() {
   if (checkedTypeInput != null && checkedTypeInput.value != 'all') {
     filter.add((plant) => plant.type == checkedTypeInput.value);
   }
+  seiikuSearchBoxes.where((el) => el.checked).forEach((el) {
+    filter.add((plant) => plant.seiikubasho.contains(el.value));
+  });
   /*
   for (CheckboxInputElement checkbox in includeCheckboxes) {
     if (checkbox.checked) {

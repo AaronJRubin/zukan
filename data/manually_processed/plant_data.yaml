@@ -336,7 +336,7 @@
   - 海
   type: soushiyou
 オカヒジキ:
-  ganpen_type: 砂浜
+  kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -349,7 +349,7 @@
   - 海
   type: soushiyou
 ツルナ:
-  ganpen_type: 砂浜
+  kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -539,7 +539,7 @@
   - 海
   type: soushiyou
 ハマダイコン:
-  ganpen_type: 砂浜
+  kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -607,7 +607,7 @@
   - 津
   type: soushiyou
 ハマハタザオ:
-  ganpen_type: 砂浜
+  kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -748,7 +748,7 @@
   - 津
   type: soushiyou
 ハマエンドウ:
-  ganpen_type: 砂浜
+  kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1026,7 +1026,7 @@
   - 全
   type: soushiyou
 ハマゼリ:
-  ganpen_type: 砂浜
+  kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1038,7 +1038,7 @@
   - 海
   type: soushiyou
 ハマボウフウ:
-  ganpen_type: 砂浜
+  kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1049,7 +1049,7 @@
   - 海
   type: soushiyou
 ハマウド:
-  ganpen_type: 砂浜
+  kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1061,7 +1061,7 @@
   - 海
   type: soushiyou
 ボタンボウフウ:
-  ganpen_type: 砂浜
+  kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1107,7 +1107,7 @@
   - 津
   type: soushiyou
 ハマボッス:
-  ganpen_type: 砂浜
+  kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1161,7 +1161,7 @@
   - 津
   type: soushiyou
 ハマヒルガオ:
-  ganpen_type: 砂浜
+  kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1172,7 +1172,7 @@
   - 海
   type: soushiyou
 ハマネナシカズラ:
-  ganpen_type: 砂浜
+  kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1195,7 +1195,7 @@
   - 全
   type: soushiyou
 ハマゴウ:
-  ganpen_type: 砂浜
+  kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1272,7 +1272,7 @@
   - 高
   type: soushiyou
 ハマウツボ:
-  ganpen_type: 砂浜
+  kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1458,7 +1458,7 @@
   - 全
   type: soushiyou
 ネコノシタ（ハマグルマ）:
-  ganpen_type: 砂浜
+  kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1492,7 +1492,7 @@
   - 海
   type: soushiyou
 ハマニガナ:
-  ganpen_type: 砂浜
+  kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1795,7 +1795,7 @@
   - 高
   type: tanshiyou
 .オニシバ:
-  ganpen_type: 砂浜
+  kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1807,7 +1807,7 @@
   - 海
   type: tanshiyou
 ハマエノコロ:
-  ganpen_type: 砂浜
+  kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1828,7 +1828,7 @@
   - 高
   type: tanshiyou
 コウボウムギ:
-  ganpen_type: 砂浜
+  kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1893,7 +1893,7 @@
   - 津
   type: tanshiyou
 コウボウシバ:
-  ganpen_type: 砂浜
+  kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1953,7 +1953,7 @@
   - 全
   type: tanshiyou
 ビロードテンツキ:
-  ganpen_type: 砂浜
+  kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
   kaki:
