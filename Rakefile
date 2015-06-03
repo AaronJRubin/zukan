@@ -146,7 +146,7 @@ convert_plant = lambda do |plant, compressed_plant|
 end
 
 desc "Compress images of plants in master-images and move to workspace"
-compress_images_task(:compress_plant_images, "#{MASTER_IMAGES}/shokubutsu/**/*.jpg", convert_plant)
+compress_images_task(:compress_plant_images, "#{MASTER_IMAGES}/shokubutsu_/**/*.jpg", convert_plant)
 
 quality_override = Hash.new('57')
 quality_override['takatsu-chuu.jpg'] = '75'
@@ -192,7 +192,7 @@ end
 
 desc "Generate html (and one Dart file) documents using the jinja2 templates engine"
 task :generate_pages => [:compress_images, :validate_data] do
-  dependencies = Rake::FileList.new('templates/**/*').include('web/images/ikimono/**/*').include('animal.py').include('data/**/*')
+  dependencies = Rake::FileList.new('templates/**/*').include('web/images/ikimono/**/*').include('animal.py').include('plant.py').include('data/**/*')
   unless uptodate?('web/ikimono/ichiran.html', dependencies)
     unlock Rake::FileList.new('web/**/*.html').include("web/ikimono/animal_list.dart")
     sh 'python generate_pages.py'
@@ -248,6 +248,11 @@ task :compile => :build_web do
     rm_r STATIC_SITE, :force => true 
     smart_compile_dart(".")
     cp_r "build/web", STATIC_SITE
+    dont_deploy = Rake::FileList.new("#{STATIC_SITE}/**/*_/") # directories ending with _ are local-only, not ready for prime time
+    dont_deploy.each do |local_directory|
+      puts "Removing local-only directory #{local_directory}"
+      rm_r local_directory
+    end
     generate_appcache
     css_path = "#{STATIC_SITE}/stylesheets/main.css"
     unlocked css_path do
