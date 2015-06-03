@@ -36,6 +36,9 @@ class Plant:
     def image(self, suffix):
         return os.path.join("/images/shokubutsu", self.romaji, self.romaji + "-" + suffix + ".jpg")
 
+    def blooms(self, month):
+        return month in self.kaki
+
     @staticmethod
     def dart_list(ls):
         return "[" + ", ".join(['"' + str + '"' for str in ls]) + "]"

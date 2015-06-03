@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% set body_class = "plant-page" %}
+{% set plant = plant_map[page_name] %}
+{% set title = plant.kana %}
+
+{% block content %}
+
+<!--<script async src="plant_page.js"></script>-->
+
+<main class="plant-page">
+	<header class="plant-header">
+
+	<img src="{{plant.image('ichiran')}}" alt="">
+
+		<ul class="classification">
+			<li>和名：{{plant.kana}}</li>
+			<li>学名：{{plant.latin}}</li>
+			<li>種類：{{plant.type}}</li>
+		</ul>
+
+			<table class = "kaki">
+				<tr>
+          {% for month in range(1, 13) %}
+          <th>{{month}}月</th>
+          {% endfor %}
+				</tr>
+        <tr>
+          {% for month in range(1, 13) %}
+          <td>{{"&#x25EF;" if plant.blooms(month)}}</td>
+          {% endfor %}
+        </tr>
+     </table>
+    </header>
+
+    <article>
+
+      {% block article %}
+
+      {% endblock %}
+
+    </article>
+    <footer>
+      <a href="ichiran.html" class="jumbo-link">一覧へ戻る</a>
+    </footer>
+    </main>
+    {% endblock %}

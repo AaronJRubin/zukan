@@ -18,9 +18,11 @@ def parse_kaki(kaki_string)
   end
 end
 
+TYPE_MAP = { "tanshiyou" => "単子葉植物", "soushiyou" => "双子葉植物", "shida" => "シダ類" }
+
 def parse_plant_file(plant_file)
   data = CSV.read(plant_file)[2..-1] # first two lines are headings
-  type = plant_file.gsub(".csv", "")
+  type = TYPE_MAP[plant_file.gsub(".csv", "")] 
   result = data.select { |row| not row[8].nil? } . map { |row|
     res = {}
     row = row.map { |value| if value.nil? then value else value.strip.gsub("　", "").gsub("~", "〜") end }
