@@ -58,5 +58,10 @@
     <footer>
       <a href="ichiran.html" class="jumbo-link">一覧へ戻る</a>
     </footer>
+
+    {% from 'detail-page-macros.html' import ichiran_jumbo_link_script %}
+
+    {{ ichiran_jumbo_link_script("ikimono\/ichiran") }} 
+
     </main>
     {% endblock %}
