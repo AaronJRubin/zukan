@@ -437,6 +437,10 @@ nav ul {
   li {
     margin-bottom: .2em;
   }
+  .search-header {
+    display: flex;
+    align-items: center;
+  }
   [type='text'],
   [type='number'] {
     @extend %rounded-border;
