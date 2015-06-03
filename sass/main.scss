@@ -562,8 +562,7 @@ main.detail-page {
   }
 }
 
-.animal-header {
-  $animal-header-bottom-split: "(max-width: 725px)";
+%detail-header {
   @include display-flex(flex);
   @include flex-wrap(wrap);
   @include justify-content(center);
@@ -580,17 +579,6 @@ main.detail-page {
     margin: 0 1% 1em;
     width: 48%;
   }
-  @media (max-width: 450px) {
-    img.long {
-      width: 100%;
-    }
-    img.long + .classification {
-      width: 100%;
-    }
-    table {
-      font-size: .9em;
-    }
-  }
   img,
   .classification {
     @include align-self(center);
@@ -602,6 +590,29 @@ main.detail-page {
       font-size: .7em;
       line-height: 1.1em;
       margin-bottom: .3em;
+    }
+  }
+}
+
+.plant-header {
+  @extend %detail-header;
+  table {
+    width: 98%;
+  }
+}
+
+.animal-header {
+  $animal-header-bottom-split: "(max-width: 725px)";
+  @extend %detail-header;
+    @media (max-width: 450px) {
+    img.long {
+      width: 100%;
+    }
+    img.long + .classification {
+      width: 100%;
+    }
+    table {
+      font-size: .9em;
     }
   }
   table,
