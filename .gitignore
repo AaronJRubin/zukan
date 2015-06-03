@@ -1,5 +1,6 @@
 .DS_Store
 *.pyc
+~*
 
 # Don't include HTML files generated from templates
 web/**/*.html
