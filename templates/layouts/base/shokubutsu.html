@@ -31,6 +31,19 @@
           {% endfor %}
         </tr>
      </table>
+
+     <table class = "seiikubasho">
+       <tr>
+        {% for basho in seiikubasho %}
+        <th>{{basho}}</th>
+        {% endfor %}
+       </tr>
+       <tr>
+        {% for basho in seiikubasho %}
+        <td>{{"&#x25EF;" if plant.inhabits(basho)}}</td>
+        {% endfor %}
+       </tr>
+     </table>
     </header>
 
     <article>

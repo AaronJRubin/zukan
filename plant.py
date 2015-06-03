@@ -39,6 +39,9 @@ class Plant:
     def blooms(self, month):
         return month in self.kaki
 
+    def inhabits(self, basho):
+        return basho in self.seiikubasho
+
     @staticmethod
     def dart_list(ls):
         return "[" + ", ".join(['"' + str + '"' for str in ls]) + "]"
