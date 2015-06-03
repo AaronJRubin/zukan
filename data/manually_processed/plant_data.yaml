@@ -102,7 +102,7 @@
   bunpu:
   - 海
   type: 双子葉植物
-.ドクダミ:
+ドクダミ:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -113,7 +113,7 @@
   bunpu:
   - 全
   type: 双子葉植物
-アカメヤナギ(マルバヤナギ）:
+アカメヤナギ:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1457,7 +1457,7 @@
   bunpu:
   - 全
   type: 双子葉植物
-ネコノシタ（ハマグルマ）:
+ネコノシタ:
   kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
@@ -1794,7 +1794,7 @@
   bunpu:
   - 高
   type: 単子葉植物
-.オニシバ:
+オニシバ:
   kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
