@@ -25,7 +25,7 @@ akategani:
   masuda: [ge, kakou]
   rarity: 2
   takatsu: [ge, kakou]
-  zoku: 
+  zoku: アカテガニ属
 akaza:
   ka: ギギ科
   latin: Liobogrus reini
@@ -67,7 +67,7 @@ benkeigani:
   masuda: [ge, kakou]
   rarity: 3
   takatsu: [ge, kakou]
-  zoku: 
+  zoku: ベンケイガニ属
 biringo:
   ka: ハゼ科ハゼ亜科
   latin: Chaenogobius castaneus
@@ -228,7 +228,7 @@ kawanina:
   masuda: [zyou, chuu, ge]
   rarity: 1
   takatsu: [zyou, chuu, ge]
-  zoku: 
+  zoku: カワニナ属 
 kawayoshinobori:
   ka: ハゼ科ハゼ亜科
   latin: Rhinogobius flumineus
@@ -488,7 +488,7 @@ tenagaebi:
   masuda: [chuu, ge, kakou]
   rarity: 2
   takatsu: [chuu, ge, kakou]
-  zoku: 
+  zoku: テナガエビ属
 tonosamagaeru:
   ka: アカガエル科
   latin: Rana nigromaculata
