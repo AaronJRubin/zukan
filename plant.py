@@ -21,7 +21,6 @@ class Plant:
             kana = romkan.to_kana(romaji)
         self.romaji = romaji
         self.kana = kana
-        self.romaji = romaji
         self.latin = latin if latin else ""
         self.display_name = display_name if display_name else self.kana
         self.kaki = kaki if kaki else []

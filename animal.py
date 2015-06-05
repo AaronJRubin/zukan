@@ -2,17 +2,26 @@
 # -*- coding: utf-8 -*-
 
 import os
+import romkan
 from PIL import Image
+
+def try_unicode(str):
+    try:
+        return str.decode('utf-8')
+    except Exception:
+        return str
 
 class Animal:
 
     def __init__(self, latin = "", ka = "", zoku = "", romaji = "", kana = "",
-            rarity = 3, display_name = "", masuda = None, takatsu = None):
+        rarity = 3, display_name = "", masuda = None, takatsu = None):
+        kana = try_unicode(kana)
+        if not romaji and kana:
+            romaji = romkan.to_roma(kana).replace("n'", "nn")
+        elif not kana and romaji:
+            kana = romkan.to_kana(romaji)
         self.romaji = romaji
-        try:
-            self.kana = kana.decode('utf-8')
-        except Exception:
-            self.kana = kana
+        self.kana = kana
         self.masuda = masuda if masuda else []
         self.takatsu = takatsu if takatsu else []
         self.latin = latin if latin else ""

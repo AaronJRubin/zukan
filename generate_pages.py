@@ -6,7 +6,6 @@ import jinja2
 import sys
 from glob import glob
 import yaml
-import romkan
 from animal import Animal
 from plant import Plant
 
@@ -21,7 +20,7 @@ def parse_yaml_file(path):
 
 animal_data = parse_yaml_file("data/manually_processed/animal_data.yaml")
 
-animal_list = sorted([Animal(romaji = romaji, kana = romkan.to_kana(romaji), **fields) for romaji, fields in animal_data.iteritems()], key = lambda animal: animal.kana)
+animal_list = sorted([Animal(romaji = romaji, **fields) for romaji, fields in animal_data.iteritems()], key = lambda animal: animal.kana)
 
 animal_map = { animal.romaji : animal for animal in animal_list }
 
