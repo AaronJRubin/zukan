@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 
+{% from 'mamechishiki-macros.html' import image_bar %}
 {% set title = mamechishiki_translations[page_name] if page_name in mamechishiki_translations else "豆知識" %}
 
 {% block content %}
