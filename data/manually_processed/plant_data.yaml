@@ -1,5 +1,5 @@
 ---
-スギナ:
+sugina:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -9,7 +9,7 @@
   bunpu:
   - 全
   type: シダ類
-トクサ:
+tokusa:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -19,7 +19,7 @@
   bunpu:
   - 高
   type: シダ類
-イヌスギナ:
+inusugina:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -34,7 +34,7 @@
   latin: E. palustre L.
   bunpu: []
   type: シダ類
-ヤシャゼンマイ:
+yashazenmai:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -43,7 +43,7 @@
   bunpu:
   - 匹
   type: シダ類
-ヒメミズワラビ:
+himemizuwarabi:
   seiikubasho:
   - 沈水
   - 浮葉
@@ -57,7 +57,7 @@
   bunpu:
   - 高
   type: シダ類
-ヘイケヌワラビ:
+heikenuwarabi:
   seiikubasho:
   - 湿地・岸辺
   kaki: []
@@ -65,7 +65,7 @@
   bunpu:
   - 椛
   type: シダ類
-デンジソウ:
+denjisou:
   seiikubasho:
   - 浮葉
   - 抽水
@@ -82,7 +82,7 @@
   - 益
   - 吉
   type: シダ類
-オオアカウキクサ:
+ooakaukikusa:
   seiikubasho:
   - 浮葉
   kaki: []
@@ -91,7 +91,7 @@
   - 高
   - 益
   type: シダ類
-ハンゲショウ:
+hangeshou:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -102,7 +102,7 @@
   bunpu:
   - 海
   type: 双子葉植物
-ドクダミ:
+dokudami:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -113,7 +113,7 @@
   bunpu:
   - 全
   type: 双子葉植物
-アカメヤナギ:
+akameyanagi:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -126,7 +126,7 @@
   - 匹
   - 吉
   type: 双子葉植物
-タチヤナギ:
+tachiyanagi:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -137,7 +137,7 @@
   - 吉
   - 高
   type: 双子葉植物
-オノエヤナギ:
+onoeyanagi:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -147,7 +147,7 @@
   bunpu:
   - 吉
   type: 双子葉植物
-カワヤナギ:
+kawayanagi:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -158,7 +158,7 @@
   - 高
   - 津
   type: 双子葉植物
-ネコヤナギ:
+nekoyanagi:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -171,7 +171,7 @@
   - 匹
   - 吉
   type: 双子葉植物
-サワグルミ:
+sawagurumi:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -184,7 +184,7 @@
   - 椛
   - 横
   type: 双子葉植物
-オニグルミ:
+onigurumi:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -194,7 +194,7 @@
   bunpu:
   - 津
   type: 双子葉植物
-ハシバミ:
+hashibami:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -204,7 +204,7 @@
   bunpu:
   - 匹
   type: 双子葉植物
-ハンノキ:
+hannnoki:
   seiikubasho:
   - 湿地・岸辺
   kaki: []
@@ -212,7 +212,7 @@
   bunpu:
   - 津
   type: 双子葉植物
-ミズ:
+mizu:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -225,7 +225,7 @@
   - 匹
   - 津
   type: 双子葉植物
-アオミズ:
+aomizu:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -237,7 +237,7 @@
   bunpu:
   - 津
   type: 双子葉植物
-ウワバミソウ:
+uwabamisou:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -253,7 +253,7 @@
   - 吉
   - 匹
   type: 双子葉植物
-サンショウソウ:
+sanshousou:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -264,7 +264,7 @@
   bunpu:
   - 匹
   type: 双子葉植物
-イシミカワ:
+ishimikawa:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -278,7 +278,7 @@
   - 益
   - 津
   type: 双子葉植物
-ミゾソバ:
+mizosoba:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -290,7 +290,7 @@
   bunpu:
   - 全
   type: 双子葉植物
-アキノウナギツカミ:
+akinounagitsukami:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -302,7 +302,7 @@
   bunpu:
   - 全
   type: 双子葉植物
-ヤノネグサ:
+yanonegusa:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -312,7 +312,7 @@
   bunpu:
   - 椛
   type: 双子葉植物
-ナガバノヤノネグサ:
+nagabanoyanonegusa:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -321,7 +321,7 @@
   latin: Persicaria breviochreata (Makino) Ohki
   bunpu: []
   type: 双子葉植物
-ヤナギタデ:
+yanagitade:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -335,7 +335,7 @@
   - 益
   - 海
   type: 双子葉植物
-オカヒジキ:
+okahijiki:
   kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
@@ -348,7 +348,7 @@
   bunpu:
   - 海
   type: 双子葉植物
-ツルナ:
+tsuruna:
   kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
@@ -364,7 +364,7 @@
   bunpu:
   - 海
   type: 双子葉植物
-ハマツメクサ:
+hamatsumekusa:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -377,7 +377,7 @@
   bunpu:
   - 海
   type: 双子葉植物
-カワラナデシコ:
+kawaranadeshiko:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -389,7 +389,7 @@
   bunpu:
   - 全
   type: 双子葉植物
-マンテマ:
+mantema:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -400,7 +400,7 @@
   bunpu:
   - 海
   type: 双子葉植物
-ワチガイソウ:
+wachigaisou:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -409,7 +409,7 @@
   bunpu:
   - 吉
   type: 双子葉植物
-ジュンサイ:
+junsai:
   seiikubasho:
   - 浮葉
   kaki:
@@ -420,7 +420,7 @@
   bunpu:
   - 高
   type: 双子葉植物
-コウホネ:
+kouhone:
   seiikubasho:
   - 浮葉
   - 抽水
@@ -433,7 +433,7 @@
   bunpu:
   - 吉
   type: 双子葉植物
-ヒツジグサ:
+hitsujigusa:
   seiikubasho:
   - 浮葉
   kaki:
@@ -447,7 +447,7 @@
   bunpu:
   - 高
   type: 双子葉植物
-ハス:
+hasu:
   seiikubasho:
   - 抽水
   kaki:
@@ -458,7 +458,7 @@
   - 高
   - 益
   type: 双子葉植物
-マツモ:
+matsumo:
   seiikubasho:
   - 沈水
   kaki:
@@ -470,7 +470,7 @@
   bunpu:
   - 高
   type: 双子葉植物
-タガラシ:
+tagarashi:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -481,7 +481,7 @@
   bunpu:
   - 全
   type: 双子葉植物
-キツネノボタン:
+kitsunenobotan:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -493,7 +493,7 @@
   bunpu:
   - 全
   type: 双子葉植物
-ケキツネノボタン:
+kekitsunenobotan:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -506,7 +506,7 @@
   - 高
   - 益
   type: 双子葉植物
-ヒメバイカモ:
+himebaikamo:
   seiikubasho:
   - 沈水
   - 浮葉
@@ -528,7 +528,7 @@
   bunpu:
   - 吉
   type: 双子葉植物
-ハマビワ:
+hamabiwa:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -538,7 +538,7 @@
   bunpu:
   - 海
   type: 双子葉植物
-ハマダイコン:
+hamadaikon:
   kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
@@ -550,7 +550,7 @@
   bunpu:
   - 海
   type: 双子葉植物
-タネツケバナ:
+tanetsukebana:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -561,7 +561,7 @@
   bunpu:
   - 全
   type: 双子葉植物
-コンロンソウ:
+konronsou:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -571,7 +571,7 @@
   bunpu:
   - 椛
   type: 双子葉植物
-ミズタネツケバナ:
+mizutanetsukebana:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -583,7 +583,7 @@
   bunpu:
   - 益
   type: 双子葉植物
-ワサビ:
+wasabi:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -594,7 +594,7 @@
   bunpu:
   - 匹
   type: 双子葉植物
-オランダガラシ:
+orandagarashi:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -606,7 +606,7 @@
   bunpu:
   - 津
   type: 双子葉植物
-ハマハタザオ:
+hamahatazao:
   kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
@@ -618,7 +618,7 @@
   bunpu:
   - 海
   type: 双子葉植物
-ハタザオ:
+hatazao:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -630,7 +630,7 @@
   - 匹
   - 津
   type: 双子葉植物
-モウセンゴケ:
+mousengoke:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -643,7 +643,7 @@
   - 吉
   - 高
   type: 双子葉植物
-タイトゴメ:
+taitogome:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -654,7 +654,7 @@
   bunpu:
   - 海
   type: 双子葉植物
-ダイモンジソウ:
+daimonjisou:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -667,7 +667,7 @@
   - 匹
   - 椛
   type: 双子葉植物
-ホクリクネコノメソウ:
+hokurikunekonomesou:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -678,7 +678,7 @@
   - 横
   - 津
   type: 双子葉植物
-コチャルメルソウ:
+kocharumerusou:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -689,7 +689,7 @@
   - 匹
   - 津
   type: 双子葉植物
-チャルメルソウ:
+charumerusou:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -701,7 +701,7 @@
   - 匹
   - 津
   type: 双子葉植物
-シラヒゲソウ:
+shirahigesou:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -711,7 +711,7 @@
   bunpu:
   - 匹
   type: 双子葉植物
-ウメバチソウ:
+umebachisou:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -723,7 +723,7 @@
   - 匹
   - 津
   type: 双子葉植物
-トベラ:
+tobera:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -736,7 +736,7 @@
   - 益
   - 海
   type: 双子葉植物
-カワラケツメイ:
+kawaraketsumei:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -747,7 +747,7 @@
   - 高
   - 津
   type: 双子葉植物
-ハマエンドウ:
+hamaendou:
   kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
@@ -760,7 +760,7 @@
   bunpu:
   - 海
   type: 双子葉植物
-ミズハコベ:
+mizuhakobe:
   seiikubasho:
   - 沈水
   - 浮葉
@@ -782,7 +782,7 @@
   bunpu:
   - 全
   type: 双子葉植物
-キツリフネ:
+kitsurifune:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -793,7 +793,7 @@
   bunpu:
   - 匹
   type: 双子葉植物
-ツリフネソウ:
+tsurifunesou:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -809,7 +809,7 @@
   - 吉
   - 高
   type: 双子葉植物
-マタタビ:
+matatabi:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -824,7 +824,7 @@
   - 吉
   - 高
   type: 双子葉植物
-サルナシ:
+sarunashi:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -836,7 +836,7 @@
   - 椛
   - 吉
   type: 双子葉植物
-ハマヒサカキ:
+hamahisakaki:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -846,7 +846,7 @@
   bunpu:
   - 海
   type: 双子葉植物
-ミズオトギリ:
+mizuotogiri:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -857,7 +857,7 @@
   bunpu:
   - 津
   type: 双子葉植物
-アゼオトギリ:
+azeotogiri:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -868,7 +868,7 @@
   bunpu:
   - 全
   type: 双子葉植物
-キガンピ:
+kiganpi:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -879,7 +879,7 @@
   bunpu:
   - 高
   type: 双子葉植物
-マルバアキグミ:
+marubaakigumi:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -889,7 +889,7 @@
   bunpu:
   - 海
   type: 双子葉植物
-マルバグミ:
+marubagumi:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -900,7 +900,7 @@
   bunpu:
   - 海
   type: 双子葉植物
-キカシグサ:
+kikashigusa:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -912,7 +912,7 @@
   bunpu:
   - 全
   type: 双子葉植物
-ミソハギ:
+misohagi:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -923,7 +923,7 @@
   - 津
   - 椛
   type: 双子葉植物
-ヒシ:
+hishi:
   seiikubasho:
   - 浮葉
   kaki:
@@ -936,7 +936,7 @@
   - 高
   - 益
   type: 双子葉植物
-タニタデ:
+tanitade:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -948,7 +948,7 @@
   - 高
   - 匹
   type: 双子葉植物
-アカバナ:
+akabana:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -961,7 +961,7 @@
   - 津
   - 椛
   type: 双子葉植物
-チョウジタデ:
+choujitade:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -972,7 +972,7 @@
   bunpu:
   - 全
   type: 双子葉植物
-ミズユキノシタ:
+mizuyukinoshita:
   seiikubasho:
   - 沈水
   - 浮葉
@@ -989,7 +989,7 @@
   - 益
   - 津
   type: 双子葉植物
-ホザキノフサモ:
+hozakinofusamo:
   seiikubasho:
   - 沈水
   - 浮葉
@@ -1004,7 +1004,7 @@
   bunpu:
   - 高
   type: 双子葉植物
-オオフサモ:
+oofusamo:
   seiikubasho:
   - 沈水
   - 浮葉
@@ -1014,7 +1014,7 @@
   latin: ' Myriophyllum aquaticum'
   bunpu: []
   type: 双子葉植物
-セリ:
+seri:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -1025,7 +1025,7 @@
   bunpu:
   - 全
   type: 双子葉植物
-ハマゼリ:
+hamazeri:
   kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
@@ -1037,7 +1037,7 @@
   bunpu:
   - 海
   type: 双子葉植物
-ハマボウフウ:
+hamaboufuu:
   kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
@@ -1048,7 +1048,7 @@
   bunpu:
   - 海
   type: 双子葉植物
-ハマウド:
+hamaudo:
   kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
@@ -1060,7 +1060,7 @@
   bunpu:
   - 海
   type: 双子葉植物
-ボタンボウフウ:
+botanboufuu:
   kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
@@ -1072,7 +1072,7 @@
   bunpu:
   - 海
   type: 双子葉植物
-キシツツジ:
+kishitsutsuji:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1083,7 +1083,7 @@
   - 匹
   - 吉
   type: 双子葉植物
-クサレダマ:
+kusaredama:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1095,7 +1095,7 @@
   - 匹
   - 津
   type: 双子葉植物
-ヌマトラノオ:
+numatoranoo:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1106,7 +1106,7 @@
   - 匹
   - 津
   type: 双子葉植物
-ハマボッス:
+hamabossu:
   kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
@@ -1117,7 +1117,7 @@
   bunpu:
   - 海
   type: 双子葉植物
-サワフタギ:
+sawafutagi:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1130,7 +1130,7 @@
   - 椛
   - 吉
   type: 双子葉植物
-エゴノキ:
+egonoki:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1140,7 +1140,7 @@
   bunpu:
   - 全
   type: 双子葉植物
-アケボノソウ:
+akebonosou:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1151,7 +1151,7 @@
   - 匹
   - 津
   type: 双子葉植物
-チョウジソウ:
+choujisou:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1160,7 +1160,7 @@
   bunpu:
   - 津
   type: 双子葉植物
-ハマヒルガオ:
+hamahirugao:
   kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
@@ -1171,7 +1171,7 @@
   bunpu:
   - 海
   type: 双子葉植物
-ハマネナシカズラ:
+hamanenashikazura:
   kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
@@ -1184,7 +1184,7 @@
   bunpu:
   - 海
   type: 双子葉植物
-ミズタビラコ:
+mizutabirako:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1194,7 +1194,7 @@
   bunpu:
   - 全
   type: 双子葉植物
-ハマゴウ:
+hamagou:
   kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
@@ -1206,7 +1206,7 @@
   bunpu:
   - 海
   type: 双子葉植物
-ミゾホウズキ:
+mizohouzuki:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1216,7 +1216,7 @@
   bunpu:
   - 匹
   type: 双子葉植物
-キクモ:
+kikumo:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -1228,7 +1228,7 @@
   bunpu:
   - 益
   type: 双子葉植物
-アゼトウガラシ:
+azetougarashi:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1239,7 +1239,7 @@
   bunpu:
   - 全
   type: 双子葉植物
-アゼナ:
+azena:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1250,7 +1250,7 @@
   bunpu:
   - 全
   type: 双子葉植物
-ムシクサ:
+mushikusa:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1260,7 +1260,7 @@
   bunpu:
   - 益
   type: 双子葉植物
-カワヂシャ:
+kawadisha:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -1271,7 +1271,7 @@
   bunpu:
   - 高
   type: 双子葉植物
-ハマウツボ:
+hamautsubo:
   kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
@@ -1283,7 +1283,7 @@
   bunpu:
   - 海
   type: 双子葉植物
-イワタバコ:
+iwatabako:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1298,7 +1298,7 @@
   - 椛
   - 吉
   type: 双子葉植物
-ノタヌキモ:
+notanukimo:
   seiikubasho:
   - 沈水
   - 浮葉
@@ -1312,7 +1312,7 @@
   - 高
   - 益
   type: 双子葉植物
-タヌキモ:
+tanukimo:
   seiikubasho:
   - 沈水
   - 浮葉
@@ -1325,7 +1325,7 @@
   - 高
   - 益
   type: 双子葉植物
-ソナレムグラ:
+sonaremugura:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1335,7 +1335,7 @@
   bunpu:
   - 海
   type: 双子葉植物
-ミゾカクシ:
+mizokakushi:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1348,7 +1348,7 @@
   bunpu:
   - 全
   type: 双子葉植物
-サワヒヨドリ:
+sawahiyodori:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1361,7 +1361,7 @@
   - 津
   - 吉
   type: 双子葉植物
-ユウガギク:
+yuugagiku:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1372,7 +1372,7 @@
   bunpu:
   - 全
   type: 双子葉植物
-ハマべノギク:
+hamabenogiku:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1387,7 +1387,7 @@
   - 益
   - 海
   type: 双子葉植物
-ダルマギク:
+darumagiku:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1399,7 +1399,7 @@
   bunpu:
   - 海
   type: 双子葉植物
-オタカラコウ:
+otakarakou:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1411,7 +1411,7 @@
   bunpu:
   - 匹
   type: 双子葉植物
-サワギク:
+sawagiku:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1424,7 +1424,7 @@
   - 匹
   - 椛
   type: 双子葉植物
-サワオグルマ:
+sawaoguruma:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1436,7 +1436,7 @@
   - 匹
   - 津
   type: 双子葉植物
-カワラヨモギ:
+kawarayomogi:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1447,7 +1447,7 @@
   - 高
   - 海
   type: 双子葉植物
-タカサブロウ:
+takasaburou:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1457,7 +1457,7 @@
   bunpu:
   - 全
   type: 双子葉植物
-ネコノシタ:
+nekonoshita:
   kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
@@ -1470,7 +1470,7 @@
   bunpu:
   - 海
   type: 双子葉植物
-アゼトウナ:
+azetouna:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1483,7 +1483,7 @@
   bunpu:
   - 海
   type: 双子葉植物
-ホソバワダン:
+hosobawadan:
   seiikubasho:
   - 湿地・岸辺
   kaki: []
@@ -1491,7 +1491,7 @@
   bunpu:
   - 海
   type: 双子葉植物
-ハマニガナ:
+hamanigana:
   kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
@@ -1507,7 +1507,7 @@
   bunpu:
   - 海
   type: 双子葉植物
-ヒメガマ:
+himegama:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -1519,7 +1519,7 @@
   bunpu:
   - 高
   type: 単子葉植物
-ミクリ:
+mikuri:
   seiikubasho:
   - 抽水
   kaki:
@@ -1531,7 +1531,7 @@
   bunpu:
   - 高
   type: 単子葉植物
-ヒルムシロ:
+hirumushiro:
   seiikubasho:
   - 浮葉
   kaki:
@@ -1545,7 +1545,7 @@
   bunpu:
   - 全
   type: 単子葉植物
-オヒルムシロ:
+ohirumushiro:
   seiikubasho:
   - 沈水
   - 浮葉
@@ -1557,7 +1557,7 @@
   latin: P.n natansL.
   bunpu: []
   type: 単子葉植物
-ミズヒキモ:
+mizuhikimo:
   seiikubasho:
   - 沈水
   - 浮葉
@@ -1571,7 +1571,7 @@
   - 高
   - 津
   type: 単子葉植物
-ヤナギモ:
+yanagimo:
   seiikubasho:
   - 沈水
   kaki:
@@ -1584,7 +1584,7 @@
   bunpu:
   - 全
   type: 単子葉植物
-エビモ:
+ebimo:
   seiikubasho:
   - 沈水
   kaki:
@@ -1598,7 +1598,7 @@
   bunpu:
   - 全
   type: 単子葉植物
-イバラモ:
+ibaramo:
   seiikubasho:
   - 沈水
   kaki:
@@ -1609,7 +1609,7 @@
   bunpu:
   - 全
   type: 単子葉植物
-イトトリゲモ:
+itotorigemo:
   seiikubasho:
   - 沈水
   kaki:
@@ -1620,7 +1620,7 @@
   latin: Najas gracillima (A. Br.) Magnus
   bunpu: []
   type: 単子葉植物
-アマモ:
+amamo:
   seiikubasho:
   - 沈水
   kaki:
@@ -1631,7 +1631,7 @@
   bunpu:
   - 海
   type: 単子葉植物
-へラオモダカ:
+heraomodaka:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -1645,7 +1645,7 @@
   - 津
   - 吉
   type: 単子葉植物
-ウリカワ:
+urikawa:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -1657,7 +1657,7 @@
   bunpu:
   - 全
   type: 単子葉植物
-オモダカ:
+omodaka:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -1671,7 +1671,7 @@
   - 益
   - 匹
   type: 単子葉植物
-アギナシ:
+aginashi:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -1685,7 +1685,7 @@
   - 高
   - 益
   type: 単子葉植物
-セキショウモ:
+sekishoumo:
   seiikubasho:
   - 沈水
   kaki:
@@ -1697,7 +1697,7 @@
   - 高
   - 益
   type: 単子葉植物
-クロモ:
+kuromo:
   seiikubasho:
   - 沈水
   kaki:
@@ -1709,7 +1709,7 @@
   - 高
   - 益
   type: 単子葉植物
-ミズオオバコ:
+mizuoobako:
   seiikubasho:
   - 沈水
   kaki:
@@ -1720,7 +1720,7 @@
   bunpu:
   - 高
   type: 単子葉植物
-トチカガミ:
+tochikagami:
   seiikubasho:
   - 浮葉
   kaki:
@@ -1732,7 +1732,7 @@
   - 高
   - 益
   type: 単子葉植物
-オオカナダモ:
+ookanadamo:
   seiikubasho:
   - 沈水
   kaki:
@@ -1746,7 +1746,7 @@
   bunpu:
   - 全
   type: 単子葉植物
-マコモ:
+makomo:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -1758,7 +1758,7 @@
   bunpu:
   - 高
   type: 単子葉植物
-ツルヨシ:
+tsuruyoshi:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -1769,7 +1769,7 @@
   bunpu:
   - 全
   type: 単子葉植物
-ヨシ:
+yoshi:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -1782,7 +1782,7 @@
   - 高
   - 益
   type: 単子葉植物
-セイコノヨシ:
+seikonoyoshi:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -1794,7 +1794,7 @@
   bunpu:
   - 高
   type: 単子葉植物
-オニシバ:
+onishiba:
   kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
@@ -1806,7 +1806,7 @@
   bunpu:
   - 海
   type: 単子葉植物
-ハマエノコロ:
+hamaenokoro:
   kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
@@ -1817,7 +1817,7 @@
   bunpu:
   - 海
   type: 単子葉植物
-クロカワズスゲ:
+kurokawazusuge:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1827,7 +1827,7 @@
   bunpu:
   - 高
   type: 単子葉植物
-コウボウムギ:
+kouboumugi:
   kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
@@ -1840,7 +1840,7 @@
   bunpu:
   - 海
   type: 単子葉植物
-ゴウソ:
+gouso:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1850,7 +1850,7 @@
   bunpu:
   - 全
   type: 単子葉植物
-グレーンスゲ:
+gure-nsuge:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1860,7 +1860,7 @@
   bunpu:
   - 津
   type: 単子葉植物
-ウマスゲ:
+umasuge:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1870,7 +1870,7 @@
   bunpu:
   - 津
   type: 単子葉植物
-ジュズスゲ:
+juzusuge:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1880,7 +1880,7 @@
   bunpu:
   - 津
   type: 単子葉植物
-カサスゲ:
+kasasuge:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -1892,7 +1892,7 @@
   - 匹
   - 津
   type: 単子葉植物
-コウボウシバ:
+kouboushiba:
   kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
@@ -1903,7 +1903,7 @@
   bunpu:
   - 海
   type: 単子葉植物
-オニスゲ:
+onisuge:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -1915,7 +1915,7 @@
   bunpu:
   - 津
   type: 単子葉植物
-クログワイ:
+kuroguwai:
   seiikubasho:
   - 抽水
   kaki:
@@ -1926,7 +1926,7 @@
   bunpu:
   - 高
   type: 単子葉植物
-ハリイ:
+harii:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1940,7 +1940,7 @@
   bunpu:
   - 津
   type: 単子葉植物
-マツバイ:
+matsubai:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -1952,7 +1952,7 @@
   bunpu:
   - 全
   type: 単子葉植物
-ビロードテンツキ:
+biro-dotentsuki:
   kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
@@ -1965,7 +1965,7 @@
   bunpu:
   - 海
   type: 単子葉植物
-ヒデリコ:
+hideriko:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1977,7 +1977,7 @@
   bunpu:
   - 全
   type: 単子葉植物
-テンツキ:
+tentsuki:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1987,7 +1987,7 @@
   bunpu:
   - 全
   type: 単子葉植物
-アゼテンツキ:
+azetentsuki:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -1998,7 +1998,7 @@
   bunpu:
   - 全
   type: 単子葉植物
-ヒメテンツキ:
+himetentsuki:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -2010,7 +2010,7 @@
   bunpu:
   - 全
   type: 単子葉植物
-エゾアブラガヤ:
+ezoaburagaya:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -2021,7 +2021,7 @@
   - 匹
   - 椛
   type: 単子葉植物
-コマツカサススキ:
+komatsukasasusuki:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -2033,7 +2033,7 @@
   - 匹
   - 椛
   type: 単子葉植物
-ウキヤガラ:
+ukiyagara:
   seiikubasho:
   - 抽水
   kaki:
@@ -2045,7 +2045,7 @@
   bunpu:
   - 海
   type: 単子葉植物
-ヒメホタルイ:
+himehotarui:
   seiikubasho:
   - 抽水
   kaki:
@@ -2056,7 +2056,7 @@
   bunpu:
   - 津
   type: 単子葉植物
-カンガレイ:
+kangarei:
   seiikubasho:
   - 抽水
   kaki:
@@ -2069,7 +2069,7 @@
   - 椛
   - 海
   type: 単子葉植物
-サンカクイ:
+sankakui:
   seiikubasho:
   - 抽水
   kaki:
@@ -2083,7 +2083,7 @@
   - 益
   - 津
   type: 単子葉植物
-ヒンジガヤツリ:
+hinjigayatsuri:
   seiikubasho:
   - 抽水
   kaki:
@@ -2094,7 +2094,7 @@
   bunpu:
   - 全
   type: 単子葉植物
-ミズガヤツリ:
+mizugayatsuri:
   seiikubasho:
   - 抽水
   kaki:
@@ -2105,7 +2105,7 @@
   bunpu:
   - 高
   type: 単子葉植物
-カワラスガナ:
+kawarasugana:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -2116,7 +2116,7 @@
   bunpu:
   - 全
   type: 単子葉植物
-オニガヤツリ:
+onigayatsuri:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -2129,7 +2129,7 @@
   - 高
   - 益
   type: 単子葉植物
-ウシクグ:
+ushikugu:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -2140,7 +2140,7 @@
   bunpu:
   - 全
   type: 単子葉植物
-コゴメガヤツリ:
+kogomegayatsuri:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -2151,7 +2151,7 @@
   bunpu:
   - 全
   type: 単子葉植物
-カヤツリグサ:
+kayatsurigusa:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -2163,7 +2163,7 @@
   bunpu:
   - 全
   type: 単子葉植物
-アオガヤツリ:
+aogayatsuri:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -2175,7 +2175,7 @@
   bunpu:
   - 全
   type: 単子葉植物
-ヒメクグ:
+himekugu:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -2187,7 +2187,7 @@
   bunpu:
   - 全
   type: 単子葉植物
-セキショウ:
+sekishou:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -2198,7 +2198,7 @@
   bunpu:
   - 高
   type: 単子葉植物
-ウキクサ:
+ukikusa:
   seiikubasho:
   - 浮標
   kaki:
@@ -2208,7 +2208,7 @@
   bunpu:
   - 全
   type: 単子葉植物
-イヌノヒゲ:
+inunohige:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -2218,7 +2218,7 @@
   bunpu:
   - 津
   type: 単子葉植物
-イボクサ:
+ibokusa:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -2230,7 +2230,7 @@
   bunpu:
   - 全
   type: 単子葉植物
-ミズアオイ:
+mizuaoi:
   seiikubasho:
   - 抽水
   kaki:
@@ -2242,7 +2242,7 @@
   bunpu:
   - 全
   type: 単子葉植物
-コナギ:
+konagi:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -2254,7 +2254,7 @@
   bunpu:
   - 全
   type: 単子葉植物
-クサイ:
+kusai:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -2264,7 +2264,7 @@
   bunpu:
   - 全
   type: 単子葉植物
-イ:
+i:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -2276,7 +2276,7 @@
   - 高
   - 益
   type: 単子葉植物
-コヒゲ:
+kohige:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -2288,7 +2288,7 @@
   - 高
   - 益
   type: 単子葉植物
-タチコウガイゼキショウ:
+tachikougaizekishou:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -2299,7 +2299,7 @@
   bunpu:
   - 匹
   type: 単子葉植物
-コウガイゼキショウ:
+kougaizekishou:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -2310,7 +2310,7 @@
   bunpu:
   - 匹
   type: 単子葉植物
-アオコウガイゼキショウ:
+aokougaizekishou:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -2321,7 +2321,7 @@
   bunpu:
   - 津
   type: 単子葉植物
-クサスギカズラ:
+kusasugikazura:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -2331,7 +2331,7 @@
   bunpu:
   - 海
   type: 単子葉植物
-カキツバタ:
+kakitsubata:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -2342,7 +2342,7 @@
   bunpu:
   - 匹
   type: 単子葉植物
-アヤメ:
+ayame:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -2351,7 +2351,7 @@
   bunpu:
   - 匹
   type: 単子葉植物
-ノハナショウブ:
+nohanashoubu:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -2361,7 +2361,7 @@
   bunpu:
   - 匹
   type: 単子葉植物
-キショウブ:
+kishoubu:
   seiikubasho:
   - 抽水
   - 湿地・岸辺
@@ -2373,7 +2373,7 @@
   bunpu:
   - 全
   type: 単子葉植物
-ミズチドリ:
+mizuchidori:
   seiikubasho:
   - 湿地・岸辺
   kaki:

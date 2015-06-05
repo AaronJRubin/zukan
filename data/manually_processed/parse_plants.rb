@@ -1,6 +1,8 @@
 require 'csv'
 require 'rake'
 require 'yaml'
+require 'moji'
+require 'romkan'
 
 def parse_kaki(kaki_string)
   if kaki_string == nil
@@ -70,8 +72,11 @@ result = Rake::FileList.new("*.csv").map { |file| parse_plant_file(file) } . fla
 result_map = {}
 
 result.each do |plant|
-  result_map[plant["kana"]] = plant
+  katakana = plant["kana"]
+  hiragana = Moji.kata_to_hira(katakana)
+  romaji = hiragana.to_roma.gsub("n'", "nn")
   plant.delete("kana")
+  result_map[romaji] = plant
 end
 
 output_file = File.open("plant_data.yaml", "w")

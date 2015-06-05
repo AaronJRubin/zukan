@@ -16,7 +16,7 @@ class Plant:
             display_name = "", type = "", kaki = None, seiikubasho = None, bunpu = None, kishibe_type = None):
         kana = try_unicode(kana)
         if not romaji and kana:
-            romaji = romkan.to_roma(kana)
+            romaji = romkan.to_roma(kana).replace("n'", "nn")
         elif not kana and romaji:
             kana = romkan.to_kana(romaji)
         self.romaji = romaji
