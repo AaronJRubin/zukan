@@ -40,10 +40,18 @@
        </tr>
        <tr>
         {% for basho in seiikubasho %}
+        {% if basho == "湿地・岸辺" and plant.kishibe_type %}
+        <td>&#x25EF;*</td>
+        {% else %}
         <td>{{"&#x25EF;" if plant.inhabits(basho)}}</td>
+        {% endif %}
         {% endfor %}
        </tr>
      </table>
+
+     {% if plant.kishibe_type %}
+     <div>*{{plant.kishibe_type}}</div>
+     {% endif %}
     </header>
 
     <article>
