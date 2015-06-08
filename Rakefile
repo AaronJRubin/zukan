@@ -201,7 +201,7 @@ task :generate_pages => [:compress_images, :validate_data] do
 end
 
 desc "Generate dart file that contains text of all articles for client-side searching"
-file "web/article_list.dart" => :generate_pages do |task|
+file "web/ikimono/animal_article_list.dart" => :generate_pages do |task|
   dependencies = Rake::FileList.new("web/ikimono/*.html")
   unless uptodate?(task.name, dependencies)
     unlocked task.name do
@@ -219,7 +219,7 @@ task :compile_sass do
 end
 
 desc "Compile everything necessary to use the site with pub serve, part of the Dart SDK (output in web)"
-task :build_web => [:compress_images, :generate_pages, :compile_sass, "web/article_list.dart"]
+task :build_web => [:compress_images, :generate_pages, :compile_sass, "web/ikimono/animal_article_list.dart"]
 
 desc "Run development pub server (Dart SDK required)"
 task :serve => :build_web do
