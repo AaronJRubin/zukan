@@ -450,7 +450,8 @@ nav ul {
     min-height: 28.5px;
   }
   [type='text'],
-  [type='number'] {
+  [type='number'],
+  select {
     @extend %rounded-border;
     font-size: inherit; 
   }

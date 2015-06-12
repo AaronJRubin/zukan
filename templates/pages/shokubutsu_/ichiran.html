@@ -31,10 +31,16 @@
     </div>
   </div>
   <div class="search-section">
-    <div class="search-header"><span class="search-description">咲く月で検索</span><input type="number" min="1" max="12" id="kaki-search"></div>
+    <div class="search-header"><span class="search-description">咲く月で検索</span><select id = "kaki-search">
+        <option></option>
+        {% for month in range(1, 13) %}
+        <option value={{month}}>{{month}}月</option>
+        {% endfor %}
+      </select>
+    </div>
   </div>
 
-	<div class="search-section" id="seiikubasho-search">
+  <div class="search-section" id="seiikubasho-search">
     <div class="search-header"><span class="search-description">生育場所で検索</span>
       {% for basho in seiikubasho %}
       <input type = "checkbox" value = {{basho}} id = {{basho}}>
@@ -45,14 +51,14 @@
 </div>
 
 <ol class="tiles">
-	{% for plant in plants %}
-	<li data-plant-name="{{plant.romaji}}">
-		<a href="{{plant.get_link()}}" class="tile">
-  			<img src="{{plant.image('ichiran')}}" alt="">
-  			<div>{{plant.display_name}}</div>
-		</a>
-	</li>
-	{% endfor %}
+  {% for plant in plants %}
+  <li data-plant-name="{{plant.romaji}}">
+  <a href="{{plant.get_link()}}" class="tile">
+    <img src="{{plant.image('ichiran')}}" alt="">
+    <div>{{plant.display_name}}</div>
+  </a>
+  </li>
+  {% endfor %}
 </ol>
 
 {% endblock %}

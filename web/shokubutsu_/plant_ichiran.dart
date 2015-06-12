@@ -5,7 +5,7 @@ import 'package:takatsugawa_zukan/ichiran_utils.dart';
 //ElementList<CheckboxInputElement> includeCheckboxes;
 //ElementList<CheckboxInputElement> excludeCheckboxes;
 TextInputElement articleSearch;
-NumberInputElement kakiSearch;
+SelectElement kakiSearch;
 ElementList<LIElement> plantTiles;
 ElementList<RadioButtonInputElement> typeSearchBoxes;
 ElementList<CheckboxInputElement> seiikuSearchBoxes;
@@ -40,7 +40,7 @@ void buttonSearchListen(InputElement box) {
   box.onChange.listen((e) => refresh());
 }
 
-void textSearchListen(InputElement field) {
+void textSearchListen(Element field) {
   field.onChange.listen((e) => refresh());
   field.onKeyUp.listen((e) => refresh());
 }
