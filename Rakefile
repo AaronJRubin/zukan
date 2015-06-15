@@ -266,7 +266,7 @@ task :compile => :build_web do
   # Yes, the dependency for this task is everything.
   dependencies = Rake::FileList.new("**/*").exclude(glob_disjunct appengine_sites).exclude("#{glob_disjunct appengine_sites}/**/*")
   sites.each do |site|
-    appengine_site = "#{site}_appengine"
+    appengine_site = "#{site}_appengine/static"
     unless (uptodate?("#{appengine_site}/home.html", dependencies)) 
       rm_r appengine_site, :force => true 
       smart_compile_dart(site)
