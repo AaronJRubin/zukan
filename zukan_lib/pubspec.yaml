@@ -1,0 +1,4 @@
+name: zukan_lib
+version: 0.0.1
+dependencies:
+  browser: any

@@ -9,7 +9,7 @@ import yaml
 from animal import Animal
 from plant import Plant
 
-template_dirs = [os.path.join(os.path.dirname(__file__), "templates", directory) for directory in ["pages", "layouts", "macros"]]
+template_dirs = [os.path.join(os.path.dirname(__file__), "templates", directory) for directory in ["sites", "layouts", "macros", "includes"]]
 jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dirs))
 
 def parse_yaml_file(path):
@@ -41,11 +41,13 @@ data = reduce(destructively_merge_dicts, map(parse_yaml_file, data_files))
 data.update({ "animals" : animal_list, "animal_map" : animal_map, "plants" : plant_list, "plant_map" : plant_map })
 
 def render_page(template_path):
-    relative_path = template_path.replace("templates/pages/", "")
+    relative_path = template_path.replace("templates/sites/", "")
     template = jinja_env.get_template(relative_path)
     page_name = os.path.splitext(os.path.basename(template_path))[0]
     rendered = template.render(data, page_name = page_name).encode('utf8')
-    destination = template_path.replace("templates/pages/", "web/")
+    target_workspace = os.path.split(template_path)[2]
+    path_within_web = os.path.join(os.path.split(template_path)[3:])
+    destination = os.path.join(target_workspace, "web", path_within_web)
     destination_dir = os.path.dirname(destination)
     if not os.path.exists(destination_dir):
         os.makedirs(destination_dir)
@@ -53,7 +55,7 @@ def render_page(template_path):
     f.write(rendered)
     f.close()
    
-page_template_paths = [path for path in glob("templates/pages/**/*") + glob("templates/pages/*") if not os.path.isdir(path)]
+page_template_paths = [path for path in glob("templates/sites/**/*") if not os.path.isdir(path)]
 
 for page_template_path in page_template_paths:
     render_page(page_template_path)

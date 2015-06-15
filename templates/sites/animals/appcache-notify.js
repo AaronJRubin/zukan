@@ -1,0 +1,1 @@
+{% include 'appcache-notify.js' %}

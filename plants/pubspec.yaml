@@ -1,0 +1,4 @@
+name: takatsugawa_zukan
+version: 0.0.1
+dependencies:
+  browser: any
