@@ -1,6 +1,6 @@
 import 'dart:html';
 import 'animal.dart';
-import 'animal_article.dart';
+import 'article.dart';
 import 'package:zukan_lib/ichiran_utils.dart';
 
 ElementList<CheckboxInputElement> includeCheckboxes;

@@ -1,6 +1,6 @@
 library article;
 
-part 'animal_article_list.dart';
+part 'article_list.dart';
 
 class Article {
 

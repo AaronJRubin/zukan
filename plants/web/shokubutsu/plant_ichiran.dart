@@ -1,5 +1,6 @@
 import 'dart:html';
 import 'plant.dart';
+import 'article.dart';
 import 'package:zukan_lib/ichiran_utils.dart';
 
 //ElementList<CheckboxInputElement> includeCheckboxes;
@@ -58,10 +59,10 @@ void toggleCheckboxChanged(
 Filter<Plant> buildFilter() {
   Filter<Plant> filter = new Filter<Plant>();
   String searchText = articleSearch.value.trim();
-  /*if (searchText.length > 0) {
+  if (searchText.length > 0) {
     filter
         .add((plant) => article_map[plant.romaji].text.contains(searchText));
-  }*/
+  }
   String searchKaki = kakiSearch.value.trim();
   if (searchKaki.length > 0) {
     int intVal = int.parse(searchKaki);

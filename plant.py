@@ -30,7 +30,7 @@ class Plant:
         self.type = type if type else ""
 
     def get_link(self):
-        return "/shokubutsu_/" + self.romaji + ".html"
+        return "/shokubutsu/" + self.romaji + ".html"
 
     def image(self, suffix):
         return os.path.join("/images/shokubutsu_", self.romaji, self.romaji + "-" + suffix + ".jpg")
