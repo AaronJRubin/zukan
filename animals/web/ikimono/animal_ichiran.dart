@@ -1,7 +1,7 @@
 import 'dart:html';
 import 'animal.dart';
 import 'animal_article.dart';
-import 'package:takatsugawa_zukan/ichiran_utils.dart';
+import 'package:zukan_lib/ichiran_utils.dart';
 
 ElementList<CheckboxInputElement> includeCheckboxes;
 ElementList<CheckboxInputElement> excludeCheckboxes;

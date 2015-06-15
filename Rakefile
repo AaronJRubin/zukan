@@ -216,11 +216,22 @@ file "animals/web/ikimono/animal_article_list.dart" => :generate_pages do |task|
   end
 end
 
+
+sites.each do |site|
+  task "#{site}_compass_watch" do
+    system "compass watch --sass-dir sass --css-dir #{site}/web/stylesheets"
+  end
+end
+
+multitask compass_watch: sites.map { |site| "#{site}_compass_watch" }
+
 desc "Compile Sass to CSS, using Compass"
 task :compile_sass do
   css_file = 'animals/web/stylesheets/main.css'
   unless (uptodate?(css_file, ['sass/main.scss']))
-    sh 'compass compile'
+    sites.each do |site|
+      sh "compass compile --sass-dir sass --css-dir #{site}/web/stylesheets"
+    end
   end	
 end
 
@@ -231,7 +242,7 @@ sites.each do |site|
   desc "Run development pub server for #{site} site (Dart SDK required)"
   task "serve_#{site}" => :build_web do
     Dir.chdir(site) do
-    sh 'pub serve'
+      sh 'pub serve --port 0'
     end
   end
 end

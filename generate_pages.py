@@ -45,8 +45,8 @@ def render_page(template_path):
     template = jinja_env.get_template(relative_path)
     page_name = os.path.splitext(os.path.basename(template_path))[0]
     rendered = template.render(data, page_name = page_name).encode('utf8')
-    target_workspace = os.path.split(template_path)[2]
-    path_within_web = os.path.join(os.path.split(template_path)[3:])
+    target_workspace = template_path.split("/")[2]
+    path_within_web = os.path.join(*template_path.split("/")[3:]) 
     destination = os.path.join(target_workspace, "web", path_within_web)
     destination_dir = os.path.dirname(destination)
     if not os.path.exists(destination_dir):
@@ -55,7 +55,7 @@ def render_page(template_path):
     f.write(rendered)
     f.close()
    
-page_template_paths = [path for path in glob("templates/sites/**/*") if not os.path.isdir(path)]
+page_template_paths = [path for path in glob("templates/sites/**/*") + glob("templates/sites/**/**/*") if not os.path.isdir(path)]
 
 for page_template_path in page_template_paths:
     render_page(page_template_path)
