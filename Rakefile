@@ -6,9 +6,10 @@ task :default => :compile
 
 sites = Rake::FileList.new("templates/sites/*").pathmap("%f")
 appengine_sites = Rake::FileList.new("*_appengine/static")
+MASTER_IMAGES = "master-images"
 
 def compressed_path(image_path)
-  split_path = image_path.gsub("master-images/", "").split("/")
+  split_path = image_path.gsub("#{MASTER_IMAGES}/", "").split("/")
   return "#{split_path[0]}/web/images/#{split_path[1..-1].join("/")}"
 end
 
@@ -68,7 +69,7 @@ end
 # to produce the compressed image from the original image. That shell command will probably
 # use the 'convert' utility in ImageMagick.
 def compress_images_task(name, source, convert_function)
-  images = Rake::FileList.new("master-images/#{source}")
+  images = Rake::FileList.new("#{MASTER_IMAGES}/#{source}")
   compressed_images = images.map { |image| compressed_path(image) }
   task name.to_s => compressed_images
   images.each do |image|
@@ -200,7 +201,7 @@ end
 
 desc "Render templates (html and others) using the jinja2 templates engine"
 task :generate_pages => [:compress_images, :validate_data] do
-  dependencies = Rake::FileList.new('templates/**/*').include('master-images/**/*').include('animal.py').include('plant.py').include('data/**/*')
+  dependencies = Rake::FileList.new('templates/**/*').include("#{MASTER_IMAGES}/**/*").include('animal.py').include('plant.py').include('data/**/*')
   unless uptodate?('animals/web/ikimono/ichiran.html', dependencies)
     sh 'python generate_pages.py' 
   end
@@ -268,7 +269,7 @@ task :compile => :build_web do
   sites.each do |site|
     appengine_site = "#{site}_appengine/static"
     unless (uptodate?("#{appengine_site}/home.html", dependencies)) 
-      rm_r appengine_site, :force => true 
+      rm_r appengine_site, :force => true
       smart_compile_dart(site)
       cp_r "#{site}/build/web", appengine_site
       generate_appcache appengine_site
