@@ -120,7 +120,7 @@ task :index_articles => sites.map { |site| "index_articles_#{site}" }
 def compress_images_task(name, source, convert_function)
   images = Rake::FileList.new("#{MASTER_IMAGES}/#{source}")
   compressed_images = images.map { |image| compressed_path(image) }
-  task name.to_s => compressed_images
+  multitask name.to_s => compressed_images
   images.each do |image|
     compressed_image = compressed_path(image)
     dependencies = [image]
@@ -367,9 +367,9 @@ end
 
 desc "Delete all generated files for a clean build"
 task :clean => :clean_nonimage do
-  site.each do |site|
+  sites.each do |site|
     Dir.chdir(site) do
-      rm_rf 'images'
+      rm_rf 'web/images'
     end
   end
 end
