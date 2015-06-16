@@ -254,18 +254,6 @@ task :generate_pages => [:compress_images, :validate_data] do
   end
 end
 
-=begin
-desc "Generate dart file that contains text of all articles for client-side searching"
-task :index_articles => :generate_pages do
-  dependencies = Rake::FileList.new("animals/web/ikimono/*.html").include("plants/web/shokubutsu/*.html")
-  unless uptodate?("animals/web/ikimono/article_list.dart", dependencies)
-    unlocked ["animals/web/ikimono/article_list.dart", "plants/web/shokubutsu/article_list.dart"] do
-      sh 'ruby index_articles.rb'
-    end
-  end
-end
-=end
-
 sites.each do |site|
   task "#{site}_compass_watch" do
     system "compass watch --sass-dir sass --css-dir #{site}/web/stylesheets"
@@ -310,13 +298,12 @@ def generate_appcache(dir)
   end
 end
 
-desc "Compile dart code and produce ready-to-deploy site with appcache and minified css"
-task :compile => :build_web do
-  # Yes, the dependency for this task is everything.
-  dependencies = Rake::FileList.new("**/*").exclude(glob_disjunct appengine_sites).exclude("#{glob_disjunct appengine_sites}/**/*")
-  sites.each do |site|
+sites.each do |site|
+  task "compile_#{site}" => :build_web do
     appengine_site = "#{site}_appengine/static"
-    unless (uptodate?("#{appengine_site}/home.html", dependencies)) 
+    dependencies = Rake::FileList.new("#{site}/**/*")
+    sentinal_files = Rake::FileList.new("#{appengine_site}/**/*.html")
+    if sentinal_files.empty? or not uptodate?(sentinal_files[0], dependencies)
       rm_r appengine_site, :force => true
       smart_compile_dart(site)
       cp_r "#{site}/build/web", appengine_site
@@ -342,6 +329,8 @@ task :compile => :build_web do
   end
 end
 
+desc "Compile dart code and produce ready-to-deploy sites with appcache and minified css"
+task :compile => sites.map { |site| "compile_#{site}" }
 sites.each do |site|
   desc "Deploy #{site} site to Google App Engine"
   task "deploy_#{site}" => :compile do
