@@ -71,45 +71,43 @@ Article = Struct.new(:name, :text)
 
 sites.each do |site|
   task "index_articles_#{site}" do
-    Dir.chdir(site) do
-      subdirectory = article_subdirectories[site]
-      full_articles = Rake::FileList.new("web/#{subdirectory}/*.html")
-      destination = "web/#{subdirectory}/article_list.dart"
+    subdirectory = article_subdirectories[site]
+    full_articles = Rake::FileList.new("#{site}/web/#{subdirectory}/*.html")
+    destination = "#{site}/web/#{subdirectory}/article_list.dart"
 
-      unless uptodate?(destination, full_articles)
-        unlocked(destination) do
-          articles = full_articles.map { |full_article|
-            name = full_article.pathmap("%n")
-            content = File.read full_article
-            classification = strip_html /<ul class="classification">.*?<\/ul>/m.match(content).to_s
-            body = strip_html /<article>.*?<\/article>/m.match(content).to_s
-            text = "#{classification}。#{body}"
-            Article.new(name, text)
-          }
+    unless uptodate?(destination, full_articles)
+      unlocked(destination) do
+        articles = full_articles.map { |full_article|
+          name = full_article.pathmap("%n")
+          content = File.read full_article
+          classification = strip_html /<ul class="classification">.*?<\/ul>/m.match(content).to_s
+          body = strip_html /<article>.*?<\/article>/m.match(content).to_s
+          text = "#{classification}。#{body}"
+          Article.new(name, text)
+        }
 
-          dart_articles = articles.map { |article|
-            "new Article(\"#{article.name}\", \"#{article.text}\")"
-          }
+        dart_articles = articles.map { |article|
+          "new Article(\"#{article.name}\", \"#{article.text}\")"
+        }
 
-          article_list_literal = "[#{dart_articles.join(",")}];"
+        article_list_literal = "[#{dart_articles.join(",")}];"
 
-          article_list_initializer = "List<Article> article_list = #{article_list_literal}"
+        article_list_initializer = "List<Article> article_list = #{article_list_literal}"
 
-          article_map_initializer = "Map<String, Article> article_map = new Map.fromIterable(article_list, key: (article) => article.name);"
+        article_map_initializer = "Map<String, Article> article_map = new Map.fromIterable(article_list, key: (article) => article.name);"
 
-          dart_file_contents = "part of article;\n\n#{article_list_initializer}\n\n#{article_map_initializer}"
+        dart_file_contents = "part of article;\n\n#{article_list_initializer}\n\n#{article_map_initializer}"
 
-          File.write(destination, dart_file_contents)
+        File.write(destination, dart_file_contents)
 
-          puts "Articles indexed for #{site}"
-        end
+        puts "Articles indexed for #{site}" 
       end
     end
   end
 end
 
 desc "Index articles (producing a dart file named article_list.dart for every site, containing article text)"
-task :index_articles => sites.map { |site| "index_articles_#{site}" }
+multitask :index_articles => sites.map { |site| "index_articles_#{site}" }
 
 # This function generates a task for compressing all of the images in a directory,
 # given a name for the task, the source directory,
