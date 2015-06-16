@@ -7,6 +7,7 @@ task :default => :compile
 sites = Rake::FileList.new("templates/sites/*").pathmap("%f")
 appengine_sites = Rake::FileList.new("*_appengine/static")
 MASTER_IMAGES = "master-images"
+article_subdirectories = { "plants" => "shokubutsu", "animals" => "ikimono" }
 
 def compressed_path(image_path)
   split_path = image_path.gsub("#{MASTER_IMAGES}/", "").split("/")
@@ -62,6 +63,54 @@ def smart_compile_dart(dir)
   end
 end
 
+def strip_html(html)
+  html.gsub(/<.*?>/, "").gsub(/\s/, "")
+end
+
+Article = Struct.new(:name, :text)
+
+sites.each do |site|
+  task "index_articles_#{site}" do
+    Dir.chdir(site) do
+      subdirectory = article_subdirectories[site]
+      full_articles = Rake::FileList.new("web/#{subdirectory}/*.html")
+      destination = "web/#{subdirectory}/article_list.dart"
+
+      unless uptodate?(destination, full_articles)
+        unlocked(destination) do
+          articles = full_articles.map { |full_article|
+            name = full_article.pathmap("%n")
+            content = File.read full_article
+            classification = strip_html /<ul class="classification">.*?<\/ul>/m.match(content).to_s
+            body = strip_html /<article>.*?<\/article>/m.match(content).to_s
+            text = "#{classification}。#{body}"
+            Article.new(name, text)
+          }
+
+          dart_articles = articles.map { |article|
+            "new Article(\"#{article.name}\", \"#{article.text}\")"
+          }
+
+          article_list_literal = "[#{dart_articles.join(",")}];"
+
+          article_list_initializer = "List<Article> article_list = #{article_list_literal}"
+
+          article_map_initializer = "Map<String, Article> article_map = new Map.fromIterable(article_list, key: (article) => article.name);"
+
+          dart_file_contents = "part of article;\n\n#{article_list_initializer}\n\n#{article_map_initializer}"
+
+          File.write(destination, dart_file_contents)
+
+          puts "Articles indexed for #{site}"
+        end
+      end
+    end
+  end
+end
+
+desc "Index articles (producing a dart file named article_list.dart for every site, containing article text)"
+task :index_articles => sites.map { |site| "index_articles_#{site}" }
+
 # This function generates a task for compressing all of the images in a directory,
 # given a name for the task, the source directory,
 # and a lambda that, when given two strings, one for the path to the original image
@@ -95,7 +144,7 @@ def get_cropped_aspect_ratio(image)
   uncropped_height = uncropped_dimensions[1].to_f
   crop_file = image.pathmap("%X.crp")
   if not File.exists? crop_file
-   return uncropped_height / uncropped_width
+    return uncropped_height / uncropped_width
   else
     crop_string = File.read(crop_file).strip
     cropped_dimensions = /(\d+)x(\d+)/.match(crop_string)
@@ -104,7 +153,7 @@ def get_cropped_aspect_ratio(image)
     return cropped_height / cropped_width
   end
 end
-  
+
 
 def convert(source, target, resize = "300x300", quality = "50")
   crop_file = source.pathmap("%X.crp")
@@ -199,7 +248,7 @@ task :validate_data do
 end
 
 
-desc "Render templates (html and others) using the jinja2 templates engine"
+desc "Render templates (html and others) using the jinja2 template engine"
 task :generate_pages => [:compress_images, :validate_data] do
   dependencies = Rake::FileList.new('templates/**/*').include("#{MASTER_IMAGES}/**/*").include('animal.py').include('plant.py').include('data/**/*')
   unless uptodate?('animals/web/ikimono/ichiran.html', dependencies)
@@ -207,6 +256,7 @@ task :generate_pages => [:compress_images, :validate_data] do
   end
 end
 
+=begin
 desc "Generate dart file that contains text of all articles for client-side searching"
 task :index_articles => :generate_pages do
   dependencies = Rake::FileList.new("animals/web/ikimono/*.html").include("plants/web/shokubutsu/*.html")
@@ -216,6 +266,7 @@ task :index_articles => :generate_pages do
     end
   end
 end
+=end
 
 sites.each do |site|
   task "#{site}_compass_watch" do
