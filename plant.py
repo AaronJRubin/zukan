@@ -33,7 +33,7 @@ class Plant:
         return "/shokubutsu/" + self.romaji + ".html"
 
     def image(self, suffix):
-        return os.path.join("/images/shokubutsu_", self.romaji, self.romaji + "-" + suffix + ".jpg")
+        return os.path.join("/images/shokubutsu", self.romaji, self.romaji + "-" + suffix + ".jpg")
 
     def blooms(self, month):
         return month in self.kaki
