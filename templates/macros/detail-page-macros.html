@@ -10,17 +10,3 @@
 <div>{{caller()}}</div>
 {% endif %}
 {% endmacro %}
-
-{% macro ichiran_jumbo_link_script(ichiran_url_fragment) %}
-<script>
-var jumboLink = document.querySelector(".jumbo-link")
-jumboLink.onclick = function(e) {
-  if (/{{ichiran_url_fragment}}/.test(document.referrer)) {
-    history.back();
-    return false;
-  } else {
-    return true;
-  }
-}
-</script>
-{% endmacro %}

@@ -5,7 +5,7 @@
 {% set background_class = animal.starting_location() %}
 {% set background_data = 'data-locations="' + " ".join(animal.locations()) + '"' %}
 {% set title = animal.kana %}
-{% from "detail-page-macros.html" import ichiran_jumbo_link_script, article_section %}
+{% from "detail-page-macros.html" import article_section %}
 
 {% block content %}
 
@@ -60,7 +60,9 @@
       <a href="ichiran.html" class="jumbo-link">一覧へ戻る</a>
     </footer> 
 
-    {{ ichiran_jumbo_link_script("ikimono\/ichiran") }} 
+    <script>
+    {% include 'ichiran-jumbo-link-script.js' %}
+    </script> 
 
     </main>
     {% endblock %}

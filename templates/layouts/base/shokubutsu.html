@@ -3,7 +3,7 @@
 {% set body_class = "plant-page" %}
 {% set plant = plant_map[page_name] %}
 {% set title = plant.kana %}
-{% from "detail-page-macros.html" import ichiran_jumbo_link_script, article_section %}
+{% from "detail-page-macros.html" import article_section %}
 {% block content %}
 
 <!--<script async src="plant_page.js"></script>-->
@@ -65,7 +65,9 @@
       <a href="ichiran.html" class="jumbo-link">一覧へ戻る</a>
     </footer>
 
-    {{ ichiran_jumbo_link_script("shokubutsu\/ichiran") }} 
+    <script>
+    {% include 'ichiran-jumbo-link-script.js' %} 
+    </script>
 
     </main>
 
