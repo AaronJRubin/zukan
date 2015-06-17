@@ -1,6 +1,6 @@
 #Introduction
 
-This repository contains the source code for the site hosted at www.takatsugawa-zukan.appspot.com, a visual encyclopedia of the fish inhabitating the Takatsu and Masuda rivers that flow through Masuda City, Shimane Prefecture, Japan.
+This repository contains the source code for two sites that share CSS, jinja2 templates, and a build process and asset pipeline. One of the sites is hosted at www.takatsugawa-zukan.appspot.com, and one is (to be) hosted at www.takatsugawa-shokubutsu-zukan.appspot.com. The sites are visual encyclopedias of the animals and plants, respectively, inhabitating the areas of the Takatsu and Masuda rivers that flow through Masuda City, Shimane Prefecture, Japan.
 
 #Dependencies
 
@@ -28,11 +28,11 @@ Assuming that you have Homebrew installed, run `brew install imagemagick`.
 
 #Architecture
 
-This is a statically generated site, built using the Jinja2 template engine for Python, but using Ruby's Rake tool to manage the build process. If you've heard of Jekyll (the Ruby static site generator) or Hyde (the Python static site generator), that's basically the idea, though I don't use either of those technologies directly. Rake generates a lot of files when you build this site; so that you don't inadvertently edit a generated file, they are chmodded (chmoded?) to read-only upon generation.
+These are statically generated sites, built using the Jinja2 template engine for Python, but using Ruby's Rake tool to manage the build process. If you've heard of Jekyll (the Ruby static site generator) or Hyde (the Python static site generator), that's basically the idea, though I don't use either of those technologies directly. Rake generates a lot of files when you build this site; so that you don't inadvertently edit a generated file, they are chmodded (chmoded?) to read-only upon generation.
 
 ##Templates
 
-Templates are stored in templates/, with the files in templates/pages/ being "full" templates that go into the finished site (in a directory structure that mirrors that of templates/pages/), and the ones in templates/layouts/ and templates/macros/ being... well, layouts and macros.
+Templates are stored in templates/, with the files in templates/sites/{site-name} being "full" templates that go into the finished sites in a directory structure that mirrors that of the {site-name} directories, and the ones in templates/layouts, templates/macros, and template/includes being shared jinja2 layouts, macros, and includes that are accessible to both sites.
 
 ##Data
 
@@ -40,20 +40,16 @@ The data (represented via YAML) that goes into the templates is stored in data/,
 
 ##Images
 
-Images are stored in master-images; you will notice that these images (with maybe one or two exceptions) are neither cropped, resized, nor compressed. These images are processed by the Rakefile in the mostly appropriately named compress_images task. Image cropping can be done by adding ".crp" files to the same folder as an image; for an image named abehaze.html, the files that specifies how that image should be cropped should be called abehaze.crp. The syntax of the crop specification is an ImageMagick geometry object (if this description is confusing, look around the contents of master-images/ikimono for an example). Resizing and quality compression is handled (at this point) manually in the Rakefile (by making calls to ImageMagick) on a directory-by-directory basis; using ".rsz" files or ".qual" files would be an interesting idea, however, and it is one that I am considering. One thing to bear in mind with images is that independently of ImageMagick compression, you should be using ImageOptim or some other image optimizer on any new images that you want to add to the site, before you even add them to the repository!
+Images are stored in master-images, in subdirectories for each site; you will notice that these images (with maybe one or two exceptions) are neither cropped, resized, nor compressed. These images are processed by the Rakefile in the mostly appropriately named compress_images task. Image cropping can be done by adding ".crp" files to the same folder as an image; for an image named abehaze.html, the files that specifies how that image should be cropped should be called abehaze.crp. The syntax of the crop specification is an ImageMagick geometry object (if this description is confusing, look around the contents of master-images/ikimono for an example). Resizing and quality compression is handled (at this point) manually in the Rakefile (by making calls to ImageMagick) on a directory-by-directory basis; using ".rsz" files or ".qual" files would be an interesting idea, however, and it is one that I am considering. One thing to bear in mind with images is that independently of ImageMagick compression, you should be using ImageOptim or some other image optimizer on any new images that you want to add to the site, before you even add them to the repository!
 
 ##CSS
 
-I use SCSS and Compass. Run `compass watch` as you edit sass/main.scss to see any changes that you make compiled to CSS, and thereby reflected in the site, immediately.
+I use SCSS and Compass. Run `rake compass_watch` as you edit sass/main.scss to see any changes that you make compiled to CSS, and thereby reflected in both sites, immediately.
 
 ##Scripting
 
-I use Javascript for super simple scripts, and Dart for the search functionality on ikimono/ichiran.html. Some of the Dart code is generated programmatically; animal_list.dart is generated from a jinja2 template, and article_list.dart is generated by index_articles.rb based on the contents of the animal articles (which were produced from templates at a previous stage of the build process).
+I use Javascript for super simple scripts, and Dart for the search functionality on the ichiran.html pages in both sites. The dart files ending in _list.dart are generated programmatically and should not be edited (animal_list.dart and plant_list.dart are generated from jinja2 templates, and the article_list.dart file for both sites is generated by the Rakefile based on the contents of the articles that were produced from templates at a previous stage of the build process.
 
 #Build Process
 
-To build the site for local testing, run `rake build_workspace`; to view the site in a local server, run `rake serve`; to produce something that will run on Google App Engine (and that is fully minified), run `rake compile`; to deploy to Google App Engine (assuming that you have the credentials), run `rake deploy`. You may occasionally need to run `rake clean` or `rake clean_nonimage` if you delete a template or image, but see it still showing up on the site. Unless you were messing with images, favor `rake clean_nonimage` because it's a lot faster (you don't have to recompress and re-resize images again on the next build). You are unlikely to want to run the other Rake tasks in isolation, but nothing will break if you do.
-
-#Miscellaneous Notes
-
-We are currently in the process of adding plants to the site (though we may decide at some point that plants should be hosted separately due to concerns about making the appcache take a frustratingly long amount of time to download). During this transition period, directories pertaining to plants end in an underscore, and the Rake task that compiles the site in the appengine_build/ directory removes such directories so that their contents are not actually deployed (this happens before the appcache is generated). When plants go live, we're planning on making the necessary changes in a separate branch first and deploying from that branch before we merge it into master. The necessary changes are simple, but a bit spread-out; we have to rename the directories enidng in underscores so that they don't end in underscores, move dart files in web/ into the now-non-underscored directory, and make a few obvious changes to plants.py (there are some directory references in convenience methods that will need to be updated to not use the underscore). We'll see how long it takes for appcache to download with the swath of new files, and we'll take it from there. Splitting the site up, of course, is not a particularly difficult programming challenge, but it will make the directory structure of this project a great deal less intuitive for future maintainers of this project, so we're going to try to avoid it.
+To build the sites for local testing, run `rake build_web`; to view the sites in a local server, run `rake serve_plants` or `rake serve_animals`; to produce something that will run on Google App Engine (and that is fully minified), run `rake compile`; to deploy to Google App Engine (assuming that you have the credentials), run `rake deploy_plants` or `rake deploy_animals`. You may occasionally need to run `rake clean` or `rake clean_nonimage` if you delete a template or image, but see it still showing up on the site. Unless you were messing with images, favor `rake clean_nonimage` because it's a lot faster (you don't have to recompress and re-resize images again on the next build). You are unlikely to want to run the other Rake tasks in isolation, but nothing will break if you do.
