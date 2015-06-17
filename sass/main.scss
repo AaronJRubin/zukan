@@ -1,9 +1,9 @@
-@import "compass/reset";
-@import "compass/css3/flexbox";
-@import "compass/css3/transform";
-@import "compass/css3/transition";
-@import "compass/css3/user-interface";
-@import "compass/css3/box-sizing";
+@import 'compass/reset';
+@import 'compass/css3/flexbox';
+@import 'compass/css3/transform';
+@import 'compass/css3/transition';
+@import 'compass/css3/user-interface';
+@import 'compass/css3/box-sizing';
 
 $primary-background: #113;
 $secondary-background: #119;
@@ -12,18 +12,18 @@ $highlighted: #808;
 $print-background: #fff;
 $text-color: #e8e8e8;
 $print-text-color: #000;
-$no-background: "(max-width: 700px)";
+$no-background: '(max-width: 700px)';
 
 // You cannot 100% tell whether a device is a touch screen just by screen size,
 // but you can get a decent heuristic that will handle most cases and allow
 // you to, in those cases, remove certain effects (specifically hover effects) 
 // that don't work or that work suboptimally on touch devices.
-$not-touch: "(min-width: 1025px)";
+$not-touch: '(min-width: 1025px)';
 $search-area-transition-time: .7s;
 $background-transition-time: .5s;
 $small-font-size: .8em;
 
-/* Begin general HTML element styles */
+// Begin general HTML element styles
 
 body {
   background: $primary-background;
@@ -57,6 +57,7 @@ h2 {
 %p {
   line-height: 1.2em;
   margin-bottom: .5em;
+
   &:last-child {
     margin-bottom: 0;
   }
@@ -93,20 +94,23 @@ footer {
   overflow: auto;
 }
 
-/* End general HTML element styles */
+// End general HTML element styles
 
-/* Begin utility class styles */
+// Begin utility class styles
 
 %binary-list {
   margin: auto;
   text-align: left;
+
   li {
     margin: .3em 0;
   }
+
   div {
     display: inline-block;
-    vertical-align: top;
     line-height: 1.2em;
+    vertical-align: top;
+
     &:first-child {
       text-align: right;
       width: 20%;
@@ -118,9 +122,10 @@ footer {
   border-radius: 7px;
 }
 
-%clickable {
-  background: $interactable;
+%clickable { 
   @include single-transition(background, $background-transition-time);
+  background: $interactable;
+
   &:hover {
     background: $highlighted;
   }
@@ -134,6 +139,7 @@ footer {
     max-height: $height;
   }
 }
+
 .tile {
   @extend %rounded-border;
   @include tile-img-height(8.5vw);
@@ -141,7 +147,7 @@ footer {
 
   @media (min-width: 1500px) {
     @include tile-img-height(133px);
-    font-size: 0.9em;
+    font-size: .9em;
   }
 
   @media (max-width: 900px) {
@@ -153,22 +159,27 @@ footer {
     font-size: 5vw;
     margin: .5vw 1vw;
     border-width: 1vw;
+
     img {
       max-height: 32vw;
-      min-width: 46vw;
       max-width: 96vw; 
+      min-width: 46vw;
     }
+
     img.long {
       max-height: 100%;
     }
   }
+
   border-style: solid;
   display: inline-block;
   letter-spacing: -.1em;
+
   div {
     margin: .1em 0 .2em;
     text-align: center;
   }
+
   @include transition-property(all);
   @include transition-duration($background-transition-time);
   @media #{$not-touch} {
@@ -197,44 +208,54 @@ footer {
   }
 }
 
-/* End utility class styles */
+// End utility class styles
 
-/* Begin styles for elements included on every page (i.e., in base.html) */
+// Begin styles for elements included on every page (i.e., in base.html)
 
 nav ul {
   width: 100%;
+
   li {
     @include box-sizing(border-box);
-    display: inline-block;
-    border-left: 1px solid #000;
     border-bottom: 1px solid #000;
+    border-left: 1px solid #000;
+    display: inline-block;
     width: 20%;
+
     &:nth-child(1) {
-      border-left: none;
+      border-left: 0;
     }
+
     a {
       @extend %clickable;
-      text-align: center;
       display: inline-block;
-      width: 100%;
       padding: .5em 0;
+      text-align: center;
+      width: 100%;
       @media (max-width: 450px) {
-        font-size: .7em;
         border-bottom: 1px solid #000;
+        font-size: .7em;
       }
     }
+
     @media (max-width: 1150px) {
-      &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+      &:nth-child(1), 
+      &:nth-child(2), 
+      &:nth-child(3) {
         width: 33.3%;
       }
-      &:nth-child(4), &:nth-child(5) {
+
+      &:nth-child(4), 
+      &:nth-child(5) {
         width: 50%;
       }
+
       &:nth-child(4) {
-        border-left: none;
+        border-left: 0;
       }
     }
   }
+
   @media print {
     display: none;
   }
@@ -242,23 +263,26 @@ nav ul {
 
 #appcache-notifications {
   display: none;
+
   &.displayed {
     background: #00f;
     display: block;
     padding: .5em 0;
+
     &.finished {
       background: #0b0;
     }
   }
 }
 
-/* Begin simple page styles (home, about, mamechishiki, reference documents) */
+// Begin simple page styles (home, about, mamechishiki, reference documents)
 
 %text-page {
   margin: 0 auto 1em;
   max-width: 960px;
   padding: 0 3%;
   text-align: center;
+
   p {
     text-align: justify;
     text-indent: 1.5em;
@@ -267,10 +291,12 @@ nav ul {
 
 .home {
   @extend %text-page;
+
   img {
     margin-bottom: .5em;
     max-width: 100%;
   }
+
   h1 {
     @media (max-width: 900px) {
       font-size: 5.5vw;
@@ -283,9 +309,10 @@ nav ul {
       font-size: 9vw;
     }
   }
+
   .signature p {
-    text-indent: 0;
     text-align: right;
+    text-indent: 0;
     @media (max-width: 459px) {
       font-size: 5vw;
     }
@@ -294,15 +321,18 @@ nav ul {
 
 .mamechishiki {
   @extend %text-page;
+
   h2 {
-    margin-top: 0;
     margin-bottom: .25em;
+    margin-top: 0;
   }
+
   a {
     &:hover {
       color: $highlighted;
     }
   }
+
   li {
     margin: 1em 0;
   }
@@ -310,6 +340,7 @@ nav ul {
 
 .image-bar {
   margin: 1em 0;
+
   img {
     width: 48%;
   }
@@ -322,10 +353,12 @@ nav ul {
 
 .about-page {
   @extend %text-page;
+
   .acknowledgements p {
     text-align: justify;
     text-indent: 0;
   }
+
   h1 {
     @media (max-width: 620px) {
       font-size: 7vw;
@@ -334,6 +367,7 @@ nav ul {
       font-size: 12vw;
     }
   }
+
   ul {
     @extend %binary-list;
     max-width: 390px;
@@ -341,6 +375,7 @@ nav ul {
       font-size: 5.5vw;
     }
   }
+
   a:hover {
     color: $highlighted;
   }
@@ -351,14 +386,14 @@ nav ul {
   margin-bottom: 1em;
 }
 
-/* End simple page styles */
+// End simple page styles
 
-/* Begin ichiran styles */
+// Begin ichiran styles
 
 .ichiran-header {
-  background-image: url("/images/ichiran-header-background.jpg");
-  background-size: 100%;
   @extend %rounded-border;
+  background-image: url('/images/ichiran-header-background.jpg');
+  background-size: 100%;
 }
 
 .tiles {
@@ -367,6 +402,7 @@ nav ul {
   @include flex-wrap(wrap);
   li {
     display: inline-block;
+
     &.hidden {
       display: none;
     }
@@ -375,8 +411,8 @@ nav ul {
 
 .search-dropdown-control,
 .search-header {
-  background: $secondary-background;
   @extend %rounded-border;
+  background: $secondary-background;
   padding: .2em .6%;
 }
 
@@ -396,16 +432,18 @@ nav ul {
   margin-left: 1em;
   padding: .5em .4em .3em;
   -webkit-touch-callout: none;
+
   &:hover {
     background: $highlighted;
   }
+
   &.collapsed {
     @include transform(rotate(90deg));
   }
 }
 
 #search-area {
-  $search-area-breakpoint: "(max-width: 628px)";
+  $search-area-breakpoint: '(max-width: 628px)';
   @include display-flex(flex);
   @include flex-direction(column);
   @include transition-property(all);
@@ -414,71 +452,84 @@ nav ul {
   font-size: $small-font-size;
   max-height: 200px;
   // necessary for height transition
+  opacity: 1;
   overflow: hidden;
-  opacity: 1.0;
   @media #{$search-area-breakpoint} {
     max-height: 300px;
   }
+
   ol {
     @include display-flex(flex);
     @include flex-wrap(wrap);
     @include justify-content(space-between);
     @include flex-direction(row);
   }
+
   li {
-    background: $interactable;
     @extend %rounded-border;
+    background: $interactable;
     display: inline-block;
     padding: .25em 0;
     text-align: center;
     width: 24.8%;
   }
+
   .search-description {
     display: inline-block;
     margin-right: 2%;
   }
+
   label {
     margin-right: 1%;
   }
+
   .search-header,
   li {
     margin-bottom: .2em;
   }
+
   .search-header {
-    display: flex;
     align-items: center;
+    display: flex;
     min-height: 28.5px;
   }
+
   [type='text'],
   [type='number'],
   select {
     @extend %rounded-border;
     font-size: inherit; 
   }
+
   [type='number'] {
     width: 3em;
   }
+
   .ryuuiki {
     display: inline-block;
+    margin-left: 2%;
     text-align: left;
     width: 58%;
-    margin-left: 2%;
   }
+
   .boxes {
     display: inline-block;
-    width: 38%;
-    text-align: right;
     margin-right: 2%;
+    text-align: right;
+    width: 38%;
   }
+
   #seisokuchi-search {
     [type='checkbox'] {
       display: none;
     }
+
     label {
-      display: inline-block;
-      padding: .2em;
       @extend %rounded-border;
       @include single-transition(background, .5s);
+      display: inline-block;
+      padding: .2em;
+
       &.exclude {
         background: #644;
         @media #{$not-touch} {
@@ -487,6 +538,7 @@ nav ul {
           }
         }
       }
+
       &.include {
         background: #464;
         @media #{$not-touch} {
@@ -496,48 +548,54 @@ nav ul {
         }
       }
     }
+
     [type=checkbox]:checked + label {
       &.exclude {
         background: #ff2424;
       }
+
       &.include {
         background: #24dd24;
       }
     }
   }
+
   &.collapsed {
-    opacity: 0;
     max-height: 0;
+    opacity: 0;
   }
+
   @media #{$search-area-breakpoint} {
     .individual-river-section {
       display: inline-block;
       width: 49%;
     }
+
     ol {
       @include flex-direction(column);
       width: 100%;
     }
+
     li {
       width: 100%;
     }
   }
 }
 
-/* End ichiran styles */
+// End ichiran styles
 
-/* Begin animal page styles */
+// Begin animal page styles
 
 body.animal-page {
-  background-size: 100% 100%;
   background-attachment: fixed;
+  background-size: 100% 100%;
   transition: background-image 3s ease-in-out;
   @media #{$no-background} {
     background-image: none;
   }
 }
 
-$seisokuchi: "takatsu-zyou", "takatsu-chuu", "takatsu-ge", "takatsu-kakou", "masuda-zyou", "masuda-chuu", "masuda-ge", "masuda-kakou";
+$seisokuchi: 'takatsu-zyou', 'takatsu-chuu', 'takatsu-ge', 'takatsu-kakou', 'masuda-zyou', 'masuda-chuu', 'masuda-ge', 'masuda-kakou';
 
 @each $a-seisokuchi in $seisokuchi {
   body.#{$a-seisokuchi} {
@@ -546,11 +604,11 @@ $seisokuchi: "takatsu-zyou", "takatsu-chuu", "takatsu-ge", "takatsu-kakou", "mas
 }
 
 main.detail-page {
-  background: $primary-background;
   @extend %rounded-border;
+  background: $primary-background;
   margin: 2vh auto;
   max-width: 700px;
-  padding: 2vh 2vw 0 2vw;
+  padding: 2vh 2vw 0;
   @media print {
     margin: 0;
     max-width: 100%;
@@ -572,6 +630,7 @@ main.detail-page {
   border-bottom-style: solid;
   border-bottom-width: .3em;
   text-align: center;
+
   > div,
   img,
   table,
@@ -580,10 +639,12 @@ main.detail-page {
     margin: 0 1% 1em;
     width: 48%;
   }
+
   img,
   .classification {
     @include align-self(center);
   }
+
   li {
     @extend %p;
     font-size: $small-font-size;
@@ -597,42 +658,50 @@ main.detail-page {
 
 .plant-header {
   @extend %detail-header;
+
   table {
     width: 98%;
   }
 }
 
 .animal-header {
-  $animal-header-bottom-split: "(max-width: 725px)";
+  $animal-header-bottom-split: '(max-width: 725px)';
   @extend %detail-header;
-    @media (max-width: 450px) {
+  @media (max-width: 450px) {
     img.long {
       width: 100%;
     }
+
     img.long + .classification {
       width: 100%;
     }
+
     table {
       font-size: .9em;
     }
   }
+
   table,
   .rarity {
     @media #{$animal-header-bottom-split} {
+
       margin-left: 0;
       margin-right: 0;
       width: 100%;
     }
   }
+
   td,
   .rarity-header {
     padding: .25em;
   }
+
   .rarity-header {
     @media #{$animal-header-bottom-split} {
       padding: 0;
     }
   }
+
   .rarity-stars {
     @media #{$animal-header-bottom-split} {
       padding-top: 0;
@@ -652,18 +721,21 @@ main.detail-page {
 
 article {
   min-height: 25vh;
+
   > div {
     border-bottom-style: solid;
     border-bottom-width: .3em;
     padding-bottom: 1em;
     padding-top: 1em;
+
     &.captioned-section {
       @include display-flex(flex);
       @include justify-content(top);
       @include align-content(top);
       @include align-items(center);
-      /* necessary to prevent images from stretching */
+      // necessary to prevent images from stretching
       @include flex-direction(row);
+
       > img {
         display: inline-block;
         margin-right: 1em;
@@ -674,4 +746,4 @@ article {
   }
 }
 
-/* End animal page styles */
+// End animal page styles
