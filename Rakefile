@@ -321,9 +321,9 @@ sites.each do |site|
       end
       jsFiles = Rake::FileList.new("#{appengine_site}/**/*.js")
       jsFiles.each do |file|
-        unlock file
-        sh "uglifyjs #{file} -c -m -o #{file}" 
-        lock file
+        unlocked file do
+          sh "uglifyjs #{file} -c -m -o #{file}" 
+        end
       end
     end
   end
