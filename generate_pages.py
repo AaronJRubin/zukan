@@ -51,9 +51,12 @@ def render_page(template_path):
     destination_dir = os.path.dirname(destination)
     if not os.path.exists(destination_dir):
         os.makedirs(destination_dir)
+    if os.path.exists(destination):
+        os.chmod(destination, 0222);
     f = file(destination, "w")
     f.write(rendered)
     f.close()
+    os.chmod(destination, 0555);
    
 page_template_paths = [path for path in glob("templates/sites/**/*") + glob("templates/sites/**/**/*") if not os.path.isdir(path)]
 
