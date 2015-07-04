@@ -1,0 +1,9 @@
+{% extends "base/mamechishiki.html" %}
+
+{% block article %}
+<ul>
+	{% for mamechishiki_title in mamechishiki_titles[site_name] %}
+	<li><a href="{{mamechishiki_title}}.html">{{mamechishiki_translations[mamechishiki_title]}}</li>
+{% endfor %}
+</ul>
+{% endblock %}
