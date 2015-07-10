@@ -34,7 +34,7 @@ def destructively_merge_dicts(dict_a, dict_b):
     dict_a.update(dict_b)
     return dict_a
 
-data_files = glob("data/automatically_processed/*")
+data_files = glob("data/automatically_processed/*.yaml")
 
 data = reduce(destructively_merge_dicts, map(parse_yaml_file, data_files))
 
