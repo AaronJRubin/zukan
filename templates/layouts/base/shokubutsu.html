@@ -54,21 +54,38 @@
      {% endif %}
     </header>
 
-    <article>
+		<div class = "gallery">
 
-      {% block article %}
+			<div class = "large">
+				{% for image in plant_images[plant.romaji]["large"] %}
+				<img src = {{plant.image(image)}}>
+				{% endfor %}
 
-      {% endblock %}
+			</div>
 
-    </article>
-    <footer>
-      <a href="ichiran.html" class="jumbo-link">一覧へ戻る</a>
-    </footer>
+			<div class = "small">
+				{% for image in plant_images[plant.romaji]["small"] %}
+				<img src = {{plant.image(image)}}>
+				{% endfor %}
+			</div>
 
-    <script>
-    {% include 'ichiran-jumbo-link-script.js' %} 
-    </script>
+		</div>
 
-    </main>
+		<article>
 
-    {% endblock %}
+			{% block article %}
+
+			{% endblock %}
+
+		</article>
+		<footer>
+			<a href="ichiran.html" class="jumbo-link">一覧へ戻る</a>
+		</footer>
+
+		<script>
+{% include 'ichiran-jumbo-link-script.js' %} 
+		</script>
+
+		</main>
+
+		{% endblock %}

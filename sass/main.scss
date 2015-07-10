@@ -719,6 +719,29 @@ main.detail-page {
   padding-top: 1em;
 }
 
+.gallery {
+	@include display-flex(flex);
+	
+	.large {
+		width: 27.2727%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.small {
+		@include display-flex(flex);
+		@include flex-wrap(wrap);;
+
+		width: 72.72%;
+
+		img {
+			width: 25%;
+		}
+	}
+}
+
 article {
   min-height: 25vh;
 

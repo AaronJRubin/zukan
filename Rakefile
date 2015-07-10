@@ -10,7 +10,7 @@ appengine_sites = Rake::FileList.new("*_appengine/static")
 MASTER_IMAGES = "master-images"
 article_subdirectories = { "plants" => "shokubutsu", "animals" => "ikimono" }
 
-plant_images = YAML.load(File.read("data/automatically_processed/plant_images.yaml"))
+plant_images = YAML.load(File.read("data/manually_processed/plant_images.yaml"))
 
 def compressed_path(image_path)
   split_path = image_path.gsub("#{MASTER_IMAGES}/", "").split("/")
@@ -202,16 +202,16 @@ desc "Compress images of animals in master-images and move to workspace"
 compress_images_task(:compress_animal_images, "animals/ikimono/**/*.jpg", convert_animal)
 
 convert_plant = lambda do |plant, compressed_plant|
-	plant_name = plant.pathmap("%-1d")
-	boundary = plant_images[plant_name]["boundary"]
 	if plant.include? "ichiran"
 		return convert(plant, compressed_plant, resize = "#{HEADER_IMAGE_WIDTH}x", quality = "60")
 	else
+		plant_name = plant.pathmap("%-1d")
+		boundary = plant_images[plant_name]["boundary"]
 		is_small = plant.pathmap("%n").to_i >= boundary
 		if is_small
-			return convert(plant, compressed_plant, resize = "150x", quality = "60")
+			return convert(plant, compressed_plant, resize = "200x150!", quality = "60")
 		else
-			return convert(plant, compressed_plant, resize = "250x", quality = "60")
+			return convert(plant, compressed_plant, resize = "300x225!", quality = "60")
 		end
 	end
 end
