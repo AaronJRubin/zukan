@@ -733,6 +733,7 @@ main.detail-page {
 	.small {
 		@include display-flex(flex);
 		@include flex-wrap(wrap);;
+		@include align-items(center);
 
 		width: 72.72%;
 
