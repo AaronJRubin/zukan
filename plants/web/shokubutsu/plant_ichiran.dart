@@ -12,6 +12,7 @@ ElementList<RadioButtonInputElement> typeSearchBoxes;
 ElementList<CheckboxInputElement> seiikuSearchBoxes;
 
 void main() {
+  print("Hello!");
   setUpSearchAreaToggle();
   //includeCheckboxes = document.querySelectorAll(".search-checkbox.include");
   //excludeCheckboxes = document.querySelectorAll(".search-checkbox.exclude");

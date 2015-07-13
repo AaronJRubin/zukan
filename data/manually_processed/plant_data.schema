@@ -15,6 +15,28 @@ mapping:
             latin:
                 type: str
                 required: true
+            kyoshi:
+                type: str
+            shokudoku:
+                type: seq
+                sequence:
+                    - type: str
+                      unique: true
+            ha_tsukikata:
+                type: str
+            hana_tsukikata:
+                type: str
+            hanabira_kazu:
+                type: seq
+                sequence:
+                    - type: int
+                      unique: true
+            ha_katachi:
+                type: str
+            hanabira_setsumei:
+                type: str
+            iro:
+                type: str
             kaki:
                 type: seq
                 sequence:

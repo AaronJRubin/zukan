@@ -59,33 +59,33 @@ def parse_plant_file(plant_file)
     res["kaki"] = kaki
     # skip tokki for now
     res["latin"] = row[8]
-    res["kana"] = row[9]
+    res["kana"] = row[9].gsub(/[(（].*[)）]/, "")
 		res["bunpu"] = if row[10].nil? then [] else row[10].gsub(/[()（） 　]/, "").chars.select { |char| char != "" } end
 		if type != "シダ類"
 			#puts "Parsing search parameters for plant of type #{type}"
-			res["hanotsukikata"] = row[11]
+			res["ha_tsukikata"] = row[11]
 			#puts "hananotsukikata = #{row[11]}"
-			res["hanokatachi"] = row[12]
+			res["ha_katachi"] = row[12]
 			#puts "hanokatachi = #{row[12]}"
 			res["kyoshi"] = row[13]
 			#puts "kyoshi = #{row[13]}"
-			res["hananotsukikata"] = row[14]
+			res["hana_tsukikata"] = row[14]
 			#puts "hananotsukikata = #{row[14]}"
 			petal_description = row[15] || ""
-			res["petal_description"] = petal_description
+			res["hanabira_setsumei"] = petal_description
 			#puts "petal_description = #{row[15]}"
 			petal_counts = Set.new(petal_description.scan(/\d+/).map(&:to_i))
 			petal_ranges = petal_description.scan(/\d+〜\d+/)
 			petal_ranges.each do |petal_range|
-				puts "Parsing petal range: #{petal_range}"
+				#puts "Parsing petal range: #{petal_range}"
 				beginning, ending = petal_range.split("〜").map(&:to_i)
 				((beginning + 1)...ending).each do |quantity|
 					petal_counts.add(quantity)
 				end
 			end
-			res["petal_counts"] = petal_counts.to_a.sort
+			res["hanabira_kazu"] = petal_counts.to_a.sort
 			#puts "petal_counts = #{res["petal_counts"]}"
-			res["color_description"] = row[16]
+			res["iro"] = row[16]
 			#puts "color_description = #{row[16]}"
 			#res["colors"] = row[16].split(/[・、～/
 			#puts "shokudoku = #{row[17]

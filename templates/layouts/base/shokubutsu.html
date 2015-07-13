@@ -17,7 +17,7 @@
 			<li>和名：{{plant.kana}}</li>
 			<li>学名：{{plant.latin}}</li>
 			<li>種類：{{plant.type}}</li>
-		</ul>
+    		</ul>
 
 			<table class = "kaki">
 				<tr>
@@ -54,38 +54,53 @@
      {% endif %}
     </header>
 
-		<div class = "gallery">
+    <article>
 
-			<div class = "large">
-				{% for image in plant_images[plant.romaji]["large"] %}
-				<img src = {{plant.image(image)}}>
-				{% endfor %}
+   {% if plant.type != "シダ類" %}
 
-			</div>
+   {% call article_section() %}
+   <ul>
+     <li>色：{{plant.iro}}</li>
+     <li>葉のつきかた：{{plant.ha_tsukikata}}</li>
+     <li>葉の形：{{plant.ha_katachi}}</li>
+     <li>鋸歯：{{plant.kyoshi}}</li>
+     <li>花のつきかた：{{plant.hana_tsukikata}}</li>
+     <li>花弁：{{plant.hanabira_setsumei}}</li>
+   </ul>
+   {% endcall %}
+   {% endif %}
 
-			<div class = "small">
-				{% for image in plant_images[plant.romaji]["small"] %}
-				<img src = {{plant.image(image)}}>
-				{% endfor %}
-			</div>
 
-		</div>
+   <div class = "gallery">
 
-		<article>
+     <div class = "large">
+       {% for image in plant_images[plant.romaji]["large"] %}
+       <img src = {{plant.image(image)}}>
+       {% endfor %}
 
-			{% block article %}
+     </div>
 
-			{% endblock %}
+     <div class = "small">
+       {% for image in plant_images[plant.romaji]["small"] %}
+       <img src = {{plant.image(image)}}>
+       {% endfor %}
+     </div>
 
-		</article>
-		<footer>
-			<a href="ichiran.html" class="jumbo-link">一覧へ戻る</a>
-		</footer>
+   </div>
 
-		<script>
+     {% block article %}
+
+     {% endblock %}
+
+   </article>
+   <footer>
+     <a href="ichiran.html" class="jumbo-link">一覧へ戻る</a>
+   </footer>
+
+   <script>
 {% include 'ichiran-jumbo-link-script.js' %} 
-		</script>
+   </script>
 
-		</main>
+   </main>
 
-		{% endblock %}
+   {% endblock %}

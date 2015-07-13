@@ -720,31 +720,35 @@ main.detail-page {
 }
 
 .gallery {
-	@include display-flex(flex);
-	
-	.large {
-		width: 27.2727%;
+  @include display-flex(flex);
 
-		img {
-			width: 100%;
-		}
-	}
+  .large {
+    width: 27.2727%;
 
-	.small {
-		@include display-flex(flex);
-		@include flex-wrap(wrap);;
-		@include align-items(center);
+    img {
+      width: 100%;
+    }
+  }
 
-		width: 72.72%;
+  .small {
+    @include display-flex(flex);
+    @include flex-wrap(wrap);;
+    @include align-items(center);
 
-		img {
-			width: 25%;
-		}
-	}
+    width: 72.72%;
+
+    img {
+      width: 25%;
+    }
+  }
 }
 
 article {
   min-height: 25vh;
+
+  li {
+    @extend %p;
+  }
 
   > div {
     border-bottom-style: solid;

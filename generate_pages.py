@@ -13,6 +13,19 @@ from collections import defaultdict
 template_dirs = [os.path.join(os.path.dirname(__file__), "templates", directory) for directory in ["sites", "layouts", "macros", "includes"]]
 jinja_env = jinja2.Environment(loader = jinja2.FileSystemLoader(template_dirs))
 
+def dartify(data): 
+    if isinstance(data, str) or isinstance(data, unicode):
+        return '"' + data + '"'
+    if isinstance(data, float) or isinstance(data, int):
+        return str(data)
+    if isinstance(data, list):
+        return "[" + ", ".join(dartify(datum) for datum in data) + "]"
+    if data == None:
+        return 'null' 
+    raise Exception("You have not defined how to handle dart literals for the following Python type: " + str(type(data)))
+
+jinja_env.filters["dartify"] = dartify
+
 def parse_yaml_file(path):
     file = open(path, "r")
     contents = file.read()

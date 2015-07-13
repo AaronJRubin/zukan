@@ -108,17 +108,17 @@ hangeshou:
   latin: SauTiiTus chinensis (Lour.) Baill.
   bunpu:
   - 海
-  hanotsukikata: 互生
-  hanokatachi: 長卵形、先端がとがる
+  ha_tsukikata: 互生
+  ha_katachi: 長卵形、先端がとがる
   kyoshi: 全縁
-  hananotsukikata: 穂状
-  petal_description: 無し
-  petal_counts: []
-  color_description: 白
+  hana_tsukikata: 穂状
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 白
   shokudoku:
   - 薬
   type: 双子葉植物
-.dokudami:
+dokudami:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -128,19 +128,19 @@ hangeshou:
   latin: Houttuynia cordata Thunb
   bunpu:
   - 全
-  hanotsukikata: 互生
-  hanokatachi: ハート形・心形
+  ha_tsukikata: 互生
+  ha_katachi: ハート形・心形
   kyoshi: 全縁
-  hananotsukikata: 穂状
-  petal_description: "無し\r4枚の白いのは萼"
-  petal_counts:
+  hana_tsukikata: 穂状
+  hanabira_setsumei: "無し\r4枚の白いのは萼"
+  hanabira_kazu:
   - 4
-  color_description: 淡緑黄
+  iro: 淡緑黄
   shokudoku:
   - 食
   - 薬
   type: 双子葉植物
-akameyanagi(marubayanagi）:
+akameyanagi:
   seiikubasho:
   - 湿地・岸辺
   kaki:
@@ -152,13 +152,13 @@ akameyanagi(marubayanagi）:
   - 津
   - 匹
   - 吉
-  hanotsukikata: 互生
-  hanokatachi: 楕円形
+  ha_tsukikata: 互生
+  ha_katachi: 楕円形
   kyoshi: 細鋸歯
-  hananotsukikata: 尾状・円錐形・穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 白・黄緑
+  hana_tsukikata: 尾状・円錐形・穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 白・黄緑
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -172,13 +172,13 @@ tachiyanagi:
   bunpu:
   - 吉
   - 高
-  hanotsukikata: 互生
-  hanokatachi: 長楕円形
+  ha_tsukikata: 互生
+  ha_katachi: 長楕円形
   kyoshi: 細鋸歯
-  hananotsukikata: 円錐形・穂状・穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 黄緑
+  hana_tsukikata: 円錐形・穂状・穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 黄緑
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -191,13 +191,13 @@ onoeyanagi:
   latin: Salix sachalinensis Fr. Schm.
   bunpu:
   - 吉
-  hanotsukikata: 互生
-  hanokatachi: 披針形・狭披針形
+  ha_tsukikata: 互生
+  ha_katachi: 披針形・狭披針形
   kyoshi: 波状の細鋸歯
-  hananotsukikata: 円柱状・尾状・穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 銀濃紅・橙黄
+  hana_tsukikata: 円柱状・尾状・穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 銀濃紅・橙黄
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -211,13 +211,13 @@ kawayanagi:
   bunpu:
   - 高
   - 津
-  hanotsukikata: 互生
-  hanokatachi: 線形
+  ha_tsukikata: 互生
+  ha_katachi: 線形
   kyoshi: 浅い波状の鋸歯
-  hananotsukikata: 円柱状・尾状・穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 銀灰黒・黄
+  hana_tsukikata: 円柱状・尾状・穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 銀灰黒・黄
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -233,13 +233,13 @@ nekoyanagi:
   - 益
   - 匹
   - 吉
-  hanotsukikata: 互生
-  hanokatachi: 長楕円形、先端尖る
+  ha_tsukikata: 互生
+  ha_katachi: 長楕円形、先端尖る
   kyoshi: 基部を除き細鋸歯
-  hananotsukikata: 長楕円形・尾状・穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 銀灰
+  hana_tsukikata: 長楕円形・尾状・穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 銀灰
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -255,13 +255,13 @@ sawagurumi:
   - 匹
   - 椛
   - 横
-  hanotsukikata: 互生
-  hanokatachi: 奇数羽状複葉。小葉は対生鋭尖頭長楕円形
+  ha_tsukikata: 互生
+  ha_katachi: 奇数羽状複葉。小葉は対生鋭尖頭長楕円形
   kyoshi: 細鋸歯
-  hananotsukikata: 尾状・穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: "雌花は紅、\r雄花は淡緑"
+  hana_tsukikata: 尾状・穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 雌花は紅、雄花は淡緑
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -274,13 +274,13 @@ onigurumi:
   latin: Juglans ailanthifolia Carr.
   bunpu:
   - 津
-  hanotsukikata: 互生
-  hanokatachi: 奇数羽状複葉。小葉は対生卵状長楕円形
+  ha_tsukikata: 互生
+  ha_katachi: 奇数羽状複葉。小葉は対生卵状長楕円形
   kyoshi: 細鋸歯
-  hananotsukikata: 穂状・尾状・穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: "雌花は紅、\r雄花は淡緑"
+  hana_tsukikata: 穂状・尾状・穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 雌花は紅、雄花は淡緑
   shokudoku:
   - 食
   type: 双子葉植物
@@ -293,13 +293,13 @@ hashibami:
   latin: Corylus heterophylla Fischer. var. thunbergii Blume
   bunpu:
   - 匹
-  hanotsukikata: 互生
-  hanokatachi: 広倒卵形。
+  ha_tsukikata: 互生
+  ha_katachi: 広倒卵形。
   kyoshi: 重鋸歯
-  hananotsukikata: 尾状・穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 暗赤・暗黄褐
+  hana_tsukikata: 尾状・穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 暗赤・暗黄褐
   shokudoku:
   - 食
   type: 双子葉植物
@@ -310,13 +310,13 @@ hannnoki:
   latin: Alnusfirma japonica (Thunb.) Steud.
   bunpu:
   - 津
-  hanotsukikata: 互生
-  hanokatachi: 卵状長楕円形
+  ha_tsukikata: 互生
+  ha_katachi: 卵状長楕円形
   kyoshi: 低い不整の鋸歯
-  hananotsukikata: 尾状・松かさ状・穂
-  petal_description: ''
-  petal_counts: []
-  color_description: 紅・緑
+  hana_tsukikata: 尾状・松かさ状・穂
+  hanabira_setsumei: ''
+  hanabira_kazu: []
+  iro: 紅・緑
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -332,15 +332,15 @@ mizu:
   bunpu:
   - 匹
   - 津
-  hanotsukikata: 対生
-  hanokatachi: 菱状卵形
+  ha_tsukikata: 対生
+  ha_katachi: 菱状卵形
   kyoshi: 葉先半分に粗い鋸歯
-  hananotsukikata: 散形（花柄なし）
-  petal_description: 2、3
-  petal_counts:
+  hana_tsukikata: 散形（花柄なし）
+  hanabira_setsumei: 2、3
+  hanabira_kazu:
   - 2
   - 3
-  color_description: 淡緑・緑白
+  iro: 淡緑・緑白
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -355,16 +355,16 @@ aomizu:
   latin: Pilea mongolica Weddell
   bunpu:
   - 津
-  hanotsukikata: 対生
-  hanokatachi: 卵形
+  ha_tsukikata: 対生
+  ha_katachi: 卵形
   kyoshi: 葉のほぼ全周に粗い鋸歯
-  hananotsukikata: 雄花頭状・雌花散形
-  petal_description: 2〜4
-  petal_counts:
+  hana_tsukikata: 雄花頭状・雌花散形
+  hanabira_setsumei: 2〜4
+  hanabira_kazu:
   - 2
   - 3
   - 4
-  color_description: 淡紅・緑
+  iro: 淡紅・緑
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -383,15 +383,15 @@ uwabamisou:
   - 椛
   - 吉
   - 匹
-  hanotsukikata: 互生
-  hanokatachi: 斜卵形または斜長楕円形。先は長く尾状
+  ha_tsukikata: 互生
+  ha_katachi: 斜卵形または斜長楕円形。先は長く尾状
   kyoshi: 鋭鋸歯
-  hananotsukikata: 雄花散形・雌花頭状
-  petal_description: 3〜4
-  petal_counts:
+  hana_tsukikata: 雄花散形・雌花頭状
+  hanabira_setsumei: 3〜4
+  hanabira_kazu:
   - 3
   - 4
-  color_description: 白・緑
+  iro: 白・緑
   shokudoku:
   - 食
   type: 双子葉植物
@@ -405,15 +405,15 @@ sanshousou:
   latin: Pellionia minima Makino
   bunpu:
   - 匹
-  hanotsukikata: 互生
-  hanokatachi: ゆがんだ倒卵形
+  ha_tsukikata: 互生
+  ha_katachi: ゆがんだ倒卵形
   kyoshi: 鈍い鋸歯
-  hananotsukikata: 散形花序
-  petal_description: 4・5
-  petal_counts:
+  hana_tsukikata: 散形花序
+  hanabira_setsumei: 4・5
+  hanabira_kazu:
   - 4
   - 5
-  color_description: 淡緑
+  iro: 淡緑
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -430,14 +430,14 @@ ishimikawa:
   - 高
   - 益
   - 津
-  hanotsukikata: 互生
-  hanokatachi: 三角形
+  ha_tsukikata: 互生
+  ha_katachi: 三角形
   kyoshi: 緩い波形〜ほぼ全縁
-  hananotsukikata: 短い穂（総状花序）
-  petal_description: 合5裂
-  petal_counts:
+  hana_tsukikata: 短い穂（総状花序）
+  hanabira_setsumei: 合5裂
+  hanabira_kazu:
   - 5
-  color_description: 淡緑白
+  iro: 淡緑白
   shokudoku:
   - 薬
   type: 双子葉植物
@@ -452,14 +452,14 @@ mizosoba:
   latin: Persicaria thunbergii Sieb. et Zu.cc.
   bunpu:
   - 全
-  hanotsukikata: 互生
-  hanokatachi: 卵状ほこ形。基部は耳状
+  ha_tsukikata: 互生
+  ha_katachi: 卵状ほこ形。基部は耳状
   kyoshi: 全縁
-  hananotsukikata: 短い穂（総状花序）
-  petal_description: 合5裂
-  petal_counts:
+  hana_tsukikata: 短い穂（総状花序）
+  hanabira_setsumei: 合5裂
+  hanabira_kazu:
   - 5
-  color_description: ピンク・白
+  iro: ピンク・白
   shokudoku:
   - 食
   - 薬
@@ -475,14 +475,14 @@ akinounagitsukami:
   latin: Persicaria sieboldi Meisn. var. sieboldi (Meisn.)
   bunpu:
   - 全
-  hanotsukikata: 互生
-  hanokatachi: 心形〜やじり形。基部は心形〜やじり形
+  ha_tsukikata: 互生
+  ha_katachi: 心形〜やじり形。基部は心形〜やじり形
   kyoshi: 全縁
-  hananotsukikata: 球状・短い穂（総状）
-  petal_description: 合5裂
-  petal_counts:
+  hana_tsukikata: 球状・短い穂（総状）
+  hanabira_setsumei: 合5裂
+  hanabira_kazu:
   - 5
-  color_description: 淡紅色・白色
+  iro: 淡紅色・白色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -495,14 +495,14 @@ yanonegusa:
   latin: Persicaria nipponense Makino
   bunpu:
   - 椛
-  hanotsukikata: 互生
-  hanokatachi: 長楕円形、または卵形。基部は切り形〜浅い心形
+  ha_tsukikata: 互生
+  ha_katachi: 長楕円形、または卵形。基部は切り形〜浅い心形
   kyoshi: 全縁
-  hananotsukikata: 頭状・短い穂（総状）
-  petal_description: 合5裂
-  petal_counts:
+  hana_tsukikata: 頭状・短い穂（総状）
+  hanabira_setsumei: 合5裂
+  hanabira_kazu:
   - 5
-  color_description: 淡紅色・白色
+  iro: 淡紅色・白色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -514,14 +514,14 @@ nagabanoyanonegusa:
   - 10
   latin: Persicaria breviochreata (Makino) Ohki
   bunpu: []
-  hanotsukikata: 互生
-  hanokatachi: 長楕円状披針形・先は鋭形。基部は小さく3裂又はほぼ切形
+  ha_tsukikata: 互生
+  ha_katachi: 長楕円状披針形・先は鋭形。基部は小さく3裂又はほぼ切形
   kyoshi: 全縁
-  hananotsukikata: 短い穂（総状花序）
-  petal_description: 合5裂
-  petal_counts:
+  hana_tsukikata: 短い穂（総状花序）
+  hanabira_setsumei: 合5裂
+  hanabira_kazu:
   - 5
-  color_description: 淡紅色・白色
+  iro: 淡紅色・白色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -538,14 +538,14 @@ yanagitade:
   - 高
   - 益
   - 海
-  hanotsukikata: 互生
-  hanokatachi: 披針形
+  ha_tsukikata: 互生
+  ha_katachi: 披針形
   kyoshi: 全縁
-  hananotsukikata: 穂状
-  petal_description: 合5深裂
-  petal_counts:
+  hana_tsukikata: 穂状
+  hanabira_setsumei: 合5深裂
+  hanabira_kazu:
   - 5
-  color_description: 淡紅色・白色
+  iro: 淡紅色・白色
   shokudoku:
   - 食
   type: 双子葉植物
@@ -561,14 +561,14 @@ okahijiki:
   latin: Salsola komarovii lliin
   bunpu:
   - 海
-  hanotsukikata: 互生
-  hanokatachi: 肉質円柱状
+  ha_tsukikata: 互生
+  ha_katachi: 肉質円柱状
   kyoshi: 全縁
-  hananotsukikata: 散形
-  petal_description: '5'
-  petal_counts:
+  hana_tsukikata: 散形
+  hanabira_setsumei: '5'
+  hanabira_kazu:
   - 5
-  color_description: 淡緑
+  iro: 淡緑
   shokudoku:
   - 食
   type: 双子葉植物
@@ -587,13 +587,13 @@ tsuruna:
   latin: Tetragonia tetragonoides (Pall.) O.Kuntze
   bunpu:
   - 海
-  hanotsukikata: 互生
-  hanokatachi: 多肉質鏃形から菱形
+  ha_tsukikata: 互生
+  ha_katachi: 多肉質鏃形から菱形
   kyoshi: 全縁
-  hananotsukikata: 穂状
-  petal_description: 無し
-  petal_counts: []
-  color_description: 萼が黄緑
+  hana_tsukikata: 穂状
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 萼が黄緑
   shokudoku:
   - 食
   - 薬
@@ -610,14 +610,14 @@ hamatsumekusa:
   latin: Sagina ttaquetii Leveille
   bunpu:
   - 海
-  hanotsukikata: 対生
-  hanokatachi: 肉質線形
+  ha_tsukikata: 対生
+  ha_katachi: 肉質線形
   kyoshi: 全縁
-  hananotsukikata: 複総状
-  petal_description: '5'
-  petal_counts:
+  hana_tsukikata: 複総状
+  hanabira_setsumei: '5'
+  hanabira_kazu:
   - 5
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -632,14 +632,14 @@ kawaranadeshiko:
   latin: Dianthus superbus L. var. longicalycinus(Maxim.)Williams
   bunpu:
   - 全
-  hanotsukikata: 対生
-  hanokatachi: 線形〜披針形
+  ha_tsukikata: 対生
+  ha_katachi: 線形〜披針形
   kyoshi: 全縁
-  hananotsukikata: 複総状、細裂
-  petal_description: '5'
-  petal_counts:
+  hana_tsukikata: 複総状、細裂
+  hanabira_setsumei: '5'
+  hanabira_kazu:
   - 5
-  color_description: 淡紅色・白色
+  iro: 淡紅色・白色
   shokudoku:
   - 食
   - 薬
@@ -654,14 +654,14 @@ mantema:
   latin: Silene gallica L. var. quinquevulnera (Linn.) Rohrb.
   bunpu:
   - 海
-  hanotsukikata: 対生
-  hanokatachi: 下部の葉はへら形、上部の葉は倒披針形
+  ha_tsukikata: 対生
+  ha_katachi: 下部の葉はへら形、上部の葉は倒披針形
   kyoshi: 全縁
-  hananotsukikata: 総状
-  petal_description: '5'
-  petal_counts:
+  hana_tsukikata: 総状
+  hanabira_setsumei: '5'
+  hanabira_kazu:
   - 5
-  color_description: 白・赤・淡紅
+  iro: 白・赤・淡紅
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -673,14 +673,14 @@ wachigaisou:
   latin: Pseudostellaria heterantha
   bunpu:
   - 吉
-  hanotsukikata: 対生
-  hanokatachi: 倒披針形〜卵状披針形
+  ha_tsukikata: 対生
+  ha_katachi: 倒披針形〜卵状披針形
   kyoshi: 全縁
-  hananotsukikata: 総状
-  petal_description: '5'
-  petal_counts:
+  hana_tsukikata: 総状
+  hanabira_setsumei: '5'
+  hanabira_kazu:
   - 5
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -694,15 +694,15 @@ junsai:
   latin: Brasenia schreberi I. F. Gmel.
   bunpu:
   - 高
-  hanotsukikata: 互生
-  hanokatachi: 楕円形
+  ha_tsukikata: 互生
+  ha_katachi: 楕円形
   kyoshi: 全縁
-  hananotsukikata: 単頂
-  petal_description: 3（6）
-  petal_counts:
+  hana_tsukikata: 単頂
+  hanabira_setsumei: 3（6）
+  hanabira_kazu:
   - 3
   - 6
-  color_description: 暗赤色
+  iro: 暗赤色
   shokudoku:
   - 食
   type: 双子葉植物
@@ -718,14 +718,14 @@ kouhone:
   latin: Nuphar japonicum DC.
   bunpu:
   - 吉
-  hanotsukikata: 螺旋状
-  hanokatachi: 気中葉肉質長楕円形・水中葉膜質
+  ha_tsukikata: 螺旋状
+  ha_katachi: 気中葉肉質長楕円形・水中葉膜質
   kyoshi: 全縁・水中葉は波状に縮む
-  hananotsukikata: 単頂
-  petal_description: '5'
-  petal_counts:
+  hana_tsukikata: 単頂
+  hanabira_setsumei: '5'
+  hanabira_kazu:
   - 5
-  color_description: 黄色
+  iro: 黄色
   shokudoku:
   - 薬
   type: 双子葉植物
@@ -742,13 +742,13 @@ hitsujigusa:
   latin: Nymphaea tetragona Georgl
   bunpu:
   - 高
-  hanotsukikata: 塊状根茎から根生
-  hanokatachi: "沈水葉は幅広矢じり形〜半円形\r浮葉は楕円形〜卵形で基部は深く切れ込む"
+  ha_tsukikata: 塊状根茎から根生
+  ha_katachi: "沈水葉は幅広矢じり形〜半円形\r浮葉は楕円形〜卵形で基部は深く切れ込む"
   kyoshi: 全縁
-  hananotsukikata: 単頂
-  petal_description: 多
-  petal_counts: []
-  color_description: 白色
+  hana_tsukikata: 単頂
+  hanabira_setsumei: 多
+  hanabira_kazu: []
+  iro: 白色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -762,13 +762,13 @@ hasu:
   bunpu:
   - 高
   - 益
-  hanotsukikata: 地下茎から根生
-  hanokatachi: 円形
+  ha_tsukikata: 地下茎から根生
+  ha_katachi: 円形
   kyoshi: 全縁で波打つ
-  hananotsukikata: 単頂
-  petal_description: 多
-  petal_counts: []
-  color_description: 淡紅色・白色
+  hana_tsukikata: 単頂
+  hanabira_setsumei: 多
+  hanabira_kazu: []
+  iro: 淡紅色・白色
   shokudoku:
   - 食
   - 薬
@@ -784,14 +784,14 @@ matsumo:
   latin: Ceratophyllum demersum Linn.
   bunpu:
   - 高
-  hanotsukikata: 輪生
-  hanokatachi: 線状裂片1〜2回2叉状
+  ha_tsukikata: 輪生
+  ha_katachi: 線状裂片1〜2回2叉状
   kyoshi: 鉤状の小さな鋸歯
-  hananotsukikata: 総状
-  petal_description: '3'
-  petal_counts:
+  hana_tsukikata: 総状
+  hanabira_setsumei: '3'
+  hanabira_kazu:
   - 3
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -805,14 +805,14 @@ tagarashi:
   latin: Ranunculus sceleratus Linn.
   bunpu:
   - 全
-  hanotsukikata: 互生
-  hanokatachi: "根生葉は腎形、掌状に3〜5中〜深裂し、裂片はさらに3〜5浅裂\r茎葉は、3深裂し、裂片は時に2深裂"
+  ha_tsukikata: 互生
+  ha_katachi: "根生葉は腎形、掌状に3〜5中〜深裂し、裂片はさらに3〜5浅裂\r茎葉は、3深裂し、裂片は時に2深裂"
   kyoshi: 全縁
-  hananotsukikata: 総状
-  petal_description: '5'
-  petal_counts:
+  hana_tsukikata: 総状
+  hanabira_setsumei: '5'
+  hanabira_kazu:
   - 5
-  color_description: 黄色
+  iro: 黄色
   shokudoku:
   - 毒
   type: 双子葉植物
@@ -827,14 +827,14 @@ kitsunenobotan:
   latin: Ranunculus ternatus Thunb.
   bunpu:
   - 全
-  hanotsukikata: 互生
-  hanokatachi: 3出複葉。小葉は卵形、3深裂。上部の葉は単純3深裂
+  ha_tsukikata: 互生
+  ha_katachi: 3出複葉。小葉は卵形、3深裂。上部の葉は単純3深裂
   kyoshi: ふぞろいな鋸歯
-  hananotsukikata: 総状
-  petal_description: '5'
-  petal_counts:
+  hana_tsukikata: 総状
+  hanabira_setsumei: '5'
+  hanabira_kazu:
   - 5
-  color_description: 黄色
+  iro: 黄色
   shokudoku:
   - 毒
   type: 双子葉植物
@@ -850,14 +850,14 @@ kekitsunenobotan:
   bunpu:
   - 高
   - 益
-  hanotsukikata: 互生
-  hanokatachi: 1〜2回3出複葉。小葉は倒卵形、2〜3中裂。上部の葉は1回3出複葉または単に3中裂。
+  ha_tsukikata: 互生
+  ha_katachi: 1〜2回3出複葉。小葉は倒卵形、2〜3中裂。上部の葉は1回3出複葉または単に3中裂。
   kyoshi: ふぞろいな鋸歯
-  hananotsukikata: 総状
-  petal_description: '5'
-  petal_counts:
+  hana_tsukikata: 総状
+  hanabira_setsumei: '5'
+  hanabira_kazu:
   - 5
-  color_description: 黄色
+  iro: 黄色
   shokudoku:
   - 毒
   type: 双子葉植物
@@ -882,14 +882,14 @@ himebaikamo:
   latin: Ranunculus kazusensis (Makino)
   bunpu:
   - 吉
-  hanotsukikata: 互生
-  hanokatachi: ３出複葉で扇状に細裂、各小葉はさらに２裂して最終裂片は糸状
+  ha_tsukikata: 互生
+  ha_katachi: ３出複葉で扇状に細裂、各小葉はさらに２裂して最終裂片は糸状
   kyoshi: 
-  hananotsukikata: 総状
-  petal_description: '5'
-  petal_counts:
+  hana_tsukikata: 総状
+  hanabira_setsumei: '5'
+  hanabira_kazu:
   - 5
-  color_description: 黄色
+  iro: 黄色
   shokudoku:
   - 食
   type: 双子葉植物
@@ -902,14 +902,14 @@ hamabiwa:
   latin: Litsea japonica (Thunb.) Juss.
   bunpu:
   - 海
-  hanotsukikata: 
-  hanokatachi: 楕円形
+  ha_tsukikata: 
+  ha_katachi: 楕円形
   kyoshi: 全縁
-  hananotsukikata: 散形
-  petal_description: 6裂
-  petal_counts:
+  hana_tsukikata: 散形
+  hanabira_setsumei: 6裂
+  hanabira_kazu:
   - 6
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -924,14 +924,14 @@ hamadaikon:
   latin: Raphanus sativus Linn. var. raphanistroides(Makino) Makino
   bunpu:
   - 海
-  hanotsukikata: 根生。茎葉は互生
-  hanokatachi: 羽状裂葉。上部の葉は羽裂しない
+  ha_tsukikata: 根生。茎葉は互生
+  ha_katachi: 羽状裂葉。上部の葉は羽裂しない
   kyoshi: 粗く耳裂
-  hananotsukikata: 総状
-  petal_description: '4'
-  petal_counts:
+  hana_tsukikata: 総状
+  hanabira_setsumei: '4'
+  hanabira_kazu:
   - 4
-  color_description: 紫色
+  iro: 紫色
   shokudoku:
   - 食
   type: 双子葉植物
@@ -945,14 +945,14 @@ tanetsukebana:
   latin: Cardamine flexuosa With.
   bunpu:
   - 全
-  hanotsukikata: 互生
-  hanokatachi: 羽状裂葉。側小葉は狭長楕円形〜倒卵形
+  ha_tsukikata: 互生
+  ha_katachi: 羽状裂葉。側小葉は狭長楕円形〜倒卵形
   kyoshi: 全縁または浅く1〜2裂
-  hananotsukikata: 総状
-  petal_description: '4'
-  petal_counts:
+  hana_tsukikata: 総状
+  hanabira_setsumei: '4'
+  hanabira_kazu:
   - 4
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 食
   type: 双子葉植物
@@ -965,14 +965,14 @@ konronsou:
   latin: Cardamine leucantha (Tausch) O.E. Schulz
   bunpu:
   - 椛
-  hanotsukikata: 互生
-  hanokatachi: 奇数羽状複葉。小葉は長楕円状披針形
+  ha_tsukikata: 互生
+  ha_katachi: 奇数羽状複葉。小葉は長楕円状披針形
   kyoshi: 粗くふぞろいな鋸歯
-  hananotsukikata: 複総状
-  petal_description: '4'
-  petal_counts:
+  hana_tsukikata: 複総状
+  hanabira_setsumei: '4'
+  hanabira_kazu:
   - 4
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -987,14 +987,14 @@ mizutanetsukebana:
   latin: Cardamine Caraamine flexuosa With. var. latifolia Makino
   bunpu:
   - 益
-  hanotsukikata: 互生
-  hanokatachi: 羽状裂葉。側小葉は腎円形〜心円形または円形
+  ha_tsukikata: 互生
+  ha_katachi: 羽状裂葉。側小葉は腎円形〜心円形または円形
   kyoshi: 不規則で粗い鋸歯
-  hananotsukikata: 総状
-  petal_description: '4'
-  petal_counts:
+  hana_tsukikata: 総状
+  hanabira_setsumei: '4'
+  hanabira_kazu:
   - 4
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 食
   type: 双子葉植物
@@ -1008,14 +1008,14 @@ wasabi:
   latin: Wasabia japonica (Miquel) Matsum.
   bunpu:
   - 匹
-  hanotsukikata: 不規則な螺旋状〜互生
-  hanokatachi: 円形ないし心臓形
+  ha_tsukikata: 不規則な螺旋状〜互生
+  ha_katachi: 円形ないし心臓形
   kyoshi: 不規則で粗い鋸歯
-  hananotsukikata: 総状
-  petal_description: '4'
-  petal_counts:
+  hana_tsukikata: 総状
+  hanabira_setsumei: '4'
+  hanabira_kazu:
   - 4
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 食
   type: 双子葉植物
@@ -1030,14 +1030,14 @@ orandagarashi:
   latin: Nasturtium officinale R. Br.
   bunpu:
   - 津
-  hanotsukikata: 互生
-  hanokatachi: 奇数羽状複葉。小葉は卵形〜楕円形
+  ha_tsukikata: 互生
+  ha_katachi: 奇数羽状複葉。小葉は卵形〜楕円形
   kyoshi: 全縁〜波状
-  hananotsukikata: 総状
-  petal_description: '4'
-  petal_counts:
+  hana_tsukikata: 総状
+  hanabira_setsumei: '4'
+  hanabira_kazu:
   - 4
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 食
   type: 双子葉植物
@@ -1052,14 +1052,14 @@ hamahatazao:
   latin: Arabis stelleri DC. var. japonica (A. Gray) Fr. Schm.
   bunpu:
   - 海
-  hanotsukikata: 互生
-  hanokatachi: へら形〜長楕円形
+  ha_tsukikata: 互生
+  ha_katachi: へら形〜長楕円形
   kyoshi: 上部に浅い鋸歯
-  hananotsukikata: 総状
-  petal_description: '4'
-  petal_counts:
+  hana_tsukikata: 総状
+  hanabira_setsumei: '4'
+  hanabira_kazu:
   - 4
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -1074,14 +1074,14 @@ hatazao:
   bunpu:
   - 匹
   - 津
-  hanotsukikata: 互生
-  hanokatachi: 根出葉は倒披針形、茎葉は楕円形〜披針形で基部は矢尻状
+  ha_tsukikata: 互生
+  ha_katachi: 根出葉は倒披針形、茎葉は楕円形〜披針形で基部は矢尻状
   kyoshi: 普通全縁、ときに低鋸歯縁
-  hananotsukikata: 総状
-  petal_description: '4'
-  petal_counts:
+  hana_tsukikata: 総状
+  hanabira_setsumei: '4'
+  hanabira_kazu:
   - 4
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -1097,14 +1097,14 @@ mousengoke:
   - 匹
   - 吉
   - 高
-  hanotsukikata: ロゼット
-  hanokatachi: 卵状円形
+  ha_tsukikata: ロゼット
+  ha_katachi: 卵状円形
   kyoshi: 腺毛密生
-  hananotsukikata: 単頂
-  petal_description: '5'
-  petal_counts:
+  hana_tsukikata: 単頂
+  hanabira_setsumei: '5'
+  hanabira_kazu:
   - 5
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -1118,14 +1118,14 @@ taitogome:
   latin: Sedum oryzifolium Makino
   bunpu:
   - 海
-  hanotsukikata: 螺旋状
-  hanokatachi: 円柱状倒卵形
+  ha_tsukikata: 螺旋状
+  ha_katachi: 円柱状倒卵形
   kyoshi: 全縁
-  hananotsukikata: 単頂
-  petal_description: '5'
-  petal_counts:
+  hana_tsukikata: 単頂
+  hanabira_setsumei: '5'
+  hanabira_kazu:
   - 5
-  color_description: 黄色
+  iro: 黄色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -1141,14 +1141,14 @@ daimonjisou:
   bunpu:
   - 匹
   - 椛
-  hanotsukikata: 根生
-  hanokatachi: 腎円形。掌状浅裂。基部はくさび形または心形
+  ha_tsukikata: 根生
+  ha_katachi: 腎円形。掌状浅裂。基部はくさび形または心形
   kyoshi: 重鋸歯
-  hananotsukikata: 複集散
-  petal_description: '5'
-  petal_counts:
+  hana_tsukikata: 複集散
+  hanabira_setsumei: '5'
+  hanabira_kazu:
   - 5
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 食
   - 薬
@@ -1163,13 +1163,13 @@ hokurikunekonomesou:
   bunpu:
   - 横
   - 津
-  hanotsukikata: 無葉又は１対を対生
-  hanokatachi: 卵形〜楕円形
+  ha_tsukikata: 無葉又は１対を対生
+  ha_katachi: 卵形〜楕円形
   kyoshi: 鈍鋸歯
-  hananotsukikata: 複散房
-  petal_description: 無
-  petal_counts: []
-  color_description: 黄緑
+  hana_tsukikata: 複散房
+  hanabira_setsumei: 無
+  hanabira_kazu: []
+  iro: 黄緑
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -1183,14 +1183,14 @@ kocharumerusou:
   bunpu:
   - 匹
   - 津
-  hanotsukikata: 根生
-  hanokatachi: 広卵形。５浅裂し基部は心形
+  ha_tsukikata: 根生
+  ha_katachi: 広卵形。５浅裂し基部は心形
   kyoshi: 粗い鋸歯
-  hananotsukikata: 穂状・羽状
-  petal_description: '5'
-  petal_counts:
+  hana_tsukikata: 穂状・羽状
+  hanabira_setsumei: '5'
+  hanabira_kazu:
   - 5
-  color_description: 淡褐
+  iro: 淡褐
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -1205,14 +1205,14 @@ charumerusou:
   - 高
   - 匹
   - 津
-  hanotsukikata: 根生
-  hanokatachi: 広卵形。基部は心形
+  ha_tsukikata: 根生
+  ha_katachi: 広卵形。基部は心形
   kyoshi: 波状〜粗い鋸歯
-  hananotsukikata: 穂状・羽状
-  petal_description: '5'
-  petal_counts:
+  hana_tsukikata: 穂状・羽状
+  hanabira_setsumei: '5'
+  hanabira_kazu:
   - 5
-  color_description: 淡褐
+  iro: 淡褐
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -1225,14 +1225,14 @@ shirahigesou:
   latin: Parnassia foliosa Hook. fil. et Thorns, var.nummularia (Maxim.) T. Ito
   bunpu:
   - 匹
-  hanotsukikata: 根生、互生
-  hanokatachi: 円心形
+  ha_tsukikata: 根生、互生
+  ha_katachi: 円心形
   kyoshi: 全縁
-  hananotsukikata: 単頂・糸状・羽
-  petal_description: '5'
-  petal_counts:
+  hana_tsukikata: 単頂・糸状・羽
+  hanabira_setsumei: '5'
+  hanabira_kazu:
   - 5
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -1247,14 +1247,14 @@ umebachisou:
   bunpu:
   - 匹
   - 津
-  hanotsukikata: 根生
-  hanokatachi: 広卵形。基部は心形
+  ha_tsukikata: 根生
+  ha_katachi: 広卵形。基部は心形
   kyoshi: 全縁
-  hananotsukikata: 単頂
-  petal_description: '5'
-  petal_counts:
+  hana_tsukikata: 単頂
+  hanabira_setsumei: '5'
+  hanabira_kazu:
   - 5
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -1270,14 +1270,14 @@ tobera:
   - 高
   - 益
   - 海
-  hanotsukikata: 互生
-  hanokatachi: 長楕円形
+  ha_tsukikata: 互生
+  ha_katachi: 長楕円形
   kyoshi: 全縁
-  hananotsukikata: 集散
-  petal_description: '5'
-  petal_counts:
+  hana_tsukikata: 集散
+  hanabira_setsumei: '5'
+  hanabira_kazu:
   - 5
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 薬
   type: 双子葉植物
@@ -1291,14 +1291,14 @@ kawaraketsumei:
   bunpu:
   - 高
   - 津
-  hanotsukikata: 互生
-  hanokatachi: 偶数羽状複葉。小葉は線形で先が尖る
+  ha_tsukikata: 互生
+  ha_katachi: 偶数羽状複葉。小葉は線形で先が尖る
   kyoshi: 小葉は全縁
-  hananotsukikata: 葉の付け根に1〜2個
-  petal_description: 5(非蝶型）
-  petal_counts:
+  hana_tsukikata: 葉の付け根に1〜2個
+  hanabira_setsumei: 5(非蝶型）
+  hanabira_kazu:
   - 5
-  color_description: 黄色
+  iro: 黄色
   shokudoku:
   - 食
   - 薬
@@ -1315,14 +1315,14 @@ hamaendou:
   latin: Lathyrus maritimus (Linn.) BIGL.
   bunpu:
   - 海
-  hanotsukikata: 互生
-  hanokatachi: 偶数羽状複葉、先端は巻きひげ。小葉は楕円形
+  ha_tsukikata: 互生
+  ha_katachi: 偶数羽状複葉、先端は巻きひげ。小葉は楕円形
   kyoshi: 小葉は全縁
-  hananotsukikata: 総状
-  petal_description: 5(蝶型）
-  petal_counts:
+  hana_tsukikata: 総状
+  hanabira_setsumei: 5(蝶型）
+  hanabira_kazu:
   - 5
-  color_description: 赤紫〜青紫
+  iro: 赤紫〜青紫
   shokudoku:
   - 食
   type: 双子葉植物
@@ -1347,13 +1347,13 @@ mizuhakobe:
   latin: Callitriche verna Linn.
   bunpu:
   - 全
-  hanotsukikata: 対生
-  hanokatachi: 沈水葉は線形。浮葉はへら形〜卵状楕円形
+  ha_tsukikata: 対生
+  ha_katachi: 沈水葉は線形。浮葉はへら形〜卵状楕円形
   kyoshi: 全縁
-  hananotsukikata: 葉の付け根に1〜2個
-  petal_description: 無
-  petal_counts: []
-  color_description: 白色透明
+  hana_tsukikata: 葉の付け根に1〜2個
+  hanabira_setsumei: 無
+  hanabira_kazu: []
+  iro: 白色透明
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -1367,13 +1367,13 @@ kitsurifune:
   latin: Impatiens noli-tangere Linn.
   bunpu:
   - 匹
-  hanotsukikata: 互生
-  hanokatachi: 長楕円形。葉先は三角形状
+  ha_tsukikata: 互生
+  ha_katachi: 長楕円形。葉先は三角形状
   kyoshi: 粗い鈍鋸歯
-  hananotsukikata: 総状（葉腋から斜上）
-  petal_description: 筒状
-  petal_counts: []
-  color_description: 黄色
+  hana_tsukikata: 総状（葉腋から斜上）
+  hanabira_setsumei: 筒状
+  hanabira_kazu: []
+  iro: 黄色
   shokudoku:
   - 毒
   type: 双子葉植物
@@ -1392,13 +1392,13 @@ tsurifunesou:
   - 横
   - 吉
   - 高
-  hanotsukikata: 互生
-  hanokatachi: 菱状楕円形
+  ha_tsukikata: 互生
+  ha_katachi: 菱状楕円形
   kyoshi: 細鋸歯
-  hananotsukikata: 総状（葉腋から斜上）
-  petal_description: 筒状
-  petal_counts: []
-  color_description: 紅紫色
+  hana_tsukikata: 総状（葉腋から斜上）
+  hanabira_setsumei: 筒状
+  hanabira_kazu: []
+  iro: 紅紫色
   shokudoku:
   - 毒
   - 薬
@@ -1417,14 +1417,14 @@ matatabi:
   - 椛
   - 吉
   - 高
-  hanotsukikata: 互生
-  hanokatachi: 卵円形。基部は円形まれに浅い心形
+  ha_tsukikata: 互生
+  ha_katachi: 卵円形。基部は円形まれに浅い心形
   kyoshi: 細鋸歯
-  hananotsukikata: 集散花序
-  petal_description: '5'
-  petal_counts:
+  hana_tsukikata: 集散花序
+  hanabira_setsumei: '5'
+  hanabira_kazu:
   - 5
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 食
   - 薬
@@ -1440,14 +1440,14 @@ sarunashi:
   - 匹
   - 椛
   - 吉
-  hanotsukikata: 互生
-  hanokatachi: 広楕円形
+  ha_tsukikata: 互生
+  ha_katachi: 広楕円形
   kyoshi: 棘状の鋸歯
-  hananotsukikata: 集散花序
-  petal_description: '5'
-  petal_counts:
+  hana_tsukikata: 集散花序
+  hanabira_setsumei: '5'
+  hanabira_kazu:
   - 5
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 食
   type: 双子葉植物
@@ -1460,14 +1460,14 @@ hamahisakaki:
   latin: Eurya emarginata (Thunb.) Makino
   bunpu:
   - 海
-  hanotsukikata: 互生
-  hanokatachi: 倒卵形
+  ha_tsukikata: 互生
+  ha_katachi: 倒卵形
   kyoshi: 低い鋸歯
-  hananotsukikata: 葉腋に1〜4束生
-  petal_description: 5・鐘形
-  petal_counts:
+  hana_tsukikata: 葉腋に1〜4束生
+  hanabira_setsumei: 5・鐘形
+  hanabira_kazu:
   - 5
-  color_description: 淡黄緑色
+  iro: 淡黄緑色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -1481,14 +1481,14 @@ mizuotogiri:
   latin: Triadenum japonicum (Blume) Makino
   bunpu:
   - 津
-  hanotsukikata: 対生
-  hanokatachi: 長楕円形
+  ha_tsukikata: 対生
+  ha_katachi: 長楕円形
   kyoshi: 全縁
-  hananotsukikata: 複集散
-  petal_description: '5'
-  petal_counts:
+  hana_tsukikata: 複集散
+  hanabira_setsumei: '5'
+  hanabira_kazu:
   - 5
-  color_description: 淡紅色
+  iro: 淡紅色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -1502,14 +1502,14 @@ azeotogiri:
   latin: Hypericum oliganthum Franch. et Savat.
   bunpu:
   - 全
-  hanotsukikata: 対生
-  hanokatachi: 長楕円形〜倒卵形
+  ha_tsukikata: 対生
+  ha_katachi: 長楕円形〜倒卵形
   kyoshi: 全縁
-  hananotsukikata: 総状
-  petal_description: '5'
-  petal_counts:
+  hana_tsukikata: 総状
+  hanabira_setsumei: '5'
+  hanabira_kazu:
   - 5
-  color_description: 黄色
+  iro: 黄色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -1523,14 +1523,14 @@ kiganpi:
   latin: Wikstroemia trichotoma (Thunb.) Makino
   bunpu:
   - 高
-  hanotsukikata: 対生
-  hanokatachi: 卵状楕円形〜披針形
+  ha_tsukikata: 対生
+  ha_katachi: 卵状楕円形〜披針形
   kyoshi: 全縁
-  hananotsukikata: 穂状
-  petal_description: 筒状4裂
-  petal_counts:
+  hana_tsukikata: 穂状
+  hanabira_setsumei: 筒状4裂
+  hanabira_kazu:
   - 4
-  color_description: 白色、黄色、淡紅色
+  iro: 白色、黄色、淡紅色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -1543,14 +1543,14 @@ marubaakigumi:
   latin: Elaeagnus umbellata Thunb. var. rotundifolia Makino
   bunpu:
   - 海
-  hanotsukikata: 互生
-  hanokatachi: 卵円形〜広楕円形
+  ha_tsukikata: 互生
+  ha_katachi: 卵円形〜広楕円形
   kyoshi: 全縁
-  hananotsukikata: 葉腋に束生
-  petal_description: 萼筒4裂
-  petal_counts:
+  hana_tsukikata: 葉腋に束生
+  hanabira_setsumei: 萼筒4裂
+  hanabira_kazu:
   - 4
-  color_description: 淡白黄色
+  iro: 淡白黄色
   shokudoku:
   - 食
   type: 双子葉植物
@@ -1564,14 +1564,14 @@ marubagumi:
   latin: Elaeagnus macrophylla Thunb.
   bunpu:
   - 海
-  hanotsukikata: 互生
-  hanokatachi: 広卵形
+  ha_tsukikata: 互生
+  ha_katachi: 広卵形
   kyoshi: 全縁
-  hananotsukikata: 葉腋に束生
-  petal_description: 萼筒4裂
-  petal_counts:
+  hana_tsukikata: 葉腋に束生
+  hanabira_setsumei: 萼筒4裂
+  hanabira_kazu:
   - 4
-  color_description: 銀白色
+  iro: 銀白色
   shokudoku:
   - 食
   type: 双子葉植物
@@ -1586,14 +1586,14 @@ kikashigusa:
   latin: Rotala indica (Willd.) Koehne
   bunpu:
   - 全
-  hanotsukikata: 対生
-  hanokatachi: 倒卵状楕円形
+  ha_tsukikata: 対生
+  ha_katachi: 倒卵状楕円形
   kyoshi: 全縁
-  hananotsukikata: 葉腋に1個ずつ
-  petal_description: '4'
-  petal_counts:
+  hana_tsukikata: 葉腋に1個ずつ
+  hanabira_setsumei: '4'
+  hanabira_kazu:
   - 4
-  color_description: 淡紅色
+  iro: 淡紅色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -1607,16 +1607,16 @@ misohagi:
   bunpu:
   - 津
   - 椛
-  hanotsukikata: 十字状対生
-  hanokatachi: 広披針形
+  ha_tsukikata: 十字状対生
+  ha_katachi: 広披針形
   kyoshi: 全縁
-  hananotsukikata: 集散花序、穂状
-  petal_description: 4〜6
-  petal_counts:
+  hana_tsukikata: 集散花序、穂状
+  hanabira_setsumei: 4〜6
+  hanabira_kazu:
   - 4
   - 5
   - 6
-  color_description: 紅紫色
+  iro: 紅紫色
   shokudoku:
   - 食
   - 薬
@@ -1633,14 +1633,14 @@ hishi:
   bunpu:
   - 高
   - 益
-  hanotsukikata: ロゼット状
-  hanokatachi: 沈水葉は狭長楕円形、浮葉は三角形
+  ha_tsukikata: ロゼット状
+  ha_katachi: 沈水葉は狭長楕円形、浮葉は三角形
   kyoshi: 不整な鋸歯
-  hananotsukikata: 花茎の先に1個
-  petal_description: '4'
-  petal_counts:
+  hana_tsukikata: 花茎の先に1個
+  hanabira_setsumei: '4'
+  hanabira_kazu:
   - 4
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 食
   type: 双子葉植物
@@ -1655,15 +1655,15 @@ tanitade:
   bunpu:
   - 高
   - 匹
-  hanotsukikata: 対生
-  hanokatachi: 卵形〜披針形
+  ha_tsukikata: 対生
+  ha_katachi: 卵形〜披針形
   kyoshi: 全縁
-  hananotsukikata: 総状
-  petal_description: 2、先端が浅く3裂
-  petal_counts:
+  hana_tsukikata: 総状
+  hanabira_setsumei: 2、先端が浅く3裂
+  hanabira_kazu:
   - 2
   - 3
-  color_description: 白色〜淡紅色
+  iro: 白色〜淡紅色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -1679,15 +1679,15 @@ akabana:
   - 匹
   - 津
   - 椛
-  hanotsukikata: 対生
-  hanokatachi: 卵形〜卵状楕円形
+  ha_tsukikata: 対生
+  ha_katachi: 卵形〜卵状楕円形
   kyoshi: 粗い鋸歯
-  hananotsukikata: 葉腋に1個ずつ
-  petal_description: 4、先端が浅く2裂
-  petal_counts:
+  hana_tsukikata: 葉腋に1個ずつ
+  hanabira_setsumei: 4、先端が浅く2裂
+  hanabira_kazu:
   - 2
   - 4
-  color_description: 淡紅白色〜紅色
+  iro: 淡紅白色〜紅色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -1701,15 +1701,15 @@ choujitade:
   latin: Jussiaea postrata (Roxb.) Leveille
   bunpu:
   - 全
-  hanotsukikata: 互生
-  hanokatachi: 披針形
+  ha_tsukikata: 互生
+  ha_katachi: 披針形
   kyoshi: 全縁
-  hananotsukikata: 葉腋に1〜2個ずつ
-  petal_description: 4〜5
-  petal_counts:
+  hana_tsukikata: 葉腋に1〜2個ずつ
+  hanabira_setsumei: 4〜5
+  hanabira_kazu:
   - 4
   - 5
-  color_description: 黄色
+  iro: 黄色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -1729,14 +1729,14 @@ mizuyukinoshita:
   bunpu:
   - 益
   - 津
-  hanotsukikata: 互生
-  hanokatachi: 卵形
+  ha_tsukikata: 互生
+  ha_katachi: 卵形
   kyoshi: 全縁
-  hananotsukikata: 葉腋に1個
-  petal_description: 無・萼片4裂
-  petal_counts:
+  hana_tsukikata: 葉腋に1個
+  hanabira_setsumei: 無・萼片4裂
+  hanabira_kazu:
   - 4
-  color_description: 黄緑色〜緑色
+  iro: 黄緑色〜緑色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -1754,13 +1754,13 @@ hozakinofusamo:
   latin: Myriophyllnm spicatum Linti.
   bunpu:
   - 高
-  hanotsukikata: 4輪生
-  hanokatachi: 細裂した羽状葉・中軸と糸状羽片
+  ha_tsukikata: 4輪生
+  ha_katachi: 細裂した羽状葉・中軸と糸状羽片
   kyoshi: 
-  hananotsukikata: 穂状花序
-  petal_description: ''
-  petal_counts: []
-  color_description: "赤紫色雄花\r白色7雌花"
+  hana_tsukikata: 穂状花序
+  hanabira_setsumei: ''
+  hanabira_kazu: []
+  iro: 赤紫色雄花、白色7雌花
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -1773,13 +1773,13 @@ oofusamo:
   kaki: []
   latin: Myriophyllum aquaticum
   bunpu: []
-  hanotsukikata: 5-6輪生
-  hanokatachi: 細裂した羽状葉・中軸と糸状羽片
+  ha_tsukikata: 5-6輪生
+  ha_katachi: 細裂した羽状葉・中軸と糸状羽片
   kyoshi: 
-  hananotsukikata: 気中葉の葉腋
-  petal_description: 円筒状
-  petal_counts: []
-  color_description: 白色
+  hana_tsukikata: 気中葉の葉腋
+  hanabira_setsumei: 円筒状
+  hanabira_kazu: []
+  iro: 白色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -1793,14 +1793,14 @@ seri:
   latin: Oenanthe iavanica (Blume) DC.
   bunpu:
   - 全
-  hanotsukikata: 互生
-  hanokatachi: 二回羽状複葉。小葉は菱形様
+  ha_tsukikata: 互生
+  ha_katachi: 二回羽状複葉。小葉は菱形様
   kyoshi: 粗い鋸歯
-  hananotsukikata: 複散形花序
-  petal_description: '5'
-  petal_counts:
+  hana_tsukikata: 複散形花序
+  hanabira_setsumei: '5'
+  hanabira_kazu:
   - 5
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 食
   type: 双子葉植物
@@ -1815,14 +1815,14 @@ hamazeri:
   latin: Cnidium iaponicum Miq.
   bunpu:
   - 海
-  hanotsukikata: ロゼット状。茎葉は互生
-  hanokatachi: 単羽状複葉。小葉は羽状
+  ha_tsukikata: ロゼット状。茎葉は互生
+  ha_katachi: 単羽状複葉。小葉は羽状
   kyoshi: 粗く不規則な切れ込み
-  hananotsukikata: 複散形花序
-  petal_description: '5'
-  petal_counts:
+  hana_tsukikata: 複散形花序
+  hanabira_setsumei: '5'
+  hanabira_kazu:
   - 5
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 薬
   type: 双子葉植物
@@ -1836,14 +1836,14 @@ hamaboufuu:
   latin: Glehma littoralis Fr. Schm., ex Miq.
   bunpu:
   - 海
-  hanotsukikata: 互生
-  hanokatachi: 1-2回3出複葉。小葉は倒卵状楕円形
+  ha_tsukikata: 互生
+  ha_katachi: 1-2回3出複葉。小葉は倒卵状楕円形
   kyoshi: 不揃いな鋸歯
-  hananotsukikata: 複散形花序
-  petal_description: '5'
-  petal_counts:
+  hana_tsukikata: 複散形花序
+  hanabira_setsumei: '5'
+  hanabira_kazu:
   - 5
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 食
   - 薬
@@ -1859,14 +1859,14 @@ hamaudo:
   latin: Angelica japonica A. Gray
   bunpu:
   - 海
-  hanotsukikata: 互生
-  hanokatachi: 1〜2回3出羽状複葉。小葉は卵状楕円形
+  ha_tsukikata: 互生
+  ha_katachi: 1〜2回3出羽状複葉。小葉は卵状楕円形
   kyoshi: 細かい鋸歯
-  hananotsukikata: 複散形花序
-  petal_description: '5'
-  petal_counts:
+  hana_tsukikata: 複散形花序
+  hanabira_setsumei: '5'
+  hanabira_kazu:
   - 5
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 非毒。苦い
   type: 双子葉植物
@@ -1881,14 +1881,14 @@ botanboufuu:
   latin: Peucedanum japomcum Thunb.
   bunpu:
   - 海
-  hanotsukikata: 互生
-  hanokatachi: 1〜2回3出羽状複葉。小葉は倒卵形
+  ha_tsukikata: 互生
+  ha_katachi: 1〜2回3出羽状複葉。小葉は倒卵形
   kyoshi: 粗い切れ込み
-  hananotsukikata: 複散形花序
-  petal_description: '5'
-  petal_counts:
+  hana_tsukikata: 複散形花序
+  hanabira_setsumei: '5'
+  hanabira_kazu:
   - 5
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 食
   - 薬
@@ -1903,14 +1903,14 @@ kishitsutsuji:
   bunpu:
   - 匹
   - 吉
-  hanotsukikata: 互生
-  hanokatachi: 春葉は長い楕円形。夏葉は披針形〜倒披針形
+  ha_tsukikata: 互生
+  ha_katachi: 春葉は長い楕円形。夏葉は披針形〜倒披針形
   kyoshi: 毛
-  hananotsukikata: 枝先に1〜3個
-  petal_description: 合5裂
-  petal_counts:
+  hana_tsukikata: 枝先に1〜3個
+  hanabira_setsumei: 合5裂
+  hanabira_kazu:
   - 5
-  color_description: 淡紅紫色
+  iro: 淡紅紫色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -1925,14 +1925,14 @@ kusaredama:
   bunpu:
   - 匹
   - 津
-  hanotsukikata: 対生または3-4枚が輪生
-  hanokatachi: 披針形または狭長楕円形。先端は鋭くとがる
+  ha_tsukikata: 対生または3-4枚が輪生
+  ha_katachi: 披針形または狭長楕円形。先端は鋭くとがる
   kyoshi: 全縁
-  hananotsukikata: 円錐花序
-  petal_description: 合5深裂
-  petal_counts:
+  hana_tsukikata: 円錐花序
+  hanabira_setsumei: 合5深裂
+  hanabira_kazu:
   - 5
-  color_description: 黄色
+  iro: 黄色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -1946,14 +1946,14 @@ numatoranoo:
   bunpu:
   - 匹
   - 津
-  hanotsukikata: 互生
-  hanokatachi: 倒披針状長楕円形。先は細くとがる
+  ha_tsukikata: 互生
+  ha_katachi: 倒披針状長楕円形。先は細くとがる
   kyoshi: 全縁
-  hananotsukikata: 総状花序
-  petal_description: 合5深裂
-  petal_counts:
+  hana_tsukikata: 総状花序
+  hanabira_setsumei: 合5深裂
+  hanabira_kazu:
   - 5
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -1967,14 +1967,14 @@ hamabossu:
   latin: Lysimachia mauritiana Lamarck
   bunpu:
   - 海
-  hanotsukikata: 互生
-  hanokatachi: 倒卵形または倒披針形
+  ha_tsukikata: 互生
+  ha_katachi: 倒卵形または倒披針形
   kyoshi: 全縁
-  hananotsukikata: 総状花序
-  petal_description: 合5深裂
-  petal_counts:
+  hana_tsukikata: 総状花序
+  hanabira_setsumei: 合5深裂
+  hanabira_kazu:
   - 5
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -1990,14 +1990,14 @@ sawafutagi:
   - 横
   - 椛
   - 吉
-  hanotsukikata: 互生
-  hanokatachi: 倒卵形〜楕円形
+  ha_tsukikata: 互生
+  ha_katachi: 倒卵形〜楕円形
   kyoshi: 細鋸歯
-  hananotsukikata: 円錐花序
-  petal_description: 合5深裂
-  petal_counts:
+  hana_tsukikata: 円錐花序
+  hanabira_setsumei: 合5深裂
+  hanabira_kazu:
   - 5
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -2010,14 +2010,14 @@ egonoki:
   latin: Styrax japonica Sieb. et Zucc.
   bunpu:
   - 全
-  hanotsukikata: 互生
-  hanokatachi: 両端のとがった楕円形
+  ha_tsukikata: 互生
+  ha_katachi: 両端のとがった楕円形
   kyoshi: 細鋸歯
-  hananotsukikata: 枝先に1〜4個
-  petal_description: 合5深裂
-  petal_counts:
+  hana_tsukikata: 枝先に1〜4個
+  hanabira_setsumei: 合5深裂
+  hanabira_kazu:
   - 5
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 毒
   type: 双子葉植物
@@ -2031,14 +2031,14 @@ akebonosou:
   bunpu:
   - 匹
   - 津
-  hanotsukikata: 対生
-  hanokatachi: 長卵形
+  ha_tsukikata: 対生
+  ha_katachi: 長卵形
   kyoshi: 全縁
-  hananotsukikata: 複総状
-  petal_description: 合5深裂
-  petal_counts:
+  hana_tsukikata: 複総状
+  hanabira_setsumei: 合5深裂
+  hanabira_kazu:
   - 5
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -2050,14 +2050,14 @@ choujisou:
   latin: Amsonia elliptica (Thunb.) Roem. et Schult.
   bunpu:
   - 津
-  hanotsukikata: 互生
-  hanokatachi: 細長い披針形
+  ha_tsukikata: 互生
+  ha_katachi: 細長い披針形
   kyoshi: 全縁
-  hananotsukikata: 集散花序
-  petal_description: 合5深裂
-  petal_counts:
+  hana_tsukikata: 集散花序
+  hanabira_setsumei: 合5深裂
+  hanabira_kazu:
   - 5
-  color_description: 薄青色
+  iro: 薄青色
   shokudoku:
   - 毒
   type: 双子葉植物
@@ -2071,13 +2071,13 @@ hamahirugao:
   latin: Calystegia soldanella (Linn.) Roem. et Schult.
   bunpu:
   - 海
-  hanotsukikata: 互生
-  hanokatachi: 腎心形
+  ha_tsukikata: 互生
+  ha_katachi: 腎心形
   kyoshi: 全縁
-  hananotsukikata: 葉腋に1個ずつ
-  petal_description: 漏斗形
-  petal_counts: []
-  color_description: 淡紅色
+  hana_tsukikata: 葉腋に1個ずつ
+  hanabira_setsumei: 漏斗形
+  hanabira_kazu: []
+  iro: 淡紅色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -2093,14 +2093,14 @@ hamanenashikazura:
   latin: Cuscuta chinensis Lam.
   bunpu:
   - 海
-  hanotsukikata: 互生
-  hanokatachi: 鱗片葉。薄膜質で卵形
+  ha_tsukikata: 互生
+  ha_katachi: 鱗片葉。薄膜質で卵形
   kyoshi: 全縁
-  hananotsukikata: 所々に固まって付く
-  petal_description: 合5裂
-  petal_counts:
+  hana_tsukikata: 所々に固まって付く
+  hanabira_setsumei: 合5裂
+  hanabira_kazu:
   - 5
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 薬
   type: 双子葉植物
@@ -2113,14 +2113,14 @@ mizutabirako:
   latin: Tngonotis brevipes (Maxim.) Maxim.
   bunpu:
   - 全
-  hanotsukikata: 互生
-  hanokatachi: 楕円形
+  ha_tsukikata: 互生
+  ha_katachi: 楕円形
   kyoshi: 全縁
-  hananotsukikata: 穂状
-  petal_description: 合5深裂
-  petal_counts:
+  hana_tsukikata: 穂状
+  hanabira_setsumei: 合5深裂
+  hanabira_kazu:
   - 5
-  color_description: 淡青紫色
+  iro: 淡青紫色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -2135,14 +2135,14 @@ hamagou:
   latin: Vitex rotundifolia Linn. fil.
   bunpu:
   - 海
-  hanotsukikata: 対生
-  hanokatachi: 楕円形から広卵形
+  ha_tsukikata: 対生
+  ha_katachi: 楕円形から広卵形
   kyoshi: 全縁
-  hananotsukikata: 円錐花序
-  petal_description: 漏斗状。5裂し唇形
-  petal_counts:
+  hana_tsukikata: 円錐花序
+  hanabira_setsumei: 漏斗状。5裂し唇形
+  hanabira_kazu:
   - 5
-  color_description: 青紫色
+  iro: 青紫色
   shokudoku:
   - 薬
   type: 双子葉植物
@@ -2155,14 +2155,14 @@ mizohouzuki:
   latin: Mimulus inflatus (Miq.) Nakai
   bunpu:
   - 匹
-  hanotsukikata: 対生
-  hanokatachi: 倒卵形
+  ha_tsukikata: 対生
+  ha_katachi: 倒卵形
   kyoshi: 3〜4対の粗い鋸歯
-  hananotsukikata: 単項花序
-  petal_description: 合5裂
-  petal_counts:
+  hana_tsukikata: 単項花序
+  hanabira_setsumei: 合5裂
+  hanabira_kazu:
   - 5
-  color_description: 黄色
+  iro: 黄色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -2177,14 +2177,14 @@ kikumo:
   latin: Limnophila sessiliflora Blume
   bunpu:
   - 益
-  hanotsukikata: 輪生
-  hanokatachi: "沈水葉は大きく広がり、繊細な糸状に細裂\r気中葉は幅広で硬い"
+  ha_tsukikata: 輪生
+  ha_katachi: "沈水葉は大きく広がり、繊細な糸状に細裂\r気中葉は幅広で硬い"
   kyoshi: 粗く深い切れ込み
-  hananotsukikata: 葉腋に1個
-  petal_description: 合5浅裂
-  petal_counts:
+  hana_tsukikata: 葉腋に1個
+  hanabira_setsumei: 合5浅裂
+  hanabira_kazu:
   - 5
-  color_description: 淡紅色〜紫紅色
+  iro: 淡紅色〜紫紅色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -2198,14 +2198,14 @@ azetougarashi:
   latin: Lindernia  angustifolia (Benth.) Wettst.
   bunpu:
   - 全
-  hanotsukikata: 対生
-  hanokatachi: 披針形で先はとがる
+  ha_tsukikata: 対生
+  ha_katachi: 披針形で先はとがる
   kyoshi: 浅い鋸歯
-  hananotsukikata: 上部の葉腋に1個ずつ
-  petal_description: 合4裂唇形
-  petal_counts:
+  hana_tsukikata: 上部の葉腋に1個ずつ
+  hanabira_setsumei: 合4裂唇形
+  hanabira_kazu:
   - 4
-  color_description: 淡紅紫色
+  iro: 淡紅紫色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -2219,14 +2219,14 @@ azena:
   latin: Lindernia  pyxidaria Linn.
   bunpu:
   - 全
-  hanotsukikata: 対生
-  hanokatachi: 卵円形または楕円形
+  ha_tsukikata: 対生
+  ha_katachi: 卵円形または楕円形
   kyoshi: 全縁
-  hananotsukikata: 葉腋に1個ずつ
-  petal_description: 合4裂唇形
-  petal_counts:
+  hana_tsukikata: 葉腋に1個ずつ
+  hanabira_setsumei: 合4裂唇形
+  hanabira_kazu:
   - 4
-  color_description: 淡紅紫色
+  iro: 淡紅紫色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -2239,14 +2239,14 @@ mushikusa:
   latin: Veronica peregrina Linn.
   bunpu:
   - 益
-  hanotsukikata: 下部で対生、上部は互生
-  hanokatachi: 狭披針形または広線形
+  ha_tsukikata: 下部で対生、上部は互生
+  ha_katachi: 狭披針形または広線形
   kyoshi: 下部の葉は鋸歯有り
-  hananotsukikata: 葉腋に1個ずつ
-  petal_description: 合4深裂
-  petal_counts:
+  hana_tsukikata: 葉腋に1個ずつ
+  hanabira_setsumei: 合4深裂
+  hanabira_kazu:
   - 4
-  color_description: 淡紅色〜白色
+  iro: 淡紅色〜白色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -2260,14 +2260,14 @@ kawadisha:
   latin: Veronica anagallis-aquatica Linn.
   bunpu:
   - 高
-  hanotsukikata: 対生
-  hanokatachi: 披針形〜長楕円状披針形。基部は円形
+  ha_tsukikata: 対生
+  ha_katachi: 披針形〜長楕円状披針形。基部は円形
   kyoshi: ややとがる鋸歯
-  hananotsukikata: 総状
-  petal_description: 合5深裂
-  petal_counts:
+  hana_tsukikata: 総状
+  hanabira_setsumei: 合5深裂
+  hanabira_kazu:
   - 5
-  color_description: 白淡紅紫色
+  iro: 白淡紅紫色
   shokudoku:
   - 食
   - 薬
@@ -2283,14 +2283,14 @@ hamautsubo:
   latin: Orobanche coerulescens Stephan, ex Willd.
   bunpu:
   - 海
-  hanotsukikata: 互生
-  hanokatachi: 退化した鱗片葉
+  ha_tsukikata: 互生
+  ha_katachi: 退化した鱗片葉
   kyoshi: 全縁
-  hananotsukikata: 穂状
-  petal_description: 合5裂唇形
-  petal_counts:
+  hana_tsukikata: 穂状
+  hanabira_setsumei: 合5裂唇形
+  hanabira_kazu:
   - 5
-  color_description: 淡紫色
+  iro: 淡紫色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -2308,14 +2308,14 @@ iwatabako:
   - 横
   - 椛
   - 吉
-  hanotsukikata: 根生
-  hanokatachi: 楕円状卵形
+  ha_tsukikata: 根生
+  ha_katachi: 楕円状卵形
   kyoshi: 不ぞろいな鋸歯
-  hananotsukikata: 散形花序
-  petal_description: 合5裂
-  petal_counts:
+  hana_tsukikata: 散形花序
+  hanabira_setsumei: 合5裂
+  hanabira_kazu:
   - 5
-  color_description: 紫色
+  iro: 紫色
   shokudoku:
   - 食
   - 薬
@@ -2333,14 +2333,14 @@ notanukimo:
   bunpu:
   - 高
   - 益
-  hanotsukikata: 基部で3〜4分枝
-  hanokatachi: 羽状裂葉。立体的に2〜3回分岐
+  ha_tsukikata: 基部で3〜4分枝
+  ha_katachi: 羽状裂葉。立体的に2〜3回分岐
   kyoshi: 
-  hananotsukikata: 花茎の先端に短い総状
-  petal_description: 2・距有、唇形花、上唇は立ち、下唇は半円形に大きく開出
-  petal_counts:
+  hana_tsukikata: 花茎の先端に短い総状
+  hanabira_setsumei: 2・距有、唇形花、上唇は立ち、下唇は半円形に大きく開出
+  hanabira_kazu:
   - 2
-  color_description: 淡黄色
+  iro: 淡黄色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -2356,14 +2356,14 @@ tanukimo:
   bunpu:
   - 高
   - 益
-  hanotsukikata: 基部で2分枝
-  hanokatachi: 互生状に何回か分枝
+  ha_tsukikata: 基部で2分枝
+  ha_katachi: 互生状に何回か分枝
   kyoshi: 
-  hananotsukikata: 花茎の先端に短い総状
-  petal_description: 2・距有、唇形花、距は下唇より短く鈍頭
-  petal_counts:
+  hana_tsukikata: 花茎の先端に短い総状
+  hanabira_setsumei: 2・距有、唇形花、距は下唇より短く鈍頭
+  hanabira_kazu:
   - 2
-  color_description: 黄色
+  iro: 黄色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -2376,14 +2376,14 @@ sonaremugura:
   latin: Hedyotis biflora (Linn.) Lam. var. parvifoliaHook. et Arn.
   bunpu:
   - 海
-  hanotsukikata: 対生
-  hanokatachi: 楕円・肉厚
+  ha_tsukikata: 対生
+  ha_katachi: 楕円・肉厚
   kyoshi: 全縁
-  hananotsukikata: 集散花序
-  petal_description: 筒状4裂
-  petal_counts:
+  hana_tsukikata: 集散花序
+  hanabira_setsumei: 筒状4裂
+  hanabira_kazu:
   - 4
-  color_description: 白色
+  iro: 白色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -2399,13 +2399,13 @@ mizokakushi:
   latin: Lobelia chinensis Lout.
   bunpu:
   - 全
-  hanotsukikata: 互生
-  hanokatachi: 狭い披針形
+  ha_tsukikata: 互生
+  ha_katachi: 狭い披針形
   kyoshi: 低い鋸歯
-  hananotsukikata: 花茎の先端に1つ
-  petal_description: 唇形花で上二弁と下三弁に分かれる
-  petal_counts: []
-  color_description: 白色〜淡紫
+  hana_tsukikata: 花茎の先端に1つ
+  hanabira_setsumei: 唇形花で上二弁と下三弁に分かれる
+  hanabira_kazu: []
+  iro: 白色〜淡紫
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -2421,14 +2421,14 @@ sawahiyodori:
   - 匹
   - 津
   - 吉
-  hanotsukikata: 対生、ときに輪生
-  hanokatachi: 披針形ときに3深裂
+  ha_tsukikata: 対生、ときに輪生
+  ha_katachi: 披針形ときに3深裂
   kyoshi: 粗く不規則
-  hananotsukikata: 散房状
-  petal_description: 筒状花先端5裂
-  petal_counts:
+  hana_tsukikata: 散房状
+  hanabira_setsumei: 筒状花先端5裂
+  hanabira_kazu:
   - 5
-  color_description: 淡紫色まれに白色
+  iro: 淡紫色まれに白色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -2442,13 +2442,13 @@ yuugagiku:
   latin: Kalimeris pinnatifida (Maxim.) Kitam.
   bunpu:
   - 全
-  hanotsukikata: 互生
-  hanokatachi: 披針形〜卵状長楕円形。しばしば羽状に中裂
+  ha_tsukikata: 互生
+  ha_katachi: 披針形〜卵状長楕円形。しばしば羽状に中裂
   kyoshi: 欠刻状の大きな鋸歯
-  hananotsukikata: 花茎の先端に頭状花
-  petal_description: 舌状花と管状花
-  petal_counts: []
-  color_description: 淡青紫色〜白色
+  hana_tsukikata: 花茎の先端に頭状花
+  hanabira_setsumei: 舌状花と管状花
+  hanabira_kazu: []
+  iro: 淡青紫色〜白色
   shokudoku:
   - 食
   type: 双子葉植物
@@ -2466,13 +2466,13 @@ hamabenogiku:
   - 高
   - 益
   - 海
-  hanotsukikata: 互生・基部から放射状に分枝
-  hanokatachi: さじ形
+  ha_tsukikata: 互生・基部から放射状に分枝
+  ha_katachi: さじ形
   kyoshi: 全縁かとき に歯牙を散生
-  hananotsukikata: 花茎の先端に頭状花
-  petal_description: 舌状花と管状花
-  petal_counts: []
-  color_description: 白色〜淡青紫色
+  hana_tsukikata: 花茎の先端に頭状花
+  hanabira_setsumei: 舌状花と管状花
+  hanabira_kazu: []
+  iro: 白色〜淡青紫色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -2487,13 +2487,13 @@ darumagiku:
   latin: Aster spathulifolius Maxim.
   bunpu:
   - 海
-  hanotsukikata: 互生
-  hanokatachi: さじ形、肉厚、多毛
+  ha_tsukikata: 互生
+  ha_katachi: さじ形、肉厚、多毛
   kyoshi: 全縁、腺毛あり
-  hananotsukikata: 花茎の先端に頭状花
-  petal_description: 舌状花と管状花
-  petal_counts: []
-  color_description: 青紫色〜白色
+  hana_tsukikata: 花茎の先端に頭状花
+  hanabira_setsumei: 舌状花と管状花
+  hanabira_kazu: []
+  iro: 青紫色〜白色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -2508,13 +2508,13 @@ otakarakou:
   latin: Ligularia fischeri (Ledeb.) Turcz.
   bunpu:
   - 匹
-  hanotsukikata: 根生、茎葉は互生
-  hanokatachi: 大きな腎心形
+  ha_tsukikata: 根生、茎葉は互生
+  ha_katachi: 大きな腎心形
   kyoshi: 粗い鋸歯
-  hananotsukikata: 頭状花が穂状につく
-  petal_description: 舌状花と管状花
-  petal_counts: []
-  color_description: 黄色
+  hana_tsukikata: 頭状花が穂状につく
+  hanabira_setsumei: 舌状花と管状花
+  hanabira_kazu: []
+  iro: 黄色
   shokudoku:
   - 食
   type: 双子葉植物
@@ -2530,13 +2530,13 @@ sawagiku:
   bunpu:
   - 匹
   - 椛
-  hanotsukikata: 互生
-  hanokatachi: 羽状に深裂
+  ha_tsukikata: 互生
+  ha_katachi: 羽状に深裂
   kyoshi: 粗く不規則な欠刻
-  hananotsukikata: 頭状花が散房状につく
-  petal_description: 舌状花と管状花
-  petal_counts: []
-  color_description: 黄色
+  hana_tsukikata: 頭状花が散房状につく
+  hanabira_setsumei: 舌状花と管状花
+  hanabira_kazu: []
+  iro: 黄色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -2551,13 +2551,13 @@ sawaoguruma:
   bunpu:
   - 匹
   - 津
-  hanotsukikata: ロゼット状。茎葉は互生
-  hanokatachi: 根生葉はへら状披針形、茎葉は卵状披針形
+  ha_tsukikata: ロゼット状。茎葉は互生
+  ha_katachi: 根生葉はへら状披針形、茎葉は卵状披針形
   kyoshi: 浅い鋸歯
-  hananotsukikata: 頭状花が散房状につく
-  petal_description: 舌状花と管状花
-  petal_counts: []
-  color_description: 黄色
+  hana_tsukikata: 頭状花が散房状につく
+  hanabira_setsumei: 舌状花と管状花
+  hanabira_kazu: []
+  iro: 黄色
   shokudoku:
   - 食
   type: 双子葉植物
@@ -2571,13 +2571,13 @@ kawarayomogi:
   bunpu:
   - 高
   - 海
-  hanotsukikata: ロゼット状。茎葉は互生
-  hanokatachi: 2回羽状に全裂し、終裂片は糸状
+  ha_tsukikata: ロゼット状。茎葉は互生
+  ha_katachi: 2回羽状に全裂し、終裂片は糸状
   kyoshi: 全縁
-  hananotsukikata: 頭状花が円錐状につく
-  petal_description: 筒状花のみ
-  petal_counts: []
-  color_description: 白色
+  hana_tsukikata: 頭状花が円錐状につく
+  hanabira_setsumei: 筒状花のみ
+  hanabira_kazu: []
+  iro: 白色
   shokudoku:
   - 薬
   type: 双子葉植物
@@ -2590,17 +2590,17 @@ takasaburou:
   latin: Eclipta prostrata (Linn.) Linn.
   bunpu:
   - 全
-  hanotsukikata: 対生
-  hanokatachi: 披針形
+  ha_tsukikata: 対生
+  ha_katachi: 披針形
   kyoshi: 浅い鋸歯
-  hananotsukikata: 花茎の先端に頭状花
-  petal_description: 舌状花と管状花
-  petal_counts: []
-  color_description: 白色
+  hana_tsukikata: 花茎の先端に頭状花
+  hanabira_setsumei: 舌状花と管状花
+  hanabira_kazu: []
+  iro: 白色
   shokudoku:
   - 薬
   type: 双子葉植物
-nekonoshita（hamaguruma）:
+nekonoshita:
   kishibe_type: 砂浜
   seiikubasho:
   - 湿地・岸辺
@@ -2612,13 +2612,13 @@ nekonoshita（hamaguruma）:
   latin: Wedelia prostrata (Hook, et Arn.) Hemsl.
   bunpu:
   - 海
-  hanotsukikata: 対生
-  hanokatachi: 長楕円形
+  ha_tsukikata: 対生
+  ha_katachi: 長楕円形
   kyoshi: 粗い鋸歯
-  hananotsukikata: 花茎の先端に頭状花
-  petal_description: 舌状花と管状花
-  petal_counts: []
-  color_description: 黄色
+  hana_tsukikata: 花茎の先端に頭状花
+  hanabira_setsumei: 舌状花と管状花
+  hanabira_kazu: []
+  iro: 黄色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -2634,14 +2634,14 @@ azetouna:
   latin: Crepidiastrum keiskeanum (Maxim.) Nakai
   bunpu:
   - 海
-  hanotsukikata: ロゼット状
-  hanokatachi: 倒卵形。やや肉質
+  ha_tsukikata: ロゼット状
+  ha_katachi: 倒卵形。やや肉質
   kyoshi: 不規則なギザギザ
-  hananotsukikata: 頭状花が密散房状
-  petal_description: 14個の舌状花
-  petal_counts:
+  hana_tsukikata: 頭状花が密散房状
+  hanabira_setsumei: 14個の舌状花
+  hanabira_kazu:
   - 14
-  color_description: 黄色
+  iro: 黄色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -2652,14 +2652,14 @@ hosobawadan:
   latin: Crepidiastrum lanceolatum (Houtt.) Nakai
   bunpu:
   - 海
-  hanotsukikata: ロゼット状
-  hanokatachi: 長楕円形葉と羽状深裂葉の2形
+  ha_tsukikata: ロゼット状
+  ha_katachi: 長楕円形葉と羽状深裂葉の2形
   kyoshi: 
-  hananotsukikata: 頭状花が散状につく
-  petal_description: 12個の舌状花
-  petal_counts:
+  hana_tsukikata: 頭状花が散状につく
+  hanabira_setsumei: 12個の舌状花
+  hanabira_kazu:
   - 12
-  color_description: 黄色
+  iro: 黄色
   shokudoku:
   - 食
   type: 双子葉植物
@@ -2678,19 +2678,19 @@ hamanigana:
   latin: Ixeris repens (Linn.) A. Gray
   bunpu:
   - 海
-  hanotsukikata: 地下茎に互生
-  hanokatachi: 掌状に3〜5中〜全裂し、変化が多い。
+  ha_tsukikata: 地下茎に互生
+  ha_katachi: 掌状に3〜5中〜全裂し、変化が多い。
   kyoshi: 不規則なギザギザ
-  hananotsukikata: 花茎の先端に頭状花
-  petal_description: 10〜15個の舌状花
-  petal_counts:
+  hana_tsukikata: 花茎の先端に頭状花
+  hanabira_setsumei: 10〜15個の舌状花
+  hanabira_kazu:
   - 10
   - 11
   - 12
   - 13
   - 14
   - 15
-  color_description: 黄色
+  iro: 黄色
   shokudoku:
   - 不明
   type: 双子葉植物
@@ -2705,13 +2705,13 @@ himegama:
   latin: Typha angustata Bory et Chauberd.
   bunpu:
   - 高
-  hanotsukikata: 互生
-  hanokatachi: 線形。幅5〜15mm
+  ha_tsukikata: 互生
+  ha_katachi: 線形。幅5〜15mm
   kyoshi: 平滑
-  hananotsukikata: 円柱状・穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 茶
+  hana_tsukikata: 円柱状・穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 茶
   shokudoku:
   - 食
   - 薬
@@ -2727,13 +2727,13 @@ mikuri:
   latin: Sparganium stoloniferum Hamilt.
   bunpu:
   - 高
-  hanotsukikata: 互生
-  hanokatachi: 根元は三角形、上部は不明瞭。長さ50〜150cm、幅7〜20mm。
+  ha_tsukikata: 互生
+  ha_katachi: 根元は三角形、上部は不明瞭。長さ50〜150cm、幅7〜20mm。
   kyoshi: 細鋸歯
-  hananotsukikata: 球形・頭状花序
-  petal_description: 無し
-  petal_counts: []
-  color_description: 白
+  hana_tsukikata: 球形・頭状花序
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 白
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -2750,13 +2750,13 @@ hirumushiro:
   latin: Potamogeton distinctus A.Benn.
   bunpu:
   - 全
-  hanotsukikata: 互生
-  hanokatachi: 沈水葉は長い披針形。浮葉は狭長楕円形〜楕円形
+  ha_tsukikata: 互生
+  ha_katachi: 沈水葉は長い披針形。浮葉は狭長楕円形〜楕円形
   kyoshi: 全縁
-  hananotsukikata: 棒状・穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 薄緑・ピンク
+  hana_tsukikata: 棒状・穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 薄緑・ピンク
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -2771,13 +2771,13 @@ ohirumushiro:
   - 8
   latin: Potamogeton natansL.
   bunpu: []
-  hanotsukikata: 互生
-  hanokatachi: "針状線形で長さ12〜30cm、幅0.5〜2.5mm。\r浮葉は長楕円形〜広楕円形。長さ5〜12cm、幅2〜5cm。"
+  ha_tsukikata: 互生
+  ha_katachi: "針状線形で長さ12〜30cm、幅0.5〜2.5mm。\r浮葉は長楕円形〜広楕円形。長さ5〜12cm、幅2〜5cm。"
   kyoshi: 全縁
-  hananotsukikata: 棒状・穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 薄緑・白
+  hana_tsukikata: 棒状・穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 薄緑・白
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -2794,13 +2794,13 @@ mizuhikimo:
   bunpu:
   - 高
   - 津
-  hanotsukikata: 互生
-  hanokatachi: 水中葉糸状３脈、浮水葉卵長形尖るあるいは葉楕円長形、葉巾０．５−０．７ｃｍ、
+  ha_tsukikata: 互生
+  ha_katachi: 水中葉糸状３脈、浮水葉卵長形尖るあるいは葉楕円長形、葉巾０．５−０．７ｃｍ、
   kyoshi: 全縁
-  hananotsukikata: 穂状
-  petal_description: 無し
-  petal_counts: []
-  color_description: 黄緑
+  hana_tsukikata: 穂状
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 黄緑
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -2816,13 +2816,13 @@ yanagimo:
   latin: P. oxyphyllus Miq.
   bunpu:
   - 全
-  hanotsukikata: 互生
-  hanokatachi: 線形葉で、長さ5-16mm、幅2-5mm
+  ha_tsukikata: 互生
+  ha_katachi: 線形葉で、長さ5-16mm、幅2-5mm
   kyoshi: 全縁
-  hananotsukikata: 穂状
-  petal_description: 無し
-  petal_counts: []
-  color_description: 黄緑・白
+  hana_tsukikata: 穂状
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 黄緑・白
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -2839,13 +2839,13 @@ ebimo:
   latin: P. crispus L.
   bunpu:
   - 全
-  hanotsukikata: 互生
-  hanokatachi: 広線形で、長さ3〜10cm、幅3〜9mm
+  ha_tsukikata: 互生
+  ha_katachi: 広線形で、長さ3〜10cm、幅3〜9mm
   kyoshi: 波打つ。鋸歯有り
-  hananotsukikata: 穂状
-  petal_description: 無し
-  petal_counts: []
-  color_description: 赤
+  hana_tsukikata: 穂状
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 赤
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -2859,13 +2859,13 @@ ibaramo:
   latin: Najas marina Linn.
   bunpu:
   - 全
-  hanotsukikata: 対生
-  hanokatachi: 線形で長さ2〜6cm、幅（0.5〜）1〜2mm（鋸歯高除く）
+  ha_tsukikata: 対生
+  ha_katachi: 線形で長さ2〜6cm、幅（0.5〜）1〜2mm（鋸歯高除く）
   kyoshi: 刺状の鋸歯。鋸歯の大きさは変異大
-  hananotsukikata: 微小棒状
-  petal_description: 無（雌）
-  petal_counts: []
-  color_description: 緑・淡紫緑
+  hana_tsukikata: 微小棒状
+  hanabira_setsumei: 無（雌）
+  hanabira_kazu: []
+  iro: 緑・淡紫緑
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -2879,13 +2879,13 @@ itotorigemo:
   - 9
   latin: Najas gracillima (A. Br.) Magnus
   bunpu: []
-  hanotsukikata: 5輪生状
-  hanokatachi: 線形、長さ1〜2cm、幅約0.2mm
+  ha_tsukikata: 5輪生状
+  ha_katachi: 線形、長さ1〜2cm、幅約0.2mm
   kyoshi: 細鋸歯
-  hananotsukikata: 微小棒状
-  petal_description: 無（雌）
-  petal_counts: []
-  color_description: 緑・淡紫緑
+  hana_tsukikata: 微小棒状
+  hanabira_setsumei: 無（雌）
+  hanabira_kazu: []
+  iro: 緑・淡紫緑
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -2899,14 +2899,14 @@ amamo:
   latin: Zostera marina Linn.
   bunpu:
   - 海
-  hanotsukikata: 互生
-  hanokatachi: 線形。長さ20-100cm、幅3-5mm
+  ha_tsukikata: 互生
+  ha_katachi: 線形。長さ20-100cm、幅3-5mm
   kyoshi: 平滑
-  hananotsukikata: 列状・穂
-  petal_description: '3'
-  petal_counts:
+  hana_tsukikata: 列状・穂
+  hanabira_setsumei: '3'
+  hanabira_kazu:
   - 3
-  color_description: 白
+  iro: 白
   shokudoku:
   - 食
   type: 単子葉植物
@@ -2923,14 +2923,14 @@ heraomodaka:
   - 匹
   - 津
   - 吉
-  hanotsukikata: 根生
-  hanokatachi: ヘラ状。葉のサイズは変異が大きく、長さ8-55cm
+  ha_tsukikata: 根生
+  ha_katachi: ヘラ状。葉のサイズは変異が大きく、長さ8-55cm
   kyoshi: 全縁
-  hananotsukikata: 3弁
-  petal_description: '3'
-  petal_counts:
+  hana_tsukikata: 3弁
+  hanabira_setsumei: '3'
+  hanabira_kazu:
   - 3
-  color_description: 白
+  iro: 白
   shokudoku:
   - 食
   - 薬
@@ -2946,14 +2946,14 @@ urikawa:
   latin: Sagittaria pygmaea Miq.
   bunpu:
   - 全
-  hanotsukikata: 根生
-  hanokatachi: 線形、ときに細い匙形。長さ4〜18cm、幅3〜10mmでやや厚い
+  ha_tsukikata: 根生
+  ha_katachi: 線形、ときに細い匙形。長さ4〜18cm、幅3〜10mmでやや厚い
   kyoshi: 全縁
-  hananotsukikata: 3弁
-  petal_description: '3'
-  petal_counts:
+  hana_tsukikata: 3弁
+  hanabira_setsumei: '3'
+  hanabira_kazu:
   - 3
-  color_description: 白
+  iro: 白
   shokudoku:
   - 食
   type: 単子葉植物
@@ -2970,14 +2970,14 @@ omodaka:
   - 高
   - 益
   - 匹
-  hanotsukikata: 根生
-  hanokatachi: 発生初期は線形、生長が進むと矢尻形。長さ7〜30cm
+  ha_tsukikata: 根生
+  ha_katachi: 発生初期は線形、生長が進むと矢尻形。長さ7〜30cm
   kyoshi: 全縁
-  hananotsukikata: 3弁
-  petal_description: '3'
-  petal_counts:
+  hana_tsukikata: 3弁
+  hanabira_setsumei: '3'
+  hanabira_kazu:
   - 3
-  color_description: 白
+  iro: 白
   shokudoku:
   - 食
   type: 単子葉植物
@@ -2994,14 +2994,14 @@ aginashi:
   bunpu:
   - 高
   - 益
-  hanotsukikata: 根生
-  hanokatachi: 矢じり形、頂裂片は披針形〜線形、長さ7.5〜17.5cm
+  ha_tsukikata: 根生
+  ha_katachi: 矢じり形、頂裂片は披針形〜線形、長さ7.5〜17.5cm
   kyoshi: 全縁
-  hananotsukikata: 3弁
-  petal_description: '3'
-  petal_counts:
+  hana_tsukikata: 3弁
+  hanabira_setsumei: '3'
+  hanabira_kazu:
   - 3
-  color_description: 白
+  iro: 白
   shokudoku:
   - 食
   type: 単子葉植物
@@ -3016,14 +3016,14 @@ sekishoumo:
   bunpu:
   - 高
   - 益
-  hanotsukikata: 根生
-  hanokatachi: 線形（リボン状）、扁平で長さ10〜80cm、幅3〜9mm、先端は鋭頭または鈍頭
+  ha_tsukikata: 根生
+  ha_katachi: 線形（リボン状）、扁平で長さ10〜80cm、幅3〜9mm、先端は鋭頭または鈍頭
   kyoshi: 平滑
-  hananotsukikata: 3弁
-  petal_description: '3'
-  petal_counts:
+  hana_tsukikata: 3弁
+  hanabira_setsumei: '3'
+  hanabira_kazu:
   - 3
-  color_description: 黄緑・白
+  iro: 黄緑・白
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3038,14 +3038,14 @@ kuromo:
   bunpu:
   - 高
   - 益
-  hanotsukikata: 各節に3〜8葉を輪生
-  hanokatachi: 線形で、長さ8〜20mm、幅1〜3mm、鋸歯があり、ときに著しく反り返る。
+  ha_tsukikata: 各節に3〜8葉を輪生
+  ha_katachi: 線形で、長さ8〜20mm、幅1〜3mm、鋸歯があり、ときに著しく反り返る。
   kyoshi: "鋸歯明瞭\r130μ前後"
-  hananotsukikata: 3弁
-  petal_description: '3'
-  petal_counts:
+  hana_tsukikata: 3弁
+  hanabira_setsumei: '3'
+  hanabira_kazu:
   - 3
-  color_description: 透明・紫
+  iro: 透明・紫
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3059,14 +3059,14 @@ mizuoobako:
   latin: Ottelia japonica Miq.
   bunpu:
   - 高
-  hanotsukikata: 根生
-  hanokatachi: オオバコに似た披針形〜広卵形で柄のある葉
+  ha_tsukikata: 根生
+  ha_katachi: オオバコに似た披針形〜広卵形で柄のある葉
   kyoshi: 全縁
-  hananotsukikata: 3弁
-  petal_description: '3'
-  petal_counts:
+  hana_tsukikata: 3弁
+  hanabira_setsumei: '3'
+  hanabira_kazu:
   - 3
-  color_description: 白
+  iro: 白
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3081,14 +3081,14 @@ tochikagami:
   bunpu:
   - 高
   - 益
-  hanotsukikata: 水中茎各節から数枚束出
-  hanokatachi: 円形、直径2〜7cm、基部は心形または深く切れ込む
+  ha_tsukikata: 水中茎各節から数枚束出
+  ha_katachi: 円形、直径2〜7cm、基部は心形または深く切れ込む
   kyoshi: 全縁
-  hananotsukikata: 3弁
-  petal_description: '3'
-  petal_counts:
+  hana_tsukikata: 3弁
+  hanabira_setsumei: '3'
+  hanabira_kazu:
   - 3
-  color_description: 白
+  iro: 白
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3105,14 +3105,14 @@ ookanadamo:
   latin: Egeria densa Planch
   bunpu:
   - 全
-  hanotsukikata: 各節に3〜6葉を輪生
-  hanokatachi: 線形で、長さ15〜40mm、幅2〜4.5mm
+  ha_tsukikata: 各節に3〜6葉を輪生
+  ha_katachi: 線形で、長さ15〜40mm、幅2〜4.5mm
   kyoshi: 不明瞭な細鋸歯
-  hananotsukikata: 3弁
-  petal_description: '3'
-  petal_counts:
+  hana_tsukikata: 3弁
+  hanabira_setsumei: '3'
+  hanabira_kazu:
   - 3
-  color_description: 白
+  iro: 白
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3127,13 +3127,13 @@ makomo:
   latin: Zizania latifolia Turcz.
   bunpu:
   - 高
-  hanotsukikata: 互生
-  hanokatachi: 線形。幅20〜30mm、長さは1mに達する
+  ha_tsukikata: 互生
+  ha_katachi: 線形。幅20〜30mm、長さは1mに達する
   kyoshi: 平滑、ややざらつく
-  hananotsukikata: まばらな穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 緑・淡紫
+  hana_tsukikata: まばらな穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 緑・淡紫
   shokudoku:
   - 食
   type: 単子葉植物
@@ -3147,13 +3147,13 @@ tsuruyoshi:
   latin: Phragmites japonica Steud.
   bunpu:
   - 全
-  hanotsukikata: 互生
-  hanokatachi: 長さ30〜40cm、幅15〜18mm、線状披針形
+  ha_tsukikata: 互生
+  ha_katachi: 長さ30〜40cm、幅15〜18mm、線状披針形
   kyoshi: 平滑
-  hananotsukikata: 円錐花序・穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 赤紫
+  hana_tsukikata: 円錐花序・穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 赤紫
   shokudoku:
   - 食
   type: 単子葉植物
@@ -3169,13 +3169,13 @@ yoshi:
   bunpu:
   - 高
   - 益
-  hanotsukikata: 互生
-  hanokatachi: 長さ20〜50cm、幅2〜4cm、広線形。水平開出、先端垂れ下る
+  ha_tsukikata: 互生
+  ha_katachi: 長さ20〜50cm、幅2〜4cm、広線形。水平開出、先端垂れ下る
   kyoshi: 平滑、ときにざらつく
-  hananotsukikata: 円錐花序・穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 暗紫
+  hana_tsukikata: 円錐花序・穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 暗紫
   shokudoku:
   - 食
   type: 単子葉植物
@@ -3190,13 +3190,13 @@ seikonoyoshi:
   latin: Phragmites karka (Retz.) Trin.
   bunpu:
   - 高
-  hanotsukikata: 互生
-  hanokatachi: 長さ40〜70B、幅2〜4B。斜上開出し、先端垂れ下がらない
+  ha_tsukikata: 互生
+  ha_katachi: 長さ40〜70B、幅2〜4B。斜上開出し、先端垂れ下がらない
   kyoshi: 平滑
-  hananotsukikata: 円錐花序・穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 紫・灰褐
+  hana_tsukikata: 円錐花序・穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 紫・灰褐
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3211,13 +3211,13 @@ onishiba:
   latin: Zoisia macrostachya Franch. et Savat
   bunpu:
   - 海
-  hanotsukikata: 互生
-  hanokatachi: 短い線形〜狭披針形。長さ3〜5B、幅2〜4@、硬く、先が鋭く尖る
+  ha_tsukikata: 互生
+  ha_katachi: 短い線形〜狭披針形。長さ3〜5B、幅2〜4@、硬く、先が鋭く尖る
   kyoshi: 平滑
-  hananotsukikata: 紡錘状・穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 赤紫
+  hana_tsukikata: 紡錘状・穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 赤紫
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3232,13 +3232,13 @@ hamaenokoro:
     Nemoto
   bunpu:
   - 海
-  hanotsukikata: 互生
-  hanokatachi: 短い披針。長さ4〜8cm、幅5〜10mm
+  ha_tsukikata: 互生
+  ha_katachi: 短い披針。長さ4〜8cm、幅5〜10mm
   kyoshi: 平滑
-  hananotsukikata: 卵形楕円形・穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 淡緑
+  hana_tsukikata: 卵形楕円形・穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 淡緑
   shokudoku:
   - 食
   type: 単子葉植物
@@ -3251,13 +3251,13 @@ kurokawazusuge:
   latin: Carex arenicola Fr. Schm.
   bunpu:
   - 高
-  hanotsukikata: 根茎節から束生
-  hanokatachi: 硬く、幅2〜3mm、有花茎よりも短い
+  ha_tsukikata: 根茎節から束生
+  ha_katachi: 硬く、幅2〜3mm、有花茎よりも短い
   kyoshi: 平滑
-  hananotsukikata: 小さい穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 淡茶
+  hana_tsukikata: 小さい穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 淡茶
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3273,13 +3273,13 @@ kouboumugi:
   latin: Carex kobomugi Ohwi
   bunpu:
   - 海
-  hanotsukikata: 根出状。詰まった互生
-  hanokatachi: 幅約5@の線形。革質で硬い
+  ha_tsukikata: 根出状。詰まった互生
+  ha_katachi: 幅約5@の線形。革質で硬い
   kyoshi: 平滑
-  hananotsukikata: 紡錘状・穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 緑・淡茶
+  hana_tsukikata: 紡錘状・穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 緑・淡茶
   shokudoku:
   - 食
   type: 単子葉植物
@@ -3292,13 +3292,13 @@ gouso:
   latin: Carex maximowiczii Miq.
   bunpu:
   - 全
-  hanotsukikata: 根出状。詰まった互生
-  hanokatachi: 基部は葉のない鞘が多数集まる。葉は根出状に多数出て、細長い。幅は3-6mm。
+  ha_tsukikata: 根出状。詰まった互生
+  ha_katachi: 基部は葉のない鞘が多数集まる。葉は根出状に多数出て、細長い。幅は3-6mm。
   kyoshi: 平滑
-  hananotsukikata: 膨らんで垂下る穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 淡緑・淡茶
+  hana_tsukikata: 膨らんで垂下る穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 淡緑・淡茶
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3311,13 +3311,13 @@ gure-nsuge:
   latin: Carex jackiana Boott. subsp. parciflora Kukenth.var. parciflora
   bunpu:
   - 津
-  hanotsukikata: 根出状。詰まった互生
-  hanokatachi: 幅約5〜12@の線形。有花茎より短い
+  ha_tsukikata: 根出状。詰まった互生
+  ha_katachi: 幅約5〜12@の線形。有花茎より短い
   kyoshi: 平滑
-  hananotsukikata: 疎らな小穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 淡緑・淡茶
+  hana_tsukikata: 疎らな小穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 淡緑・淡茶
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3330,13 +3330,13 @@ umasuge:
   latin: Carex idzuroei Franch. et Savat.
   bunpu:
   - 津
-  hanotsukikata: 根出状。詰まった互生
-  hanokatachi: 有花茎より短く、幅4〜8mm、軟質。横断面はM字状。
+  ha_tsukikata: 根出状。詰まった互生
+  ha_katachi: 有花茎より短く、幅4〜8mm、軟質。横断面はM字状。
   kyoshi: 上向きにややざらつく
-  hananotsukikata: 線形・短柱状・穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 淡緑
+  hana_tsukikata: 線形・短柱状・穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 淡緑
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3349,13 +3349,13 @@ juzusuge:
   latin: Carex ischnostachya Steudel
   bunpu:
   - 津
-  hanotsukikata: 基部は根出状。詰まった互生
-  hanokatachi: 稈と同長または稈より長く、幅0.7〜1cm、平坦。苞の葉身は葉状、長さ5〜25cm
+  ha_tsukikata: 基部は根出状。詰まった互生
+  ha_katachi: 稈と同長または稈より長く、幅0.7〜1cm、平坦。苞の葉身は葉状、長さ5〜25cm
   kyoshi: 平滑
-  hananotsukikata: 棒状・束・穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 黄緑
+  hana_tsukikata: 棒状・束・穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 黄緑
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3370,13 +3370,13 @@ kasasuge:
   bunpu:
   - 匹
   - 津
-  hanotsukikata: 基部は根出状。詰まった互生
-  hanokatachi: 稈と同長または稈より短く、幅6〜7.5mm、平坦。ややざらつく。苞の葉身は葉状、長さ5〜25cm、上部のものは長さ5mmの刺状、または鱗片状
+  ha_tsukikata: 基部は根出状。詰まった互生
+  ha_katachi: 稈と同長または稈より短く、幅6〜7.5mm、平坦。ややざらつく。苞の葉身は葉状、長さ5〜25cm、上部のものは長さ5mmの刺状、または鱗片状
   kyoshi: 平滑
-  hananotsukikata: 細長い穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 淡緑・淡茶
+  hana_tsukikata: 細長い穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 淡緑・淡茶
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3390,13 +3390,13 @@ kouboushiba:
   latin: Carex pumila Thunberg
   bunpu:
   - 海
-  hanotsukikata: 根出状。詰まった互生
-  hanokatachi: 線形、幅約2〜4mm
+  ha_tsukikata: 根出状。詰まった互生
+  ha_katachi: 線形、幅約2〜4mm
   kyoshi: 上向きにざらつく
-  hananotsukikata: 楕円・円柱状・穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 淡緑・淡紫
+  hana_tsukikata: 楕円・円柱状・穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 淡緑・淡紫
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3411,13 +3411,13 @@ onisuge:
   latin: Carex dickinsii Franch. et Savat.
   bunpu:
   - 津
-  hanotsukikata: 根出状。詰まった互生
-  hanokatachi: 広線形。幅4〜8mm
+  ha_tsukikata: 根出状。詰まった互生
+  ha_katachi: 広線形。幅4〜8mm
   kyoshi: 平滑
-  hananotsukikata: 突起棍棒状・穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 淡緑・黄緑
+  hana_tsukikata: 突起棍棒状・穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 淡緑・黄緑
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3431,13 +3431,13 @@ kuroguwai:
   latin: Eleocharis kuroguwai Ohwi
   bunpu:
   - 高
-  hanotsukikata: 
-  hanokatachi: 根元の鞘としてのみ存在。葉身はない
+  ha_tsukikata: 
+  ha_katachi: 根元の鞘としてのみ存在。葉身はない
   kyoshi: 
-  hananotsukikata: 小さく目立たない穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 白
+  hana_tsukikata: 小さく目立たない穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 白
   shokudoku:
   - 食
   type: 単子葉植物
@@ -3454,13 +3454,13 @@ harii:
   latin: Eleocharis pellucida Ｐresl
   bunpu:
   - 津
-  hanotsukikata: 
-  hanokatachi: 根元の鞘としてのみ存在。葉身はない
+  ha_tsukikata: 
+  ha_katachi: 根元の鞘としてのみ存在。葉身はない
   kyoshi: 
-  hananotsukikata: 狭卵形・小穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 淡茶
+  hana_tsukikata: 狭卵形・小穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 淡茶
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3475,13 +3475,13 @@ matsubai:
   latin: Eleocharis acicularis (Linn.) Roem. et Schult. var.longiseta Svenson
   bunpu:
   - 全
-  hanotsukikata: 
-  hanokatachi: 根元の鞘としてのみ存在。葉身はない
+  ha_tsukikata: 
+  ha_katachi: 根元の鞘としてのみ存在。葉身はない
   kyoshi: 
-  hananotsukikata: 長卵形・小穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 淡茶
+  hana_tsukikata: 長卵形・小穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 淡茶
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3497,13 +3497,13 @@ biro-dotentsuki:
   latin: Fimbristylis sericea (Poir.) R. Br.
   bunpu:
   - 海
-  hanotsukikata: 根元に集まってつく
-  hanokatachi: 茎より短く、幅1.5〜2@の線形。ビロード状の細毛で覆われる
+  ha_tsukikata: 根元に集まってつく
+  ha_katachi: 茎より短く、幅1.5〜2@の線形。ビロード状の細毛で覆われる
   kyoshi: 細毛におおわれる
-  hananotsukikata: 狭卵形・密生・小穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 淡茶
+  hana_tsukikata: 狭卵形・密生・小穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 淡茶
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3518,13 +3518,13 @@ hideriko:
   latin: Fimbristylis miliacea (Linn.) Vahl
   bunpu:
   - 全
-  hanotsukikata: 根際から叢生
-  hanokatachi: 葉は左右から内側に折りたたまれ、上部でくっつく剣形。扁平で幅約2@
+  ha_tsukikata: 根際から叢生
+  ha_katachi: 葉は左右から内側に折りたたまれ、上部でくっつく剣形。扁平で幅約2@
   kyoshi: 平滑
-  hananotsukikata: 散形・広卵形・小穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 茶
+  hana_tsukikata: 散形・広卵形・小穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 茶
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3537,13 +3537,13 @@ tentsuki:
   latin: Fimbristylis dichotoma (Linn.) Vahl
   bunpu:
   - 全
-  hanotsukikata: 根際から叢生
-  hanokatachi: 幅1.5〜5mm、ときに有毛。
+  ha_tsukikata: 根際から叢生
+  ha_katachi: 幅1.5〜5mm、ときに有毛。
   kyoshi: 平滑
-  hananotsukikata: 散形・長卵形・小穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 暗褐
+  hana_tsukikata: 散形・長卵形・小穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 暗褐
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3557,13 +3557,13 @@ azetentsuki:
   latin: Fimbristylis squarrosa  Vahl
   bunpu:
   - 全
-  hanotsukikata: 根際から叢生
-  hanokatachi: 柔らかく糸状。幅約0.5@。花序より短い
+  ha_tsukikata: 根際から叢生
+  ha_katachi: 柔らかく糸状。幅約0.5@。花序より短い
   kyoshi: 平滑
-  hananotsukikata: 披針形・多数・小穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 淡緑・淡褐
+  hana_tsukikata: 披針形・多数・小穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 淡緑・淡褐
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3578,13 +3578,13 @@ himetentsuki:
   latin: Fimbristylis autumnalis (Linn.) Roem. et Schultes
   bunpu:
   - 全
-  hanotsukikata: 根際から叢生
-  hanokatachi: 幅1.5〜2.5@。苞葉は幅広扁平で、花序とほぼ同じ長さかやや短く、直立する。
+  ha_tsukikata: 根際から叢生
+  ha_katachi: 幅1.5〜2.5@。苞葉は幅広扁平で、花序とほぼ同じ長さかやや短く、直立する。
   kyoshi: 平滑
-  hananotsukikata: 披針形・小さい・穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 赤褐
+  hana_tsukikata: 披針形・小さい・穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 赤褐
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3598,13 +3598,13 @@ ezoaburagaya:
   bunpu:
   - 匹
   - 椛
-  hanotsukikata: 根際から叢生
-  hanokatachi: 長さ100〜150B、幅7-15@。
+  ha_tsukikata: 根際から叢生
+  ha_katachi: 長さ100〜150B、幅7-15@。
   kyoshi: 葉縁と裏面中央脈上に上向きの刺状突起あり、著しくざらつく
-  hananotsukikata: 球形・多数・小穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 茶
+  hana_tsukikata: 球形・多数・小穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 茶
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3619,13 +3619,13 @@ komatsukasasusuki:
   bunpu:
   - 匹
   - 椛
-  hanotsukikata: 叢生
-  hanokatachi: 葉は硬く、幅3〜4@。苞は葉状で、長い。
+  ha_tsukikata: 叢生
+  ha_katachi: 葉は硬く、幅3〜4@。苞は葉状で、長い。
   kyoshi: 平滑
-  hananotsukikata: 球形・多数・小穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 淡褐
+  hana_tsukikata: 球形・多数・小穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 淡褐
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3640,13 +3640,13 @@ ukiyagara:
   latin: Scirpus yagara Ohwi
   bunpu:
   - 海
-  hanotsukikata: 互生
-  hanokatachi: 線形で先は細く尖り、基部は鞘状に茎を抱く。
+  ha_tsukikata: 互生
+  ha_katachi: 線形で先は細く尖り、基部は鞘状に茎を抱く。
   kyoshi: 縁はざらつく
-  hananotsukikata: 散形・狭卵形・小穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 茶・暗褐
+  hana_tsukikata: 散形・狭卵形・小穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 茶・暗褐
   shokudoku:
   - 薬
   type: 単子葉植物
@@ -3660,13 +3660,13 @@ himehotarui:
   latin: Scirpus lineolatus Franch. et Savat
   bunpu:
   - 津
-  hanotsukikata: 
-  hanokatachi: 根元の鞘としてのみ存在。葉身はない
+  ha_tsukikata: 
+  ha_katachi: 根元の鞘としてのみ存在。葉身はない
   kyoshi: 
-  hananotsukikata: 長楕円状披針形・仮側生・穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 淡緑
+  hana_tsukikata: 長楕円状披針形・仮側生・穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 淡緑
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3682,13 +3682,13 @@ kangarei:
   bunpu:
   - 椛
   - 海
-  hanotsukikata: 
-  hanokatachi: 根元の鞘としてのみ存在。葉身はない
+  ha_tsukikata: 
+  ha_katachi: 根元の鞘としてのみ存在。葉身はない
   kyoshi: 
-  hananotsukikata: 側生・頭状・多数・穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 緑。淡茶
+  hana_tsukikata: 側生・頭状・多数・穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 緑。淡茶
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3705,13 +3705,13 @@ sankakui:
   - 高
   - 益
   - 津
-  hanotsukikata: 
-  hanokatachi: 根元の鞘としてのみ存在。葉身はない
+  ha_tsukikata: 
+  ha_katachi: 根元の鞘としてのみ存在。葉身はない
   kyoshi: 
-  hananotsukikata: 側生・束生・小穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 淡茶
+  hana_tsukikata: 側生・束生・小穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 淡茶
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3725,13 +3725,13 @@ hinjigayatsuri:
   latin: Lipocarpha microcephala (R. Br.) Kunth
   bunpu:
   - 全
-  hanotsukikata: 
-  hanokatachi: 茎の横断面は鋭3稜形。高さ50〜120cm。葉身はない。苞葉は長さ3〜10B。
+  ha_tsukikata: 
+  ha_katachi: 茎の横断面は鋭3稜形。高さ50〜120cm。葉身はない。苞葉は長さ3〜10B。
   kyoshi: 稜には下向きの細かい刺状突起があり、ややざらつく
-  hananotsukikata: 小穂・並ぶ
-  petal_description: 無し
-  petal_counts: []
-  color_description: 淡緑
+  hana_tsukikata: 小穂・並ぶ
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 淡緑
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3745,13 +3745,13 @@ mizugayatsuri:
   latin: Cyperus serotinus Rottb.
   bunpu:
   - 高
-  hanotsukikata: 植物体は叢生
-  hanokatachi: 基部の鞘は赤褐色で2〜8枚の葉がある。苞葉の葉身は葉状で2〜3枚が花序より長い。
+  ha_tsukikata: 植物体は叢生
+  ha_katachi: 基部の鞘は赤褐色で2〜8枚の葉がある。苞葉の葉身は葉状で2〜3枚が花序より長い。
   kyoshi: 平滑
-  hananotsukikata: 卵型・穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 茶・淡茶
+  hana_tsukikata: 卵型・穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 茶・淡茶
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3765,13 +3765,13 @@ kawarasugana:
   latin: Cyperus sanguinolentus Vahl
   bunpu:
   - 全
-  hanotsukikata: 互生
-  hanokatachi: 葉は幅1〜2.5mm。苞葉の葉身は3枚で葉状、花序より長い。
+  ha_tsukikata: 互生
+  ha_katachi: 葉は幅1〜2.5mm。苞葉の葉身は3枚で葉状、花序より長い。
   kyoshi: 平滑
-  hananotsukikata: 小穂・多数
-  petal_description: 無し
-  petal_counts: []
-  color_description: 赤紫
+  hana_tsukikata: 小穂・多数
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 赤紫
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3787,13 +3787,13 @@ onigayatsuri:
   bunpu:
   - 高
   - 益
-  hanotsukikata: 互生
-  hanokatachi: 茎葉は茎より少し短く、長さ30〜50cm、幅4〜10mm。苞葉は2〜3個が花序よりも長い。
+  ha_tsukikata: 互生
+  ha_katachi: 茎葉は茎より少し短く、長さ30〜50cm、幅4〜10mm。苞葉は2〜3個が花序よりも長い。
   kyoshi: 平滑
-  hananotsukikata: 小穂・多数
-  petal_description: 無し
-  petal_counts: []
-  color_description: 茶・淡茶
+  hana_tsukikata: 小穂・多数
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 茶・淡茶
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3807,13 +3807,13 @@ ushikugu:
   latin: Cyperus orthostahyus Franch. et Savat.
   bunpu:
   - 全
-  hanotsukikata: 互生
-  hanokatachi: 茎葉は稈より長く、幅3〜8mm。苞葉の葉身は3〜4枚が花序より長く40cmに達することがある。
+  ha_tsukikata: 互生
+  ha_katachi: 茎葉は稈より長く、幅3〜8mm。苞葉の葉身は3〜4枚が花序より長く40cmに達することがある。
   kyoshi: 縁はざらつく。
-  hananotsukikata: 小穂・多数
-  petal_description: 無し
-  petal_counts: []
-  color_description: 暗紫褐
+  hana_tsukikata: 小穂・多数
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 暗紫褐
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3827,13 +3827,13 @@ kogomegayatsuri:
   latin: Cyperus iria Linn.
   bunpu:
   - 全
-  hanotsukikata: 多数が根出葉。
-  hanokatachi: 葉は幅2-6mmで線形。苞葉の葉身は4〜5枚、2〜3枚は花序より長い。
+  ha_tsukikata: 多数が根出葉。
+  ha_katachi: 葉は幅2-6mmで線形。苞葉の葉身は4〜5枚、2〜3枚は花序より長い。
   kyoshi: 平滑
-  hananotsukikata: 複生・斜上・小穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 緑・淡緑
+  hana_tsukikata: 複生・斜上・小穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 緑・淡緑
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3848,13 +3848,13 @@ kayatsurigusa:
   latin: Cyperus microiria Steud.
   bunpu:
   - 全
-  hanotsukikata: 互生
-  hanokatachi: は稈より短く、幅2〜4mm。苞葉の葉身は4〜6枚、うち3〜4枚は花序よりはなはだ長い。
+  ha_tsukikata: 互生
+  ha_katachi: は稈より短く、幅2〜4mm。苞葉の葉身は4〜6枚、うち3〜4枚は花序よりはなはだ長い。
   kyoshi: 平滑
-  hananotsukikata: 散形・複生・掌状・穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 黄褐
+  hana_tsukikata: 散形・複生・掌状・穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 黄褐
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3869,13 +3869,13 @@ aogayatsuri:
   latin: Cyperus nipponicus Franch. et Savat.
   bunpu:
   - 全
-  hanotsukikata: 植物体は叢生。
-  hanokatachi: 葉は幅1〜2.5@の線形。根元にまばらにつく。花茎の先に、茎より長い葉状の苞が3〜4個つく。
+  ha_tsukikata: 植物体は叢生。
+  ha_katachi: 葉は幅1〜2.5@の線形。根元にまばらにつく。花茎の先に、茎より長い葉状の苞が3〜4個つく。
   kyoshi: 平滑
-  hananotsukikata: 頭状・披針形・小穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 淡緑・淡茶
+  hana_tsukikata: 頭状・披針形・小穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 淡緑・淡茶
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3890,13 +3890,13 @@ himekugu:
   latin: Kyllinga brevifolia Rottb. var. leiolepis(Franch.et Savat･) Hara
   bunpu:
   - 全
-  hanotsukikata: 基部は根出状。詰まった互生
-  hanokatachi: 根出葉は柔らかく扁平、幅は2〜3mm、やや平滑。苞葉は3枚前後つき、葉状で長い。
+  ha_tsukikata: 基部は根出状。詰まった互生
+  ha_katachi: 根出葉は柔らかく扁平、幅は2〜3mm、やや平滑。苞葉は3枚前後つき、葉状で長い。
   kyoshi: 平滑
-  hananotsukikata: 球状・穂
-  petal_description: 無し
-  petal_counts: []
-  color_description: 淡緑
+  hana_tsukikata: 球状・穂
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 淡緑
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3910,14 +3910,14 @@ sekishou:
   latin: Acorus gramineus Soland.
   bunpu:
   - 高
-  hanotsukikata: 根生葉
-  hanokatachi: 線形で濃い緑色、長さ20〜50cm、幅3〜10mmで中央の脈は隆起せず平滑、湾曲する。
+  ha_tsukikata: 根生葉
+  ha_katachi: 線形で濃い緑色、長さ20〜50cm、幅3〜10mmで中央の脈は隆起せず平滑、湾曲する。
   kyoshi: 平滑
-  hananotsukikata: 棒状・肉穂花序・穂
-  petal_description: '5'
-  petal_counts:
+  hana_tsukikata: 棒状・肉穂花序・穂
+  hanabira_setsumei: '5'
+  hanabira_kazu:
   - 5
-  color_description: 黄緑・淡黄
+  iro: 黄緑・淡黄
   shokudoku:
   - 薬
   type: 単子葉植物
@@ -3930,13 +3930,13 @@ ukikusa:
   latin: Spirodela polyrhiza (Linn.) Schleid.
   bunpu:
   - 全
-  hanotsukikata: 2〜4個の葉状体がつながり群体（コロニー）をなす。
-  hanokatachi: 葉状体は広倒卵形、長さ3〜10mm、幅2〜8mm
+  ha_tsukikata: 2〜4個の葉状体がつながり群体（コロニー）をなす。
+  ha_katachi: 葉状体は広倒卵形、長さ3〜10mm、幅2〜8mm
   kyoshi: 全縁
-  hananotsukikata: 目立たない・極小
-  petal_description: 無し
-  petal_counts: []
-  color_description: 白
+  hana_tsukikata: 目立たない・極小
+  hanabira_setsumei: 無し
+  hanabira_kazu: []
+  iro: 白
   shokudoku:
   - 食
   type: 単子葉植物
@@ -3949,14 +3949,14 @@ inunohige:
   latin: Eriocaulon miquelianum Koern.
   bunpu:
   - 津
-  hanotsukikata: 根際から叢生
-  hanokatachi: 線形、長さ6〜25cm、基部の幅3〜7mm、先は次第に細くなってやや硬く、鋭頭。
+  ha_tsukikata: 根際から叢生
+  ha_katachi: 線形、長さ6〜25cm、基部の幅3〜7mm、先は次第に細くなってやや硬く、鋭頭。
   kyoshi: 平滑
-  hananotsukikata: 小頭状
-  petal_description: '3'
-  petal_counts:
+  hana_tsukikata: 小頭状
+  hanabira_setsumei: '3'
+  hanabira_kazu:
   - 3
-  color_description: 白半透明
+  iro: 白半透明
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3971,14 +3971,14 @@ ibokusa:
   latin: Aneilema japonicum (Thunb.) Kunth
   bunpu:
   - 全
-  hanotsukikata: 互生
-  hanokatachi: 葉身は挟披針形で長さ2〜7cm、幅4〜10mmで質は軟らかい。
+  ha_tsukikata: 互生
+  ha_katachi: 葉身は挟披針形で長さ2〜7cm、幅4〜10mmで質は軟らかい。
   kyoshi: 全縁
-  hananotsukikata: 3弁
-  petal_description: '3'
-  petal_counts:
+  hana_tsukikata: 3弁
+  hanabira_setsumei: '3'
+  hanabira_kazu:
   - 3
-  color_description: 紫・淡赤紫
+  iro: 紫・淡赤紫
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -3993,14 +3993,14 @@ mizuaoi:
   latin: Monochoria korsakowii Regel et Maack
   bunpu:
   - 全
-  hanotsukikata: 互生
-  hanokatachi: 5〜25cmの葉柄があり、心形でつやがある。
+  ha_tsukikata: 互生
+  ha_katachi: 5〜25cmの葉柄があり、心形でつやがある。
   kyoshi: 全縁
-  hananotsukikata: ユリ型
-  petal_description: '6'
-  petal_counts:
+  hana_tsukikata: ユリ型
+  hanabira_setsumei: '6'
+  hanabira_kazu:
   - 6
-  color_description: 青
+  iro: 青
   shokudoku:
   - 食
   type: 単子葉植物
@@ -4015,14 +4015,14 @@ konagi:
   latin: Monochoria vaginalis (Burm. fil.) Presl
   bunpu:
   - 全
-  hanotsukikata: 互生
-  hanokatachi: 葉の形は変化に富み倒披針形、卵形、卵唇形など。葉身は長さ2.5〜6cm、幅0.7〜4cm。
+  ha_tsukikata: 互生
+  ha_katachi: 葉の形は変化に富み倒披針形、卵形、卵唇形など。葉身は長さ2.5〜6cm、幅0.7〜4cm。
   kyoshi: 全縁
-  hananotsukikata: ユリ型
-  petal_description: '6'
-  petal_counts:
+  hana_tsukikata: ユリ型
+  hanabira_setsumei: '6'
+  hanabira_kazu:
   - 6
-  color_description: 青
+  iro: 青
   shokudoku:
   - 食
   type: 単子葉植物
@@ -4035,14 +4035,14 @@ kusai:
   latin: Juncus tenuis Willd.
   bunpu:
   - 全
-  hanotsukikata: 互生
-  hanokatachi: 葉は扁平で細い。葉鞘と葉身の境に灰白色の膜質の葉耳がある。
+  ha_tsukikata: 互生
+  ha_katachi: 葉は扁平で細い。葉鞘と葉身の境に灰白色の膜質の葉耳がある。
   kyoshi: 平滑
-  hananotsukikata: 集散花序
-  petal_description: '6'
-  petal_counts:
+  hana_tsukikata: 集散花序
+  hanabira_setsumei: '6'
+  hanabira_kazu:
   - 6
-  color_description: 淡緑
+  iro: 淡緑
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -4057,14 +4057,14 @@ i:
   bunpu:
   - 高
   - 益
-  hanotsukikata: 
-  hanokatachi: 根元の鞘としてのみ存在。葉身はない
+  ha_tsukikata: 
+  ha_katachi: 根元の鞘としてのみ存在。葉身はない
   kyoshi: 
-  hananotsukikata: 偽側生・集合花・穂
-  petal_description: '6'
-  petal_counts:
+  hana_tsukikata: 偽側生・集合花・穂
+  hanabira_setsumei: '6'
+  hanabira_kazu:
   - 6
-  color_description: 茶・淡茶
+  iro: 茶・淡茶
   shokudoku:
   - 食
   type: 単子葉植物
@@ -4079,14 +4079,14 @@ kohige:
   bunpu:
   - 高
   - 益
-  hanotsukikata: 
-  hanokatachi: 根元の鞘としてのみ存在。葉身はない
+  ha_tsukikata: 
+  ha_katachi: 根元の鞘としてのみ存在。葉身はない
   kyoshi: 
-  hananotsukikata: 偽側生・集合花・穂
-  petal_description: '6'
-  petal_counts:
+  hana_tsukikata: 偽側生・集合花・穂
+  hanabira_setsumei: '6'
+  hanabira_kazu:
   - 6
-  color_description: 茶・淡茶
+  iro: 茶・淡茶
   shokudoku:
   - 食
   type: 単子葉植物
@@ -4100,14 +4100,14 @@ tachikougaizekishou:
   latin: Juncus krameri Franch. et Savat.
   bunpu:
   - 匹
-  hanotsukikata: 互生
-  hanokatachi: 茎葉は2〜3個、茎よりいちじるしく短く、円筒状で単管質、隔壁はごく明瞭。葉耳は突出せず、ごく小さく不明瞭
+  ha_tsukikata: 互生
+  ha_katachi: 茎葉は2〜3個、茎よりいちじるしく短く、円筒状で単管質、隔壁はごく明瞭。葉耳は突出せず、ごく小さく不明瞭
   kyoshi: 平滑
-  hananotsukikata: 凹集散状・頭花
-  petal_description: '2'
-  petal_counts:
+  hana_tsukikata: 凹集散状・頭花
+  hanabira_setsumei: '2'
+  hanabira_kazu:
   - 2
-  color_description: 緑
+  iro: 緑
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -4121,14 +4121,14 @@ kougaizekishou:
   latin: Juncus leschenaultii Gay
   bunpu:
   - 匹
-  hanotsukikata: 互生
-  hanokatachi: 開花前の下方の葉の径約1mm。
+  ha_tsukikata: 互生
+  ha_katachi: 開花前の下方の葉の径約1mm。
   kyoshi: 平滑
-  hananotsukikata: 球形頭花・集散状・穂
-  petal_description: '2'
-  petal_counts:
+  hana_tsukikata: 球形頭花・集散状・穂
+  hanabira_setsumei: '2'
+  hanabira_kazu:
   - 2
-  color_description: 淡緑・淡茶
+  iro: 淡緑・淡茶
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -4142,14 +4142,14 @@ aokougaizekishou:
   latin: Juncus papillosus Franch. et Savat.
   bunpu:
   - 津
-  hanotsukikata: 互生
-  hanokatachi: 葉は茎より短く、長さ20〜30B、幅1〜2@。
+  ha_tsukikata: 互生
+  ha_katachi: 葉は茎より短く、長さ20〜30B、幅1〜2@。
   kyoshi: 平滑
-  hananotsukikata: 多数の頭花・穂
-  petal_description: '6'
-  petal_counts:
+  hana_tsukikata: 多数の頭花・穂
+  hanabira_setsumei: '6'
+  hanabira_kazu:
   - 6
-  color_description: 緑・淡茶
+  iro: 緑・淡茶
   shokudoku:
   - 不明
   type: 単子葉植物
@@ -4162,14 +4162,14 @@ kusasugikazura:
   latin: Asparagus lucidus Lindley
   bunpu:
   - 海
-  hanotsukikata: 互生
-  hanokatachi: 葉は退化して鱗片状または刺状になり目立たない。葉のように見えるのは葉腋から出た小枝が変化したもの
+  ha_tsukikata: 互生
+  ha_katachi: 葉は退化して鱗片状または刺状になり目立たない。葉のように見えるのは葉腋から出た小枝が変化したもの
   kyoshi: 
-  hananotsukikata: ユリ型
-  petal_description: '6'
-  petal_counts:
+  hana_tsukikata: ユリ型
+  hanabira_setsumei: '6'
+  hanabira_kazu:
   - 6
-  color_description: 白
+  iro: 白
   shokudoku:
   - 食
   type: 単子葉植物
@@ -4183,14 +4183,14 @@ kakitsubata:
   latin: Iris laevigata Fisch.
   bunpu:
   - 匹
-  hanotsukikata: 互生
-  hanokatachi: 剣状広線形で黄緑色。中央脈が目立つ。
+  ha_tsukikata: 互生
+  ha_katachi: 剣状広線形で黄緑色。中央脈が目立つ。
   kyoshi: 平滑
-  hananotsukikata: アヤメ型
-  petal_description: '3'
-  petal_counts:
+  hana_tsukikata: アヤメ型
+  hanabira_setsumei: '3'
+  hanabira_kazu:
   - 3
-  color_description: 青紫
+  iro: 青紫
   shokudoku:
   - 毒
   type: 単子葉植物
@@ -4203,14 +4203,14 @@ shaga:
   latin: Iris japonica Thunb.
   bunpu:
   - 全
-  hanotsukikata: 互生
-  hanokatachi: 状で長さ30〜60cm，幅２〜3cm，横伏する根茎から２列に並んで出る。単面葉（葉の表を内側に折りたたんで合着し、裏面のみとなったもの）
+  ha_tsukikata: 互生
+  ha_katachi: 状で長さ30〜60cm，幅２〜3cm，横伏する根茎から２列に並んで出る。単面葉（葉の表を内側に折りたたんで合着し、裏面のみとなったもの）
   kyoshi: 平滑
-  hananotsukikata: アヤメ型
-  petal_description: '3'
-  petal_counts:
+  hana_tsukikata: アヤメ型
+  hanabira_setsumei: '3'
+  hanabira_kazu:
   - 3
-  color_description: 白
+  iro: 白
   shokudoku:
   - 毒
   type: 単子葉植物
@@ -4223,14 +4223,14 @@ nohanashoubu:
   latin: Iris ensata Thunb. var. spontanea (Makino) Nakai
   bunpu:
   - 匹
-  hanotsukikata: 互生
-  hanokatachi: 剣状、主脈がよく発達し、長さ30〜60B、幅5〜15@。
+  ha_tsukikata: 互生
+  ha_katachi: 剣状、主脈がよく発達し、長さ30〜60B、幅5〜15@。
   kyoshi: 平滑
-  hananotsukikata: アヤメ型
-  petal_description: '3'
-  petal_counts:
+  hana_tsukikata: アヤメ型
+  hanabira_setsumei: '3'
+  hanabira_kazu:
   - 3
-  color_description: 紫・赤紫
+  iro: 紫・赤紫
   shokudoku:
   - 毒
   type: 単子葉植物
@@ -4245,14 +4245,14 @@ kishoubu:
   latin: Iris pseudacorus
   bunpu:
   - 全
-  hanotsukikata: 互生
-  hanokatachi: 剣状,60ｃｍ〜1ｍ 幅 2ｃｍ〜3ｃｍ
+  ha_tsukikata: 互生
+  ha_katachi: 剣状,60ｃｍ〜1ｍ 幅 2ｃｍ〜3ｃｍ
   kyoshi: 平滑
-  hananotsukikata: アヤメ型
-  petal_description: '3'
-  petal_counts:
+  hana_tsukikata: アヤメ型
+  hanabira_setsumei: '3'
+  hanabira_kazu:
   - 3
-  color_description: 黄
+  iro: 黄
   shokudoku:
   - 毒
   type: 単子葉植物
@@ -4265,14 +4265,14 @@ mizuchidori:
   latin: Platanthera hologlottis Maxim.
   bunpu:
   - 匹
-  hanotsukikata: 互生
-  hanokatachi: 線状披針形で、基部が鞘状になって茎を抱く。下方の葉は長さ10-20cm、幅1-2cm、上方では小さくなる。
+  ha_tsukikata: 互生
+  ha_katachi: 線状披針形で、基部が鞘状になって茎を抱く。下方の葉は長さ10-20cm、幅1-2cm、上方では小さくなる。
   kyoshi: 全縁
-  hananotsukikata: 蘭型
-  petal_description: '6'
-  petal_counts:
+  hana_tsukikata: 蘭型
+  hanabira_setsumei: '6'
+  hanabira_kazu:
   - 6
-  color_description: 白
+  iro: 白
   shokudoku:
   - 不明
   type: 単子葉植物
