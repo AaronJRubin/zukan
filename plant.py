@@ -39,6 +39,7 @@ class Plant:
         self.ha_tsukikata = ha_tsukikata 
         self.ha_katachi = ha_katachi
         self.iro = iro
+        self.kyoshi = kyoshi
 
         #self.type = type if type else ""
 
