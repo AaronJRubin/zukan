@@ -52,8 +52,7 @@ class Plant:
 
     def images(self, string):
         path = os.path.join("master-images/plants/shokubutsu", self.romaji, "*" + string + "*")
-        files = glob(path)
-        print files
+        files = glob(path) 
         return [file.replace("master-images/plants", "/images").replace(".png", ".jpg") for file in files]
 
     def small_images(self):
