@@ -11,6 +11,7 @@ SelectElement hanabiraSearch;
 ElementList<LIElement> plantTiles;
 ElementList<RadioButtonInputElement> typeSearchBoxes;
 ElementList<CheckboxInputElement> seiikuSearchBoxes;
+ElementList<CheckboxInputElement> shokudokuSearchBoxes;
 
 void main() {
   //print("Hello!");
@@ -22,6 +23,7 @@ void main() {
   hanabiraSearch = document.querySelector("#hanabira-search");
   typeSearchBoxes = document.querySelectorAll("#type-search input");
   seiikuSearchBoxes = document.querySelectorAll("#seiikubasho-search input");
+  shokudokuSearchBoxes = document.querySelectorAll("#shokudoku-search input");
   plantTiles = document.querySelectorAll("ol.tiles li");
   /*for (int i = 0; i < includeCheckboxes.length; i++) {
     CheckboxInputElement includeCheckbox = includeCheckboxes[i];
@@ -38,6 +40,7 @@ void main() {
   textSearchListen(hanabiraSearch);
   typeSearchBoxes.forEach((el) => buttonSearchListen(el));
   seiikuSearchBoxes.forEach((el) => buttonSearchListen(el));
+  shokudokuSearchBoxes.forEach((el) => buttonSearchListen(el));
   refresh(); // maybe things were clicked before script was loaded
 }
 
@@ -84,6 +87,9 @@ Filter<Plant> buildFilter() {
   }
   seiikuSearchBoxes.where((el) => el.checked).forEach((el) {
       filter.add((plant) => plant.seiikubasho.contains(el.value));
+  });
+  shokudokuSearchBoxes.where((el) => el.checked).forEach((el) {
+      filter.add((plant) => plant.shokudoku.contains(el.value));
   });
   /*
      for (CheckboxInputElement checkbox in includeCheckboxes) {
