@@ -7,17 +7,19 @@ import 'package:zukan_lib/ichiran_utils.dart';
 //ElementList<CheckboxInputElement> excludeCheckboxes;
 TextInputElement articleSearch;
 SelectElement kakiSearch;
+SelectElement hanabiraSearch;
 ElementList<LIElement> plantTiles;
 ElementList<RadioButtonInputElement> typeSearchBoxes;
 ElementList<CheckboxInputElement> seiikuSearchBoxes;
 
 void main() {
-  print("Hello!");
+  //print("Hello!");
   setUpSearchAreaToggle();
   //includeCheckboxes = document.querySelectorAll(".search-checkbox.include");
   //excludeCheckboxes = document.querySelectorAll(".search-checkbox.exclude");
   articleSearch = document.querySelector("#article-search");
   kakiSearch = document.querySelector("#kaki-search");
+  hanabiraSearch = document.querySelector("#hanabira-search");
   typeSearchBoxes = document.querySelectorAll("#type-search input");
   seiikuSearchBoxes = document.querySelectorAll("#seiikubasho-search input");
   plantTiles = document.querySelectorAll("ol.tiles li");
@@ -33,6 +35,7 @@ void main() {
   }*/
   textSearchListen(articleSearch);
   textSearchListen(kakiSearch);
+  textSearchListen(hanabiraSearch);
   typeSearchBoxes.forEach((el) => buttonSearchListen(el));
   seiikuSearchBoxes.forEach((el) => buttonSearchListen(el));
   refresh(); // maybe things were clicked before script was loaded
@@ -69,46 +72,51 @@ Filter<Plant> buildFilter() {
     int intVal = int.parse(searchKaki);
     filter.add((plant) => plant.kaki.contains(intVal));
   }
+  String searchHanabira = hanabiraSearch.value.trim();
+  if (searchHanabira.length > 0) {
+      int intVal = int.parse(searchHanabira);
+      filter.add((plant) => plant.hanabiraKazu.contains(intVal));
+  }
   RadioButtonInputElement checkedTypeInput =
       typeSearchBoxes.firstWhere((el) => el.checked, orElse: () => null);
   if (checkedTypeInput != null && checkedTypeInput.value != 'all') {
-    filter.add((plant) => plant.type == checkedTypeInput.value);
+      filter.add((plant) => plant.type == checkedTypeInput.value);
   }
   seiikuSearchBoxes.where((el) => el.checked).forEach((el) {
-    filter.add((plant) => plant.seiikubasho.contains(el.value));
+      filter.add((plant) => plant.seiikubasho.contains(el.value));
   });
   /*
-  for (CheckboxInputElement checkbox in includeCheckboxes) {
-    if (checkbox.checked) {
-      String area = checkbox.id.split("-")[1];
-      if (checkbox.id.startsWith("takatsu")) {
-        filter.add((plant) => plant.takatsu.contains(area));
-      } else if (checkbox.id.startsWith("masuda")) {
-        filter.add((plant) => plant.masuda.contains(area));
-      }
-    }
-  }
-  for (CheckboxInputElement checkbox in excludeCheckboxes) {
-    if (checkbox.checked) {
-      String area = checkbox.id.split("-")[1];
-      if (checkbox.id.startsWith("takatsu")) {
-        filter.add((plant) => !plant.takatsu.contains(area));
-      } else if (checkbox.id.startsWith("masuda")) {
-        filter.add((plant) => !plant.masuda.contains(area));
-      }
-    }
-  }*/
+     for (CheckboxInputElement checkbox in includeCheckboxes) {
+     if (checkbox.checked) {
+     String area = checkbox.id.split("-")[1];
+     if (checkbox.id.startsWith("takatsu")) {
+     filter.add((plant) => plant.takatsu.contains(area));
+     } else if (checkbox.id.startsWith("masuda")) {
+     filter.add((plant) => plant.masuda.contains(area));
+     }
+     }
+     }
+     for (CheckboxInputElement checkbox in excludeCheckboxes) {
+     if (checkbox.checked) {
+     String area = checkbox.id.split("-")[1];
+     if (checkbox.id.startsWith("takatsu")) {
+     filter.add((plant) => !plant.takatsu.contains(area));
+     } else if (checkbox.id.startsWith("masuda")) {
+     filter.add((plant) => !plant.masuda.contains(area));
+     }
+     }
+     }*/
   return filter;
 }
 
 void refresh() {
-  Filter filter = buildFilter();
-  for (LIElement tile in plantTiles) {
-    Plant plant = plant_map[tile.attributes["data-plant-name"]];
-    if (!filter.filter(plant)) {
-      tile.classes.add('hidden');
-    } else {
-      tile.classes.remove('hidden');
+    Filter filter = buildFilter();
+    for (LIElement tile in plantTiles) {
+        Plant plant = plant_map[tile.attributes["data-plant-name"]];
+        if (!filter.filter(plant)) {
+            tile.classes.add('hidden');
+        } else {
+            tile.classes.remove('hidden');
+        }
     }
-  }
 }
