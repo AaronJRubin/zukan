@@ -10,8 +10,6 @@ appengine_sites = Rake::FileList.new("*_appengine/static")
 MASTER_IMAGES = "master-images"
 article_subdirectories = { "plants" => "shokubutsu", "animals" => "ikimono" }
 
-plant_images = YAML.load(File.read("data/manually_processed/plant_images.yaml"))
-
 def compressed_path(image_path)
   split_path = image_path.gsub("#{MASTER_IMAGES}/", "").split("/")
   before_changing_extension = "#{split_path[0]}/web/images/#{split_path[1..-1].join("/")}"
@@ -202,18 +200,13 @@ desc "Compress images of animals in master-images and move to workspace"
 compress_images_task(:compress_animal_images, "animals/ikimono/**/*.jpg", convert_animal)
 
 convert_plant = lambda do |plant, compressed_plant|
-	if plant.include? "ichiran"
-		return convert(plant, compressed_plant, resize = "#{HEADER_IMAGE_WIDTH}x", quality = "60")
-	else
-		plant_name = plant.pathmap("%-1d")
-		boundary = plant_images[plant_name]["boundary"]
-		is_small = plant.pathmap("%n").to_i >= boundary
-		if is_small
-			return convert(plant, compressed_plant, resize = "200x150!", quality = "60")
-		else
-			return convert(plant, compressed_plant, resize = "300x225!", quality = "60")
-		end
-	end
+  if plant.include? "ichiran"
+    convert(plant, compressed_plant, resize = "#{HEADER_IMAGE_WIDTH}x#{HEADER_IMAGE_WIDTH * (0.75)}!", quality = "60")
+  elsif plant.include? "small"
+    convert(plant, compressed_plant, resize = "200x150!", quality = "60")
+  else
+    convert(plant, compressed_plant, resize = "300x225!", quality = "60")
+  end
 end
 
 desc "Compress images of plants in master-images and move to workspace"
@@ -226,15 +219,15 @@ size_override = Hash.new("1400x\\>")
 size_override['takatsugawa-home.jpg'] = '958x'
 
 convert_general = lambda do |image, compressed_image| 
-	name = image.pathmap('%f')
-	return convert(image, compressed_image, resize = size_override[name], quality = quality_override[name]) 
+  name = image.pathmap('%f')
+  return convert(image, compressed_image, resize = size_override[name], quality = quality_override[name]) 
 end
 
 mamechishiki_size_override = Hash.new("459x")
 mamechishiki_size_override["ochi-ayu.jpg"] = '459x278!'
 
 convert_mamechishiki = lambda do |image, compressed_image|
-	return convert(image, compressed_image, resize = mamechishiki_size_override[image.pathmap('%f')], quality = "50")
+  return convert(image, compressed_image, resize = mamechishiki_size_override[image.pathmap('%f')], quality = "50")
 end
 
 desc "Compress images of seisokuchi in master-images and move to workspace"
@@ -251,127 +244,127 @@ task :compress_images => [:compress_animal_images, :compress_plant_images, :comp
 
 desc "Validate yaml data for which a schema is defined"
 task :validate_data do 
-	data_files = Rake::FileList.new('data/**/*.yaml')
-	data_files.each do |data_file|
-		schema_file = data_file.pathmap("%X.schema")
-		if File.exists? schema_file
-			sh "kwalify -f #{schema_file} #{data_file}"
-		end
-	end
+  data_files = Rake::FileList.new('data/**/*.yaml')
+  data_files.each do |data_file|
+    schema_file = data_file.pathmap("%X.schema")
+    if File.exists? schema_file
+      sh "kwalify -f #{schema_file} #{data_file}"
+    end
+  end
 end
 
 
 desc "Render templates (html and others) using the jinja2 template engine"
 task :generate_pages => [:compress_images, :validate_data] do
-	dependencies = Rake::FileList.new('templates/**/*').include("#{MASTER_IMAGES}/**/*").include('animal.py').include('plant.py').include('data/**/*')
-	unless uptodate?('animals/web/ikimono/ichiran.html', dependencies)
-		sh 'python generate_pages.py' 
-	end
+  dependencies = Rake::FileList.new('templates/**/*').include("#{MASTER_IMAGES}/**/*").include('animal.py').include('plant.py').include('data/**/*')
+  unless uptodate?('animals/web/ikimono/ichiran.html', dependencies)
+    sh 'python generate_pages.py' 
+  end
 end
 
 sites.each do |site|
-	task "#{site}_compass_watch" do
-		system "compass watch --sass-dir sass --css-dir #{site}/web/stylesheets"
-	end
+  task "#{site}_compass_watch" do
+    system "compass watch --sass-dir sass --css-dir #{site}/web/stylesheets"
+  end
 end
 
 multitask compass_watch: sites.map { |site| "#{site}_compass_watch" }
 
 desc "Compile Sass to CSS, using Compass"
 task :compile_sass do
-	css_file = 'animals/web/stylesheets/main.css'
-	unless (uptodate?(css_file, ['sass/main.scss']))
-		sites.each do |site|
-			sh "compass compile --sass-dir sass --css-dir #{site}/web/stylesheets"
-		end
-	end	
+  css_file = 'animals/web/stylesheets/main.css'
+  unless (uptodate?(css_file, ['sass/main.scss']))
+    sites.each do |site|
+      sh "compass compile --sass-dir sass --css-dir #{site}/web/stylesheets"
+    end
+  end	
 end
 
 desc "Compile everything necessary to use the site with pub serve, part of the Dart SDK (output in web)"
 task :build_web => [:compress_images, :generate_pages, :compile_sass, :index_articles]
 
 sites.each do |site|
-	desc "Run development pub server for #{site} site (Dart SDK required)"
-	task "serve_#{site}" => :build_web do
-		Dir.chdir(site) do
-			sh 'pub serve --port 0'
-		end
-	end
+  desc "Run development pub server for #{site} site (Dart SDK required)"
+  task "serve_#{site}" => :build_web do
+    Dir.chdir(site) do
+      sh 'pub serve --port 0'
+    end
+  end
 end
 
 def generate_appcache(dir)
-	appcache_path = "#{dir}/takatsugawa-zukan.appcache"
-	unlocked appcache_path do
-		File.open(appcache_path, "w") do |appcache| 
-			appcache.puts "CACHE MANIFEST"
-			appcache.puts "##{Time.now()}"
-			files = Rake::FileList.new("#{dir}/**/*.{jpg,html,css,js}").exclude("#{dir}/packages/browser/interop.js") 
-			files.each do |file|
-				appcache.puts file.gsub("#{dir}/", "")
-			end
-		end
-	end
+  appcache_path = "#{dir}/takatsugawa-zukan.appcache"
+  unlocked appcache_path do
+    File.open(appcache_path, "w") do |appcache| 
+      appcache.puts "CACHE MANIFEST"
+      appcache.puts "##{Time.now()}"
+      files = Rake::FileList.new("#{dir}/**/*.{jpg,html,css,js}").exclude("#{dir}/packages/browser/interop.js") 
+      files.each do |file|
+        appcache.puts file.gsub("#{dir}/", "")
+      end
+    end
+  end
 end
 
 sites.each do |site|
-	task "compile_#{site}" => :build_web do
-		appengine_site = "#{site}_appengine/static"
-		dependencies = Rake::FileList.new("#{site}/**/*")
-		sentinal_files = Rake::FileList.new("#{appengine_site}/**/*.html")
-		if sentinal_files.empty? or not uptodate?(sentinal_files[0], dependencies)
-			rm_r appengine_site, :force => true
-			smart_compile_dart(site)
-			cp_r "#{site}/build/web", appengine_site
-			generate_appcache appengine_site
-			css_path = "#{appengine_site}/stylesheets/main.css"
-			unlocked css_path do
-				File.write(css_path, CSSminify.compress(File.read(css_path)))
-			end
-			compressor = HtmlCompressor::Compressor.new
-			htmlFiles = Rake::FileList.new("#{appengine_site}/**/*.html")
-			htmlFiles.each do |file|
-				unlocked file do
-					File.write(file, compressor.compress(File.read(file)))
-				end
-			end
-			jsFiles = Rake::FileList.new("#{appengine_site}/**/*.js")
-			jsFiles.each do |file|
-				unlocked file do
-					sh "uglifyjs #{file} -c -m -o #{file}" 
-				end
-			end
-		end
-	end
+  task "compile_#{site}" => :build_web do
+    appengine_site = "#{site}_appengine/static"
+    dependencies = Rake::FileList.new("#{site}/**/*")
+    sentinal_files = Rake::FileList.new("#{appengine_site}/**/*.html")
+    if sentinal_files.empty? or not uptodate?(sentinal_files[0], dependencies)
+      rm_r appengine_site, :force => true
+      smart_compile_dart(site)
+      cp_r "#{site}/build/web", appengine_site
+      generate_appcache appengine_site
+      css_path = "#{appengine_site}/stylesheets/main.css"
+      unlocked css_path do
+        File.write(css_path, CSSminify.compress(File.read(css_path)))
+      end
+      compressor = HtmlCompressor::Compressor.new
+      htmlFiles = Rake::FileList.new("#{appengine_site}/**/*.html")
+      htmlFiles.each do |file|
+        unlocked file do
+          File.write(file, compressor.compress(File.read(file)))
+        end
+      end
+      jsFiles = Rake::FileList.new("#{appengine_site}/**/*.js")
+      jsFiles.each do |file|
+        unlocked file do
+          sh "uglifyjs #{file} -c -m -o #{file}" 
+        end
+      end
+    end
+  end
 end
 
 desc "Compile dart code and produce ready-to-deploy sites with appcache and minified css"
 task :compile => sites.map { |site| "compile_#{site}" }
 sites.each do |site|
-	desc "Deploy #{site} site to Google App Engine"
-	task "deploy_#{site}" => :compile do
-		Dir.chdir site do
-			sh 'appcfg.py --no_cookies update .'
-		end
-	end
+  desc "Deploy #{site} site to Google App Engine"
+  task "deploy_#{site}" => :compile do
+    Dir.chdir site do
+      sh 'appcfg.py --no_cookies update .'
+    end
+  end
 end
 
 desc "Delete all generated files, except for compressed image files"
 task :clean_nonimage do
-	sites.each do |site|
-		Dir.chdir(site) do 
-			generated_textfiles = Rake::FileList.new.include("**/*{html,css,_list.dart}")
-			rm_f generated_textfiles
-			rm_rf "build"
-		end
-		rm_rf appengine_sites
-	end
+  sites.each do |site|
+    Dir.chdir(site) do 
+      generated_textfiles = Rake::FileList.new.include("**/*{html,css,_list.dart}")
+      rm_f generated_textfiles
+      rm_rf "build"
+    end
+    rm_rf appengine_sites
+  end
 end
 
 desc "Delete all generated files for a clean build"
 task :clean => :clean_nonimage do
-	sites.each do |site|
-		Dir.chdir(site) do
-			rm_rf 'web/images'
-		end
-	end
+  sites.each do |site|
+    Dir.chdir(site) do
+      rm_rf 'web/images'
+    end
+  end
 end

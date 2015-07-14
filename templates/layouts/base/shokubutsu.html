@@ -90,15 +90,15 @@
         <div class = "gallery">
 
           <div class = "large">
-            {% for image in plant_images[plant.romaji]["large"] %}
-            <img src = {{plant.image(image)}}>
+            {% for image in plant.large_images() %}
+            <img src = {{image}}>
             {% endfor %}
 
           </div>
 
           <div class = "small">
-            {% for image in plant_images[plant.romaji]["small"] %}
-            <img src = {{plant.image(image)}}>
+            {% for image in plant.small_images() %}
+            <img src = {{image}}>
             {% endfor %}
           </div>
 

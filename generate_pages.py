@@ -44,19 +44,6 @@ plant_list = sorted([Plant(romaji = romaji, **fields) for romaji, fields in plan
 
 plant_map = { plant.romaji : plant for plant in plant_list }
 
-plant_images = parse_yaml_file("data/manually_processed/plant_images.yaml")
-
-plant_images_processed = defaultdict(dict)
-
-for plant, info in plant_images.iteritems():
-    boundary = info["boundary"]
-    all_images = glob("master-images/plants/shokubutsu/" + plant + "/*.png")
-    numbered_images = [image for image in all_images if "ichiran" not in image]
-    large_images = range(1, boundary)
-    small_images = range(boundary, len(numbered_images) + 1)
-    plant_images_processed[plant]["large"] = large_images
-    plant_images_processed[plant]["small"] = small_images
-
 def destructively_merge_dicts(dict_a, dict_b):
     dict_a.update(dict_b)
     return dict_a
@@ -65,7 +52,7 @@ data_files = glob("data/automatically_processed/*.yaml")
 
 data = reduce(destructively_merge_dicts, map(parse_yaml_file, data_files))
 
-data.update({ "animals" : animal_list, "animal_map" : animal_map, "plants" : plant_list, "plant_map" : plant_map, "plant_images": plant_images_processed })
+data.update({ "animals" : animal_list, "animal_map" : animal_map, "plants" : plant_list, "plant_map" : plant_map})
 
 def render_page(template_path):
     relative_path = template_path.replace("templates/sites/", "")

@@ -3,6 +3,7 @@
 
 import os
 import romkan
+from glob import glob
 
 def try_unicode(str):
     try:
@@ -47,7 +48,19 @@ class Plant:
         return "/shokubutsu/" + self.romaji + ".html"
 
     def image(self, suffix):
-        return os.path.join("/images/shokubutsu", self.romaji, str(suffix) + ".jpg")
+        return os.path.join("/images/shokubutsu", self.romaji, self.romaji + "-" + str(suffix) + ".jpg")
+
+    def images(self, string):
+        path = os.path.join("master-images/plants/shokubutsu", self.romaji, "*" + string + "*")
+        files = glob(path)
+        print files
+        return [file.replace("master-images/plants", "/images").replace(".png", ".jpg") for file in files]
+
+    def small_images(self):
+        return self.images("small")
+
+    def large_images(self):
+        return self.images("large") 
 
     def blooms(self, month):
         return month in self.kaki
