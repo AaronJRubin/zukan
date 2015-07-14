@@ -354,7 +354,7 @@ sites.each do |site|
 end
 
 sites.each do |site|
-  desc "Delete all generated files, except for compressed image files"
+  desc "Delete all generated files for #{site}, except for compressed image files"
   task "clean_nonimage_#{site}" do
     Dir.chdir(site) do 
       generated_textfiles = Rake::FileList.new.include("**/*{html,css,_list.dart}")
@@ -364,10 +364,13 @@ sites.each do |site|
     rm_rf appengine_site(site)
   end
 
-  desc "Delete all generated files for a clean build"
+  desc "Delete all generated files for #{site} for a clean build"
   task "clean_#{site}" => "clean_nonimage_#{site}" do
     Dir.chdir(site) do
       rm_rf 'web/images'
     end
   end
 end
+
+desc "Clean all generated files for every site"
+task "clean" => sites.map { |site| "clean_#{site}" }
