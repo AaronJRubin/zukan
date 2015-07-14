@@ -731,6 +731,8 @@ main.detail-page {
   @include display-flex(flex);
 
   .large {
+    @include display-flex(flex);
+    @include flex-direction(column);
     width: 27.2727%;
 
     img {
