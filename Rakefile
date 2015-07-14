@@ -16,6 +16,10 @@ def compressed_path(image_path)
 	return before_changing_extension.pathmap("%X.jpg")
 end
 
+def appengine_site(site_name)
+  "#{site_name}_appengine/static"
+end
+
 def glob_disjunct(strings)
   "{#{strings.join(",")}"
 end
@@ -257,7 +261,8 @@ end
 desc "Render templates (html and others) using the jinja2 template engine"
 task :generate_pages => [:compress_images, :validate_data] do
   dependencies = Rake::FileList.new('templates/**/*').include("#{MASTER_IMAGES}/**/*").include('animal.py').include('plant.py').include('data/**/*')
-  unless uptodate?('animals/web/ikimono/ichiran.html', dependencies)
+  every_ichiran = sites.map {|site| "#{site}/web/#{article_subdirectories[site]}/ichiran.html" }
+  unless every_ichiran.all? {|ichiran| uptodate?(ichiran, dependencies) }
     sh 'python generate_pages.py' 
   end
 end
@@ -272,9 +277,9 @@ multitask compass_watch: sites.map { |site| "#{site}_compass_watch" }
 
 desc "Compile Sass to CSS, using Compass"
 task :compile_sass do
-  css_file = 'animals/web/stylesheets/main.css'
-  unless (uptodate?(css_file, ['sass/main.scss']))
-    sites.each do |site|
+  sites.each do |site|
+    css_file = "#{site}/web/stylesheets/main.css"
+    unless uptodate?(css_file, ['sass/main.scss'])
       sh "compass compile --sass-dir sass --css-dir #{site}/web/stylesheets"
     end
   end	
@@ -348,21 +353,19 @@ sites.each do |site|
   end
 end
 
-desc "Delete all generated files, except for compressed image files"
-task :clean_nonimage do
-  sites.each do |site|
+sites.each do |site|
+  desc "Delete all generated files, except for compressed image files"
+  task "clean_nonimage_#{site}" do
     Dir.chdir(site) do 
       generated_textfiles = Rake::FileList.new.include("**/*{html,css,_list.dart}")
       rm_f generated_textfiles
       rm_rf "build"
     end
-    rm_rf appengine_sites
+    rm_rf appengine_site(site)
   end
-end
 
-desc "Delete all generated files for a clean build"
-task :clean => :clean_nonimage do
-  sites.each do |site|
+  desc "Delete all generated files for a clean build"
+  task "clean_#{site}" => "clean_nonimage_#{site}" do
     Dir.chdir(site) do
       rm_rf 'web/images'
     end
