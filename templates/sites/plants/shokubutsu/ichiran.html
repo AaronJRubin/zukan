@@ -9,12 +9,12 @@
 <script async src="/packages/browser/dart.js"></script>
 
 <header class="ichiran-header">
-	<h1>植物一覧</h1>
+  <h1>植物一覧</h1>
 </header>
 
 <div class="search-dropdown-control"><span id="dropdown-label">検索エリアを表示</span><span id="dropdown-caret" class="collapsed">&#x25BC;</span></div>
 
-<div id="search-area" class="collapsed">
+<div id="search-area" class="collapsed plant-search">
 
   <div class="search-section">
     <div class="search-header"><span class="search-description">記事のテキストで検索</span><input type="text" id="article-search"></div>
@@ -57,7 +57,17 @@
       {% endfor %}
     </div>
   </div>
+
+  <div class="search-section" id="shokudoku-search">
+    <div class="search-header"><span class="search-description">食・毒で検索</span>
+      {% for category in shokudoku %}
+      <input type = "checkbox" value = {{category}} id = {{category}}>
+      <label for = {{category}}>{{category}}</label>
+      {% endfor %}
+    </div>
+  </div>
 </div>
+
 
 <ol class="tiles">
   {% for plant in plants %}

@@ -450,7 +450,15 @@ nav ul {
   @include transition-duration($search-area-transition-time); 
   @include translateZ(0);
   font-size: $small-font-size;
-  max-height: 200px;
+  
+  &.animal-search {
+    max-height: 200px;
+  }
+
+  &.plant-search {
+    max-height: 240px;
+  }
+
   // necessary for height transition
   opacity: 1;
   overflow: hidden;
