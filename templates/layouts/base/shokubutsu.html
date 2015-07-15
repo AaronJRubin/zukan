@@ -77,9 +77,13 @@
         {% call article_section() %}
         <ul>
           <li>色：{{plant.iro}}</li>
+          {% if plant.ha_tsukikata %}
           <li>葉のつきかた：{{plant.ha_tsukikata}}</li>
+          {% endif %}
           <li>葉の形：{{plant.ha_katachi}}</li>
+          {% if plant.kyoshi %}
           <li>鋸歯：{{plant.kyoshi}}</li>
+          {% endif %}
           <li>花のつきかた：{{plant.hana_tsukikata}}</li>
           <li>花弁：{{plant.hanabira_setsumei}}</li>
         </ul>
