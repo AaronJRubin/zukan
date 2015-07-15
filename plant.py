@@ -4,6 +4,7 @@
 import os
 import romkan
 from glob import glob
+from re import search
 
 def try_unicode(str):
     try:
@@ -53,7 +54,9 @@ class Plant:
     def images(self, string):
         path = os.path.join("master-images/plants/shokubutsu", self.romaji, "*" + string + "*")
         files = glob(path) 
-        return [file.replace("master-images/plants", "/images").replace(".png", ".jpg") for file in files]
+        unsorted = [file.replace("master-images/plants", "/images").replace(".png", ".jpg") for file in files]
+        unsorted.sort(key = lambda fname: int(search(r"\d+", fname).group()))
+        return unsorted
 
     def small_images(self):
         return self.images("small")
