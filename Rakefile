@@ -2,6 +2,7 @@ require 'dimensions'
 require 'cssminify'
 require 'htmlcompressor'
 require 'yaml'
+require 'filewatcher'
 
 task :default => :compile
 
@@ -287,6 +288,14 @@ end
 
 desc "Compile everything necessary to use the site with pub serve, part of the Dart SDK (output in web)"
 task :build_web => [:compress_images, :generate_pages, :compile_sass, :index_articles]
+
+task :watch do
+  puts "Watching for changes..."
+  all_dependencies = ["templates/", "master-images/", "data/", "sass/", "animal.py", "plant.py", "Rakefile"]
+  FileWatcher.new(all_dependencies).watch do |filename|
+    sh "rake build_web"
+  end
+end
 
 sites.each do |site|
   desc "Run development pub server for #{site} site (Dart SDK required)"
