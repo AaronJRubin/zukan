@@ -113,7 +113,6 @@ sites.each do |site|
   end
 end
 
-desc "Index articles (producing a dart file named article_list.dart for every site, containing article text)"
 multitask :index_articles => sites.map { |site| "index_articles_#{site}" }
 
 # This function generates a task for compressing all of the images in a directory,
@@ -201,7 +200,6 @@ convert_animal = lambda do |animal, compressed_animal|
   return convert(animal, compressed_animal, resize = resize, quality = "60")
 end
 
-desc "Compress images of animals in master-images and move to workspace"
 compress_images_task(:compress_animal_images, "animals/ikimono/**/*.jpg", convert_animal)
 
 convert_plant = lambda do |plant, compressed_plant|
@@ -214,7 +212,6 @@ convert_plant = lambda do |plant, compressed_plant|
   end
 end
 
-desc "Compress images of plants in master-images and move to workspace"
 compress_images_task(:compress_plant_images, "plants/shokubutsu/**/*.{jpg,png}", convert_plant)
 
 quality_override = Hash.new('57')
@@ -235,16 +232,12 @@ convert_mamechishiki = lambda do |image, compressed_image|
   return convert(image, compressed_image, resize = mamechishiki_size_override[image.pathmap('%f')], quality = "50")
 end
 
-desc "Compress images of seisokuchi in master-images and move to workspace"
 compress_images_task(:compress_seisokuchi_images, "animals/seisokuchi/*.jpg", convert_general)
 
-desc "Compress images for mamechishiki articles and move to workspace"
 compress_images_task(:compress_mamechishiki_images, "animals/mamechishiki/**/*.jpg", convert_mamechishiki)
 
-desc "Compress miscellaneous images and move to workspace"
 compress_images_task(:compress_miscellaneous_images, "**/*.jpg", convert_general)
 
-desc "Compress all images and move to workspace"
 task :compress_images => [:compress_animal_images, :compress_plant_images, :compress_seisokuchi_images, :compress_mamechishiki_images, :compress_miscellaneous_images]
 
 desc "Validate yaml data for which a schema is defined"
@@ -258,9 +251,7 @@ task :validate_data do
   end
 end
 
-
-desc "Render templates (html and others) using the jinja2 template engine"
-task :generate_pages => [:compress_images, :validate_data] do
+task :generate_pages => [:compress_images] do
   dependencies = Rake::FileList.new('templates/**/*').include("#{MASTER_IMAGES}/**/*").include('animal.py').include('plant.py').include('data/**/*')
   every_ichiran = sites.map {|site| "#{site}/web/#{article_subdirectories[site]}/ichiran.html" }
   unless every_ichiran.all? {|ichiran| uptodate?(ichiran, dependencies) }
@@ -268,27 +259,21 @@ task :generate_pages => [:compress_images, :validate_data] do
   end
 end
 
-sites.each do |site|
-  task "#{site}_compass_watch" do
-    system "compass watch --sass-dir sass --css-dir #{site}/web/stylesheets"
-  end
-end
-
-multitask compass_watch: sites.map { |site| "#{site}_compass_watch" }
-
-desc "Compile Sass to CSS, using Compass"
 task :compile_sass do
-  sites.each do |site|
-    css_file = "#{site}/web/stylesheets/main.css"
-    unless uptodate?(css_file, ['sass/main.scss'])
-      sh "compass compile --sass-dir sass --css-dir #{site}/web/stylesheets"
+  css_files = sites.map {|site| "#{site}/web/stylesheets/main.css" }
+  unless css_files.all? {|css_file| uptodate?(css_file, ['sass/main.scss'])}
+    sh "compass compile --sass-dir sass --css-dir sass"
+    sites.each do |site|
+      cp "sass/main.css", "#{site}/web/stylesheets/main.css"
     end
-  end	
+    rm "sass/main.css"
+  end
 end
 
 desc "Compile everything necessary to use the site with pub serve, part of the Dart SDK (output in web)"
 task :build_web => [:compress_images, :generate_pages, :compile_sass, :index_articles]
 
+desc "Watch for changes and rebuild local development sites when they occur"
 task :watch do
   puts "Watching for changes..."
   all_dependencies = ["templates/", "master-images/", "data/", "sass/", "animal.py", "plant.py", "Rakefile"]
@@ -364,7 +349,7 @@ end
 
 sites.each do |site|
   desc "Delete all generated files for #{site}, except for compressed image files"
-  task "clean_nonimage_#{site}" do
+  task "clean_#{site}_nonimage" do
     Dir.chdir(site) do 
       generated_textfiles = Rake::FileList.new.include("**/*{html,css,_list.dart}")
       rm_f generated_textfiles
@@ -374,7 +359,7 @@ sites.each do |site|
   end
 
   desc "Delete all generated files for #{site} for a clean build"
-  task "clean_#{site}" => "clean_nonimage_#{site}" do
+  task "clean_#{site}" => "clean_#{site}_nonimage" do
     Dir.chdir(site) do
       rm_rf 'web/images'
     end
