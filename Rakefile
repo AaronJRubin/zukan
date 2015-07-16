@@ -278,7 +278,7 @@ task :compile_sass do
   end
 end
 
-desc "Compile everything necessary to use the site with pub serve, part of the Dart SDK (output in web)"
+desc "Build all local development sites (the sites built are those served with serve_plants and serve_animals)"
 task :build_web => [:compress_images, :generate_pages, :compile_sass, :index_articles]
 
 desc "Watch for changes and rebuild local development sites when they occur"
