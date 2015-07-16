@@ -44,7 +44,7 @@ Images are stored in master-images, in subdirectories for each site; you will no
 
 ##CSS
 
-I use SCSS and Compass. Run `rake compass_watch` as you edit sass/main.scss to see any changes that you make compiled to CSS, and thereby reflected in both sites, immediately.
+I use SCSS and Compass. Use `rake watch` as you edit sass/main.scss to see any changes that you make compiled to CSS, and thereby reflected in both sites, immediately.
 
 ##Scripting
 
