@@ -141,35 +141,43 @@ def compress_images_task(name, source, convert_function)
   end
 end
 
+
+def crop_string_valid(crop_string)
+  return crop_string.match(/^\d+x\d+\+\d+\+\d+$/)
+end
+
 # Aspect ratio is height / width here
 def get_cropped_aspect_ratio(image)
   uncropped_dimensions = Dimensions.dimensions(image)
   uncropped_width = uncropped_dimensions[0].to_f
   uncropped_height = uncropped_dimensions[1].to_f
-  crop_file = image.pathmap("%X.crp")
-  if not File.exists? crop_file
-    return uncropped_height / uncropped_width
-  else
+  res = uncropped_height / uncropped_width
+  crop_file = image.pathmap("%X.crp") 
+  if File.exists? crop_file
     crop_string = File.read(crop_file).strip
-    cropped_dimensions = /(\d+)x(\d+)/.match(crop_string)
-    cropped_width = cropped_dimensions[1].to_f
-    cropped_height = cropped_dimensions[2].to_f
-    return cropped_height / cropped_width
+    if crop_string_valid(crop_string)
+      cropped_dimensions = /(\d+)x(\d+)/.match(crop_string)
+      cropped_width = cropped_dimensions[1].to_f
+      cropped_height = cropped_dimensions[2].to_f
+      res = cropped_height / cropped_width
+    end
   end
+  return res
 end
-
 
 def convert(source, target, resize = "300x300", quality = "50")
   crop_file = source.pathmap("%X.crp")
+  crop_string = ""
   if File.exists? crop_file
     crop_string = File.read(crop_file).strip
-    crop_command = "-crop #{crop_string}"
-  else
-    crop_command = ""
+    if crop_string_valid(crop_string)
+      crop_command = "-crop #{crop_string}"
+    else
+      puts "ダメな.crpファイル：#{crop_file}"
+    end
   end
   return "convert #{source} #{crop_command} -resize #{resize} -quality #{quality} #{target}"
 end
-
 
 NON_ICHIRAN_DIMENSIONS = "278x"
 # This is the highest an ichiran image gets, until short images and long images diverge
