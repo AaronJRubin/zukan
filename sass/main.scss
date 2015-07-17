@@ -469,7 +469,9 @@ nav ul {
   opacity: 1;
   overflow: hidden;
   @media #{$search-area-breakpoint} {
-    max-height: 300px;
+    &.animal-search {
+      max-height: 255px;
+    }
   }
 
   ol {
