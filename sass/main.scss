@@ -411,10 +411,16 @@ nav ul {
 
 .search-dropdown-control,
 .search-header {
-  @extend %rounded-border;
+  /*@extend %rounded-border;*/
   background: $secondary-background;
+  //border: 2px solid $text-color;
   padding: .2em .6%;
 }
+
+.search-header {
+  border: 2px solid $text-color;
+}
+
 
 .search-dropdown-control {
   margin-bottom: .1em;
@@ -452,11 +458,11 @@ nav ul {
   font-size: $small-font-size;
   
   &.animal-search {
-    max-height: 200px;
+    max-height: 210px;
   }
 
   &.plant-search {
-    max-height: 240px;
+    max-height: 260px;
   }
 
   // necessary for height transition
