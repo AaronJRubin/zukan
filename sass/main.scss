@@ -411,9 +411,7 @@ nav ul {
 
 .search-dropdown-control,
 .search-header {
-  /*@extend %rounded-border;*/
   background: $secondary-background;
-  //border: 2px solid $text-color;
   padding: .2em .6%;
 }
 
@@ -470,7 +468,7 @@ nav ul {
   overflow: hidden;
   @media #{$search-area-breakpoint} {
     &.animal-search {
-      max-height: 255px;
+      max-height: 270px;
     }
   }
 
@@ -482,8 +480,9 @@ nav ul {
   }
 
   li {
-    @extend %rounded-border;
+    @include box-sizing(border-box);
     background: $interactable;
+    border: 2px solid $text-color;
     display: inline-block;
     padding: .25em 0;
     text-align: center;
