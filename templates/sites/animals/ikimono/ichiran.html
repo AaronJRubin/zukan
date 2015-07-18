@@ -20,38 +20,40 @@
     <div class="search-header"><span class="search-description">記事のテキストで検索</span><input type="text" id="article-search"></div>
   </div>
 
-	<div class="search-section" id="seisokuchi-search">
+  <div class="search-section" id="seisokuchi-search">
     <div class="search-header"><span class="search-description">生息地で検索</span></div>
 
-		{% for river in kawa %}
-		<div class="individual-river-section">
-			<ol>
-			{% for a_ryuuiki in ryuuiki %}     
-      <li>
-        <div class="ryuuiki">{{river['kanji']}}{{a_ryuuiki['kanji']}}</div><div class="boxes">
-          {% for mode, kanji in [("include", "必"), ("exclude", "除")] %}   
-          <input type="checkbox" class="search-checkbox {{mode}}" id="{{river['romaji']}}-{{a_ryuuiki['romaji']}}-{{mode}}" name="{{river['romaji']}}-{{a_ryuuiki['romaji']}}-{{mode}}">
-          <label for="{{river['romaji']}}-{{a_ryuuiki['romaji']}}-{{mode}}" class="{{mode}}">{{kanji}}</label>
-		      {% endfor %}
-        </div>
-		  </li>
-			{% endfor %}
-			</ol>
-		</div>
-		{% endfor %}
-	</div>
+    <div class = "river-sections">
+      {% for river in kawa %}
+      <div class="individual-river-section">
+        <ol>
+          {% for a_ryuuiki in ryuuiki %}     
+          <li>
+          <div class="ryuuiki">{{river['kanji']}}{{a_ryuuiki['kanji']}}</div><div class="boxes">
+            {% for mode, kanji in [("include", "必"), ("exclude", "除")] %}   
+            <input type="checkbox" class="search-checkbox {{mode}}" id="{{river['romaji']}}-{{a_ryuuiki['romaji']}}-{{mode}}" name="{{river['romaji']}}-{{a_ryuuiki['romaji']}}-{{mode}}">
+            <label for="{{river['romaji']}}-{{a_ryuuiki['romaji']}}-{{mode}}" class="{{mode}}">{{kanji}}</label>
+            {% endfor %}
+          </div>
+          </li>
+          {% endfor %}
+        </ol>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 
 </div>
 
 <ol class="tiles">
-	{% for animal in animals %}
-	<li data-animal-name="{{animal.romaji}}">
-		<a href="{{animal.get_link()}}" class="tile">
-  			<img {% if animal.is_long() %} class="long" {% endif %} src="{{animal.image('ichiran')}}" alt="">
-  			<div>{{animal.display_name}}</div>
-		</a>
-	</li>
-	{% endfor %}
+  {% for animal in animals %}
+  <li data-animal-name="{{animal.romaji}}">
+  <a href="{{animal.get_link()}}" class="tile">
+    <img {% if animal.is_long() %} class="long" {% endif %} src="{{animal.image('ichiran')}}" alt="">
+    <div>{{animal.display_name}}</div>
+  </a>
+  </li>
+  {% endfor %}
 </ol>
 
 {% endblock %}

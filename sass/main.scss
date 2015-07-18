@@ -486,7 +486,7 @@ nav ul {
     display: inline-block;
     padding: .25em 0;
     text-align: center;
-    width: 24.8%;
+    width: 25%;
   }
 
   .search-description {
@@ -498,10 +498,10 @@ nav ul {
     margin-right: 1%;
   }
 
-  .search-header,
+  /*.search-header,
   li {
     margin-bottom: .2em;
-  }
+  }*/
 
   .search-header {
     align-items: center;
@@ -581,9 +581,13 @@ nav ul {
   }
 
   @media #{$search-area-breakpoint} {
+    .river-sections {
+      @include display-flex(flex);
+    }
     .individual-river-section {
+      @include box-sizing(border-box);
       display: inline-block;
-      width: 49%;
+      width: 50%;
     }
 
     ol {
