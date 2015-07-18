@@ -461,6 +461,7 @@ nav ul {
   @include transition-duration($search-area-transition-time); 
   @include translateZ(0);
   font-size: $small-font-size;
+  margin-bottom: 5px;
   
   &.animal-search {
     max-height: 210px;
