@@ -127,13 +127,14 @@ def compress_images_task(name, source, convert_function)
   multitask name.to_s => compressed_images
   images.each do |image|
     compressed_image = compressed_path(image)
-    dependencies = [image]
+    dir = compressed_image.pathmap('%d')
+    directory dir
+    dependencies = [image, dir]
     crop_settings = image.pathmap("%X.crp")
     if File.exists? crop_settings
       dependencies << crop_settings
     end
-    file compressed_image => dependencies do
-      mkdir_p compressed_image.pathmap('%d')
+    file compressed_image => dependencies do 
       unlocked compressed_image do
         sh convert_function.call(image, compressed_image)
       end
