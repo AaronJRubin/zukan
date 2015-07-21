@@ -125,8 +125,7 @@ def compress_images_task(name, source, convert_function)
   images = Rake::FileList.new("#{MASTER_IMAGES}/#{source}")
   compressed_images = images.map { |image| compressed_path(image) }
   multitask name.to_s => compressed_images
-  images.each do |image|
-    compressed_image = compressed_path(image)
+  compressed_images.zip(images).each do |compressed_image, image|
     dir = compressed_image.pathmap('%d')
     directory dir
     dependencies = [image, dir]
